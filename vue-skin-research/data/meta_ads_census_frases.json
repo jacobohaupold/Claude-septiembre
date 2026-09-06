@@ -1,0 +1,682 @@
+{
+ "nose patch": {
+  "all": 1295,
+  "active": 94
+ },
+ "nose patches": {
+  "all": 4738,
+  "active": 375
+ },
+ "spot patch": {
+  "all": 59,
+  "active": 0
+ },
+ "spot patches": {
+  "all": 137,
+  "active": 0
+ },
+ "surface patch": {
+  "all": 0,
+  "active": 0
+ },
+ "chin patch": {
+  "all": 7,
+  "active": 1
+ },
+ "forehead patch": {
+  "all": 3,
+  "active": 1
+ },
+ "t-zone": {
+  "all": 215,
+  "active": 12
+ },
+ "clear pore duo": {
+  "all": 355,
+  "active": 8
+ },
+ "clear t-zone kit": {
+  "all": 154,
+  "active": 10
+ },
+ "clear skin kit": {
+  "all": 0,
+  "active": 0
+ },
+ "peel-off": {
+  "all": 101,
+  "active": 4
+ },
+ "peel off mask": {
+  "all": 46,
+  "active": 0
+ },
+ "sheet mask": {
+  "all": 10,
+  "active": 0
+ },
+ "niacinamide": {
+  "all": 43,
+  "active": 22
+ },
+ "salicylic": {
+  "all": 309,
+  "active": 12
+ },
+ "collagen": {
+  "all": 93,
+  "active": 6
+ },
+ "toner": {
+  "all": 67,
+  "active": 1
+ },
+ "cleanser": {
+  "all": 83,
+  "active": 15
+ },
+ "moisturizer": {
+  "all": 32,
+  "active": 13
+ },
+ "moisturiser": {
+  "all": 0,
+  "active": 0
+ },
+ "serum": {
+  "all": 110,
+  "active": 42
+ },
+ "bundle": {
+  "all": 50,
+  "active": 0
+ },
+ "kit": {
+  "all": 189,
+  "active": 17
+ },
+ "duo": {
+  "all": 363,
+  "active": 9
+ },
+ "gift card": {
+  "all": 2,
+  "active": 0
+ },
+ "cotton": {
+  "all": 0,
+  "active": 0
+ },
+ "sebaceous filaments": {
+  "all": 2499,
+  "active": 145
+ },
+ "sebaceous": {
+  "all": 2634,
+  "active": 166
+ },
+ "not blackheads": {
+  "all": 1279,
+  "active": 68
+ },
+ "aren't blackheads": {
+  "all": 1032,
+  "active": 64
+ },
+ "aren’t blackheads": {
+  "all": 654,
+  "active": 38
+ },
+ "blackheads": {
+  "all": 3488,
+  "active": 207
+ },
+ "oil buildup": {
+  "all": 701,
+  "active": 59
+ },
+ "oil plugs": {
+  "all": 421,
+  "active": 25
+ },
+ "clogged pores": {
+  "all": 1290,
+  "active": 82
+ },
+ "pores": {
+  "all": 5086,
+  "active": 342
+ },
+ "strawberry nose": {
+  "all": 40,
+  "active": 0
+ },
+ "nose dots": {
+  "all": 1449,
+  "active": 76
+ },
+ "dark dots": {
+  "all": 1030,
+  "active": 65
+ },
+ "dark spots": {
+  "all": 727,
+  "active": 41
+ },
+ "pore strips": {
+  "all": 1064,
+  "active": 63
+ },
+ "strips": {
+  "all": 2239,
+  "active": 157
+ },
+ "squeez": {
+  "all": 0,
+  "active": 0
+ },
+ "squeezing": {
+  "all": 1435,
+  "active": 111
+ },
+ "scrub": {
+  "all": 632,
+  "active": 27
+ },
+ "scrubbing": {
+  "all": 1198,
+  "active": 97
+ },
+ "picking": {
+  "all": 220,
+  "active": 17
+ },
+ "laser": {
+  "all": 184,
+  "active": 8
+ },
+ "dermatologist": {
+  "all": 167,
+  "active": 17
+ },
+ "korean": {
+  "all": 1764,
+  "active": 123
+ },
+ "korea": {
+  "all": 999,
+  "active": 45
+ },
+ "k-beauty": {
+  "all": 33,
+  "active": 2
+ },
+ "hydrocolloid": {
+  "all": 4825,
+  "active": 437
+ },
+ "overnight": {
+  "all": 3962,
+  "active": 333
+ },
+ "while you sleep": {
+  "all": 1707,
+  "active": 181
+ },
+ "pillow": {
+  "all": 16,
+  "active": 12
+ },
+ "oily": {
+  "all": 1026,
+  "active": 63
+ },
+ "shine": {
+  "all": 319,
+  "active": 14
+ },
+ "texture": {
+  "all": 270,
+  "active": 12
+ },
+ "breakout": {
+  "all": 122,
+  "active": 5
+ },
+ "breakouts": {
+  "all": 434,
+  "active": 25
+ },
+ "pimple": {
+  "all": 117,
+  "active": 0
+ },
+ "acne": {
+  "all": 110,
+  "active": 3
+ },
+ "barrier": {
+  "all": 1146,
+  "active": 90
+ },
+ "glow": {
+  "all": 211,
+  "active": 6
+ },
+ "glass skin": {
+  "all": 0,
+  "active": 2
+ },
+ "hydrat": {
+  "all": 0,
+  "active": 0
+ },
+ "guys": {
+  "all": 474,
+  "active": 36
+ },
+ "men": {
+  "all": 115,
+  "active": 4
+ },
+ "women": {
+  "all": 629,
+  "active": 40
+ },
+ "girls": {
+  "all": 76,
+  "active": 10
+ },
+ "boyfriend": {
+  "all": 56,
+  "active": 9
+ },
+ "girlfriend": {
+  "all": 80,
+  "active": 10
+ },
+ "over 40": {
+  "all": 170,
+  "active": 5
+ },
+ "over 35": {
+  "all": 113,
+  "active": 6
+ },
+ "20s": {
+  "all": 37,
+  "active": 2
+ },
+ "30s": {
+  "all": 29,
+  "active": 0
+ },
+ "teen": {
+  "all": 0,
+  "active": 0
+ },
+ "mom": {
+  "all": 17,
+  "active": 0
+ },
+ "confidence": {
+  "all": 345,
+  "active": 20
+ },
+ "insecur": {
+  "all": 0,
+  "active": 0
+ },
+ "makeup": {
+  "all": 228,
+  "active": 13
+ },
+ "selfie": {
+  "all": 0,
+  "active": 4
+ },
+ "close-up": {
+  "all": 57,
+  "active": 3
+ },
+ "date": {
+  "all": 106,
+  "active": 3
+ },
+ "money back": {
+  "all": 5433,
+  "active": 504
+ },
+ "money-back": {
+  "all": 5433,
+  "active": 504
+ },
+ "guarantee": {
+  "all": 5421,
+  "active": 504
+ },
+ "60-day": {
+  "all": 5359,
+  "active": 504
+ },
+ "60 day": {
+  "all": 5359,
+  "active": 504
+ },
+ "risk-free": {
+  "all": 1858,
+  "active": 77
+ },
+ "free shipping": {
+  "all": 118,
+  "active": 3
+ },
+ "fast shipping": {
+  "all": 5265,
+  "active": 498
+ },
+ "free gift": {
+  "all": 1,
+  "active": 0
+ },
+ "free gifts": {
+  "all": 297,
+  "active": 5
+ },
+ "gift": {
+  "all": 37,
+  "active": 0
+ },
+ "sale": {
+  "all": 1010,
+  "active": 7
+ },
+ "% off": {
+  "all": 2385,
+  "active": 100
+ },
+ "30% off": {
+  "all": 503,
+  "active": 45
+ },
+ "40% off": {
+  "all": 440,
+  "active": 0
+ },
+ "45% off": {
+  "all": 448,
+  "active": 6
+ },
+ "15% off": {
+  "all": 233,
+  "active": 13
+ },
+ "20% off": {
+  "all": 0,
+  "active": 0
+ },
+ "50% off": {
+  "all": 3,
+  "active": 0
+ },
+ "today15": {
+  "all": 0,
+  "active": 8
+ },
+ "tiktok10": {
+  "all": 0,
+  "active": 0
+ },
+ "code": {
+  "all": 498,
+  "active": 0
+ },
+ "discount": {
+  "all": 239,
+  "active": 13
+ },
+ "limited": {
+  "all": 147,
+  "active": 5
+ },
+ "sold out": {
+  "all": 21,
+  "active": 3
+ },
+ "last chance": {
+  "all": 60,
+  "active": 0
+ },
+ "today only": {
+  "all": 52,
+  "active": 11
+ },
+ "buy 2": {
+  "all": 14,
+  "active": 0
+ },
+ "buy two": {
+  "all": 3,
+  "active": 0
+ },
+ "black friday": {
+  "all": 218,
+  "active": 0
+ },
+ "christmas": {
+  "all": 64,
+  "active": 0
+ },
+ "holiday": {
+  "all": 39,
+  "active": 0
+ },
+ "summer": {
+  "all": 550,
+  "active": 4
+ },
+ "back to school": {
+  "all": 13,
+  "active": 0
+ },
+ "new year": {
+  "all": 0,
+  "active": 0
+ },
+ "valentine": {
+  "all": 0,
+  "active": 0
+ },
+ "easter": {
+  "all": 134,
+  "active": 0
+ },
+ "spring": {
+  "all": 33,
+  "active": 12
+ },
+ "launch": {
+  "all": 53,
+  "active": 12
+ },
+ "new": {
+  "all": 248,
+  "active": 60
+ },
+ "viral": {
+  "all": 120,
+  "active": 0
+ },
+ "tiktok": {
+  "all": 76,
+  "active": 5
+ },
+ "customers": {
+  "all": 524,
+  "active": 8
+ },
+ "250,000": {
+  "all": 0,
+  "active": 3
+ },
+ "250k": {
+  "all": 0,
+  "active": 0
+ },
+ "500,000": {
+  "all": 710,
+  "active": 0
+ },
+ "reviews": {
+  "all": 253,
+  "active": 28
+ },
+ "trustpilot": {
+  "all": 43,
+  "active": 3
+ },
+ "study": {
+  "all": 75,
+  "active": 30
+ },
+ "clinically": {
+  "all": 18,
+  "active": 2
+ },
+ "science": {
+  "all": 288,
+  "active": 13
+ },
+ "backed by science": {
+  "all": 18,
+  "active": 0
+ },
+ "made in korea": {
+  "all": 888,
+  "active": 38
+ },
+ "vegan": {
+  "all": 14,
+  "active": 0
+ },
+ "cruelty": {
+  "all": 23,
+  "active": 1
+ },
+ "93%": {
+  "all": 0,
+  "active": 8
+ },
+ "89%": {
+  "all": 2,
+  "active": 0
+ },
+ "9/10": {
+  "all": 28,
+  "active": 5
+ },
+ "vue swiss": {
+  "all": 2563,
+  "active": 15
+ },
+ "vue skin": {
+  "all": 4058,
+  "active": 515
+ },
+ "vueswiss.com": {
+  "all": 3394,
+  "active": 103
+ },
+ "vueskin.com": {
+  "all": 983,
+  "active": 43
+ },
+ "us.vueskin": {
+  "all": 0,
+  "active": 0
+ },
+ "shop now": {
+  "all": 0,
+  "active": 37
+ },
+ "get yours": {
+  "all": 313,
+  "active": 27
+ },
+ "try it": {
+  "all": 1591,
+  "active": 106
+ },
+ "poren": {
+  "all": 89,
+  "active": 0
+ },
+ "nase": {
+  "all": 21,
+  "active": 0
+ },
+ "mitesser": {
+  "all": 8,
+  "active": 0
+ },
+ "pores obstrués": {
+  "all": 6,
+  "active": 0
+ },
+ "points noirs": {
+  "all": 34,
+  "active": 0
+ },
+ "nez": {
+  "all": 75,
+  "active": 2
+ },
+ "poros": {
+  "all": 98,
+  "active": 0
+ },
+ "puntos negros": {
+  "all": 3,
+  "active": 0
+ },
+ "nariz": {
+  "all": 20,
+  "active": 0
+ },
+ "pori": {
+  "all": 56,
+  "active": 0
+ },
+ "naso": {
+  "all": 0,
+  "active": 0
+ },
+ "punti neri": {
+  "all": 15,
+  "active": 0
+ },
+ "poriën": {
+  "all": 64,
+  "active": 0
+ },
+ "neus": {
+  "all": 0,
+  "active": 0
+ },
+ "mee-eters": {
+  "all": 13,
+  "active": 0
+ },
+ "porer": {
+  "all": 82,
+  "active": 0
+ },
+ "näsa": {
+  "all": 0,
+  "active": 0
+ },
+ "näse": {
+  "all": 0,
+  "active": 0
+ }
+}

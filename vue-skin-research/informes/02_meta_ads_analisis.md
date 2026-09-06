@@ -1,8 +1,10 @@
 # Vue Skin / Vue Swiss — Análisis creativo de los anuncios de Meta
 
-Base: **692 anuncios únicos y 413 creatividades únicas (324 vídeos descargados y transcritos con Whisper, 89 imágenes)** obtenidos de la Meta Ad Library (página "Vue Swiss"/"Vue Skin", page_id 116602384765553) el 6-9-2026 mediante ~480 consultas distintas, más los metadatos agregados que la propia biblioteca expone (6.539 anuncios totales desde el 16-6-2025; 522 activos). El catálogo anuncio por anuncio con transcripciones está en `03_meta_ads_catalogo.md`; las hojas de contacto en `../media/meta_ads/`.
+Base: **4.485 anuncios únicos (el 69 % de los 6.534 anuncios de la página) y 3.019 creatividades únicas (2.587 vídeos descargados y transcritos con Whisper, 432 imágenes)** obtenidos de la Meta Ad Library (página "Vue Swiss"/"Vue Skin", page_id 116602384765553) el 6-9-2026 mediante ~3.000 consultas distintas (frases exactas del copy, estado, fechas, país, tipo de medio, plataforma, idioma), más un **censo de frases sobre el 100 % del corpus** (sección final) y los metadatos agregados que la propia biblioteca expone (6.534 anuncios totales desde el 16-6-2025; 522 activos). El catálogo anuncio por anuncio con transcripciones está en `03_meta_ads_catalogo.md`; los anuncios en otros idiomas en `03b_meta_ads_otros_idiomas.md`; las hojas de contacto en `../media/meta_ads/`.
 
-Distribución de la muestra por mes de inicio: 2025 → may 12, jun 35, jul 12, ago 29, sep 39, oct 55, nov 65, dic 63; 2026 → ene 46, feb 18, mar 11, abr 33, **may 124**, jun 42, jul 67, ago 25, sep 16. Formatos: 75 % vídeo, 15 % imagen, 10 % catálogo dinámico (DCO/DPA, concentrado en nov-dic 2025 = retargeting de Black Friday/Navidad). Páginas: "Vue Swiss" 382 / "Vue Skin" 310 (mismo page_id renombrado en 2026). CTA: "Shop now" 96 %.
+Distribución de los 4.485 anuncios por mes de inicio: 2025 → may 12, jun 57, jul 53, ago 45, sep 184, oct 312, nov 315, dic 209; 2026 → ene 226, feb 227, mar 216, abr 440, **may 893**, jun 249, jul 604, ago 211, sep 232 (hasta el día 6). Formatos: 84 % vídeo, 12 % imagen, 4 % catálogo dinámico (DCO/DPA) y 3 carruseles. Páginas: "Vue Skin" 2.785 / "Vue Swiss" 1.700 (mismo page_id renombrado en 2026). CTA: "Shop now" 97 %, "Learn more" 2,5 %. Ubicaciones: 56 % en las cinco (FB, IG, AN, Messenger, Threads) y 42 % sin Audience Network. Landings: PDP Nose Patches 3.105 (69 %), colección "all" 394 (rebajas), Clear Pore Duo 296, Clear T-Zone Kit 139+, Spot Patches 107, us.vueskin/us.vueswiss 136, Peel-Off 42, colección "patches" 39, Niacinamide 37 y **30 anuncios que enlazan a la ficha de Vue en Superdrug** (co-marketing retail UK).
+
+Títulos más usados en los 4.485: "From Oily Nose to Clear Skin" 346 · "Clear Nose Overnight ✨" 226 · catálogo "{{product.name}}" 193 · "No More Nose Bumps" 177 · "Clear Pores Overnight" 162 · "Break the Cycle" 129 · "One Patch. Real Results." 127 · "Clearer Skin, No Damage" 93 · "Clearer Pores While You Sleep 😴" 91 · **"Easter Sale: 15% Off Sitewide" 83** · "Clearer Without the Stress" 73 · "Clearer Skin Starts Here" 60 · "Cleaner pores, less shine" 59 · "Clear Pores, Zero Effort" 55 · "Calm Pimples Overnight" 49 · "Wake Up To Clearer Skin" 43 · "Stop Scrubbing" 43 · **Summer Sale localizado**: "SOMMERUDSALG – OP TIL 40% RABAT!" (danés) 43, "SUMMER SALE – UP TO 40% OFF!" 39, "PROMOÇÃO DE VERÃO – ATÉ 40% DE DESCONTO!" 37, "ZOMERUITVERKOOP – TOT 40% KORTING!" 37, "SALDI ESTIVI – FINO AL 40% DI SCONTO!" 36, "SUMMER SALE – BIS ZU 40% RABATT!" 36, "SOLDES D'ÉTÉ – JUSQU'À 40% DE RÉDUCTION !" 34, **"REBAJAS DE VERANO – ¡HASTA 40% DE DESCUENTO!" 32** · "Stop Making It Worse" 40 · "Simple Fix. Real Results." 39 · "Don't Pop. Protect." 39 · "Stop Treating Blackheads Wrong" 38 · "Take Control of Your T-Zone" 38 · "Clear Skin, No Effort" 35 · "Simplify Your Routine" 34 · "Gentle Overnight Clear" 34 · "Clear T-Zone in 3 Steps" 33 · "Finally Clear Skin for Guys" 31 · "🚨 Final Days – Up to 40% OFF 🚨" 31 · "BLACK FRIDAY SPECIAL 🖤" 28 · "Real Results. No Damage." 27 · "Clearer Skin Starts Tonight" 26. Lectura: los anuncios evergreen de nariz dominan; las rebajas (Easter 15 %, Summer 40 %, Black Friday) se localizan a 8 idiomas con imagen estática y landing a la colección completa.
 
 ## 1. Cómo compran medios (lo que se deduce de la biblioteca)
 
@@ -93,6 +95,62 @@ Reglas de estilo: subtítulos grandes en blanco con borde, corte cada 1-2 s, mez
 - **Prueba social cuantificada**: "250,000 customers already use them. Thousands of 5 star reviews back it up" ("Cleaner pores, less shine", abr-2026).
 - **FAQ en el copy**: "Q: pore strips work? A: temporarily · Q: long-term results? A: dots come back · Q: skin after? A: more sensitive · Q: better alternative? A: hydrocolloid patches".
 
+## 3b. Cuantificación sobre TODAS las transcripciones (2.587 vídeos únicos, 2.467 con voz)
+
+Clasificación automática por expresiones clave sobre el texto transcrito de cada vídeo (un vídeo puede pertenecer a varias familias). "Anuncios" = número de anuncios recopilados que reutilizan ese vídeo (datos en `../data/meta_ads_clasificacion.json`).
+
+| Familia creativa | Vídeos | % de vídeos | Anuncios que la usan |
+|---|---|---|---|
+| Anti tiras / anti apretar / anti scrub ("stop squeezing", "pore strips") | 1.685 | 65 % | 2.421 |
+| Garantía de devolución citada en el audio | 1.392 | 54 % | 2.058 |
+| "No son puntos negros, son filamentos sebáceos" (mención explícita) | 1.275 | 49 % | 1.882 |
+| Corea / K-beauty vs Europa | 1.252 | 48 % | 1.827 |
+| Rutina / suscripción | 569 | 22 % | 853 |
+| Prueba social / ciencia (clientes, reseñas, estudio, dermatólogo) | 484 | 19 % | 707 |
+| Oferta / descuento / código en el audio | 483 | 19 % | 714 |
+| Prueba visual "gunk" (parche sucio a cámara) | 470 | 18 % | 632 |
+| Anti láser / tratamientos caros / faciales | 454 | 18 % | 621 |
+| Hombres (bro, guys, girlfriend, "what women notice") | 364 | 14 % | 537 |
+| Lanzamiento (niacinamida, sheet masks, peel-off) | 355 | 14 % | 440 |
+| Spot patches / granos / acné | 265 | 10 % | 372 |
+| Listicle "3 razones / 3 señales" | 255 | 10 % | 413 |
+| Duo dos pasos / salicílico / T-Zone kit | 252 | 10 % | 403 |
+| Sin voz (música / texto en pantalla) | 263 | 10 % | — |
+
+Duración de los vídeos: mediana **44 s** (cuartiles 33-56 s; mínimo 4 s, máximo 194 s). Es decir, Vue no hace anuncios de 15 s: apuesta por vídeos de 30-60 s con estructura problema → reencuadre → mecanismo → prueba → garantía.
+
+**Cifras que aparecen en el audio** (nº de vídeos): "45 % off" 180 · "60 days" 174 · "93 %" 76 · "30 % off" 60 · "24 hours" 40 · "100 %" 37 · "2 %" (salicílico/niacinamida) 35 · "15 %" 26 · "15 years" 25 · "8 hours" 24 · "30 days" 17 · "10 years" 15 · "90 %" 14 · "…000 customers" 13 · "48 hours" 11 · "20 years" 9 · "30 nights" 8 · "296 reviews" 4 · "97 %" 3 · "73 %" 3.
+
+**Ofertas dichas en voz**: money-back guarantee 925 vídeos (36 %) · "45 % off" 171 · "30 % off" 44 · free shipping 34 · "15 % off" 21 · "free nose patches" (Back to School) 5 · "10 % off" 2. Conclusión: la garantía se verbaliza en más de 1 de cada 3 vídeos; el descuento "hasta 45 %" es la palanca de oferta más usada (Navidad, TODAY15, códigos de creadoras), seguido del 30 % (rebajas de junio 2025) y el 15 % (Easter, códigos).
+
+**Hooks más reutilizados en todo el corpus** (nº de anuncios que usan el vídeo): "I accidentally fixed my biggest insecurity" (23) · "Most men squeeze their blackheads until they see the damage" (19) · "Wish someone told me this in my 20s, these aren't blackheads" (19) · "If you see these dots on your nose, it's not dirt, it's not blackheads, it's oil buildup, called sebaceous filaments" (14).
+
+### Hooks adicionales encontrados al analizar todo el corpus (ordenados por nº de anuncios que los reutilizan)
+- (9) "I accidentally fixed my biggest insecurity."
+- (9) "Most men squeeze their blackheads until they see the damage."
+- (9) "If you see these dots on your nose, it's not dirt, it's not blackheads, it's oil buildup, called sebaceous filaments."
+- (6) "I'm about to show the only two products you need to transform your nose from this to this."
+- (4) "You wash oily hair, right? [pues tus poros también necesitan que les quiten la grasa]"
+- (4) "Korean scientists discovered something shocking about women's pore care in the 1990s."
+- (4) "If you've been squeezing these, congrats, you've been doing it wrong."
+- (4) "I'm not a blackhead, I'm a build-up of oil in your pore called a sebaceous filament." (el filamento habla en primera persona)
+- (4) "If you're over 40 and still fighting these dark dots on your nose, please watch this." / (3) "Women over 40, you have these black dots on your nose and you might think you can squeeze them out." / (2) "Most guys over 35 think these are blackheads." → **segmento 35-50+ trabajado de forma explícita**
+- (4) "I'm putting these viral patches to the test."
+- (3) "73 % of single men avoid this one situation because of something on their face."
+- (3) "The pillow fact that's making people finally get an answer to 'why is it always my nose?'" / (3) "There's a reason it's always my nose in the morning." (ángulo almohada)
+- (3) "Those dots on your nose aren't blackheads, and spring is the best time to finally sort them." (estacionalidad)
+- (3) "Do you know the difference between blackheads and sebaceous filaments?"
+- (3) "Harsh pore treatments destroy barriers, but this duo protects and improves it."
+- (3) "I'm trying out the Clear Skin bundle so you don't have to."
+- (2) "Watch what happens when she stops treating these like blackheads and uses the right patches for three weeks." (tercera persona, estilo documental)
+- (2) "Keep picking your face and you'll have permanent acne." / "If you don't want permanent acne, stop picking your face." (spot patches)
+- (2) "Can everyone stop attacking me for a second?" (el poro habla)
+- (2) "This lazy girl K-beauty routine is selling out fast."
+- (2) "You know how your skin looks tired no matter how much you sleep?" (peel-off)
+- (2) "Every time you rip off a pore strip, you're damaging your skin."
+- (2) "The two main issues with visible pores are clogging and excess oil, and hydrocolloid addresses both very effectively." (voz de experto)
+- (2) "Embarrassed of makeup looking like this."
+
 ## 4. Textos principales más repetidos (copy exacto)
 
 1. *"From visible and clogged pores to a clear nose 👃💕 Add this nose patch to your routine for clear and smooth skin ✨ … 60-day money back guarantee"* — 40+ anuncios, título "From Oily Nose to Clear Skin". Es el **copy evergreen**.
@@ -133,3 +191,213 @@ Reglas de estilo: subtítulos grandes en blanco con borde, corte cada 1-2 s, mez
 - Prueba social casi siempre genérica ("250K customers"); pocas reseñas en pantalla, ningún dermatólogo real en cámara en la muestra (sólo "backed by science" y actores con bata en b-roll).
 - Sin anuncios de suscripción ni de LTV; todo es primera compra.
 - Quejas de Trustpilot (parche que no se adhiere o se arruga, entregas lentas) no se contrarrestan en creatividad → una marca española con envío 24-48 h y tutorial de aplicación tiene un ángulo claro.
+
+
+---
+
+## Censo de frases sobre TODOS los anuncios de la página (6.534 anuncios; 522 activos)
+Método: la Ad Library pública devuelve, para cada búsqueda de frase exacta dentro de la página "Vue Swiss/Vue Skin", el número total de anuncios que la contienen en su texto (título, texto principal, descripción). Esto permite medir **el corpus completo** aunque sólo se puedan leer 30 anuncios por consulta. "Todos" = anuncios desde jun-2025; "Activos" = en emisión el 6-9-2026.
+
+### Producto
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| nose patches | 4738 | 72.5 % | 375 | 72 % |
+| nose patch | 1295 | 19.8 % | 94 | 18 % |
+| duo | 363 | 5.6 % | 9 | 2 % |
+| clear pore duo | 355 | 5.4 % | 8 | 2 % |
+| salicylic | 309 | 4.7 % | 12 | 2 % |
+| t-zone | 215 | 3.3 % | 12 | 2 % |
+| kit | 189 | 2.9 % | 17 | 3 % |
+| clear t-zone kit | 154 | 2.4 % | 10 | 2 % |
+| spot patches | 137 | 2.1 % | 0 | 0 % |
+| serum | 110 | 1.7 % | 42 | 8 % |
+| peel-off | 101 | 1.5 % | 4 | 1 % |
+| collagen | 93 | 1.4 % | 6 | 1 % |
+| cleanser | 83 | 1.3 % | 15 | 3 % |
+| toner | 67 | 1.0 % | 1 | 0 % |
+| spot patch | 59 | 0.9 % | 0 | 0 % |
+| bundle | 50 | 0.8 % | 0 | 0 % |
+| peel off mask | 46 | 0.7 % | 0 | 0 % |
+| niacinamide | 43 | 0.7 % | 22 | 4 % |
+| moisturizer | 32 | 0.5 % | 13 | 2 % |
+| sheet mask | 10 | 0.2 % | 0 | 0 % |
+| chin patch | 7 | 0.1 % | 1 | 0 % |
+| forehead patch | 3 | 0.0 % | 1 | 0 % |
+| gift card | 2 | 0.0 % | 0 | 0 % |
+| surface patch | 0 | 0.0 % | 0 | 0 % |
+| clear skin kit | 0 | 0.0 % | 0 | 0 % |
+| moisturiser | 0 | 0.0 % | 0 | 0 % |
+| cotton | 0 | 0.0 % | 0 | 0 % |
+
+### Ángulo / problema
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| pores | 5086 | 77.8 % | 342 | 66 % |
+| hydrocolloid | 4825 | 73.8 % | 437 | 84 % |
+| overnight | 3962 | 60.6 % | 333 | 64 % |
+| blackheads | 3488 | 53.4 % | 207 | 40 % |
+| sebaceous | 2634 | 40.3 % | 166 | 32 % |
+| sebaceous filaments | 2499 | 38.2 % | 145 | 28 % |
+| strips | 2239 | 34.3 % | 157 | 30 % |
+| korean | 1764 | 27.0 % | 123 | 24 % |
+| while you sleep | 1707 | 26.1 % | 181 | 35 % |
+| nose dots | 1449 | 22.2 % | 76 | 15 % |
+| squeezing | 1435 | 22.0 % | 111 | 21 % |
+| clogged pores | 1290 | 19.7 % | 82 | 16 % |
+| not blackheads | 1279 | 19.6 % | 68 | 13 % |
+| scrubbing | 1198 | 18.3 % | 97 | 19 % |
+| barrier | 1146 | 17.5 % | 90 | 17 % |
+| pore strips | 1064 | 16.3 % | 63 | 12 % |
+| aren't blackheads | 1032 | 15.8 % | 64 | 12 % |
+| dark dots | 1030 | 15.8 % | 65 | 12 % |
+| oily | 1026 | 15.7 % | 63 | 12 % |
+| korea | 999 | 15.3 % | 45 | 9 % |
+| dark spots | 727 | 11.1 % | 41 | 8 % |
+| oil buildup | 701 | 10.7 % | 59 | 11 % |
+| aren’t blackheads | 654 | 10.0 % | 38 | 7 % |
+| scrub | 632 | 9.7 % | 27 | 5 % |
+| breakouts | 434 | 6.6 % | 25 | 5 % |
+| oil plugs | 421 | 6.4 % | 25 | 5 % |
+| shine | 319 | 4.9 % | 14 | 3 % |
+| texture | 270 | 4.1 % | 12 | 2 % |
+| picking | 220 | 3.4 % | 17 | 3 % |
+| glow | 211 | 3.2 % | 6 | 1 % |
+| laser | 184 | 2.8 % | 8 | 2 % |
+| dermatologist | 167 | 2.6 % | 17 | 3 % |
+| breakout | 122 | 1.9 % | 5 | 1 % |
+| pimple | 117 | 1.8 % | 0 | 0 % |
+| acne | 110 | 1.7 % | 3 | 1 % |
+| strawberry nose | 40 | 0.6 % | 0 | 0 % |
+| k-beauty | 33 | 0.5 % | 2 | 0 % |
+| pillow | 16 | 0.2 % | 12 | 2 % |
+| squeez | 0 | 0.0 % | 0 | 0 % |
+| glass skin | 0 | 0.0 % | 2 | 0 % |
+| hydrat | 0 | 0.0 % | 0 | 0 % |
+
+### Audiencia
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| women | 629 | 9.6 % | 40 | 8 % |
+| guys | 474 | 7.3 % | 36 | 7 % |
+| confidence | 345 | 5.3 % | 20 | 4 % |
+| makeup | 228 | 3.5 % | 13 | 2 % |
+| over 40 | 170 | 2.6 % | 5 | 1 % |
+| men | 115 | 1.8 % | 4 | 1 % |
+| over 35 | 113 | 1.7 % | 6 | 1 % |
+| date | 106 | 1.6 % | 3 | 1 % |
+| girlfriend | 80 | 1.2 % | 10 | 2 % |
+| girls | 76 | 1.2 % | 10 | 2 % |
+| close-up | 57 | 0.9 % | 3 | 1 % |
+| boyfriend | 56 | 0.9 % | 9 | 2 % |
+| 20s | 37 | 0.6 % | 2 | 0 % |
+| 30s | 29 | 0.4 % | 0 | 0 % |
+| mom | 17 | 0.3 % | 0 | 0 % |
+| teen | 0 | 0.0 % | 0 | 0 % |
+| insecur | 0 | 0.0 % | 0 | 0 % |
+| selfie | 0 | 0.0 % | 4 | 1 % |
+
+### Oferta y cierre
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| money back | 5433 | 83.1 % | 504 | 97 % |
+| money-back | 5433 | 83.1 % | 504 | 97 % |
+| guarantee | 5421 | 83.0 % | 504 | 97 % |
+| 60-day | 5359 | 82.0 % | 504 | 97 % |
+| 60 day | 5359 | 82.0 % | 504 | 97 % |
+| fast shipping | 5265 | 80.6 % | 498 | 95 % |
+| % off | 2385 | 36.5 % | 100 | 19 % |
+| risk-free | 1858 | 28.4 % | 77 | 15 % |
+| sale | 1010 | 15.5 % | 7 | 1 % |
+| summer | 550 | 8.4 % | 4 | 1 % |
+| 30% off | 503 | 7.7 % | 45 | 9 % |
+| code | 498 | 7.6 % | 0 | 0 % |
+| 45% off | 448 | 6.9 % | 6 | 1 % |
+| 40% off | 440 | 6.7 % | 0 | 0 % |
+| free gifts | 297 | 4.5 % | 5 | 1 % |
+| new | 248 | 3.8 % | 60 | 11 % |
+| discount | 239 | 3.7 % | 13 | 2 % |
+| 15% off | 233 | 3.6 % | 13 | 2 % |
+| black friday | 218 | 3.3 % | 0 | 0 % |
+| limited | 147 | 2.2 % | 5 | 1 % |
+| easter | 134 | 2.1 % | 0 | 0 % |
+| viral | 120 | 1.8 % | 0 | 0 % |
+| free shipping | 118 | 1.8 % | 3 | 1 % |
+| tiktok | 76 | 1.2 % | 5 | 1 % |
+| christmas | 64 | 1.0 % | 0 | 0 % |
+| last chance | 60 | 0.9 % | 0 | 0 % |
+| launch | 53 | 0.8 % | 12 | 2 % |
+| today only | 52 | 0.8 % | 11 | 2 % |
+| holiday | 39 | 0.6 % | 0 | 0 % |
+| gift | 37 | 0.6 % | 0 | 0 % |
+| spring | 33 | 0.5 % | 12 | 2 % |
+| sold out | 21 | 0.3 % | 3 | 1 % |
+| buy 2 | 14 | 0.2 % | 0 | 0 % |
+| back to school | 13 | 0.2 % | 0 | 0 % |
+| 50% off | 3 | 0.0 % | 0 | 0 % |
+| buy two | 3 | 0.0 % | 0 | 0 % |
+| free gift | 1 | 0.0 % | 0 | 0 % |
+| 20% off | 0 | 0.0 % | 0 | 0 % |
+| today15 | 0 | 0.0 % | 8 | 2 % |
+| tiktok10 | 0 | 0.0 % | 0 | 0 % |
+| new year | 0 | 0.0 % | 0 | 0 % |
+| valentine | 0 | 0.0 % | 0 | 0 % |
+
+### Prueba
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| made in korea | 888 | 13.6 % | 38 | 7 % |
+| 500,000 | 710 | 10.9 % | 0 | 0 % |
+| customers | 524 | 8.0 % | 8 | 2 % |
+| science | 288 | 4.4 % | 13 | 2 % |
+| reviews | 253 | 3.9 % | 28 | 5 % |
+| study | 75 | 1.1 % | 30 | 6 % |
+| trustpilot | 43 | 0.7 % | 3 | 1 % |
+| 9/10 | 28 | 0.4 % | 5 | 1 % |
+| cruelty | 23 | 0.4 % | 1 | 0 % |
+| clinically | 18 | 0.3 % | 2 | 0 % |
+| backed by science | 18 | 0.3 % | 0 | 0 % |
+| vegan | 14 | 0.2 % | 0 | 0 % |
+| 89% | 2 | 0.0 % | 0 | 0 % |
+| 250,000 | 0 | 0.0 % | 3 | 1 % |
+| 250k | 0 | 0.0 % | 0 | 0 % |
+| 93% | 0 | 0.0 % | 8 | 2 % |
+
+### Marca y landing
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| vue skin | 4058 | 62.1 % | 515 | 99 % |
+| vueswiss.com | 3394 | 51.9 % | 103 | 20 % |
+| vue swiss | 2563 | 39.2 % | 15 | 3 % |
+| try it | 1591 | 24.3 % | 106 | 20 % |
+| vueskin.com | 983 | 15.0 % | 43 | 8 % |
+| get yours | 313 | 4.8 % | 27 | 5 % |
+| us.vueskin | 0 | 0.0 % | 0 | 0 % |
+| shop now | 0 | 0.0 % | 37 | 7 % |
+
+### Idiomas (palabras no inglesas)
+
+| Frase | Todos | % | Activos | % act. |
+|---|---|---|---|---|
+| poros | 98 | 1.5 % | 0 | 0 % |
+| poren | 89 | 1.4 % | 0 | 0 % |
+| porer | 82 | 1.3 % | 0 | 0 % |
+| nez | 75 | 1.1 % | 2 | 0 % |
+| poriën | 64 | 1.0 % | 0 | 0 % |
+| pori | 56 | 0.9 % | 0 | 0 % |
+| points noirs | 34 | 0.5 % | 0 | 0 % |
+| nase | 21 | 0.3 % | 0 | 0 % |
+| nariz | 20 | 0.3 % | 0 | 0 % |
+| punti neri | 15 | 0.2 % | 0 | 0 % |
+| mee-eters | 13 | 0.2 % | 0 | 0 % |
+| mitesser | 8 | 0.1 % | 0 | 0 % |
+| pores obstrués | 6 | 0.1 % | 0 | 0 % |
+| puntos negros | 3 | 0.0 % | 0 | 0 % |
+| naso | 0 | 0.0 % | 0 | 0 % |
+| neus | 0 | 0.0 % | 0 | 0 % |
+| näsa | 0 | 0.0 % | 0 | 0 % |
