@@ -1,6 +1,8 @@
 # Vue Skin / Vue Swiss — Análisis creativo de los anuncios de Meta
 
-Base: 141 anuncios únicos y 91 creatividades únicas (78 vídeos descargados y transcritos con Whisper, 13 imágenes) obtenidos de la Meta Ad Library (página "Vue Swiss"/"Vue Skin", page_id 116602384765553) el 6-9-2026, más los metadatos agregados que la propia biblioteca expone (6.539 anuncios totales desde el 16-6-2025; 522 activos). El catálogo anuncio por anuncio con transcripciones está en `03_meta_ads_catalogo.md`; las hojas de contacto en `../media/meta_ads/`.
+Base: **692 anuncios únicos y 413 creatividades únicas (324 vídeos descargados y transcritos con Whisper, 89 imágenes)** obtenidos de la Meta Ad Library (página "Vue Swiss"/"Vue Skin", page_id 116602384765553) el 6-9-2026 mediante ~480 consultas distintas, más los metadatos agregados que la propia biblioteca expone (6.539 anuncios totales desde el 16-6-2025; 522 activos). El catálogo anuncio por anuncio con transcripciones está en `03_meta_ads_catalogo.md`; las hojas de contacto en `../media/meta_ads/`.
+
+Distribución de la muestra por mes de inicio: 2025 → may 12, jun 35, jul 12, ago 29, sep 39, oct 55, nov 65, dic 63; 2026 → ene 46, feb 18, mar 11, abr 33, **may 124**, jun 42, jul 67, ago 25, sep 16. Formatos: 75 % vídeo, 15 % imagen, 10 % catálogo dinámico (DCO/DPA, concentrado en nov-dic 2025 = retargeting de Black Friday/Navidad). Páginas: "Vue Swiss" 382 / "Vue Skin" 310 (mismo page_id renombrado en 2026). CTA: "Shop now" 96 %.
 
 ## 1. Cómo compran medios (lo que se deduce de la biblioteca)
 
@@ -72,7 +74,24 @@ Reglas de estilo: subtítulos grandes en blanco con borde, corte cada 1-2 s, mez
 - Navidad: código de creadora "hasta 45 %".
 - Lanzamiento Niacinamide (jul-2026): imagen editorial del frasco verde, "JUST LAUNCHED – NIACINAMIDE BARRIER SUPPORT SERUM – Skin barrier, meet your match"; texto "We built something we're genuinely proud of 💚".
 - Peel-off: "This is Maggie. For years she struggled with uneven dehydrated skin because Maggie has better things to do like yoga… collagen peel-off mask just 15 minutes" (título "From Dull to Glass Skin in 15 minutes").
-- Catálogo dinámico (DCO): "{{product.name}} / {{product.brand}}" → campañas Advantage+ catálogo para retargeting.
+- Catálogo dinámico (DCO/DPA): "{{product.name}} / {{product.brand}}" → 71 anuncios de catálogo Advantage+ para retargeting, 48 de ellos en nov-dic 2025.
+- Navidad 2025 (4-5 dic): "Glow Through Christmas ❄️", "CHRISTMAS OFFER ✨", "Holiday Skincare Sale 🎁" — "🎄 Don't wait for Santa… Up to 45 % off your favorite Vue products" con landing `holiday-patch-bundle`.
+- Summer Sale (17-7-2026): imagen "SUMMER SALE – UP TO 40 % OFF!" → "The BIGGEST sale of the Summer is here 🔥 Get up to 40 % OFF sitewide. Discover why **500,000+ customers** trust… Plus free gifts on your order" (landing `collections/all`; nótese que el claim sube de 250K a 500K clientes).
+- Lanzamiento sheet masks (7-11-2025): "Collagen Sheet Masks Are Here – ✨ NEW LAUNCH ✨… Your 20 minute fix… Limited launch".
+- Niacinamide (3-7-2026): cuatro imágenes con textos distintos: "2% Niacinamide. Just Landed.", "Meet Your New Daily Serum" ("One serum. One job."), "No filler. No complexity. Just an ingredient that works, at a concentration that delivers".
+
+### 3.11 Spot patches y T-Zone (2026)
+- **Spot patches** (ene y may 2026; títulos "Don't Pop. Protect." y "Calm Pimples Overnight"): *"You pop one pimple… and suddenly there are three more 😩 That's bacteria spreading under the skin. Hydrocolloid spot patches seal the area, absorb fluid, and help skin heal clean 💧✨ Break the breakout cycle"* / *"Breakouts every other day? Not anymore 👋 Stick on a spot patch overnight and wake up to calmer, flatter, less red skin"*.
+- **Clear T-Zone Kit** (ene-2026, "Take Control of Your T-Zone"): *"Stop picking and start patching 🚫 … targets nose, chin, and forehead 💧 Pulls out stubborn gunk 🌙 Reduces shine and sebum overnight ⚡ … Your acne doesn't get a free pass"*.
+- **Clear Pore Duo** ("Clearer Skin Starts Tonight", "Simplify Your Routine"): *"Think they're blackheads? They're not ⚠️ 🧴 Step 1: 2 % salicylic acid clears buildup 🌙 Step 2: Hydrocolloid patch absorbs oil overnight"*.
+
+### 3.12 Nuevos ángulos de 2026 sobre el mismo producto
+- **Coste hundido**: "I spent over £62 trying to fix my nose dots 😬 Scrubs. Pore strips. Masks. Nothing worked" (jun-2026, mercado UK).
+- **Confianza / primer plano**: "Those dark nose dots were killing my confidence…" (títulos "No More Close-Up Stress", "Clearer Skin, No Damage").
+- **Almohada**: "Your nose looks worse in the morning even after a full routine. Pillowcases transfer oil, dead skin, and bacteria back overnight. Vue patches… protecting the hours you used to ignore" (ago-2026, "Simple Overnight Defense").
+- **Hombres perezosos**: "🔥 For guys who hate skincare routines 💤 Stick it on, sleep, done" ("Simple Fix. Real Results.", nov-2025).
+- **Prueba social cuantificada**: "250,000 customers already use them. Thousands of 5 star reviews back it up" ("Cleaner pores, less shine", abr-2026).
+- **FAQ en el copy**: "Q: pore strips work? A: temporarily · Q: long-term results? A: dots come back · Q: skin after? A: more sensitive · Q: better alternative? A: hydrocolloid patches".
 
 ## 4. Textos principales más repetidos (copy exacto)
 
