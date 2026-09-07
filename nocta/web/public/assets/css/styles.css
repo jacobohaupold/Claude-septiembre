@@ -214,7 +214,7 @@ body.n-locked{position:fixed;left:0;right:0;width:100%;overflow:hidden}
 .n-tot{display:flex;justify-content:space-between;font-size:17px;font-weight:var(--n-w-semi);color:var(--n-navy);margin:var(--n-s2) 0 var(--n-s2)}
 /* ---------- barra inferior de compra ---------- */
 .n-bbar{position:fixed;left:0;right:0;bottom:0;z-index:var(--n-z-bar);background:rgba(250,248,243,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--n-line);box-shadow:var(--n-sh-bar);padding:10px 0 calc(10px + var(--n-safe-b));transform:translateY(110%);opacity:0;pointer-events:none;transition:transform var(--n-t4) var(--n-e),opacity var(--n-t2) linear}
-.n-bbar.is-on{transform:none;opacity:1;pointer-events:auto}
+.n-bbar.is-on{transform:none;opacity:1;pointer-events:auto}body.n-has-ck .n-bbar{bottom:var(--n-ck-h,0px)}body.n-has-ck .n-toast{top:calc(var(--n-safe-t) + var(--n-s2))}
 .n-bbar__in{display:flex;align-items:center;gap:var(--n-s3)}.n-bbar__img{width:44px;height:44px;flex:none;aspect-ratio:1}.n-bbar__i{min-width:0;flex:1}
 .n-bbar__i b{display:block;font-size:var(--n-fs-sm);font-weight:var(--n-w-med);color:var(--n-navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.n-bbar__in .n-btn{flex:0 0 auto;min-width:140px}.n-bbar__pay{margin-top:8px}
 body.n-has-bar{padding-bottom:calc(var(--n-bbar-h) + 60px + var(--n-safe-b))}
