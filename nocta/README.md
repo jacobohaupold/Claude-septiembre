@@ -9,7 +9,9 @@ Todo lo que hay en esta carpeta se ha construido a partir de la investigación d
 | `brand/packaging/` | `specs.json` (única fuente de medidas y textos legales), `box.html` (troquel y 3D de cada estuche, 1 mm = 4 px), `label.html` (etiquetas de líquidos), `patch.html` → `parche_nariz_lamina.png` (troquel del parche 60 × 45 mm y colocación correcta), renders `troquel_*.png` / `3d_*.png` | ✅ listo para enviar a imprenta/proveedor |
 | `brand/packshots/` | 13 packshots fotorrealistas generados desde los renders 3D (`gama-v2.png` es la gama completa) | ✅ aprobados en `brand/qa/` |
 | `brand/personas/` | creadoras/creador sintéticos (Soul) y la foto patrón de "parche bien puesto" | ✅ |
-| `brand/video/` | `final_ugc_nariz_v2_es.mp4` (UGC 17 s, listo para Meta/TikTok), `final_replica_vue14_es.mp4` (réplica de un anuncio de Vue con persona y caja NOCTA, uso interno), `turntable_nariz_6s.mp4`, brutos y `edit/` (script de montaje y planes) | ✅ |
+| `brand/video/` | **`final_maquina_T01_es.mp4`** (31 s, anuncio completo producido por la máquina), `final_ugc_nariz_v2_es.mp4` (UGC 17 s), `final_replica_vue14_es.mp4` y `final_replica_vue15_es.mp4` (réplicas de anuncios de Vue, uso interno), `turntable_nariz_6s.mp4`, `maquina/` (clips por plano) y `edit/` (montaje) | ✅ |
+| `maquina/` | **La máquina de contenido**: `README.md` (flujo), `ganadores/top30.md` (los 30 anuncios de Vue que funcionan, elegidos por matemáticas, con desglose plano a plano), `gestos/` (60 clips de gesto reales como referencia de movimiento), `prompts/bloques.md`, `plantillas/` (8 anuncios listos + brief de demostración), `producir.py` | ✅ |
+| `producto/fisica_del_parche.md` | Cómo se ve, se pone, se lleva, se despega, se estira y se enseña el parche: reglas obligatorias para toda generación | ✅ |
 | `brand/audio/` | locuciones TTS en español (voz Marisol, Seed Audio) verificadas con Whisper | ✅ |
 | `brand/qa/control_calidad_imagenes.md` | veredicto imagen por imagen y vídeo por vídeo, qué se rechazó y por qué | ✅ |
 | `producto/fichas_desarrollo_producto.md` | fichas técnicas de los 10 productos: medidas, INCI, envase, proveedores (los mismos que usa Vue y alternativas), costes, pruebas de aceptación, compliance | ✅ |
@@ -43,8 +45,8 @@ Panel `/admin/`: sesiones, rebote, embudo (visita → producto → carrito → c
 6. **Audio y montaje**: locución con Seed Audio (voz Marisol, `voice_id 75e72cd5-…`), verificación automática con faster-whisper, y montaje con `brand/video/edit/montar_anuncio.py plan.json salida.mp4` (subtítulos quemados, mezcla, cierre con packshot). Coste del montaje: 0 créditos.
 7. **Réplicas de anuncios de la competencia**: análisis plano a plano (`video_analysis`), persona sintética distinta en dos ejes (pelo y piel) a la original, `ad_multiplier video_edit` con prompt de sustitución + bloque de preservación; después se remonta con audio propio. Son maquetas internas / storyboards: el vídeo base es de Vue y no se puede publicar tal cual.
 
-## Créditos Higgsfield consumidos en esta sesión
-Ver la tabla al final de `brand/qa/control_calidad_imagenes.md` (se actualiza con `transactions`).
+## Créditos Higgsfield
+Saldo al cierre: **438 créditos**. Detalle por generación en `brand/qa/control_calidad_imagenes.md`. Un anuncio completo de 30 s con la máquina cuesta ≈ 225 créditos (≈ 130 reutilizando planos).
 
 ## Siguientes pasos (orden)
 1. Pedir muestras a Nurimedics / Dermatech / OEMKorea con las fichas de `producto/` y el troquel de `brand/packaging/`.

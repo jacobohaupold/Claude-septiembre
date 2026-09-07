@@ -65,3 +65,15 @@ Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando l
 | `video/maquina/clip_S3_presion_V.mp4` (5 s) | imagen: patrón parche puesto (sin vídeo: la referencia G04 de 602011846179690 fue bloqueada por moderación) | 32,5 | ✅ | Los dos índices recorren los laterales presionando las alas; el parche cubre puente-punta-alas, translúcido, se ven los poros |
 | `video/maquina/clip_S4_despegar_v2.mp4` (5 s) | movimiento: G10 (822761193551016) · imagen: patrón | 32,5 | ✅ **Mejor clip de la sesión** | Escarchado fino y creíble en punta y pliegues; pinza la punta y tira hacia cámara formando una tira larga translúcida como en el original; gesto de "asco-satisfacción" |
 | `video/maquina/clip_S6_lisa_caja.mp4` (5 s) | imagen: creadora 2 + packshot caja | 32,5 | ✅ | Se frota la nariz lisa con la yema, sonríe y levanta la caja NOCTA (wordmark, luna, texto) nítida |
+| `video/maquina/clip_S5_revelar.mp4` (5 s) | movimiento: G12 (772789505845233) · imagen: creadora 2 | 32,5 | ✅ con nota | Parche usado estirado entre las dos manos al doble de ancho, translúcido con tapones blancos, luego acercado a cámara. Nota v2: lo sostiene a la altura de los ojos; pedir "at chin level" |
+| `video/maquina/clip_S2_liner_colocar.mp4` (5 s) | movimiento: G02 (1584088272180999) · imagen: creadora 2 + patrón | 32,5 | ✅ | Levanta el parche del liner blanco (se ven los dos parches en la tarjeta), lo muestra en alto (mariposa translúcida lechosa), lo centra en el puente y lo baja a la punta, presiona con las dos manos |
+| **`video/final_maquina_T01_es.mp4`** (31,5 s) | 6 clips de arriba + 6 locuciones Marisol + subtítulos + cierre (`maquina/producir.py`) | 0 (montaje) | ✅ **Entregable final** | Estructura de los ganadores: gancho → mecanismo → sacar/colocar → presión V → despegar con estiramiento → revelar → nariz lisa + caja → cierre. Transcripción automática = guion. Misma creadora en los 6 planos; parche conforme a `producto/fisica_del_parche.md` en todos |
+
+### Créditos de la máquina (07/09, 02:55-03:20)
+| Concepto | Créditos |
+|---|---|
+| 7 clips Seedance 2.5 omni_reference 5 s 720p (6 con referencia de vídeo a 32,5; 1 gancho de 4 s a 26) | 221,0 |
+| 1 clip bloqueado por moderación (referencia G04 de 602011846179690), reembolsado | 0 |
+| 13 locuciones Seed Audio | ≈ 4 |
+| **Saldo real al cierre** | **438,4** |
+| Coste medio de un anuncio completo de 30 s con la máquina | ≈ 225 créditos (≈ 7 clips) · con clips reutilizados (caja, gancho, nariz lisa) ≈ 130 |

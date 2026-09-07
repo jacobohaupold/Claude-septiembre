@@ -28,7 +28,7 @@ def main(brief,out):
         t+=seg
     lst=os.path.join(tmp,'l.txt'); open(lst,'w').write(''.join(f"file '{x}'\n" for x in parts))
     body=os.path.join(tmp,'body.mp4'); subprocess.run([FF,'-v','error','-y','-f','concat','-safe','0','-i',lst,'-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-shortest','-c:v','copy','-c:a','aac',body],check=True)
-    plan=dict(video=body,fps=fps,w=w,h=h,vo=vo,subs=subs,endcard=B.get('endcard'),ambient_db=None)
+    plan=dict(video=body,fps=fps,w=w,h=h,vo=vo,subs=subs,endcard=B.get('endcard'),ambient_db=0)
     pj=os.path.join(tmp,'plan.json'); json.dump(plan,open(pj,'w'),ensure_ascii=False)
     subprocess.run([sys.executable,MONTAR,pj,out],check=True); print('DURACIÓN cuerpo',round(t,1),'s →',out)
 if __name__=='__main__': main(sys.argv[1],sys.argv[2])
