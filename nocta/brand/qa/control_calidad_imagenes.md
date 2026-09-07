@@ -85,3 +85,8 @@ Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando l
 | exfoliante-salicilico, serum-niacinamida, mascarilla-peel-off, pack-mascarillas-tela, tonico-hialuronico | ✅ | Envase y etiqueta fieles; gotero levantándose en el sérum; gotas en exfoliante y tónico |
 | parches-nariz | ✅ | Reutiliza `turntable_nariz_6s.mp4` comprimido |
 Total: 90 créditos. Publicados comprimidos (≈120 KB cada uno) en `web/public/assets/video/` y enlazados en `products.js` (`video`). **Saldo real al cierre: 348,4 créditos.**
+
+## Recortes de producto sin fondo (07/09) — para la web rediseñada
+| Imagen | Método | Coste | Veredicto |
+|---|---|---|---|
+| `web/public/assets/img/<slug>-cut.webp` + `.png` (12 productos + gama + dorso) y originales en `brand/recortes/` | Higgsfield `remove_background` sobre el packshot aprobado (1 cr/imagen); recorte local con rembg (isnet) como alternativa gratuita para los envases sueltos | 12 | ✅ Bordes limpios sin halo; conserva liner, pinzas, gotero, trazo de gel y discos; lienzo cuadrado con margen 6 % y fondo transparente para que el producto flote sobre el crema de la web |
