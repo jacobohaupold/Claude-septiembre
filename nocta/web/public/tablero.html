@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex">
+<title>NOCTA · Tablero de marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<style>
+:root{--navy:#14213D;--bg:#FAF8F3;--cream:#F3EFE6;--paper:#fff;--sage:#9FB3A1;--sage-ink:#576D5B;--muted:#5F5C55;--line:#E6E1D6;--ink2:#3B4257}
+*{box-sizing:border-box}html,body{margin:0;background:#EDEAE2;font-family:Inter,system-ui,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased;font-feature-settings:"cv05" 1,"ss03" 1}
+.board{position:relative;width:3200px;height:1860px;background:#EEEBE4;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(20,33,61,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.045) 1px,transparent 1px);background-size:80px 80px;background-position:40px 40px}
+.abs{position:absolute}
+.lab{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.card{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.card.cream{background:var(--cream)}.card.navy{background:var(--navy);color:var(--cream);border-color:var(--navy)}.card.navy .lab{color:var(--sage)}
+.title{left:80px;top:64px;width:1500px}
+.title h1{margin:0;font-size:92px;line-height:1;letter-spacing:-.035em;font-weight:500}
+.title p{margin:16px 0 0;font-size:20px;color:var(--ink2);max-width:900px;line-height:1.5}
+.meta{right:80px;top:80px;text-align:right;font-size:13px;line-height:1.7;color:var(--muted)}
+.meta b{display:block;color:var(--navy);font-weight:500}
+.logo{display:flex;align-items:center;gap:14px;font-size:120px;font-weight:600;letter-spacing:-.05em;line-height:1;color:var(--navy)}
+.logo svg{width:84px;height:84px}
+.chip{display:flex;flex-direction:column;justify-content:flex-end;padding:14px;border-radius:12px;height:120px;font-size:12px;line-height:1.4}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:14px;background:var(--navy);color:var(--cream);font-size:16px;font-weight:500;width:100%}
+.pay{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:8px;background:#000;color:#fff;font-size:16px;font-weight:500;width:100%}
+.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.tier{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:72px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:13px;flex:1;position:relative}
+.tier b{font-weight:500}.tier span{font-size:16px;font-weight:600}.tier small{font-size:11px;color:var(--muted)}
+.tier.on{border-color:var(--navy);background:var(--cream);box-shadow:inset 0 0 0 .5px var(--navy)}
+.flag{position:absolute;top:-10px;background:var(--sage);color:var(--navy);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:8px;font-weight:500}
+.phone{position:absolute;width:404px;height:858px;border-radius:52px;padding:7px;background:#111;box-shadow:0 40px 80px -40px rgba(20,33,61,.45)}
+.phone.light{background:#EAE7DF}.phone.light::after{border-color:#d9d5cb}
+.phone::before{content:"";position:absolute;left:50%;top:18px;transform:translateX(-50%);width:110px;height:30px;border-radius:20px;background:#111;z-index:3}
+.phone.light::before{background:#111}
+.phone .scr{position:relative;width:390px;height:844px;border-radius:45px;overflow:hidden;background:var(--bg)}
+.phone iframe{width:390px;height:844px;border:0;display:block;pointer-events:none}
+.phone .cap{position:absolute;left:0;right:0;bottom:-44px;text-align:center}
+.cap b{display:block;font-size:14px;font-weight:500;color:var(--navy)}.cap span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wire{position:absolute;inset:0;pointer-events:none}
+.cut{display:grid;place-items:center;position:relative}
+.cut::after{content:"";position:absolute;left:26%;right:26%;bottom:8%;height:7%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(20,33,61,.18),transparent 70%)}
+.cut img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
+.sel{position:absolute;inset:0;border:2px solid #3D7BF7;pointer-events:none}
+.sel i{position:absolute;width:12px;height:12px;background:#fff;border:2px solid #3D7BF7}
+.sizetag{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);background:#3D7BF7;color:#fff;font-size:15px;padding:4px 10px;border-radius:4px;font-weight:500;white-space:nowrap}
+.frametag{position:absolute;left:0;top:-30px;font-size:16px;color:#6a6a6a}
+</style>
+</head>
+<body>
+<div class="board" id="board">
+<div class="grid"></div>
+
+<div class="abs title"><span class="lab">NOCTA® · Sistema «Laboratorio Cálido» · Tablero de diseño v2</span><h1 style="margin-top:22px">La noche trabaja por ti.</h1><p>Un apósito de grado hospitalario que hace un trabajo medible mientras duermes. La tienda se lee como el informe de un laboratorio impreso sobre papel crema: cifras alineadas, filetes de un píxel, mucho aire y salvia como único acento. Comprar es un gesto: cada producto en pantalla lleva «Comprar ahora» y pago rápido debajo.</p></div>
+<div class="abs meta"><b>Identidad</b>Inter 400 · 500 · 600<br>Navy #14213D · Fondo #FAF8F3<br>Crema #F3EFE6 · Salvia #9FB3A1<br><br><b>Producto</b>Parche de nariz 60 × 45 mm<br>Hidrocoloide · 6-8 h · NC-NOSE-8<br><br><b>Web</b>nocta-store.netlify.app<br>15 páginas · 13 SKU · mobile-first</div>
+
+<!-- fila 1 -->
+<div class="card cream" style="left:80px;top:330px;width:560px;height:430px;padding:40px;display:flex;flex-direction:column;justify-content:space-between">
+  <div class="logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/></svg>nocta</div>
+  <div><div style="font-size:22px;font-weight:500;line-height:1.3">Poros limpios.<br>Mientras duermes.</div><div class="lab" style="margin-top:14px">Parches de hidrocoloide coreano · España</div></div>
+  <div style="display:flex;gap:10px;align-items:center" class="lab"><span style="width:26px;height:26px;border-radius:50%;background:var(--navy);display:inline-block"></span>Luna · marca · 18 px en cabecera</div>
+</div>
+<div class="card" style="left:660px;top:330px;width:560px;height:430px;background:var(--bg)">
+  <div class="cut" style="position:absolute;inset:30px 60px"><img src="/assets/img/parches-nariz-cut.webp" alt=""></div>
+  <div class="lab" style="position:absolute;left:28px;top:24px">Packshot · sin fondo</div>
+  <div class="lab num" style="position:absolute;right:28px;bottom:22px;color:var(--navy)">16,95 € · 8 parches · 2,12 € / parche</div>
+</div>
+<!-- fila 2 -->
+<div class="card" style="left:80px;top:790px;width:270px;height:300px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+  <div class="chip" style="background:#14213D;color:#F3EFE6;grid-column:1/-1;height:100px"><b>Navy</b>#14213D · tinta y acción</div>
+  <div class="chip" style="background:#FAF8F3;border:1px solid var(--line)"><b>Fondo</b>#FAF8F3</div>
+  <div class="chip" style="background:#F3EFE6"><b>Crema</b>#F3EFE6</div>
+  <div class="chip" style="background:#9FB3A1;color:#14213D"><b>Salvia</b>#9FB3A1</div>
+  <div class="chip" style="background:#576D5B;color:#F3EFE6"><b>Salvia tinta</b>#576D5B</div>
+</div>
+<div class="card cream" style="left:370px;top:790px;width:270px;height:300px;padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+  <div class="lab">Tipografía</div>
+  <div><div style="font-size:54px;font-weight:500;letter-spacing:-.03em;line-height:1">Aa</div><div style="font-size:15px;color:var(--ink2);margin-top:10px;line-height:1.5">Inter · 36/56 px peso 500<br>26 · 22 · 17 px peso 600<br>15 px cuerpo · 11 px versalitas</div></div>
+  <div class="lab num">0123456789 tabular</div>
+</div>
+<div class="card" style="left:660px;top:790px;width:560px;height:300px;padding:0;background:#fff">
+  <img src="/assets/img/lamina-parche.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%">
+  <div class="lab" style="position:absolute;left:24px;top:20px;background:rgba(255,255,255,.9);padding:6px 10px;border-radius:8px">Ficha técnica · parche 60 × 45 mm · puente 28 mm · alas 23 mm</div>
+</div>
+<!-- fila 3 -->
+<div class="card" style="left:80px;top:1110px;width:560px;height:280px;padding:26px;display:grid;gap:14px;align-content:start;background:var(--bg)">
+  <div class="lab">Bloque de compra impulsiva</div>
+  <div class="btn">Comprar ahora · 16,95 €</div>
+  <div class="pay"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="1.5"><rect x="4.5" y="10" width="15" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pago rápido · Apple Pay</div>
+  <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)"><u>Añadir al carrito</u><span class="lab">Envío 3,90 € · gratis desde 30 € o llevando 2</span></div>
+</div>
+<div class="card navy" style="left:660px;top:1110px;width:560px;height:280px;padding:26px">
+  <div class="lab">Absorción nocturna · 8 h</div>
+  <svg viewBox="0 0 500 120" width="508" height="122" style="margin-top:14px">
+    <g fill="#9FB3A1" id="bars"></g>
+    <line x1="0" y1="118" x2="500" y2="118" stroke="rgba(243,239,230,.3)"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(243,239,230,.75);margin-top:8px" class="num"><span>23:00</span><span>01:00</span><span>03:00</span><span>05:00</span><span>07:00</span></div>
+  <div style="position:absolute;right:26px;top:22px;font-size:30px;font-weight:600;letter-spacing:-.02em" class="num">9 de 10<span style="font-size:12px;font-weight:400;opacity:.7;margin-left:8px">poros más limpios</span></div>
+</div>
+<!-- fila 4 pequeñas -->
+<div class="card cream" style="left:80px;top:1410px;width:270px;height:330px;padding:22px;display:flex;flex-direction:column;justify-content:space-between">
+  <div class="lab">Escalera de cantidad</div>
+  <div style="display:flex;gap:8px"><div class="tier on"><b>1 unidad</b><span class="num">16,95 €</span><small>2,12 € / parche</small></div><div class="tier"><i class="flag">Lo más elegido</i><b>2 unidades</b><span class="num">33,90 €</span><small>Envío gratis</small></div></div>
+  <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--sage-ink);letter-spacing:.12em;font-size:14px">★★★★★</span><b class="num">4,8</b><span class="lab">312 opiniones</span></div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="lab" style="border:1px solid var(--line);border-radius:8px;padding:5px 9px;background:var(--bg);color:var(--navy)">Bestseller</span><span class="lab" style="border:1px solid var(--line);border-radius:8px;padding:5px 9px;background:var(--bg);color:var(--navy)">Nuevo</span><span class="lab" style="border-radius:8px;padding:5px 9px;background:var(--sage);color:var(--navy)">Ahorra 17 %</span></div>
+</div>
+<div class="card" style="left:370px;top:1410px;width:270px;height:330px;padding:0;background:var(--bg)">
+  <div class="cut" style="position:absolute;inset:16px"><img src="/assets/img/exfoliante-salicilico-cut.webp" alt=""></div>
+  <div class="lab" style="position:absolute;left:18px;top:16px">Paso 01 · Disolver</div>
+</div>
+<div class="card" style="left:660px;top:1410px;width:270px;height:330px;padding:0;background:var(--bg)">
+  <div class="cut" style="position:absolute;inset:16px"><img src="/assets/img/gama-cut.webp" alt=""></div>
+  <div class="lab" style="position:absolute;left:18px;top:16px">Gama · 13 SKU</div>
+</div>
+<div class="card navy" style="left:950px;top:1410px;width:270px;height:330px;padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+  <div class="lab">Icono de app</div>
+  <div style="width:120px;height:120px;border-radius:30px;background:var(--bg);display:grid;place-items:center;margin:0 auto"><svg viewBox="0 0 24 24" width="64" height="64" fill="#14213D"><path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/></svg></div>
+  <div style="font-size:13px;line-height:1.5;color:rgba(243,239,230,.8)">Cero emojis · iconos de trazo 1,5 px<br>Dos sombras en todo el sitio<br>Movimiento ≤ 260 ms</div>
+</div>
+
+<!-- teléfonos -->
+<div class="abs lab" style="left:1300px;top:330px;width:300px;line-height:1.7">Una pantalla por paso<br><span style="color:var(--navy);text-transform:none;letter-spacing:0;font-size:15px;font-weight:400">Portada → ficha → carrito → pago. En cada una, el producto sobre el fondo y el botón de compra justo debajo.</span></div>
+<svg class="wire" viewBox="0 0 3200 1860"><g fill="none" stroke="#14213D" stroke-width="1.5" stroke-dasharray="6 6" opacity=".35">
+<path d="M1704 900 C1760 900 1760 760 1816 760"/><path d="M2220 760 C2276 760 2276 900 2332 900"/><path d="M2736 900 C2792 900 2792 760 2848 760"/></g>
+<g fill="#14213D" opacity=".35"><circle cx="1704" cy="900" r="4"/><circle cx="1816" cy="760" r="4"/><circle cx="2220" cy="760" r="4"/><circle cx="2332" cy="900" r="4"/><circle cx="2736" cy="900" r="4"/><circle cx="2848" cy="760" r="4"/></g></svg>
+<div class="phone" style="left:1300px;top:500px"><div class="scr"><iframe src="/" title="Portada"></iframe></div><div class="cap"><b>Portada</b><span>Imagen antes que el botón</span></div></div>
+<div class="phone light" style="left:1816px;top:360px"><div class="scr"><iframe src="/producto.html?p=parches-nariz" title="Ficha"></iframe></div><div class="cap"><b>Ficha de producto</b><span>Comprar ahora en el primer pliegue</span></div></div>
+<div class="phone" style="left:2332px;top:500px"><div class="scr"><iframe src="/producto.html?p=parches-nariz" title="Carrito" id="cartframe"></iframe></div><div class="cap"><b>Carrito</b><span>Hoja inferior · nunca se pierde</span></div></div>
+<div class="phone light" style="left:2848px;top:360px;left:2760px"><div class="scr"><iframe src="/checkout.html" title="Pago"></iframe></div><div class="cap"><b>Pago</b><span>Exprés arriba · un paso</span></div></div>
+
+<div class="abs lab" style="left:1300px;bottom:60px;right:80px;display:flex;justify-content:space-between"><span>NOCTA Skin S.L. · Diseñado en España · Fabricado en Corea</span><span>Sistema de diseño v2 · Septiembre 2026</span></div>
+</div>
+<script>
+try{localStorage.setItem('n_popup','1');localStorage.setItem('n_ck','ess');localStorage.setItem('n_cart',JSON.stringify([{slug:'parches-nariz',qty:2,sub:false},{slug:'exfoliante-salicilico',qty:1,sub:false}]));}catch(e){}
+const g=document.getElementById('bars');let s='';for(let i=0;i<48;i++){const h=18+Math.round(90*Math.pow(Math.sin(i/47*Math.PI),.8)*(0.75+0.25*Math.abs(Math.sin(i*1.7))));s+=`<rect x="${i*10.4}" y="${118-h}" width="6" height="${h}" rx="3" opacity="${.45+.55*(i/47)}"/>`;}g.innerHTML=s;
+</script>
+</body>
+</html>

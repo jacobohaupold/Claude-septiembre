@@ -12,6 +12,16 @@
     Cache-Control = "no-store"
 
 [[headers]]
+  for = "/tablero.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"

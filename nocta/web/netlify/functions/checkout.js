@@ -26,7 +26,7 @@ export default async (req) => {
   // Stripe Checkout Session (API REST, sin SDK)
   const params = new URLSearchParams();
   params.set('mode', 'payment'); params.set('success_url', `${site}/gracias.html?o=${orderId}`); params.set('cancel_url', `${site}/checkout.html?cancel=1`);
-  params.set('customer_email', body.email || ''); params.set('client_reference_id', orderId); params.set('locale', 'es');
+  if (body.email) params.set('customer_email', body.email); params.set('client_reference_id', orderId); params.set('locale', 'es');
   ['card', 'bizum', 'klarna', 'paypal'].forEach((m, i) => params.set(`payment_method_types[${i}]`, m));
   items.forEach((it, i) => { params.set(`line_items[${i}][quantity]`, it.qty); params.set(`line_items[${i}][price_data][currency]`, 'eur'); params.set(`line_items[${i}][price_data][unit_amount]`, Math.round(it.unit * 100)); params.set(`line_items[${i}][price_data][product_data][name]`, it.name + (it.sub ? ' (suscripción)' : '')); });
   if (shipping) { const i = items.length; params.set(`line_items[${i}][quantity]`, 1); params.set(`line_items[${i}][price_data][currency]`, 'eur'); params.set(`line_items[${i}][price_data][unit_amount]`, Math.round(shipping * 100)); params.set(`line_items[${i}][price_data][product_data][name]`, 'Envío'); }
