@@ -4,25 +4,25 @@ Fuente de precios y contenidos: `web/public/assets/js/products.js` (`NOCTA_PRODU
 
 Claims: bajo Reglamento (CE) 1223/2009. Permitidos siempre que estén sustanciados por las pruebas de aceptación de cada ficha (adhesión, blanqueo, ausencia de irritación); prohibidos en toda la gama, sin excepción: **"cura"**, **"trata el acné"**, **"elimina los puntos negros para siempre"**, **"medical-grade"** sin sustanciación, cualquier alegación que presente el producto como sanitario en vez de cosmético.
 
-Imagen: ruta bajo `web/public/assets/img/`. Vídeo: ruta esperada `web/public/assets/video/<slug>.mp4`; a día de hoy la carpeta `assets/video/` no existe todavía en el repo, así que los 13 SKU están **pendientes de vídeo**.
+Imagen: ruta bajo `web/public/assets/img/`. Vídeo: `web/public/assets/video/<slug>.mp4` (4 s, 480p, bucle mudo generado con Seedance 2.5 a partir del packshot aprobado; bruto en `brand/video/catalogo/`). Los 10 productos individuales tienen vídeo y se muestran en la ficha (`producto.html`); los 3 packs reutilizan las imágenes.
 
 ## Tabla resumen
 
 | # | SKU | Nombre | Precio | Precio susc. | Coste desembarcado (est.) | Margen bruto | Proveedor principal | Imagen | Vídeo |
 |---|---|---|---:|---:|---:|---:|---|:---:|:---:|
-| 1 | NC-NOSE-8 | Parches de Nariz | 16,95 € | 14,41 € | ≈4,20 € (3,0-5,4) | ~75 % | Nurimedics / NewY Medical | ✓ | pendiente |
-| 2 | NC-SPOT-36 | Parches para Granos | 15,95 € | 13,56 € | ≈1,75 € (1,6-1,9) | ~89 % | NewY Medical / Nurimedics | ✓ | pendiente |
-| 3 | NC-SURF-10 | Parches de Superficie | 15,95 € | 13,56 € | ≈3,45 € (2,4-4,5) | ~78 % | Igual que nariz (troquel estándar) | ✓ | pendiente |
-| 4 | NC-CHIN-8 | Parches de Barbilla | 16,95 € | 14,41 € | ≈4,40 € (3,2-5,6) | ~74 % | Nurimedics / Dermatech | ✓ | pendiente |
-| 5 | NC-FORE-5 | Parches de Frente | 16,95 € | 14,41 € | ≈4,65 € (3,5-5,8) | ~73 % | Igual que barbilla (Dermatech/SourcingLab) | ✓ | pendiente |
-| 6 | NC-BHA-110 | Exfoliante Ácido Salicílico 2 % | 32,00 € | 27,20 € | ≈4,15 € (2,8-5,5) | ~87 % | OEMKorea / Mayk / Awilke | ✓ | pendiente |
-| 7 | NC-NIA-30 | Sérum Niacinamida 2 % | 29,00 € | 24,65 € | ≈4,55 € (3,1-6,0) | ~84 % | OEMKorea / knok / Cosmecca | ✓ | pendiente |
-| 8 | NC-PEEL-70 | Mascarilla Peel-Off Colágeno | 29,00 € | 24,65 € | ≈3,30 € (2,3-4,3) | ~89 % | Cosmecca / Hankook (vía Mayk/OEMKorea) | ✓ | pendiente |
-| 9 | NC-SHEET-4 | Pack 4 Mascarillas de Tela | 15,00 € | 12,75 € | ≈3,55 € (2,4-4,7) | ~76 % | OEMKorea / KPrivateLabel | ✓ | pendiente |
-| 10 | NC-TON-130 | Tónico Ácido Hialurónico | 25,00 € | 21,25 € | ≈4,10 € (2,2-6,0) | ~84 % | OEMKorea / Cosmecca / Hankook Cosmo | ✓ | pendiente |
-| 11 | NC-DUO | Dúo Poros Limpios (pack) | 44,00 € | 37,40 € | ≈8,95 € | ~80 % | Suma NC-BHA-110 + NC-NOSE-8 | ✓ | pendiente |
-| 12 | NC-TZONE | Kit Zona T (pack) | 44,00 € | 37,40 € | ≈13,50 € | ~69 % | Suma NC-FORE-5 + NC-NOSE-8 + NC-CHIN-8 | ✓ | pendiente |
-| 13 | NC-FULL | Kit Cara Completa (pack) | 69,00 € | 58,65 € | ≈19,35 € | ~72 % | Suma de los 5 parches | ✓ | pendiente |
+| 1 | NC-NOSE-8 | Parches de Nariz | 16,95 € | 14,41 € | ≈4,20 € (3,0-5,4) | ~75 % | Nurimedics / NewY Medical | ✓ | ✓ |
+| 2 | NC-SPOT-36 | Parches para Granos | 15,95 € | 13,56 € | ≈1,75 € (1,6-1,9) | ~89 % | NewY Medical / Nurimedics | ✓ | ✓ |
+| 3 | NC-SURF-10 | Parches de Superficie | 15,95 € | 13,56 € | ≈3,45 € (2,4-4,5) | ~78 % | Igual que nariz (troquel estándar) | ✓ | ✓ |
+| 4 | NC-CHIN-8 | Parches de Barbilla | 16,95 € | 14,41 € | ≈4,40 € (3,2-5,6) | ~74 % | Nurimedics / Dermatech | ✓ | ✓ |
+| 5 | NC-FORE-5 | Parches de Frente | 16,95 € | 14,41 € | ≈4,65 € (3,5-5,8) | ~73 % | Igual que barbilla (Dermatech/SourcingLab) | ✓ | ✓ |
+| 6 | NC-BHA-110 | Exfoliante Ácido Salicílico 2 % | 32,00 € | 27,20 € | ≈4,15 € (2,8-5,5) | ~87 % | OEMKorea / Mayk / Awilke | ✓ | ✓ |
+| 7 | NC-NIA-30 | Sérum Niacinamida 2 % | 29,00 € | 24,65 € | ≈4,55 € (3,1-6,0) | ~84 % | OEMKorea / knok / Cosmecca | ✓ | ✓ |
+| 8 | NC-PEEL-70 | Mascarilla Peel-Off Colágeno | 29,00 € | 24,65 € | ≈3,30 € (2,3-4,3) | ~89 % | Cosmecca / Hankook (vía Mayk/OEMKorea) | ✓ | ✓ |
+| 9 | NC-SHEET-4 | Pack 4 Mascarillas de Tela | 15,00 € | 12,75 € | ≈3,55 € (2,4-4,7) | ~76 % | OEMKorea / KPrivateLabel | ✓ | ✓ |
+| 10 | NC-TON-130 | Tónico Ácido Hialurónico | 25,00 € | 21,25 € | ≈4,10 € (2,2-6,0) | ~84 % | OEMKorea / Cosmecca / Hankook Cosmo | ✓ | ✓ |
+| 11 | NC-DUO | Dúo Poros Limpios (pack) | 44,00 € | 37,40 € | ≈8,95 € | ~80 % | Suma NC-BHA-110 + NC-NOSE-8 | ✓ | — (imágenes) |
+| 12 | NC-TZONE | Kit Zona T (pack) | 44,00 € | 37,40 € | ≈13,50 € | ~69 % | Suma NC-FORE-5 + NC-NOSE-8 + NC-CHIN-8 | ✓ | — (imágenes) |
+| 13 | NC-FULL | Kit Cara Completa (pack) | 69,00 € | 58,65 € | ≈19,35 € | ~72 % | Suma de los 5 parches | ✓ | — (imágenes) |
 
 Imagen ✓ = existe al menos una imagen de portada en `assets/img/` referenciada por `products.js` para ese SKU (confirmado en esta revisión).
 

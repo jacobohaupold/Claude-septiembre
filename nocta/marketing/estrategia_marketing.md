@@ -32,7 +32,7 @@
 | **Envío** | 3-7 días laborables a España desde almacén de Países Bajos; quejas de Trustpilot de entregas de 2-3 semanas o pedidos no recibidos | Almacén/3PL en España; **24-48 h península**, 48-72 h Baleares, Canarias con IGIC gestionado; tracking en dominio propio |
 | **Adhesión** | 2ª queja más repetida en Trustpilot (parche que no se pega, se arruga o se despega por los lados) | Troquel rediseñado con más superficie de contacto en las "alas" + adhesivo de mayor grosor testado en laboratorio; **Garantía de Adhesión**: si no se te queda pegado 6 h, reembolso inmediato sin necesidad de esperar 30 días |
 | **Tutorial** | Solo en un vídeo de TikTok de 84 s (Rachelle); no está en el packaging | Tarjeta-tutorial ilustrada dentro de cada caja (5 pasos + QR a vídeo de 30 s) + inserto con código de bienvenida a la comunidad |
-| **Precio** | 16,95 € (8 uds.), sin descuento base en la UE, con precio tachado inflado solo en EE. UU./Oriente Medio | 15,95 € (8 uds.) con precio ancla transparente (nunca tachado de forma artificial); bundles con ahorro real y declarado |
+| **Precio** | 16,95 € (8 uds.), sin descuento base en la UE, con precio tachado inflado solo en EE. UU./Oriente Medio | 16,95 € (8 uds.), mismo precio que Vue, con precio ancla transparente (nunca tachado de forma artificial); la diferenciación no es el precio sino envío desde España en 24-48 h, garantía 60 días, uso bien explicado y bundles con ahorro real y declarado (decisión alineada con `products.js` y el modelo financiero) |
 | **Comunidad** | Sin Reddit, sin X, sin foro; página de Facebook usada solo como soporte de anuncios; canal orgánico de TikTok abandonado desde 2025 | Comunidad activa en Instagram/TikTok con contenido diario, WhatsApp de clientas VIP, hilo de reseñas fotográficas, sorteos mensuales, respuesta a comentarios en <2 h |
 
 **Resumen de la cuña competitiva (para brief de creativos):** *"Vue funciona en Reino Unido, Alemania e Italia; en España solo ha puesto rebajas traducidas. NOCTA es la alternativa que habla como tú, llega en dos días y se queda pegada toda la noche."*
@@ -92,7 +92,7 @@
 **Escalera de producto:**
 ```
 Entrada (imán, CAC bajo):  Parches Anti-Granitos (36 uds.) — 14,95 €
-Héroe:                     Parches de Nariz NOCTA (8 uds.) — 15,95 €
+Héroe:                     Parches de Nariz NOCTA (8 uds.) — 16,95 €
 Dúo:                       Dúo Poros Perfectos (Nariz + Exfoliante BHA) — 39 € (ahorro real 8 €)
 Rutina/bundle:             Kit Zona T Completa (Nariz + Barbilla + Frente + BHA) — 62 € (ahorro real 15 €)
 Suscripción:               −15 % + envío gratis + regalo en el 2º envío, cada 30/45/60 días
@@ -111,7 +111,7 @@ Suscripción:               −15 % + envío gratis + regalo en el 2º envío, c
 - **Umbrales de carrito:** envío gratis desde 30 €; regalo (mascarilla) a partir de 30 €; regalo doble a partir de 50 €; kit sorpresa a partir de 80 € (ver `landing_y_funnels.md`).
 
 **Frase de oferta maestra para anuncios/PDP:**
-> "Parches de Nariz NOCTA — 15,95 €. Envío 24-48 h. Garantía de Adhesión + 60 días de garantía de satisfacción. Si no se pega, no pagas."
+> "Parches de Nariz NOCTA — 16,95 €. Envío 24-48 h. Garantía de Adhesión + 60 días de garantía de satisfacción. Si no se pega, no pagas."
 
 ---
 

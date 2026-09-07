@@ -77,3 +77,11 @@ Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando l
 | 13 locuciones Seed Audio | ≈ 4 |
 | **Saldo real al cierre** | **438,4** |
 | Coste medio de un anuncio completo de 30 s con la máquina | ≈ 225 créditos (≈ 7 clips) · con clips reutilizados (caja, gancho, nariz lisa) ≈ 130 |
+
+## Vídeos de catálogo (07/09, 03:32) — Seedance 2.5 omni_reference 4 s 480p desde el packshot aprobado, 10 cr cada uno
+| Producto | Veredicto | Observaciones |
+|---|---|---|
+| parches-granos, parches-superficie, parches-barbilla, parches-frente | ✅ | Caja idéntica al packshot (wordmark, luna, textos), giro lento sobre plataforma, liner/lámina delante |
+| exfoliante-salicilico, serum-niacinamida, mascarilla-peel-off, pack-mascarillas-tela, tonico-hialuronico | ✅ | Envase y etiqueta fieles; gotero levantándose en el sérum; gotas en exfoliante y tónico |
+| parches-nariz | ✅ | Reutiliza `turntable_nariz_6s.mp4` comprimido |
+Total: 90 créditos. Publicados comprimidos (≈120 KB cada uno) en `web/public/assets/video/` y enlazados en `products.js` (`video`). **Saldo real al cierre: 348,4 créditos.**

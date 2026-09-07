@@ -1,7 +1,7 @@
 // Catálogo NOCTA — fuente única de verdad para la web (precios en EUR con IVA).
 window.NOCTA_PRODUCTS = [
   {
-    slug: "parches-nariz", sku: "NC-NOSE-8", name: "Parches de Nariz", short: "Poros limpios mientras duermes",
+    slug: "parches-nariz",video:"/assets/video/parches-nariz.mp4", sku: "NC-NOSE-8", name: "Parches de Nariz", short: "Poros limpios mientras duermes",
     price: 16.95, compare: null, sub: 14.41, units: "8 parches", badge: "BESTSELLER", rating: 4.8, reviews: 312,
     image: "/assets/img/parches-nariz.jpg", gallery: ["/assets/img/parches-nariz.jpg", "/assets/img/parches-nariz-dorso.jpg", "/assets/img/lifestyle-noche.jpg", "/assets/img/gama.jpg"],
     tags: ["parches", "nariz", "poros"],
@@ -14,7 +14,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["exfoliante-salicilico", "parches-granos", "duo-poros"]
   },
   {
-    slug: "parches-granos", sku: "NC-SPOT-36", name: "Parches para Granos", short: "Aplana el grano en una noche",
+    slug: "parches-granos",video:"/assets/video/parches-granos.mp4", sku: "NC-SPOT-36", name: "Parches para Granos", short: "Aplana el grano en una noche",
     price: 15.95, compare: null, sub: 13.56, units: "36 parches (10 y 12 mm)", badge: null, rating: 4.7, reviews: 188,
     image: "/assets/img/parches-granos.jpg", gallery: ["/assets/img/parches-granos.jpg", "/assets/img/gama.jpg"], tags: ["parches", "granos"],
     desc: "36 parches de hidrocoloide invisibles que absorben el líquido del grano, lo protegen de tus dedos y de las bacterias y lo aplanan mientras duermes. Sin marcas, sin cicatrices.",
@@ -26,7 +26,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["parches-superficie", "parches-nariz", "serum-niacinamida"]
   },
   {
-    slug: "parches-superficie", sku: "NC-SURF-10", name: "Parches de Superficie", short: "Para brotes y zonas grandes",
+    slug: "parches-superficie",video:"/assets/video/parches-superficie.mp4", sku: "NC-SURF-10", name: "Parches de Superficie", short: "Para brotes y zonas grandes",
     price: 15.95, compare: null, sub: 13.56, units: "10 parches 40×30 mm", badge: null, rating: 4.7, reviews: 96,
     image: "/assets/img/parches-superficie.jpg", gallery: ["/assets/img/parches-superficie.jpg", "/assets/img/gama.jpg"], tags: ["parches", "granos"],
     desc: "Parches grandes de hidrocoloide para mejillas, mandíbula o brotes de varios granos. Absorben, calman y protegen toda la zona durante la noche.",
@@ -38,7 +38,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["parches-granos", "exfoliante-salicilico"]
   },
   {
-    slug: "parches-barbilla", sku: "NC-CHIN-8", name: "Parches de Barbilla", short: "Descongestiona la barbilla",
+    slug: "parches-barbilla",video:"/assets/video/parches-barbilla.mp4", sku: "NC-CHIN-8", name: "Parches de Barbilla", short: "Descongestiona la barbilla",
     price: 16.95, compare: null, sub: 14.41, units: "8 parches", badge: "NUEVO", rating: 4.6, reviews: 41,
     image: "/assets/img/parches-barbilla.jpg", gallery: ["/assets/img/parches-barbilla.jpg", "/assets/img/gama.jpg"], tags: ["parches", "t-zone"],
     desc: "Parche con forma de barbilla que absorbe la grasa y calma los brotes hormonales de la zona más rebelde de la cara.",
@@ -50,7 +50,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["kit-t-zone", "parches-frente"]
   },
   {
-    slug: "parches-frente", sku: "NC-FORE-5", name: "Parches de Frente", short: "Frente sin brillos ni granitos",
+    slug: "parches-frente",video:"/assets/video/parches-frente.mp4", sku: "NC-FORE-5", name: "Parches de Frente", short: "Frente sin brillos ni granitos",
     price: 16.95, compare: null, sub: 14.41, units: "5 parches", badge: "NUEVO", rating: 4.6, reviews: 37,
     image: "/assets/img/parches-frente.jpg", gallery: ["/assets/img/parches-frente.jpg", "/assets/img/gama.jpg"], tags: ["parches", "t-zone"],
     desc: "Banda ancha de hidrocoloide para toda la frente: absorbe el exceso de grasa, alisa la textura y calma los granitos pequeños.",
@@ -62,7 +62,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["kit-t-zone", "parches-barbilla"]
   },
   {
-    slug: "exfoliante-salicilico", sku: "NC-BHA-110", name: "Exfoliante Ácido Salicílico 2 %", short: "Disuelve la grasa del poro",
+    slug: "exfoliante-salicilico",video:"/assets/video/exfoliante-salicilico.mp4", sku: "NC-BHA-110", name: "Exfoliante Ácido Salicílico 2 %", short: "Disuelve la grasa del poro",
     price: 32, compare: null, sub: 27.2, units: "110 ml", badge: null, rating: 4.8, reviews: 74,
     image: "/assets/img/exfoliante.jpg", gallery: ["/assets/img/exfoliante.jpg", "/assets/img/gama.jpg"], tags: ["skincare", "poros"],
     desc: "Exfoliante líquido con BHA 2 % (salicílico), AHA (glicólico) y PHA (gluconolactona). Disuelve el tapón de grasa desde dentro del poro y prepara la piel para que el parche absorba el doble.",
@@ -74,7 +74,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["parches-nariz", "duo-poros"]
   },
   {
-    slug: "serum-niacinamida", sku: "NC-NIA-30", name: "Sérum Niacinamida 2 %", short: "Refuerza la barrera, cierra el poro",
+    slug: "serum-niacinamida",video:"/assets/video/serum-niacinamida.mp4", sku: "NC-NIA-30", name: "Sérum Niacinamida 2 %", short: "Refuerza la barrera, cierra el poro",
     price: 29, compare: null, sub: 24.65, units: "30 ml", badge: "NUEVO", rating: 4.7, reviews: 22,
     image: "/assets/img/serum.jpg", gallery: ["/assets/img/serum.jpg", "/assets/img/gama.jpg"], tags: ["skincare"],
     desc: "Sérum coreano de niacinamida al 2 % con complejo de ácidos hialurónicos: regula la grasa, afina el poro y refuerza la barrera cutánea sin irritar.",
@@ -86,7 +86,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["tonico-hialuronico", "parches-nariz"]
   },
   {
-    slug: "mascarilla-peel-off", sku: "NC-PEEL-70", name: "Mascarilla Peel-Off Colágeno", short: "Efecto glass skin en 15 minutos",
+    slug: "mascarilla-peel-off",video:"/assets/video/mascarilla-peel-off.mp4", sku: "NC-PEEL-70", name: "Mascarilla Peel-Off Colágeno", short: "Efecto glass skin en 15 minutos",
     price: 29, compare: null, sub: 24.65, units: "70 ml", badge: null, rating: 4.7, reviews: 58,
     image: "/assets/img/peel-off.jpg", gallery: ["/assets/img/peel-off.jpg", "/assets/img/gama.jpg"], tags: ["skincare"],
     desc: "Mascarilla de colágeno vegano que se seca en una película y se retira de una pieza: piel hidratada, tersa y luminosa en 15 minutos.",
@@ -98,7 +98,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["pack-mascarillas-tela", "serum-niacinamida"]
   },
   {
-    slug: "pack-mascarillas-tela", sku: "NC-SHEET-4", name: "Pack 4 Mascarillas de Tela Colágeno", short: "20 minutos de hidratación",
+    slug: "pack-mascarillas-tela",video:"/assets/video/pack-mascarillas-tela.mp4", sku: "NC-SHEET-4", name: "Pack 4 Mascarillas de Tela Colágeno", short: "20 minutos de hidratación",
     price: 15, compare: null, sub: 12.75, units: "4 mascarillas", badge: null, rating: 4.8, reviews: 63,
     image: "/assets/img/mascarillas-tela.jpg", gallery: ["/assets/img/mascarillas-tela.jpg", "/assets/img/gama.jpg"], tags: ["skincare"],
     desc: "Cuatro mascarillas coreanas de colágeno: Hialurónico (hidrata), Vitamina C (ilumina), Baba de caracol (repara) y Oro (reafirma). El regalo perfecto para ti o para tu carrito.",
@@ -110,7 +110,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["mascarilla-peel-off"]
   },
   {
-    slug: "tonico-hialuronico", sku: "NC-TON-130", name: "Tónico Ácido Hialurónico", short: "Hidrata y afina el poro",
+    slug: "tonico-hialuronico",video:"/assets/video/tonico-hialuronico.mp4", sku: "NC-TON-130", name: "Tónico Ácido Hialurónico", short: "Hidrata y afina el poro",
     price: 25, compare: null, sub: 21.25, units: "130 ml", badge: null, rating: 4.7, reviews: 49,
     image: "/assets/img/tonico.jpg", gallery: ["/assets/img/tonico.jpg", "/assets/img/gama.jpg"], tags: ["skincare"],
     desc: "Tónico coreano con ácido hialurónico, té verde y zinc PCA: hidrata, calma y regula la grasa para que el poro se vea más cerrado.",
