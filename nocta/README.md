@@ -48,6 +48,14 @@ Panel `/admin/`: sesiones, rebote, embudo (visita → producto → carrito → c
 6. **Audio y montaje**: locución con Seed Audio (voz Marisol, `voice_id 75e72cd5-…`), verificación automática con faster-whisper, y montaje con `brand/video/edit/montar_anuncio.py plan.json salida.mp4` (subtítulos quemados, mezcla, cierre con packshot). Coste del montaje: 0 créditos.
 7. **Réplicas de anuncios de la competencia**: análisis plano a plano (`video_analysis`), persona sintética distinta en dos ejes (pelo y piel) a la original, `ad_multiplier video_edit` con prompt de sustitución + bloque de preservación; después se remonta con audio propio. Son maquetas internas / storyboards: el vídeo base es de Vue y no se puede publicar tal cual.
 
+
+## Poner la web en línea (Netlify) en 2 minutos
+**Opción A, sin instalar nada:** entra en app.netlify.com → *Add new site* → *Import an existing project* → GitHub → repositorio `jacobohaupold/Claude-septiembre` → rama `claude/vue-skin-marketing-research-9dgtmr` → **Base directory `nocta/web`** (el resto lo lee de `netlify.toml`: publish `public`, functions `netlify/functions`) → *Deploy*. Después, en *Site configuration → Environment variables*, añade `ADMIN_TOKEN` (contraseña del panel `/admin/`) y, cuando tengas Stripe, `STRIPE_SECRET_KEY` y `STRIPE_WEBHOOK_SECRET`. Sin Stripe el checkout funciona en modo demo.
+
+**Opción B, con token:** crea un *Personal access token* en Netlify (User settings → Applications) y ejecuta `NETLIFY_AUTH_TOKEN=xxx nocta/web/deploy.sh nocta-store`. Crea el sitio, configura variables y publica; la URL será `https://nocta-store.netlify.app`.
+
+La tienda ha pasado una prueba de humo con navegador (17 páginas, catálogo de 13 productos, carrito, ficha con vídeo, checkout, filtros) antes de este commit.
+
 ## Créditos Higgsfield
 Saldo al cierre: **348 créditos**. Detalle por generación en `brand/qa/control_calidad_imagenes.md`. Un anuncio completo de 30 s con la máquina cuesta ≈ 225 créditos (≈ 130 reutilizando planos).
 
