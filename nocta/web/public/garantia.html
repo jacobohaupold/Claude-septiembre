@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Garantía 60 días y garantía de adhesión · NOCTA</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
+<body><div id="site-header"></div>
+<article class="article">
+<div class="kicker">Garantías NOCTA</div><h1>Si no ves la diferencia, te devolvemos el dinero. Si no se pega, te lo cambiamos.</h1>
+<h2>1. Garantía de resultados · 60 días</h2>
+<ul><li>Usa el producto de forma regular durante al menos 30 días (parches: mínimo 3 usos; skincare: uso diario).</li><li>Si entre el día 30 y el 60 desde la entrega no notas mejoría, rellena el formulario de abajo con una foto de antes y otra de después.</li><li>Te reembolsamos el importe del producto en 3-5 días laborables. No hace falta devolver nada.</li></ul>
+<h2>2. Garantía de adhesión (solo NOCTA)</h2>
+<p>Si un parche se despega antes de 6 horas habiéndolo aplicado sobre piel limpia y seca, te enviamos una caja nueva sin coste. Mándanos un mensaje con tu número de pedido.</p>
+<h2>3. Devolución sin abrir · 14 días</h2>
+<p>Productos precintados: 14 días desde la entrega. Gastos de devolución a cargo del cliente salvo error nuestro.</p>
+<h2>Solicitar la garantía</h2>
+<form class="form" id="gf"><label>Número de pedido</label><input name="order" required><label>Email de compra</label><input type="email" name="email" required><label>¿Qué ha pasado?</label><select name="type"><option value="resultados">No veo resultados (60 días)</option><option value="adhesion">El parche no se adhiere</option><option value="devolucion">Devolución sin abrir</option></select><label>Cuéntanos cómo lo has usado</label><input name="msg" required placeholder="Cuántas veces, sobre qué piel, con o sin exfoliante"><label>Fotos antes/después (opcional)</label><input type="file" name="photos" multiple accept="image/*"><button class="btn wide" style="margin-top:12px">Enviar solicitud</button></form>
+<p class="byline">Respondemos en menos de 24 h laborables desde hola@nocta.es.</p>
+</article><div id="site-footer"></div>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.getElementById('gf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:f.get('email'),src:'garantia:'+f.get('type')+':'+f.get('order')})}).catch(()=>{});nTrack('guarantee_request',{type:f.get('type')});e.target.innerHTML='<h3>Recibido ✅</h3><p>Te escribimos en menos de 24 h.</p>';};});</script>
+</body></html>

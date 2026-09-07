@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Producto · NOCTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap" id="pdp"></main>
+<div class="sticky-cta" id="sticky"><div class="wrap"><div><b id="st-name"></b><br><span id="st-price"></span></div><button class="btn" id="st-add">Añadir al carrito</button></div></div>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/';return;}
+document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]')||document.head.insertAdjacentHTML('beforeend',`<meta name="description" content="${p.desc.slice(0,155)}">`);
+const eur=nEur;const ups=(p.upsell||[]).map(nBySlug).filter(Boolean);
+const bundleList=p.bundle?`<p style="font-size:14px;color:#6b6b6b">Incluye: ${p.bundle.map(s=>nBySlug(s).name).join(' + ')}</p>`:'';
+document.getElementById('pdp').innerHTML=`<div class="pdp">
+<div class="gallery"><div class="mainimg"><img id="mainimg" src="${p.gallery[0]}" alt="${p.name}"></div><div class="thumbs">${p.gallery.map((g,i)=>`<img src="${g}" class="${i?'':'on'}" data-g="${g}" alt="">`).join('')}</div>
+<div class="claims" style="margin-top:20px">${p.claims.map(c=>`<div class="claim"><big>${c[0]}</big><small>${c[1]}</small></div>`).join('')}</div></div>
+<div class="buy">${p.badge?`<span class="badge" style="position:static;display:inline-block">${p.badge}</span>`:''}<h1>${p.name}</h1><div class="units">${p.units} · <span class="stars">${nStars(p.rating)}</span> ${p.rating} (${p.reviews} opiniones)</div>
+<p style="font-size:17px;margin:14px 0">${p.desc}</p>${bundleList}
+<ul class="bullets">${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+<div class="opts">
+<label class="opt on"><input type="radio" name="mode" value="one" checked><div class="t"><b>Compra única</b><small>Sin compromiso</small></div><div class="p">${eur(p.price)}${p.compare?` <s style="color:#6b6b6b;font-weight:400">${eur(p.compare)}</s>`:''}</div></label>
+<label class="opt"><input type="radio" name="mode" value="sub"><div class="t"><b>Suscríbete y ahorra 15 %</b><small>Cada 30, 45 o 60 días · envío gratis · cancela cuando quieras</small></div><div class="p" style="color:#2f8f5b">${eur(p.sub)}</div></label>
+</div>
+<div style="display:flex;align-items:center;margin:14px 0"><div class="qty"><button id="qm">−</button><span id="qv">1</span><button id="qp">+</button></div><button class="btn" id="addbtn" style="flex:1">Añadir al carrito · <span id="addprice">${eur(p.price)}</span></button></div>
+<div class="trust"><div>🇪🇸 Envío 24-48 h<br>desde España</div><div>✅ Garantía 60 días<br>o te devolvemos el dinero</div><div>🔒 Pago seguro<br>Bizum · Klarna · Tarjeta</div></div>
+<div class="tabs">
+<details open><summary>Cómo usar</summary><ol>${p.how.map(h=>`<li>${h}</li>`).join('')}</ol><a href="/como-usar.html" style="font-size:14px">Ver guía completa con vídeo →</a></details>
+<details><summary>Ingredientes</summary><p style="font-size:14px">${p.ingredients}</p></details>
+<details><summary>Envío y devoluciones</summary><p style="font-size:14px">Envío 3,90 € · gratis desde 30 € o comprando 2 productos. Península 24-48 h. Devolución sin abrir 14 días. Garantía de resultados 60 días.</p></details>
+${p.faq.map(f=>`<details><summary>${f[0]}</summary><p style="font-size:15px">${f[1]}</p></details>`).join('')}
+</div>
+<div class="upsells"><h3 style="color:#14213D">Combínalo con</h3>${ups.map(u=>`<div class="mini"><img src="${u.image}" alt=""><div class="t"><b>${u.name}</b><br><small>${u.short}</small></div><button data-add="${u.slug}" data-src="pdp-upsell">+ ${eur(u.price)}</button></div>`).join('')}</div>
+</div></div>
+<section><h2>Opiniones</h2><div class="testis">
+<div class="testi"><div class="stars">★★★★★</div>"Increíble lo que sale. Lo uso dos noches por semana y la nariz ya no brilla."<div class="who">Paula S. · Barcelona</div></div>
+<div class="testi"><div class="stars">★★★★★</div>"Llegó en un día. El parche se adapta perfecto, no se mueve en toda la noche."<div class="who">Diego L. · Málaga</div></div>
+<div class="testi"><div class="stars">★★★★☆</div>"Funciona mejor si antes uso el exfoliante. Solo, saca menos."<div class="who">Nerea A. · Bilbao</div></div>
+</div></section>`;
+let qty=1,sub=false;const upd=()=>{document.getElementById('qv').textContent=qty;document.getElementById('addprice').textContent=eur((sub?p.sub:p.price)*qty);document.getElementById('st-price').textContent=eur(sub?p.sub:p.price);};
+document.getElementById('qm').onclick=()=>{qty=Math.max(1,qty-1);upd();};document.getElementById('qp').onclick=()=>{qty=Math.min(10,qty+1);upd();};
+document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{sub=r.value==='sub';document.querySelectorAll('.opt').forEach(o=>o.classList.toggle('on',o.contains(r)));upd();nTrack('select_mode',{slug,sub});});
+document.getElementById('addbtn').onclick=()=>nCart.add(slug,qty,sub,'pdp');document.getElementById('st-add').onclick=()=>nCart.add(slug,qty,sub,'sticky');
+document.getElementById('st-name').textContent=p.name;upd();
+document.querySelectorAll('.thumbs img').forEach(t=>t.onclick=()=>{document.getElementById('mainimg').src=t.dataset.g;document.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('on'));t.classList.add('on');});
+nTrack('view_item',{slug,value:p.price});
+});
+</script>
+</body>
+</html>

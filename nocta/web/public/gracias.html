@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>¡Pedido confirmado! · NOCTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap" style="max-width:760px">
+<section style="text-align:center">
+<div style="font-size:54px">🌙</div><h1 style="color:#14213D;font-size:36px;margin:8px 0">¡Gracias! Tu pedido está en marcha</h1>
+<p id="oinfo" style="color:#6b6b6b">Pedido <b id="oid"></b>. Te hemos enviado la confirmación por email. Sale de nuestro almacén en España en 24 h laborables.</p>
+</section>
+<section id="upsell" class="card" style="padding:24px;text-align:center;border:2px solid #14213D">
+<div style="font-size:12px;letter-spacing:1px;color:#c8553d;font-weight:700">OFERTA SOLO AHORA · SE AÑADE A TU PEDIDO SIN GASTOS DE ENVÍO</div>
+<h2 style="margin:8px 0">Duplica lo que absorbe tu parche</h2>
+<img src="/assets/img/exfoliante.jpg" alt="" style="width:220px;margin:10px auto;border-radius:14px">
+<p>El <b>Exfoliante Salicílico 2 %</b> disuelve el tapón de grasa antes de poner el parche. Es el paso 1 del método coreano. Hoy, con tu pedido, <b>−30 %</b>: <s>32 €</s> <b style="font-size:22px;color:#14213D">22,40 €</b>.</p>
+<button class="btn" id="upyes">Sí, añadir a mi pedido en 1 clic</button><br><button id="upno" style="background:none;border:0;color:#6b6b6b;text-decoration:underline;margin-top:10px">No, gracias</button>
+<div id="uptimer" style="font-size:12px;color:#6b6b6b;margin-top:8px">La oferta desaparece en <b id="cd">10:00</b></div>
+</section>
+<section>
+<h2>Mientras llega: cómo sacar el máximo a tus parches</h2>
+<div class="steps" style="grid-template-columns:repeat(2,1fr)">
+<div class="step"><b>1</b><h3>Piel limpia y seca</h3><p>Nada de crema ni aceite en la nariz. Si tienes el exfoliante, aplícalo y espera 1 minuto.</p></div>
+<div class="step"><b>2</b><h3>Presiona 20 segundos</b></h3><p>La curva arriba en el puente, las alas en las aletas. Presiona con la palma templada: así aguanta 8 horas.</p></div>
+<div class="step"><b>3</b><h3>Duerme 6-8 h</h3><p>Aunque no se ponga blanco del todo, está absorbiendo.</p></div>
+<div class="step"><b>4</b><h3>Retira y haz la foto</h3><p>Compárala en 3 semanas. Envíanosla a hola@nocta.es y te regalamos un 15 % en tu siguiente pedido.</p></div>
+</div>
+<p style="text-align:center;margin-top:20px"><a class="btn ghost" href="/como-usar.html">Ver la guía completa</a></p>
+</section>
+</main>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',async()=>{
+const q=new URLSearchParams(location.search);const id=q.get('o');document.getElementById('oid').textContent=id||'';
+const last=JSON.parse(sessionStorage.getItem('n_lastorder')||'null');
+if(last&&last.id===id&&!sessionStorage.getItem('n_purch_'+id)){nTrack('purchase',{order:id,value:last.total,items:last.items,demo:q.get('demo')==='1'});sessionStorage.setItem('n_purch_'+id,'1');localStorage.removeItem('n_cart');sessionStorage.removeItem('n_disc');}
+if(q.get('demo')==='1')document.getElementById('oinfo').insertAdjacentHTML('beforeend','<br><span style="color:#c8553d;font-size:13px">Modo demo: no se ha cobrado nada (configura STRIPE_SECRET_KEY para pagos reales).</span>');
+let s=600;const cd=document.getElementById('cd');const iv=setInterval(()=>{s--;cd.textContent=`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;if(s<=0){clearInterval(iv);document.getElementById('upsell').classList.add('hidden');}},1000);
+nTrack('upsell_view',{order:id});
+document.getElementById('upyes').onclick=async()=>{const r=await fetch('/api/order',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id,action:'upsell'})});const j=await r.json();if(j.ok){nTrack('upsell_accept',{order:id,value:22.4});document.getElementById('upsell').innerHTML='<h2>✅ Añadido a tu pedido</h2><p>El exfoliante viaja en la misma caja. Total actualizado: '+nEur(j.total)+'</p>';}};
+document.getElementById('upno').onclick=()=>{nTrack('upsell_decline',{order:id});document.getElementById('upsell').classList.add('hidden');};
+});
+</script>
+</body>
+</html>

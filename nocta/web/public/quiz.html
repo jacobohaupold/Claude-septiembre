@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test de piel: ¿qué parche necesitas? · NOCTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="quiz"><div class="q" id="q"></div></main>
+<div id="site-footer"></div>
+<script>
+const QS=[
+{q:"¿Dónde te preocupa más tu piel?",a:[["Nariz: puntitos oscuros y brillo","nariz"],["Frente y barbilla: grasa y granitos","tzone"],["Granos que aparecen y desaparecen","granos"],["Textura apagada, poros por toda la cara","textura"]]},
+{q:"¿Qué has probado ya?",a:[["Tiras de poros","tiras"],["Apretar o scrubs","apretar"],["Cremas con ácidos","acidos"],["Nada aún","nada"]]},
+{q:"¿Cómo está tu piel a media tarde?",a:[["Brilla en la zona T","grasa"],["Brilla en toda la cara","muygrasa"],["Normal","normal"],["Tirante o seca","seca"]]},
+{q:"¿Cuánto tiempo quieres dedicarle?",a:[["Casi nada: ponérmelo y dormir","min"],["2 pasos por la noche, sin problema","dos"],["Una rutina completa","full"]]}
+];
+let i=0,ans=[];const box=document.getElementById('q');
+function render(){if(i<QS.length){const s=QS[i];box.innerHTML=`<div class="progress"><i style="width:${i/QS.length*100}%"></i></div><small style="color:#6b6b6b">Pregunta ${i+1} de ${QS.length}</small><h2>${s.q}</h2><div class="ans">${s.a.map(a=>`<button data-v="${a[1]}">${a[0]}</button>`).join('')}</div>`;box.querySelectorAll('button').forEach(b=>b.onclick=()=>{ans.push(b.dataset.v);nTrack('quiz_answer',{q:i,a:b.dataset.v});i++;render();});}else email();}
+function reco(){const [zona,prev,piel,tiempo]=ans;let main='parches-nariz',plus=null,name='Poros limpios';
+if(zona==='tzone')main='kit-t-zone';if(zona==='granos')main='parches-granos';if(zona==='textura')main='kit-cara-completa';
+if(zona==='nariz'&&(tiempo!=='min'||piel==='muygrasa'))main='duo-poros';
+if(tiempo==='full')plus='serum-niacinamida';else if(zona==='granos')plus='parches-superficie';else if(main==='parches-nariz')plus='exfoliante-salicilico';
+return {main,plus,skin:zona+'/'+piel};}
+function email(){const r=reco();box.innerHTML=`<div class="progress"><i style="width:100%"></i></div><h2>Ya tenemos tu rutina 🌙</h2><p style="color:#6b6b6b">Déjanos tu email para guardarla y enviarte un <b>10 % de descuento</b> para tu primer pedido.</p><form id="qf"><input type="email" required placeholder="tu@email.com" style="width:100%;padding:12px;border:1px solid #e6e1d6;border-radius:10px;margin:10px 0"><button class="btn wide">Ver mi rutina y mi −10 %</button></form><button id="skip" style="background:none;border:0;color:#6b6b6b;text-decoration:underline;margin-top:10px">Ver sin dejar email</button>`;
+document.getElementById('qf').onsubmit=e=>{e.preventDefault();const em=e.target.querySelector('input').value;fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:em,src:'quiz',skin:r.skin})}).catch(()=>{});sessionStorage.setItem('n_disc',JSON.stringify({code:'HOLA10',type:'pct',value:10}));localStorage.setItem('n_popup','1');nTrack('lead',{src:'quiz',skin:r.skin});result(r,true);};
+document.getElementById('skip').onclick=()=>result(r,false);}
+function result(r,disc){const m=nBySlug(r.main),p=r.plus&&nBySlug(r.plus);nTrack('quiz_result',{main:r.main,plus:r.plus,skin:r.skin});
+box.innerHTML=`<h2>Tu rutina NOCTA</h2><p style="color:#6b6b6b">Según tus respuestas (${ans.join(', ')}), esto es lo que más te va a cambiar la piel:</p>
+<div class="mini" style="padding:14px"><img src="${m.image}" alt=""><div class="t"><b>Principal · ${m.name}</b><br><small>${m.short}</small><br><b>${nEur(m.price)}</b>${disc?' <span style="color:#2f8f5b">(−10 % con HOLA10 en el checkout)</span>':''}</div><button class="btn" data-add="${m.slug}" data-src="quiz" style="padding:10px 16px">Añadir</button></div>
+${p?`<div class="mini" style="padding:14px"><img src="${p.image}" alt=""><div class="t"><b>Complemento · ${p.name}</b><br><small>${p.short}</small><br><b>${nEur(p.price)}</b></div><button class="btn ghost" data-add="${p.slug}" data-src="quiz" style="padding:10px 16px">Añadir</button></div>`:''}
+<p style="font-size:13px;color:#6b6b6b;margin-top:14px">Garantía 60 días · Envío 24-48 h desde España · Gratis desde 30 €</p><a class="btn wide" href="/checkout.html">Ir al carrito</a>`;}
+document.addEventListener('DOMContentLoaded',()=>{nTrack('quiz_start');render();});
+</script>
+</body>
+</html>

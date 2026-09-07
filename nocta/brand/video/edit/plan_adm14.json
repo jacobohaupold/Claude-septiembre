@@ -1,0 +1,17 @@
+{"video": "/home/user/Claude-septiembre/nocta/brand/video/adm_vue_replica_14s.mp4", "fps": 24, "w": 720, "h": 1280,
+ "vo": [
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm14_vo_0.wav", "start": 0.1, "tempo": 1.05},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm14_vo_1.wav", "start": 1.4, "tempo": 1.0},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm14_vo_2.wav", "start": 3.9, "tempo": 1.05},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm14_vo_3.wav", "start": 6.2, "tempo": 1.1},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm14_vo_4.wav", "start": 8.4, "tempo": 1.05}
+ ],
+ "subs": [
+  {"t0": 0.1, "t1": 1.4, "text": "Qué gusto, de verdad"},
+  {"t0": 1.4, "t1": 3.9, "text": "Mira todo lo que sale. Qué asco"},
+  {"t0": 3.9, "t1": 6.2, "text": "Estos parches me han salvado la vida"},
+  {"t0": 6.2, "t1": 8.4, "text": "Se me notan mucho menos los poros"},
+  {"t0": 8.4, "t1": 13.7, "text": "Si no ves resultados, te devuelven el dinero"}
+ ],
+ "endcard": {"packshot": "/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png", "line1": "nocta", "line2": "Garantía de 60 días · envío gratis desde 30 €", "line3": "nocta.es", "dur": 2.0},
+ "ambient_db": -34}

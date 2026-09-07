@@ -1,0 +1,7 @@
+3d_nariz_frontal Invalid uploader
+3d_nariz_dorso Invalid uploader
+3d_granos_frontal Invalid uploader
+3d_barbilla_frontal Invalid uploader
+3d_frente_frontal Invalid uploader
+3d_superficie_frontal Invalid uploader
+etiquetas_todas Invalid uploader

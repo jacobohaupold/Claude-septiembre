@@ -1,0 +1,63 @@
+{
+ "video": "/home/user/Claude-septiembre/nocta/brand/video/ugc_nariz_15s_v2.mp4",
+ "fps": 24,
+ "w": 720,
+ "h": 1280,
+ "vo": [
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/ugc_v2_vo_0.wav",
+   "start": 0.15,
+   "tempo": 1.12
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/ugc_v2_vo_1.wav",
+   "start": 5.6,
+   "tempo": 1.08
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/ugc_v2_vo_2.wav",
+   "start": 9.3,
+   "tempo": 1.12
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/ugc_v2_vo_3.wav",
+   "start": 14.0,
+   "tempo": 1.0
+  }
+ ],
+ "subs": [
+  {
+   "t0": 0.15,
+   "t1": 3.0,
+   "text": "Esos puntitos NO son puntos negros"
+  },
+  {
+   "t0": 3.0,
+   "t1": 5.5,
+   "text": "Son filamentos sebáceos"
+  },
+  {
+   "t0": 5.6,
+   "t1": 9.2,
+   "text": "Por eso apretar o las tiras no funcionan"
+  },
+  {
+   "t0": 9.3,
+   "t1": 13.9,
+   "text": "Te lo pones por la noche y lo presionas bien"
+  },
+  {
+   "t0": 14.0,
+   "t1": 15.0,
+   "text": "Y esto es lo que saca en una noche"
+  }
+ ],
+ "endcard": {
+  "packshot": "/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png",
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es",
+  "dur": 2.0
+ },
+ "ambient_db": -26
+}

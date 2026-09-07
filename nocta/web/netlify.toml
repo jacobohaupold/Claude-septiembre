@@ -1,0 +1,23 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Variables de entorno a configurar en Netlify (Site settings → Environment variables):
+# ADMIN_TOKEN        contraseña del panel /admin
+# STRIPE_SECRET_KEY  sk_live_… (sin ella el checkout funciona en modo demo)
+# STRIPE_WEBHOOK_SECRET  para /api/stripe-webhook
+# KLAVIYO_API_KEY + KLAVIYO_LIST_ID  (opcional) para enviar leads a Klaviyo

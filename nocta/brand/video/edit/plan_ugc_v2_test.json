@@ -1,0 +1,5 @@
+{"video": "/home/user/Claude-septiembre/nocta/brand/video/ugc_nariz_15s_v2.mp4", "fps": 24, "w": 720, "h": 1280,
+ "vo": [{"file": "/home/user/Claude-septiembre/nocta/brand/audio/ugc_v2_vo_0.wav", "start": 0.2}],
+ "subs": [{"t0": 0.2, "t1": 4.0, "text": "Esos puntitos no son puntos negros"}, {"t0": 4.0, "t1": 7.0, "text": "Son filamentos sebáceos"}],
+ "endcard": {"packshot": "/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png", "line1": "nocta", "line2": "Garantía de 60 días · envío gratis", "line3": "nocta.es", "dur": 2.0},
+ "ambient_db": -30}

@@ -1,0 +1,17 @@
+{
+  "name": "nocta-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tienda NOCTA: sitio estático + Netlify Functions (Blobs) para tracking, pedidos, checkout Stripe y panel de analítica.",
+  "scripts": {
+    "dev": "netlify dev",
+    "serve": "npx serve public"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>NOCTA · troquel y 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213D;--cream:#F3EFE6;--mm:4px}
+body{margin:0;background:#dcdcdc;font-family:Inter,Arial,sans-serif;color:var(--navy)}
+/* Cada panel se dibuja a escala 1 mm = 4 px */
+.panel{position:absolute;background:var(--cream);overflow:hidden;box-sizing:border-box}
+.dieline .panel{outline:1px dashed #b00;outline-offset:-1px}
+.face{width:100%;height:100%;padding:calc(6*var(--mm));box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center}
+.wm{font-weight:700;letter-spacing:-.04em;line-height:1}
+.moon{width:calc(7*var(--mm));height:calc(7*var(--mm))}
+.small{font-size:calc(2.2*var(--mm));line-height:1.35;text-align:left;width:100%}
+.tiny{font-size:calc(1.7*var(--mm));line-height:1.3;text-align:left;width:100%}
+.cap{letter-spacing:.14em;font-weight:500}
+.sym{display:flex;gap:calc(2*var(--mm));align-items:center;font-size:calc(1.8*var(--mm));margin-top:auto}
+.sym span{border:1px solid var(--navy);border-radius:50%;width:calc(6*var(--mm));height:calc(6*var(--mm));display:inline-flex;align-items:center;justify-content:center;font-size:calc(2*var(--mm))}
+.ean{font-family:"Courier New",monospace;font-size:calc(1.9*var(--mm));letter-spacing:.1em}
+.bars{height:calc(9*var(--mm));background:repeating-linear-gradient(90deg,var(--navy) 0 2px,transparent 2px 3px,var(--navy) 3px 4px,transparent 4px 7px,var(--navy) 7px 9px,transparent 9px 10px);width:calc(32*var(--mm))}
+.side{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:calc(3.2*var(--mm));letter-spacing:.12em;font-weight:500}
+/* 3D */
+.scene{position:absolute;left:50%;top:50%;perspective:2600px;perspective-origin:50% 40%}
+.box{position:relative;transform-style:preserve-3d}
+.box .panel{outline:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+.ground{position:absolute;left:50%;top:50%;width:1400px;height:1400px;transform:translate(-50%,-50%) rotateX(90deg);background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.28),rgba(0,0,0,0) 60%)}
+</style></head>
+<body>
+<script>
+const q=new URLSearchParams(location.search);const MODE=q.get('mode')||'dieline';const ID=q.get('id')||'nariz';const MM=4;
+fetch('specs.json').then(r=>r.json()).then(S=>{
+const b=S.boxes.find(x=>x.id===ID);const B=S.brand;
+const moon=`<svg class="moon" viewBox="0 0 24 24" fill="#14213D"><path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/></svg>`;
+const front=`<div class="face"><div style="height:calc(30*var(--mm))"></div><div class="wm" style="font-size:calc(15*var(--mm))">nocta</div><div style="flex:1"></div>${moon}<div class="cap" style="font-size:calc(3.4*var(--mm));margin-top:calc(3*var(--mm))">${b.name}</div><div class="cap" style="font-size:calc(3.4*var(--mm))">${b.sub}</div><div style="font-size:calc(2.6*var(--mm));margin-top:calc(2*var(--mm))">${b.units}</div><div style="height:calc(8*var(--mm))"></div><div style="font-size:calc(1.9*var(--mm));opacity:.8">Made in Korea</div></div>`;
+const back=`<div class="face" style="align-items:flex-start;text-align:left"><div class="wm" style="font-size:calc(6*var(--mm));align-self:center">nocta</div><div class="small" style="margin-top:calc(3*var(--mm))"><b>${b.name.charAt(0)+b.name.slice(1).toLowerCase()} de hidrocoloide.</b> ${b.back_desc}</div><div class="small" style="margin-top:calc(2*var(--mm))"><b>Cómo usar:</b> ${b.how.map((h,i)=>`${i+1}. ${h}`).join(' ')}</div><div class="tiny" style="margin-top:calc(2*var(--mm))"><b>Ingredientes / Ingredients:</b> ${b.inci}</div><div class="tiny" style="margin-top:calc(1.5*var(--mm))"><b>Precauciones:</b> ${b.warn}</div><div class="tiny" style="margin-top:calc(1.5*var(--mm))"><b>Contenido:</b> ${b.contents}</div><div class="tiny" style="margin-top:calc(1.5*var(--mm))">${B.rp}<br>${B.origin} · Cosmético notificado en el CPNP · Lote/Lot: ver base · Cad./Exp: ver base</div><div class="sym"><span>${b.pao}</span><span>♻</span><span>🐰</span><span>Ⓥ</span><div style="margin-left:auto;text-align:center"><div class="bars"></div><div class="ean">${b.ean}</div></div></div></div>`;
+const sideL=`<div class="side">nocta · ${b.name.toLowerCase()}</div>`;const sideR=`<div class="side">${b.units} · ${b.sku}</div>`;
+const top=`<div class="face" style="justify-content:center">${moon}</div>`;const bottom=`<div class="face" style="justify-content:center;font-size:calc(1.8*var(--mm))">LOTE / LOT: ______ &nbsp; CAD / EXP: ______</div>`;
+const W=b.w*MM,H=b.h*MM,D=b.d*MM;
+if(MODE==='dieline'){document.body.className='dieline';const glue=12*MM;const root=document.createElement('div');root.style.cssText=`position:relative;width:${glue+D+W+D+W+40}px;height:${D+H+D+D+60}px;margin:30px;background:#fff`;
+const P=(x,y,w,h,html,label)=>{const d=document.createElement('div');d.className='panel';d.style.cssText=`left:${x}px;top:${y}px;width:${w}px;height:${h}px`;d.innerHTML=html;root.appendChild(d);const l=document.createElement('div');l.style.cssText=`position:absolute;left:${x}px;top:${y-14}px;font-size:10px;color:#b00`;l.textContent=label;root.appendChild(l);};
+const y0=D+30;P(20,y0,glue,H,'<div style="font-size:10px;color:#b00;padding:4px">pestaña<br>encolado<br>12 mm</div>','');P(20+glue,y0,D,H,sideL,`lateral ${b.d} mm`);P(20+glue+D,y0,W,H,front,`FRONTAL ${b.w} × ${b.h} mm`);P(20+glue+D+W,y0,D,H,sideR,`lateral ${b.d} mm`);P(20+glue+D+W+D,y0,W,H,back,`DORSO ${b.w} × ${b.h} mm`);
+P(20+glue+D,y0-D,W,D,top,`tapa superior ${b.w} × ${b.d} mm (cierre lengüeta)`);P(20+glue+D,y0+H,W,D,bottom,`base ${b.w} × ${b.d} mm`);P(20+glue+D,y0+H+D,W,D*0.7,'','solapa de cierre');
+const info=document.createElement('div');info.style.cssText=`position:absolute;left:20px;top:${D+H+D+D*0.7+50}px;width:${glue+D+W+D+W}px;font-size:11px;color:#333`;info.innerHTML=`<b>NOCTA · ${b.sku} · ${b.name}</b> — troquel estuche plegable con cierre de lengüeta (tuck end). Caja ${b.w} × ${b.h} × ${b.d} mm · escala 1 mm = 4 px · sangre 3 mm · zona segura 5 mm · ${b.material}. Interior: ${b.inner}`;root.appendChild(info);document.body.appendChild(root);}
+else{const scene=document.createElement('div');scene.className='scene';const rx=parseFloat(q.get('rx')||'-14'),ry=parseFloat(q.get('ry')||'-28');scene.innerHTML=`<div class="ground"></div>`;const box=document.createElement('div');box.className='box';box.style.cssText=`width:${W}px;height:${H}px;transform:translate(-50%,-50%) rotateX(${rx}deg) rotateY(${ry}deg)`;
+const F=(html,tr,w,h)=>{const d=document.createElement('div');d.className='panel';d.style.cssText=`width:${w}px;height:${h}px;left:0;top:0;transform:${tr}`;d.innerHTML=html;box.appendChild(d);};
+F(front,`translateZ(${D/2}px)`,W,H);F(back,`rotateY(180deg) translateZ(${D/2}px)`,W,H);F(sideL,`rotateY(-90deg) translateZ(${D/2}px)`,D,H);F(sideR,`translateX(${W-D}px) rotateY(90deg) translateZ(${D/2}px)`,D,H);F(top,`rotateX(90deg) translateZ(${D/2}px)`,W,D);F(bottom,`translateY(${H-D}px) rotateX(-90deg) translateZ(${D/2}px)`,W,D);
+// sombreado de caras según orientación
+box.querySelectorAll('.panel').forEach((p,i)=>{p.style.filter=['brightness(1)','brightness(.92)','brightness(.82)','brightness(.88)','brightness(1.04)','brightness(.8)'][i];});
+scene.appendChild(box);document.body.style.background='radial-gradient(circle at 50% 30%,#f4f2ee,#d9d6cf)';document.body.appendChild(scene);}
+});
+</script>
+</body></html>

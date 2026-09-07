@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Finalizar compra · NOCTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+<div class="co">
+<form class="form" id="cof">
+<h2>Datos de envío</h2>
+<label>Email</label><input type="email" name="email" required placeholder="tu@email.com">
+<div class="row"><div><label>Nombre</label><input name="name" required></div><div><label>Apellidos</label><input name="last" required></div></div>
+<label>Dirección</label><input name="address" required placeholder="Calle, número, piso">
+<div class="row"><div><label>Código postal</label><input name="zip" required pattern="[0-9]{4,5}"></div><div><label>Ciudad</label><input name="city" required></div></div>
+<div class="row"><div><label>País</label><select name="country"><option value="ES">España</option><option value="PT">Portugal</option></select></div><div><label>Teléfono (para el transportista)</label><input name="phone" type="tel"></div></div>
+<label>Código de descuento</label><div style="display:flex;gap:8px"><input name="code" placeholder="HOLA10" style="flex:1"><button type="button" class="btn ghost" id="applycode" style="padding:10px 16px">Aplicar</button></div>
+<h2 style="margin-top:22px">Pago</h2>
+<div class="pay">
+<label class="on"><input type="radio" name="pay" value="card" checked> 💳 Tarjeta (Visa, Mastercard, Apple/Google Pay)</label>
+<label><input type="radio" name="pay" value="bizum"> 📱 Bizum</label>
+<label><input type="radio" name="pay" value="klarna"> 🛍️ Klarna · paga en 3 plazos sin intereses</label>
+<label><input type="radio" name="pay" value="paypal"> 🅿️ PayPal</label>
+</div>
+<label style="display:flex;gap:8px;align-items:center;font-size:13px"><input type="checkbox" required style="width:auto"> Acepto las <a href="/legal.html">condiciones y la política de privacidad</a></label>
+<button class="btn wide" id="paybtn" style="margin-top:14px">Pagar de forma segura</button>
+<p style="font-size:12px;color:#6b6b6b;text-align:center">Serás redirigido a la pasarela segura de pago (Stripe). Garantía 60 días · Devolución 14 días sin abrir.</p>
+</form>
+<aside class="summary"><h3 style="margin:0 0 10px;color:#14213D">Tu pedido</h3><div id="sum"></div><div id="sumtot"></div><div id="cartupsell" style="margin-top:12px"></div><div style="font-size:13px;color:#6b6b6b;margin-top:10px">🎁 <span id="giftmsg"></span></div></aside>
+</div>
+</main>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const render=()=>{const t=nCart.totals();document.getElementById('sum').innerHTML=t.items.map(i=>{const p=nBySlug(i.slug);return `<div class="line"><img src="${p.image}" alt=""><div class="t"><b>${p.name}</b><small>${i.qty} × ${nEur(i.sub?p.sub:p.price)}${i.sub?' · suscripción':''}</small></div><b>${nEur((i.sub?p.sub:p.price)*i.qty)}</b></div>`;}).join('')+t.gifts.map(g=>`<div class="line"><div class="t">🎁 ${g.label}</div><b>0,00 €</b></div>`).join('');
+document.getElementById('sumtot').innerHTML=`<div style="display:flex;justify-content:space-between;font-size:14px;margin-top:8px"><span>Subtotal</span><span>${nEur(t.sub)}</span></div>${t.dAmt?`<div style="display:flex;justify-content:space-between;font-size:14px;color:#2f8f5b"><span>Descuento ${t.disc.code}</span><span>−${nEur(t.dAmt)}</span></div>`:''}<div style="display:flex;justify-content:space-between;font-size:14px"><span>Envío</span><span>${t.ship?nEur(t.ship):'Gratis'}</span></div><div class="tot"><span>Total (IVA incl.)</span><span>${nEur(t.total)}</span></div>`;
+const next=window.NOCTA_GIFTS.find(g=>t.sub-t.dAmt<g.threshold);document.getElementById('giftmsg').textContent=next?`Añade ${nEur(next.threshold-(t.sub-t.dAmt))} más y consigue: ${next.label}`:'Todos los regalos desbloqueados';
+if(!t.items.length){document.getElementById('paybtn').disabled=true;}};
+render();const orig=nCart.render.bind(nCart);nCart.render=()=>{orig();render();};
+document.getElementById('applycode').onclick=()=>{const c=document.querySelector('[name=code]').value.trim().toUpperCase();const CODES={HOLA10:10,TIKTOK10:10,BIENVENIDA15:15};if(CODES[c]){sessionStorage.setItem('n_disc',JSON.stringify({code:c,type:'pct',value:CODES[c]}));nToast('Código aplicado');nTrack('apply_code',{code:c});}else nToast('Código no válido');nCart.render();};
+document.querySelectorAll('.pay label').forEach(l=>l.onclick=()=>{document.querySelectorAll('.pay label').forEach(x=>x.classList.remove('on'));l.classList.add('on');});
+nTrack('checkout_view',{value:nCart.totals().total});
+let started=false;document.getElementById('cof').addEventListener('input',()=>{if(!started){started=true;nTrack('checkout_start_form');}});
+document.getElementById('cof').onsubmit=async e=>{e.preventDefault();const f=new FormData(e.target);const t=nCart.totals();const btn=document.getElementById('paybtn');btn.disabled=true;btn.textContent='Conectando con la pasarela…';
+const utm=JSON.parse(sessionStorage.getItem('n_utm')||'{}');
+nTrack('add_payment_info',{pay:f.get('pay'),value:t.total});
+try{const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({items:t.items,code:t.disc&&t.disc.code,email:f.get('email'),name:f.get('name')+' '+f.get('last'),address:{line:f.get('address'),zip:f.get('zip'),city:f.get('city'),country:f.get('country'),phone:f.get('phone')},pay:f.get('pay'),vid:sessionStorage.getItem('n_vid'),sid:localStorage.getItem('n_sid'),utm})});const j=await r.json();if(j.url){sessionStorage.setItem('n_lastorder',JSON.stringify({id:j.orderId,total:j.total,items:t.items}));location.href=j.url;}else{nToast(j.error||'Error al iniciar el pago');btn.disabled=false;btn.textContent='Pagar de forma segura';}}catch(err){nToast('No se pudo conectar. Inténtalo de nuevo.');btn.disabled=false;btn.textContent='Pagar de forma segura';}};
+});
+</script>
+</body>
+</html>
