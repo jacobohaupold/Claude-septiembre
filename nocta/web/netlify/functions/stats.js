@@ -6,7 +6,8 @@ function dayKeys(days) { const out = []; for (let i = 0; i < days; i++) { const 
 export default async (req) => {
   const url = new URL(req.url);
   const token = req.headers.get('x-admin-token') || url.searchParams.get('token');
-  if (!process.env.ADMIN_TOKEN || token !== process.env.ADMIN_TOKEN) return new Response(JSON.stringify({ error: 'unauthorized' }), { status: 401, headers: { 'content-type': 'application/json' } });
+  // Si ADMIN_TOKEN está definido en Netlify, el panel exige ese token; si no está definido, el panel es de acceso libre.
+  if (process.env.ADMIN_TOKEN && token !== process.env.ADMIN_TOKEN) return new Response(JSON.stringify({ error: 'unauthorized' }), { status: 401, headers: { 'content-type': 'application/json' } });
   const days = Math.min(90, Number(url.searchParams.get('days') || 14));
   const store = getStore({ name: 'events', consistency: 'strong' });
   const orders = getStore({ name: 'orders', consistency: 'strong' });
