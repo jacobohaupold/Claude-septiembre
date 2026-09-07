@@ -35,6 +35,12 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 - **Tablero de marca** estilo Figma (3200 × 1860) con las pantallas reales: `brand/tablero/tablero_marca_nocta.png` (+ versión presentación `_figma.png`); versión viva en https://nocta-store.netlify.app/tablero.html (noindex).
 - Panel `/admin/` sin contraseña por decisión del propietario; `deploy.sh` ya no la reintroduce (solo si se pasa `ADMIN_TOKEN`).
 
+### v3 (7 sep 2026, tarde): portada y ficha «cinemáticas»
+- Hero con vídeo real en bucle (colocar → presionar → despegar → parche lleno → piel lisa), 900 KB, con póster; titular corto animado palabra a palabra; compra en dos botones (Comprar ahora + Pago rápido) en el primer pliegue.
+- «Cómo funciona» en tres vídeos verticales que se reproducen al entrar en pantalla; sección «Lo que sale» con el fotograma del parche lleno y cifras animadas; comparativa parche/tira en dos tarjetas; marquee de garantías; scrollers con snap para parches, skincare y packs; vídeos de la comunidad con sonido al tocar (los dos anuncios terminados); valoración global; banda de garantía 60 días.
+- La ficha de los parches de nariz incorpora los tres vídeos y el resultado por la mañana. Recortes compuestos nuevos para Dúo Poros y Kit Zona T.
+- Activos: `web/public/assets/video/hero.mp4`, `paso-1..3.mp4`, `ugc-1.mp4`, `ugc-2.mp4`; `img/hero-poster.webp`, `paso-*.webp`, `ugc-*.webp`, `resultado-manana.webp`, `duo-poros-cut.webp`, `kit-t-zone-cut.webp`.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

@@ -35,7 +35,7 @@ addEventListener('pagehide',()=>T.send('leave',{secs:Math.round((Date.now()-t0)/
 const CUT=new Set(['parches-nariz','parches-granos','parches-superficie','parches-barbilla','parches-frente','exfoliante-salicilico','serum-niacinamida','mascarilla-peel-off','pack-mascarillas-tela','tonico-hialuronico']);
 const base=s=>s.replace(/^.*\/|\.\w+$/g,'');
 window.nWebp=s=>{const b=base(s);return(b==='gama'||b==='parches-nariz-dorso'||CUT.has(b))?`/assets/img/${b}-cut.webp`:s.replace(/\.(jpg|png)$/,'.webp');};
-window.nImg=p=>CUT.has(p.slug)?`/assets/img/${p.slug}-cut.webp`:nWebp(p.image);
+window.nImg=p=>(CUT.has(p.slug)||p.slug==='duo-poros'||p.slug==='kit-t-zone')?`/assets/img/${p.slug}-cut.webp`:nWebp(p.image);
 window.nIsCut=s=>/-cut\.webp$/.test(s);
 window.nPerUse=p=>{const m=/^(\d+(?:\s*\+\s*\d+)*)\s*(parches?|mascarillas?)/i.exec(p.units);if(!m)return'';const n=m[1].split('+').reduce((a,b)=>a+ +b,0);if(n<2)return'';return eur(p.price/n)+' por '+(/mascarilla/i.test(m[2])?'mascarilla':'parche');};
 window.nKlarna=v=>v>=35?`o 3 × ${eur(v/3)} con Klarna`:'';
@@ -183,6 +183,7 @@ document.addEventListener('click',e=>{
     const o={qty:+(b.dataset.qty||1),sub:b.dataset.sub==='1',src:b.dataset.src||'btn'};
     const run=b.hasAttribute('data-express-cart')?nBuyCart(o.src):nBuy(b.dataset.buy||b.dataset.buyExpress,{...o,wallet:b.hasAttribute('data-buy-express')});
     Promise.resolve(run).finally(done);return;}
+  const vp=e.target.closest('.n-vt__play');if(vp){const box=vp.parentElement,v=box.querySelector('video');$$('.n-vt.is-playing video').forEach(o=>{if(o!==v){o.pause();o.muted=true;o.controls=false;o.closest('.n-vt').classList.remove('is-playing');}});v.muted=false;v.controls=true;v.loop=false;box.classList.add('is-playing');v.play().catch(()=>{});T.send('video_play',{id:v.dataset.id||v.currentSrc.split('/').pop()});return;}
   const q=e.target.closest('[data-q]');if(q){const[i,d]=q.dataset.q.split('|');C.qty(+i,+d);return;}
   const r=e.target.closest('[data-rm]');if(r){C.remove(+r.dataset.rm);return;}
   if(e.target.closest('#opencart')){C.open();return;}

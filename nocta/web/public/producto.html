@@ -5,18 +5,18 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609071322">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609071351">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/'+p+'-cut.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609071322" defer></script>
+<script src="/assets/js/app.js?v=202609071351" defer></script>
 </head>
 <body>
 <div id="site-header"><div class="n-top-ph"></div></div>
 <main class="n-wrap" id="main"><div id="pdp"><noscript><p>Parches de hidrocoloide NOCTA desde 15,95 €. <a href="/catalogo.html">Ver catálogo</a></p></noscript></div></main>
 <div class="n-bbar" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar ahora</button></div><div class="n-wrap n-bbar__pay" id="st-express"></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609071322"></script>
+<script src="/assets/js/products.js?v=202609071351"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
@@ -32,6 +32,9 @@ const gal=`<div class="n-gal"><div class="n-gal__track" id="n-gal-track">${slide
 <div class="n-gal__thumbs" id="thumbs">${slides.map((s,i)=>`<button type="button" class="${s.cut?'':'is-photo'}${i===0?' is-on':''}" data-i="${i}" aria-label="Imagen ${i+1}"><img src="${s.t==='video'?s.poster:s.src}" alt="" loading="lazy"></button>`).join('')}</div></div>`;
 const use=isPatch?'6-8 h · mientras duermes':(/exfoliante/.test(slug)?'Noche · 2-3 veces por semana':'Mañana y noche');
 const spec=`<dl class="n-spec"><div><dt class="n-lab">Formato</dt><dd>${p.units}</dd></div>${pu?`<div><dt class="n-lab">Precio por ${/mascarilla/.test(pu)?'mascarilla':'parche'}</dt><dd class="n-num">${pu.split(' por ')[0]}</dd></div>`:''}<div><dt class="n-lab">Tiempo de uso</dt><dd>${use}</dd></div><div><dt class="n-lab">${isPatch?'Material':'Fórmula'}</dt><dd>${isPatch?'Hidrocoloide de grado hospitalario':'Coreana · sin perfume · sin alcohol'}</dd></div><div><dt class="n-lab">Referencia</dt><dd class="n-num">${p.sku||'—'}</dd></div></dl>`;
+const VID=isPatch&&(slug==='parches-nariz'||(p.bundle||[]).includes('parches-nariz'));
+const stepsVid=VID?`<div class="n-scroll n-scroll--3 n-stagger" style="margin-top:12px"><div class="n-vt n-reveal"><video src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 1: colocar"></video><span class="n-vt__l">Paso 01</span><div class="n-vt__c"><b>Ponlo sobre la nariz seca</b><span>Curva en el puente, alas sobre las aletas.</span></div></div><div class="n-vt n-reveal"><video src="/assets/video/paso-2.mp4" poster="/assets/img/paso-2.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 2: presionar"></video><span class="n-vt__l">Paso 02</span><div class="n-vt__c"><b>Presiona 20 segundos</b><span>El calor activa el adhesivo. Duerme.</span></div></div><div class="n-vt n-reveal"><video src="/assets/video/paso-3.mp4" poster="/assets/img/paso-3.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 3: retirar"></video><span class="n-vt__l">Paso 03</span><div class="n-vt__c"><b>Retíralo por la mañana</b><span>Se despega solo. Y mira lo que trae.</span></div></div></div>`:'';
+const resultImg=VID?`<figure class="n-reveal" style="margin:24px 0 0"><img src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche de nariz NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async" style="border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%"><figcaption class="n-lab" style="margin-top:8px">Así sale por la mañana: la grasa que estaba dentro de los poros</figcaption></figure>`:'';
 const firstSentence=p.desc.split(/(?<=\.)\s/)[0],rest=p.desc.slice(firstSentence.length).trim();
 const tier=(n,flag)=>`<label class="n-tier${n===1?' is-on':''}"><input type="radio" name="qty" value="${n}"${n===1?' checked':''}>${flag?`<i class="n-tier__flag n-lab">${flag}</i>`:''}<b>${n} ${n===1?'unidad':'unidades'}</b><span class="n-num">${eur(p.price*n)}</span><small>${n===1?(pu||p.units):'Envío gratis'}</small></label>`;
 document.getElementById('pdp').innerHTML=`<div class="n-pdp">
@@ -46,11 +49,11 @@ document.getElementById('pdp').innerHTML=`<div class="n-pdp">
 <div class="n-buy"><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">Comprar ahora · <span id="addprice" class="n-num">${eur(p.price)}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
 <div class="n-opts" role="radiogroup" aria-label="Modo de compra"><label class="n-opt is-on"><input type="radio" name="mode" value="one" checked><span class="n-opt__t"><b>Compra única</b><small>Sin compromiso</small></span><span class="n-opt__p n-num">${eur(p.price)}</span></label><label class="n-opt"><input type="radio" name="mode" value="sub"><span class="n-opt__t"><b>Suscríbete y ahorra 15 %</b><small>Cada 30, 45 o 60 días · cancela o salta un envío desde el email de cada pedido</small></span><span class="n-opt__p n-num">${eur(p.sub)}<s>${eur(p.price)}</s></span></label></div>
 ${nTrust()}<a class="n-link" href="/garantia.html">Cómo funciona la garantía de 60 días</a>
-<div class="n-data" style="margin-top:16px">${p.claims.map(c=>`<div class="n-data__i"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</div>
+${resultImg}<div class="n-data" style="margin-top:16px">${p.claims.map(c=>`<div class="n-data__i"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</div>
 ${spec}
 <ul class="n-list">${p.bullets.slice(0,5).map(b=>`<li>${nIco('check',16)}<span>${b}</span></li>`).join('')}</ul>
 ${p.bundle?`<p class="n-sm n-muted" style="margin-top:12px">Incluye: ${p.bundle.map(s=>`<a href="/producto.html?p=${s}" style="color:var(--n-navy)">${nBySlug(s).name}</a>`).join(' + ')}</p>`:''}
-<h2 class="n-d4" style="margin-top:32px">Cómo se usa</h2>
+<h2 class="n-d4" style="margin-top:32px">Cómo se usa</h2>${stepsVid}
 <ol class="n-steps">${p.how.map((h,i)=>`<li><span class="n-lab n-lab--navy">Paso ${String(i+1).padStart(2,'0')}</span><p>${h}</p></li>`).join('')}</ol>
 <a class="n-link" href="/como-usar.html">Ver la guía completa con vídeo</a>
 <div class="n-acc" style="margin-top:24px">
