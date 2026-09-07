@@ -49,6 +49,9 @@ Panel `/admin/`: sesiones, rebote, embudo (visita → producto → carrito → c
 7. **Réplicas de anuncios de la competencia**: análisis plano a plano (`video_analysis`), persona sintética distinta en dos ejes (pelo y piel) a la original, `ad_multiplier video_edit` con prompt de sustitución + bloque de preservación; después se remonta con audio propio. Son maquetas internas / storyboards: el vídeo base es de Vue y no se puede publicar tal cual.
 
 
+## Web en línea
+**Tienda publicada: https://nocta-store.netlify.app** (sitio `nocta-store`, equipo aurovas en Netlify; panel de analítica en `/admin/` con la contraseña `ADMIN_TOKEN` configurada en Netlify). Para actualizarla tras cambios: `NETLIFY_AUTH_TOKEN=xxx nocta/web/deploy.sh nocta-store`, o conecta el repositorio en Netlify para despliegue automático.
+
 ## Poner la web en línea (Netlify) en 2 minutos
 **Opción A, sin instalar nada:** entra en app.netlify.com → *Add new site* → *Import an existing project* → GitHub → repositorio `jacobohaupold/Claude-septiembre` → rama `claude/vue-skin-marketing-research-9dgtmr` → **Base directory `nocta/web`** (el resto lo lee de `netlify.toml`: publish `public`, functions `netlify/functions`) → *Deploy*. Después, en *Site configuration → Environment variables*, añade `ADMIN_TOKEN` (contraseña del panel `/admin/`) y, cuando tengas Stripe, `STRIPE_SECRET_KEY` y `STRIPE_WEBHOOK_SECRET`. Sin Stripe el checkout funciona en modo demo.
 
