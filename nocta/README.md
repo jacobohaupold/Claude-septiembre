@@ -47,6 +47,14 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 - Ficha: galería con foto principal, detalle, vídeo, mano con caja y lifestyle; catálogo con la misma rejilla.
 - Créditos Higgsfield de la sesión de fotos: 76 (1 test en «high» a 11 cr + 26 imágenes en «medium» a 2,5 cr). Saldo 260,43.
 
+### v5 «bento» (7 sep 2026, noche): sistema de tarjetas tipo rhode y UI pulida
+- **Sistema visual**: toda la página se compone de tarjetas crema (`#F3EFE6`, radio 20/24 px) separadas por 8/12 px sobre el fondo, como rhode. Botones píldora con contorno y texto en mayúsculas (relleno azul solo en la acción principal), cabecera flotante blanca sobre el hero que se vuelve sólida al hacer scroll, barra de ventajas en píldora, barra de compra inferior flotante y aviso de cookies como tarjeta (ya no se solapan).
+- **Tarjeta de producto**: palabra de categoría grande en gris cálido («nariz», «exfoliante», «dúo») sobre la foto, foto detalle al pasar el ratón, valoración, nombre, precio y botón «Comprar nariz · 16,95 €». Carriles con snap, puntos y flechas en escritorio para parches y skincare; packs en rejilla de tres.
+- **Portada**: hero 4:5 en móvil y 16:8 en escritorio (vídeo con póster, titular abajo), carril de parches, editorial «no son puntos negros», tres pasos en vídeo, resultado con tres cifras en tarjetas, dúo, skincare, packs, comunidad, opiniones en tarjetas, garantía y envío en tarjetas de texto, FAQ en tarjeta.
+- **Ficha y catálogo**: galería en tarjeta con contador, tallas como píldoras, bloque de compra (Comprar ahora + Pago rápido + Añadir), opciones única/suscripción, cifras y tabla de datos en tarjeta; catálogo con la misma tarjeta y chips píldora.
+- **Rendimiento**: esqueletos estáticos con la altura exacta de cada tarjeta y placeholder de cabecera antes de que cargue el JS (CLS 0 en portada, catálogo, ficha, checkout, guía). Lighthouse móvil: portada 95/100/96/100, catálogo 96/100/96/100, ficha 94/100/96/100.
+- Sin créditos Higgsfield: solo CSS/HTML/JS. Saldo 260,43.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

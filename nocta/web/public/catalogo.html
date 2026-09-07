@@ -5,12 +5,12 @@
 <title>Catálogo completo · NOCTA</title>
 <meta name="description" content="Los 13 productos NOCTA: parches de hidrocoloide coreano y skincare para poros. Filtra por parches, skincare o packs y añade al carrito.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609071429">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609071501">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609071429" defer></script>
+<script src="/assets/js/app.js?v=202609071501" defer></script>
 </head>
-<body class="n-v4">
+<body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
 <main class="n-wrap" id="main">
   <section style="padding-top:32px">
@@ -28,7 +28,7 @@
     </div>
     <p class="n-lab" aria-live="polite" id="count">13 productos</p>
     <h2 class="n-vh">Productos</h2>
-<div class="n-tiles n-stagger" id="grid-catalogo"></div>
+<div class="n-bento n-bento--3 n-stagger" id="grid-catalogo"><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article></div>
   </section>
 
   <section style="text-align:center;padding-bottom:32px">
@@ -39,13 +39,13 @@
 </main>
 <div id="site-footer"></div>
 <script src="/assets/js/photos.js"></script>
-<script src="/assets/js/products.js?v=202609071429"></script>
+<script src="/assets/js/products.js?v=202609071501"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
   const P=window.NOCTA_PRODUCTS;
   const grid=document.getElementById('grid-catalogo');
   const cat=p=>p.bundle?'packs':(p.tags.includes('skincare')?'skincare':'parches');
-  grid.innerHTML=P.map(p=>nTile(p,{src:"catalogo"})).join('');
+  grid.innerHTML=P.map(p=>nCardR(p,{src:"catalogo"})).join('');
   const cards=[...grid.children];
   const count=document.getElementById('count');
   document.getElementById('chips').addEventListener('click',e=>{
