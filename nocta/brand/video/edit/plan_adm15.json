@@ -1,0 +1,73 @@
+{
+ "video": "/home/user/Claude-septiembre/nocta/brand/video/adm_vue_replica_15s.mp4",
+ "fps": 24,
+ "w": 720,
+ "h": 1280,
+ "vo": [
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm15_vo_0.wav",
+   "start": 0.1,
+   "tempo": 1.1
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm15_vo_1.wav",
+   "start": 2.9,
+   "tempo": 1.15
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm15_vo_2.wav",
+   "start": 6.4,
+   "tempo": 1.2
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm15_vo_3.wav",
+   "start": 10.8,
+   "tempo": 1.15
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm15_vo_4.wav",
+   "start": 14.2,
+   "tempo": 1.05
+  },
+  {
+   "file": "/home/user/Claude-septiembre/nocta/brand/audio/adm10_vo_2.wav",
+   "start": 15.5,
+   "tempo": 1.0
+  }
+ ],
+ "subs": [
+  {
+   "t0": 0.1,
+   "t1": 2.8,
+   "text": "¿Te da vergüenza que el maquillaje se vea así?"
+  },
+  {
+   "t0": 2.9,
+   "t1": 6.3,
+   "text": "Ponte un parche de nariz por la noche"
+  },
+  {
+   "t0": 6.4,
+   "t1": 10.7,
+   "text": "Saca la grasa del poro y deja la piel lisa"
+  },
+  {
+   "t0": 10.8,
+   "t1": 14.1,
+   "text": "En dos semanas, nariz limpia y sin puntitos"
+  },
+  {
+   "t0": 14.2,
+   "t1": 16.3,
+   "text": "Y el maquillaje, perfecto"
+  }
+ ],
+ "endcard": {
+  "packshot": "/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png",
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es",
+  "dur": 4.0
+ },
+ "ambient_db": -34
+}

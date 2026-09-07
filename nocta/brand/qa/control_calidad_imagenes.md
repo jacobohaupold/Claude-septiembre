@@ -35,6 +35,9 @@ Solución (diseño primero): lámina técnica `packaging/patch.html` → `packag
 | `video/ugc_nariz_15s_v2.mp4` | Seedance 2.5 con patrón de colocación como referencia (97,5 cr) | ✅ Imagen aprobada · ❌ audio del modelo rechazado | Parche bien colocado (puente, punta, alas; presión con dos índices), caja correcta, peel con puntos. La voz que genera Seedance no se entiende ("filimentos se vacales") → se silencia y se sustituye por locución TTS |
 | `video/final_ugc_nariz_v2_es.mp4` | v2 + locución Seed Audio (Marisol) + subtítulos + cierre (montaje local, 0 cr) | ✅ **Entregable final** (17 s) | Transcripción automática del resultado = guion exacto; subtítulos legibles; cierre con packshot, garantía y web |
 | `video/final_replica_vue14_es.mp4` | réplica 14 s + locución ES + subtítulos + cierre | ✅ **Entregable final (uso interno)** (15,7 s) | Audio original de Vue silenciado (llevaba voz en inglés); guion adaptado del original |
+| `video/final_replica_vue15_es.mp4` | réplica del anuncio "maquillaje" de Vue (ID 873621904612893) con Ad Multiplier (99,5 cr) + locución ES + subtítulos + cierre | ⚠️ Maqueta interna (storyboard) | Creadora 2 sustituida en 11 de 12 planos (en 8-9 s queda la rubia original), el parche de 4-5 s sale blanco opaco en vez de translúcido y los rótulos en inglés del original permanecen quemados. Sirve para rodar la versión propia siguiendo `marketing/anuncios/replica_vue_873621904612893.md`; no publicable |
+| réplica del anuncio ganador de 24 s (ID 919735961024580) | Ad Multiplier, 3 intentos | ❌ Bloqueada por moderación de Higgsfield (nsfw) en los 3 intentos, créditos reembolsados | Se documenta el desglose plano a plano en `marketing/anuncios/replica_vue_919735961024580.md` para rodarlo con el creador 3 |
+| réplica del anuncio de 10 s (ID 2785309601624353) | — | ❌ El servicio de Higgsfield no confirmó la subida del vídeo (3 subidas, incluida una re-codificación) | Desglose en `marketing/anuncios/replica_vue_2785309601624353.md`; locuciones ES ya generadas en `audio/adm10_vo_*.wav` |
 | `video/adm_vue_replica_14s.mp4` | Ad Multiplier video_edit 14 s 720p (91 cr) + audio original remuxado con ffmpeg | ✅ Maqueta interna | Anuncio real de Vue (ID 1206204697405725) con la persona sustituida por la creadora 2 en los 6 planos y la caja azul de Vue sustituida por la caja NOCTA. **No publicable tal cual**: el vídeo base es propiedad de Vue; sirve como storyboard y prueba de concepto para rodar la versión propia |
 
 ## Créditos Higgsfield consumidos en esta sesión (06-07/09, según `transactions`)
@@ -46,9 +49,9 @@ Solución (diseño primero): lámina técnica `packaging/patch.html` → `packag
 | Seedream 5 Pro (de-slop del board) | 1 | 3,0 |
 | Soul V2 (3 personas sintéticas) | 3 | 0,36 |
 | Seedance 2.5 (turntable 6 s, UGC v1 15 s, UGC v2 15 s) | 3 | 234,0 |
-| Ad Multiplier (réplica 14 s = 89,3; réplica 24 s = 157,73; dos intentos bloqueados por moderación y reembolsados) | 2 cobrados | 247,0 |
-| Seed Audio (locuciones ES, incl. pruebas) | 19 líneas | 8,5 |
-| **Total sesión** | | **≈ 561** |
-| Saldo restante estimado | | ≈ 611 |
+| Ad Multiplier (réplica 14 s = 89,3; réplica 15 s = 99,45; tres intentos de la de 24 s bloqueados por moderación y reembolsados) | 2 cobrados | 188,75 |
+| Seed Audio (locuciones ES, incl. pruebas y 12 líneas masculinas para la variante B) | 45 líneas | 16,5 |
+| **Total sesión** | | **≈ 511** |
+| Saldo restante (balance real al cierre) | | ≈ 663 |
 
 Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando la referencia de imagen ya estaba aprobada; audio y montaje siempre en local (0 créditos).
