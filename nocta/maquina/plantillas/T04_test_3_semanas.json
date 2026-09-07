@@ -1,0 +1,63 @@
+{
+ "nombre": "Qué pasa cuando dejas de tratarlos como puntos negros (3 semanas)",
+ "basado_en": "2857641054627617",
+ "creadora": "creadora_2",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "contraste",
+   "gesto": "G19",
+   "texto": "Mira qué pasa cuando deja de tratarlos como puntos negros."
+  },
+  {
+   "n": 2,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G04",
+   "texto": "Semana 1: la grasa empieza a soltarse."
+  },
+  {
+   "n": 3,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G14",
+   "texto": "Semana 2: los puntitos se ven más claros."
+  },
+  {
+   "n": 4,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G10",
+   "texto": "Semana 3: dejan de volver."
+  },
+  {
+   "n": 5,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G11",
+   "texto": "Porque el parche saca la grasa desde la raíz."
+  },
+  {
+   "n": 6,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G16",
+   "texto": "Sin tirones, sin irritación."
+  },
+  {
+   "n": 7,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G17",
+   "texto": "Garantía de 60 días."
+  }
+ ],
+ "guion": "Mira qué pasa cuando deja de tratarlos como puntos negros. Semana uno: la grasa empieza a soltarse. Semana dos: los puntitos se ven más claros. Semana tres: dejan de volver. Porque el parche saca la grasa desde la raíz, sin tirones ni irritación. Garantía de sesenta días.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

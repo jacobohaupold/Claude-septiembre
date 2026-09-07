@@ -1,0 +1,49 @@
+{
+ "nombre": "Me lo puse una noche y esto es lo que salió",
+ "basado_en": "772789505845233 + 822761193551016",
+ "creadora": "creador_3",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "Me lo puse anoche. Vamos a ver."
+  },
+  {
+   "n": 2,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G10",
+   "texto": "Mira, mira todo eso."
+  },
+  {
+   "n": 3,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G12",
+   "texto": "Todo eso estaba en mi nariz."
+  },
+  {
+   "n": 4,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G16",
+   "texto": "Y queda lisa, de verdad."
+  },
+  {
+   "n": 5,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "NOCTA. Pruébalos, 60 días de garantía."
+  }
+ ],
+ "guion": "Me lo puse anoche. Vamos a ver. Mira, mira todo eso. Todo eso estaba en mi nariz. Y queda lisa, de verdad. NOCTA. Pruébalos, sesenta días de garantía.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

@@ -1,0 +1,56 @@
+{
+ "nombre": "Tuve que enseñarle a mi novio que no son puntos negros",
+ "basado_en": "2070732903463784",
+ "creadora": "creadora_2+creador_3",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "Tuve que enseñarle a mi novio que esto no son puntos negros."
+  },
+  {
+   "n": 2,
+   "seg": 3,
+   "tipo": "contraste",
+   "gesto": "G20",
+   "texto": "Le vi apretarse la nariz durante meses."
+  },
+  {
+   "n": 3,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G04",
+   "texto": "Así que le puse un parche antes de dormir."
+  },
+  {
+   "n": 4,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G14",
+   "texto": "Por la mañana, blanco: eso es grasa que ya no está en su poro."
+  },
+  {
+   "n": 5,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G11",
+   "texto": "Ahora me los roba."
+  },
+  {
+   "n": 6,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "NOCTA. Envío gratis desde 30 €."
+  }
+ ],
+ "guion": "Tuve que enseñarle a mi novio que esto no son puntos negros. Le vi apretarse la nariz durante meses. Así que le puse un parche antes de dormir. Por la mañana, blanco: eso es grasa que ya no está en su poro. Ahora me los roba. NOCTA, envío gratis desde treinta euros.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

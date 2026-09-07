@@ -1,0 +1,49 @@
+{
+ "nombre": "¿Te da vergüenza que el maquillaje se vea así?",
+ "basado_en": "873621904612893",
+ "creadora": "creadora_2",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "¿Te da vergüenza que el maquillaje se vea así?"
+  },
+  {
+   "n": 2,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G03+G04",
+   "texto": "Ponte un parche de nariz por la noche."
+  },
+  {
+   "n": 3,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G08",
+   "texto": "Saca la grasa del poro y deja la piel lisa."
+  },
+  {
+   "n": 4,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G16",
+   "texto": "En dos semanas, nariz limpia y sin puntitos."
+  },
+  {
+   "n": 5,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "Y el maquillaje, perfecto. Envío gratis."
+  }
+ ],
+ "guion": "¿Te da vergüenza que el maquillaje se vea así? Ponte un parche de nariz por la noche. Saca la grasa del poro y deja la piel lisa. En dos semanas, nariz limpia y sin puntitos. Y el maquillaje, perfecto. Envío gratis.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

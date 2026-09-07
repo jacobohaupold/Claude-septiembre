@@ -1,0 +1,77 @@
+{
+ "nombre": "Arreglé sin querer mi mayor complejo",
+ "basado_en": "919735961024580",
+ "creadora": "creador_3",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "Arreglé sin querer mi mayor complejo."
+  },
+  {
+   "n": 2,
+   "seg": 3,
+   "tipo": "macro",
+   "gesto": "G22",
+   "texto": "¿Estos puntitos? No son puntos negros."
+  },
+  {
+   "n": 3,
+   "seg": 3,
+   "tipo": "mecanismo",
+   "gesto": "G24",
+   "texto": "Son canales de grasa que se rellenan solos."
+  },
+  {
+   "n": 4,
+   "seg": 3,
+   "tipo": "contraste",
+   "gesto": "G20",
+   "texto": "Por eso apretar y las tiras nunca funcionaron."
+  },
+  {
+   "n": 5,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G04",
+   "texto": "Esto es lo único que me funcionó."
+  },
+  {
+   "n": 6,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G07",
+   "texto": "Parches de hidrocoloide coreano."
+  },
+  {
+   "n": 7,
+   "seg": 3,
+   "tipo": "producto",
+   "gesto": "G11",
+   "texto": "Absorben la grasa mientras duermes."
+  },
+  {
+   "n": 8,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G16",
+   "texto": "Sin tirones, sin irritación."
+  },
+  {
+   "n": 9,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G17",
+   "texto": "Prueba NOCTA. Envío gratis."
+  }
+ ],
+ "guion": "Arreglé sin querer mi mayor complejo. ¿Estos puntitos? No son puntos negros. Son canales de grasa que se rellenan solos. Por eso apretar y las tiras nunca funcionaron. Esto es lo único que me funcionó: parches de hidrocoloide coreano. Absorben la grasa mientras duermes. Sin tirones, sin irritación. Prueba NOCTA, ahora con envío gratis.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

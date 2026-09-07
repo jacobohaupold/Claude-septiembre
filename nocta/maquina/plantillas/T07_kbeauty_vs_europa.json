@@ -1,0 +1,56 @@
+{
+ "nombre": "Por qué la cosmética coreana va 10 años por delante",
+ "basado_en": "602011846179690",
+ "creadora": "creadora_2",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "Por qué el cuidado coreano va diez años por delante."
+  },
+  {
+   "n": 2,
+   "seg": 3,
+   "tipo": "mecanismo",
+   "gesto": "G24",
+   "texto": "Aquí limpiamos la superficie; en Corea vacían el poro."
+  },
+  {
+   "n": 3,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G04",
+   "texto": "Estos parches de hidrocoloide sacan lo que hay dentro."
+  },
+  {
+   "n": 4,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G13",
+   "texto": "Compáralo tú mismo: limpieza normal contra extracción nocturna."
+  },
+  {
+   "n": 5,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G12",
+   "texto": "Uno deja la grasa, el otro la quita."
+  },
+  {
+   "n": 6,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "NOCTA, con garantía de 60 días."
+  }
+ ],
+ "guion": "Por qué el cuidado coreano va diez años por delante. Aquí limpiamos la superficie; en Corea vacían el poro. Estos parches de hidrocoloide sacan lo que hay dentro. Compáralo tú mismo: limpieza normal contra extracción nocturna. Uno deja la grasa, el otro la quita. NOCTA, con garantía de sesenta días.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

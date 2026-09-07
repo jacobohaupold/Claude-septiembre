@@ -1,0 +1,63 @@
+{
+ "nombre": "Si sigues haciendo esto, para (4 errores)",
+ "basado_en": "949255490925771 + 1435748724958506",
+ "creadora": "creadora_2",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 3,
+   "tipo": "contraste",
+   "gesto": "G20",
+   "texto": "Si aprietas estos puntitos, para."
+  },
+  {
+   "n": 2,
+   "seg": 3,
+   "tipo": "contraste",
+   "gesto": "G19",
+   "texto": "Las tiras arrancan la piel y el poro se rellena en 24 horas."
+  },
+  {
+   "n": 3,
+   "seg": 3,
+   "tipo": "macro",
+   "gesto": "G22",
+   "texto": "Porque no son puntos negros: son filamentos sebáceos."
+  },
+  {
+   "n": 4,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G02+G04",
+   "texto": "Lo que sí funciona: un parche que absorbe la grasa desde dentro."
+  },
+  {
+   "n": 5,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G08",
+   "texto": "Sin arrancar nada."
+  },
+  {
+   "n": 6,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G12",
+   "texto": "Mira lo que saca en una noche."
+  },
+  {
+   "n": 7,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "NOCTA. Garantía de 60 días."
+  }
+ ],
+ "guion": "Si aprietas estos puntitos, para. Las tiras arrancan la piel y el poro se rellena en veinticuatro horas. Porque no son puntos negros: son filamentos sebáceos. Lo que sí funciona: un parche que absorbe la grasa desde dentro, sin arrancar nada. Mira lo que saca en una noche. NOCTA, garantía de sesenta días.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}

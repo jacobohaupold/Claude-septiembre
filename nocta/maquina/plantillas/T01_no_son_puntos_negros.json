@@ -1,0 +1,77 @@
+{
+ "nombre": "No son puntos negros (gancho reencuadre)",
+ "basado_en": "919735961024580 + 1617698659670900",
+ "creadora": "creadora_2",
+ "planos": [
+  {
+   "n": 1,
+   "seg": 4,
+   "tipo": "cara",
+   "gesto": "G01",
+   "texto": "Esos puntitos de la nariz no son puntos negros."
+  },
+  {
+   "n": 2,
+   "seg": 3,
+   "tipo": "macro",
+   "gesto": "G22",
+   "texto": "Son filamentos sebáceos: canales de grasa que se rellenan solos."
+  },
+  {
+   "n": 3,
+   "seg": 2,
+   "tipo": "contraste",
+   "gesto": "G19",
+   "texto": "Por eso las tiras y apretar no sirven."
+  },
+  {
+   "n": 4,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G02+G03",
+   "texto": "Un parche de hidrocoloide antes de dormir…"
+  },
+  {
+   "n": 5,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G04",
+   "texto": "…bien presionado en los lados."
+  },
+  {
+   "n": 6,
+   "seg": 5,
+   "tipo": "producto",
+   "gesto": "G10",
+   "texto": "Por la mañana lo despegas…"
+  },
+  {
+   "n": 7,
+   "seg": 4,
+   "tipo": "producto",
+   "gesto": "G11",
+   "texto": "…y esto es lo que ha sacado."
+  },
+  {
+   "n": 8,
+   "seg": 3,
+   "tipo": "producto",
+   "gesto": "G16",
+   "texto": "Nariz lisa, sin tirones."
+  },
+  {
+   "n": 9,
+   "seg": 3,
+   "tipo": "cierre",
+   "gesto": "G18",
+   "texto": "Garantía de 60 días. nocta.es"
+  }
+ ],
+ "guion": "Esos puntitos de la nariz no son puntos negros. Son filamentos sebáceos: canales de grasa que se rellenan solos. Por eso las tiras y apretar no sirven. Un parche de hidrocoloide antes de dormir, bien presionado en los lados. Por la mañana lo despegas y esto es lo que ha sacado. Nariz lisa, sin tirones. Garantía de sesenta días.",
+ "cierre": {
+  "line1": "nocta",
+  "line2": "Garantía de 60 días · envío gratis desde 30 €",
+  "line3": "nocta.es"
+ },
+ "formato": "9:16 720p, subtítulos quemados, VO Marisol, música suave opcional"
+}
