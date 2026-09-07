@@ -5,15 +5,14 @@
 <meta name="robots" content="noindex">
 <title>Finalizar compra · NOCTA</title>
 <meta name="description" content="Finaliza tu pedido NOCTA: datos de envío y pago seguro con tarjeta, Bizum, Klarna o PayPal.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+<script src="/assets/js/app.js" defer></script>
 </head>
 <body class="n-checkout">
-<div id="site-header"></div>
+<div id="site-header"><div class="n-top-ph"></div></div>
 <main class="n-wrap n-wrap--text" id="main">
   <p style="text-align:center;margin:14px 0 0"><span class="n-lab">Pago seguro</span></p>
   <p style="text-align:center;margin:4px 0 20px"><span class="n-lab">Paso 1 de 2 · Datos y pago</span></p>
@@ -83,6 +82,7 @@
 </div>
 
 <div id="site-footer"></div>
+<script src="/assets/js/products.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 document.getElementById('checktrust').innerHTML=nTrust();

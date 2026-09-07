@@ -5,15 +5,14 @@
 <meta name="robots" content="noindex">
 <title>¡Pedido confirmado! · NOCTA</title>
 <meta name="description" content="Gracias por tu pedido NOCTA. Confirmación, seguimiento y consejos para sacarle el máximo a tus parches mientras llega.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+<script src="/assets/js/app.js" defer></script>
 </head>
 <body>
-<div id="site-header"></div>
+<div id="site-header"><div class="n-top-ph"></div></div>
 <main class="n-wrap n-wrap--text" id="main">
   <section style="text-align:center;padding-top:24px">
     <div id="successmark" style="width:48px;height:48px;border-radius:50%;background:var(--n-sage-28);display:grid;place-items:center;margin:0 auto 14px;color:var(--n-navy)"></div>
@@ -49,6 +48,7 @@
   </section>
 </main>
 <div id="site-footer"></div>
+<script src="/assets/js/products.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',async()=>{
 document.getElementById('successmark').innerHTML=nIco('check',24);

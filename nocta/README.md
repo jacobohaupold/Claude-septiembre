@@ -23,6 +23,18 @@ Todo lo que hay en esta carpeta se ha construido a partir de la investigación d
 | `operaciones/manual_operativo.md` | pedido a proveedores, importación, 3PL, CPNP, atención al cliente, devoluciones | ✅ |
 | `finanzas/` | `modelo_financiero_nocta.xlsx` (supuestos, unit economics por SKU, PyG 12 meses, caja, punto muerto, escenarios) y `plan_financiero.md` | ver carpeta |
 
+## Web v2 «Laboratorio Cálido» (7 sep 2026)
+
+Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y eventos): https://nocta-store.netlify.app
+
+- **Producto sobre el fondo**: todas las imágenes de producto son recortes `-cut.webp` sin fondo ni caja, con sombra de contacto; fotos lifestyle solo en advertorial, guía y «sobre». Auditoría de los 12 recortes al 100 % en `brand/qa/control_calidad_imagenes.md`.
+- **Compra impulsiva**: bajo cada producto (11 superficies) aparece «Comprar ahora» → Apple Pay / Google Pay / «Pago rápido» → «Añadir al carrito» → nota de envío. La compra exprés nunca borra el carrito.
+- **Menús y barras**: cabecera que se condensa en píldora al hacer scroll, barra superior rotatoria, menú tipográfico numerado a pantalla completa con compra rápida del bestseller, carrito como hoja inferior arrastrable, barra de compra inferior con miniatura, toast arriba.
+- **Rendimiento** (Lighthouse móvil, local): portada 99/100/96/100, ficha 99/100/96/100, checkout 99/100, advertorial 99/100; CLS 0; Inter autoalojada (1 woff2 variable); sin librerías.
+- **Contrato de implementación**: `web/DESIGN.md` (sistema completo) y `web/COMPONENTS.md` (marcado y helpers para nuevas páginas).
+- **Tablero de marca** estilo Figma (3200 × 1860) con las pantallas reales: `brand/tablero/tablero_marca_nocta.png` (+ versión presentación `_figma.png`); versión viva en https://nocta-store.netlify.app/tablero.html (noindex).
+- Panel `/admin/` sin contraseña por decisión del propietario; `deploy.sh` ya no la reintroduce (solo si se pasa `ADMIN_TOKEN`).
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).
