@@ -14,8 +14,9 @@ if [ ! -f .netlify/state.json ]; then
   [ -n "$ID" ] || { echo "No se pudo crear/encontrar el sitio $SITE"; exit 1; }
   $NTL link --id "$ID" >/dev/null
 fi
-$NTL env:set ADMIN_TOKEN "${ADMIN_TOKEN:-nocta-admin-$(date +%s)}" >/dev/null
+# Panel /admin sin contraseña por decisión del propietario (7 sep 2026). Para protegerlo: ADMIN_TOKEN=xxx ./deploy.sh
+[ -n "${ADMIN_TOKEN:-}" ] && $NTL env:set ADMIN_TOKEN "$ADMIN_TOKEN" >/dev/null
 [ -n "${STRIPE_SECRET_KEY:-}" ] && $NTL env:set STRIPE_SECRET_KEY "$STRIPE_SECRET_KEY" >/dev/null
 [ -n "${STRIPE_WEBHOOK_SECRET:-}" ] && $NTL env:set STRIPE_WEBHOOK_SECRET "$STRIPE_WEBHOOK_SECRET" >/dev/null
 $NTL deploy --prod --dir public --functions netlify/functions --message "NOCTA deploy $(date -u +%F_%T)"
-echo "Panel: https://$SITE.netlify.app/admin/  (token ADMIN_TOKEN configurado en Netlify)"
+echo "Panel: https://$SITE.netlify.app/admin/  (acceso libre salvo que ADMIN_TOKEN esté definido en Netlify)"
