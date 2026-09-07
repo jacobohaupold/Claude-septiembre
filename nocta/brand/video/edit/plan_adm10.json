@@ -1,0 +1,13 @@
+{"video": "/home/user/Claude-septiembre/nocta/brand/video/adm_vue_replica_10s.mp4", "fps": 24, "w": 720, "h": 1280,
+ "vo": [
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm10_vo_0.wav", "start": 0.1, "tempo": 1.08},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm10_vo_1.wav", "start": 3.6, "tempo": 1.15},
+  {"file": "/home/user/Claude-septiembre/nocta/brand/audio/adm10_vo_2.wav", "start": 8.4, "tempo": 1.0}
+ ],
+ "subs": [
+  {"t0": 0.1, "t1": 3.5, "text": "Así conseguí que los poros de la nariz no se noten"},
+  {"t0": 3.6, "t1": 8.3, "text": "Los poros se cierran y la grasa desaparece"},
+  {"t0": 8.4, "t1": 10.4, "text": "Y ahora, con envío gratis"}
+ ],
+ "endcard": {"packshot": "/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png", "line1": "nocta", "line2": "Garantía de 60 días · envío gratis desde 30 €", "line3": "nocta.es", "dur": 2.0},
+ "ambient_db": -34}
