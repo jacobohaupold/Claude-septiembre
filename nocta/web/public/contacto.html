@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contacto · NOCTA</title><meta name="description" content="Escríbenos por email, WhatsApp o el formulario. Respondemos en menos de 24 h laborables."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
+<body><div id="site-header"></div>
+<article class="article">
+<div class="kicker">Estamos aquí</div><h1>¿Alguna duda? Escríbenos</h1>
+<p>Somos un equipo pequeño en España y contestamos nosotros mismos, sin bots. Antes de un pedido, sobre uno que ya tienes o sobre la garantía: cuéntanos.</p>
+
+<div class="trust" style="margin:26px 0">
+<div>✉️ Email<br><a href="mailto:hola@nocta.es">hola@nocta.es</a></div>
+<div>💬 WhatsApp<br><a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 00 00 00</a> (pendiente de alta)</div>
+<div>🕐 Horario<br>L-V 9:00-18:00 · respuesta &lt;24 h</div>
+</div>
+
+<h2>Formulario de contacto</h2>
+<form class="form" id="cf">
+<label>Nombre</label><input name="nombre" required>
+<label>Email</label><input type="email" name="email" required>
+<label>Motivo</label>
+<select name="motivo">
+<option value="pedido">Tengo una duda sobre mi pedido</option>
+<option value="producto">Duda sobre un producto</option>
+<option value="garantia">Garantía o devolución</option>
+<option value="mayorista">Colaboraciones / mayoristas</option>
+<option value="otro">Otro</option>
+</select>
+<label>Mensaje</label><input name="msg" required placeholder="Cuéntanos en qué te podemos ayudar">
+<button class="btn wide" style="margin-top:12px">Enviar mensaje</button>
+</form>
+<p class="byline">Respondemos en menos de 24 h laborables desde hola@nocta.es. Si es urgente, escríbenos por WhatsApp.</p>
+<div class="cta"><a class="btn ghost" href="/catalogo.html">Ver catálogo completo</a></div>
+</article>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('cf').onsubmit=e=>{
+    e.preventDefault();
+    const f=new FormData(e.target);
+    fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
+      email:f.get('email'),
+      tipo:'contacto',
+      src:'contacto:'+f.get('motivo'),
+      nombre:f.get('nombre'),
+      msg:f.get('msg')
+    })}).catch(()=>{});
+    nTrack('contact_request',{motivo:f.get('motivo')});
+    e.target.innerHTML='<h3>Recibido ✅</h3><p>Te escribimos en menos de 24 h a tu email.</p>';
+  };
+});
+</script>
+</body></html>

@@ -19,7 +19,7 @@ document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]
 const eur=nEur;const ups=(p.upsell||[]).map(nBySlug).filter(Boolean);
 const bundleList=p.bundle?`<p style="font-size:14px;color:#6b6b6b">Incluye: ${p.bundle.map(s=>nBySlug(s).name).join(' + ')}</p>`:'';
 document.getElementById('pdp').innerHTML=`<div class="pdp">
-<div class="gallery"><div class="mainimg"><img id="mainimg" src="${p.gallery[0]}" alt="${p.name}"></div><div class="thumbs">${p.gallery.map((g,i)=>`<img src="${g}" class="${i?'':'on'}" data-g="${g}" alt="">`).join('')}</div>
+<div class="gallery"><div class="mainimg">${p.video?`<video id="mainvid" src="${p.video}" muted autoplay loop playsinline></video>`:''}<img id="mainimg" src="${p.gallery[0]}" alt="${p.name}"${p.video?' hidden':''}></div><div class="thumbs">${p.video?`<video src="${p.video}" class="on" data-g="${p.video}" data-video="1" muted loop playsinline></video>`:''}${p.gallery.map((g,i)=>`<img src="${g}" class="${i||p.video?'':'on'}" data-g="${g}" alt="">`).join('')}</div>
 <div class="claims" style="margin-top:20px">${p.claims.map(c=>`<div class="claim"><big>${c[0]}</big><small>${c[1]}</small></div>`).join('')}</div></div>
 <div class="buy">${p.badge?`<span class="badge" style="position:static;display:inline-block">${p.badge}</span>`:''}<h1>${p.name}</h1><div class="units">${p.units} · <span class="stars">${nStars(p.rating)}</span> ${p.rating} (${p.reviews} opiniones)</div>
 <p style="font-size:17px;margin:14px 0">${p.desc}</p>${bundleList}
@@ -37,6 +37,7 @@ document.getElementById('pdp').innerHTML=`<div class="pdp">
 ${p.faq.map(f=>`<details><summary>${f[0]}</summary><p style="font-size:15px">${f[1]}</p></details>`).join('')}
 </div>
 <div class="upsells"><h3 style="color:#14213D">Combínalo con</h3>${ups.map(u=>`<div class="mini"><img src="${u.image}" alt=""><div class="t"><b>${u.name}</b><br><small>${u.short}</small></div><button data-add="${u.slug}" data-src="pdp-upsell">+ ${eur(u.price)}</button></div>`).join('')}</div>
+<p style="text-align:center;margin-top:14px"><a href="/catalogo.html" style="font-size:14px">Ver catálogo completo →</a></p>
 </div></div>
 <section><h2>Opiniones</h2><div class="testis">
 <div class="testi"><div class="stars">★★★★★</div>"Increíble lo que sale. Lo uso dos noches por semana y la nariz ya no brilla."<div class="who">Paula S. · Barcelona</div></div>
@@ -48,7 +49,12 @@ document.getElementById('qm').onclick=()=>{qty=Math.max(1,qty-1);upd();};documen
 document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{sub=r.value==='sub';document.querySelectorAll('.opt').forEach(o=>o.classList.toggle('on',o.contains(r)));upd();nTrack('select_mode',{slug,sub});});
 document.getElementById('addbtn').onclick=()=>nCart.add(slug,qty,sub,'pdp');document.getElementById('st-add').onclick=()=>nCart.add(slug,qty,sub,'sticky');
 document.getElementById('st-name').textContent=p.name;upd();
-document.querySelectorAll('.thumbs img').forEach(t=>t.onclick=()=>{document.getElementById('mainimg').src=t.dataset.g;document.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('on'));t.classList.add('on');});
+document.querySelectorAll('.thumbs img,.thumbs video').forEach(t=>t.onclick=()=>{
+  const mainimg=document.getElementById('mainimg'),mainvid=document.getElementById('mainvid');
+  if(t.dataset.video){ if(mainvid) mainvid.hidden=false; mainimg.hidden=true; }
+  else { if(mainvid) mainvid.hidden=true; mainimg.hidden=false; mainimg.src=t.dataset.g; }
+  document.querySelectorAll('.thumbs img,.thumbs video').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+});
 nTrack('view_item',{slug,value:p.price});
 });
 </script>
