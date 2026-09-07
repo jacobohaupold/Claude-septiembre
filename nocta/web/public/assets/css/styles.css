@@ -471,3 +471,16 @@ body.n-v5.n-has-ck.n-has-bar .n-bbar{bottom:calc(var(--n-ck-h,0px) + var(--n-gap
 .n-bento--2c .n-pc__new{font-size:9px;padding:4px 7px;right:10px;top:10px}
 .n-bento--2c .n-pc.n-sk .n-pc__i{height:118px}
 }
+
+/* v5.1 páginas de texto: cabecera sobre el fondo + artículo en tarjeta */
+.n-v5 .n-ah{display:grid;gap:10px;padding:var(--n-s5) var(--n-s2) var(--n-s4);max-width:44em}
+.n-v5 .n-ah h1,.n-v5 .n-ah .n-lead,.n-v5 .n-ah p{margin:0!important}
+.n-v5 .n-ac{background:var(--n-card);border-radius:var(--n-cr);padding:var(--n-s5) var(--n-s4);margin:0}
+.n-v5 .n-ac>*:first-child{margin-top:0!important}
+.n-v5 .n-ac .n-bleed{margin:0 0 var(--n-s5)!important;border-radius:16px;overflow:hidden}
+.n-v5 .n-ac .n-bleed img{border-radius:16px}
+.n-v5 .n-ac .n-chips{background:var(--n-card)}
+.n-v5 .n-ac .n-form input,.n-v5 .n-ac .n-form select,.n-v5 .n-ac .n-form textarea{background:#fff;border-color:var(--n-line-2);border-radius:14px}
+.n-v5 .n-ac .n-cta,.n-v5 .n-ac .n-quote,.n-v5 .n-ac .n-ok-box{background:var(--n-bg)}
+.n-v5 .n-ac .n-spec dd{font-size:15px}
+@media (min-width:900px){.n-v5 .n-ac{padding:var(--n-s7)}.n-v5 .n-ah{padding:var(--n-s7) var(--n-s2) var(--n-s5)}}

@@ -154,3 +154,6 @@ body.n-pd-locked{overflow:hidden}
 .n-pd__claims b{flex:0 0 96px;font-size:28px;white-space:nowrap}
 .n-pd__claims span{margin:0;font-size:14px;letter-spacing:0;text-transform:none;color:var(--n-ink-2);line-height:1.4}
 @media (min-width:900px){.n-pd__claims{grid-template-columns:repeat(3,1fr)}.n-pd__claims .n-c{display:grid;justify-items:center;text-align:center;padding:28px 20px;gap:10px}.n-pd__claims b{flex:none;font-size:44px}.n-pd__claims span{font-size:14px;max-width:22ch}}
+/* barra inferior: nombre y precio en una línea */
+body.n-v5 .n-bbar__i{min-width:0}
+body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
