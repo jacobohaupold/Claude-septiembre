@@ -55,6 +55,14 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 - **Rendimiento**: esqueletos estáticos con la altura exacta de cada tarjeta y placeholder de cabecera antes de que cargue el JS (CLS 0 en portada, catálogo, ficha, checkout, guía). Lighthouse móvil: portada 95/100/96/100, catálogo 96/100/96/100, ficha 94/100/96/100.
 - Sin créditos Higgsfield: solo CSS/HTML/JS. Saldo 260,43.
 
+### v5.1 (7 sep 2026, noche): tarjetas limpias, ficha de lujo, guía 3D y test de piel
+- **Tarjetas de producto**: sin la palabra de categoría (cortaba la foto); foto completa 3:4 sobre la tarjeta crema. Catálogo a 2 por fila en móvil (3 en escritorio) con tarjeta compacta.
+- **Ficha de producto** (`web/public/producto.html` + `assets/css/pdp.css`): galería en tarjeta con contador, puntos y visor a pantalla completa; panel de compra pegajoso en escritorio (tallas píldora, Comprar ahora, Pago rápido, Añadir, segmento única/suscripción, chips de confianza); cifras, editorial «lo que sale en una noche», tres vídeos, ficha técnica, resumen de opiniones con barras y reseñas por producto (`assets/js/reviews.js`), carril «Completa tu rutina». Lighthouse móvil 93/100/96/100, CLS 0.
+- **Guía «Cómo usar»** (`como-usar.html` + `assets/css/como-usar.css` + `assets/js/como-usar-3d.js`): escena 3D real con Three.js (autoalojado en `assets/js/vendor/`, carga perezosa al acercarse la sección): parche extruido del troquel real 60×45 mm, bloque de piel con poros y filamentos, noche 23:00→07:00 guiada por scroll con reloj, y despegado final con la grasa en el parche; botón «Ver la noche»; recambio estático si no hay WebGL. Además: los tres gestos en vídeo, diagrama de colocación, sí/no, semana tipo, un bloque por producto con pasos de `products.js`, dudas y CTA.
+- **Test de piel** (`quiz.html` + `assets/js/quiz.js` + `assets/css/quiz.css`): 7 preguntas con «por qué lo preguntamos», puntuación determinista (congestión, grasa, sensibilidad), perfil con nombre, rutina con producto principal y complementos, calendario de 7 noches, «qué esperar», objeciones personalizadas (tiras, apretar, ácidos), resumen de precio, «Comprar mi rutina» que añade todo al carrito, plan compartible por URL y paso de email con HOLA10. Lighthouse móvil 97/100/96/100.
+- **Páginas de texto** (ciencia, sobre, garantía, contacto, envíos, legal, no son puntos negros): cabecera sobre el fondo y artículo en tarjeta crema, coherentes con el sistema v5.
+- `stamp.py` versiona ahora cualquier CSS/JS de `assets` y acepta un directorio. Sin créditos Higgsfield en esta fase.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

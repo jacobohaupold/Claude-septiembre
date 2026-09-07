@@ -1,5 +1,13 @@
 /* NOCTA · Test de piel v2 — estilos propios (prefijo n-qz-). Se carga después de styles.css. */
 
+/* El quiz es un flujo de formulario, no una grid de producto: en escritorio no debe
+   heredar el --n-max:1180px del wrapper general (pensado para grids anchas), o las
+   tarjetas de pregunta quedan demasiado estiradas. Se limita a un ancho de lectura
+   cómodo y centrado, igual que .n-mail .box en el resto del sitio v5. */
+@media (min-width:900px){
+  .n-qz-start,.n-qz-q,.n-qz-email,.n-qz-profile,.n-qz-summary{max-width:680px;margin-left:auto;margin-right:auto}
+}
+
 /* ---------- contenedor y transición entre pantallas ---------- */
 #q{transition:opacity .22s var(--n-e),transform .22s var(--n-e)}
 #q.n-qz-out{opacity:0;transform:translateX(-14px)}
@@ -44,6 +52,15 @@
 @media (min-width:900px){.n-qz-email{padding:var(--n-s7)}}
 
 /* ---------- resultado ---------- */
+/* .n-bento ya trae margin-top:var(--n-gap) de fábrica, pero dos tarjetas .n-c
+   sueltas (fuera de un .n-bento) que se suceden directamente no tenían ningún
+   margen entre ellas: al compartir fondo (--n-card) y esquinas redondeadas se
+   tocaban sin espacio y generaban una muesca visible en la unión. Regla
+   genérica para cualquier combinación de tarjeta/bento sueltos en el resultado. */
+.n-qz-result>.n-c+.n-c,
+.n-qz-result>.n-c+.n-bento,
+.n-qz-result>.n-bento+.n-c{margin-top:var(--n-gap)}
+
 .n-qz-profile{padding:var(--n-s5) var(--n-s4)}
 .n-qz-profile h2{margin-top:6px}
 @media (min-width:900px){.n-qz-profile{padding:var(--n-s7)}}
@@ -58,6 +75,9 @@
 
 .n-qz-prod{display:flex;flex-direction:column}
 .n-qz-prod__media{aspect-ratio:1;padding:10%}
+/* aspect-ratio por sí solo no basta como base fiable para hijos con % de alto:
+   se posiciona la imagen en absoluto sobre la caja de relleno (como .n-ed5/.n-vt5). */
+.n-qz-prod__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .n-qz-prod__body{padding:0 var(--n-s4) var(--n-s5);display:flex;flex-direction:column;gap:6px;flex:1}
 .n-qz-prod__why{color:var(--n-ink-2);margin:2px 0 0}
 .n-qz-prod__when{color:var(--n-navy);margin:0}
@@ -73,9 +93,11 @@
 .n-qz-day__pills{display:grid;gap:4px;width:100%}
 .n-qz-pill{display:block;padding:5px 2px;border-radius:8px;font-size:9px;line-height:1.2;letter-spacing:.02em;font-weight:var(--n-w-med);background:var(--n-card);color:var(--n-navy);text-align:center}
 .n-qz-pill--exf{background:var(--n-sage-28);color:var(--n-sage-ink)}
-.n-qz-pill--daily{background:transparent;color:var(--n-muted);box-shadow:inset 0 0 0 1px var(--n-line-2)}
+.n-qz-pill--extra{background:transparent;color:var(--n-navy);box-shadow:inset 0 0 0 1px var(--n-navy)}
 .n-qz-pill--off{background:transparent;color:var(--n-line-2);box-shadow:inset 0 0 0 1px var(--n-line)}
 @media (min-width:640px){.n-qz-pill{font-size:11px;padding:6px 4px}.n-qz-day>.n-lab{font-size:11px}}
+/* productos "a diario" (sérum/tónico): fuera del grid de 7 columnas, en una sola línea */
+.n-qz-week__daily{margin-top:var(--n-s3);color:var(--n-ink-2)}
 
 .n-qz-steps3{padding:var(--n-s5) var(--n-s4)}
 @media (min-width:900px){.n-qz-steps3{padding:var(--n-s7)}.n-qz-steps3 .n-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--n-s6)}.n-qz-steps3 .n-steps li{display:block;border-top:0}.n-qz-steps3 .n-steps li .n-lab{display:block;margin-bottom:var(--n-s2)}}

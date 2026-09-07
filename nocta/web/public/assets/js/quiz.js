@@ -20,11 +20,11 @@ function bars(n){ // gráfico de 3 barras crecientes, las n primeras rellenas (n
 const QIC={
   nariz:'<path d="M9 4c-1 3-2 5-2 8a5 5 0 0 0 10 0c0-3-1-5-2-8"/><circle cx="10" cy="13" r=".7" fill="currentColor" stroke="none"/><circle cx="14" cy="13" r=".7" fill="currentColor" stroke="none"/>',
   tzone:'<path d="M5 6h14M12 6v13"/>',
-  granos:'<circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="8"/>',
+  granos:'<circle cx="12" cy="13" r="5"/><path d="M12 5v3M9 4.5l1 2.7M15 4.5l-1 2.7"/>',
   textura:'<circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="17" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="17" r="1.2" fill="currentColor" stroke="none"/>',
   grasa:'<path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/>',
   muygrasa:'<path d="M8 5c1.6 2.4 3 4.4 3 6.6a3 3 0 0 1-6 0C5 9.4 6.4 7.4 8 5z"/><path d="M16 3c2 3 3.8 5.6 3.8 8.3a3.8 3.8 0 0 1-7.6 0C12.2 8.6 14 6 16 3z"/>',
-  normal:'<path d="M12 4v16M6 8l-3 5a3 3 0 0 0 6 0zM18 8l-3 5a3 3 0 0 0 6 0zM5.5 8h13"/>',
+  normal:'<path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/><path d="M6.3 14h11.4"/>',
   seca:'<path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/><path d="M5 5l14 14"/>',
   tiras:'<rect x="4" y="9" width="14" height="6" rx="2"/><path d="M15 9l4-3.5"/>',
   apretar:'<path d="M12 3v8M8 7l4 4 4-4"/><path d="M6 14a6 6 0 0 0 12 0"/>',
@@ -166,7 +166,8 @@ function plan(ans){
   if((ans.objetivo==='brillo'||ans.objetivo==='textura'||ans.rutina==='limp_hid'||ans.rutina==='completa')&&!extra.includes('serum-niacinamida'))extra.push('serum-niacinamida');
   if((ans.piel==='seca'||sc.sensibilidad===3)&&!extra.includes('tonico-hialuronico'))extra.push('tonico-hialuronico');
 
-  const patchFreqTxt=sc.grasa===3?'3 noches por semana':'2 noches por semana';
+  const nightsTxt=n=>n===1?'1 noche por semana':n+' noches por semana';
+  const patchFreqTxt=nightsTxt(sc.grasa===3?3:2);
   const patchNights=sc.grasa===3?3:2;
   const exfFreqTxt=sc.sensibilidad===3?'1 noche por semana':(sc.grasa===3?'3 noches por semana':'2-3 noches por semana');
   const exfNights=sc.sensibilidad===3?1:(sc.grasa===3?3:2);
@@ -176,7 +177,20 @@ function plan(ans){
   const mainNights=main==='duo-poros'?(duoReduced?exfNights:patchNights):patchNights;
   const mainFreqTxt=main==='duo-poros'?(duoReduced?exfFreqTxt:patchFreqTxt):patchFreqTxt;
 
+  // nightsOverride: cuando calendar() no consigue encajar todas las noches
+  // "ideales" de un parche extra en la semana (p.ej. zona=granos + exfoliante +
+  // parches-superficie compitiendo por los mismos 7 días), calendar() llama a
+  // applyActualNights() con el nº de noches que REALMENTE le ha podido asignar.
+  // freqOf() usa ese número real en vez del ideal, así la tarjeta de producto y
+  // el calendario de 7 noches nunca se contradicen entre sí.
+  const nightsOverride={};
+  function applyActualNights(map){Object.keys(map).forEach(slug=>{nightsOverride[slug]=map[slug];});}
+
   const freqOf=slug=>{
+    if(Object.prototype.hasOwnProperty.call(nightsOverride,slug)){
+      const n=nightsOverride[slug];
+      return{txt:nightsTxt(n)+' (repartida esta semana con tus otros parches)',nights:n};
+    }
     if(slug==='duo-poros')return{txt:mainFreqTxt+' (exfoliante + parche la misma noche)',nights:mainNights};
     if(isPatch(slug))return{txt:patchFreqTxt,nights:patchNights};
     if(slug==='exfoliante-salicilico')return{txt:exfFreqTxt,nights:exfNights};
@@ -190,38 +204,82 @@ function plan(ans){
   if(ans.probado.includes('apretar'))objections.push({t:'Por qué apretar lo empeora',x:'Apretar rompe la pared del poro y empuja la infección más adentro: por eso salen marcas y el grano tarda más en curar. El parche absorbe el pus sin que tengas que tocarlo.'});
   if(ans.probado.includes('acidos')&&ans.sens==='alta')objections.push({t:'Por qué te irritaban los ácidos',x:'Con la piel reactiva, los ácidos a diario piden más de lo que la barrera aguanta y aparece el rojo. Por eso tu rutina empieza con menos noches de exfoliante y prioriza calmar antes que exfoliar.'});
 
+  // Semana 1-2: solo se cita una cifra cuando el producto principal la respalda de
+  // verdad en products.js (claims); si no, texto genérico sin inventar números.
+  const WEEK2={
+    'parches-nariz':'Los poros se ven menos cargados: 9 de cada 10 lo notan ya desde la primera noche.',
+    'duo-poros':'Notas la diferencia en los poros en las 2 primeras semanas de rutina.',
+    'kit-t-zone':'Los poros de la zona T se ven menos cargados y el brillo se controla antes de mediodía.',
+    'parches-granos':'Los brotes en proceso se calman antes y aparecen menos granos nuevos.',
+    'kit-cara-completa':'Los poros se ven menos cargados en toda la cara, zona a zona.'
+  };
   const expect=[
     {t:'Noche 1',b:'El parche sale con la grasa visible y la piel se nota más suave nada más despertar.'},
-    {t:'Semana 1-2',b:'Los poros se ven menos cargados: 9 de cada 10 lo notan ya desde las primeras noches.'},
+    {t:'Semana 1-2',b:WEEK2[main]||'Los poros se ven menos cargados y la piel se nota más suave al tacto.'},
     {t:'Semana 3-4',b:'Menos brillo y piel más uniforme, con la rutina ya en automático.'}
   ];
 
-  return{sc,main,extra,routine,objections,expect,exfNote,mainNights,freqOf,name:profileName(ans,sc)};
+  return{sc,main,extra,routine,objections,expect,exfNote,mainNights,freqOf,applyActualNights,name:profileName(ans,sc)};
 }
 
 /* Calendario de 7 noches (L-D). Reparto fijo y determinista según el nº de noches
-   de la zona principal (1-3) y del exfoliante extra (0-3), evitando siempre dos
-   noches seguidas de parche en la misma zona. */
+   de la zona principal (1-3), del exfoliante extra (0-3) y de cualquier parche
+   extra en pl.extra (p.ej. parches-superficie), evitando siempre dos noches
+   seguidas de parche en la misma zona. Los productos "a diario" (sérum/tónico) no
+   entran en el grid: se listan aparte, porque se usan todas las noches. */
 const DAY_LABEL=['L','M','X','J','V','S','D'];
 const PATCH_DAYS={1:[3],2:[0,3],3:[0,2,4]};
 const EXF_PREF={1:[4,1,6],2:[5,2,6,1,4],3:[5,1,6,3]};
+const PATCH_EXTRA_PREF={1:[6],2:[1,5,4,2,6,0,3],3:[1,3,5,6,0,2,4]};
+function pickDays(pref,n,exclude){
+  const out=[];
+  for(const d of pref){if(out.length>=n)break;if(!exclude.has(d)&&!out.includes(d))out.push(d);}
+  for(let d=0;d<7&&out.length<n;d++){if(!exclude.has(d)&&!out.includes(d))out.push(d);}
+  return out.sort((a,b)=>a-b);
+}
 function calendar(pl,ans){
   const mainDays=PATCH_DAYS[pl.mainNights];
   const hasStandaloneExf=pl.extra.includes('exfoliante-salicilico');
+  const used=new Set(mainDays);
   let exfDays=[];
   if(hasStandaloneExf){
     const exfN=pl.sc.sensibilidad===3?1:(pl.sc.grasa===3?3:2);
     exfDays=(EXF_PREF[pl.mainNights]||EXF_PREF[2]).slice(0,exfN).sort((a,b)=>a-b);
+    exfDays.forEach(d=>used.add(d));
   }
+  // Cualquier otro parche que viaje en pl.extra (p.ej. parches-superficie cuando
+  // zona='granos') también necesita sus propias noches en el grid.
+  const extraPatchSlugs=pl.extra.filter(isPatch);
+  const extraPatchDays={};
+  const shortfall={};
+  extraPatchSlugs.forEach(slug=>{
+    const f=pl.freqOf(slug);
+    const pref=PATCH_EXTRA_PREF[f.nights]||PATCH_EXTRA_PREF[2];
+    const days=pickDays(pref,f.nights,used);
+    days.forEach(d=>used.add(d));
+    extraPatchDays[slug]=days;
+    // Si la semana ya está llena (parche principal + exfoliante) no siempre caben
+    // todas las noches "ideales" de un parche extra: se registra lo que de verdad
+    // se ha podido colocar para que freqOf() deje de prometer lo que el calendario
+    // no puede cumplir (ver nightsOverride en plan()).
+    if(days.length!==f.nights)shortfall[slug]=days.length;
+  });
+  if(Object.keys(shortfall).length)pl.applyActualNights(shortfall);
   const dailySlugs=pl.extra.filter(s=>s==='serum-niacinamida'||s==='tonico-hialuronico');
   const p=nBySlug(pl.main);
-  return DAY_LABEL.map((d,idx)=>{
+  const days=DAY_LABEL.map((d,idx)=>{
     const items=[];
     if(mainDays.includes(idx))items.push({label:pl.main==='duo-poros'?'Exfoliante + parche':p.name.replace('Parches de ','Parche ').replace('Kit ','Kit '),cls:'n-qz-pill'});
     if(exfDays.includes(idx))items.push({label:'Exfoliante',cls:'n-qz-pill n-qz-pill--exf'});
-    dailySlugs.forEach(s=>items.push({label:nBySlug(s).name.split(' ')[0],cls:'n-qz-pill n-qz-pill--daily'}));
+    extraPatchSlugs.forEach(slug=>{
+      if((extraPatchDays[slug]||[]).includes(idx)){
+        const ep=nBySlug(slug);
+        items.push({label:ep.name.replace('Parches de ','').replace('Parches ',''),cls:'n-qz-pill n-qz-pill--extra'});
+      }
+    });
     return{d,items};
   });
+  return{days,dailySlugs};
 }
 
 /* ============================================================
@@ -262,8 +320,14 @@ function updateBack(){
 /* ============================================================
    5) RENDER
    ============================================================ */
-function optionHtml(o,multi,checked){
-  return `<button class="n-qz-opt${checked?' is-on':''}" type="button" data-v="${o.v}" role="${multi?'checkbox':'radio'}" aria-checked="${checked}">`+
+function optionHtml(o,multi,checked,tabbable){
+  // Patrón W3C APG "roving tabindex" para el radiogroup de opción única: solo la
+  // opción marcada (o la primera si aún no hay selección) es una parada de Tab;
+  // el resto usan tabindex=-1 y se alcanzan con las flechas (ver wire()). Los
+  // grupos de checkbox (pregunta múltiple) mantienen cada opción como parada de
+  // Tab independiente, que es el patrón esperado para un grupo de checkboxes.
+  const tabAttr=multi?'':` tabindex="${tabbable?'0':'-1'}"`;
+  return `<button class="n-qz-opt${checked?' is-on':''}" type="button" data-v="${o.v}" role="${multi?'checkbox':'radio'}" aria-checked="${checked}"${tabAttr}>`+
     `<span class="n-qz-opt__ic">${qico(o.ic)}</span>`+
     `<span class="n-qz-opt__t"><b>${o.t}</b><small>${o.h}</small></span>`+
     `<span class="n-qz-opt__chev">${multi?(checked?CHECK_ON:CHECK_OFF):nIco('chev',18)}</span></button>`;
@@ -272,7 +336,7 @@ function optionHtml(o,multi,checked){
 function renderStart(){
   return `<div class="n-c n-qz-start n-reveal">
     <span class="n-lab n-lab--navy">Test de piel</span>
-    <h1 class="n-d2">Tu rutina de parches en 1 minuto</h1>
+    <h1 class="n-d2">Tu rutina de parches en 1 minuto</h1><h2 class="n-vh">Qué incluye el test</h2>
     <p class="n-lead">7 preguntas rápidas. Te explicamos por qué te las hacemos y terminas con un plan que se entiende del todo: qué producto, por qué, cuándo y cuántas noches.</p>
     <ul class="n-list">
       <li>${nIco('check',16)}<span>Dura 1 minuto</span></li>
@@ -290,10 +354,10 @@ function renderQ(){
     <div class="n-progress"><i style="width:${pct}%"></i></div>
     <p class="n-lab">Pregunta ${i+1} de ${N}</p>
     <h2 class="n-d3">${s.q}</h2>
-    <button class="n-link n-qz-why" type="button" aria-expanded="false">¿Por qué lo preguntamos?</button>
-    <p class="n-sm n-muted n-qz-whyp" hidden>${s.why}</p>
+    <button class="n-link n-qz-why" type="button" aria-expanded="false" aria-controls="qz-why-${s.id}">¿Por qué lo preguntamos?</button>
+    <p class="n-sm n-muted n-qz-whyp" id="qz-why-${s.id}" hidden>${s.why}</p>
     <div class="n-qz-opts" role="${multi?'group':'radiogroup'}" aria-label="${s.q}">
-      ${s.opts.map(o=>optionHtml(o,multi,multi?(Array.isArray(sel)&&sel.includes(o.v)):sel===o.v)).join('')}
+      ${s.opts.map((o,oi)=>optionHtml(o,multi,multi?(Array.isArray(sel)&&sel.includes(o.v)):sel===o.v,!multi&&(sel?sel===o.v:oi===0))).join('')}
     </div>
     ${multi?`<button class="n-btn n-btn--fill n-btn--wide n-qz-next" id="qnext" ${Array.isArray(sel)&&sel.length?'':'disabled'}>Siguiente</button>`:''}
   </div>`;
@@ -318,7 +382,11 @@ function barRow(label,score,text){
   return `<div class="n-qz-bar"><div class="n-qz-bar__h"><span>${label}</span><b>${levelLabel(score)}</b></div><div class="n-qz-bar__track"><i style="width:${score/3*100}%"></i></div><p class="n-sm n-muted">${text}</p></div>`;
 }
 
-function grasaText(g){return g>=3?'Tu piel produce bastante grasa a media tarde: por eso conviene un exfoliante que evite que se acumule en el poro.':g===2?'Notas brillo sobre todo en la zona T: es la zona que más cuidado necesita.':'Tu piel no produce mucha grasa: prioriza hidratar sin cargar el poro.';}
+function grasaText(g,zona){
+  if(g>=3)return'Tu piel produce bastante grasa a media tarde: por eso conviene un exfoliante que evite que se acumule en el poro.';
+  if(g===2)return zona==='tzone'?'Notas brillo sobre todo en la zona T: es la zona que más cuidado necesita.':'Notas brillo a media tarde: por eso conviene controlar la grasa sin resecar la piel.';
+  return'Tu piel no produce mucha grasa: prioriza hidratar sin cargar el poro.';
+}
 function sensText(s){return s>=3?'Tu piel se enrojece con facilidad: empezamos con menos noches de ácido para no irritar.':s===2?'Tu piel tolera bastante bien: puedes exfoliar 2-3 noches por semana sin problema.':'Tu piel casi no reacciona: puedes ir a tu ritmo con los ácidos.';}
 function congText(c){return c>=3?'Tus poros acumulan grasa rápido: un parche varias veces por semana ayuda a que no se carguen.':c===2?'Tus poros se cargan de forma moderada: con un parche 2 veces por semana suele bastar.':'Tus poros no se congestionan mucho: con mantenimiento ligero vale.';}
 
@@ -347,11 +415,14 @@ function renderResult(){
   const savings=items.reduce((a,p)=>a+(p.compare?p.compare-p.price:0),0);
 
   const bars=barRow('Congestión de poros',pl.sc.congestion,congText(pl.sc.congestion))+
-             barRow('Grasa',pl.sc.grasa,grasaText(pl.sc.grasa))+
+             barRow('Grasa',pl.sc.grasa,grasaText(pl.sc.grasa,ans.zona))+
              barRow('Sensibilidad',pl.sc.sensibilidad,sensText(pl.sc.sensibilidad));
 
+  const dailyNames=cal.dailySlugs.map(s=>nBySlug(s)).filter(Boolean).map(p=>p.name);
+  const dailyLine=dailyNames.length?`<p class="n-sm n-qz-week__daily">+ ${dailyNames.join(' y ')} a diario, mañana y noche.</p>`:'';
   const week=`<div class="n-c n-qz-week n-reveal"><div class="n-sh" style="padding-top:0"><h2>Tus 7 noches</h2></div>
-    <div class="n-qz-week__grid">${cal.map(d=>`<div class="n-qz-day"><span class="n-lab">${d.d}</span><div class="n-qz-day__pills">${d.items.length?d.items.map(it=>`<span class="${it.cls}">${it.label}</span>`).join(''):'<span class="n-qz-pill n-qz-pill--off">Libre</span>'}</div></div>`).join('')}</div>
+    <div class="n-qz-week__grid">${cal.days.map(d=>`<div class="n-qz-day"><span class="n-lab">${d.d}</span><div class="n-qz-day__pills">${d.items.length?d.items.map(it=>`<span class="${it.cls}">${it.label}</span>`).join(''):'<span class="n-qz-pill n-qz-pill--off">Libre</span>'}</div></div>`).join('')}</div>
+    ${dailyLine}
     <p class="n-xs n-muted" style="margin-top:var(--n-s3)">${pl.exfNote?pl.exfNote+' ':''}Nunca dos noches seguidas de parche en la misma zona.</p></div>`;
 
   const expect=`<div class="n-c n-qz-steps3 n-reveal"><div class="n-sh" style="padding-top:0"><h2>Qué esperar</h2></div>
@@ -447,7 +518,9 @@ function wire(){
       const opts=$$('.n-qz-opt',grp);const idx=opts.indexOf(document.activeElement);
       if(idx<0)return;e.preventDefault();
       const d=(e.key==='ArrowDown'||e.key==='ArrowRight')?1:-1;
-      opts[(idx+d+opts.length)%opts.length].focus();
+      const next=opts[(idx+d+opts.length)%opts.length];
+      if(!s.multi){opts.forEach(o=>{o.tabIndex=-1;});next.tabIndex=0;} // roving tabindex
+      next.focus();
     });
   }
   if(view==='email'){

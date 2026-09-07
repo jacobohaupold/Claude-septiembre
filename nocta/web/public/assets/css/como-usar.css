@@ -4,7 +4,7 @@
 /* ---------- índice ---------- */
 .n-cu-index{padding:var(--n-s4)}
 .n-cu-index__list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:var(--n-s3) 0 0;padding:0}
-.n-cu-index__list a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;background:var(--n-bg);color:var(--n-navy);text-decoration:none;font-size:12px;letter-spacing:.02em;font-weight:var(--n-w-med);transition:background var(--n-t2) var(--n-e),color var(--n-t2) var(--n-e)}
+.n-cu-index__list a{display:inline-flex;align-items:center;min-height:var(--n-tap);padding:0 14px;border-radius:999px;background:var(--n-bg);color:var(--n-navy);text-decoration:none;font-size:12px;letter-spacing:.02em;font-weight:var(--n-w-med);transition:background var(--n-t2) var(--n-e),color var(--n-t2) var(--n-e)}
 @media (hover:hover){.n-cu-index__list a:hover{background:var(--n-navy);color:var(--n-cream)}}
 
 /* ---------- hero mini-cifras ---------- */
@@ -12,6 +12,10 @@
 .n-cu-hero h1{font-size:28px;line-height:1.08;letter-spacing:-.02em;font-weight:var(--n-w-med);margin:10px 0 12px;color:var(--n-navy)}
 @media (min-width:900px){.n-cu-hero h1{font-size:44px}}
 .n-cu-hero .n-lead{margin:0 0 var(--n-s5)}
+/* a 320px, "6-8 h" partía en dos líneas mientras "20 s" y "1-2" quedaban en una,
+   descuadrando las tres tarjetas entre sí */
+#inicio .n-num5 b.n-num{white-space:nowrap}
+@media (max-width:359px){#inicio .n-num5 b.n-num{font-size:26px}}
 
 /* ---------- escena 3D ---------- */
 .n-cu-scene{padding:0}
@@ -31,10 +35,14 @@
 .n-cu-scene__bar{position:absolute;left:var(--n-s4);right:var(--n-s4);bottom:var(--n-s3);z-index:2;height:4px;border-radius:999px;background:rgba(20,33,61,.14);overflow:hidden}
 .n-cu-scene__bar i{display:block;height:100%;width:0%;background:var(--n-navy);border-radius:999px}
 .n-cu-scene__steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.n-cu-step{background:var(--n-card);border-radius:16px;padding:16px 18px;display:grid;gap:4px;opacity:.5;transition:opacity var(--n-t3) var(--n-e),background var(--n-t3) var(--n-e)}
-.n-cu-step b{font-size:15px;font-weight:var(--n-w-semi);color:var(--n-navy)}
-.n-cu-step p{font-size:13px;line-height:1.5;color:var(--n-ink-2);margin:0}
-.n-cu-step.is-on{opacity:1;background:var(--n-navy)}
+.n-cu-step{background:var(--n-card);border-radius:16px;padding:16px 18px;display:grid;gap:4px;transition:background var(--n-t3) var(--n-e)}
+.n-cu-step b{font-size:15px;font-weight:var(--n-w-semi);color:#3F4658}
+.n-cu-step p{font-size:13px;line-height:1.5;color:#555B6B;margin:0}
+.n-cu-step .n-lab{color:#62677A}
+.n-cu-step.is-on{background:var(--n-navy)}
+/* el color del texto se desfasa respecto al fondo (transition-delay) para no
+   cruzar un punto de bajo contraste a mitad de la transición del fondo */
+.n-cu-step b,.n-cu-step p,.n-cu-step .n-lab{transition:color 120ms var(--n-e) 100ms}
 .n-cu-step.is-on b,.n-cu-step.is-on p,.n-cu-step.is-on .n-lab{color:var(--n-cream)}
 .n-cu-step.is-on .n-lab{color:var(--n-sage)}
 
@@ -55,7 +63,7 @@
 
 /* ---------- sí / no ---------- */
 .n-cu-yesno{display:grid;gap:var(--n-gap)}
-@media (min-width:640px){.n-cu-yesno{grid-template-columns:1fr 1fr}}
+@media (min-width:640px){.n-cu-yesno{grid-template-columns:1fr 1fr;align-items:start}}
 .n-cu-yesno .n-c{padding:var(--n-s5) var(--n-s4)}
 .n-cu-yesno h3{margin:0 0 10px;font-size:16px;font-weight:var(--n-w-semi)}
 .n-cu-yesno .n-list{margin:0}
@@ -63,10 +71,14 @@
 
 /* ---------- semana tipo ---------- */
 .n-cu-week{padding:var(--n-s5) var(--n-s4)}
-.n-cu-week__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:var(--n-s4)}
+.n-cu-week__grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:var(--n-s4)}
+/* columnas de 7 son demasiado estrechas por debajo de 400px: pasa a 4+3 en dos
+   filas para que las etiquetas quepan en una línea sin partirse a mitad de palabra */
+@media (max-width:399px){.n-cu-week__grid{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:8px}}
 .n-cu-day{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 2px;border-radius:14px;background:var(--n-bg);min-height:88px;justify-content:flex-start}
 .n-cu-day__d{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--n-muted);font-weight:var(--n-w-med)}
-.n-cu-day__pill{width:100%;border-radius:8px;padding:4px 2px;text-align:center;font-size:9px;line-height:1.25;font-weight:var(--n-w-med);color:var(--n-navy)}
+.n-cu-day{min-width:0}
+.n-cu-day__pill{width:100%;min-width:0;border-radius:8px;padding:4px 2px;text-align:center;font-size:9px;line-height:1.25;font-weight:var(--n-w-med);color:var(--n-navy);overflow-wrap:break-word}
 .n-cu-day__pill.is-full{background:var(--n-navy);color:var(--n-cream)}
 .n-cu-day__pill.is-patch{background:var(--n-sage-28);color:var(--n-navy)}
 .n-cu-day__pill.is-rest{background:transparent;color:var(--n-muted)}
@@ -74,12 +86,20 @@
 .n-cu-week__legend{display:grid;gap:8px;margin-top:var(--n-s4);font-size:12px;color:var(--n-ink-2)}
 .n-cu-week__legend div{display:flex;align-items:center;gap:8px}
 .n-cu-week__legend i{width:12px;height:12px;border-radius:4px;flex:none}
-.n-cu-week__legend i.f{background:var(--n-navy)}.n-cu-week__legend i.p{background:var(--n-sage-28)}.n-cu-week__legend i.r{background:var(--n-line-2)}.n-cu-week__legend i.s{background:var(--n-sage-ink)}
+.n-cu-week__legend i.f{background:var(--n-navy)}.n-cu-week__legend i.p{background:var(--n-sage-28)}.n-cu-week__legend i.s{background:var(--n-sage-ink)}
+/* "r" (descanso) usaba --n-line-2, casi indistinguible a simple vista de
+   --n-sage-28 ("p", parche solo): ambos son un beige/verde claro de
+   luminosidad muy parecida. Un swatch hueco y punteado, en vez de un color
+   más, se lee sin ambigüedad como "aquí no se aplica nada". */
+.n-cu-week__legend i.r{background:transparent;border:1.5px dashed var(--n-muted)}
 
 /* ---------- productos por gesto ---------- */
 .n-cu-prod{padding:0 var(--n-s4) var(--n-s3)}
 .n-cu-prod__body{display:grid;gap:var(--n-s5)}
 @media (min-width:640px){.n-cu-prod__body{grid-template-columns:1fr 1fr}}
+/* grupos de un solo producto (exfoliante, peel-off, pack mascarillas): que
+   ocupe todo el ancho en vez de dejar la mitad de la tarjeta vacía */
+@media (min-width:640px){.n-cu-prod__body--single{grid-template-columns:1fr}}
 .n-cu-prod__buy{background:var(--n-bg);border-radius:16px;padding:var(--n-s4)}
 .n-cu-prod__buy .n-cut{width:88px;aspect-ratio:1;margin:0 auto 10px}
 .n-cu-prod__buy img:not(.n-cut img){width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;margin-bottom:10px}
@@ -87,9 +107,21 @@
 .n-cu-prod__ph b{display:block;color:var(--n-navy);font-weight:var(--n-w-semi);font-size:14px}
 .n-v5 .n-cu-prod .n-spec{margin:var(--n-s4) 0}
 
+/* ---------- #cu-acc sin JS ---------- */
+/* .n-acc__c (styles.css) colapsa a grid-template-rows:0fr y solo se abre vía
+   la clase .is-open que añade app.js al hacer clic. El contenido de #cu-acc
+   ahora está prerenderizado (ver como-usar.html), así que un crawler o un
+   lector que no ejecute JS ya lo recibe en el HTML; esta regla es un extra
+   para que, en un navegador real sin JS, el grupo abierto por defecto
+   ([open] nativo) también se vea expandido en vez de con altura 0. */
+@media (scripting:none){#cu-acc details[open] .n-acc__c{grid-template-rows:1fr}}
+
 /* ---------- reduced motion / fallback ---------- */
 @media (prefers-reduced-motion:reduce){.n-cu-scene__track{height:auto}.n-cu-scene__sticky{position:relative;top:0}}
 .n-cu-scene.is-fallback .n-cu-scene__track{height:auto}
 .n-cu-scene.is-fallback .n-cu-scene__sticky{position:relative;top:0}
 .n-cu-scene.is-fallback .n-cu-scene__canvas{display:none}
 .n-cu-scene.is-fallback .n-cu-scene__play{display:none}
+/* miniaturas de producto en «Cada producto, su gesto»: foto recortada, no encogida */
+.n-cu-prod__ph .n-cut{padding:0;overflow:hidden;background:var(--n-card)}
+.n-cu-prod__ph .n-cut img{object-fit:cover;width:100%;height:100%;border-radius:10px;transform:scale(1.35);transform-origin:50% 55%}
