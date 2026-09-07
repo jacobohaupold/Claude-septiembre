@@ -1,13 +1,50 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sobre NOCTA</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
-<body><div id="site-header"></div>
-<article class="article">
-<div class="kicker">Sobre nosotros</div><h1>Nacimos de una nariz que no había forma de limpiar</h1>
-<img src="/assets/img/unboxing.jpg" alt="">
-<p>NOCTA empezó en 2026 en España con una obsesión muy concreta: los puntitos de la nariz que vuelven cada semana hagas lo que hagas. Probamos tiras, scrubs, aspiradores y láser. Lo único que funcionó fue un parche coreano de hidrocoloide que un amigo trajo de Seúl.</p>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sobre NOCTA</title>
+<meta name="description" content="Por qué existe NOCTA: parches de hidrocoloide coreano fabricados igual que los de las grandes marcas, con envío desde España y garantía de 60 días.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F3">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="n-wrap n-wrap--text" id="main">
+<article class="n-read">
+
+<span class="n-lab">Sobre nosotros</span>
+<h1 class="n-d2" style="margin:10px 0 14px">Nacimos de una nariz que no había forma de limpiar</h1>
+<p class="n-lead">NOCTA empezó en 2026 en España con una obsesión muy concreta: los puntitos de la nariz que vuelven cada semana hagas lo que hagas. Probamos tiras, scrubs, aspiradores y láser. Lo único que funcionó fue un parche coreano de hidrocoloide que un amigo trajo de Seúl.</p>
+<p class="n-sm n-muted">Por el equipo NOCTA</p>
+
+<img src="/assets/img/unboxing.webp" width="1128" height="1400" alt="Unboxing de los parches de nariz NOCTA" loading="lazy" decoding="async">
+
 <p>Quisimos traerlo aquí bien hecho: con la forma exacta de la nariz, fabricado en Corea por el mismo tipo de fábrica que abastece a las grandes marcas, y con tres cosas que echábamos de menos: <b>envío en 24-48 h desde España, garantía real de 60 días y alguien al otro lado del email que habla tu idioma</b>.</p>
 <p>Somos un equipo pequeño. Cada caja sale de nuestro almacén en España con una guía de uso porque sabemos que el 90 % de los fallos vienen de ponerlo mal, no del producto.</p>
+
 <h2>Lo que te prometemos</h2>
-<ul><li>Fórmulas coreanas sencillas, con la concentración que funciona.</li><li>Sin perfume, sin alcohol, vegano y sin testar en animales.</li><li>Productos cosméticos notificados en el portal europeo CPNP con Persona Responsable en la UE.</li><li>Si no te funciona, te devolvemos el dinero. Sin preguntas raras.</li></ul>
-<div class="cta"><a class="btn" href="/#productos">Ver los productos</a></div>
-</article><div id="site-footer"></div></body></html>
+<ul class="n-list">
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Fórmulas coreanas sencillas, con la concentración que funciona.</span></li>
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sin perfume, sin alcohol, vegano y sin testar en animales.</span></li>
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Productos cosméticos notificados en el portal europeo CPNP con Persona Responsable en la UE.</span></li>
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Si no te funciona, te devolvemos el dinero. Sin preguntas raras.</span></li>
+</ul>
+
+<div id="close-cta" style="margin-top:var(--n-s6)"></div>
+<p style="text-align:center;margin-top:var(--n-s4)"><a class="n-link" href="/#productos">Ver todos los productos</a></p>
+</article>
+</main>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const p=nBySlug('parches-nariz');
+const cta=(p,src)=>`<div class="n-cta"><div class="n-cut"><img src="${nImg(p)}" width="96" height="96" alt="" loading="lazy"></div><div class="n-cta__t"><span class="n-lab">${nCat(p)}</span><b>${p.name}</b><p class="n-price" style="margin-top:4px"><b class="n-num">${nEur(p.price)}</b>${p.compare?`<s>${nEur(p.compare)}</s>`:''}</p></div>${nBuyBlock(p.slug,{src})}</div>`;
+document.getElementById('close-cta').innerHTML=cta(p,'sobre');
+});
+</script>
+</body>
+</html>

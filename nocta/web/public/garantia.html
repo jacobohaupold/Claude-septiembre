@@ -1,17 +1,92 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Garantía 60 días y garantía de adhesión · NOCTA</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
-<body><div id="site-header"></div>
-<article class="article">
-<div class="kicker">Garantías NOCTA</div><h1>Si no ves la diferencia, te devolvemos el dinero. Si no se pega, te lo cambiamos.</h1>
-<h2>1. Garantía de resultados · 60 días</h2>
-<ul><li>Usa el producto de forma regular durante al menos 30 días (parches: mínimo 3 usos; skincare: uso diario).</li><li>Si entre el día 30 y el 60 desde la entrega no notas mejoría, rellena el formulario de abajo con una foto de antes y otra de después.</li><li>Te reembolsamos el importe del producto en 3-5 días laborables. No hace falta devolver nada.</li></ul>
-<h2>2. Garantía de adhesión (solo NOCTA)</h2>
-<p>Si un parche se despega antes de 6 horas habiéndolo aplicado sobre piel limpia y seca, te enviamos una caja nueva sin coste. Mándanos un mensaje con tu número de pedido.</p>
-<h2>3. Devolución sin abrir · 14 días</h2>
-<p>Productos precintados: 14 días desde la entrega. Gastos de devolución a cargo del cliente salvo error nuestro.</p>
-<h2>Solicitar la garantía</h2>
-<form class="form" id="gf"><label>Número de pedido</label><input name="order" required><label>Email de compra</label><input type="email" name="email" required><label>¿Qué ha pasado?</label><select name="type"><option value="resultados">No veo resultados (60 días)</option><option value="adhesion">El parche no se adhiere</option><option value="devolucion">Devolución sin abrir</option></select><label>Cuéntanos cómo lo has usado</label><input name="msg" required placeholder="Cuántas veces, sobre qué piel, con o sin exfoliante"><label>Fotos antes/después (opcional)</label><input type="file" name="photos" multiple accept="image/*"><button class="btn wide" style="margin-top:12px">Enviar solicitud</button></form>
-<p class="byline">Respondemos en menos de 24 h laborables desde hola@nocta.es.</p>
-</article><div id="site-footer"></div>
-<script>document.addEventListener('DOMContentLoaded',()=>{document.getElementById('gf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:f.get('email'),src:'garantia:'+f.get('type')+':'+f.get('order')})}).catch(()=>{});nTrack('guarantee_request',{type:f.get('type')});e.target.innerHTML='<h3>Recibido ✅</h3><p>Te escribimos en menos de 24 h.</p>';};});</script>
-</body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Garantía 60 días y garantía de adhesión · NOCTA</title>
+<meta name="description" content="Las tres garantías NOCTA: resultados en 60 días, adhesión del parche y desistimiento de 14 días. Cómo funcionan y cómo solicitarlas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F3">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="n-wrap n-wrap--text" id="main">
+
+<span class="n-lab">Garantías NOCTA</span>
+<h1 class="n-d2" style="margin:10px 0 14px">Garantía de 60 días</h1>
+<p class="n-lead">Si no ves la diferencia, te devolvemos el dinero. Si no se pega, te lo cambiamos.</p>
+
+<ol class="n-steps" style="margin-top:var(--n-s6)">
+<li><span class="n-lab n-lab--navy">Garantía 01</span><p><b>Garantía de resultados · 60 días</b>Usa el producto de forma regular durante al menos 30 días (parches: mínimo 3 usos; skincare: uso diario). Si entre el día 30 y el 60 desde la entrega no notas mejoría, rellena el formulario de abajo con una foto de antes y otra de después. Te reembolsamos el importe del producto en 3-5 días laborables. No hace falta devolver nada.</p></li>
+<li><span class="n-lab n-lab--navy">Garantía 02</span><p><b>Garantía de adhesión (solo NOCTA)</b>Si un parche se despega antes de 6 horas habiéndolo aplicado sobre piel limpia y seca, te enviamos una caja nueva sin coste. Mándanos un mensaje con tu número de pedido.</p></li>
+<li><span class="n-lab n-lab--navy">Garantía 03</span><p><b>Devolución sin abrir · 14 días</b>Productos precintados: 14 días desde la entrega. Gastos de devolución a cargo del cliente salvo error nuestro.</p></li>
+</ol>
+
+<div class="n-sech" style="margin-top:var(--n-s7)"><span class="n-lab">Cobertura</span><h2>Qué cubre y qué no cubre</h2></div>
+<ul class="n-list">
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Reembolso del importe si usas el producto de forma regular (mínimo 3 usos en parches, uso diario en skincare) y no notas mejoría entre el día 30 y el 60 desde la entrega.</span></li>
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Caja nueva sin coste si un parche se despega antes de 6 horas habiéndolo aplicado sobre piel limpia y seca.</span></li>
+<li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Devolución de productos precintados y sin abrir hasta 14 días desde la entrega.</span></li>
+<li class="no"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Uso irregular o por debajo del mínimo indicado: menos de 3 usos en parches o uso no diario en skincare.</span></li>
+<li class="no"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Parches aplicados sobre piel con crema, sérum o aceite, o que se despegan después de las 6 horas.</span></li>
+<li class="no"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Productos abiertos o con el precinto roto fuera de la garantía de resultados de 60 días.</span></li>
+</ul>
+
+<dl class="n-spec">
+<div><dt class="n-lab">Plazo</dt><dd>30-60 días (resultados) · antes de 6 h (adhesión) · 14 días (desistimiento)</dd></div>
+<div><dt class="n-lab">Qué necesitas</dt><dd>Número de pedido, email de compra y una foto de antes y otra de después</dd></div>
+<div><dt class="n-lab">Respuesta</dt><dd>Menos de 24 h laborables</dd></div>
+</dl>
+
+<div class="n-sech" style="margin-top:var(--n-s6)"><span class="n-lab">Formulario</span><h2>Solicitar la garantía</h2></div>
+<form class="n-form" id="gf">
+<label for="gf-order">Número de pedido</label>
+<input id="gf-order" name="order" required>
+<label for="gf-email">Email de compra</label>
+<input id="gf-email" name="email" type="email" autocomplete="email" required>
+<label for="gf-type">¿Qué ha pasado?</label>
+<select id="gf-type" name="type">
+<option value="resultados">No veo resultados (60 días)</option>
+<option value="adhesion">El parche no se adhiere</option>
+<option value="devolucion">Devolución sin abrir</option>
+</select>
+<label for="gf-msg">Cuéntanos cómo lo has usado</label>
+<input id="gf-msg" name="msg" required placeholder="Cuántas veces, sobre qué piel, con o sin exfoliante">
+<label for="gf-photos">Fotos antes/después (opcional)</label>
+<label class="n-btn n-btn--ghost n-btn--sm" for="gf-photos" style="cursor:pointer;margin-top:6px">Subir fotos</label>
+<input class="n-vh" type="file" id="gf-photos" name="photos" multiple accept="image/*">
+<button class="n-btn n-btn--wide" style="margin-top:var(--n-s4)">Enviar solicitud</button>
+</form>
+<p class="n-sm n-muted" style="margin-top:var(--n-s3)">Respondemos en menos de 24 h laborables desde hola@nocta.es.</p>
+
+<div class="n-sech" style="margin-top:var(--n-s7)" id="preguntas"><span class="n-lab">Dudas</span><h2>Preguntas frecuentes</h2></div>
+<div class="n-acc">
+<details><summary>¿Es lo mismo que una tira de poros?</summary><div class="n-acc__c"><div class="n-acc__in"><p>No. Las tiras arrancan la capa superficial y estiran el poro. El hidrocoloide absorbe la grasa desde dentro del poro sin dañar la piel.</p></div></div></details>
+<details><summary>¿Se pone blanco siempre?</summary><div class="n-acc__c"><div class="n-acc__in"><p>El blanqueo depende de la cantidad de grasa que tenga tu nariz esa noche. Aunque no se ponga blanco, ha absorbido impurezas.</p></div></div></details>
+<details><summary>¿Sirve para puntos negros?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Los puntos oscuros de la nariz casi siempre son filamentos sebáceos (grasa oxidada dentro del poro). El parche los vacía y, con uso regular, los poros se ven más pequeños.</p></div></div></details>
+<details><summary>¿Cuántas noches hasta ver resultados?</summary><div class="n-acc__c"><div class="n-acc__in"><p>La mayoría nota la nariz más lisa la primera mañana. Poros visiblemente más pequeños a las 2-3 semanas usándolo 2 veces por semana.</p></div></div></details>
+<details><summary>¿Y si se me despega?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Aplícalo sobre piel totalmente seca y presiona 20 segundos. Si aun así se despega, te cambiamos la caja: garantía de adhesión.</p></div></div></details>
+</div>
+
+<div id="close-cta" style="margin-top:var(--n-s7)"></div>
+</main>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const p=nBySlug('parches-nariz');
+const cta=(p,src)=>`<div class="n-cta"><div class="n-cut"><img src="${nImg(p)}" width="96" height="96" alt="" loading="lazy"></div><div class="n-cta__t"><span class="n-lab">${nCat(p)}</span><b>${p.name}</b><p class="n-price" style="margin-top:4px"><b class="n-num">${nEur(p.price)}</b>${p.compare?`<s>${nEur(p.compare)}</s>`:''}</p></div>${nBuyBlock(p.slug,{src})}</div>`;
+document.getElementById('close-cta').innerHTML=cta(p,'garantia');
+document.getElementById('gf').onsubmit=e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:f.get('email'),src:'garantia:'+f.get('type')+':'+f.get('order')})}).catch(()=>{});
+  nTrack('guarantee_request',{type:f.get('type')});
+  e.target.innerHTML=`<div class="n-ok-box" role="status">${nIco('check',18)}<div><b>Recibido</b><br>Te escribimos en menos de 24 h.</div></div>`;
+};
+});
+</script>
+</body>
+</html>

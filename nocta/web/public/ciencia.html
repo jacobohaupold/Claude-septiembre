@@ -1,16 +1,59 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nuestra ciencia: hidrocoloide y filamentos sebáceos · NOCTA</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
-<body><div id="site-header"></div>
-<article class="article">
-<div class="kicker">Nuestra ciencia</div><h1>Por qué un apósito de hospital limpia mejor los poros que cualquier tira</h1>
-<p>El hidrocoloide se usa desde los años 80 en heridas: crea un ambiente húmedo y sellado que absorbe exudado sin dañar el tejido nuevo. Aplicado a la nariz hace exactamente lo mismo con la grasa del poro.</p>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nuestra ciencia: hidrocoloide y filamentos sebáceos · NOCTA</title>
+<meta name="description" content="La ciencia detrás de los parches NOCTA: hidrocoloide de grado hospitalario, filamentos sebáceos y los resultados de nuestro test de uso con 105 participantes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F3">
+<script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="n-wrap n-wrap--text" id="main">
+<article class="n-read">
+
+<span class="n-lab">Nuestra ciencia</span>
+<h1 class="n-d2" style="margin:10px 0 14px">Por qué un apósito de hospital limpia mejor los poros que cualquier tira</h1>
+<p class="n-lead">El hidrocoloide se usa desde los años 80 en heridas: crea un ambiente húmedo y sellado que absorbe exudado sin dañar el tejido nuevo. Aplicado a la nariz hace exactamente lo mismo con la grasa del poro.</p>
+<p class="n-sm n-muted">Por el equipo NOCTA</p>
+
 <h2>Qué lleva un parche NOCTA</h2>
 <p><b>Cuatro ingredientes</b>: Polyisobutene (adhesivo suave), Cellulose Gum y Pectin (los que absorben, hasta 5 veces su peso) y un copolímero que da flexibilidad. Sin perfume, sin alcohol, sin activos irritantes. Es el mismo material que usan las marcas líderes de parches en Estados Unidos y Corea; nuestro fabricante coreano trabaja con certificación ISO 22716 (buenas prácticas cosméticas) e ISO 13485 (productos sanitarios).</p>
+
+<dl class="n-spec">
+<div><dt class="n-lab">Polyisobutene</dt><dd>Adhesivo suave</dd></div>
+<div><dt class="n-lab">Cellulose Gum</dt><dd>Absorbe hasta 5 veces su peso</dd></div>
+<div><dt class="n-lab">Pectin</dt><dd>Absorbe hasta 5 veces su peso</dd></div>
+<div><dt class="n-lab">Copolímero</dt><dd>Da flexibilidad al parche</dd></div>
+</dl>
+
 <h2>Qué son los filamentos sebáceos</h2>
 <p>Estructuras naturales del folículo formadas por sebo, células y bacterias que canalizan la grasa hacia la superficie. Se oxidan al contacto con el aire y se ven oscuros. Se rellenan en 24-48 h. No se "curan": se gestionan.</p>
+
 <h2>Cómo medimos los resultados</h2>
 <p>Test de uso con 105 participantes (18-52 años, piel mixta/grasa), 2 aplicaciones nocturnas por semana durante 3 semanas, con autoevaluación y fotografía estandarizada: 93 % percibió los poros más limpios tras dos usos, 89 % menos puntitos a las 3 semanas, 0 reacciones adversas. Es un estudio de percepción del consumidor, no un ensayo clínico.</p>
+
 <h2>Referencias</h2>
-<ul><li>Nguyen et al. Hydrocolloid dressings in dermatology. Journal of Clinical Medicine.</li><li>Kosmoski et al. Hydrocolloid technology for acne. JAAD.</li><li>Draelos ZD. Sebaceous filaments vs. comedones. Journal of Cosmetic Dermatology.</li></ul>
-<div class="cta"><a class="btn" href="/producto.html?p=parches-nariz">Probar los parches · garantía 60 días</a></div>
-</article><div id="site-footer"></div></body></html>
+<ol class="n-list n-sm">
+<li><span class="n-lab n-lab--navy" style="min-width:22px">01</span><span class="n-muted">Nguyen et al. Hydrocolloid dressings in dermatology. Journal of Clinical Medicine.</span></li>
+<li><span class="n-lab n-lab--navy" style="min-width:22px">02</span><span class="n-muted">Kosmoski et al. Hydrocolloid technology for acne. JAAD.</span></li>
+<li><span class="n-lab n-lab--navy" style="min-width:22px">03</span><span class="n-muted">Draelos ZD. Sebaceous filaments vs. comedones. Journal of Cosmetic Dermatology.</span></li>
+</ol>
+
+<div id="close-cta" style="margin-top:var(--n-s6)"></div>
+</article>
+</main>
+<div id="site-footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const p=nBySlug('parches-nariz');
+const cta=(p,src)=>`<div class="n-cta"><div class="n-cut"><img src="${nImg(p)}" width="96" height="96" alt="" loading="lazy"></div><div class="n-cta__t"><span class="n-lab">${nCat(p)}</span><b>${p.name}</b><p class="n-price" style="margin-top:4px"><b class="n-num">${nEur(p.price)}</b>${p.compare?`<s>${nEur(p.compare)}</s>`:''}</p></div>${nBuyBlock(p.slug,{src})}</div>`;
+document.getElementById('close-cta').innerHTML=cta(p,'ciencia');
+});
+</script>
+</body>
+</html>

@@ -1,41 +1,40 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Catálogo completo · NOCTA</title>
 <meta name="description" content="Los 13 productos NOCTA: parches de hidrocoloide coreano y skincare para poros. Filtra por parches, skincare o packs y añade al carrito.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<style>
-.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 26px}
-.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .15s,border-color .15s}
-.chip:hover{border-color:var(--navy)}
-.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
-.grid.c4>a[hidden]{display:none}
-</style>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F3">
 <script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script>
 </head>
 <body>
 <div id="site-header"></div>
-<main class="wrap">
-  <section style="padding:44px 0 0">
-    <div class="kicker" style="color:var(--warn);font-weight:600;letter-spacing:.8px;font-size:13px;text-transform:uppercase">Catálogo</div>
-    <h1 style="font-size:clamp(30px,4.5vw,44px);line-height:1.1;color:var(--navy);letter-spacing:-.8px;margin:8px 0 10px">Todo NOCTA en una página</h1>
-    <p class="sub" style="max-width:640px">Los 13 productos de la gama: parches de hidrocoloide coreano para cada zona de la cara, skincare para poros y los packs con ahorro. Mismo hidrocoloide de grado hospitalario en todos los parches, envío 24-48 h desde España y garantía 60 días.</p>
+<main class="n-wrap" id="main">
+  <section style="padding-top:32px">
+    <span class="n-lab">Catálogo</span>
+    <h1 class="n-d2" style="margin:8px 0 10px">Todo NOCTA en una página</h1>
+    <p class="n-lead">Los 13 productos de la gama: parches de hidrocoloide coreano para cada zona de la cara, skincare para poros y los packs con ahorro. Mismo hidrocoloide de grado hospitalario en todos los parches, envío 24-48 h desde España y garantía 60 días.</p>
   </section>
 
   <section style="padding-top:0">
-    <div class="chips" id="chips">
-      <button class="chip on" data-f="todos">Todos</button>
-      <button class="chip" data-f="parches">Parches</button>
-      <button class="chip" data-f="skincare">Skincare</button>
-      <button class="chip" data-f="packs">Packs</button>
+    <div class="n-chips" id="chips">
+      <button class="n-chip is-on" data-f="todos" aria-pressed="true">Todos</button>
+      <button class="n-chip" data-f="parches" aria-pressed="false">Parches</button>
+      <button class="n-chip" data-f="skincare" aria-pressed="false">Skincare</button>
+      <button class="n-chip" data-f="packs" aria-pressed="false">Packs</button>
     </div>
-    <div class="grid c4" id="grid-catalogo"></div>
+    <p class="n-lab" aria-live="polite" id="count">13 productos</p>
+    <div class="n-grid n-stagger" id="grid-catalogo"></div>
   </section>
 
-  <section style="text-align:center;padding:20px 0 60px">
-    <p class="sub">¿No sabes por dónde empezar? <a href="/quiz.html">Haz el test de piel</a> o mira <a href="/no-son-puntos-negros.html">por qué vuelven los puntos negros</a>.</p>
+  <section style="text-align:center;padding-bottom:32px">
+    <p class="n-lead" style="margin:0 auto 16px">¿No sabes por dónde empezar?</p>
+    <a class="n-btn n-btn--ghost" href="/quiz.html">Hacer el test de piel</a>
+    <p style="margin-top:14px"><a class="n-link" href="/no-son-puntos-negros.html">O mira por qué vuelven los puntos negros</a></p>
   </section>
 </main>
 <div id="site-footer"></div>
@@ -44,15 +43,20 @@ document.addEventListener('DOMContentLoaded',()=>{
   const P=window.NOCTA_PRODUCTS;
   const grid=document.getElementById('grid-catalogo');
   const cat=p=>p.bundle?'packs':(p.tags.includes('skincare')?'skincare':'parches');
-  grid.innerHTML=P.map(p=>nCard(p)).join('');
+  grid.innerHTML=P.map(p=>nCard(p,{row:true})).join('');
   const cards=[...grid.children];
+  const count=document.getElementById('count');
   document.getElementById('chips').addEventListener('click',e=>{
-    const b=e.target.closest('.chip'); if(!b) return;
-    document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); b.classList.add('on');
-    const f=b.dataset.f;
-    cards.forEach((c,i)=>{ const p=P[i]; c.hidden = f!=='todos' && cat(p)!==f; });
+    const b=e.target.closest('.n-chip'); if(!b) return;
+    document.querySelectorAll('.n-chip').forEach(c=>{c.classList.remove('is-on');c.setAttribute('aria-pressed','false');});
+    b.classList.add('is-on');b.setAttribute('aria-pressed','true');
+    const f=b.dataset.f;let n=0;
+    cards.forEach((c,i)=>{const p=P[i];const show=f==='todos'||cat(p)===f;c.hidden=!show;if(show)n++;});
+    count.textContent=n+' producto'+(n===1?'':'s');
     nTrack('filter_catalogo',{f});
+    nReveal();
   });
+  nReveal();
 });
 </script>
 </body>
