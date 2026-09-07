@@ -1,0 +1,10 @@
+{"w":720,"h":1280,"fps":24,
+ "planos":[
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S1_gancho.mp4","seg":4,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_1.wav","texto":"Esos puntitos NO son puntos negros","tempo":1.0},
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S2_liner_colocar.mp4","seg":5,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_2.wav","texto":"Son filamentos sebáceos: esto los saca en una noche","tempo":1.15},
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S3_presion_V.mp4","seg":5,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_3.wav","texto":"Antes de dormir, bien presionado a los lados","tempo":1.0},
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S4_despegar_v2.mp4","seg":5,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_4.wav","texto":"Por la mañana lo despegas, sin tirones","tempo":1.0},
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S5_revelar.mp4","seg":5,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_5.wav","texto":"Y mira todo lo que ha sacado","tempo":1.0},
+  {"clip":"/home/user/Claude-septiembre/nocta/brand/video/maquina/clip_S6_lisa_caja.mp4","seg":5,"vo":"/home/user/Claude-septiembre/nocta/brand/audio/demo_vo_6.wav","texto":"Nariz lisa. Garantía de 60 días","tempo":1.0}
+ ],
+ "endcard":{"packshot":"/home/user/Claude-septiembre/nocta/brand/packshots/nariz-hero.png","line1":"nocta","line2":"Garantía de 60 días · envío gratis desde 30 €","line3":"nocta.es","dur":2.5}}

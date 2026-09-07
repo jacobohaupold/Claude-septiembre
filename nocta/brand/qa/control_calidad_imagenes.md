@@ -55,3 +55,13 @@ Solución (diseño primero): lámina técnica `packaging/patch.html` → `packag
 | Saldo restante (balance real al cierre) | | 661,7 |
 
 Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando la referencia de imagen ya estaba aprobada; audio y montaje siempre en local (0 créditos).
+
+## Máquina de contenido: clips con referencia de movimiento (Seedance 2.5 omni_reference + `video_references` = clip real de gesto)
+
+| Clip | Referencias | Coste | Veredicto | Observaciones |
+|---|---|---|---|---|
+| `video/maquina/clip_G10_despegar_v1.mp4` (5 s) | movimiento: `maquina/gestos/G10_…822761193551016__13-16.5.mp4` · imagen: patrón parche puesto (creadora 2) | 32,5 | ✅ Aprobado con nota | Copia el gesto real (pinza la punta, tira hacia cámara, muestra la cara interna, gesto de "asco-satisfacción" al final). El parche cubre puente-punta-alas y se alarga al despegar. Nota para v2: la zona blanca de la punta parece una gota de crema en vez de un escarchado fino; añadir "thin frosted film, not a blob of cream" |
+| `video/maquina/clip_S1_gancho.mp4` (4 s) | imagen: creadora 2 | 26 | ✅ | Pellizca la punta, cara de preocupación, gira para enseñar los poros; sin parche (correcto) |
+| `video/maquina/clip_S3_presion_V.mp4` (5 s) | imagen: patrón parche puesto (sin vídeo: la referencia G04 de 602011846179690 fue bloqueada por moderación) | 32,5 | ✅ | Los dos índices recorren los laterales presionando las alas; el parche cubre puente-punta-alas, translúcido, se ven los poros |
+| `video/maquina/clip_S4_despegar_v2.mp4` (5 s) | movimiento: G10 (822761193551016) · imagen: patrón | 32,5 | ✅ **Mejor clip de la sesión** | Escarchado fino y creíble en punta y pliegues; pinza la punta y tira hacia cámara formando una tira larga translúcida como en el original; gesto de "asco-satisfacción" |
+| `video/maquina/clip_S6_lisa_caja.mp4` (5 s) | imagen: creadora 2 + packshot caja | 32,5 | ✅ | Se frota la nariz lisa con la yema, sonríe y levanta la caja NOCTA (wordmark, luna, texto) nítida |
