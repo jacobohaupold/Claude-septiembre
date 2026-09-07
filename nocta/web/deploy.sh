@@ -18,5 +18,6 @@ fi
 [ -n "${ADMIN_TOKEN:-}" ] && $NTL env:set ADMIN_TOKEN "$ADMIN_TOKEN" >/dev/null
 [ -n "${STRIPE_SECRET_KEY:-}" ] && $NTL env:set STRIPE_SECRET_KEY "$STRIPE_SECRET_KEY" >/dev/null
 [ -n "${STRIPE_WEBHOOK_SECRET:-}" ] && $NTL env:set STRIPE_WEBHOOK_SECRET "$STRIPE_WEBHOOK_SECRET" >/dev/null
+python3 stamp.py >/dev/null 2>&1 || true
 $NTL deploy --prod --dir public --functions netlify/functions --message "NOCTA deploy $(date -u +%F_%T)"
 echo "Panel: https://$SITE.netlify.app/admin/  (acceso libre salvo que ADMIN_TOKEN esté definido en Netlify)"
