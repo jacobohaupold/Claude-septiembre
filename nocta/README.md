@@ -41,6 +41,12 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 - La ficha de los parches de nariz incorpora los tres vídeos y el resultado por la mañana. Recortes compuestos nuevos para Dúo Poros y Kit Zona T.
 - Activos: `web/public/assets/video/hero.mp4`, `paso-1..3.mp4`, `ugc-1.mp4`, `ugc-2.mp4`; `img/hero-poster.webp`, `paso-*.webp`, `ugc-*.webp`, `resultado-manana.webp`, `duo-poros-cut.webp`, `kit-t-zone-cut.webp`.
 
+### v4 «clean» (7 sep 2026, tarde): fotografía GPT Image 2 en 4K y diseño rhode / Skims / Vue
+- **Fotografía de producto nueva**: 13 packshots (10 productos + 3 packs) y 12 detail shots generados con GPT Image 2 a 4K (calidad medium, 2,5 cr cada uno) usando como referencia nuestro packaging real, más «mano con caja» para hero y flat-lay de la gama. Originales 4K en `brand/fotos/4k/` (JPEG q92), versiones web en `web/public/assets/img/foto/` (1200 y 1800 px WebP). Mapa slug → fotos en `web/public/assets/js/photos.js`.
+- **Diseño**: hero a sangre con vídeo y una sola acción (Comprar + pago rápido), rejilla de producto tipo rhode (foto en tile crema, detalle al pasar el ratón, nombre, precio, Comprar + pago rápido), editorial a sangre, tres pasos en vídeo, resultado con cifras, packs, vídeos con sonido, opiniones con filetes, garantía tipográfica, FAQ. Sin marquee, sin bandas, sin numeración de secciones.
+- Ficha: galería con foto principal, detalle, vídeo, mano con caja y lifestyle; catálogo con la misma rejilla.
+- Créditos Higgsfield de la sesión de fotos: 76 (1 test en «high» a 11 cr + 26 imágenes en «medium» a 2,5 cr). Saldo 260,43.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

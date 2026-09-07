@@ -104,3 +104,18 @@ Método: los 12 `*-cut.webp` compuestos sobre fondo navy (#14213D) al 100 % en l
 Fotos lifestyle: `como-se-pone` y `lifestyle-noche` correctas y coherentes con el packaging crema. `unboxing` **retirada de la web** (cajas navy con texto en inglés «NOSE PATCHES · pore strips», incoherentes con el packaging real); sustituida por `lifestyle-noche` en `sobre.html` y en la galería del Kit Cara Completa. Pendiente: regenerar un unboxing con las cajas crema reales si se quiere recuperar esa foto.
 
 Vídeos de catálogo (10): fotogramas a 2,5 s revisados, producto y etiquetas correctos, fondo beige de estudio uniforme.
+
+
+## Sesión de fotografía GPT Image 2 (7 sep 2026)
+
+Modelo `gpt_image_2` en Higgsfield, 4K, aspecto 3:4 (flat-lay 4:3), fondo crema #F3EFE6 continuo, luz difusa superior izquierda, referencia = recorte del packaging real. Test A/B de calidad: «medium» (2,5 cr) vs «high» (11 cr) sobre el packshot de nariz; la diferencia no es apreciable a tamaño web, se produjo todo en «medium».
+
+| Imagen | Resultado | Notas |
+|---|---|---|
+| 13 packshots (10 productos + duo, kit zona T, kit cara completa) | aprobados | packaging fiel (wordmark, luna, textos, referencia lateral); composición coherente entre SKU |
+| 12 detail shots | aprobados | rejilla de parches con pinzas, cada forma levantada de su lámina, chorro del exfoliante, gota del sérum, gel, mascarilla, gotas del tónico |
+| `kit-t-zone-detalle` (tres parches en lámina) | **no usada en web** | la forma del parche de nariz no coincide con nuestro troquel (mariposa 60 × 45 mm); se sustituye por el detalle del parche de nariz |
+| `hero-mano` (mano con caja) | aprobada | galería de la ficha del parche de nariz |
+| `gama-flatlay` | aprobada con reserva | los sobres de mascarilla muestran variantes de texto («2 variantes», «4 variantes») que no existen en el packaging; usar solo a tamaño reducido |
+
+Coste: 76 créditos. Saldo tras la sesión: 260,43.
