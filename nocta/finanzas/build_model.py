@@ -78,16 +78,22 @@ A = {}  # nombre -> fila
 r = 4
 header_cells(ws, r, ["Parámetro", "Valor", "Unidad", "Nota / fuente"])
 
+def sanitize_text(text):
+    """Evita que un texto plano empiece por '=' (o +,-,@) y sea mal interpretado como fórmula."""
+    if isinstance(text, str) and text[:1] in ("=", "+", "-", "@"):
+        return "≈" + text[1:] if text[0] == "=" else "'" + text
+    return text
+
 def add(row, label, value, unit, source, fmt=None, fill=None, is_formula=False):
-    ws.cell(row=row, column=1, value=label).font = BLACK
+    ws.cell(row=row, column=1, value=sanitize_text(label)).font = BLACK
     c = ws.cell(row=row, column=2, value=value)
     c.font = BLACK if is_formula else BLUE
     if fmt:
         c.number_format = fmt
     if fill:
         c.fill = fill
-    ws.cell(row=row, column=3, value=unit).font = ITALIC_GRAY
-    ws.cell(row=row, column=4, value=source).font = ITALIC_GRAY
+    ws.cell(row=row, column=3, value=sanitize_text(unit)).font = ITALIC_GRAY
+    ws.cell(row=row, column=4, value=sanitize_text(source)).font = ITALIC_GRAY
     for col in range(1, 5):
         ws.cell(row=row, column=col).border = BORDER
     return row
@@ -557,12 +563,16 @@ write_row('aov_pond', lambda m: (f"=IFERROR((({mcol(m)}{P['pedidos_nuevos']}+{mc
           f"+{mcol(m)}{P['pedidos_sub']}*{S('aov_activo')}*(1-{S('sub_descuento')}))/{mcol(m)}{P['pedidos_totales']},{S('aov_activo')})"))
 write_row('ingresos_civa', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{mcol(m)}{P['aov_pond']}")
 write_row('ingresos_siva', lambda m: f"={mcol(m)}{P['ingresos_civa']}/(1+{S('iva')})")
-write_row('cogs', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$O${MIX_ROW}")
-write_row('pasarela', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$U${MIX_ROW}")
+# COGS y devoluciones se escalan por 'uds_pedido' (Supuestos): el AOV de 38 € refleja una
+# cesta media de ~1,6 packs/SKU por pedido, mientras que la hoja Unit Economics valora el
+# coste desembarcado de UN solo pack (media ponderada por mix). Pasarela/envío/pick&pack/
+# packaging son costes por PEDIDO (no por unidad), así que no se escalan.
+write_row('cogs', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$O${MIX_ROW}*{S('uds_pedido')}")
+write_row('pasarela', lambda m: f"={mcol(m)}{P['pedidos_totales']}*({mcol(m)}{P['aov_pond']}*{S('pago_pct')}+{S('pago_fijo')})")
 write_row('envio', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$V${MIX_ROW}")
 write_row('pickpack', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$W${MIX_ROW}")
 write_row('pack_env', lambda m: f"={mcol(m)}{P['pedidos_totales']}*{UE}!$X${MIX_ROW}")
-write_row('devoluciones', lambda m: f"=-{mcol(m)}{P['pedidos_totales']}*{UE}!$Y${MIX_ROW}")
+write_row('devoluciones', lambda m: f"=-{mcol(m)}{P['pedidos_totales']}*{UE}!$Y${MIX_ROW}*{S('uds_pedido')}")
 write_row('total_var', lambda m: f"={mcol(m)}{P['cogs']}+{mcol(m)}{P['pasarela']}+{mcol(m)}{P['envio']}+{mcol(m)}{P['pickpack']}+{mcol(m)}{P['pack_env']}+{mcol(m)}{P['devoluciones']}")
 write_row('margen_bruto', lambda m: f"={mcol(m)}{P['ingresos_siva']}-{mcol(m)}{P['cogs']}")
 write_row('margen_bruto_pct', lambda m: f"=IFERROR({mcol(m)}{P['margen_bruto']}/{mcol(m)}{P['ingresos_siva']},0)")
@@ -778,16 +788,22 @@ def brow(row, label, formula, fmt, note_txt=None):
     c = ws5.cell(row=row, column=2, value=formula)
     c.font = BLACK
     c.number_format = fmt
-    ws5.cell(row=row, column=3, value=note_txt or "").font = ITALIC_GRAY
+    ws5.cell(row=row, column=3, value=sanitize_text(note_txt or "")).font = ITALIC_GRAY
     for col in range(1, 4):
         ws5.cell(row=row, column=col).border = BORDER
     return row
 
-B['aov_medio'] = r5; brow(r5, "AOV medio ponderado (€, con IVA, mix medio)", f"={UE}!$D${MIX_ROW}", EUR); r5 += 1
-B['margen_contrib_pedido'] = r5; brow(r5, "Margen de contribución medio por pedido (€, tras logística/pasarela, antes de Ads)", f"={UE}!$Z${MIX_ROW}", EUR); r5 += 1
+B['aov_medio'] = r5; brow(r5, "AOV medio ponderado (€, con IVA, escenario activo)", f"={S('aov_activo')}", EUR,
+     "Coherente con la hoja PyG: el AOV incluye ~1,6 packs/SKU por pedido (Supuestos!uds_pedido)."); r5 += 1
+B['margen_contrib_pedido'] = r5
+brow(r5, "Margen de contribución medio por pedido (€, tras COGS/logística/pasarela, antes de Ads)",
+     (f"=B{B['aov_medio']}/(1+{S('iva')})-{UE}!$O${MIX_ROW}*{S('uds_pedido')}"
+      f"-(B{B['aov_medio']}*{S('pago_pct')}+{S('pago_fijo')})-{UE}!$V${MIX_ROW}-{UE}!$W${MIX_ROW}-{UE}!$X${MIX_ROW}"
+      f"+{UE}!$Y${MIX_ROW}*{S('uds_pedido')}"),
+     EUR, "Misma fórmula por pedido que usa la hoja PyG (COGS y devoluciones escalados por uds/pedido)."); r5 += 1
 B['costes_fijos_mes'] = r5
 brow(r5, "Costes fijos mensuales totales (€)",
-     f"={S('shopify_basic')}+{S('apps_mes')}+{S('freelance_mes')}+{S('legal_mensual')}+{S('contabilidad_mensual')}", EUR0); r5 += 1
+     f"={S('shopify_basic')}+{S('apps_mes')}+{S('freelance_mes')}+{S('legal_mensual')}+{S('contabilidad_mensual')}+{S('muestras_mensual')}", EUR0); r5 += 1
 B['cpa_max_rentable'] = r5
 brow(r5, "CPA máximo rentable en el primer pedido (€)", f"=B{B['margen_contrib_pedido']}", EUR,
      "Si el CPA supera el margen de contribución por pedido, cada venta nueva pierde dinero incluso antes de costes fijos."); r5 += 1
@@ -823,7 +839,8 @@ for j, aov_v in enumerate(aov_vals):
     c.alignment = Alignment(horizontal="center")
     c.border = BORDER
 r5 += 1
-var_no_pasarela = f"({UE}!$O${MIX_ROW}+{UE}!$V${MIX_ROW}+{UE}!$W${MIX_ROW}+{UE}!$X${MIX_ROW}-{UE}!$Y${MIX_ROW})"
+var_no_pasarela = (f"({UE}!$O${MIX_ROW}*{S('uds_pedido')}+{UE}!$V${MIX_ROW}+{UE}!$W${MIX_ROW}"
+                    f"+{UE}!$X${MIX_ROW}-{UE}!$Y${MIX_ROW}*{S('uds_pedido')})")
 for cpa_v in cpa_vals:
     ws5.cell(row=r5, column=1, value=cpa_v).font = BOLD
     ws5.cell(row=r5, column=1).number_format = EUR
@@ -859,7 +876,7 @@ def erow(row, label, pes, base, opt, note_txt, fmt, formulas=False):
         c = ws6.cell(row=row, column=col, value=val)
         c.font = BLACK if formulas else BLUE
         c.number_format = fmt
-    ws6.cell(row=row, column=5, value=note_txt).font = ITALIC_GRAY
+    ws6.cell(row=row, column=5, value=sanitize_text(note_txt)).font = ITALIC_GRAY
     for col in range(1, 6):
         ws6.cell(row=row, column=col).border = BORDER
 

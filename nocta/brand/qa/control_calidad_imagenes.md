@@ -52,6 +52,6 @@ Solución (diseño primero): lámina técnica `packaging/patch.html` → `packag
 | Ad Multiplier (réplica 14 s = 89,3; réplica 15 s = 99,45; tres intentos de la de 24 s bloqueados por moderación y reembolsados) | 2 cobrados | 188,75 |
 | Seed Audio (locuciones ES, incl. pruebas y 12 líneas masculinas para la variante B) | 45 líneas | 16,5 |
 | **Total sesión** | | **≈ 511** |
-| Saldo restante (balance real al cierre) | | ≈ 663 |
+| Saldo restante (balance real al cierre) | | 661,7 |
 
 Regla de ahorro aplicada: vídeo sólo con Seedance 2.5 / Ad Multiplier cuando la referencia de imagen ya estaba aprobada; audio y montaje siempre en local (0 créditos).
