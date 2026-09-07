@@ -5,28 +5,29 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609071351">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609071427">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/'+p+'-cut.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609071351" defer></script>
+<script src="/assets/js/app.js?v=202609071427" defer></script>
 </head>
-<body>
+<body class="n-v4">
 <div id="site-header"><div class="n-top-ph"></div></div>
 <main class="n-wrap" id="main"><div id="pdp"><noscript><p>Parches de hidrocoloide NOCTA desde 15,95 €. <a href="/catalogo.html">Ver catálogo</a></p></noscript></div></main>
 <div class="n-bbar" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar ahora</button></div><div class="n-wrap n-bbar__pay" id="st-express"></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609071351"></script>
+<script src="/assets/js/photos.js"></script>
+<script src="/assets/js/products.js?v=202609071427"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
 document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]').content=p.desc.slice(0,155);
 const eur=nEur,ups=(p.upsell||[]).map(nBySlug).filter(Boolean),isPatch=p.tags.includes('parches')||!!p.bundle&&!p.slug.includes('duo'),pu=nPerUse(p);
 const photo=p.image.replace(/\.(jpg|png)$/,'.webp');
-const slides=[],seen=new Set();const cut=nImg(p);slides.push({t:'img',src:cut,cut:true,alt:`${p.name} NOCTA, ${p.units}`});seen.add(cut);
+const slides=[],seen=new Set();const PH=(window.NOCTA_PHOTOS||{})[slug]||{};const cut=PH.main||nImg(p);slides.push({t:'img',src:cut,cut:!PH.main,alt:`${p.name} NOCTA, ${p.units}`});seen.add(cut);if(PH.alt){slides.push({t:'img',src:PH.alt,cut:false});seen.add(PH.alt);}(PH.extra||[]).forEach(x=>{slides.push({t:'img',src:x,cut:false});seen.add(x);});
 if(p.video)slides.push({t:'video',src:p.video,poster:photo});
-p.gallery.forEach(g=>{const s=nWebp(g);if(seen.has(s))return;seen.add(s);slides.push({t:'img',src:s,cut:nIsCut(s)});});
-const dim=s=>/gama-cut/.test(s)?'width="1167" height="1600"':/dorso-cut/.test(s)?'width="1515" height="1515"':/gama|lifestyle|unboxing/.test(s)?'width="1128" height="1400"':/como-se-pone/.test(s)?'width="1046" height="1400"':'width="1200" height="1200"';
+p.gallery.forEach(g=>{const s=nWebp(g);if(seen.has(s))return;if(PH.main&&nIsCut(s))return;seen.add(s);slides.push({t:'img',src:s,cut:nIsCut(s)});});
+const dim=s=>/\/foto\//.test(s)?'width="1200" height="1600"':/gama-cut/.test(s)?'width="1167" height="1600"':/dorso-cut/.test(s)?'width="1515" height="1515"':/gama|lifestyle|unboxing/.test(s)?'width="1128" height="1400"':/como-se-pone/.test(s)?'width="1046" height="1400"':'width="1200" height="1200"';
 const gal=`<div class="n-gal"><div class="n-gal__track" id="n-gal-track">${slides.map((s,i)=>s.t==='video'?`<div class="n-gal__s is-photo"><video id="mainvid" src="${s.src}" poster="${s.poster}" muted loop playsinline preload="metadata" disablepictureinpicture data-auto></video><span class="n-gal__tag n-lab">Vídeo · 6 s</span></div>`:`<div class="n-gal__s ${s.cut?'n-cut':'is-photo'}${i===0?' n-skel is-on':''}"><img ${i===0?'id="mainimg"':''} src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" ${i===0?'fetchpriority="high"':'loading="lazy"'} decoding="async"></div>`).join('')}</div>
 <div class="n-gal__dots" aria-hidden="true">${slides.map((s,i)=>`<i${i===0?' class="is-on"':''}></i>`).join('')}</div><span class="n-gal__count n-lab n-num" id="n-gal-count">1/${slides.length}</span>
 <div class="n-gal__thumbs" id="thumbs">${slides.map((s,i)=>`<button type="button" class="${s.cut?'':'is-photo'}${i===0?' is-on':''}" data-i="${i}" aria-label="Imagen ${i+1}"><img src="${s.t==='video'?s.poster:s.src}" alt="" loading="lazy"></button>`).join('')}</div></div>`;
