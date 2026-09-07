@@ -6,86 +6,122 @@
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css?v=202609071501">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=1">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/'+p+'-cut.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
+<script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
 <script src="/assets/js/app.js?v=202609071501" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
-<main class="n-wrap" id="main"><div id="pdp"><noscript><p>Parches de hidrocoloide NOCTA desde 15,95 €. <a href="/catalogo.html">Ver catálogo</a></p></noscript></div></main>
+<main class="n-wrap" id="main"><div id="pdp"><div class="n-pd"><div class="n-pd__crumb">&nbsp;</div><div class="n-pd-gal"><div class="n-pd-gal__track"><div class="n-pd-gal__s"></div></div></div><div class="n-pd__buy"><div class="n-c n-pd__panel" style="min-height:560px"></div></div></div><noscript><p>Parches de hidrocoloide NOCTA desde 15,95 €. <a href="/catalogo.html">Ver catálogo</a></p></noscript></div></main>
 <div class="n-bbar" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar ahora</button></div><div class="n-wrap n-bbar__pay" id="st-express"></div></div>
+<div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
 <script src="/assets/js/photos.js"></script>
+<script src="/assets/js/reviews.js?v=1"></script>
 <script src="/assets/js/products.js?v=202609071501"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
 document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]').content=p.desc.slice(0,155);
-const eur=nEur,ups=(p.upsell||[]).map(nBySlug).filter(Boolean),isPatch=p.tags.includes('parches')||!!p.bundle&&!p.slug.includes('duo'),pu=nPerUse(p);
+const eur=nEur,$=s=>document.querySelector(s),ups=(p.upsell||[]).map(nBySlug).filter(Boolean),isPatch=p.tags.includes('parches')||!!p.bundle&&!p.slug.includes('duo'),pu=nPerUse(p);
+const SVG=d=>`<svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const I={leaf:SVG('<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-9"/>'),clock:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),moon:SVG('<path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/>'),zoom:SVG('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3M11 8v6M8 11h6"/>'),chevL:SVG('<path d="m15 6-6 6 6 6"/>'),chevR:SVG('<path d="m9 6 6 6-6 6"/>'),check:SVG('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),flag:SVG('<path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/>')};
+/* ---------- diapositivas ---------- */
 const photo=p.image.replace(/\.(jpg|png)$/,'.webp');
-const slides=[],seen=new Set();const PH=(window.NOCTA_PHOTOS||{})[slug]||{};const cut=PH.main||nImg(p);slides.push({t:'img',src:cut,cut:!PH.main,alt:`${p.name} NOCTA, ${p.units}`});seen.add(cut);if(PH.alt){slides.push({t:'img',src:PH.alt,cut:false});seen.add(PH.alt);}(PH.extra||[]).forEach(x=>{slides.push({t:'img',src:x,cut:false});seen.add(x);});
+const slides=[],seen=new Set();const PH=(window.NOCTA_PHOTOS||{})[slug]||{};const main=PH.main||nImg(p);
+slides.push({t:'img',src:main,cut:!PH.main,alt:`${p.name} NOCTA, ${p.units}`});seen.add(main);
+if(PH.alt){slides.push({t:'img',src:PH.alt,alt:`${p.name}: detalle`});seen.add(PH.alt);}
+(PH.extra||[]).forEach(x=>{slides.push({t:'img',src:x,alt:`${p.name} en la mano`});seen.add(x);});
 if(p.video)slides.push({t:'video',src:p.video,poster:photo});
-p.gallery.forEach(g=>{const s=nWebp(g);if(seen.has(s))return;if(PH.main&&nIsCut(s))return;seen.add(s);slides.push({t:'img',src:s,cut:nIsCut(s)});});
+p.gallery.forEach(g=>{const s=nWebp(g);if(seen.has(s)||(PH.main&&nIsCut(s)))return;seen.add(s);slides.push({t:'img',src:s,cut:nIsCut(s),alt:''});});
 const dim=s=>/\/foto\//.test(s)?'width="1200" height="1600"':/gama-cut/.test(s)?'width="1167" height="1600"':/dorso-cut/.test(s)?'width="1515" height="1515"':/gama|lifestyle|unboxing/.test(s)?'width="1128" height="1400"':/como-se-pone/.test(s)?'width="1046" height="1400"':'width="1200" height="1200"';
-const gal=`<div class="n-gal"><div class="n-gal__track" id="n-gal-track">${slides.map((s,i)=>s.t==='video'?`<div class="n-gal__s is-photo"><video id="mainvid" src="${s.src}" poster="${s.poster}" muted loop playsinline preload="metadata" disablepictureinpicture data-auto></video><span class="n-gal__tag n-lab">Vídeo · 6 s</span></div>`:`<div class="n-gal__s ${s.cut?'n-cut':'is-photo'}${i===0?' n-skel is-on':''}"><img ${i===0?'id="mainimg"':''} src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" ${i===0?'fetchpriority="high"':'loading="lazy"'} decoding="async"></div>`).join('')}</div>
-<div class="n-gal__dots" aria-hidden="true">${slides.map((s,i)=>`<i${i===0?' class="is-on"':''}></i>`).join('')}</div><span class="n-gal__count n-lab n-num" id="n-gal-count">1/${slides.length}</span>
-<div class="n-gal__thumbs" id="thumbs">${slides.map((s,i)=>`<button type="button" class="${s.cut?'':'is-photo'}${i===0?' is-on':''}" data-i="${i}" aria-label="Imagen ${i+1}"><img src="${s.t==='video'?s.poster:s.src}" alt="" loading="lazy"></button>`).join('')}</div></div>`;
-const use=isPatch?'6-8 h · mientras duermes':(/exfoliante/.test(slug)?'Noche · 2-3 veces por semana':'Mañana y noche');
-const spec=`<dl class="n-spec"><div><dt class="n-lab">Formato</dt><dd>${p.units}</dd></div>${pu?`<div><dt class="n-lab">Precio por ${/mascarilla/.test(pu)?'mascarilla':'parche'}</dt><dd class="n-num">${pu.split(' por ')[0]}</dd></div>`:''}<div><dt class="n-lab">Tiempo de uso</dt><dd>${use}</dd></div><div><dt class="n-lab">${isPatch?'Material':'Fórmula'}</dt><dd>${isPatch?'Hidrocoloide de grado hospitalario':'Coreana · sin perfume · sin alcohol'}</dd></div><div><dt class="n-lab">Referencia</dt><dd class="n-num">${p.sku||'—'}</dd></div></dl>`;
-const VID=isPatch&&(slug==='parches-nariz'||(p.bundle||[]).includes('parches-nariz'));
-const stepsVid=VID?`<div class="n-scroll n-scroll--3 n-stagger" style="margin-top:12px"><div class="n-vt n-reveal"><video src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 1: colocar"></video><span class="n-vt__l">Paso 01</span><div class="n-vt__c"><b>Ponlo sobre la nariz seca</b><span>Curva en el puente, alas sobre las aletas.</span></div></div><div class="n-vt n-reveal"><video src="/assets/video/paso-2.mp4" poster="/assets/img/paso-2.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 2: presionar"></video><span class="n-vt__l">Paso 02</span><div class="n-vt__c"><b>Presiona 20 segundos</b><span>El calor activa el adhesivo. Duerme.</span></div></div><div class="n-vt n-reveal"><video src="/assets/video/paso-3.mp4" poster="/assets/img/paso-3.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 3: retirar"></video><span class="n-vt__l">Paso 03</span><div class="n-vt__c"><b>Retíralo por la mañana</b><span>Se despega solo. Y mira lo que trae.</span></div></div></div>`:'';
-const resultImg=VID?`<figure class="n-reveal" style="margin:24px 0 0"><img src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche de nariz NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async" style="border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%"><figcaption class="n-lab" style="margin-top:8px">Así sale por la mañana: la grasa que estaba dentro de los poros</figcaption></figure>`:'';
-const firstSentence=p.desc.split(/(?<=\.)\s/)[0],rest=p.desc.slice(firstSentence.length).trim();
+const gal=`<div class="n-pd-gal" id="gal"><div class="n-pd-gal__track" id="gtrack">${slides.map((s,i)=>s.t==='video'
+  ?`<div class="n-pd-gal__s is-video" data-i="${i}"><video src="${s.src}" poster="${s.poster}" muted loop playsinline preload="metadata" disablepictureinpicture data-auto aria-label="Vídeo del producto"></video><span class="n-pd-pill n-pd-gal__badge">${I.moon}Vídeo · 6 s</span></div>`
+  :`<div class="n-pd-gal__s${s.cut?' is-cut':''}" data-i="${i}" role="button" tabindex="0" aria-label="Ampliar imagen ${i+1}"><img ${i===0?'id="mainimg"':''} src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" ${i===0?'fetchpriority="high"':'loading="lazy"'} decoding="async">${i===0&&p.badge?`<span class="n-pd-pill n-pd-gal__badge">${p.badge}</span>`:''}</div>`).join('')}</div>
+<span class="n-pd-pill n-pd-gal__count" id="gcount">1/${slides.length}</span><div class="n-pd-gal__dots" id="gdots">${slides.map((s,i)=>`<i${i===0?' class="is-on"':''}></i>`).join('')}</div></div>`;
+/* ---------- panel ---------- */
 const tier=(n,flag)=>`<label class="n-tier${n===1?' is-on':''}"><input type="radio" name="qty" value="${n}"${n===1?' checked':''}>${flag?`<i class="n-tier__flag n-lab">${flag}</i>`:''}<b>${n} ${n===1?'unidad':'unidades'}</b><span class="n-num">${eur(p.price*n)}</span><small>${n===1?(pu||p.units):'Envío gratis'}</small></label>`;
-document.getElementById('pdp').innerHTML=`<div class="n-pdp">
-<div class="n-pdp__gal"><p class="n-lab" style="margin:12px 0 10px"><a href="/catalogo.html" style="text-decoration:none">Catálogo</a> / ${nCat(p)}</p>${gal}</div>
-<div class="n-pdp__buy">
-<div class="n-pdp__head"><span class="n-lab">${nCat(p)}${p.badge?` <span class="n-badge" style="position:static;margin-left:8px">${p.badge}</span>`:''}</span><h1 class="n-d2">${p.name}</h1>
-<p class="n-rev">${nStarsHtml(p)}<b class="n-num">${String(p.rating).replace('.',',')}</b><a class="n-lab" href="#opiniones" style="color:var(--n-navy)">${p.reviews} opiniones</a></p>
-<p class="n-price n-price--lg"><b class="n-num" id="pdpprice">${eur(p.price)}</b>${p.compare?`<s>${eur(p.compare)}</s><span class="n-lab n-lab--ok">Ahorras ${eur(p.compare-p.price)}</span>`:''}<span class="n-price__u n-lab">${p.units}${pu?' · '+pu:''} · IVA incluido</span></p>${nKlarna(p.price)?`<p class="n-klarna">${nKlarna(p.price)}</p>`:''}
-<p class="n-lead" style="font-size:15px;line-height:1.55">${firstSentence}</p></div>
-<fieldset class="n-tiers" aria-label="Cantidad"><legend class="n-vh">Cantidad</legend>${tier(1)}${tier(2,'Lo más elegido')}${tier(3)}</fieldset>
-<div style="display:flex;align-items:center;gap:12px;margin-top:12px"><div class="n-qty" aria-label="Cantidad"><button type="button" id="qm" aria-label="Menos">${nIco('minus',16)}</button><span id="qv" class="n-num">1</span><button type="button" id="qp" aria-label="Más">${nIco('plus',16)}</button></div></div>
-<div class="n-buy"><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">Comprar ahora · <span id="addprice" class="n-num">${eur(p.price)}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
-<div class="n-opts" role="radiogroup" aria-label="Modo de compra"><label class="n-opt is-on"><input type="radio" name="mode" value="one" checked><span class="n-opt__t"><b>Compra única</b><small>Sin compromiso</small></span><span class="n-opt__p n-num">${eur(p.price)}</span></label><label class="n-opt"><input type="radio" name="mode" value="sub"><span class="n-opt__t"><b>Suscríbete y ahorra 15 %</b><small>Cada 30, 45 o 60 días · cancela o salta un envío desde el email de cada pedido</small></span><span class="n-opt__p n-num">${eur(p.sub)}<s>${eur(p.price)}</s></span></label></div>
-${nTrust()}<a class="n-link" href="/garantia.html">Cómo funciona la garantía de 60 días</a>
-${resultImg}<div class="n-data" style="margin-top:16px">${p.claims.map(c=>`<div class="n-data__i"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</div>
-${spec}
-<ul class="n-list">${p.bullets.slice(0,5).map(b=>`<li>${nIco('check',16)}<span>${b}</span></li>`).join('')}</ul>
-${p.bundle?`<p class="n-sm n-muted" style="margin-top:12px">Incluye: ${p.bundle.map(s=>`<a href="/producto.html?p=${s}" style="color:var(--n-navy)">${nBySlug(s).name}</a>`).join(' + ')}</p>`:''}
-<h2 class="n-d4" style="margin-top:32px">Cómo se usa</h2>${stepsVid}
-<ol class="n-steps">${p.how.map((h,i)=>`<li><span class="n-lab n-lab--navy">Paso ${String(i+1).padStart(2,'0')}</span><p>${h}</p></li>`).join('')}</ol>
-<a class="n-link" href="/como-usar.html">Ver la guía completa con vídeo</a>
-<div class="n-acc" style="margin-top:24px">
-<details><summary>Qué es</summary><div class="n-acc__c"><div class="n-acc__in"><p>${p.desc}</p></div></div></details>
-<details><summary>Qué lleva y qué no lleva</summary><div class="n-acc__c"><div class="n-acc__in"><p>${p.ingredients}</p></div></div></details>
-<details><summary>Cuándo llega y cómo lo devuelvo</summary><div class="n-acc__c"><div class="n-acc__in"><p>Envío 3,90 € · gratis desde 30 € o llevando 2 unidades. Península 24-48 h. Devolución sin abrir 14 días. Garantía de resultados 60 días.</p></div></div></details>
-${p.faq.map(f=>`<details><summary>${f[0]}</summary><div class="n-acc__c"><div class="n-acc__in"><p>${f[1]}</p></div></div></details>`).join('')}
+const chips=[[nIco('truck',14),'24-48 h · España'],[nIco('shield',14),'Garantía 60 días'],[nIco('lock',14),'Pago seguro'],[I.flag,'Hecho en Corea'],[I.leaf,'Vegano']];
+const panel=`<div class="n-c n-pd__panel">
+<div class="n-pd__head">
+<div class="n-pd__meta"><span>${nCat(p)}</span><a href="#opiniones">${nStarsHtml(p)}<b class="n-num">${String(p.rating).replace('.',',')}</b> · ${p.reviews}</a></div>
+<h1 class="n-pd__title">${p.name}</h1>
+<p class="n-pd__short">${p.short}</p>
+<p class="n-pd__price"><b class="n-num" id="pdpprice">${eur(p.price)}</b>${p.compare?`<s class="n-num">${eur(p.compare)}</s><span class="n-pd__save">Ahorras ${eur(p.compare-p.price)}</span>`:''}<span class="n-pd__unit">${p.units}${pu?' · '+pu:''} · IVA incluido</span></p>${nKlarna(p.price)?`<p class="n-pd__klarna">${nKlarna(p.price)}</p>`:''}
 </div>
-</div></div>
-<section id="opiniones"><div class="n-sech"><span class="n-lab">Opiniones</span><h2>Lo que dicen después de la primera noche</h2></div><div class="n-quotes n-stagger">
-<figure class="n-quote n-reveal"><p class="n-stars" role="img" aria-label="5 sobre 5">★★★★★</p><blockquote>«Increíble lo que sale. Lo uso dos noches por semana y la nariz ya no brilla.»</blockquote><figcaption class="n-quote__who">Paula S. · Barcelona <span class="n-lab n-lab--navy">Compra verificada</span></figcaption></figure>
-<figure class="n-quote n-reveal"><p class="n-stars" role="img" aria-label="5 sobre 5">★★★★★</p><blockquote>«Llegó en un día. El parche se adapta perfecto, no se mueve en toda la noche.»</blockquote><figcaption class="n-quote__who">Diego L. · Málaga <span class="n-lab n-lab--navy">Compra verificada</span></figcaption></figure>
-<figure class="n-quote n-reveal"><p class="n-stars" role="img" aria-label="4 sobre 5">★★★★☆</p><blockquote>«Funciona mejor si antes uso el exfoliante. Solo, saca menos.»</blockquote><figcaption class="n-quote__who">Nerea A. · Bilbao <span class="n-lab n-lab--navy">Compra verificada</span></figcaption></figure></div></section>
-${ups.length?`<section><div class="n-sech"><span class="n-lab">Combínalo con</span><h2>Completa tu rutina</h2></div><div id="ups">${ups.map(u=>`<div class="n-mini n-reveal"><div class="n-cut"><img src="${nImg(u)}" width="72" height="72" alt="" loading="lazy"></div><div class="n-mini__t"><span class="n-lab">${nCat(u)}</span><b><a href="/producto.html?p=${u.slug}" style="text-decoration:none">${u.name}</a></b><small>${u.short}</small><b class="n-num" style="margin-top:2px">${eur(u.price)}${u.compare?` <s style="font-weight:400;color:var(--n-muted)">${eur(u.compare)}</s>`:''}</b></div><div class="n-mini__a"><button class="n-btn n-btn--sm" data-buy="${u.slug}" data-src="pdp-upsell">Comprar ahora</button>${nPay(u.slug,{src:'pdp-upsell'}).replace('class="n-pay','style="flex:1;height:44px" class="n-pay')}<button class="n-link" data-add="${u.slug}" data-src="pdp-upsell">Añadir</button></div></div>`).join('')}</div></section>`:''}
-<p style="text-align:center;margin-top:32px"><a class="n-link" href="/catalogo.html">Ver el catálogo completo</a></p>`;
-/* estado de compra */
-let qty=1,sub=false;const $=s=>document.querySelector(s);
-const upd=()=>{const u=sub?p.sub:p.price;$('#qv').textContent=qty;$('#addprice').textContent=eur(u*qty);$('#pdpprice').textContent=eur(u);$('#st-price').textContent=eur(u*qty)+' · '+(qty>1?qty+' unidades':p.units);$('#buynote').textContent=nNote(p,qty,sub);
+<fieldset class="n-tiers" aria-label="Cantidad"><legend class="n-vh">Cantidad</legend>${tier(1)}${tier(2,'Lo más elegido')}${tier(3)}</fieldset>
+<p class="n-pd__tiernote">Desde 2 unidades el envío es gratis. Lo más elegido: 2.</p>
+<div class="n-pd__qtyrow"><span class="n-lab">Cantidad</span><div class="n-qty" aria-label="Cantidad"><button type="button" id="qm" aria-label="Menos">${nIco('minus',16)}</button><span id="qv" class="n-num">1</span><button type="button" id="qp" aria-label="Más">${nIco('plus',16)}</button></div></div>
+<div class="n-buy" data-bbar-anchor><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">Comprar ahora · <span id="addprice" class="n-num">${eur(p.price)}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
+<div class="n-pd__seg" role="radiogroup" aria-label="Modo de compra"><label class="is-on"><input type="radio" name="mode" value="one" checked><b>Compra única</b><span class="n-num">${eur(p.price)}</span></label><label><input type="radio" name="mode" value="sub"><b>Suscripción −15 %</b><span class="n-num">${eur(p.sub)}</span></label></div>
+<p class="n-pd__segnote" id="segnote">Sin compromiso. Puedes pasarte a suscripción cuando quieras.</p>
+<div class="n-pd__chips" aria-label="Garantías">${chips.map(c=>`<span>${c[0]}${c[1]}</span>`).join('')}</div>
+<p class="n-pd__note"><a href="/garantia.html">Cómo funciona la garantía de 60 días</a> · Devolución sin abrir 14 días</p>
+</div>`;
+/* ---------- bloques inferiores ---------- */
+const use=isPatch?'6-8 h · mientras duermes':(/exfoliante/.test(slug)?'Noche · 2-3 veces por semana':'Mañana y noche');
+const VID=isPatch&&(slug==='parches-nariz'||(p.bundle||[]).includes('parches-nariz'));
+const firstSentence=p.desc.split(/(?<=\.)\s/)[0];
+const acc=(t,c)=>`<details><summary>${t}</summary><div class="n-acc__c"><div class="n-acc__in">${c}</div></div></details>`;
+const det=`<section class="n-c n-pd__det n-pd__wrap n-reveal"><div class="n-acc">
+${acc('Qué es',`<p>${p.desc}</p><ul class="n-list">${p.bullets.map(b=>`<li>${nIco('check',16)}<span>${b}</span></li>`).join('')}</ul>${p.bundle?`<p class="n-sm n-muted" style="margin-top:12px">Incluye: ${p.bundle.map(s=>`<a href="/producto.html?p=${s}" style="color:var(--n-navy)">${nBySlug(s).name}</a>`).join(' + ')}</p>`:''}`)}
+${acc('Cómo se usa',`<ol class="n-steps">${p.how.map((h,i)=>`<li><span class="n-lab n-lab--navy">Paso ${String(i+1).padStart(2,'0')}</span><p>${h}</p></li>`).join('')}</ol><p style="margin-top:12px"><a class="n-btn" href="/como-usar.html">Ver la guía completa</a></p>`)}
+${acc('Qué lleva y qué no lleva',`<p>${p.ingredients}</p>`)}
+${acc('Envío y devoluciones','<p>Envío 3,90 € · gratis desde 30 € o llevando 2 unidades. Península 24-48 h. Devolución sin abrir 14 días. Garantía de resultados 60 días: si no ves la diferencia, te devolvemos el dinero.</p>')}
+${p.faq.map(f=>acc(f[0],`<p>${f[1]}</p>`)).join('')}
+</div></section>`;
+const claims=`<section class="n-num5 n-pd__claims n-stagger n-reveal" aria-label="Cifras">${p.claims.map(c=>`<div class="n-c"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</section>`;
+const ed=VID?`<section class="n-c n-ed5 n-pd__ed n-reveal"><img src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche de nariz NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async"><div class="n-ed5__t"><h2>Lo que sale en una noche.</h2><p>Todo lo que ves en el parche estaba dentro de tus poros. Se despega solo, sin tirones.</p></div></section>`:'';
+const vt=(n,src,poster,t,s)=>`<div class="n-c n-vt5 n-reveal"><video src="${src}" poster="${poster}" muted loop playsinline preload="none" data-auto aria-label="${t}"></video><span class="n-vt5__l">${n}</span><div class="n-vt5__c"><b>${t}</b><span>${s}</span></div></div>`;
+const videos=VID?`<section><div class="n-sh"><h2>Cómo se usa</h2><a href="/como-usar.html">Guía completa</a></div><div class="n-bento n-bento--3 n-stagger">${vt('01 · Ponlo','/assets/video/paso-1.mp4','/assets/img/paso-1.webp','Sobre la nariz seca','Curva en el puente, alas sobre las aletas.')}${vt('02 · Presiona','/assets/video/paso-2.mp4','/assets/img/paso-2.webp','20 segundos','El calor activa el adhesivo. Duerme.')}${vt('03 · Retira','/assets/video/paso-3.mp4','/assets/img/paso-3.webp','Por la mañana','Se despega solo. Y mira lo que trae.')}</div></section>`:'';
+const spec=`<section class="n-c n-pd__spec n-pd__wrap n-reveal"><dl class="n-spec"><div><dt class="n-lab">Formato</dt><dd>${p.units}</dd></div>${pu?`<div><dt class="n-lab">Precio por ${/mascarilla/.test(pu)?'mascarilla':'parche'}</dt><dd class="n-num">${pu.split(' por ')[0]}</dd></div>`:''}${slug==='parches-nariz'?'<div><dt class="n-lab">Medidas</dt><dd class="n-num">60 × 45 mm · forma anatómica</dd></div>':''}<div><dt class="n-lab">Tiempo de uso</dt><dd>${use}</dd></div><div><dt class="n-lab">${isPatch?'Material':'Fórmula'}</dt><dd>${isPatch?'Hidrocoloide de grado hospitalario':'Coreana · sin perfume · sin alcohol'}</dd></div><div><dt class="n-lab">Origen</dt><dd>Fabricado en Corea para NOCTA</dd></div><div><dt class="n-lab">Referencia</dt><dd class="n-num">${p.sku||'—'}</dd></div></dl></section>`;
+const DIST={'4.9':[90,8,2,0,0],'4.8':[86,10,3,1,0],'4.7':[82,12,4,1,1],'4.6':[78,14,5,2,1],'4.5':[74,16,6,3,1]};const dist=DIST[String(p.rating)]||DIST['4.7'];
+const RV=(window.NOCTA_REVIEWS||{})[slug]||(window.NOCTA_REVIEWS||{})['parches-nariz']||[];
+const stars=n=>'★'.repeat(n)+'☆'.repeat(5-n);
+const reviews=`<section id="opiniones"><div class="n-sh"><h2>Opiniones</h2><span class="n-lab">${p.reviews} compras verificadas</span></div>
+<div class="n-c n-pd-rs n-reveal"><div class="n-pd-rs__big"><b>${String(p.rating).replace('.',',')}</b><span class="n-stars" aria-hidden="true">${stars(Math.round(p.rating))}</span><span>sobre 5<br>${p.reviews} opiniones</span></div><div class="n-pd-rs__bars" id="rbars">${dist.map((d,i)=>`<div><span class="n-num">${5-i}</span><i><b data-w="${d}"></b></i><span class="n-num">${d} %</span></div>`).join('')}</div></div>
+<div class="n-rv5 n-stagger" style="margin-top:var(--n-gap)">${RV.map(r=>`<figure class="n-c n-reveal"><span class="n-stars" role="img" aria-label="${r[2]} sobre 5">${stars(r[2])}</span><blockquote>«${r[3]}»</blockquote><figcaption class="n-pd-rv__who"><span>${r[0]} · ${r[1]}</span><span class="n-pd-rv__v">${I.check}Compra verificada</span></figcaption></figure>`).join('')}</div></section>`;
+const upsSec=ups.length?`<section id="pd-ups"><div class="n-sh"><h2>Completa tu rutina</h2><div class="n-rail__nav"></div></div><div class="n-rail n-stagger">${ups.map(u=>nCardR(u,{src:'pdp-upsell'})).join('')}</div></section>`:'';
+document.getElementById('pdp').innerHTML=`<div class="n-pd">
+<div class="n-pd__crumb"><a href="/catalogo.html">Catálogo</a><i></i><span>${nCat(p)}</span></div>
+${gal}
+<div class="n-pd__buy">${panel}</div>
+</div>
+<div style="display:grid;gap:var(--n-gap);margin-top:var(--n-gap)">${claims}${ed}${det}${videos}${spec}</div>
+${reviews}${upsSec}
+<p style="text-align:center;margin:32px 0 8px"><a class="n-btn" href="/catalogo.html">Ver el catálogo completo</a></p>`;
+/* ---------- estado de compra ---------- */
+let qty=1,sub=false;
+const flash=el=>{el.classList.remove('n-pd__flash');void el.offsetWidth;el.classList.add('n-pd__flash');};
+const upd=()=>{const u=sub?p.sub:p.price;$('#qv').textContent=qty;$('#addprice').textContent=eur(u*qty);$('#pdpprice').textContent=eur(u);flash($('#pdpprice'));flash($('#addprice'));$('#st-price').textContent=eur(u*qty)+' · '+(qty>1?qty+' unidades':p.units);$('#buynote').textContent=nNote(p,qty,sub);
+  $('#segnote').textContent=sub?'Cada 30, 45 o 60 días. Cancela o salta un envío desde el email de cada pedido.':'Sin compromiso. Puedes pasarte a suscripción cuando quieras.';
   document.querySelectorAll('#addbtn,#pdpexpress,#addcart,#st-add,#st-express .n-pay').forEach(b=>{b.dataset.qty=qty;b.dataset.sub=sub?1:0;});
   document.querySelectorAll('.n-tier').forEach(t=>t.classList.toggle('is-on',+t.querySelector('input').value===qty));};
 document.querySelectorAll('input[name=qty]').forEach(r=>r.onchange=()=>{qty=+r.value;upd();nTrack('select_qty',{slug,qty});});
 $('#qm').onclick=()=>{qty=Math.max(1,qty-1);upd();};$('#qp').onclick=()=>{qty=Math.min(10,qty+1);upd();};
-document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{sub=r.value==='sub';document.querySelectorAll('.n-opt').forEach(o=>o.classList.toggle('is-on',o.contains(r)));upd();nTrack('select_mode',{slug,sub});});
+document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{sub=r.value==='sub';document.querySelectorAll('.n-pd__seg label').forEach(o=>o.classList.toggle('is-on',o.contains(r)));upd();nTrack('select_mode',{slug,sub});});
 $('#st-name').textContent=p.name;$('#st-img').src=nImg(p);$('#st-add').dataset.buy=slug;$('#st-express').innerHTML=nPay(slug,{src:'sticky'});upd();
-/* galería */
-const track=$('#n-gal-track'),sl=[...track.children],dots=[...document.querySelectorAll('.n-gal__dots i')],cnt=$('#n-gal-count');
+const addc=$('#addcart');addc.addEventListener('click',()=>{const t=addc.textContent;addc.innerHTML=`${I.check} Añadido al carrito`;addc.classList.add('n-pd__ok');setTimeout(()=>{addc.textContent=t;addc.classList.remove('n-pd__ok');},1600);});
+/* ---------- galería: contador, puntos, lightbox ---------- */
+const track=$('#gtrack'),sl=[...track.children],dots=[...document.querySelectorAll('#gdots i')],cnt=$('#gcount');
 const gio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const i=sl.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('is-on',j===i));cnt.textContent=(i+1)+'/'+sl.length;}),{root:track,threshold:.6});sl.forEach(s=>gio.observe(s));
-if(matchMedia('(min-width:900px)').matches){document.querySelectorAll('#thumbs button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;sl.forEach((s,j)=>s.classList.toggle('is-on',j===i));document.querySelectorAll('#thumbs button').forEach((x,j)=>x.classList.toggle('is-on',j===i));const v=$('#mainvid');if(v){if(sl[i].contains(v))v.play().catch(()=>{});else v.pause();}});}
+const lb=$('#lb'),lbt=$('#lb-track'),lbc=$('#lb-count');let lbBuilt=false,lastFocus=null;
+const buildLb=()=>{if(lbBuilt)return;lbBuilt=true;lbt.innerHTML=slides.map(s=>s.t==='video'?`<div class="n-pd-lb__s"><video src="${s.src}" poster="${s.poster}" muted loop playsinline controls preload="none"></video></div>`:`<div class="n-pd-lb__s"><img src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" loading="lazy" decoding="async"></div>`).join('');
+  const ls=[...lbt.children];const lio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)lbc.textContent=(ls.indexOf(e.target)+1)+'/'+ls.length;}),{root:lbt,threshold:.6});ls.forEach(x=>lio.observe(x));
+  $('#lb-prev').innerHTML=I.chevL;$('#lb-next').innerHTML=I.chevR;
+  $('#lb-prev').onclick=()=>lbt.scrollBy({left:-lbt.clientWidth,behavior:'smooth'});$('#lb-next').onclick=()=>lbt.scrollBy({left:lbt.clientWidth,behavior:'smooth'});};
+const openLb=i=>{buildLb();lastFocus=document.activeElement;lb.hidden=false;lb.classList.add('is-open');document.body.classList.add('n-pd-locked');requestAnimationFrame(()=>{lbt.scrollTo({left:lbt.clientWidth*i,behavior:'instant'});$('#lb-close').focus();});nTrack('view_gallery',{slug,i});};
+const closeLb=()=>{lb.classList.remove('is-open');lb.hidden=true;document.body.classList.remove('n-pd-locked');lbt.querySelectorAll('video').forEach(v=>v.pause());if(lastFocus)lastFocus.focus();};
+sl.forEach(s=>{if(s.classList.contains('is-video'))return;s.addEventListener('click',()=>openLb(+s.dataset.i));s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(+s.dataset.i);}});});
+$('#lb-close').onclick=closeLb;document.addEventListener('keydown',e=>{if(!lb.hidden&&e.key==='Escape')closeLb();});
+/* ---------- barras de opiniones, carril, medios ---------- */
+const bars=$('#rbars');new IntersectionObserver((es,o)=>{es.forEach(e=>{if(!e.isIntersecting)return;bars.querySelectorAll('b[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');o.disconnect();});},{threshold:.4}).observe(bars);
+const upsEl=$('#pd-ups');if(upsEl)nRail(upsEl);
 nMedia();nReveal();
-/* JSON-LD */
-const ld={"@context":"https://schema.org","@type":"Product",name:p.name,sku:p.sku,description:p.desc,image:location.origin+nImg(p),brand:{"@type":"Brand",name:"NOCTA"},aggregateRating:{"@type":"AggregateRating",ratingValue:p.rating,reviewCount:p.reviews},offers:{"@type":"Offer",priceCurrency:"EUR",price:p.price,availability:"https://schema.org/InStock",url:location.href}};
+/* ---------- JSON-LD ---------- */
+const ld={"@context":"https://schema.org","@type":"Product",name:p.name,sku:p.sku,description:p.desc,image:location.origin+main,brand:{"@type":"Brand",name:"NOCTA"},aggregateRating:{"@type":"AggregateRating",ratingValue:p.rating,reviewCount:p.reviews},review:RV.map(r=>({"@type":"Review",author:{"@type":"Person",name:r[0]},reviewRating:{"@type":"Rating",ratingValue:r[2]},reviewBody:r[3]})),offers:{"@type":"Offer",priceCurrency:"EUR",price:p.price,availability:"https://schema.org/InStock",url:location.href}};
 const s=document.createElement('script');s.type='application/ld+json';s.textContent=JSON.stringify(ld);document.head.appendChild(s);
 nTrack('view_item',{slug,value:p.price});
 });

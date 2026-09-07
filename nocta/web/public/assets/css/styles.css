@@ -391,10 +391,10 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
 .n-pc__w{position:relative;display:block;aspect-ratio:1;text-decoration:none;color:inherit}
 .n-pc__cat{position:absolute;left:var(--n-s4);top:var(--n-s3);z-index:2;font-size:40px;line-height:1;font-weight:var(--n-w-semi);letter-spacing:-.04em;color:#8A8578;text-transform:lowercase}
 .n-pc__new{position:absolute;right:var(--n-s3);top:var(--n-s3);z-index:2;background:var(--n-navy);color:var(--n-cream);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:999px;font-weight:var(--n-w-med)}
-.n-pc__w{aspect-ratio:4/5}.n-pc__w img{position:absolute;left:0;right:0;top:19%;bottom:0;width:100%;height:81%;object-fit:cover;object-position:center 72%;transition:opacity var(--n-t4) var(--n-e-io),transform 1.2s var(--n-e)}
+.n-pc__w{aspect-ratio:3/4}.n-pc__w img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:opacity var(--n-t4) var(--n-e-io),transform 1.2s var(--n-e)}
 .n-pc__w img.alt{opacity:0}
 @media (hover:hover){.n-pc__w:hover img.alt{opacity:1}.n-pc__w:hover img:not(.alt){transform:scale(1.03)}}
-.n-pc__w img.is-cut{object-fit:contain;padding:4% 12% 6%}
+.n-pc__w img.is-cut{object-fit:contain;padding:10% 12%}
 .n-pc__i{padding:var(--n-s3) var(--n-s4) var(--n-s4);display:grid;gap:6px;margin-top:auto}
 .n-pc__r{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--n-muted)}.n-pc__r .n-stars{color:var(--n-navy);font-size:12px;letter-spacing:.06em}
 .n-pc__t{display:flex;justify-content:space-between;gap:var(--n-s3);align-items:baseline}.n-pc__t b{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:var(--n-w-semi);color:var(--n-navy)}.n-pc__t span{font-size:14px;color:var(--n-navy);white-space:nowrap}
@@ -448,9 +448,26 @@ body.n-v5.n-has-ck.n-has-bar .n-bbar{bottom:calc(var(--n-ck-h,0px) + var(--n-gap
 .n-v5 .n-quote,.n-v5 .n-cmp2__c{border:0;background:var(--n-card);border-radius:16px}
 .n-v5 .n-nav__panel{background:var(--n-bg)}.n-v5 .n-nav__row{text-transform:none}
 .n-v5 .n-sheet__panel{border-radius:var(--n-cr) var(--n-cr) 0 0}
-.n-v5 .n-chips{background:transparent;top:calc(var(--n-header-h) + 4px)}.n-v5 .n-chip{border-radius:999px;text-transform:uppercase;letter-spacing:.06em;font-size:11px;background:var(--n-card);border:0}.n-v5 .n-chip.is-on{background:var(--n-navy);color:var(--n-cream)}
+.n-v5 .n-chips{background:var(--n-bg);top:var(--n-header-h);padding:10px 0 12px;margin-top:var(--n-s3)}.n-v5 .n-chip{border-radius:999px;text-transform:uppercase;letter-spacing:.06em;font-size:11px;background:var(--n-card);border:0}.n-v5 .n-chip.is-on{background:var(--n-navy);color:var(--n-cream)}
 .n-v5 .n-sumfold,.n-v5 .n-methods label,.n-v5 .n-form input,.n-v5 .n-form select,.n-v5 .n-form textarea{border-radius:16px}
 .n-v5 .n-words span{animation-delay:calc(var(--i)*70ms + .3s)}
 
 /* v5 skeleton cards: keep grid height before products.js renders (CLS 0) */
-.n-v5 .n-pc.n-sk{pointer-events:none}.n-v5 .n-pc.n-sk .n-pc__w{display:block;aspect-ratio:4/5;background:rgba(0,0,0,.025)}.n-v5 .n-pc.n-sk .n-pc__i{display:block;height:142px}
+.n-v5 .n-pc.n-sk{pointer-events:none}.n-v5 .n-pc.n-sk .n-pc__w{display:block;aspect-ratio:3/4;background:rgba(0,0,0,.025)}.n-v5 .n-pc.n-sk .n-pc__i{display:block;height:142px}
+
+/* v5.1 catálogo: 2 por fila en móvil, tarjeta compacta */
+.n-bento--2c{grid-template-columns:1fr 1fr}
+@media (min-width:900px){.n-bento--2c{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:899px){
+.n-bento--2c .n-pc__i{padding:10px 12px 12px;gap:4px}
+.n-bento--2c .n-pc__r{font-size:11px;gap:4px}.n-bento--2c .n-pc__r .n-stars{font-size:10px;letter-spacing:.02em}
+.n-bento--2c .n-pc__t{flex-direction:column;align-items:flex-start;gap:2px}
+.n-bento--2c .n-pc__t b{font-size:11px;letter-spacing:.05em;line-height:1.3}
+.n-bento--2c .n-pc__t span{font-size:13px}
+.n-bento--2c .n-pc__s{font-size:11px;line-height:1.35}
+.n-bento--2c .n-pc .n-btn{min-height:40px;font-size:11px;letter-spacing:.05em;padding:0 8px}
+.n-bento--2c .n-pc__bp{display:none}
+.n-bento--2c .n-pc .n-pay{height:40px;min-height:40px}.n-bento--2c .n-pc .n-pay--plain span{font-size:11px}
+.n-bento--2c .n-pc__new{font-size:9px;padding:4px 7px;right:10px;top:10px}
+.n-bento--2c .n-pc.n-sk .n-pc__i{height:118px}
+}
