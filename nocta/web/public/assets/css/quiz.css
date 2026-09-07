@@ -1,0 +1,96 @@
+/* NOCTA · Test de piel v2 — estilos propios (prefijo n-qz-). Se carga después de styles.css. */
+
+/* ---------- contenedor y transición entre pantallas ---------- */
+#q{transition:opacity .22s var(--n-e),transform .22s var(--n-e)}
+#q.n-qz-out{opacity:0;transform:translateX(-14px)}
+#q.n-qz-out-r{opacity:0;transform:translateX(14px)}
+#q.n-qz-in{opacity:0;transform:translateX(14px)}
+#q.n-qz-in-r{opacity:0;transform:translateX(-14px)}
+@media (prefers-reduced-motion:reduce){#q{transition:none}}
+
+/* ---------- pantalla inicial ---------- */
+.n-qz-start{padding:var(--n-s6) var(--n-s4);display:grid;gap:var(--n-s3)}
+.n-qz-start h1{font-size:26px;font-weight:var(--n-w-med);letter-spacing:-.02em;max-width:18ch}
+.n-qz-start .n-lead{margin:0}
+.n-qz-start .n-list{margin-top:var(--n-s2)}
+.n-qz-start .n-btn{margin-top:var(--n-s3)}
+@media (min-width:900px){.n-qz-start{padding:var(--n-s8)}.n-qz-start h1{font-size:36px}}
+
+/* ---------- pantalla de pregunta ---------- */
+.n-qz-q{padding:var(--n-s5) var(--n-s4) var(--n-s6)}
+.n-qz-q h2{margin-top:6px;max-width:22ch}
+.n-qz-why{margin-top:10px;display:inline-block}
+.n-qz-whyp{margin-top:8px;max-width:44ch}
+@media (min-width:900px){.n-qz-q{padding:var(--n-s7)}}
+
+.n-qz-opts{display:grid;gap:10px;margin-top:var(--n-s5)}
+.n-qz-opt{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:12px 14px;background:var(--n-paper);border:1px solid var(--n-line);border-radius:16px;text-align:left;transition:background var(--n-t2) var(--n-e),border-color var(--n-t2) var(--n-e),transform var(--n-t1) var(--n-e)}
+.n-qz-opt:active{transform:scale(.98)}
+.n-qz-opt.is-on{border-color:var(--n-navy);background:var(--n-sage-14)}
+.n-qz-opt__ic{flex:none;width:40px;height:40px;display:grid;place-items:center;border-radius:999px;background:var(--n-card);color:var(--n-navy)}
+.n-qz-opt.is-on .n-qz-opt__ic{background:var(--n-navy);color:var(--n-cream)}
+.n-qz-opt__t{flex:1;min-width:0}
+.n-qz-opt__t b{display:block;font-weight:var(--n-w-med);color:var(--n-navy);font-size:var(--n-fs-body)}
+.n-qz-opt__t small{display:block;margin-top:2px;color:var(--n-muted);font-size:var(--n-fs-sm);line-height:1.35}
+.n-qz-opt__chev{flex:none;color:var(--n-muted)}
+.n-qz-opt.is-on .n-qz-opt__chev{color:var(--n-navy)}
+.n-qz-next{margin-top:var(--n-s5)}
+@media (hover:hover){.n-qz-opt:hover{border-color:var(--n-line-2)}}
+
+/* ---------- barra de progreso: reutiliza .n-progress/.n-lab del sistema ---------- */
+
+/* ---------- pantalla de email (hereda .n-form del sistema) ---------- */
+.n-qz-email{padding:var(--n-s5) var(--n-s4) var(--n-s6)}
+@media (min-width:900px){.n-qz-email{padding:var(--n-s7)}}
+
+/* ---------- resultado ---------- */
+.n-qz-profile{padding:var(--n-s5) var(--n-s4)}
+.n-qz-profile h2{margin-top:6px}
+@media (min-width:900px){.n-qz-profile{padding:var(--n-s7)}}
+
+.n-qz-bars{display:grid;gap:var(--n-s4);margin-top:var(--n-s5)}
+.n-qz-bar__h{display:flex;justify-content:space-between;align-items:baseline;gap:var(--n-s3)}
+.n-qz-bar__h span{font-size:var(--n-fs-sm);color:var(--n-ink-2)}
+.n-qz-bar__h b{font-size:var(--n-fs-label);letter-spacing:var(--n-ls-label);text-transform:uppercase;color:var(--n-navy)}
+.n-qz-bar__track{height:8px;background:var(--n-line);border-radius:var(--n-r-pill);overflow:hidden;margin-top:6px}
+.n-qz-bar__track i{display:block;height:100%;background:var(--n-navy);border-radius:var(--n-r-pill);transition:width .4s var(--n-e)}
+.n-qz-bar p{margin-top:6px}
+
+.n-qz-prod{display:flex;flex-direction:column}
+.n-qz-prod__media{aspect-ratio:1;padding:10%}
+.n-qz-prod__body{padding:0 var(--n-s4) var(--n-s5);display:flex;flex-direction:column;gap:6px;flex:1}
+.n-qz-prod__why{color:var(--n-ink-2);margin:2px 0 0}
+.n-qz-prod__when{color:var(--n-navy);margin:0}
+.n-qz-prod__when b{font-weight:var(--n-w-semi)}
+.n-qz-prod .n-price{margin-top:2px}
+.n-qz-prod .n-buy{margin-top:var(--n-s2)}
+.n-qz-prod__add{align-self:flex-start;margin-top:4px}
+
+.n-qz-week{padding:var(--n-s5) var(--n-s4)}
+.n-qz-week__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:var(--n-s3)}
+.n-qz-day{display:grid;gap:6px;justify-items:center;text-align:center}
+.n-qz-day>.n-lab{font-size:10px}
+.n-qz-day__pills{display:grid;gap:4px;width:100%}
+.n-qz-pill{display:block;padding:5px 2px;border-radius:8px;font-size:9px;line-height:1.2;letter-spacing:.02em;font-weight:var(--n-w-med);background:var(--n-card);color:var(--n-navy);text-align:center}
+.n-qz-pill--exf{background:var(--n-sage-28);color:var(--n-sage-ink)}
+.n-qz-pill--daily{background:transparent;color:var(--n-muted);box-shadow:inset 0 0 0 1px var(--n-line-2)}
+.n-qz-pill--off{background:transparent;color:var(--n-line-2);box-shadow:inset 0 0 0 1px var(--n-line)}
+@media (min-width:640px){.n-qz-pill{font-size:11px;padding:6px 4px}.n-qz-day>.n-lab{font-size:11px}}
+
+.n-qz-steps3{padding:var(--n-s5) var(--n-s4)}
+@media (min-width:900px){.n-qz-steps3{padding:var(--n-s7)}.n-qz-steps3 .n-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--n-s6)}.n-qz-steps3 .n-steps li{display:block;border-top:0}.n-qz-steps3 .n-steps li .n-lab{display:block;margin-bottom:var(--n-s2)}}
+
+.n-qz-obj{padding:var(--n-s4) var(--n-s4)}
+.n-qz-obj h3{color:var(--n-navy)}
+.n-qz-obj p{color:var(--n-ink-2);margin-top:4px}
+
+.n-qz-summary{padding:var(--n-s5) var(--n-s4)}
+.n-qz-summary__rows{display:grid;gap:6px;font-size:var(--n-fs-sm);color:var(--n-ink-2)}
+.n-qz-summary__rows .row{display:flex;justify-content:space-between;gap:var(--n-s3)}
+.n-qz-summary__rows .row.ok{color:var(--n-ok-ink)}
+.n-qz-summary__tot{display:flex;justify-content:space-between;font-size:19px;font-weight:var(--n-w-semi);color:var(--n-navy);margin:var(--n-s3) 0 var(--n-s4);padding-top:var(--n-s3);border-top:1px solid var(--n-line)}
+.n-qz-summary .n-pay{margin-top:var(--n-s2)}
+.n-qz-summary__actions{display:flex;justify-content:center;gap:var(--n-s5);margin-top:var(--n-s4);flex-wrap:wrap}
+@media (min-width:900px){.n-qz-summary{padding:var(--n-s6)}}
+
+.n-qz-share-ok{display:inline-flex;align-items:center;gap:6px;color:var(--n-ok-ink);font-size:var(--n-fs-sm)}
