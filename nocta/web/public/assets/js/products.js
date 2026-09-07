@@ -147,7 +147,7 @@ window.NOCTA_PRODUCTS = [
   {
     slug: "kit-cara-completa", sku: "NC-FULL", name: "Kit Cara Completa", short: "Todos los parches + granos", bundle: ["parches-nariz", "parches-superficie", "parches-barbilla", "parches-frente", "parches-granos"],
     price: 69, compare: 82.75, sub: 58.65, units: "8 + 10 + 8 + 5 + 36 parches", badge: "AHORRA 17 %", rating: 4.8, reviews: 39,
-    image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/unboxing.jpg"], tags: ["bundle"],
+    image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/lifestyle-noche.jpg"], tags: ["bundle"],
     desc: "Los cinco parches NOCTA en un solo kit: poros, brotes, granos y zona T. Dos meses de piel limpia por menos de 1,20 € al día.",
     bullets: ["5 formatos de parche", "Ahorra 13,75 €", "Envío gratis + regalo"],
     claims: [["67", "parches"], ["2", "meses de uso"], ["17 %", "de ahorro"]],

@@ -90,3 +90,17 @@ Total: 90 créditos. Publicados comprimidos (≈120 KB cada uno) en `web/public/
 | Imagen | Método | Coste | Veredicto |
 |---|---|---|---|
 | `web/public/assets/img/<slug>-cut.webp` + `.png` (12 productos + gama + dorso) y originales en `brand/recortes/` | Higgsfield `remove_background` sobre el packshot aprobado (1 cr/imagen); recorte local con rembg (isnet) como alternativa gratuita para los envases sueltos | 12 | ✅ Bordes limpios sin halo; conserva liner, pinzas, gotero, trazo de gel y discos; lienzo cuadrado con margen 6 % y fondo transparente para que el producto flote sobre el crema de la web |
+
+## Auditoría de recortes para la web v2 (7 sep 2026)
+
+Método: los 12 `*-cut.webp` compuestos sobre fondo navy (#14213D) al 100 % en las zonas de riesgo (cristal, cuentagotas, gel, tela, láminas) + estadística de píxeles de borde (alpha 20-235) con color casi blanco.
+
+| Recorte | Halo blanco en borde | Resultado |
+|---|---|---|
+| 10 de 12 | 0,0-0,2 % | limpios, sin cambios |
+| `parches-superficie-cut` | 0,0 % pero banda borrosa entre caja y lámina (fallo del matte, el original estaba limpio) | corregido: hueco recto entre caja (fila 1020) y lámina (fila 1046), borde superior de la lámina reconstruido en línea recta y color de lámina rellenado desde fila limpia |
+| `parches-frente-cut` | 0,0 % pero la lámina reflejaba texto invertido «HIDROCOLOIDE» | corregido: inpaint (OpenCV Telea) de los píxeles de texto en la lámina, 4.147 px |
+
+Fotos lifestyle: `como-se-pone` y `lifestyle-noche` correctas y coherentes con el packaging crema. `unboxing` **retirada de la web** (cajas navy con texto en inglés «NOSE PATCHES · pore strips», incoherentes con el packaging real); sustituida por `lifestyle-noche` en `sobre.html` y en la galería del Kit Cara Completa. Pendiente: regenerar un unboxing con las cajas crema reales si se quiere recuperar esa foto.
+
+Vídeos de catálogo (10): fotogramas a 2,5 s revisados, producto y etiquetas correctos, fondo beige de estudio uniforme.

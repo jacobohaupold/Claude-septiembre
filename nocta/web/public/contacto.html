@@ -1,50 +1,70 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contacto · NOCTA</title><meta name="description" content="Escríbenos por email, WhatsApp o el formulario. Respondemos en menos de 24 h laborables."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css"><script src="/assets/js/products.js"></script><script src="/assets/js/app.js" defer></script></head>
-<body><div id="site-header"></div>
-<article class="article">
-<div class="kicker">Estamos aquí</div><h1>¿Alguna duda? Escríbenos</h1>
-<p>Somos un equipo pequeño en España y contestamos nosotros mismos, sin bots. Antes de un pedido, sobre uno que ya tienes o sobre la garantía: cuéntanos.</p>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contacto · NOCTA</title>
+<meta name="description" content="Escríbenos por email, WhatsApp o el formulario. Respondemos en menos de 24 h laborables.">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F3">
+<script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<div id="site-header"><div class="n-top-ph"></div></div>
+<main class="n-wrap n-wrap--text" id="main">
 
-<div class="trust" style="margin:26px 0">
-<div>✉️ Email<br><a href="mailto:hola@nocta.es">hola@nocta.es</a></div>
-<div>💬 WhatsApp<br><a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 00 00 00</a> (pendiente de alta)</div>
-<div>🕐 Horario<br>L-V 9:00-18:00 · respuesta &lt;24 h</div>
-</div>
+<span class="n-lab">Estamos aquí</span>
+<h1 class="n-d2" style="margin:10px 0 14px">¿Alguna duda? Escríbenos</h1>
+<p class="n-lead">Somos un equipo pequeño en España y contestamos nosotros mismos, sin bots. Antes de un pedido, sobre uno que ya tienes o sobre la garantía: cuéntanos.</p>
 
-<h2>Formulario de contacto</h2>
-<form class="form" id="cf">
-<label>Nombre</label><input name="nombre" required>
-<label>Email</label><input type="email" name="email" required>
-<label>Motivo</label>
-<select name="motivo">
+<dl class="n-spec" style="margin-top:var(--n-s6)">
+<div><dt class="n-lab">Email</dt><dd><a href="mailto:hola@nocta.es">hola@nocta.es</a></dd></div>
+<div><dt class="n-lab">WhatsApp</dt><dd><a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 00 00 00</a> (pendiente de alta)</dd></div>
+<div><dt class="n-lab">Respuesta</dt><dd>Menos de 24 h laborables</dd></div>
+<div><dt class="n-lab">Horario</dt><dd>L-V 9:00-18:00</dd></div>
+</dl>
+<p class="n-sm n-muted" style="margin-top:var(--n-s2)">Si es urgente, escríbenos por WhatsApp.</p>
+
+<div class="n-sech" style="margin-top:var(--n-s7)"><span class="n-lab">Formulario</span><h2>Formulario de contacto</h2></div>
+<form class="n-form" id="cf">
+<label for="cf-nombre">Nombre</label>
+<input id="cf-nombre" name="nombre" required>
+<label for="cf-email">Email</label>
+<input id="cf-email" name="email" type="email" autocomplete="email" required>
+<label for="cf-motivo">Motivo</label>
+<select id="cf-motivo" name="motivo">
 <option value="pedido">Tengo una duda sobre mi pedido</option>
 <option value="producto">Duda sobre un producto</option>
 <option value="garantia">Garantía o devolución</option>
 <option value="mayorista">Colaboraciones / mayoristas</option>
 <option value="otro">Otro</option>
 </select>
-<label>Mensaje</label><input name="msg" required placeholder="Cuéntanos en qué te podemos ayudar">
-<button class="btn wide" style="margin-top:12px">Enviar mensaje</button>
+<label for="cf-msg">Mensaje</label>
+<textarea id="cf-msg" name="msg" required placeholder="Cuéntanos en qué te podemos ayudar"></textarea>
+<button class="n-btn n-btn--wide" style="margin-top:var(--n-s4)">Enviar mensaje</button>
 </form>
-<p class="byline">Respondemos en menos de 24 h laborables desde hola@nocta.es. Si es urgente, escríbenos por WhatsApp.</p>
-<div class="cta"><a class="btn ghost" href="/catalogo.html">Ver catálogo completo</a></div>
-</article>
+
+<p style="margin-top:var(--n-s6)"><a class="n-link" href="/garantia.html">Garantía</a> · <a class="n-link" href="/envios-devoluciones.html">Envíos</a> · <a class="n-link" href="/garantia.html#preguntas">Preguntas frecuentes</a> · <a class="n-link" href="/catalogo.html">Ver catálogo completo</a></p>
+</main>
 <div id="site-footer"></div>
+<script src="/assets/js/products.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('cf').onsubmit=e=>{
-    e.preventDefault();
-    const f=new FormData(e.target);
-    fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
-      email:f.get('email'),
-      tipo:'contacto',
-      src:'contacto:'+f.get('motivo'),
-      nombre:f.get('nombre'),
-      msg:f.get('msg')
-    })}).catch(()=>{});
-    nTrack('contact_request',{motivo:f.get('motivo')});
-    e.target.innerHTML='<h3>Recibido ✅</h3><p>Te escribimos en menos de 24 h a tu email.</p>';
-  };
+document.getElementById('cf').onsubmit=e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
+    email:f.get('email'),
+    tipo:'contacto',
+    src:'contacto:'+f.get('motivo'),
+    nombre:f.get('nombre'),
+    msg:f.get('msg')
+  })}).catch(()=>{});
+  nTrack('contact_request',{motivo:f.get('motivo')});
+  e.target.innerHTML=`<div class="n-ok-box" role="status">${nIco('check',18)}<div><b>Recibido</b><br>Te escribimos en menos de 24 h a tu email.</div></div>`;
+};
 });
 </script>
-</body></html>
+</body>
+</html>
