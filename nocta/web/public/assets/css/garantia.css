@@ -29,6 +29,7 @@
 .n-ga-tl__i b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--n-w-med);color:var(--n-navy);margin-bottom:5px}
 .n-ga-tl__i span{display:block;font-size:12px;line-height:1.35;color:var(--n-muted)}
 .n-ga-spec{margin-top:var(--n-s6)}
+@media (max-width:599.98px){.n-ga-spec>div{flex-direction:column;align-items:flex-start;gap:4px}.n-ga-spec dd{text-align:left}}
 @media (min-width:900px){.n-ga-flow{padding:var(--n-s7)}}
 
 /* ---------- qué cubre ---------- */

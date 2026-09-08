@@ -26,7 +26,7 @@
 .n-pd__meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--n-muted)}
 .n-pd__meta a{display:inline-flex;align-items:center;gap:6px;color:var(--n-navy);text-decoration:none;min-height:32px;letter-spacing:.06em}
 .n-pd__meta .n-stars{font-size:11px;letter-spacing:.08em;color:var(--n-navy)}
-.n-pd__title{margin:0;font-size:30px;line-height:1.05;letter-spacing:-.025em;font-weight:var(--n-w-med);color:var(--n-navy)}
+.n-pd__title{margin:0;font-size:30px;line-height:1.05;letter-spacing:-.025em;font-weight:var(--n-w-med);color:var(--n-navy);text-wrap:balance}
 .n-pd__short{margin:0;color:var(--n-ink-2);font-size:15px;line-height:1.5}
 .n-pd__price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-top:2px}
 .n-pd__price b{font-size:26px;letter-spacing:-.02em;font-weight:var(--n-w-med);color:var(--n-navy)}

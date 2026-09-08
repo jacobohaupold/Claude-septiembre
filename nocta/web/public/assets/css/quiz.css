@@ -83,8 +83,8 @@
 .n-qz-prod__when{color:var(--n-navy);margin:0}
 .n-qz-prod__when b{font-weight:var(--n-w-semi)}
 .n-qz-prod .n-price{margin-top:2px}
-.n-qz-prod .n-buy{margin-top:var(--n-s2)}
-.n-qz-prod__add{align-self:flex-start;margin-top:4px}
+.n-qz-prod .n-buy{margin-top:auto;padding-top:var(--n-s2)}
+.n-qz-prod__add{align-self:flex-start;margin-top:auto;padding-top:4px}
 
 .n-qz-week{padding:var(--n-s5) var(--n-s4)}
 .n-qz-week__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:var(--n-s3)}
@@ -105,6 +105,9 @@
 .n-qz-obj{padding:var(--n-s4) var(--n-s4)}
 .n-qz-obj h3{color:var(--n-navy)}
 .n-qz-obj p{color:var(--n-ink-2);margin-top:4px}
+/* hay 1-3 "por qué" según tus respuestas: con menos de 3 no dejar
+   columnas vacías a la derecha */
+@media (min-width:900px){.n-qz-result .n-bento--3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}}
 
 .n-qz-summary{padding:var(--n-s5) var(--n-s4)}
 .n-qz-summary__rows{display:grid;gap:6px;font-size:var(--n-fs-sm);color:var(--n-ink-2)}
