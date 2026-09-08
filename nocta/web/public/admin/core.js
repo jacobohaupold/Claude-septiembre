@@ -9,7 +9,7 @@
   /* ---------- API ---------- */
   A.api = async (path, { method = 'GET', body, raw = false } = {}) => {
     const r = await fetch('/api/admin/' + path.replace(/^\//, ''), { method, headers: { 'x-admin-token': A.token(), ...(body !== undefined ? { 'content-type': 'application/json' } : {}) }, body: body !== undefined ? JSON.stringify(body) : undefined });
-    if (r.status === 401) { A.logout(); throw new Error('Sesión caducada'); }
+    if (r.status === 401) { if (A.token()) A.logout(); throw new Error('Sesión caducada'); }
     if (raw) return r;
     const j = await r.json().catch(() => ({}));
     if (!r.ok) { const e = new Error(j.error || ('Error ' + r.status)); e.detail = j.detail; throw e; }
@@ -62,7 +62,7 @@
       case 'toggle': return `<div class="fld"><label class="tog"><input type="checkbox" name="${f.k}" ${val === undefined ? (f.default ? 'checked' : '') : (val ? 'checked' : '')}> ${esc(f.label)}</label>${f.help ? `<span class="help">${f.help}</span>` : ''}</div>`;
       case 'json': inp = `<textarea id="${id}" name="${f.k}" data-json class="mono">${esc(val == null ? '' : JSON.stringify(val, null, 2))}</textarea>`; break;
       case 'hidden': return `<input type="hidden" name="${f.k}" value="${esc(val)}">`;
-      default: inp = `<input id="${id}" name="${f.k}" type="${f.type || 'text'}" value="${esc(val == null ? (f.default ?? '') : (f.type === 'datetime' && val ? String(val).slice(0, 16) : val))}" ${f.required ? 'required' : ''} ${f.step ? `step="${f.step}"` : ''} ${f.min != null ? `min="${f.min}"` : ''} placeholder="${esc(f.placeholder || '')}" ${f.type === 'datetime' ? 'type="datetime-local"' : ''}>`;
+      default: { const ty = f.type === 'datetime' ? 'datetime-local' : (f.type || 'text'); const dv = f.type === 'datetime' && val ? new Date(new Date(val).getTime() - new Date(val).getTimezoneOffset() * 60000).toISOString().slice(0, 16) : val; inp = `<input id="${id}" name="${f.k}" type="${ty}" value="${esc(val == null ? (f.default ?? '') : dv)}" ${f.required ? 'required' : ''} ${f.step ? `step="${f.step}"` : ''} ${f.min != null ? `min="${f.min}"` : ''} placeholder="${esc(f.placeholder || '')}">`; }
     }
     return `<div class="fld"><label for="${id}">${esc(f.label)}</label>${inp}${f.help ? `<span class="help">${f.help}</span>` : ''}</div>`;
   }).join('');
@@ -82,7 +82,8 @@
     const r = A.route(); const m = A.mods[r.name] || A.mods.dashboard; current = r.name;
     $$('#nav a').forEach(a => a.classList.toggle('on', a.dataset.m === r.name));
     $('#title').textContent = m.title; document.title = m.title + ' · NOCTA CRM';
-    const main = $('#main'); main.innerHTML = '<div class="loading">Cargando…</div>'; main.scrollTop = 0; window.scrollTo(0, 0);
+    const old = $('#main'); const main = old.cloneNode(false); old.replaceWith(main); /* nodo nuevo: sin listeners de renders anteriores */
+    main.innerHTML = '<div class="loading">Cargando…</div>'; window.scrollTo(0, 0);
     try { await m.render(main, r.params, r.query); } catch (e) { main.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p>${e.detail ? `<pre class="mono">${esc(JSON.stringify(e.detail, null, 2))}</pre>` : ''}</div>`; console.error(e); }
     $('#side').classList.remove('open'); $('#sidebg').classList.remove('open');
   };
@@ -94,7 +95,7 @@
     $('#logout').onclick = A.logout; $('#menu').onclick = () => { $('#side').classList.toggle('open'); $('#sidebg').classList.toggle('open'); }; $('#sidebg').onclick = () => { $('#side').classList.remove('open'); $('#sidebg').classList.remove('open'); };
     $('#days').onchange = e => { A.state.days = Number(e.target.value); A.cache = {}; A.render(); }; $('#refresh').onclick = () => { A.cache = {}; A.render(); };
     addEventListener('hashchange', A.render);
-    const boot = async () => { try { const me = await A.api('me'); A.me = me; $('#login').hidden = true; $('#app').hidden = false; A.nav(); A.render(); A.badges && A.badges(); } catch (e) { $('#app').hidden = true; $('#login').hidden = false; } };
+    const boot = async () => { try { const r = await fetch('/api/admin/me', { headers: { 'x-admin-token': A.token() } }); if (!r.ok) { localStorage.removeItem('n_admin'); throw new Error('login'); } A.me = await r.json(); $('#login').hidden = true; $('#app').hidden = false; A.nav(); A.render(); A.badges && A.badges(); } catch (e) { $('#app').hidden = true; $('#login').hidden = false; } };
     if (!A.token()) { try { const r = await fetch('/api/admin/me'); if (r.ok) { localStorage.setItem('n_admin', 'open'); } } catch (e) { } }
     boot();
   };

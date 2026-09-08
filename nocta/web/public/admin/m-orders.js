@@ -108,11 +108,11 @@
     const rows = o.items || [];
     const body = A.table({
       cols: [
-        { k: 'img', label: '', render: r => { const p = A.product(r.slug); return p && p.image ? `<img class="thumb" src="${esc(p.image)}" alt="">` : '<div class="thumb"></div>'; }, w: '54px' },
+        { k: 'img', label: '', render: r => { const p = A.product(r.slug); return p && p.image ? `<img class="thumb" src="${esc(p.image.replace(/\.(jpg|png)$/, '.webp'))}" alt="" loading="lazy">` : '<div class="thumb"></div>'; }, w: '54px' },
         { k: 'name', label: 'Artículo', render: r => `<b>${esc(r.name || r.slug)}</b>${r.opt ? `<br><span class="muted xs">${esc(r.opt)}</span>` : ''}` },
         { k: 'qty', label: 'Cant.', render: r => r.qty || 1, cls: 'right num', w: '55px' },
         { k: 'unit', label: 'Precio', render: r => A.money(r.unit), cls: 'right num', w: '80px' },
-        { k: 'total', label: 'Total', render: r => A.money(r.sub != null ? r.sub : (r.unit || 0) * (r.qty || 1)), cls: 'right num', w: '90px' }
+        { k: 'total', label: 'Total', render: r => A.money((Number(r.unit) || 0) * (Number(r.qty) || 1)), cls: 'right num', w: '90px' }
       ], rows, empty: 'Sin artículos.', click: false
     });
     return A.card('Artículos', body);

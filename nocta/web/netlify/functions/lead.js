@@ -3,7 +3,7 @@
 // POST /api/cart {vid,email,name,items,total} → carrito para recuperación.  GET /api/discount?code=&subtotal= → validación de código.
 import { db, dbOk, content, now, esc } from './lib/db.js';
 import { sendEmail, addContact, removeContact, tpl } from './lib/mail.js';
-import { waSend, normPhone } from './lib/wa.js';
+import { waSend, normPhone, fill } from './lib/wa.js';
 import { getDiscount, serverProducts } from './lib/catalog.js';
 import { json } from './lib/auth.js';
 
@@ -55,7 +55,7 @@ export default async (req, context) => {
   if (isNew && cfgMail) { const m = tpl.welcome({ name, code, pct }); tasks.push(sendEmail({ to: email, ...m, template: 'welcome', tags: [{ name: 'flow', value: 'welcome' }], meta: { src } }).then(async r => { if (lead && r && r.id) await db.update('leads', 'id=eq.' + lead.id, { resend_contact: r.id }).catch(() => { }); }).catch(() => { })); }
   tasks.push(addContact({ email, firstName: name.split(' ')[0], lastName: name.split(' ').slice(1).join(' ') }).catch(() => { }));
   const cfgWa = wa && await automation('welcome_whatsapp');
-  if (isNew && cfgWa) tasks.push(waSend({ to: phone, kind: 'welcome', text: (cfgWa.text || `Hola${name ? ' ' + name.split(' ')[0] : ''} 🌙 Soy NOCTA. Tu código *${code}* te descuenta un ${pct} % en todo: ${process.env.SITE_URL || 'https://nocta-store.netlify.app'}/?code=${code}\nResponde a este mensaje si tienes cualquier duda sobre tu piel.`).replace('{code}', code).replace('{pct}', pct), meta: { src } }).catch(() => { }));
+  if (isNew && cfgWa) tasks.push(waSend({ to: phone, kind: 'welcome', text: fill(cfgWa.text || 'Hola {nombre} 🌙 Soy NOCTA. Tu código *{code}* te descuenta un {pct} % en todo: {url}\nResponde a este mensaje si tienes cualquier duda sobre tu piel.', { nombre: name ? name.split(' ')[0] : '', code, pct, url: (process.env.SITE_URL || 'https://nocta-store.netlify.app') + '/?code=' + code }), meta: { src } }).catch(() => { }));
   await Promise.all(tasks);
   return json({ ok: true, code, pct, isNew });
 };

@@ -204,7 +204,7 @@
         return;
       }
       if (tr) A.go('campaigns/' + tr.dataset.id);
-    });
+    };
   }
 
   async function renderCampaignsEditor(el, id) {
@@ -364,11 +364,11 @@
       }
       if (t.id === 'fWaText') { const c = $('#waCount', el); if (c) c.textContent = t.value.length + ' caracteres'; schedulePreview(); return; }
       if (t.id === 'fSubject' || t.id === 'fPreheader') { schedulePreview(); return; }
-    });
+    };
     el.onchange = e => {
       const t = e.target;
       if (t.id === 'fSegType') { state.segment = { type: t.value, value: null }; $('#segExtraWrap', el).innerHTML = segExtraHtml(state.segment); $('#countOut', el).textContent = ''; }
-    });
+    };
     el.onclick = e => {
       const add = e.target.closest('[data-addblock]'); if (add) { state.blocks.push(BLOCK_DEFS[add.dataset.addblock].def()); redrawBlocks(); schedulePreview(); return; }
       const up = e.target.closest('[data-bup]'); if (up) { const i = Number(up.dataset.bup); if (i > 0) { const b = state.blocks; [b[i - 1], b[i]] = [b[i], b[i - 1]]; redrawBlocks(); schedulePreview(); } return; }
@@ -381,7 +381,7 @@
       if (e.target.closest('#btnTest')) { doTest(); return; }
       if (e.target.closest('#btnSchedule')) { doSchedule(); return; }
       if (e.target.closest('#btnSend')) { doSend(); return; }
-    });
+    };
 
     draw();
     schedulePreview();
@@ -627,7 +627,7 @@
     el.onclick = e => {
       const tr = e.target.closest('tr[data-id]'); if (!tr) return;
       const row = rows.find(r => String(r.id) === tr.dataset.id); if (row) openMessageModal(row);
-    });
+    };
   }
 
   /* ---------- registro de módulos ---------- */

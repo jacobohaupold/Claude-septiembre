@@ -5,7 +5,7 @@ import { db, dbOk, now, esc, setting, logMessage } from './lib/db.js';
 import { serverProducts } from './lib/catalog.js';
 import { stripe, stripeConfig, verifyStripeSignature } from './lib/stripe.js';
 import { sendEmail, tpl } from './lib/mail.js';
-import { waSend } from './lib/wa.js';
+import { waSend, fill } from './lib/wa.js';
 import { json } from './lib/auth.js';
 
 const getOrder = async id => { if (!id || !dbOk()) return null; try { return await db.one('orders', 'id=eq.' + esc(id)); } catch (e) { return null; } };
@@ -36,7 +36,7 @@ export async function markPaid(o, extra = {}) {
   const emails = { ...(upd.emails || {}) };
   if (upd.email && !emails.confirm) { try { const m = tpl.orderConfirm(upd); const r = await sendEmail({ to: upd.email, ...m, template: 'order_confirm', tags: [{ name: 'flow', value: 'order' }], meta: { order: upd.id } }); emails.confirm = now(); } catch (e) { } }
   const wa = await automation('order_whatsapp');
-  if (wa && upd.phone && !emails.wa_confirm) { const r = await waSend({ to: upd.phone, kind: 'order_confirm', text: (wa.text || `Hola${upd.name ? ' ' + String(upd.name).split(' ')[0] : ''} 🌙 Tu pedido NOCTA {order} está confirmado ({total} €). Sale en 24-48 h y te aviso por aquí con el seguimiento.`).replace('{order}', upd.id).replace('{total}', Number(upd.total).toFixed(2).replace('.', ',')), meta: { order: upd.id } }); if (!r.error) emails.wa_confirm = now(); }
+  if (wa && upd.phone && !emails.wa_confirm) { const r = await waSend({ to: upd.phone, kind: 'order_confirm', text: fill(wa.text || 'Hola {nombre} 🌙 Tu pedido NOCTA {order} está confirmado ({total} €). Sale en 24-48 h y te aviso por aquí con el seguimiento.', { nombre: upd.name ? String(upd.name).split(' ')[0] : '', order: upd.id, total: Number(upd.total).toFixed(2).replace('.', ',') }), meta: { order: upd.id } }); if (!r.error) emails.wa_confirm = now(); }
   await patch(upd.id, { emails });
   try { await db.insert('events', [{ t: now(), ev: 'purchase', vid: upd.vid, sid: upd.sid, path: '/gracias.html', utm: upd.utm || {}, d: { value: upd.total, order: upd.id, items: (upd.items || []).map(i => ({ slug: i.slug, qty: i.qty })) } }]); } catch (e) { }
   return { ...upd, emails };

@@ -2,6 +2,8 @@
 // Sin token: no envía, pero registra el mensaje como 'skipped' y el CRM ofrece enlace wa.me para enviarlo a mano.
 import { setting, logMessage } from './db.js';
 
+// Rellena {nombre} {code} {pct} {order} {total} {url} en textos configurables desde el CRM; limpia dobles espacios si el nombre falta.
+export function fill(t, v = {}) { let o = String(t || ''); Object.entries(v).forEach(([k, x]) => { o = o.split('{' + k + '}').join(x == null ? '' : String(x)); }); return o.replace(/Hola\s+([🌙,.!])/u, 'Hola $1').replace(/[ \t]{2,}/g, ' ').replace(/ ,/g, ','); }
 export async function waConfig() { return (await setting('whatsapp', null)) || {}; }
 export function normPhone(p) { let d = String(p || '').replace(/[^\d+]/g, ''); if (!d) return ''; if (d.startsWith('00')) d = '+' + d.slice(2); if (!d.startsWith('+')) { d = d.replace(/^0+/, ''); d = (d.length === 9 ? '+34' : '+') + d; } return d; }
 export const waLink = (phone, text) => 'https://wa.me/' + normPhone(phone).replace('+', '') + (text ? '?text=' + encodeURIComponent(text) : '');
