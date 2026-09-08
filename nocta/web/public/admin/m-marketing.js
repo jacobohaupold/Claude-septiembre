@@ -182,7 +182,7 @@
     `;
     $('#newEmail', el).onclick = () => A.go('campaigns/new');
     $('#newWa', el).onclick = () => A.go('campaigns/new-wa');
-    el.addEventListener('click', async e => {
+    el.onclick = async e => {
       const dup = e.target.closest('[data-dup]'), del = e.target.closest('[data-del]'), tr = e.target.closest('tr[data-id]');
       if (dup) {
         e.stopPropagation();
@@ -354,7 +354,7 @@
       draw(); schedulePreview();
     }
 
-    el.addEventListener('input', e => {
+    el.oninput = e => {
       const t = e.target;
       if (t.matches('[data-bf]')) {
         const i = Number(t.dataset.bi), f = t.dataset.bf;
@@ -365,11 +365,11 @@
       if (t.id === 'fWaText') { const c = $('#waCount', el); if (c) c.textContent = t.value.length + ' caracteres'; schedulePreview(); return; }
       if (t.id === 'fSubject' || t.id === 'fPreheader') { schedulePreview(); return; }
     });
-    el.addEventListener('change', e => {
+    el.onchange = e => {
       const t = e.target;
       if (t.id === 'fSegType') { state.segment = { type: t.value, value: null }; $('#segExtraWrap', el).innerHTML = segExtraHtml(state.segment); $('#countOut', el).textContent = ''; }
     });
-    el.addEventListener('click', e => {
+    el.onclick = e => {
       const add = e.target.closest('[data-addblock]'); if (add) { state.blocks.push(BLOCK_DEFS[add.dataset.addblock].def()); redrawBlocks(); schedulePreview(); return; }
       const up = e.target.closest('[data-bup]'); if (up) { const i = Number(up.dataset.bup); if (i > 0) { const b = state.blocks; [b[i - 1], b[i]] = [b[i], b[i - 1]]; redrawBlocks(); schedulePreview(); } return; }
       const down = e.target.closest('[data-bdown]'); if (down) { const i = Number(down.dataset.bdown); const b = state.blocks; if (i < b.length - 1) { [b[i + 1], b[i]] = [b[i], b[i + 1]]; redrawBlocks(); schedulePreview(); } return; }
@@ -624,7 +624,7 @@
     }
     draw();
     $('#fCh', el).onchange = draw; $('#fSt', el).onchange = draw;
-    el.addEventListener('click', e => {
+    el.onclick = e => {
       const tr = e.target.closest('tr[data-id]'); if (!tr) return;
       const row = rows.find(r => String(r.id) === tr.dataset.id); if (row) openMessageModal(row);
     });

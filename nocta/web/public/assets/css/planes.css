@@ -4,8 +4,8 @@
 .n-pl-hero .n-lead{margin:0;font-size:16px}
 .n-pl-hero__chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .n-pl-hero__chips span{display:inline-flex;align-items:center;height:32px;padding:0 12px;border:1px solid var(--n-line-2);border-radius:999px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--n-navy)}
-.n-pl-grid{margin-top:var(--n-gap);align-items:start}
-.n-pl{padding:22px 20px 20px;display:grid;gap:14px}
+.n-pl-grid{margin-top:var(--n-gap)}
+.n-pl{padding:22px 20px 20px;display:flex;flex-direction:column;gap:14px}
 .n-pl--m{background:var(--n-navy);color:var(--n-cream)}
 .n-pl--m .n-lab,.n-pl--m .n-pl__lead,.n-pl--m .n-pl__foot,.n-pl--m .n-list li,.n-pl--m .n-pl__price span,.n-pl--m .n-pl__price s,.n-pl--m figcaption{color:rgba(243,239,230,.82)}
 .n-pl--m .n-lab--navy{color:var(--n-sage)}
@@ -37,7 +37,7 @@
 .n-pl__pills{display:flex;flex-wrap:wrap;gap:6px}
 .n-pl__pills button{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--n-line-2);background:transparent;color:var(--n-navy);font:inherit;font-size:12px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background var(--n-t2) var(--n-e),color var(--n-t2) var(--n-e)}
 .n-pl__pills button.is-on{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
-.n-pl .n-buy{margin-top:2px}
+.n-pl .n-buy{margin-top:auto;padding-top:2px}
 .n-pl__foot{margin:0;font-size:12px;line-height:1.5;color:var(--n-muted);text-align:center}
 .n-pl-how,.n-pl-cal,.n-pl-cmp,.n-pl-faq{margin-top:var(--n-gap);padding:24px 20px}
 .n-pl-how__head{display:grid;gap:6px;margin-bottom:16px}

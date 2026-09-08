@@ -341,6 +341,7 @@
   }
 
   async function renderSettings(el) {
+    el.innerHTML = '';
     A.tabs(el, { 'General': tabGeneral, 'Exportar datos': tabExport, 'Seguridad': tabSecurity, 'Claves avanzadas': tabAdvanced });
   }
   A.mod('settings', { title: 'Ajustes', icon: '⋯', group: 'Ajustes', render: renderSettings });
