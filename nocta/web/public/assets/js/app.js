@@ -92,7 +92,7 @@ const C={
     const c=$('#cartcount');if(c){c.classList.remove('n-bump');void c.offsetWidth;c.classList.add('n-bump');}},
   remove(i){const items=this.get();const r=items.splice(i,1)[0];this.set(items);T.send('remove_from_cart',{slug:r&&r.slug});},
   qty(i,d){const items=this.get();items[i].qty=Math.max(1,Math.min(10,items[i].qty+d));this.set(items);},
-  totals(){const items=this.get();let sub=0,n=0;items.forEach(i=>{const p=byslug(i.slug);if(!p)return;sub+=(i.sub?p.sub:p.price)*i.qty;n+=i.qty;});
+  totals(){const items=this.get();let sub=0,n=0,plan=false;items.forEach(i=>{const p=byslug(i.slug);if(!p)return;if(p.plan)plan=true;sub+=(p.plan?p.price:(i.sub?p.sub:p.price))*i.qty;n+=i.qty;});if(plan)n=Math.max(n,2);
     const disc=JSON.parse(sessionStorage.getItem('n_disc')||'null');let dAmt=0;if(disc)dAmt=disc.type==='pct'?sub*disc.value/100:Math.min(sub,disc.value);
     const after=sub-dAmt;const ship=(after>=SHIP.freeFrom||n>=2||after===0)?0:SHIP.base;const gifts=GIFTS.filter(g=>after>=g.threshold&&g.slug);
     return{items,sub,n,disc,dAmt,ship,total:after+ship,gifts};},

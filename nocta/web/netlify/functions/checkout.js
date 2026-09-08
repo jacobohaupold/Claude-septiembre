@@ -14,7 +14,7 @@ export default async (req) => {
   const CODES = { HOLA10: 10, TIKTOK10: 10, BIENVENIDA15: 15 };
   if (CODES[code]) discount = +(subtotal * CODES[code] / 100).toFixed(2);
   const n = items.reduce((a, i) => a + i.qty, 0);
-  const shipping = (subtotal - discount >= SHIPPING.freeFrom || n >= 2) ? 0 : SHIPPING.base;
+  const shipping = (recurring || subtotal - discount >= SHIPPING.freeFrom || n >= 2) ? 0 : SHIPPING.base; /* planes y suscripciones: envío gratis siempre */
   const total = +(subtotal - discount + shipping).toFixed(2);
   const orderId = 'NC' + Date.now().toString(36).toUpperCase();
   const order = { id: orderId, t: Date.now(), items, subtotal, discount, code, shipping, total, email: body.email, name: body.name, address: body.address, pay: body.pay, vid: body.vid, sid: body.sid, utm: body.utm || {}, status: 'pending', upsell: null, mode: recurring ? 'subscription' : 'payment' };
