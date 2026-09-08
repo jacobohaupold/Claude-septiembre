@@ -98,7 +98,7 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(32, 1, 1, 2000);
-    const target = new THREE.Vector3(0, 9, 5);
+    const target = new THREE.Vector3(0, 13, 5);
     /* algo más cenital que un simple 3/4 frontal: deja ver mejor que el parche
        se apoya PLANO sobre la piel, encima de los poros, en vez de leerse como
        dos bloques flotando uno junto a otro */
@@ -158,7 +158,21 @@
       sceneGroup.add(pl);
     })();
     skinMesh.receiveShadow = true;
+    skinMesh.position.y = -0.3;
     sceneGroup.add(skinMesh);
+
+    /* ---------- puente de la nariz: superficie curva sobre el bloque ---------- */
+    const RIDGE_H = 12;
+    const surf = function (x, z) { return skinTopY + RIDGE_H * Math.exp(-(x * x) / (2 * 21 * 21)) * (1 - 0.2 * Math.max(0, (z + 10) / 46)); };
+    const up = new THREE.Vector3(0, 1, 0);
+    const normalAt = function (x, z) { const e = 0.5; return new THREE.Vector3(-(surf(x + e, z) - surf(x - e, z)) / (2 * e), 1, -(surf(x, z + e) - surf(x, z - e)) / (2 * e)).normalize(); };
+    (function addRidge() {
+      const g = new THREE.PlaneGeometry(SKIN_W - 5, SKIN_D - 5, 96, 64); g.rotateX(-Math.PI / 2);
+      const p = g.attributes.position;
+      for (let i = 0; i < p.count; i++) { const x = p.getX(i), z = p.getZ(i); p.setY(i, surf(x, z) - 0.3); }
+      g.computeVertexNormals();
+      const m = new THREE.Mesh(g, skinMat); m.receiveShadow = true; sceneGroup.add(m);
+    })();
 
     /* ---------- poros: 7 ranuras + filamentos ---------- */
     const N_PORES = 7;
@@ -180,21 +194,20 @@
     const dotMat = new THREE.MeshStandardMaterial({ color: 0x8A6552, roughness: 0.9 });
     const filaments = [];
 
+    const poreZ = poreFrontZ - 1.5;
     poreXs.forEach(function (x) {
+      /* cada poro vive en un grupo apoyado en la superficie y alineado con su normal */
+      const g = new THREE.Group();
+      g.position.set(x, surf(x, poreZ), poreZ);
+      g.quaternion.setFromUnitVectors(up, normalAt(x, poreZ));
+      sceneGroup.add(g);
       const slot = new THREE.Mesh(new THREE.BoxGeometry(1.6, 7, 2.4), slotMat);
-      slot.position.set(x, skinTopY - 4.2, poreFrontZ);
-      sceneGroup.add(slot);
-
+      slot.position.set(0, -4.2, 0); g.add(slot);
       const dot = new THREE.Mesh(new THREE.CircleGeometry(1.15, 24), dotMat);
-      dot.rotation.x = -Math.PI / 2;
-      dot.position.set(x, skinTopY + 0.03, poreFrontZ - 1.5);
-      sceneGroup.add(dot);
-
+      dot.rotation.x = -Math.PI / 2; dot.position.set(0, 0.03, 0); g.add(dot);
       const fil = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 0.85, 6, 14), filMat);
-      fil.position.set(x, skinTopY - 5, poreFrontZ - 1.5);
-      fil.castShadow = true;
-      sceneGroup.add(fil);
-      filaments.push({ mesh: fil, x: x, z: poreFrontZ - 1.5, baseY: skinTopY - 5 });
+      fil.position.set(0, -5, 0); fil.castShadow = true; g.add(fil);
+      filaments.push({ mesh: fil, x: x, z: poreZ, baseY: -5 });
     });
 
     /* ---------- pista de contexto: halo cálido y difuso detrás del bloque de
@@ -244,6 +257,20 @@
     const patchGeo = new THREE.ExtrudeGeometry(patchShape(), { depth: 0.6, bevelEnabled: true, bevelSize: 0.15, bevelThickness: 0.15, bevelSegments: 2, steps: 1 });
     patchGeo.translate(-30, -22.5, 0);
     patchGeo.computeVertexNormals();
+    /* drapeado: el eje de extrusión (z de la geometría) es la altura en el mundo; se levanta cada
+       vértice lo que sube el puente de la nariz bajo él, según el progreso de la caída */
+    const pPos = patchGeo.attributes.position;
+    const pBase = Float32Array.from(pPos.array);
+    let drapeCur = -1;
+    function drape(t) {
+      if (Math.abs(t - drapeCur) < 0.002) return;
+      drapeCur = t;
+      const a = pPos.array;
+      /* mundo: x=-x_g, y=-z_g, z=patchRestZ-y_g (rotateX(-90) y rotateY(180) del mesh) */
+      for (let i = 0; i < a.length; i += 3) { const bump = surf(-pBase[i], patchRestZ - pBase[i + 1]) - skinTopY; a[i + 2] = pBase[i + 2] - bump * t; }
+      pPos.needsUpdate = true;
+      patchGeo.computeVertexNormals();
+    }
     const patchMat = new THREE.MeshPhysicalMaterial({ color: 0xF6EEE2, emissive: 0xF6EEE2, emissiveIntensity: 0.22, roughness: 0.42, metalness: 0, clearcoat: 0.55, clearcoatRoughness: 0.3, transparent: true, opacity: 0.66, depthWrite: false, side: THREE.DoubleSide });
     const patchMesh = new THREE.Mesh(patchGeo, patchMat);
     patchMesh.castShadow = true;
@@ -256,11 +283,7 @@
        (fase "23:00 · Ponlo") la silueta real (puente + dos alas) se lee como
        una mancha abstracta. El trazo, hijo de patchMesh, hereda su rotación
        y su squash de presión sin cálculo aparte. */
-    const patchEdges = new THREE.LineSegments(
-      new THREE.EdgesGeometry(patchGeo, 28),
-      new THREE.LineBasicMaterial({ color: 0x14213D, transparent: true, opacity: 0.16 })
-    );
-    patchMesh.add(patchEdges);
+
 
     const restY = skinTopY;
     /* Centro (en Z) de la franja ancha del troquel, ver comentario en
@@ -268,7 +291,7 @@
        modo que esa franja ancha —y no el cuello estrecho del puente— quede
        encima de los 7 poros. */
     const patchRestZ = 9;
-    const hingeZ = patchRestZ - 22.5; /* borde del puente: el gozne */
+    const hingeZ = patchRestZ + 22.5; /* gozne en el borde delantero: al levantarse muestra la cara de abajo */ /* borde del puente: el gozne */
     const patchLocalZ = patchRestZ - hingeZ; /* = 22.5 */
 
     const hinge = new THREE.Group();
@@ -288,7 +311,8 @@
     poreXs.forEach(function (x, i) {
       const disc = new THREE.Mesh(new THREE.CircleGeometry(1.7, 24), discMat);
       disc.rotation.x = Math.PI / 2;
-      disc.position.set(x, 0.3, patchLocalZ + (filaments[i].z - patchRestZ));
+      disc.position.set(x, -0.9, patchLocalZ + (filaments[i].z - patchRestZ));
+      disc.userData.bump = surf(x, filaments[i].z) - skinTopY;
       disc.scale.setScalar(0.001);
       hinge.add(disc);
       discs.push(disc);
@@ -307,7 +331,7 @@
       const aspect = w / h;
       camera.aspect = aspect;
       const vFov = deg(32) / 2;
-      const halfH = 19, halfW = 47;
+      const halfH = 23, halfW = 47;
       const distForH = halfH / Math.tan(vFov);
       const distForW = halfW / (Math.tan(vFov) * aspect);
       const dist = Math.max(distForH, distForW) * 1.12;
@@ -351,11 +375,14 @@
          ángulo menor se conserva la sensación de caída sin perder la forma
          reconocible desde el primer fotograma visible. */
       hinge.rotation.z = (1 - dropT) * deg(9);
-      const squash = 1 - 0.12 * Math.sin(Math.PI * pressT);
+      const squash = 1 - 0.08 * Math.sin(Math.PI * pressT);
       patchMesh.scale.set(1, squash, 1);
+      const drapeT = dropT * (1 - 0.55 * openT);
+      drape(drapeT);
+      discs.forEach(function (d) { d.position.y = -0.9 + d.userData.bump * drapeT; });
 
       /* apertura al final de la noche */
-      hinge.rotation.x = -deg(75) * openT;
+      hinge.rotation.x = deg(78) * openT;
 
       /* filamentos y grasa absorbida */
       const span = 1 - (N_PORES - 1) * 0.06;
@@ -363,7 +390,7 @@
         const stagger = i * 0.06;
         const local = smoothstep(0, 1, Math.min(1, Math.max(0, (nightT - stagger) / span)));
         /* al despegar, la grasa ya está en el parche: el filamento desaparece */
-        f.mesh.position.y = f.baseY + local * 6.4 - openT * 7;
+        f.mesh.position.y = f.baseY + local * 2.8 - openT * 7;
         f.mesh.scale.y = lerp(0.35, 1.15, local) * (1 - openT);
         f.mesh.visible = openT < 0.97;
         const d = discs[i];

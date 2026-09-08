@@ -1,0 +1,57 @@
+/* NOCTA · garantia.html · v5 bento · prefijo n-ga- */
+
+/* ---------- hero ---------- */
+.n-ga-hero{padding:var(--n-s6) var(--n-s4);display:grid;gap:var(--n-s3)}
+.n-ga-hero>*{max-width:52ch}
+.n-ga-hero__h{margin-top:2px!important}
+@media (min-width:900px){.n-ga-hero{padding:var(--n-s7)}.n-ga-hero>*{max-width:44ch}}
+.n-ga-stats b.n-num{font-size:24px;white-space:nowrap}
+@media (min-width:400px){.n-ga-stats b.n-num{font-size:28px}}
+@media (min-width:900px){.n-ga-stats b.n-num{font-size:40px}}
+
+/* ---------- tres garantías ---------- */
+.n-ga-card{padding:var(--n-s5) var(--n-s4);display:grid;gap:var(--n-s3);align-content:start}
+.n-ga-card h3{display:flex;flex-wrap:wrap;align-items:center;gap:var(--n-s2)}
+.n-ga-card p{color:var(--n-ink-2)}
+.n-ga-ic{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--n-bg);color:var(--n-navy);flex:none}
+.n-ga-need{margin:0;padding-top:var(--n-s3);border-top:1px solid var(--n-line-2)}
+.n-ga-need dt{margin:0 0 4px}
+.n-ga-need dd{margin:0;color:var(--n-ink-2);font-size:var(--n-fs-sm);line-height:1.45}
+@media (min-width:900px){.n-ga-card{padding:var(--n-s6)}}
+
+/* ---------- cómo funciona ---------- */
+.n-ga-flow{padding:var(--n-s5) var(--n-s4)}
+.n-ga-tl{display:flex;gap:var(--n-s2);margin-top:var(--n-s6);padding-top:var(--n-s6);border-top:1px solid var(--n-line-2)}
+.n-ga-tl__i{flex:1;min-width:0;text-align:center;position:relative;padding-top:22px}
+.n-ga-tl__i::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;background:var(--n-navy);z-index:2}
+.n-ga-tl__i::after{content:"";position:absolute;top:4px;left:-50%;width:100%;height:1.5px;background:var(--n-line-2);z-index:1}
+.n-ga-tl__i:first-child::after{content:none}
+.n-ga-tl__i b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--n-w-med);color:var(--n-navy);margin-bottom:5px}
+.n-ga-tl__i span{display:block;font-size:12px;line-height:1.35;color:var(--n-muted)}
+.n-ga-spec{margin-top:var(--n-s6)}
+@media (min-width:900px){.n-ga-flow{padding:var(--n-s7)}}
+
+/* ---------- qué cubre ---------- */
+.n-ga-cover{padding:var(--n-s5) var(--n-s4);display:grid;gap:var(--n-s6)}
+.n-ga-cover__col{display:flex;flex-direction:column;gap:var(--n-s2)}
+@media (min-width:900px){.n-ga-cover{padding:var(--n-s7);grid-template-columns:1fr 1fr;gap:var(--n-s8)}}
+
+/* ---------- por qué podemos permitírnoslo ---------- */
+.n-ga-why{padding:var(--n-s5) var(--n-s4);display:grid;gap:var(--n-s3)}
+.n-ga-why p{color:var(--n-ink-2);max-width:66ch}
+@media (min-width:900px){.n-ga-why{padding:var(--n-s7)}}
+
+/* ---------- formulario ---------- */
+.n-ga-form{padding:var(--n-s5) var(--n-s4)}
+.n-ga-form .n-form input,.n-ga-form .n-form select,.n-ga-form .n-form textarea{background:#fff}
+.n-ga-formnote{margin-top:var(--n-s3)}
+@media (min-width:900px){.n-ga-form{padding:var(--n-s7)}.n-ga-form .n-form{max-width:52ch}}
+
+/* ---------- faq ---------- */
+.n-ga-faq{padding:0 var(--n-s4) var(--n-s2)}
+@media (min-width:900px){.n-ga-faq{padding:0 var(--n-s5) var(--n-s3)}}
+
+/* ---------- cierre ---------- */
+.n-ga-cta-ph{min-height:160px}
+.n-ga-closelinks{display:flex;flex-wrap:wrap;align-items:center;gap:var(--n-s3);justify-content:center;margin:var(--n-s5) 0 0;padding:0 var(--n-s2)}
+.n-ga-closelinks span{color:var(--n-line-2)}

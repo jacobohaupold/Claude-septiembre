@@ -1,0 +1,91 @@
+/* NOCTA — no-son-puntos-negros.html — prefijo n-ci- (v5 bento) */
+
+/* barra de progreso de lectura, pegajosa bajo la cabecera */
+.n-ci-prog{position:fixed;left:0;right:0;top:calc(var(--n-header-h) + var(--n-safe-t));height:3px;z-index:39;background:transparent;pointer-events:none}
+.n-ci-prog i{display:block;height:100%;width:0%;background:var(--n-navy);transition:width .08s linear}
+
+/* etiqueta discreta sobre cada render 3D */
+.n-ci-fig{position:relative}
+.n-ci-fig img{display:block;width:100%;height:100%;object-fit:cover}
+.n-ci-tag{position:absolute;top:10px;left:10px;z-index:4;background:var(--n-navy-70);color:#fff;font-size:9px;line-height:1;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--n-w-med);padding:6px 9px;border-radius:999px;backdrop-filter:blur(3px)}
+
+/* hero editorial: etiqueta 3D + meta línea */
+.n-ci-hero .n-ci-tag{top:var(--n-s4);left:var(--n-s4)}
+.n-ci-hero .n-ed5__t .n-lab{color:var(--n-sage)}
+.n-ci-hero .n-ed5__t h1{color:#fff;font-size:26px;line-height:1.1;letter-spacing:-.02em;font-weight:var(--n-w-med);max-width:14ch}
+.n-ci-hero .n-ed5__t{text-shadow:0 2px 18px rgba(20,33,61,.55)}
+.n-ci-eyebrow{color:#fff!important;background:var(--n-navy-70);padding:6px 12px;border-radius:999px;text-shadow:none}
+@media (min-width:900px){.n-ci-hero .n-ci-tag{left:var(--n-s7)}.n-ci-hero .n-ed5__t h1{font-size:40px}}
+.n-ci-meta{padding:var(--n-s4) var(--n-s2) 0}
+@media (min-width:900px){.n-ci-meta{padding:var(--n-s5) var(--n-s2) 0}}
+
+/* segmento píldora (comparador, móvil) */
+.n-ci-seg{display:flex;gap:4px;background:var(--n-card);border-radius:999px;padding:4px;margin:0 0 var(--n-gap)}
+.n-ci-seg__b{flex:1;min-height:var(--n-tap);border:0;background:transparent;border-radius:999px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:var(--n-w-med);color:var(--n-muted)}
+.n-ci-seg__b.is-on{background:var(--n-navy);color:var(--n-cream)}
+@media (min-width:900px){.n-ci-seg{display:none}}
+
+/* tarjetas comparador punto negro / filamento */
+.n-ci-compare{display:none}
+.n-ci-compare.is-on{display:block}
+@media (min-width:900px){.n-ci-compare{display:block!important}}
+.n-ci-compare .n-ci-fig{aspect-ratio:3/4}
+.n-ci-compare__b{padding:var(--n-s4) var(--n-s4) var(--n-s5)}
+.n-ci-compare__b .n-lab{display:block;margin-bottom:6px}
+.n-ci-facts{margin:var(--n-s3) 0 0;display:grid;gap:10px;padding:0}
+.n-ci-facts>div{border-top:1px solid var(--n-line);padding-top:8px}
+.n-ci-facts dt{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--n-muted);margin:0 0 3px}
+.n-ci-facts dd{margin:0;font-size:var(--n-fs-sm);line-height:1.5;color:var(--n-ink-2)}
+
+/* «por qué vuelven»: número + línea de tiempo */
+.n-ci-timeline{padding:var(--n-s5) var(--n-s4)}
+@media (min-width:900px){.n-ci-timeline{padding:var(--n-s7)}}
+.n-ci-timeline__lab{display:block;margin-bottom:var(--n-s2)}
+.n-ci-timeline__bar{position:relative;height:6px;background:var(--n-line);border-radius:999px;overflow:hidden;margin:var(--n-s4) 0 var(--n-s3)}
+.n-ci-timeline__bar i{position:absolute;top:0;left:0;height:100%;width:2%;border-radius:999px;background:var(--n-navy);animation:n-ci-fill 4.8s linear infinite}
+@keyframes n-ci-fill{0%{width:2%}92%{width:100%}100%{width:100%}}
+.n-ci-timeline__ticks{display:flex;justify-content:space-between;gap:4px;list-style:none;margin:0;padding:0;font-size:10px;line-height:1.3;letter-spacing:.03em;text-transform:uppercase;color:var(--n-muted);text-align:center}
+.n-ci-timeline__ticks li:first-child{text-align:left}
+.n-ci-timeline__ticks li:last-child{text-align:right;max-width:8em}
+
+/* «lo que has probado»: rejilla de 4 */
+.n-ci-mistakes{display:grid;grid-template-columns:1fr;gap:var(--n-gap)}
+@media (min-width:720px){.n-ci-mistakes{grid-template-columns:1fr 1fr}}
+.n-ci-mistake{padding:var(--n-s4)}
+.n-ci-mistake h3{margin:2px 0 var(--n-s3);color:var(--n-navy)}
+.n-ci-mistake dl{margin:0;display:grid;gap:8px}
+.n-ci-mistake dt{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--n-muted)}
+.n-ci-mistake dd{margin:2px 0 0;font-size:var(--n-fs-sm);line-height:1.5;color:var(--n-ink-2)}
+
+/* «lo que hace el hidrocoloide»: tarjeta grande */
+.n-ci-hydro{display:grid;grid-template-columns:1fr}
+.n-ci-hydro__fig{aspect-ratio:1}
+.n-ci-hydro__b{padding:var(--n-s5) var(--n-s4) var(--n-s6)}
+.n-ci-hydro__b .n-steps{margin-top:var(--n-s4)}
+.n-ci-hydro__b .n-btn{margin-top:var(--n-s5)}
+@media (min-width:900px){.n-ci-hydro{grid-template-columns:1fr 1.15fr;align-items:stretch}.n-ci-hydro__fig{aspect-ratio:auto;height:100%;min-height:420px}.n-ci-hydro__b{padding:var(--n-s8)}}
+
+/* «qué esperar»: pareja de fotos gemelas */
+.n-ci-twin .n-ci-fig{aspect-ratio:1}
+.n-ci-twin figcaption{padding:var(--n-s3) var(--n-s4);display:flex;align-items:center;justify-content:space-between;gap:var(--n-s3)}
+.n-ci-note{margin:var(--n-s3) var(--n-s2) 0;text-align:center}
+
+/* cierre: dúo */
+.n-ci-close{display:grid;grid-template-columns:1fr}
+.n-ci-close__img{aspect-ratio:1}
+.n-ci-close__b{padding:var(--n-s5) var(--n-s4) var(--n-s6);display:grid;gap:var(--n-s2)}
+.n-ci-close__b h2{margin:2px 0 0}
+.n-ci-close__b p{margin:0}
+.n-ci-close__b .n-price{display:flex;align-items:baseline;gap:8px;margin-top:2px}
+.n-ci-close__b .n-price s{color:var(--n-muted);font-size:var(--n-fs-sm)}
+.n-ci-close__b .n-buy{margin-top:var(--n-s3)}
+.n-ci-close__b .n-link{margin-top:var(--n-s2);justify-self:start}
+@media (min-width:900px){.n-ci-close{grid-template-columns:340px 1fr}.n-ci-close__img{aspect-ratio:auto;height:100%}.n-ci-close__b{padding:var(--n-s8)}}
+/* qué esperar: cifras en fila en móvil (evita partir «2-3 semanas») */
+@media (max-width:899px){
+#expectNums{grid-template-columns:1fr}
+#expectNums .n-c{display:flex;align-items:baseline;gap:14px;text-align:left;padding:16px 20px}
+#expectNums b{flex:0 0 108px;font-size:26px;white-space:nowrap}
+#expectNums span{margin:0;font-size:14px;letter-spacing:0;text-transform:none;color:var(--n-ink-2);line-height:1.4}
+}
+@media (max-width:899px){#expectNums .n-c{flex-wrap:wrap}#expectNums .n-c>span:first-child{flex:0 0 100%;margin:0 0 2px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--n-muted)}}

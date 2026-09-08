@@ -5,11 +5,11 @@
 <title>NOCTA · Parches de hidrocoloide · Poros limpios mientras duermes</title>
 <meta name="description" content="Parches de hidrocoloide coreanos para nariz, barbilla, frente y granos. Absorben la grasa de los poros mientras duermes. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609072103">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609080021">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <link rel="preload" as="image" href="/assets/img/hero-poster.webp" fetchpriority="high">
-<script src="/assets/js/app.js?v=202609072103" defer></script>
+<script src="/assets/js/app.js?v=202609080021" defer></script>
 </head>
 <body class="n-v5 n-has-hero">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -60,8 +60,27 @@
   </section>
 
   <section id="packs">
-    <div class="n-sh"><h2>Packs</h2><a href="/catalogo.html">Ver todo</a></div>
+    <div class="n-sh"><h2>Packs</h2><span class="n-lab">Ahorra hasta 24 € y llévate regalo</span></div>
     <div class="n-bento n-bento--3 n-stagger" style="margin-top:0" id="grid-packs"><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article></div>
+  </section>
+
+
+  <section id="planes">
+    <div class="n-sh"><h2>Planes</h2><a href="/planes.html">Cómo funcionan</a></div>
+    <div class="n-bento n-bento--2 n-stagger" style="margin-top:0">
+      <article class="n-c n-plh n-plh--m n-reveal">
+        <span class="n-lab">Plan Noche · mensual</span>
+        <p class="n-plh__price"><b class="n-num">49 €</b><span>/mes</span><s class="n-num">hasta 65,90 €</s></p>
+        <p>2 cajas de parches de las zonas que elijas + 1 skincare para poros, cada mes en casa. Envío gratis, regalo el primer mes y sin permanencia.</p>
+        <div class="n-plh__a"><button class="n-btn n-btn--fill" data-buy="plan-mensual" data-opt="Nariz + Frente" data-src="home-plan">Empezar · 49 €/mes</button><a class="n-btn" href="/planes.html">Ver el plan</a></div>
+      </article>
+      <article class="n-c n-plh n-reveal">
+        <span class="n-lab">Plan Semanal</span>
+        <p class="n-plh__price"><b class="n-num">14,90 €</b><span>/semana</span><s class="n-num">20,85 € suelto con envío</s></p>
+        <p>Una caja nueva de 8 parches cada 7 días, de la zona que elijas. Para quien usa varias zonas y no quiere quedarse sin parches.</p>
+        <div class="n-plh__a"><button class="n-btn n-btn--fill" data-buy="plan-semanal" data-opt="Nariz" data-src="home-plan">Empezar · 14,90 €/sem</button><a class="n-btn" href="/planes.html">Elegir zona</a></div>
+      </article>
+    </div>
   </section>
 
   <section id="comunidad">
@@ -100,13 +119,13 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609072103"></script>
-<script src="/assets/js/photos.js?v=202609072103"></script>
+<script src="/assets/js/products.js?v=202609080021"></script>
+<script src="/assets/js/photos.js?v=202609080021"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{const P=window.NOCTA_PRODUCTS;
 const h1=document.getElementById('h1');h1.innerHTML=h1.textContent.split(' ').map((w,i)=>`<span style="--i:${i}">${w}</span>`).join(' ');
 const hv=document.getElementById('herovid');if(hv&&!matchMedia('(prefers-reduced-motion:reduce)').matches){hv.hidden=false;hv.addEventListener('playing',()=>hv.previousElementSibling.style.opacity=0,{once:true});}
-document.getElementById('grid-parches').innerHTML=P.filter(p=>p.tags.includes('parches')&&!p.bundle).map(p=>nCardR(p,{src:'home'})).join('');
+document.getElementById('grid-parches').innerHTML=P.filter(p=>p.tags.includes('parches')&&!p.bundle).map((p,i)=>nCardR(p,{src:'home',eager:i===0})).join('');
 document.getElementById('grid-skincare').innerHTML=P.filter(p=>p.tags.includes('skincare')).map(p=>nCardR(p,{src:'home'})).join('');
 document.getElementById('grid-packs').innerHTML=P.filter(p=>p.bundle).map(p=>nCardR(p,{src:'home'})).join('');
 const duo=nBySlug('duo-poros');document.getElementById('duo-card').innerHTML=`<span class="n-lab">El método de dos pasos</span><h2>Disuelve y absorbe.</h2><p>Exfoliante Salicílico 2 % + Parches de Nariz. Juntos, <b class="n-num">${nEur(duo.price)}</b> <s>${nEur(duo.compare)}</s>.</p><button class="n-btn" data-buy="duo-poros" data-src="home-duo">Comprar el dúo · ${nEur(duo.price)}</button>`;

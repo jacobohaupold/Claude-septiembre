@@ -124,10 +124,10 @@ window.NOCTA_PRODUCTS = [
   // BUNDLES
   {
     slug: "duo-poros", sku: "NC-DUO", name: "Dúo Poros Limpios", short: "Salicílico + Parches de nariz", bundle: ["exfoliante-salicilico", "parches-nariz"],
-    price: 44, compare: 48.95, sub: 37.4, units: "110 ml + 8 parches", badge: "MÉTODO 2 PASOS", rating: 4.8, reviews: 121,
+    price: 36.9, compare: 48.95, sub: 31.35, units: "110 ml + 8 parches", badge: "AHORRA 12 €", gift: "Mascarilla de tela de regalo", rating: 4.8, reviews: 121,
     image: "/assets/img/gama.jpg", gallery: ["/assets/img/exfoliante.jpg", "/assets/img/parches-nariz.jpg", "/assets/img/gama.jpg"], tags: ["bundle", "poros"],
     desc: "El método coreano de dos pasos: el salicílico disuelve la grasa del poro y el parche la absorbe durante la noche. Poros visiblemente más limpios en 2 semanas.",
-    bullets: ["Paso 1: disuelve · Paso 2: absorbe", "Ahorra 4,95 € frente a comprarlos por separado", "Envío gratis incluido"],
+    bullets: ["Paso 1: disuelve · Paso 2: absorbe", "12,05 € menos que comprándolos por separado", "Mascarilla de tela de regalo y envío gratis"],
     claims: [["2", "pasos"], ["2", "semanas para ver la diferencia"], ["+50 %", "de absorción con el exfoliante"]],
     how: ["Noche: exfoliante en la zona T, seca 1 minuto.", "Parche de nariz encima.", "Duerme 6-8 h.", "2 veces por semana."],
     ingredients: "Ver cada producto.", faq: [["¿Cuánto dura?", "El exfoliante 3-4 meses; los parches 4-8 semanas a 1-2 usos por semana."]],
@@ -135,10 +135,10 @@ window.NOCTA_PRODUCTS = [
   },
   {
     slug: "kit-t-zone", sku: "NC-TZONE", name: "Kit Zona T", short: "Frente + Nariz + Barbilla", bundle: ["parches-frente", "parches-nariz", "parches-barbilla"],
-    price: 44, compare: 50.85, sub: 37.4, units: "5 + 8 + 8 parches", badge: "AHORRA 14 %", rating: 4.7, reviews: 44,
+    price: 37.9, compare: 50.85, sub: 32.2, units: "5 + 8 + 8 parches", badge: "AHORRA 13 €", gift: "Mascarilla de tela de regalo", rating: 4.7, reviews: 44,
     image: "/assets/img/parches-barbilla.jpg", gallery: ["/assets/img/parches-barbilla.jpg", "/assets/img/gama.jpg"], tags: ["bundle", "t-zone"],
     desc: "El 80 % de la grasa de tu cara sale por la zona T. Tres parches con forma para frente, nariz y barbilla: una noche, toda la zona T limpia.",
-    bullets: ["Cubre toda la zona T", "Ahorra 6,85 €", "Envío gratis incluido"],
+    bullets: ["Cubre toda la zona T", "Tres cajas por menos de lo que cuestan dos y media: 12,95 € de ahorro", "Mascarilla de tela de regalo y envío gratis"],
     claims: [["80 %", "de la grasa facial está en la zona T"], ["21", "parches"], ["1", "noche"]],
     how: ["Limpia y seca.", "Frente, nariz y barbilla.", "Duerme.", "Retira despacio."],
     ingredients: "Hidrocoloide.", faq: [["¿Puedo usar los tres a la vez?", "Sí, es como está pensado."]],
@@ -146,14 +146,38 @@ window.NOCTA_PRODUCTS = [
   },
   {
     slug: "kit-cara-completa", sku: "NC-FULL", name: "Kit Cara Completa", short: "Todos los parches + granos", bundle: ["parches-nariz", "parches-superficie", "parches-barbilla", "parches-frente", "parches-granos"],
-    price: 69, compare: 82.75, sub: 58.65, units: "8 + 10 + 8 + 5 + 36 parches", badge: "AHORRA 17 %", rating: 4.8, reviews: 39,
+    price: 59, compare: 82.75, sub: 50.15, gift: "Pack de 4 mascarillas de tela de regalo (15 €)", units: "8 + 10 + 8 + 5 + 36 parches", badge: "AHORRA 24 €", rating: 4.8, reviews: 39,
     image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/lifestyle-noche.jpg"], tags: ["bundle"],
     desc: "Los cinco parches NOCTA en un solo kit: poros, brotes, granos y zona T. Dos meses de piel limpia por menos de 1,20 € al día.",
-    bullets: ["5 formatos de parche", "Ahorra 13,75 €", "Envío gratis + regalo"],
+    bullets: ["Los cinco parches de la gama, para cada zona y cada grano", "23,75 € menos que por separado", "Pack de 4 mascarillas de tela de regalo (15 €) y envío gratis"],
     claims: [["67", "parches"], ["2", "meses de uso"], ["17 %", "de ahorro"]],
     how: ["Cada parche según su zona.", "Duerme.", "Retira."],
     ingredients: "Hidrocoloide.", faq: [["¿Caducan?", "3 años cerrados; 12 meses abiertos."]],
     upsell: ["exfoliante-salicilico", "serum-niacinamida"]
+  },
+  {
+    slug: "plan-mensual", sku: "NC-PLAN-M", name: "Plan Noche mensual", short: "3 productos cada mes, envío gratis", plan: { interval: "month", label: "al mes", every: "cada mes", per: "mes" },
+    bundle: ["parches-nariz", "parches-frente", "exfoliante-salicilico"],
+    price: 49, compare: 65.9, sub: 49, units: "3 productos al mes", badge: "AHORRA 26 %", rating: 4.9, reviews: 38, gift: "Mascarilla de tela de regalo en tu primer envío",
+    image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/parches-nariz.jpg", "/assets/img/exfoliante.jpg"], tags: ["plan", "bundle"],
+    desc: "Tu rutina de poros completa, en casa cada mes sin pensar en nada: dos cajas de parches de las zonas que elijas y un producto de skincare para poros (rotamos exfoliante, sérum y tónico). Envío gratis siempre y precio bloqueado. Cancela, pausa o cambia de zonas desde el email de cada envío.",
+    bullets: ["2 cajas de parches al mes: eliges las zonas (nariz, frente, barbilla, granos)", "1 skincare para poros cada mes: Exfoliante Salicílico, Sérum Niacinamida o Tónico, en rotación", "Envío gratis, regalo el primer mes y precio bloqueado mientras sigas", "Cancela o pausa cuando quieras, sin permanencia"],
+    claims: [["49 €", "al mes, con envío"], ["hasta 65,90 €", "de valor cada mes"], ["0", "permanencia"]],
+    how: ["Elige las zonas de tus parches al empezar.", "Cada mes te llega la caja: 2 de parches + 1 skincare.", "Cambia zonas, pausa o cancela desde el email de cada envío."],
+    ingredients: "Ver cada producto.", faq: [["¿Qué llega el primer mes?", "Parches de nariz, parches de frente, Exfoliante Salicílico 2 % y una mascarilla de tela de regalo. Después puedes cambiar las zonas y el skincare rota cada mes."], ["¿Puedo cancelar?", "Sí, cuando quieras y sin permanencia: un clic desde el email de cada envío."], ["¿Cuándo se cobra?", "Hoy el primer envío y después cada mes el mismo día."]],
+    upsell: []
+  },
+  {
+    slug: "plan-semanal", sku: "NC-PLAN-S", name: "Plan Semanal", short: "Una caja de parches cada semana", plan: { interval: "week", label: "a la semana", every: "cada semana", per: "semana" },
+    bundle: ["parches-nariz"], zones: [["Nariz", "parches-nariz"], ["Frente", "parches-frente"], ["Barbilla", "parches-barbilla"], ["Granos", "parches-granos"]],
+    price: 14.9, compare: 20.85, sub: 14.9, units: "1 caja por semana", badge: "ENVÍO GRATIS", rating: 4.8, reviews: 21,
+    image: "/assets/img/parches-nariz.jpg", gallery: ["/assets/img/parches-nariz.jpg", "/assets/img/gama.jpg"], tags: ["plan", "bundle"],
+    desc: "Para quien usa parches en varias zonas cada semana: una caja nueva cada 7 días, de la zona que elijas, con envío gratis y sin quedarte nunca sin parches. Cambia de zona, pausa o cancela desde el email de cada envío.",
+    bullets: ["Una caja de 8 parches cada semana (nariz, frente, barbilla o granos)", "14,90 € con envío incluido, frente a 20,85 € comprando suelto con envío", "Cambia de zona cada semana desde el email", "Sin permanencia: pausa o cancela cuando quieras"],
+    claims: [["14,90 €", "a la semana, con envío"], ["8", "parches cada 7 días"], ["0", "permanencia"]],
+    how: ["Elige la zona de esta semana.", "Cada 7 días llega una caja nueva.", "Cambia de zona, pausa o cancela desde el email de cada envío."],
+    ingredients: "Hidrocoloide.", faq: [["¿Puedo cambiar de zona?", "Sí, cada semana desde el email del envío."], ["¿Cuándo se cobra?", "Hoy la primera caja y después cada semana el mismo día."]],
+    upsell: ["exfoliante-salicilico"]
   }
 ];
 window.NOCTA_GIFTS = [

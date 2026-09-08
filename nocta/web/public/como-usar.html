@@ -5,11 +5,12 @@
 <title>Cómo usar los parches NOCTA · Ponlo, duerme, despega</title>
 <meta name="description" content="Guía visual de la rutina NOCTA: cómo poner el parche, dónde va exactamente, cuánto dura y qué hacer con cada producto de la gama. Con una escena 3D de una noche completa.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609072103">
-<link rel="stylesheet" href="/assets/css/como-usar.css?v=202609072103">
+<link rel="preload" as="image" href="/assets/img/foto/ciencia-parche-nariz-macro.webp" imagesrcset="/assets/img/foto/ciencia-parche-nariz-macro.webp 1200w, /assets/img/foto/ciencia-parche-nariz-macro-2x.webp 1800w" sizes="(max-width:900px) 100vw, 900px">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609080021">
+<link rel="stylesheet" href="/assets/css/como-usar.css?v=202609080021">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609072103" defer></script>
+<script src="/assets/js/app.js?v=202609080021" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HowTo","name":"Cómo usar los parches NOCTA","description":"Poner, dejar actuar 6-8 horas y retirar un parche de hidrocoloide NOCTA.","totalTime":"PT8H","step":[
 {"@type":"HowToStep","name":"Ponlo","text":"Sobre la nariz limpia y completamente seca, con la curva en el puente y las alas sobre las aletas. Presiona 20 segundos con la palma de la mano.","image":"https://nocta.es/assets/img/paso-1.webp"},
@@ -24,10 +25,14 @@
 
 <section id="inicio">
   <div class="n-bento">
-    <div class="n-c n-cu-hero n-reveal">
-      <span class="n-lab">Guía de uso</span>
-      <h1>Ponlo. Duerme. Despega.</h1>
-      <p class="n-lead">Tres gestos, ocho horas y cero tirones. El 90&nbsp;% de los «no me funciona» vienen de dos cosas: piel con crema y parche mal presionado.</p>
+    <div class="n-c n-ed5 n-cu-hero n-reveal">
+      <img src="/assets/img/foto/ciencia-parche-nariz-macro.webp" srcset="/assets/img/foto/ciencia-parche-nariz-macro.webp 1200w, /assets/img/foto/ciencia-parche-nariz-macro-2x.webp 1800w" sizes="(max-width:900px) 100vw, 900px" width="1200" height="1600" alt="Macro de un parche NOCTA recién colocado sobre la nariz, listo para pasar la noche" loading="eager" decoding="async" fetchpriority="high">
+      <span class="n-lab n-cu-hero__tag">Ilustración 3D</span>
+      <div class="n-ed5__t">
+        <span class="n-lab">Guía de uso</span>
+        <h1>Ponlo. Duerme. Despega.</h1>
+        <p class="n-lead">Tres gestos, ocho horas y cero tirones. El 90&nbsp;% de los «no me funciona» vienen de dos cosas: piel con crema y parche mal presionado.</p>
+      </div>
     </div>
     <div class="n-num5 n-stagger">
       <div class="n-c n-reveal"><b class="n-num">20 s</b><span>de presión con la palma</span></div>
@@ -35,17 +40,36 @@
       <div class="n-c n-reveal"><b class="n-num">1-2</b><span>noches por semana</span></div>
     </div>
   </div>
+
+  <div class="n-c n-cu-zone n-reveal">
+    <span class="n-lab">¿Qué vas a usar esta noche?</span>
+    <div class="n-cu-zone__pills" role="group" aria-label="Elige la zona de esta noche">
+      <button type="button" class="n-cu-zone__pill is-on" data-zone="nariz" aria-pressed="true">Nariz</button>
+      <button type="button" class="n-cu-zone__pill" data-zone="frente" aria-pressed="false">Frente</button>
+      <button type="button" class="n-cu-zone__pill" data-zone="barbilla" aria-pressed="false">Barbilla</button>
+      <button type="button" class="n-cu-zone__pill" data-zone="granos" aria-pressed="false">Granos</button>
+      <button type="button" class="n-cu-zone__pill" data-zone="exfoliante" aria-pressed="false">Exfoliante</button>
+    </div>
+    <p class="n-cu-zone__hint" id="cu-zone-hint" aria-live="polite">Curva en el puente y alas sobre las aletas.</p>
+  </div>
+
   <nav class="n-c n-cu-index n-reveal" aria-label="Contenido de esta guía">
     <span class="n-lab">En esta guía</span>
     <ul class="n-cu-index__list">
       <li><a href="#escena">La noche, en 60 s</a></li>
       <li><a href="#gestos">Los tres gestos</a></li>
+      <li><a href="#herramientas">Herramientas para esta noche</a></li>
       <li><a href="#donde">Dónde va exactamente</a></li>
       <li><a href="#si-no">Sí y no</a></li>
       <li><a href="#semana">Tu semana tipo</a></li>
+      <li><a href="#antes-despues">Antes y después</a></li>
       <li><a href="#productos">Cada producto</a></li>
       <li><a href="#dudas">¿Y si…?</a></li>
     </ul>
+    <div class="n-cu-utils">
+      <button type="button" class="n-btn n-btn--ghost n-btn--sm" id="cu-print">Guardar esta guía</button>
+      <button type="button" class="n-btn n-btn--ghost n-btn--sm" id="cu-share">Compartir</button>
+    </div>
   </nav>
 </section>
 
@@ -76,7 +100,7 @@
       <div class="n-vt5 n-vt">
         <video src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 1: colocar el parche sobre la nariz seca"></video>
         <span class="n-vt5__l">01 · Ponlo</span>
-        <div class="n-vt5__c"><b>Sobre la nariz seca</b><span>Curva en el puente, alas sobre las aletas.</span></div>
+        <div class="n-vt5__c"><b id="cu-gesto-b">Sobre la nariz seca</b><span id="cu-gesto-place">Curva en el puente y alas sobre las aletas.</span></div>
       </div>
       <p class="n-cu-tip"><b>Si te has duchado, espera 10 minutos.</b> El parche necesita piel completamente seca para pegarse de verdad.</p>
     </div>
@@ -96,6 +120,54 @@
       </div>
       <p class="n-cu-tip"><b>Si tira,</b> moja el borde con agua tibia y espera 10 segundos: sale solo, sin arrancar piel.</p>
     </div>
+  </div>
+</section>
+
+<section id="herramientas">
+  <div class="n-sh"><h2>Prepara la noche</h2><span class="n-lab">Herramientas para esta noche</span></div>
+  <div class="n-bento n-bento--3 n-stagger">
+
+    <div class="n-c n-cu-tool n-reveal">
+      <span class="n-lab">Cronómetro</span>
+      <h3>Cuenta los 20 segundos</h3>
+      <p class="n-sm n-muted">Es el paso que más se salta. Pulsa y no sueltes hasta que termine.</p>
+      <div class="n-cu-timer">
+        <button type="button" class="n-cu-timer__btn" id="cu-timer-btn" aria-describedby="cu-timer-msg">
+          <svg class="n-cu-timer__ring" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+            <circle class="n-cu-timer__track" cx="60" cy="60" r="52"></circle>
+            <circle class="n-cu-timer__fill" id="cu-timer-fill" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <span class="n-cu-timer__txt"><b class="n-num" id="cu-timer-num">20</b><span id="cu-timer-lab">Pulsa y cuenta 20 s</span></span>
+        </button>
+        <p class="n-cu-timer__msg" id="cu-timer-msg" role="status" aria-live="polite">&nbsp;</p>
+      </div>
+    </div>
+
+    <div class="n-c n-cu-tool n-reveal">
+      <span class="n-lab">Recordatorio</span>
+      <h3>No te olvides de retirarlo</h3>
+      <p class="n-sm n-muted">8 horas desde ahora, calculadas al minuto.</p>
+      <div class="n-cu-remind">
+        <b class="n-num" id="cu-remind-time">07:00</b>
+        <span class="n-lab n-lab--navy">Hora de retirada</span>
+        <a class="n-btn n-btn--fill n-btn--sm n-cu-remind__btn" id="cu-remind-ics" href="#" download="retirar-parche-nocta.ics">Añadir al calendario</a>
+        <p class="n-sm n-muted n-cu-remind__alt">O pon una alarma: <b id="cu-remind-alt">07:00</b>.</p>
+      </div>
+    </div>
+
+    <div class="n-c n-cu-tool n-reveal">
+      <span class="n-lab">Checklist</span>
+      <h3>La lista de la noche</h3>
+      <p class="n-sm n-muted">Cuatro puntos, marcados antes de dormir.</p>
+      <ul class="n-cu-check" id="cu-check">
+        <li><button type="button" class="n-cu-check__item" data-k="seca" aria-pressed="false"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Nariz limpia y seca</span></button></li>
+        <li><button type="button" class="n-cu-check__item" data-k="sincrema" aria-pressed="false"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sin crema ni sérum en la zona</span></button></li>
+        <li><button type="button" class="n-cu-check__item" data-k="centrado" aria-pressed="false"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Parche centrado, alas sobre las aletas</span></button></li>
+        <li><button type="button" class="n-cu-check__item" data-k="presion" aria-pressed="false"><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>20 segundos de presión</span></button></li>
+      </ul>
+      <button type="button" class="n-link n-cu-check__reset" id="cu-check-reset">Reiniciar</button>
+    </div>
+
   </div>
 </section>
 
@@ -186,6 +258,23 @@
       <div><i class="s" aria-hidden="true"></i><span>Sérum y tónico, cada noche, en el resto de la cara</span></div>
     </div>
   </div>
+</section>
+
+<section id="antes-despues">
+  <div class="n-sh"><h2>Mira la diferencia</h2><span class="n-lab">Antes y después</span></div>
+  <div class="n-bento n-bento--2 n-stagger">
+    <div class="n-c n-cu-compare n-reveal">
+      <img src="/assets/img/foto/ciencia-superficie-antes.webp" srcset="/assets/img/foto/ciencia-superficie-antes.webp 1x, /assets/img/foto/ciencia-superficie-antes-2x.webp 2x" width="1200" height="1200" alt="Vista macro de la superficie de la piel con filamentos sebáceos dentro de los poros" loading="lazy" decoding="async">
+      <span class="n-lab n-cu-compare__tag">Antes</span>
+      <div class="n-cu-compare__c"><b>Así se ven los filamentos</b><span>9 de 10 vieron los poros más limpios tras la primera noche.</span></div>
+    </div>
+    <div class="n-c n-cu-compare n-reveal">
+      <img src="/assets/img/foto/ciencia-superficie-despues.webp" srcset="/assets/img/foto/ciencia-superficie-despues.webp 1x, /assets/img/foto/ciencia-superficie-despues-2x.webp 2x" width="1200" height="1200" alt="Vista macro de la superficie de la piel con los poros visiblemente más afinados" loading="lazy" decoding="async">
+      <span class="n-lab n-cu-compare__tag">Después</span>
+      <div class="n-cu-compare__c"><b>Así queda la piel con uso regular (2-3 semanas)</b><span>Poros visiblemente más pequeños usándolo 2 veces por semana.</span></div>
+    </div>
+  </div>
+  <p class="n-cu-compare__foot n-sm n-muted">Ilustraciones 3D; los resultados varían. <a class="n-link" href="/no-son-puntos-negros.html">Por qué salen esos puntitos</a></p>
 </section>
 
 <section id="productos">
@@ -393,8 +482,10 @@
       <details><summary>¿Se despega durante la noche?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Aplícalo siempre sobre piel totalmente seca y presiona 20 segundos: es lo que más evita que se despegue. Si aun así te pasa, tenemos garantía de adhesión y te cambiamos la caja.</p></div></div></details>
       <details><summary>¿Me tira al quitarlo?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Por la mañana levanta desde una esquina. Si tira, humedece el borde con agua tibia y espera unos segundos: sale solo, sin arrancar piel.</p></div></div></details>
       <details><summary>¿Puedo llevarlo de día?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Los parches para granos y de superficie sí: son casi invisibles y se llevan bajo el maquillaje. Los de nariz, frente y barbilla están pensados para la noche.</p></div></div></details>
+      <details><summary>¿Puedo maquillarme encima?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Con los parches para granos, sí: son de día y aguantan bien bajo la base y el corrector. Los de nariz, frente y barbilla son de noche y van sobre piel limpia, sin maquillaje encima.</p></div></div></details>
       <details><summary>¿Es apto para piel sensible?</summary><div class="n-acc__c"><div class="n-acc__in"><p>Sí. El hidrocoloide no lleva perfume, alcohol ni activos. Si tienes granos activos, usa mejor los parches para granos.</p></div></div></details>
       <details><summary>¿Cuántas noches hasta ver resultados?</summary><div class="n-acc__c"><div class="n-acc__in"><p>La mayoría nota la nariz más lisa ya la primera mañana. Poros visiblemente más pequeños a las 2-3 semanas usándolo 2 veces por semana.</p></div></div></details>
+      <details><summary>¿Cada cuánto veo cambios?</summary><div class="n-acc__c"><div class="n-acc__in"><p>9 de 10 personas ven los poros más limpios nada más despertar, tras la primera noche. Usándolo 2 veces por semana, los poros se ven visiblemente más pequeños a las 2-3 semanas.</p></div></div></details>
     </div>
   </div>
 </section>
@@ -406,8 +497,8 @@
 
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609072103"></script>
-<script src="/assets/js/photos.js?v=202609072103"></script>
+<script src="/assets/js/products.js?v=202609080021"></script>
+<script src="/assets/js/photos.js?v=202609080021"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   /* Los títulos, intros, pasos y fichas de #cu-acc ya están en el HTML (ver
@@ -430,6 +521,188 @@ document.addEventListener('DOMContentLoaded', function () {
   nReveal(); nMedia();
 });
 </script>
-<script type="module" src="/assets/js/como-usar-3d.js?v=202609072103"></script>
+<script>
+/* NOCTA · Cómo usar — herramientas de la noche: selector de zona, cronómetro
+   de 20 s, recordatorio de retirada (.ics), checklist y utilidades
+   (imprimir/compartir). Todo vive aquí porque solo toca como-usar.html; no
+   depende de como-usar-3d.js ni lo modifica. */
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* ---------- selector de zona ---------- */
+  var ZONES = {
+    nariz:      { b: 'Sobre la nariz seca',        place: 'Curva en el puente y alas sobre las aletas.', group: 0 },
+    frente:     { b: 'Sobre la frente seca',       place: 'De sien a sien, evitando el nacimiento del pelo.', group: 2 },
+    barbilla:   { b: 'Sobre la barbilla seca',     place: 'Centrado justo bajo el labio.', group: 2 },
+    granos:     { b: 'Sobre el grano, seco',       place: 'Con la cabeza cubierta; 10 segundos de presión con el dedo.', group: 1 },
+    exfoliante: { b: 'Con el exfoliante ya seco',  place: 'Un disco en la zona T; deja secar 1 minuto y coloca el parche encima.', group: 3 }
+  };
+  var zonePills   = document.querySelectorAll('.n-cu-zone__pill');
+  var zoneHint    = document.getElementById('cu-zone-hint');
+  var gestoB      = document.getElementById('cu-gesto-b');
+  var gestoPlace  = document.getElementById('cu-gesto-place');
+  var indexLinks  = document.querySelectorAll('.n-cu-index__list a[href]');
+  var accGroups   = document.querySelectorAll('#cu-acc > details');
+
+  function applyZone(zone, opts) {
+    opts = opts || {};
+    var z = ZONES[zone] ? zone : 'nariz';
+    var data = ZONES[z];
+    Array.prototype.forEach.call(zonePills, function (btn) {
+      var on = btn.getAttribute('data-zone') === z;
+      btn.classList.toggle('is-on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (zoneHint) zoneHint.textContent = data.place;
+    if (gestoB) gestoB.textContent = data.b;
+    if (gestoPlace) gestoPlace.textContent = data.place;
+    Array.prototype.forEach.call(indexLinks, function (a) {
+      var href = a.getAttribute('href');
+      a.classList.toggle('is-zone', href === '#gestos' || href === '#productos');
+    });
+    if (opts.scroll) {
+      var details = accGroups[data.group];
+      if (details) {
+        if (!details.open) {
+          var summary = details.querySelector('summary');
+          if (summary) summary.click();
+        }
+        setTimeout(function () { details.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+      }
+    }
+  }
+
+  var savedZone = 'nariz';
+  try { savedZone = localStorage.getItem('n_cu_zone') || 'nariz'; } catch (e) {}
+  applyZone(savedZone, { scroll: false });
+
+  Array.prototype.forEach.call(zonePills, function (btn) {
+    btn.addEventListener('click', function () {
+      var zone = btn.getAttribute('data-zone');
+      try { localStorage.setItem('n_cu_zone', zone); } catch (e) {}
+      applyZone(zone, { scroll: true });
+    });
+  });
+
+  /* ---------- cronómetro de 20 s ---------- */
+  var timerBtn  = document.getElementById('cu-timer-btn');
+  var timerFill = document.getElementById('cu-timer-fill');
+  var timerNum  = document.getElementById('cu-timer-num');
+  var timerLab  = document.getElementById('cu-timer-lab');
+  var timerMsg  = document.getElementById('cu-timer-msg');
+  if (timerBtn && timerFill && timerNum && timerLab && timerMsg) {
+    var TOTAL = 20;
+    var CIRC = 2 * Math.PI * 52;
+    timerFill.style.strokeDasharray = String(CIRC);
+    timerFill.style.strokeDashoffset = String(CIRC);
+    var raf = null, startTs = null;
+    function tick(ts) {
+      if (!startTs) startTs = ts;
+      var elapsed = (ts - startTs) / 1000;
+      var p = Math.min(1, elapsed / TOTAL);
+      timerFill.style.strokeDashoffset = String(CIRC * (1 - p));
+      var rem = Math.max(0, Math.ceil(TOTAL - elapsed));
+      timerNum.textContent = String(rem);
+      if (p < 1) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        timerNum.textContent = '0';
+        timerLab.textContent = 'Pulsa para repetir';
+        timerMsg.textContent = 'Listo. A dormir.';
+        if (navigator.vibrate) { try { navigator.vibrate([120, 60, 120]); } catch (e) {} }
+      }
+    }
+    timerBtn.addEventListener('click', function () {
+      if (raf) cancelAnimationFrame(raf);
+      startTs = null;
+      timerLab.textContent = 'Contando…';
+      timerMsg.textContent = ' ';
+      timerFill.style.strokeDashoffset = String(CIRC);
+      timerNum.textContent = String(TOTAL);
+      raf = requestAnimationFrame(tick);
+    });
+  }
+
+  /* ---------- recordatorio de retirada (.ics) ---------- */
+  var remindTime = document.getElementById('cu-remind-time');
+  var remindAlt  = document.getElementById('cu-remind-alt');
+  var remindIcs  = document.getElementById('cu-remind-ics');
+  if (remindTime && remindIcs) {
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    var now = new Date();
+    var out = new Date(now.getTime() + 8 * 3600 * 1000);
+    var hhmm = pad(out.getHours()) + ':' + pad(out.getMinutes());
+    remindTime.textContent = hhmm;
+    if (remindAlt) remindAlt.textContent = hhmm;
+    function icsStamp(d) {
+      return d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate()) + 'T' + pad(d.getUTCHours()) + pad(d.getUTCMinutes()) + pad(d.getUTCSeconds()) + 'Z';
+    }
+    var lines = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//NOCTA//Como usar//ES', 'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      'UID:nocta-parche-' + now.getTime() + '@nocta.es',
+      'DTSTAMP:' + icsStamp(now),
+      'DTSTART:' + icsStamp(out),
+      'DTEND:' + icsStamp(new Date(out.getTime() + 15 * 60000)),
+      'SUMMARY:Retirar el parche NOCTA',
+      'DESCRIPTION:Han pasado 8 horas. Retira el parche despacio\\, desde una esquina. Si tira\\, humedece el borde con agua tibia.',
+      'BEGIN:VALARM', 'TRIGGER:PT0M', 'ACTION:DISPLAY', 'DESCRIPTION:Retirar el parche NOCTA', 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'
+    ];
+    remindIcs.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n')));
+  }
+
+  /* ---------- lista de la noche ---------- */
+  var checkItems = document.querySelectorAll('.n-cu-check__item');
+  var checkReset = document.getElementById('cu-check-reset');
+  function loadCheck() {
+    try { return JSON.parse(localStorage.getItem('n_cu_check') || '{}') || {}; } catch (e) { return {}; }
+  }
+  function saveCheck(state) {
+    try { localStorage.setItem('n_cu_check', JSON.stringify(state)); } catch (e) {}
+  }
+  var checkState = loadCheck();
+  function renderCheck() {
+    Array.prototype.forEach.call(checkItems, function (btn) {
+      var on = !!checkState[btn.getAttribute('data-k')];
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  renderCheck();
+  Array.prototype.forEach.call(checkItems, function (btn) {
+    btn.addEventListener('click', function () {
+      var k = btn.getAttribute('data-k');
+      checkState[k] = !checkState[k];
+      saveCheck(checkState);
+      renderCheck();
+    });
+  });
+  if (checkReset) checkReset.addEventListener('click', function () {
+    checkState = {};
+    saveCheck(checkState);
+    renderCheck();
+  });
+
+  /* ---------- guardar / compartir ---------- */
+  var printBtn = document.getElementById('cu-print');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+
+  var shareBtn = document.getElementById('cu-share');
+  if (shareBtn) shareBtn.addEventListener('click', function () {
+    var data = { title: document.title, text: 'Cómo usar los parches NOCTA: ponlo, duerme, despega.', url: location.href };
+    if (navigator.share) {
+      navigator.share(data).catch(function () {});
+    } else {
+      var done = function () { if (window.nToast) nToast('Enlace copiado'); };
+      var fail = function () { if (window.nToast) nToast('No se pudo copiar el enlace'); };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(location.href).then(done, fail);
+        else fail();
+      } catch (e) { fail(); }
+    }
+  });
+
+});
+</script>
+<script type="module" src="/assets/js/como-usar-3d.js?v=202609080021"></script>
 </body>
 </html>

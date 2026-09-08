@@ -63,6 +63,16 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 - **Páginas de texto** (ciencia, sobre, garantía, contacto, envíos, legal, no son puntos negros): cabecera sobre el fondo y artículo en tarjeta crema, coherentes con el sistema v5.
 - `stamp.py` versiona ahora cualquier CSS/JS de `assets` y acepta un directorio. Sin créditos Higgsfield en esta fase.
 
+### v6 «planes y packs» (8 sep 2026): packs agresivos, suscripción real, ciencia con renders 3D
+- **Packs** (con coste desembarcado ≈ 9-19 € por pack, margen 60-70 %): Dúo Poros Limpios 36,90 € (antes 44; por separado 48,95), Kit Zona T 37,90 € (antes 44; por separado 50,85), Kit Cara Completa 59 € (antes 69; por separado 82,75). Todos con mascarilla de tela de regalo (el kit completo, el pack de 4) y envío gratis; etiqueta «ahorra X €» en las tarjetas.
+- **Planes**: Plan Noche mensual 49 €/mes (2 cajas de parches de las zonas que elijas + 1 skincare en rotación, valor hasta 65,90 €, regalo el primer mes) y Plan Semanal 14,90 €/semana (una caja de 8 parches cada 7 días, zona a elegir). Página `/planes.html`, sección en portada, entrada «Planes» en el menú, fichas propias con selector de zona (`opt` en el carrito).
+- **Cobro recurrente**: `netlify/functions/checkout.js` pasa a `mode=subscription` cuando hay planes o suscripciones (−15 %), con `price_data.recurring` (mes, semana o cada 30 días) y solo tarjeta en ese caso; `catalog.js` sincronizado. Sin clave de Stripe sigue el modo demo.
+- **Ficha**: bloque «Mejor en pack» bajo el panel de compra (fotos de los componentes, ahorro, regalo, botón directo), «Qué incluye» en packs y planes con precios sueltos tachados, promo del Plan Noche en parches.
+- **No son puntos negros**: página nueva con seis renders 3D fotorrealistas de GPT Image 2 (`brand/fotos/4k/ciencia-*.jpg`, web en `assets/img/foto/ciencia-*.webp`): corte de piel con filamento, punto negro real, parche absorbiendo, superficie antes/después y macro del parche sobre la nariz; comparador punto negro/filamento, ciclo de 24-48 h animado, lo que has probado y por qué no funcionó, qué hace el hidrocoloide, qué esperar, opiniones, FAQ y cierre con el dúo. 7 renders (6 + 1 reintento) × 2,5 cr = 17,5 cr; dos intentos de vídeo Seedance 2.5 fueron rechazados por el filtro de contenido (sin coste).
+- **Cómo usar ×1000**: hero editorial con el render macro, selector «¿Qué vas a usar esta noche?», herramientas reales (cronómetro de 20 s con vibración, recordatorio .ics a 8 h, checklist de la noche), antes/después, guardar en PDF y compartir; escena 3D sobre un puente de nariz real (superficie curva, poros orientados, parche que se adapta y muestra la grasa en su cara inferior al despegar).
+- **Garantía** reconstruida en bento: promesa, tres garantías, paso a paso con línea de tiempo, qué cubre, formulario intacto, FAQ y cierre.
+- **Portada**: carriles con tarjetas más compactas (casi dos por pantalla), packs con etiqueta de ahorro, sección de planes.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

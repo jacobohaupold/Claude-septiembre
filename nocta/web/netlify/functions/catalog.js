@@ -11,8 +11,10 @@ export const PRODUCTS = {
   'mascarilla-peel-off': { name: 'Mascarilla Peel-Off Colágeno 70 ml', price: 29, sub: 24.65 },
   'pack-mascarillas-tela': { name: 'Pack 4 Mascarillas de Tela', price: 15, sub: 12.75 },
   'tonico-hialuronico': { name: 'Tónico Ácido Hialurónico 130 ml', price: 25, sub: 21.25 },
-  'duo-poros': { name: 'Dúo Poros Limpios', price: 44, sub: 37.4 },
-  'kit-t-zone': { name: 'Kit Zona T', price: 44, sub: 37.4 },
-  'kit-cara-completa': { name: 'Kit Cara Completa', price: 69, sub: 58.65 },
+  'duo-poros': { name: 'Dúo Poros Limpios', price: 36.9, sub: 31.35 },
+  'kit-t-zone': { name: 'Kit Zona T', price: 37.9, sub: 32.2 },
+  'kit-cara-completa': { name: 'Kit Cara Completa', price: 59, sub: 50.15 },
+  'plan-mensual': { name: 'Plan Noche mensual', price: 49, sub: 49, plan: 'month' },
+  'plan-semanal': { name: 'Plan Semanal', price: 14.9, sub: 14.9, plan: 'week' },
   'upsell-exfoliante': { name: 'Exfoliante Salicílico 2 % (oferta post-compra −30 %)', price: 22.4, sub: 22.4 }
 };
