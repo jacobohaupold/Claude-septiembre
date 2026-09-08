@@ -6,10 +6,10 @@
 <title>Finalizar compra · NOCTA</title>
 <meta name="description" content="Finaliza tu pedido NOCTA: datos de envío y pago seguro con tarjeta, Bizum, Klarna o PayPal.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609080023">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609080751">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609080023" defer></script>
+<script src="/assets/js/app.js?v=202609080751" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -82,7 +82,7 @@
 </div>
 
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609080023"></script>
+<script src="/assets/js/products.js?v=202609080751"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 document.getElementById('checktrust').innerHTML=nTrust();
@@ -102,7 +102,8 @@ const render=()=>{
   document.getElementById('paybtn').disabled=!t.items.length;
 };
 render();const orig=nCart.render.bind(nCart);nCart.render=()=>{orig();render();};
-document.getElementById('applycode').onclick=()=>{const c=document.getElementById('f-code').value.trim().toUpperCase();const CODES={HOLA10:10,TIKTOK10:10,BIENVENIDA15:15};if(CODES[c]){sessionStorage.setItem('n_disc',JSON.stringify({code:c,type:'pct',value:CODES[c]}));nToast('Código aplicado');nTrack('apply_code',{code:c});}else nToast('Código no válido');nCart.render();};
+document.getElementById('applycode').onclick=async()=>{const c=document.getElementById('f-code').value.trim().toUpperCase();if(!c)return;const t=nCart.totals();try{const r=await fetch('/api/discount?code='+encodeURIComponent(c)+'&subtotal='+t.sub.toFixed(2));const d=await r.json();if(d&&!d.error){sessionStorage.setItem('n_disc',JSON.stringify({code:d.code,type:d.type,value:d.value}));nToast('Código aplicado');nTrack('apply_code',{code:d.code});}else nToast(d.error==='min_total'?`Este código pide un pedido mínimo de ${nEur(d.min_total)}`:d.error==='expired'?'Ese código ya ha caducado':d.error==='exhausted'?'Ese código ya se ha agotado':'Código no válido');}catch(e){nToast('No se pudo comprobar el código');}nCart.render();};
+(()=>{let l={};try{l=JSON.parse(localStorage.getItem('n_lead')||'{}');}catch(e){}const d=JSON.parse(sessionStorage.getItem('n_disc')||'null');if(d&&d.code)document.getElementById('f-code').value=d.code;if(l.email&&!document.getElementById('f-email').value)document.getElementById('f-email').value=l.email;if(l.name&&!document.getElementById('f-name').value){const parts=l.name.split(' ');document.getElementById('f-name').value=parts[0];const ln=document.getElementById('f-last');if(ln&&parts.length>1)ln.value=parts.slice(1).join(' ');}if(l.phone&&!document.getElementById('f-phone').value)document.getElementById('f-phone').value=l.phone;})();
 document.querySelectorAll('.n-methods label').forEach(l=>l.onclick=()=>{document.querySelectorAll('.n-methods label').forEach(x=>x.classList.remove('is-on'));l.classList.add('is-on');});
 document.getElementById('bbarpay').onclick=()=>document.getElementById('cof').requestSubmit();
 nTrack('checkout_view',{value:nCart.totals().total});

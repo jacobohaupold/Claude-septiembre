@@ -4,8 +4,21 @@ import re,glob,time,os,sys
 os.chdir('/home/user/Claude-septiembre/nocta/web')
 D=sys.argv[1] if len(sys.argv)>1 else 'public'
 V=time.strftime('%Y%m%d%H%M')
-for p in glob.glob(os.path.join(D,'*.html')):
+for p in glob.glob(os.path.join(D,'*.html'))+glob.glob(os.path.join(D,'admin','*.html')):
     s=open(p).read()
     s=re.sub(r'/assets/(css|js)/([a-z0-9-]+)\.(css|js)(\?v=[^"]*)?"',lambda m:f'/assets/{m.group(1)}/{m.group(2)}.{m.group(3)}?v={V}"',s)
+    s=re.sub(r'/admin/([a-z0-9-]+)\.(css|js)(\?v=[^"]*)?"',lambda m:f'/admin/{m.group(1)}.{m.group(2)}?v={V}"',s)
     open(p,'w').write(s)
 print(V)
+
+# Genera netlify/functions/lib/products-data.js (ESM) desde public/assets/js/products.js para que las funciones compartan el catálogo completo.
+src=open('public/assets/js/products.js').read()
+i=src.find('window.NOCTA_PRODUCTS'); j=src.find('\n];',i)+3
+body=src[i:j].replace('window.NOCTA_PRODUCTS =','export const BASE =').replace('window.NOCTA_PRODUCTS=','export const BASE =')
+k=src.find('window.NOCTA_GIFTS'); l=src.find('\n]',k)+2 if k>=0 else -1
+gifts=src[k:l].replace('window.NOCTA_GIFTS =','export const GIFTS =').replace('window.NOCTA_GIFTS=','export const GIFTS =') if k>=0 else 'export const GIFTS=[];'
+m=src.find('window.NOCTA_SHIPPING'); n=src.find(';',m)+1 if m>=0 else -1
+ship=src[m:n].replace('window.NOCTA_SHIPPING =','export const SHIPPING =').replace('window.NOCTA_SHIPPING=','export const SHIPPING =') if m>=0 else 'export const SHIPPING={base:3.9,freeFrom:30};'
+os.makedirs('netlify/functions/lib',exist_ok=True)
+open('netlify/functions/lib/products-data.js','w').write('// GENERADO por stamp.py desde public/assets/js/products.js. No editar a mano.\n'+body+'\n'+gifts+'\n'+ship+'\n')
+print('products-data ok')

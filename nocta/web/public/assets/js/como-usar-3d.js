@@ -67,6 +67,7 @@
       boo.observe(track);
     }
     if (playBtn) playBtn.addEventListener('click', boot, { once: true });
+    window.nCuBoot = boot;
   }
   if (document.readyState === 'complete') armBoot();
   else window.addEventListener('load', function () { setTimeout(armBoot, 400); }, { once: true });
@@ -360,6 +361,7 @@
       if (Math.abs(p - currentP) < 0.0008) return;
       currentP = p;
       needsRender = true;
+      if (window.nCuOnP) window.nCuOnP(p);
 
       const dropT = smoothstep(0, 0.15, p);
       const pressT = smoothstep(0.10, 0.15, p);

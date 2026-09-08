@@ -36,8 +36,11 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Variables de entorno a configurar en Netlify (Site settings → Environment variables):
-# ADMIN_TOKEN        contraseña del panel /admin
-# STRIPE_SECRET_KEY  sk_live_… (sin ella el checkout funciona en modo demo)
-# STRIPE_WEBHOOK_SECRET  para /api/stripe-webhook
-# KLAVIYO_API_KEY + KLAVIYO_LIST_ID  (opcional) para enviar leads a Klaviyo
+# Variables de entorno (Site settings → Environment variables). Las marcadas * ya están configuradas en nocta-store.
+# *SUPABASE_URL, *SUPABASE_KEY (clave secreta)      base de datos del CRM
+# *RESEND_API_KEY, *RESEND_AUDIENCE_ID, *RESEND_FROM  email transaccional y newsletter
+# *ADMIN_PASSWORD, *ADMIN_SECRET                       acceso al CRM (/admin) y firma de sesiones
+# *SITE_URL                                            URL pública (enlaces de emails y webhooks)
+#  STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET            opcionales: si no están, se usan las claves conectadas desde el CRM (Integraciones)
+#  STRIPE_CLIENT_ID                                    opcional: OAuth de Stripe Connect para el botón «Iniciar sesión con Stripe»
+#  WA_VERIFY_TOKEN                                     opcional: token de verificación del webhook de WhatsApp (por defecto el guardado en el CRM)

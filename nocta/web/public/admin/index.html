@@ -1,40 +1,26 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Panel NOCTA · Analítica</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/styles.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>NOCTA · CRM</title>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/admin/admin.css?v=202609080751">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="/assets/js/products.js?v=202609080751"></script><script src="/api/catalog.js"></script>
+</head>
 <body>
-<header class="top"><div class="wrap"><a class="logo" href="/">nocta <span style="font-size:13px;font-weight:400;color:#6b6b6b;margin-left:8px">panel de control</span></a><div><select id="days" style="padding:8px;border-radius:8px;border:1px solid #e6e1d6"><option value="7">7 días</option><option value="14" selected>14 días</option><option value="30">30 días</option><option value="90">90 días</option></select> <button class="btn ghost" id="reload" style="padding:8px 14px">Actualizar</button></div></div></header>
-<main class="wrap admin">
-<div id="login" class="form" style="max-width:420px;margin:40px auto"><h2>Acceso</h2><label>Token de administrador</label><input id="tok" type="password" placeholder="ADMIN_TOKEN"><button class="btn wide" id="go" style="margin-top:12px">Entrar</button><p style="font-size:12px;color:#6b6b6b">Se define en Netlify → Environment variables → ADMIN_TOKEN.</p></div>
-<div id="dash" class="hidden">
-<div class="kpis" id="kpis"></div>
-<div class="panelgrid">
-<div class="panel" style="grid-column:1/-1"><h3>Visitas, carritos y pedidos por día</h3><canvas id="c1" height="90"></canvas></div>
-<div class="panel"><h3>Embudo de conversión (sesiones)</h3><div class="funnel" id="funnel"></div><p style="font-size:12px;color:#6b6b6b;margin:10px 0 0" id="abandon"></p></div>
-<div class="panel"><h3>De dónde vienen (fuente / medio)</h3><table id="sources"></table></div>
-<div class="panel"><h3>Páginas más vistas</h3><table id="pages"></table></div>
-<div class="panel"><h3>Dónde se van (última página de la sesión)</h3><table id="exits"></table></div>
-<div class="panel"><h3>Landing pages</h3><table id="landing"></table></div>
-<div class="panel"><h3>Productos: vistas → carrito → vendidos</h3><table id="products"></table></div>
-<div class="panel"><h3>Países y dispositivos</h3><table id="geo"></table></div>
-<div class="panel"><h3>Profundidad de scroll por página</h3><table id="scroll"></table></div>
-<div class="panel" style="grid-column:1/-1"><h3>Últimos pedidos</h3><table id="orders"></table></div>
+<div id="login" class="lg" hidden><form class="lg__box" id="lgform"><div class="lg__logo">☾ nocta <span>CRM</span></div><label for="lgpass">Contraseña</label><input id="lgpass" type="password" autocomplete="current-password" required placeholder="••••••••"><button class="btn btn--p btn--w" type="submit">Entrar</button><p class="muted xs">Se define en Netlify → ADMIN_PASSWORD. Sesión de 30 días en este dispositivo.</p><p class="err" id="lgerr" hidden></p></form></div>
+<div id="app" class="app" hidden>
+  <aside class="side" id="side"><a class="side__logo" href="#/">☾ nocta <span>CRM</span></a><nav class="side__nav" id="nav"></nav><div class="side__foot"><a href="/" target="_blank" rel="noopener">Ver tienda ↗</a><button class="lnk" id="logout">Salir</button></div></aside>
+  <header class="top"><button class="ic" id="menu" aria-label="Menú">☰</button><div class="top__t" id="title">Panel</div><div class="top__r"><select id="days" title="Periodo"><option value="7">7 días</option><option value="14" selected>14 días</option><option value="30">30 días</option><option value="90">90 días</option><option value="365">1 año</option></select><button class="ic" id="refresh" title="Actualizar">↻</button></div></header>
+  <main class="main" id="main"><div class="loading">Cargando…</div></main>
+  <div class="bg" id="sidebg"></div>
 </div>
-</div>
-</main>
-<script>
-const $=s=>document.querySelector(s);let chart;
-const eur=n=>(n||0).toFixed(2).replace('.',',')+' €';
-async function load(){const tok=localStorage.getItem('n_admin')||$('#tok').value||'';const r=await fetch('/api/stats?days='+$('#days').value,{headers:{'x-admin-token':tok}});if(r.status===401){localStorage.removeItem('n_admin');$('#login').classList.remove('hidden');if(tok)alert('Token incorrecto');return;}if(tok)localStorage.setItem('n_admin',tok);const d=await r.json();$('#login').classList.add('hidden');$('#dash').classList.remove('hidden');
-$('#kpis').innerHTML=[['Sesiones',d.sessions],['Ingresos',eur(d.revenue)],['Pedidos',d.orders],['Conversión',d.cvr+' %'],['Ticket medio',eur(d.aov)],['Carritos abandonados',d.abandoned_carts],['Rebote',d.bounce_rate+' %'],['Tiempo medio',d.avg_secs+' s'],['Leads (email)',d.daily.reduce((a,x)=>a+x.leads,0)],['Eventos',d.events]].map(k=>`<div class="kpi"><small>${k[0]}</small><b>${k[1]}</b></div>`).join('');
-const f=d.funnel,mx=f.sessions||1;$('#funnel').innerHTML=[['Sesiones',f.sessions],['Vieron producto',f.product],['Añadieron al carrito',f.atc],['Iniciaron checkout',f.checkout],['Compraron',f.purchase]].map(s=>`<div class="st"><span>${s[0]}</span><i style="width:${s[1]/mx*100}%"></i><b>${s[1]}</b> <small style="color:#6b6b6b">${(s[1]/mx*100).toFixed(1)} %</small></div>`).join('');
-$('#abandon').textContent=`Abandono de carrito: ${f.atc?((1-f.purchase/f.atc)*100).toFixed(0):0} % · Abandono de checkout: ${f.checkout?((1-f.purchase/f.checkout)*100).toFixed(0):0} %`;
-const tbl=(id,rows,h)=>{$(id).innerHTML=`<tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>`+rows.map(r=>`<tr>${r.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('');};
-tbl('#sources',d.sources,['Fuente','Sesiones']);tbl('#pages',d.pages,['Página','Vistas']);tbl('#exits',d.exits,['Página de salida','Salidas']);tbl('#landing',d.landing,['Landing','Sesiones']);
-tbl('#products',Object.entries(d.products).sort((a,b)=>b[1].views-a[1].views).map(([s,v])=>[s,v.views||0,v.atc||0,v.sold||0]),['Producto','Vistas','Carrito','Vendidos']);
-tbl('#geo',[...d.countries.map(c=>['🌍 '+c[0],c[1]]),...d.devices.map(c=>['📱 '+c[0],c[1]])],['País / dispositivo','Sesiones']);
-tbl('#scroll',d.scroll.map(x=>{const [p,pct]=x[0].split('|');return [p+' · '+pct+' %',x[1]];}),['Página · % alcanzado','Sesiones']);
-tbl('#orders',d.recentOrders.map(o=>[new Date(o.t).toLocaleString('es-ES'),o.id,o.email||'',o.items.map(i=>i.qty+'× '+i.name).join(', '),o.status+(o.upsell?' +upsell':''),eur(o.total)]),['Fecha','Pedido','Email','Productos','Estado','Total']);
-const ctx=$('#c1');if(chart)chart.destroy();chart=new Chart(ctx,{type:'bar',data:{labels:d.daily.map(x=>x.day.slice(5)),datasets:[{label:'Sesiones',data:d.daily.map(x=>x.sessions),backgroundColor:'#9FB3A1'},{label:'Añadir al carrito',data:d.daily.map(x=>x.atc),backgroundColor:'#14213D'},{label:'Pedidos',data:d.daily.map(x=>x.orders),backgroundColor:'#c8553d'},{label:'Ingresos €',data:d.daily.map(x=>x.revenue),type:'line',yAxisID:'y2',borderColor:'#14213D',tension:.3}]},options:{scales:{y2:{position:'right',grid:{display:false}}},plugins:{legend:{position:'bottom'}}}});}
-$('#go').onclick=load;$('#reload').onclick=load;$('#days').onchange=load;load();
-</script>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="modals"></div>
+<script src="/admin/core.js?v=202609080751"></script>
+<script src="/admin/m-dashboard.js?v=202609080751"></script>
+<script src="/admin/m-orders.js?v=202609080751"></script>
+<script src="/admin/m-customers.js?v=202609080751"></script>
+<script src="/admin/m-products.js?v=202609080751"></script>
+<script src="/admin/m-marketing.js?v=202609080751"></script>
+<script src="/admin/m-integrations.js?v=202609080751"></script>
+<script>A.start();</script>
 </body></html>

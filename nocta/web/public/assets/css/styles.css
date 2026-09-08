@@ -519,3 +519,20 @@ body.n-v5.n-has-ck.n-has-bar .n-bbar{bottom:calc(var(--n-ck-h,0px) + var(--n-gap
 @media (min-width:900px){.n-plh{padding:32px 30px}.n-plh__price b{font-size:48px}.n-plh__a{grid-template-columns:auto auto;justify-content:start}}
 /* v6: el vídeo del hero pinta 1 px más pequeño que el póster para que el póster sea el LCP */
 .n-hero5 video{inset:1px;width:calc(100% - 2px);height:calc(100% - 2px);border-radius:inherit}
+/* v7 · revelado cinematográfico de medios: fondo cálido (nunca blanco), grano que se disipa, desenfoque→nitidez, vídeo fundido sobre su póster */
+.n-mx{position:relative;overflow:hidden;background:var(--n-cream)}
+.n-mx::after{content:"";position:absolute;inset:-12%;z-index:1;pointer-events:none;opacity:.26;mix-blend-mode:multiply;background-size:160px 160px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");transition:opacity 1s var(--n-e),transform 1s var(--n-e)}
+.n-mx.is-ready::after{opacity:0;transform:scale(1.08)}
+img.n-fx{opacity:0;filter:blur(22px) saturate(1.25) brightness(1.04);transform:scale(1.07)}
+img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transition:opacity .45s var(--n-e),filter .75s var(--n-e),transform .95s var(--n-e)}
+.n-vt img.n-vt5__p{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.n-vt video.n-vfx{opacity:0;transition:opacity .7s var(--n-e)}
+.n-vt video.n-vfx.is-live{opacity:1}
+.n-vt{background:var(--n-cream)}
+@media (prefers-reduced-motion:reduce){img.n-fx{opacity:1;filter:none;transform:none}.n-mx::after{content:none}.n-vt video.n-vfx{opacity:1}}
+/* v7 · aviso de cookies en móvil: texto a ancho completo y botones debajo */
+@media (max-width:599px){.n-ck__in{flex-wrap:wrap;gap:8px 10px}.n-ck__in span{flex:1 1 100%}.n-ck .n-btn{flex:1 1 auto}}
+/* v7 · popup de captación: nombre + móvil en fila, consentimiento */
+.n-mail form{gap:8px}.n-mail__row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.n-mail__row input{width:100%}
+.n-mail__chk{display:flex;gap:9px;align-items:flex-start;text-align:left;font-size:12.5px;line-height:1.35;color:var(--n-muted);margin:2px 0 4px}.n-mail__chk input{width:18px;height:18px;min-height:0;padding:0;margin:1px 0 0;accent-color:var(--n-navy);flex:none}
+@media (min-width:900px){.n-mail__chk{justify-content:flex-start}}

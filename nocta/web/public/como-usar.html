@@ -6,11 +6,11 @@
 <meta name="description" content="Guía visual de la rutina NOCTA: cómo poner el parche, dónde va exactamente, cuánto dura y qué hacer con cada producto de la gama. Con una escena 3D de una noche completa.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="/assets/img/foto/ciencia-parche-nariz-macro.webp" imagesrcset="/assets/img/foto/ciencia-parche-nariz-macro.webp 1200w, /assets/img/foto/ciencia-parche-nariz-macro-2x.webp 1800w" sizes="(max-width:900px) 100vw, 900px">
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609080023">
-<link rel="stylesheet" href="/assets/css/como-usar.css?v=202609080023">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609080751">
+<link rel="stylesheet" href="/assets/css/como-usar.css?v=202609080751">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609080023" defer></script>
+<script src="/assets/js/app.js?v=202609080751" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HowTo","name":"Cómo usar los parches NOCTA","description":"Poner, dejar actuar 6-8 horas y retirar un parche de hidrocoloide NOCTA.","totalTime":"PT8H","step":[
 {"@type":"HowToStep","name":"Ponlo","text":"Sobre la nariz limpia y completamente seca, con la curva en el puente y las alas sobre las aletas. Presiona 20 segundos con la palma de la mano.","image":"https://nocta.es/assets/img/paso-1.webp"},
@@ -81,7 +81,7 @@
         <canvas id="cu-canvas" class="n-cu-scene__canvas" role="img" aria-label="Animación 3D de un corte de piel: un parche NOCTA se coloca sobre la nariz a las 23:00, absorbe la grasa de siete poros durante la noche y se retira a las 07:00 mostrando toda la grasa recogida" hidden></canvas>
         <img id="cu-fallback" class="n-cu-scene__fallback" src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async" hidden>
         <div class="n-cu-scene__hud"><b class="n-num" id="cu-clock">23:00</b><span id="cu-phase">Ponlo</span></div>
-        <button type="button" class="n-btn n-btn--fill n-cu-scene__play" id="cu-play" aria-label="Ver la noche: reproduce la animación completa en 6 segundos">Ver la noche</button>
+        <button type="button" class="n-cu-scene__view" id="cu-view" aria-pressed="false">Ver el corte 3D</button><button type="button" class="n-btn n-btn--fill n-cu-scene__play" id="cu-play" aria-label="Ver la noche: reproduce la animación completa en 6 segundos">Ver la noche</button>
         <div class="n-cu-scene__bar" aria-hidden="true"><i id="cu-progressfill"></i></div>
       </div>
       <ol class="n-cu-scene__steps" id="cu-steps">
@@ -497,8 +497,8 @@
 
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609080023"></script>
-<script src="/assets/js/photos.js?v=202609080023"></script>
+<script src="/assets/js/products.js?v=202609080751"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609080751"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   /* Los títulos, intros, pasos y fichas de #cu-acc ya están en el HTML (ver
@@ -703,6 +703,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
-<script type="module" src="/assets/js/como-usar-3d.js?v=202609080023"></script>
+<script>window.NOCTA_CU_SEQ={a:40,b:40};</script><script src="/assets/js/como-usar-real.js?v=1" defer></script><script type="module" src="/assets/js/como-usar-3d.js?v=202609080751"></script>
 </body>
 </html>

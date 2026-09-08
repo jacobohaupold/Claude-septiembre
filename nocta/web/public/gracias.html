@@ -6,10 +6,10 @@
 <title>¡Pedido confirmado! · NOCTA</title>
 <meta name="description" content="Gracias por tu pedido NOCTA. Confirmación, seguimiento y consejos para sacarle el máximo a tus parches mientras llega.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609080023">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609080751">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609080023" defer></script>
+<script src="/assets/js/app.js?v=202609080751" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -48,7 +48,7 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609080023"></script>
+<script src="/assets/js/products.js?v=202609080751"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',async()=>{
 document.getElementById('successmark').innerHTML=nIco('check',24);
@@ -61,8 +61,8 @@ if(last&&last.id===id&&!sessionStorage.getItem('n_purch_'+id)){
   if(!last.express) localStorage.removeItem('n_cart');
   sessionStorage.removeItem('n_disc');
 }
-if(id){fetch('/api/order?id='+encodeURIComponent(id)).then(r=>r.ok?r.json():null).then(o=>{if(o&&o.email)document.getElementById('oemail').textContent=o.email;}).catch(()=>{});}
-if(q.get('demo')==='1'){const d=document.getElementById('demonote');d.hidden=false;d.textContent='Modo demo: no se ha cobrado nada (configura STRIPE_SECRET_KEY para pagos reales).';}
+if(id){fetch('/api/order?id='+encodeURIComponent(id)+'&s='+encodeURIComponent(q.get('s')||'')).then(r=>r.ok?r.json():null).then(o=>{if(o&&o.email)document.getElementById('oemail').textContent=o.email;}).catch(()=>{});}
+if(q.get('demo')==='1'){const d=document.getElementById('demonote');d.hidden=false;d.textContent='Modo demo: no se ha cobrado nada (conecta Stripe desde el CRM para cobrar de verdad).';}
 let s=600;const cd=document.getElementById('cd');const iv=setInterval(()=>{s--;cd.textContent=`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;if(s<=0){clearInterval(iv);document.getElementById('upsell').hidden=true;}},1000);
 nTrack('upsell_view',{order:id});
 document.getElementById('upyes').onclick=async()=>{
