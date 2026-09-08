@@ -244,11 +244,6 @@ body.n-has-bar{padding-bottom:calc(var(--n-bbar-h) + 60px + var(--n-safe-b))}
 .n-ans button:last-child{border-bottom:1px solid var(--n-line)}.n-ans button:active{background:var(--n-sage-14)}.n-ans .n-ico{color:var(--n-navy)}
 .n-flow{display:flex;align-items:center;justify-content:space-between;min-height:var(--n-header-h);border-bottom:1px solid var(--n-line);margin-bottom:var(--n-s4)}
 /* ---------- captación, cookies ---------- */
-.n-mail{position:fixed;inset:auto 0 0 0;z-index:var(--n-z-popup);display:none}.n-mail.is-open{display:block}
-.n-mail .box{position:relative;background:var(--n-paper);border-top:1px solid var(--n-line);border-radius:var(--n-r-lg) var(--n-r-lg) 0 0;box-shadow:var(--n-sh-sheet);padding:var(--n-s5) var(--n-gutter) calc(var(--n-s5) + var(--n-safe-b));transform:translateY(100%);transition:transform var(--n-t4) var(--n-e-spring)}
-.n-mail.is-open .box{transform:none}.n-mail .x{position:absolute;top:6px;right:6px}.n-mail form{display:grid;gap:var(--n-s2);margin-top:var(--n-s3)}
-.n-mail input{min-height:48px;padding:12px var(--n-s3);border:1px solid var(--n-line);border-radius:var(--n-r-sm);font:inherit;font-size:var(--n-fs-input);background:var(--n-bg)}
-@media (min-width:900px){.n-mail{inset:0;place-items:center;background:var(--n-navy-40)}.n-mail.is-open{display:grid}.n-mail .box{max-width:440px;border-radius:var(--n-r-lg);text-align:center;transform:none}.n-mail form{justify-items:stretch}}
 .n-ck{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(250,248,243,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--n-line);padding:8px 0 calc(8px + var(--n-safe-b))}
 .n-ck__in{display:flex;gap:var(--n-s2);align-items:center;font-size:var(--n-fs-xs);line-height:1.3;color:var(--n-muted)}.n-ck__in span{flex:1;min-width:0}.n-ck__in a{color:var(--n-navy)}.n-ck .n-btn{min-height:var(--n-tap);padding:0 12px;font-size:13px;flex:none}
 /* ---------- pie editorial ---------- */
@@ -532,11 +527,32 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 @media (prefers-reduced-motion:reduce){img.n-fx{opacity:1;filter:none;transform:none}.n-mx::after{content:none}.n-vt video.n-vfx{opacity:1}.n-vt5__c{padding-bottom:46px}}
 /* v7 · aviso de cookies en móvil: texto a ancho completo y botones debajo */
 @media (max-width:599px){.n-ck__in{flex-wrap:wrap;gap:8px 10px}.n-ck__in span{flex:1 1 100%}.n-ck .n-btn{flex:1 1 auto}}
-/* v7 · popup de captación: nombre + móvil en fila, consentimiento */
-.n-mail form{gap:8px}.n-mail__row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.n-mail__row input{width:100%}
-.n-mail__chk{display:flex;gap:9px;align-items:flex-start;text-align:left;font-size:12.5px;line-height:1.35;color:var(--n-muted);margin:2px 0 4px}.n-mail__chk input{width:18px;height:18px;min-height:0;padding:0;margin:1px 0 0;accent-color:var(--n-navy);flex:none}
-@media (min-width:900px){.n-mail__chk{justify-content:flex-start}}
 /* v7 · ficha: barra de compra visible desde el primer momento (Comprar + Apple Pay / Google Pay) */
 .n-v5 .n-bbar--pdp .n-bbar__pay{display:block;flex:0 0 auto;padding:0}.n-v5 .n-bbar--pdp .n-bbar__pay .n-pay{min-height:44px;height:44px;padding:0 16px;border-radius:999px;--apple-pay-button-border-radius:999px;margin:0;width:auto;min-width:96px}
 .n-v5 .n-bbar--pdp .n-bbar__in{gap:8px}.n-v5 .n-bbar--pdp .n-bbar__in .n-btn{min-height:44px;padding:0 16px}
 @media (max-width:420px){.n-v5 .n-bbar--pdp .n-bbar__img{display:none}}
+
+/* v8 · popup de bienvenida: centrado, fondo desenfocado que entra y sale de forma cinematográfica */
+.n-mail{position:fixed;inset:0;z-index:var(--n-z-popup);display:grid;place-items:center;padding:16px;background:rgba(20,33,61,0);-webkit-backdrop-filter:blur(0px) saturate(1);backdrop-filter:blur(0px) saturate(1);opacity:0;pointer-events:none;transition:background .65s var(--n-e),-webkit-backdrop-filter .65s var(--n-e),backdrop-filter .65s var(--n-e),opacity .3s linear}
+.n-mail.is-open{opacity:1;pointer-events:auto;background:rgba(20,33,61,.34);-webkit-backdrop-filter:blur(16px) saturate(1.15);backdrop-filter:blur(16px) saturate(1.15)}
+.n-mail.is-closing{opacity:1;background:rgba(20,33,61,0);-webkit-backdrop-filter:blur(0px) saturate(1);backdrop-filter:blur(0px) saturate(1);transition:background .55s var(--n-e),-webkit-backdrop-filter .55s var(--n-e),backdrop-filter .55s var(--n-e),opacity .25s linear .3s;opacity:0}
+.n-mail .box{position:relative;width:100%;max-width:400px;background:var(--n-paper);border-radius:24px;box-shadow:0 30px 80px -24px rgba(20,33,61,.45),0 2px 10px rgba(20,33,61,.08);overflow:hidden;text-align:left;transform:translateY(18px) scale(.96);opacity:0;transition:transform .7s var(--n-e-spring),opacity .45s var(--n-e)}
+.n-mail.is-open .box{transform:none;opacity:1}.n-mail.is-closing .box{transform:translateY(10px) scale(.97);opacity:0;transition:transform .4s var(--n-e),opacity .3s var(--n-e)}
+.n-mail__pic{position:relative;aspect-ratio:16/9;background:var(--n-cream)}.n-mail__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.n-mail__pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,33,61,0) 55%,rgba(255,255,255,.9))}
+.n-mail__tag{position:absolute;left:14px;top:14px;z-index:1;background:rgba(250,248,243,.92);color:var(--n-navy);border-radius:999px;padding:6px 10px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--n-w-med)}
+.n-mail .x{position:absolute;top:10px;right:10px;z-index:2;background:rgba(250,248,243,.92);border-radius:50%}
+.n-mail__in{padding:6px 20px 18px}.n-mail__in h3{margin:0 0 6px;font-size:24px;line-height:1.12;letter-spacing:-.02em;font-weight:var(--n-w-semi);color:var(--n-navy)}
+.n-mail__in p{margin:0}.n-mail__lead{font-size:14px;line-height:1.45;color:var(--n-muted)}
+.n-mail__proof{display:flex;align-items:center;gap:8px;margin:10px 0 2px;font-size:12px;color:var(--n-muted)}.n-mail__proof .n-stars{color:var(--n-navy);letter-spacing:.04em}
+.n-mail form{display:grid;gap:8px;margin-top:12px}.n-mail__row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.n-mail__row input{width:100%}
+.n-mail input{min-height:46px;padding:10px 14px;border:1px solid var(--n-line);border-radius:14px;font:inherit;font-size:var(--n-fs-input);background:var(--n-bg);color:var(--n-navy);transition:border-color .2s,box-shadow .2s}.n-mail input:focus{outline:0;border-color:var(--n-navy);box-shadow:0 0 0 3px rgba(20,33,61,.12)}
+.n-mail__chk{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.35;color:var(--n-muted);margin:2px 0}.n-mail__chk input{width:18px;height:18px;min-height:0;padding:0;margin:1px 0 0;accent-color:var(--n-navy);flex:none}
+.n-mail .n-btn--fill{min-height:50px;font-size:13px}.n-mail__fine{margin-top:8px;font-size:11.5px;color:var(--n-muted);line-height:1.4}.n-mail__fine a{color:inherit}
+.n-mail__ok{display:none;text-align:center;padding:26px 20px 24px}.n-mail.is-done .n-mail__ok{display:block}.n-mail.is-done .n-mail__in,.n-mail.is-done .n-mail__pic{display:none}
+.n-mail__ok .code{display:inline-block;margin:12px 0 4px;padding:12px 20px;border:1px dashed var(--n-navy);border-radius:14px;font-size:22px;letter-spacing:.14em;font-weight:var(--n-w-semi);color:var(--n-navy)}
+.n-mail__ok .tick{width:52px;height:52px;margin:0 auto 12px;border-radius:50%;background:var(--n-navy);color:var(--n-cream);display:grid;place-items:center;animation:n-tick .6s var(--n-e-spring)}@keyframes n-tick{from{transform:scale(.4);opacity:0}}
+@media (max-width:420px){.n-mail__in h3{font-size:22px}}
+@media (prefers-reduced-motion:reduce){.n-mail,.n-mail .box,.n-mail.is-closing,.n-mail.is-closing .box{transition:none}.n-mail__ok .tick{animation:none}}
+.n-mail .box{max-height:calc(100dvh - 32px);overflow:auto;-webkit-overflow-scrolling:touch}
+@media (max-height:720px){.n-mail__pic{aspect-ratio:2.4/1}.n-mail__in h3{font-size:21px}}
