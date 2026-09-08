@@ -195,3 +195,9 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 .n-pd__pills button.is-on{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
 .n-pd__zones .n-pd__segnote{margin:0;text-align:left}
 @media (min-width:900px){.n-pd-pk{padding:18px 22px 20px}}
+/* v7 · en móvil la galería deja ver título, precio y compra en la primera pantalla */
+@media (max-width:899px){.n-pd-gal__s{aspect-ratio:auto;height:min(50vh,420px)}}
+/* v7 · chip «mejor en pack» bajo el precio: el pack se ve sin bajar */
+.n-pd__packchip{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 2px;padding:10px 12px;border:1px solid var(--n-line);border-radius:14px;background:var(--n-cream);color:var(--n-navy);text-decoration:none;font-size:13px;line-height:1.3}
+.n-pd__packchip b{font-weight:var(--n-w-semi)}.n-pd__packchip em{font-style:normal;color:var(--n-muted)}.n-pd__packchip .n-ico{margin-left:auto;flex:none}
+@media (max-width:899px){.n-pd-gal__s{height:min(44vh,380px)}}

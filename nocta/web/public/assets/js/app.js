@@ -181,7 +181,7 @@ function layout(){
   /* barra rotatoria (móvil) */
   const bi=$$('.n-bar__i');if(bi.length>1&&!RM.matches){let k=0;setInterval(()=>{if(DESK())return;bi[k].classList.remove('is-on');k=(k+1)%bi.length;bi[k].classList.add('is-on');},3600);}
   C.render();nReveal();nMedia();
-  const bb=$('#sticky');if(bb){const a=$('[data-bbar-anchor]')||$('.n-pdp .n-buy')||$('.n-cta');if(a)new IntersectionObserver(([e])=>{const on=!e.isIntersecting&&e.boundingClientRect.top<0;bb.classList.toggle('is-on',on);document.body.classList.toggle('n-has-bar',on);},{threshold:0}).observe(a);}
+  const bb=$('#sticky');if(bb){const a=$('[data-bbar-anchor]')||$('.n-pdp .n-buy')||$('.n-cta');if(a)new IntersectionObserver(([e])=>{const on=!e.isIntersecting&&(e.boundingClientRect.top<0||bb.classList.contains('n-bbar--pdp'));bb.classList.toggle('is-on',on);document.body.classList.toggle('n-has-bar',on);},{threshold:0}).observe(a);}
 }
 /* aparición, esqueleto, vídeo */
 const io=RM.matches?null:new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('is-in');io.unobserve(e.target);}),{rootMargin:'0px 0px -10% 0px'});

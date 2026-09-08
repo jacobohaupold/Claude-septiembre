@@ -536,3 +536,7 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 .n-mail form{gap:8px}.n-mail__row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.n-mail__row input{width:100%}
 .n-mail__chk{display:flex;gap:9px;align-items:flex-start;text-align:left;font-size:12.5px;line-height:1.35;color:var(--n-muted);margin:2px 0 4px}.n-mail__chk input{width:18px;height:18px;min-height:0;padding:0;margin:1px 0 0;accent-color:var(--n-navy);flex:none}
 @media (min-width:900px){.n-mail__chk{justify-content:flex-start}}
+/* v7 · ficha: barra de compra visible desde el primer momento (Comprar + Apple Pay / Google Pay) */
+.n-v5 .n-bbar--pdp .n-bbar__pay{display:block;flex:0 0 auto;padding:0}.n-v5 .n-bbar--pdp .n-bbar__pay .n-pay{min-height:44px;height:44px;padding:0 16px;border-radius:999px;--apple-pay-button-border-radius:999px;margin:0;width:auto;min-width:96px}
+.n-v5 .n-bbar--pdp .n-bbar__in{gap:8px}.n-v5 .n-bbar--pdp .n-bbar__in .n-btn{min-height:44px;padding:0 16px}
+@media (max-width:420px){.n-v5 .n-bbar--pdp .n-bbar__img{display:none}}
