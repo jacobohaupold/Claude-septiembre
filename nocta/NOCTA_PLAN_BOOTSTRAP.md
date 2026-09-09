@@ -20,23 +20,23 @@
 
 ## 1. Qué significa «rentable desde el momento 0» con 1.000 €
 
-Rentable desde el primer pedido significa una sola cosa: **el coste de conseguir un pedido con anuncios tiene que ser menor que lo que deja ese pedido** una vez pagado el producto, el envío, el sobre, Stripe y las devoluciones. No cuenta la recompra futura, no cuenta la suscripción, no cuenta «el LTV». Con 500 €/mes no hay margen para financiar clientes que se rentabilizan en el mes 3.
+Rentable desde el primer pedido significa una sola cosa (y el modelo de la Parte 2 demuestra que solo se cumple si los anuncios rinden al nivel de Vue): **el coste de conseguir un pedido con anuncios tiene que ser menor que lo que deja ese pedido** una vez pagado el producto, el envío, el sobre, Stripe y las devoluciones. No cuenta la recompra futura, no cuenta la suscripción, no cuenta «el LTV». Con 500 €/mes no hay margen para financiar clientes que se rentabilizan en el mes 3.
 
 De ahí salen las cuatro reglas del plan:
 
-- **Regla 1 — El ticket mínimo es un pack.** Una caja suelta de 16,95 € deja 9 € y necesita que el 9 % de los clics compren. Un pack de 2 cajas (29,90 €) deja 16 € y necesita el 5 %. Todo anuncio lleva al pack, no a la caja.
+- **Regla 1 — El ticket mínimo es un pack.** Una caja suelta de 16,95 € deja 10,03 € y necesita que el 9,4 % de las visitas compren. Un pack de 2 cajas (29,90 €) deja 17,43 € y necesita el 5,4 %. Todo anuncio lleva al pack, no a la caja.
 - **Regla 2 — Envías tú.** Sin 3PL, sin almacén. Sobre acolchado, etiqueta de Correos/Packlink desde casa. Son 2,85 € de ahorro por pedido que hacen la diferencia entre ganar y perder.
-- **Regla 3 — Cada anuncio tiene 12 € para demostrar que sirve.** Con el CPA objetivo de 11 € (pack de 2 cajas), un anuncio que gasta 15 € sin vender se apaga. Un anuncio que vende a menos de 11 € se duplica. Sin excepciones ni «dale un día más».
+- **Regla 3 — Cada anuncio tiene 15 € para demostrar que sirve.** Con el CPA objetivo de 11,26 € (pedido medio; máximo 16,09 €), un anuncio que gasta 15 € sin vender se apaga. Un anuncio que vende por debajo del CPA objetivo se duplica. Sin excepciones ni «dale un día más».
 - **Regla 4 — El dinero de las ventas se reinvierte a la mitad.** El 50 % de la contribución de cada mes vuelve a anuncios, el otro 50 % se guarda para reponer stock. Así el presupuesto crece solo si el negocio lo gana.
 
 ## 2. Producto: solo parches, y en este orden
 
 | Orden | Producto | Por qué ahora | Coste bootstrap/caja | Margen bruto | Cuándo |
 |---|---|---|---:|---:|---|
-| 1 | **Parches de Nariz (8)** | El héroe de Vue: el 73 % de sus anuncios aterrizan en esta ficha; es el producto con la «prueba visual» más fuerte (el parche blanquea) y el que sostiene todos los ganchos | 3,20 € (China, tirada pequeña) · 4,80 € (Corea) | 77,2 % | Mes 0 |
-| 2 | **Parches para Granos (36)** | El más barato de fabricar (≈ 1,9 €), el mayor margen (86 %), sirve como segundo producto del pack «Dúo Noche» y como regalo; la landing de spot patches de Vue tiene el mayor % de anuncios longevos (41 %) | 1,90 € | 85,6 % | Mes 0 (100 uds) |
-| 3 | Parches de Barbilla (8) | Segunda zona más pedida; permite el Kit Zona T y el Plan por zonas | 3,30 € | 72 % | Mes 3, pagado con ventas |
-| 4 | Parches de Frente (5) | Completa la Zona T | 3,10 € | 73 % | Mes 4–5 |
+| 1 | **Parches de Nariz (8)** | El héroe de Vue: el 73 % de sus anuncios aterrizan en esta ficha; es el producto con la «prueba visual» más fuerte (el parche blanquea) y el que sostiene todos los ganchos | 2,90 € netos (China, piloto) · 4,40 € (Corea) | 79,3 % | Mes 0 |
+| 2 | **Parches para Granos (36)** | El más barato de fabricar (≈ 1,9 €), el mayor margen (86 %), sirve como segundo producto del pack «Dúo Noche» y como regalo; la landing de spot patches de Vue tiene el mayor % de anuncios longevos (41 %) | 1,60 € | 87,9 % | Mes 0 (100 uds) |
+| 3 | Parches de Barbilla (8) | Segunda zona más pedida; permite el Kit Zona T y el Plan por zonas | 3,00 € | 72 % | Mes 3, pagado con ventas |
+| 4 | Parches de Frente (5) | Completa la Zona T | 2,80 € | 73 % | Mes 4–5 |
 | — | Superficie, líquidos, mascarillas | Fuera hasta tener 3 anuncios rentables y 1.500 € de caja generada | — | — | Mes 6+ |
 
 En la web se dejan visibles solo Nariz, Granos y sus packs; el resto se oculta desde el CRM (Productos → visible) sin borrar nada. El Plan Noche se limita a 1–2 zonas hasta tener barbilla y frente.
@@ -66,12 +66,12 @@ Con 1.000 € el MOQ coreano normal (NewY: 1.000 packs, 30 días de producción 
 |---|---:|---:|
 | Parches | 8 × 0,20 $ = 1,60 $ ≈ 1,47 € | 1,5 hojas × 0,30 $ ≈ 0,41 € |
 | Pouch / bolsa | 0,05 € | 0,03 € |
-| Caja + etiqueta + tarjeta | 0,45 € | 0,45 € |
-| Courier + gestión aduanera (prorrateado, lote de 165 cajas) | 0,70 € | 0,50 € |
-| Muestras, tarjeta y merma (prorrateado) | 0,45 € | 0,45 € |
-| **Total** | **≈ 3,20 €** | **≈ 1,90 €** |
+| Caja + etiqueta + tarjeta | 0,41 € | 0,41 € |
+| Courier + gestión aduanera (prorrateado, lote de 165 cajas) | 0,60 € | 0,45 € |
+| Muestras, tarjeta y merma (prorrateado) | 0,37 € | 0,30 € |
+| **Total (neto; el IVA de importación se recupera)** | **≈ 2,90 €** | **≈ 1,60 €** |
 
-Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Coste resultante en la variante A del estudio: ≈ 3,4 € por caja de nariz con el IVA como salida de caja (2,9 € si se recupera). Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.
+Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Coste resultante en la variante A del estudio: 2,9 € netos por caja de nariz (3,4 € si no pudieras recuperar el IVA). Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.
 
 **Qué pedir y cómo (10 líneas):** 1) escribir a Lvsenlan y a Yanse pidiendo muestra de nose patch hidrocoloide transparente 0,5 mm en forma de nariz (adjuntar la ficha de 60 × 45 mm de `operaciones/manual_operativo.md`); 2) pagar 20–40 € de courier por 10–20 muestras; 3) comparar con una caja de Vue: adhesión 8 h, transparencia, blanqueo, residuo; 4) si pasa, pedir 1.200–1.600 parches + 80 hojas de puntos, pago por Alibaba Trade Assurance; 5) pedir a la vez las cajas kraft, etiquetas y sobres; 6) mientras llega (2–3 semanas), grabar los anuncios con las muestras.
 
@@ -101,49 +101,49 @@ Stock inicial: ≈ 125 cajas de nariz y 40 de granos (≈ 600 € con IVA y tran
 
 ## 5. Precios, packs y contribución por pedido en modo bootstrap
 
-Supuestos: envías tú (sobre 0,35 €, etiqueta 3,90 €), Stripe 1,5 % + 0,25 €, devoluciones 2 %, coste de producto de la vía A. El cliente paga 3,90 € de envío por debajo de 30 € (cubre el coste real) y gratis a partir de 30 €.
+Supuestos (los mismos del modelo de la Parte 2): envías tú (etiqueta 3,22 € y sobre 0,29 € netos de IVA), Stripe 1,5 % + 0,25 €, devoluciones 2 %, coste de producto neto de la vía A (2,90 € nariz, 1,60 € granos; el IVA de importación se recupera). El cliente paga 3,90 € de envío por debajo de 30 € (3,22 € netos, que cubren la etiqueta) y gratis a partir de 30 €.
 
 | Oferta | Precio | Neto IVA | Producto | Stripe | Envío neto | Sobre | Devol. | **Contribución** | Margen s/neto |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 caja Nariz (envío 3,90 € a cargo del cliente) | 16,95 | 14,01 | 3,20 | 0,50 | 0,68 | 0,35 | 0,28 | **9,00 €** | 64,2 % |
-| Nariz + Granos «Dúo Noche» (envío gratis) | 26,90 | 22,23 | 5,10 | 0,65 | 0,68 | 0,35 | 0,44 | **15,01 €** | 67,5 % |
-| 2 cajas Nariz (envío gratis) | 29,90 | 24,71 | 6,40 | 0,70 | 0,68 | 0,35 | 0,49 | **16,09 €** | 65,1 % |
-| 3 cajas Nariz (envío gratis) | 39,90 | 32,98 | 9,60 | 0,85 | 3,90 | 0,35 | 0,66 | **17,62 €** | 53,4 % |
-| 2 Nariz + 1 Granos «Mes completo» (envío gratis) | 42,90 | 35,45 | 8,30 | 0,89 | 3,90 | 0,35 | 0,71 | **21,30 €** | 60,1 % |
-| 1 caja Granos (envío 3,90 € a cargo del cliente) | 15,95 | 13,18 | 1,90 | 0,49 | 0,68 | 0,35 | 0,26 | **9,50 €** | 72,1 % |
-| Suscripción 1 caja Nariz/mes −15 % (envío gratis) | 14,41 | 11,91 | 3,20 | 0,47 | 0,68 | 0,35 | 0,24 | **6,98 €** | 58,6 % |
+| 1 caja Nariz (envío 3,90 € a cargo del cliente) | 16,95 | 14,01 | 2,90 | 0,50 | 0,00 | 0,29 | 0,28 | **10,03 €** | 71,6 % |
+| Nariz + Granos «Dúo Noche» (envío gratis) | 26,90 | 22,23 | 4,50 | 0,65 | 0,00 | 0,29 | 0,44 | **16,34 €** | 73,5 % |
+| 2 cajas Nariz (envío gratis) | 29,90 | 24,71 | 5,80 | 0,70 | 0,00 | 0,29 | 0,49 | **17,43 €** | 70,5 % |
+| 3 cajas Nariz (envío gratis) | 39,90 | 32,98 | 8,70 | 0,85 | 3,22 | 0,29 | 0,66 | **19,25 €** | 58,4 % |
+| 2 Nariz + 1 Granos «Mes completo» (envío gratis) | 42,90 | 35,45 | 7,40 | 0,89 | 3,22 | 0,29 | 0,71 | **22,94 €** | 64,7 % |
+| 1 caja Granos (envío 3,90 € a cargo del cliente) | 15,95 | 13,18 | 1,60 | 0,49 | 0,00 | 0,29 | 0,26 | **10,54 €** | 80,0 % |
+| Suscripción 1 caja Nariz/mes −15 % (envío gratis) | 14,41 | 11,91 | 2,90 | 0,47 | 0,00 | 0,29 | 0,24 | **8,02 €** | 67,3 % |
 
 **Cambios de precio que este plan pide en el CRM (Precios y márgenes / Ofertas):**
 
 - Crear el pack **«2 cajas de Nariz» a 29,90 €** (ahorro 4 €, envío gratis) y hacerlo la opción preseleccionada en la ficha y el destino de todos los anuncios. Deja 16,1 € por pedido frente a 9,0 € de la caja suelta.
 - Crear el **«Dúo Noche» Nariz + Granos a 26,90 €** (ahorro 6 €) como segunda oferta y como upsell de carrito.
-- Mantener la caja suelta a 16,95 € **con envío 3,90 €** (nunca gratis: perdería 2,9 € por pedido).
+- Mantener la caja suelta a 16,95 € **con envío 3,90 €** (nunca gratis: perdería 3,2 € por pedido).
 - Umbral de envío gratis en 30 € → bajarlo a **26,90 €** para que los dos packs lo cumplan. Regalos por umbral: desactivados hasta el mes 4 (cuestan 0,6–0,9 € por pedido).
-- Suscripción: se deja activa a −15 % pero **no se anuncia**; solo se ofrece en el email post-compra. Un pedido de suscripción suelto deja 7 € (envío gratis) y no se puede comprar con anuncios.
+- Suscripción: se deja activa a −15 % pero **no se anuncia**; solo se ofrece en el email post-compra. Un pedido de suscripción suelto deja 8,02 € (envío gratis) y no se puede comprar con anuncios.
 - Popup: cambiar el −10 % por **«envío gratis en tu primer pedido»** (cuesta 3,2 € netos solo si compran una caja; en packs ya es gratis) o mantener −10 % solo sobre packs.
 
 ## 6. Cuánto tiene que convertir cada anuncio con 500 €/mes
 
-Una cuenta nueva sin historial paga más que Vue: se asume **CPM 8 €, CTR 1 % → CPC 0,80 €** (Vue trabaja con 6–9 € y 1,2 %). Con 500 €/mes son ≈ 625 clics/mes. Cada anuncio se juzga contra la contribución de la oferta a la que lleva:
+Una cuenta nueva sin historial paga más que Vue: se asume **CPM 8 €, CTR 1 % → CPC 0,80 €** (Vue trabaja con 6–9 € y 1,2 %). Con 500 €/mes son ≈ 625 clics/mes. Cada anuncio se juzga contra la contribución de la oferta a la que lleva. CVR = compras ÷ visitas, y solo el 85 % de los clics llega a cargar la ficha, así que CVR mínima = CPC ÷ (0,85 × contribución):
 
 | Oferta a la que lleva el anuncio | Contribución | **CPA máximo** (rentable desde 0) | **CPA objetivo** (70 %) | CVR mínima (CPC 0,80 €) | CVR objetivo | Pedidos/mes con 500 € al CPA objetivo | Ventas/mes |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 1 caja Nariz (envío 3,90 € a cargo del cliente) | 9,00 € | 9,00 € | **6,30 €** | 8,9 % | 12,7 % | 79 | 1345 € |
-| Nariz + Granos «Dúo Noche» (envío gratis) | 15,01 € | 15,01 € | **10,50 €** | 5,3 % | 7,6 % | 47 | 1280 € |
-| 2 cajas Nariz (envío gratis) | 16,09 € | 16,09 € | **11,26 €** | 5,0 % | 7,1 % | 44 | 1327 € |
-| 3 cajas Nariz (envío gratis) | 17,62 € | 17,62 € | **12,33 €** | 4,5 % | 6,5 % | 40 | 1617 € |
-| 2 Nariz + 1 Granos «Mes completo» (envío gratis) | 21,30 € | 21,30 € | **14,91 €** | 3,8 % | 5,4 % | 33 | 1438 € |
-| 1 caja Granos (envío 3,90 € a cargo del cliente) | 9,50 € | 9,50 € | **6,65 €** | 8,4 % | 12,0 % | 75 | 1198 € |
+| 1 caja Nariz (envío 3,90 € a cargo del cliente) | 10,03 € | 10,03 € | **7,02 €** | 9,4 % | 13,4 % | 71 | 1206 € |
+| Nariz + Granos «Dúo Noche» (envío gratis) | 16,34 € | 16,34 € | **11,44 €** | 5,8 % | 8,2 % | 43 | 1175 € |
+| 2 cajas Nariz (envío gratis) | 17,43 € | 17,43 € | **12,20 €** | 5,4 % | 7,7 % | 40 | 1225 € |
+| 3 cajas Nariz (envío gratis) | 19,25 € | 19,25 € | **13,48 €** | 4,9 % | 7,0 % | 37 | 1480 € |
+| 2 Nariz + 1 Granos «Mes completo» (envío gratis) | 22,94 € | 22,94 € | **16,06 €** | 4,1 % | 5,9 % | 31 | 1335 € |
+| 1 caja Granos (envío 3,90 € a cargo del cliente) | 10,54 € | 10,54 € | **7,38 €** | 8,9 % | 12,8 % | 67 | 1080 € |
 
-Lectura honesta: llevar tráfico frío a la caja suelta exige que el **9,5 %** de los clics compren; no va a pasar. Llevarlo al pack de 2 cajas exige el **5,0 %** (7,1 % con el CPA objetivo); sigue siendo exigente pero es el terreno donde Vue trabaja: sus fichas convierten al 4–7 % porque el anuncio ya ha hecho la venta antes del clic. Por eso el plan pone el 90 % del esfuerzo en la creatividad: **cada punto de CTR que sube baja el CPC proporcionalmente**. Con CTR 2 % (anuncios buenos) el CPC cae a 0,40 € y la CVR mínima del pack de 2 se queda en 2,5 %, que es normal.
+Lectura honesta: llevar tráfico frío a la caja suelta exige que el **9,4 %** de las visitas compren; no va a pasar. Llevarlo al pack de 2 cajas exige el **5,4 %** (7,7 % con el CPA objetivo); es exigente y es exactamente el terreno donde Vue trabaja: sus fichas convierten al 4–7 % porque el anuncio ya ha hecho la venta antes del clic. Por eso el plan pone el 90 % del esfuerzo en la creatividad: **cada punto de CTR que sube baja el CPC proporcionalmente**. Con CTR 2 % (anuncios buenos) el CPC cae a 0,40 € y la CVR mínima del pack de 2 se queda en 2,7 %. La Parte 2 (modelo) lo resume en una sola cifra: hacen falta **0,5 compras por cada 1.000 impresiones** con CPM 8 €.
 
 | CTR del anuncio | CPC (CPM 8 €) | CVR mínima pack 2 cajas | CVR mínima Dúo Noche |
 |---|---:|---:|---:|
-| 0,6 % | 1,33 € | 8,3 % | 8,9 % |
-| 1,0 % | 0,80 € | 5,0 % | 5,3 % |
-| 1,5 % | 0,53 € | 3,3 % | 3,6 % |
-| 2,0 % | 0,40 € | 2,5 % | 2,7 % |
-| 3,0 % | 0,27 € | 1,7 % | 1,8 % |
+| 0,6 % | 1,33 € | 9,0 % | 9,6 % |
+| 1,0 % | 0,80 € | 5,4 % | 5,8 % |
+| 1,5 % | 0,53 € | 3,6 % | 3,8 % |
+| 2,0 % | 0,40 € | 2,7 % | 2,9 % |
+| 3,0 % | 0,27 € | 1,8 % | 1,9 % |
 
 Punto muerto personal: sin costes fijos (no hay 3PL, ni Shopify, ni gestoría en este modo) el negocio es rentable **en cada pedido** en cuanto el CPA real está por debajo de la contribución. No hay «número de pedidos mínimo»: hay un CPA máximo.
 
@@ -235,28 +235,25 @@ Método: en la Biblioteca de anuncios de Meta no se ven resultados, pero sí **c
 | Mensual | ROAS de la cuenta (ventas/gasto) < 2,5 | Volver a 15 €/día y producir 6 creatividades nuevas antes de subir |
 | Siempre | — | Nunca editar un anuncio activo (reinicia el aprendizaje); nunca subir más del 20 %; nunca dejar un anuncio muerto encendido «por si acaso» |
 
-### 8.4 Proyección a 12 meses con la regla de reinversión
+### 8.4 Proyección a 12 meses (resumen del modelo exacto de la Parte 2)
 
-Escenario **realista** (no optimista): CPA que empieza en 14 € y baja a 9 € cuando aparecen ganadores (nunca los 6–8 € que consigue Vue con 1,8 M € de historial); ticket medio 28 € (mezcla de packs y cajas sueltas); contribución media 14 €/pedido; presupuesto del mes siguiente = 50 % de la contribución + 500 € de aportación mientras el resultado del mes no llegue a 500 €, sin bajar nunca el presupuesto que ya funciona y con techo de 1.200 €/mes hasta el mes 6 y 1.500 € después (una cuenta nueva en España satura antes); el otro 50 % de la contribución va a stock. Si el CPA no baja de 12 € en el mes 3, el plan se para en la fila del mes 3.
+La proyección completa, mes a mes y con caja, stock e IVA, está en la Parte 2 (modelo bootstrap), construida desde el embudo (CPM → CTR → visitas → CVR → pedidos → mix) y comprobada en Excel con LibreOffice. Resumen de los tres escenarios:
 
-| Mes | Ads | CPA | Pedidos | Ventas (IVA incl.) | Contribución | Resultado tras ads | Aportación necesaria |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 0 | 225 € | 14,00 | 16 | 448 € | 224 € | -1 € | 1.000 € |
-| 1 | 612 € | 13,00 | 47 | 1316 € | 658 € | 46 € | 500 € |
-| 2 | 829 € | 11,00 | 75 | 2100 € | 1050 € | 221 € | 500 € |
-| 3 | 1025 € | 10,00 | 102 | 2856 € | 1428 € | 403 € | 500 € |
-| 4 | 1200 € | 9,50 | 126 | 3528 € | 1764 € | 564 € | 500 € |
-| 5 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 6 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 7 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 8 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 9 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 10 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 11 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| 12 | 1200 € | 9,00 | 133 | 3724 € | 1862 € | 662 € | 0 € |
-| **Total 12 meses** | | | | | | **6529 €** | **3000 € aportados** |
+| Indicador | Pesimista (CPC 1,13 €, CVR 1,2→2,0 %) | Base (CPC 0,80 €, CVR 1,8→3,3 %) | Optimista (CPC 0,53 €, CVR 2,2→4,5 %) |
+|---|---:|---:|---:|
+| Anuncios comprados en total | 1.846 | 2.017 | 12.413 |
+| Meses con anuncios | 4 (parada en el mes 3) | 4 (parada en el mes 3) | 13 |
+| Pedidos en total (13 meses) | 25 | 64 | 1.083 |
+| Cobrado en total (IVA incl.) | 778 | 2.028 | 34.297 |
+| Resultado acumulado (antes de tu tiempo) | -1.464 | -975 | 6.508 |
+| Aportaciones totales (incluidos los 1.000 € iniciales) | 2.500 | 2.500 | 3.000 |
+| Último mes con anuncios: pedidos | 8,35 | 23,16 | 104,28 |
+| Último mes con anuncios: cobrado | 265 | 734 | 3.303 |
+| Último mes con anuncios: CPA | 73,53 | 31,37 | 13,07 |
+| Último mes con anuncios: resultado | -424 | -254 | 729 |
+| Caja al final del mes 12 | 567 | 982 | 8.413 |
 
-Traducción: con las reglas cumplidas, el resultado mensual es positivo desde el mes 1 (la contribución media de 14 € supera el CPA de 13 €), la aportación de 500 € deja de hacer falta hacia el mes 4 y desde el mes 5 el negocio se estabiliza en ≈ 130 pedidos/mes con 1.200 €/mes de ads que se pagan solos, dejando ≈ 650 €/mes de resultado antes de tu tiempo y de la legalización. **No es un negocio de 65.000 €/mes en el año 1**; es un negocio de 2.000–2.500 €/mes de ventas que demuestra qué anuncios venden, y esa demostración es lo que justifica (o no) la inversión grande del documento maestro. Si el CPA se queda en 14 €, el resultado mensual es negativo (−30 a −60 €/mes) y hay que parar en el mes 3.
+**Lo que dice el modelo, sin adornos.** Con la contribución del pedido medio (16,09 €) y un CPC de 0,80 €, el CPA solo baja de la contribución si la ficha convierte por encima del 5,9 % de las visitas. El escenario base (CVR 3,3 % en el mes 3) **no llega**: su CPA del mes 3 es 31,37 € frente a 16,09 € de contribución, la regla de parada actúa y el test termina habiendo aportado 2.500 € con una pérdida acumulada de 975 € (quedan ≈ 982 € en caja y stock sin vender). El pesimista, igual, con 1.464 € de pérdida. El optimista, que es el nivel de Vue (CTR 1,5 %, CVR 4,5 %), es rentable desde el mes 2 y llega a ≈ 104 pedidos y ≈ 3.303 € cobrados al mes con 1.105 € de anuncios, dejando ≈ 729 €/mes y 8.413 € en caja al final del año con solo 3.000 € aportados. En una cifra: **hacen falta 0,5 compras por cada 1.000 impresiones** (CPM 8 €). Ese es el listón del test de 90 días. La versión anterior de esta sección asumía CPA de 9–14 € sin derivarlos del embudo: estaba mal y queda sustituida.
 
 ### 8.5 Calendario de oportunidades (donde el CPC baja o la demanda sube)
 

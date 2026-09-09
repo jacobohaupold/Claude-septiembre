@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-IVA=1.21; PAY_PCT=0.015; PAY_FIX=0.25; SHIP=3.90; SHIP_PAID=3.90; FREE_FROM=30; PACK=0.35; RET=0.02
+IVA=1.21; PAY_PCT=0.015; PAY_FIX=0.25; SHIP=3.90/1.21; SHIP_PAID=3.90; FREE_FROM=30; PACK=0.35/1.21; RET=0.02; LAND=0.85
+import json; MODEL=json.load(open('/tmp/claude-0/-home-user/e4610181-73c9-5b97-9776-a971b4d99e53/scratchpad/model.json'))
 CPM=8.0; CTR=0.010; CPC=CPM/1000/CTR   # 0,80 € cuenta nueva
-COST={"nariz_cn":3.20,"nariz_kr":4.80,"granos":1.90,"barbilla_cn":3.30,"frente_cn":3.10}
+R1=None
+COST={"nariz_cn":2.90,"nariz_kr":4.40,"granos":1.60,"barbilla_cn":3.00,"frente_cn":2.80}  # netos de IVA (el IVA de importación se recupera)
 f=lambda x: ("%.2f"%x).replace(".",",")
 pc=lambda x: ("%.1f"%(x*100)).replace(".",",")+" %"
 def contrib(price,cogs):
@@ -25,17 +27,18 @@ for i,t in enumerate(["Qué significa «rentable desde el momento 0» con 1.000 
 w("")
 # 1
 w("## 1. Qué significa «rentable desde el momento 0» con 1.000 €\n")
-w("Rentable desde el primer pedido significa una sola cosa: **el coste de conseguir un pedido con anuncios tiene que ser menor que lo que deja ese pedido** una vez pagado el producto, el envío, el sobre, Stripe y las devoluciones. No cuenta la recompra futura, no cuenta la suscripción, no cuenta «el LTV». Con 500 €/mes no hay margen para financiar clientes que se rentabilizan en el mes 3.\n")
+w("Rentable desde el primer pedido significa una sola cosa (y el modelo de la Parte 2 demuestra que solo se cumple si los anuncios rinden al nivel de Vue): **el coste de conseguir un pedido con anuncios tiene que ser menor que lo que deja ese pedido** una vez pagado el producto, el envío, el sobre, Stripe y las devoluciones. No cuenta la recompra futura, no cuenta la suscripción, no cuenta «el LTV». Con 500 €/mes no hay margen para financiar clientes que se rentabilizan en el mes 3.\n")
 w("De ahí salen las cuatro reglas del plan:\n")
-w("- **Regla 1 — El ticket mínimo es un pack.** Una caja suelta de 16,95 € deja 9 € y necesita que el 9 % de los clics compren. Un pack de 2 cajas (29,90 €) deja 16 € y necesita el 5 %. Todo anuncio lleva al pack, no a la caja.")
+R1=contrib(16.95,COST["nariz_cn"])["c"]; R2=contrib(29.90,2*COST["nariz_cn"])["c"]
+w(f"- **Regla 1 — El ticket mínimo es un pack.** Una caja suelta de 16,95 € deja {f(R1)} € y necesita que el {pc(CPC/(LAND*R1))} de las visitas compren. Un pack de 2 cajas (29,90 €) deja {f(R2)} € y necesita el {pc(CPC/(LAND*R2))}. Todo anuncio lleva al pack, no a la caja.")
 w("- **Regla 2 — Envías tú.** Sin 3PL, sin almacén. Sobre acolchado, etiqueta de Correos/Packlink desde casa. Son 2,85 € de ahorro por pedido que hacen la diferencia entre ganar y perder.")
-w("- **Regla 3 — Cada anuncio tiene 12 € para demostrar que sirve.** Con el CPA objetivo de 11 € (pack de 2 cajas), un anuncio que gasta 15 € sin vender se apaga. Un anuncio que vende a menos de 11 € se duplica. Sin excepciones ni «dale un día más».")
+w(f"- **Regla 3 — Cada anuncio tiene 15 € para demostrar que sirve.** Con el CPA objetivo de {f(0.7*MODEL['CONTRIB'])} € (pedido medio; máximo {f(MODEL['CONTRIB'])} €), un anuncio que gasta 15 € sin vender se apaga. Un anuncio que vende por debajo del CPA objetivo se duplica. Sin excepciones ni «dale un día más».")
 w("- **Regla 4 — El dinero de las ventas se reinvierte a la mitad.** El 50 % de la contribución de cada mes vuelve a anuncios, el otro 50 % se guarda para reponer stock. Así el presupuesto crece solo si el negocio lo gana.\n")
 # 2
 w("## 2. Producto: solo parches, y en este orden\n")
 w("| Orden | Producto | Por qué ahora | Coste bootstrap/caja | Margen bruto | Cuándo |")
 w("|---|---|---|---:|---:|---|")
-w(f"| 1 | **Parches de Nariz (8)** | El héroe de Vue: el 73 % de sus anuncios aterrizan en esta ficha; es el producto con la «prueba visual» más fuerte (el parche blanquea) y el que sostiene todos los ganchos | {f(COST['nariz_cn'])} € (China, tirada pequeña) · {f(COST['nariz_kr'])} € (Corea) | {pc((16.95/IVA-COST['nariz_cn'])/(16.95/IVA))} | Mes 0 |")
+w(f"| 1 | **Parches de Nariz (8)** | El héroe de Vue: el 73 % de sus anuncios aterrizan en esta ficha; es el producto con la «prueba visual» más fuerte (el parche blanquea) y el que sostiene todos los ganchos | {f(COST['nariz_cn'])} € netos (China, piloto) · {f(COST['nariz_kr'])} € (Corea) | {pc((16.95/IVA-COST['nariz_cn'])/(16.95/IVA))} | Mes 0 |")
 w(f"| 2 | **Parches para Granos (36)** | El más barato de fabricar (≈ 1,9 €), el mayor margen (86 %), sirve como segundo producto del pack «Dúo Noche» y como regalo; la landing de spot patches de Vue tiene el mayor % de anuncios longevos (41 %) | {f(COST['granos'])} € | {pc((15.95/IVA-COST['granos'])/(15.95/IVA))} | Mes 0 (100 uds) |")
 w(f"| 3 | Parches de Barbilla (8) | Segunda zona más pedida; permite el Kit Zona T y el Plan por zonas | {f(COST['barbilla_cn'])} € | 72 % | Mes 3, pagado con ventas |")
 w(f"| 4 | Parches de Frente (5) | Completa la Zona T | {f(COST['frente_cn'])} € | 73 % | Mes 4–5 |")
@@ -63,12 +66,12 @@ w("| Concepto | Nariz (8 parches) | Granos (36 puntos) |")
 w("|---|---:|---:|")
 w("| Parches | 8 × 0,20 $ = 1,60 $ ≈ 1,47 € | 1,5 hojas × 0,30 $ ≈ 0,41 € |")
 w("| Pouch / bolsa | 0,05 € | 0,03 € |")
-w("| Caja + etiqueta + tarjeta | 0,45 € | 0,45 € |")
-w("| Courier + gestión aduanera (prorrateado, lote de 165 cajas) | 0,70 € | 0,50 € |")
-w("| Muestras, tarjeta y merma (prorrateado) | 0,45 € | 0,45 € |")
-w(f"| **Total** | **≈ {f(COST['nariz_cn'])} €** | **≈ {f(COST['granos'])} €** |")
+w("| Caja + etiqueta + tarjeta | 0,41 € | 0,41 € |")
+w("| Courier + gestión aduanera (prorrateado, lote de 165 cajas) | 0,60 € | 0,45 € |")
+w("| Muestras, tarjeta y merma (prorrateado) | 0,37 € | 0,30 € |")
+w(f"| **Total (neto; el IVA de importación se recupera)** | **≈ {f(COST['nariz_cn'])} €** | **≈ {f(COST['granos'])} €** |")
 w("")
-w("Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Coste resultante en la variante A del estudio: ≈ 3,4 € por caja de nariz con el IVA como salida de caja (2,9 € si se recupera). Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.\n")
+w("Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Coste resultante en la variante A del estudio: 2,9 € netos por caja de nariz (3,4 € si no pudieras recuperar el IVA). Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.\n")
 w("**Qué pedir y cómo (10 líneas):** 1) escribir a Lvsenlan y a Yanse pidiendo muestra de nose patch hidrocoloide transparente 0,5 mm en forma de nariz (adjuntar la ficha de 60 × 45 mm de `operaciones/manual_operativo.md`); 2) pagar 20–40 € de courier por 10–20 muestras; 3) comparar con una caja de Vue: adhesión 8 h, transparencia, blanqueo, residuo; 4) si pasa, pedir 1.200–1.600 parches + 80 hojas de puntos, pago por Alibaba Trade Assurance; 5) pedir a la vez las cajas kraft, etiquetas y sobres; 6) mientras llega (2–3 semanas), grabar los anuncios con las muestras.\n")
 # 4
 w("## 4. Cómo se reparten los 1.000 € (y los 500 €/mes)\n")
@@ -89,7 +92,7 @@ w("| 4–12 | 0 € si el negocio se sostiene | crece con las ventas | según la
 w("")
 # 5
 w("## 5. Precios, packs y contribución por pedido en modo bootstrap\n")
-w("Supuestos: envías tú (sobre 0,35 €, etiqueta 3,90 €), Stripe 1,5 % + 0,25 €, devoluciones 2 %, coste de producto de la vía A. El cliente paga 3,90 € de envío por debajo de 30 € (cubre el coste real) y gratis a partir de 30 €.\n")
+w("Supuestos (los mismos del modelo de la Parte 2): envías tú (etiqueta 3,22 € y sobre 0,29 € netos de IVA), Stripe 1,5 % + 0,25 €, devoluciones 2 %, coste de producto neto de la vía A (2,90 € nariz, 1,60 € granos; el IVA de importación se recupera). El cliente paga 3,90 € de envío por debajo de 30 € (3,22 € netos, que cubren la etiqueta) y gratis a partir de 30 €.\n")
 w("| Oferta | Precio | Neto IVA | Producto | Stripe | Envío neto | Sobre | Devol. | **Contribución** | Margen s/neto |")
 w("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
 res={}
@@ -100,25 +103,25 @@ w("")
 w("**Cambios de precio que este plan pide en el CRM (Precios y márgenes / Ofertas):**\n")
 w("- Crear el pack **«2 cajas de Nariz» a 29,90 €** (ahorro 4 €, envío gratis) y hacerlo la opción preseleccionada en la ficha y el destino de todos los anuncios. Deja 16,1 € por pedido frente a 9,0 € de la caja suelta.")
 w("- Crear el **«Dúo Noche» Nariz + Granos a 26,90 €** (ahorro 6 €) como segunda oferta y como upsell de carrito.")
-w("- Mantener la caja suelta a 16,95 € **con envío 3,90 €** (nunca gratis: perdería 2,9 € por pedido).")
+w("- Mantener la caja suelta a 16,95 € **con envío 3,90 €** (nunca gratis: perdería 3,2 € por pedido).")
 w("- Umbral de envío gratis en 30 € → bajarlo a **26,90 €** para que los dos packs lo cumplan. Regalos por umbral: desactivados hasta el mes 4 (cuestan 0,6–0,9 € por pedido).")
-w("- Suscripción: se deja activa a −15 % pero **no se anuncia**; solo se ofrece en el email post-compra. Un pedido de suscripción suelto deja 7 € (envío gratis) y no se puede comprar con anuncios.")
+w(f"- Suscripción: se deja activa a −15 % pero **no se anuncia**; solo se ofrece en el email post-compra. Un pedido de suscripción suelto deja {f(res['Suscripción 1 caja Nariz/mes −15 % (envío gratis)'])} € (envío gratis) y no se puede comprar con anuncios.")
 w("- Popup: cambiar el −10 % por **«envío gratis en tu primer pedido»** (cuesta 3,2 € netos solo si compran una caja; en packs ya es gratis) o mantener −10 % solo sobre packs.\n")
 # 6
 w("## 6. Cuánto tiene que convertir cada anuncio con 500 €/mes\n")
-w(f"Una cuenta nueva sin historial paga más que Vue: se asume **CPM 8 €, CTR 1 % → CPC 0,80 €** (Vue trabaja con 6–9 € y 1,2 %). Con 500 €/mes son ≈ 625 clics/mes. Cada anuncio se juzga contra la contribución de la oferta a la que lleva:\n")
+w(f"Una cuenta nueva sin historial paga más que Vue: se asume **CPM 8 €, CTR 1 % → CPC 0,80 €** (Vue trabaja con 6–9 € y 1,2 %). Con 500 €/mes son ≈ 625 clics/mes. Cada anuncio se juzga contra la contribución de la oferta a la que lleva. CVR = compras ÷ visitas, y solo el 85 % de los clics llega a cargar la ficha, así que CVR mínima = CPC ÷ (0,85 × contribución):\n")
 w("| Oferta a la que lleva el anuncio | Contribución | **CPA máximo** (rentable desde 0) | **CPA objetivo** (70 %) | CVR mínima (CPC 0,80 €) | CVR objetivo | Pedidos/mes con 500 € al CPA objetivo | Ventas/mes |")
 w("|---|---:|---:|---:|---:|---:|---:|---:|")
 for n,p,c in OFF:
     if n.startswith("Suscripción"): continue
     C=res[n]; tgt=0.7*C
-    w(f"| {n} | {f(C)} € | {f(C)} € | **{f(tgt)} €** | {pc(CPC/C)} | {pc(CPC/tgt)} | {int(500/tgt)} | {int(500/tgt*p)} € |")
+    w(f"| {n} | {f(C)} € | {f(C)} € | **{f(tgt)} €** | {pc(CPC/(LAND*C))} | {pc(CPC/(LAND*tgt))} | {int(500/tgt)} | {int(500/tgt*p)} € |")
 w("")
-w("Lectura honesta: llevar tráfico frío a la caja suelta exige que el **9,5 %** de los clics compren; no va a pasar. Llevarlo al pack de 2 cajas exige el **5,0 %** (7,1 % con el CPA objetivo); sigue siendo exigente pero es el terreno donde Vue trabaja: sus fichas convierten al 4–7 % porque el anuncio ya ha hecho la venta antes del clic. Por eso el plan pone el 90 % del esfuerzo en la creatividad: **cada punto de CTR que sube baja el CPC proporcionalmente**. Con CTR 2 % (anuncios buenos) el CPC cae a 0,40 € y la CVR mínima del pack de 2 se queda en 2,5 %, que es normal.\n")
+w(f"Lectura honesta: llevar tráfico frío a la caja suelta exige que el **{pc(CPC/(LAND*res['1 caja Nariz (envío 3,90 € a cargo del cliente)']))}** de las visitas compren; no va a pasar. Llevarlo al pack de 2 cajas exige el **{pc(CPC/(LAND*R2))}** ({pc(CPC/(LAND*0.7*R2))} con el CPA objetivo); es exigente y es exactamente el terreno donde Vue trabaja: sus fichas convierten al 4–7 % porque el anuncio ya ha hecho la venta antes del clic. Por eso el plan pone el 90 % del esfuerzo en la creatividad: **cada punto de CTR que sube baja el CPC proporcionalmente**. Con CTR 2 % (anuncios buenos) el CPC cae a 0,40 € y la CVR mínima del pack de 2 se queda en {pc(0.40/(LAND*R2))}. La Parte 2 (modelo) lo resume en una sola cifra: hacen falta **0,5 compras por cada 1.000 impresiones** con CPM 8 €.\n")
 w("| CTR del anuncio | CPC (CPM 8 €) | CVR mínima pack 2 cajas | CVR mínima Dúo Noche |")
 w("|---|---:|---:|---:|")
 for ctr in (0.006,0.01,0.015,0.02,0.03):
-    cpc=CPM/1000/ctr; w(f"| {pc(ctr)} | {f(cpc)} € | {pc(cpc/res['2 cajas Nariz (envío gratis)'])} | {pc(cpc/res['Nariz + Granos «Dúo Noche» (envío gratis)'])} |")
+    cpc=CPM/1000/ctr; w(f"| {pc(ctr)} | {f(cpc)} € | {pc(cpc/(LAND*res['2 cajas Nariz (envío gratis)']))} | {pc(cpc/(LAND*res['Nariz + Granos «Dúo Noche» (envío gratis)']))} |")
 w("")
 w("Punto muerto personal: sin costes fijos (no hay 3PL, ni Shopify, ni gestoría en este modo) el negocio es rentable **en cada pedido** en cuanto el CPA real está por debajo de la contribución. No hay «número de pedidos mínimo»: hay un CPA máximo.\n")
 # 7
@@ -191,21 +194,19 @@ for r in [("1.000 impresiones","Hook rate (3 s) < 25 % o CTR < 0,8 %","Apagar. C
 ("Siempre","—","Nunca editar un anuncio activo (reinicia el aprendizaje); nunca subir más del 20 %; nunca dejar un anuncio muerto encendido «por si acaso»")]:
     w(f"| {r[0]} | {r[1]} | {r[2]} |")
 w("")
-w("### 8.4 Proyección a 12 meses con la regla de reinversión\n")
-w("Escenario **realista** (no optimista): CPA que empieza en 14 € y baja a 9 € cuando aparecen ganadores (nunca los 6–8 € que consigue Vue con 1,8 M € de historial); ticket medio 28 € (mezcla de packs y cajas sueltas); contribución media 14 €/pedido; presupuesto del mes siguiente = 50 % de la contribución + 500 € de aportación mientras el resultado del mes no llegue a 500 €, sin bajar nunca el presupuesto que ya funciona y con techo de 1.200 €/mes hasta el mes 6 y 1.500 € después (una cuenta nueva en España satura antes); el otro 50 % de la contribución va a stock. Si el CPA no baja de 12 € en el mes 3, el plan se para en la fila del mes 3.\n")
-w("| Mes | Ads | CPA | Pedidos | Ventas (IVA incl.) | Contribución | Resultado tras ads | Aportación necesaria |")
-w("|---|---:|---:|---:|---:|---:|---:|---:|")
-cpa=[14,13,11,10,9.5,9,9,9,9,9,9,9,9]; aov=28; cm=14; tot=0; a=225; apt_tot=1000; prev_res=0; aport=1000
-for m in range(0,13):
-    ped=int(a/cpa[m]); ven=ped*aov; con=ped*cm; res_=con-a; tot+=res_
-    w(f"| {m} | {int(a)} € | {f(cpa[m])} | {ped} | {int(ven)} € | {int(con)} € | {int(res_)} € | {'1.000 €' if m==0 else ('500 €' if aport else '0 €')} |")
-    half=con*0.5; cap=1200 if m<6 else 1500
-    aport=500 if res_<500 else 0
-    if m<12: apt_tot+=aport
-    a=min(cap,max(a if m>0 else 0,half+aport))
-w(f"| **Total 12 meses** | | | | | | **{int(tot)} €** | **{int(apt_tot)} € aportados** |")
+w("### 8.4 Proyección a 12 meses (resumen del modelo exacto de la Parte 2)\n")
+w("La proyección completa, mes a mes y con caja, stock e IVA, está en la Parte 2 (modelo bootstrap), construida desde el embudo (CPM → CTR → visitas → CVR → pedidos → mix) y comprobada en Excel con LibreOffice. Resumen de los tres escenarios:\n")
+w("| Indicador | Pesimista (CPC 1,13 €, CVR 1,2→2,0 %) | Base (CPC 0,80 €, CVR 1,8→3,3 %) | Optimista (CPC 0,53 €, CVR 2,2→4,5 %) |")
+w("|---|---:|---:|---:|")
+SC=MODEL['scen']; i0=lambda x: (f"{int(round(x)):,}").replace(",",".")
+def tot(k,key): return sum(r[key] for r in SC[k])
+def stopm(k): return next((r['m'] for r in SC[k] if r.get('stopped')),None)
+def last_active(k): return [r for r in SC[k] if r['spend']>0][-1]
+for lab,fn in [("Anuncios comprados en total",lambda k:i0(tot(k,'spend'))),("Meses con anuncios",lambda k:str(len([r for r in SC[k] if r['spend']>0]))+(" (parada en el mes 3)" if stopm(k) else "")),("Pedidos en total (13 meses)",lambda k:i0(tot(k,'orders'))),("Cobrado en total (IVA incl.)",lambda k:i0(tot(k,'revenue'))),("Resultado acumulado (antes de tu tiempo)",lambda k:i0(tot(k,'result'))),("Aportaciones totales (incluidos los 1.000 € iniciales)",lambda k:i0(1000+tot(k,'aport'))),("Último mes con anuncios: pedidos",lambda k:f(last_active(k)['orders'])),("Último mes con anuncios: cobrado",lambda k:i0(last_active(k)['revenue'])),("Último mes con anuncios: CPA",lambda k:f(last_active(k)['cpa'])),("Último mes con anuncios: resultado",lambda k:i0(last_active(k)['result'])),("Caja al final del mes 12",lambda k:i0(SC[k][-1]['cash']))]:
+    w(f"| {lab} | "+" | ".join(fn(k) for k in ('Pesimista','Base','Optimista'))+" |")
 w("")
-w("Traducción: con las reglas cumplidas, el resultado mensual es positivo desde el mes 1 (la contribución media de 14 € supera el CPA de 13 €), la aportación de 500 € deja de hacer falta hacia el mes 4 y desde el mes 5 el negocio se estabiliza en ≈ 130 pedidos/mes con 1.200 €/mes de ads que se pagan solos, dejando ≈ 650 €/mes de resultado antes de tu tiempo y de la legalización. **No es un negocio de 65.000 €/mes en el año 1**; es un negocio de 2.000–2.500 €/mes de ventas que demuestra qué anuncios venden, y esa demostración es lo que justifica (o no) la inversión grande del documento maestro. Si el CPA se queda en 14 €, el resultado mensual es negativo (−30 a −60 €/mes) y hay que parar en el mes 3.\n")
+B=SC['Base']; O=SC['Optimista']; P_=SC['Pesimista']
+w(f"**Lo que dice el modelo, sin adornos.** Con la contribución del pedido medio ({f(MODEL['CONTRIB'])} €) y un CPC de 0,80 €, el CPA solo baja de la contribución si la ficha convierte por encima del {pc(0.8/(LAND*MODEL['CONTRIB']))} de las visitas. El escenario base (CVR 3,3 % en el mes 3) **no llega**: su CPA del mes 3 es {f(B[3]['cpa'])} € frente a {f(MODEL['CONTRIB'])} € de contribución, la regla de parada actúa y el test termina habiendo aportado {i0(1000+tot('Base','aport'))} € con una pérdida acumulada de {i0(-tot('Base','result'))} € (quedan ≈ {i0(B[-1]['cash'])} € en caja y stock sin vender). El pesimista, igual, con {i0(-tot('Pesimista','result'))} € de pérdida. El optimista, que es el nivel de Vue (CTR 1,5 %, CVR 4,5 %), es rentable desde el mes {next(r['m'] for r in O if r['result']>0)} y llega a ≈ {i0(O[-1]['orders'])} pedidos y ≈ {i0(O[-1]['revenue'])} € cobrados al mes con {i0(O[-1]['spend'])} € de anuncios, dejando ≈ {i0(O[-1]['result'])} €/mes y {i0(O[-1]['cash'])} € en caja al final del año con solo 3.000 € aportados. En una cifra: **hacen falta 0,5 compras por cada 1.000 impresiones** (CPM 8 €). Ese es el listón del test de 90 días. La versión anterior de esta sección asumía CPA de 9–14 € sin derivarlos del embudo: estaba mal y queda sustituida.\n")
 w("### 8.5 Calendario de oportunidades (donde el CPC baja o la demanda sube)\n")
 w("Enero (propósitos, Rebajas: CPM bajo, demanda alta: el mejor mes para escalar) · marzo–abril (piel visible, primavera) · junio–julio (grasa, verano; Vue hace su «summer sale») · septiembre (vuelta a la rutina) · octubre (antes de que suba el CPM) · **noviembre y diciembre: no escalar**, CPM +40–60 %; mantener 15 €/día y vender a la lista de email/WhatsApp con la oferta de Navidad (Vue: hasta −45 %).\n")
 # 9
