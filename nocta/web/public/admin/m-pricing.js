@@ -85,7 +85,7 @@
       body.innerHTML = `
         <div class="grid grid--kpi mb">
           ${A.kpi('Margen medio ponderado', weighted == null ? '—' : A.pct(weighted), 'ponderado por precio de venta', kpiCls(weighted))}
-          ${A.kpi('Peor margen', worst ? esc(worst.p.name) : '—', worst ? 'Margen ' + A.pct(worst.mSale.pctnum) : 'Sin costes cargados', kpiCls(worst && worst.mSale.pctnum))}
+          ${A.kpi('Peor margen', worst ? A.pct(worst.mSale.pctnum) : '—', worst ? esc(worst.p.name) : 'Sin costes cargados', kpiCls(worst && worst.mSale.pctnum))}
           ${A.kpi('Sin coste', String(noCost), 'de ' + items.length + ' productos', noCost ? 'warn' : 'good')}
         </div>
         ${A.card('Márgenes por producto', A.table({
