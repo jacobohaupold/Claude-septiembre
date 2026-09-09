@@ -375,17 +375,32 @@
   }
 
   /* ============================================================ TEXTOS Y WEB ============================================================ */
+  const CT_STYLE = `<style>
+    .ct-flexrow{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+    .ct-flexrow .fld{flex:1 1 150px;min-width:0;margin-bottom:0}
+    .ct-flexrow .ct-ac{flex:0 0 auto;display:flex;gap:4px;padding-bottom:2px}
+    .ct-feat{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+    .ct-feat .ct-ac{display:flex;gap:4px}
+    .ct-addrow{display:flex;flex-wrap:wrap;gap:8px}
+    .ct-addrow select{flex:1 1 200px;min-width:0}
+    .ct-key{font-size:11px}
+  </style>`;
+
   A.mod('content', {
     title: 'Textos y web', icon: '✎', group: 'Tienda',
     render: async (el) => {
       let all = [];
       try { all = (await A.r('content', 'select=*')).rows || []; } catch (e) { A.toast(e.message, 'bad'); }
       const byKey = k => { const r = all.find(x => x.key === k); return r ? r.value : null; };
-      el.innerHTML = '';
+      el.innerHTML = CT_STYLE;
       A.tabs(el, {
+        'Portada': body => tabHome(body, byKey('home'), byKey('cms')),
         'Barra superior': body => tabBar(body, byKey('bar')),
-        'Popup de bienvenida': body => tabPopup(body, byKey('popup')),
         'Aviso': body => tabAnnounce(body, byKey('announce')),
+        'Popup de bienvenida': body => tabPopup(body, byKey('popup')),
+        'Menú y pie': body => tabNavFooter(body, byKey('nav'), byKey('footer')),
+        'Páginas': body => tabPages(body, byKey('cms')),
+        'Opiniones': body => tabReviews(body, byKey('reviews')),
         'WhatsApp público': body => tabWa(body, byKey('whatsapp_public')),
         'Avanzado': body => tabAdvanced(body, all)
       });
@@ -396,6 +411,318 @@
     try { if (btn) btn.disabled = true; await A.act('content.save', { key, value }); A.toast('Guardado. La web lo muestra en menos de 1 minuto', 'ok'); }
     catch (e) { A.toast(e.message, 'bad'); }
     finally { if (btn) btn.disabled = false; }
+  }
+
+  // valor actual "en vivo" de una clave de content (para mezclar sin pisar cambios de otra pestaña/persona)
+  async function freshContent(key, fallback) {
+    try { const r = await A.r('content', 'select=value&key=eq.' + encodeURIComponent(key)); const row = (r.rows || [])[0]; return row && row.value != null ? row.value : fallback; }
+    catch (e) { return fallback; }
+  }
+  // /admin/cms-defaults.json: {"clave": {"page":"x.html","text":"por defecto"}}
+  let cmsDefPromise = null;
+  function cmsDefaults() {
+    if (!cmsDefPromise) cmsDefPromise = fetch('/admin/cms-defaults.json').then(r => r.json()).catch(() => ({}));
+    return cmsDefPromise;
+  }
+
+  /* ---------- Portada (home) ---------- */
+  const HOME_SECTIONS = [['destacados', 'Destacados'], ['productos', 'Productos'], ['metodo', 'Método'], ['skincare', 'Skincare'], ['packs', 'Packs'], ['planes', 'Planes'], ['comunidad', 'Comunidad'], ['opiniones', 'Opiniones']];
+  const HOME_CMS_FIELDS = [
+    ['home.hero.title', 'Título principal (hero)', 'textarea'],
+    ['home.hero.cta', 'Texto del botón (hero)', 'text'],
+    ['home.editorial.title', 'Título de la editorial', 'textarea'],
+    ['home.editorial.text', 'Texto de la editorial', 'textarea'],
+    ['home.editorial.cta', 'Texto del enlace editorial', 'text'],
+    ['home.result.title', 'Título de "Lo que sale en una noche"', 'textarea'],
+    ['home.result.text', 'Texto de "Lo que sale en una noche"', 'textarea'],
+    ['home.featured.label', 'Etiqueta de destacados', 'text']
+  ];
+
+  async function tabHome(body, homeVal0, cmsVal0) {
+    const defs = await cmsDefaults();
+    const home = { hero: {}, editorial: {}, sections: {}, steps: [], featured: [], ...(homeVal0 || {}) };
+    home.hero = { video: '', poster: '', cta_href: '', ...(home.hero || {}) };
+    home.editorial = { href: '', ...(home.editorial || {}) };
+    const steps = [0, 1, 2].map(i => ({ l: '', b: '', s: '', ...((home.steps || [])[i] || {}) }));
+    const featured = (Array.isArray(home.featured) ? home.featured : []).slice();
+    const cms = { ...(cmsVal0 || {}) };
+    const products = A.products();
+
+    const draw = () => {
+      body.innerHTML = `
+        ${A.card('Textos de portada', `<p class="muted xs mb">Deja un campo vacío para usar el texto de siempre (aparece de fondo, más claro, como referencia).</p><div id="home-texts"></div>`)}
+        ${A.card('Vídeo y botón principal (hero)', `<div id="home-hero"></div>`)}
+        ${A.card('Destacados en portada', `<p class="muted xs mb">Productos de la sección de destacados, en este orden.</p><div id="home-feat"></div><div class="ct-addrow mt"></div>`)}
+        ${A.card('Secciones visibles', `<div id="home-sections" class="grid grid--2"></div>`)}
+        ${A.card('Cómo funciona (3 pasos)', `<div id="home-steps"></div>`)}
+        ${A.card('Enlace de la tarjeta editorial', `<div id="home-edlink"></div>`)}
+        <div class="row mt"><button class="btn btn--p btn--w" id="home-save" type="button">Guardar portada</button></div>`;
+
+      // textos (cms)
+      $('#home-texts', body).innerHTML = HOME_CMS_FIELDS.map(([k, label, type]) => `
+        <div class="fld">
+          <label>${esc(label)}</label>
+          ${type === 'textarea'
+          ? `<textarea data-cmsk="${esc(k)}" placeholder="${esc((defs[k] && defs[k].text) || '')}">${esc(cms[k] || '')}</textarea>`
+          : `<input type="text" data-cmsk="${esc(k)}" placeholder="${esc((defs[k] && defs[k].text) || '')}" value="${esc(cms[k] || '')}">`}
+        </div>`).join('');
+
+      // hero
+      const hf = document.createElement('form');
+      hf.innerHTML = A.form([
+        { k: 'video', label: 'Vídeo (ruta, ej. /assets/video/hero.mp4)' },
+        { k: 'poster', label: 'Fotograma / imagen de portada del vídeo (ruta)' },
+        { k: 'cta_href', label: 'Destino del botón principal (ej. /catalogo.html)' }
+      ], home.hero);
+      hf.id = 'home-hero-f';
+      $('#home-hero', body).appendChild(hf);
+
+      // destacados
+      const featBox = $('#home-feat', body);
+      featBox.innerHTML = featured.length ? featured.map((slug, i) => {
+        const p = products.find(x => x.slug === slug);
+        return `<div class="ct-feat" data-fi="${i}">
+          <span class="sm">${esc(p ? p.name : slug)} <span class="muted xs mono">${esc(slug)}</span></span>
+          <span class="ct-ac">
+            <button type="button" class="btn btn--s btn--g" data-fup="${i}" ${i === 0 ? 'disabled' : ''}>↑</button>
+            <button type="button" class="btn btn--s btn--g" data-fdown="${i}" ${i === featured.length - 1 ? 'disabled' : ''}>↓</button>
+            <button type="button" class="btn btn--s btn--d" data-fdel="${i}">✕</button>
+          </span>
+        </div>`;
+      }).join('') : '<p class="muted xs">Sin destacados todavía.</p>';
+      $$('[data-fup]', featBox).forEach(b => b.onclick = () => { const i = Number(b.dataset.fup); [featured[i - 1], featured[i]] = [featured[i], featured[i - 1]]; draw(); });
+      $$('[data-fdown]', featBox).forEach(b => b.onclick = () => { const i = Number(b.dataset.fdown); [featured[i + 1], featured[i]] = [featured[i], featured[i + 1]]; draw(); });
+      $$('[data-fdel]', featBox).forEach(b => b.onclick = () => { featured.splice(Number(b.dataset.fdel), 1); draw(); });
+      const addWrap = $('.ct-addrow', body);
+      const sel = document.createElement('select');
+      sel.innerHTML = `<option value="">Elegir producto…</option>` + products.map(p => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join('');
+      const addBtn = document.createElement('button'); addBtn.type = 'button'; addBtn.className = 'btn btn--g'; addBtn.textContent = '+ Añadir';
+      addBtn.onclick = () => { if (sel.value) { featured.push(sel.value); draw(); } };
+      addWrap.appendChild(sel); addWrap.appendChild(addBtn);
+
+      // secciones visibles
+      $('#home-sections', body).innerHTML = HOME_SECTIONS.map(([k, l]) => `<label class="tog"><input type="checkbox" data-sec="${esc(k)}" ${home.sections[k] !== false ? 'checked' : ''}> ${esc(l)}</label>`).join('');
+
+      // pasos
+      $('#home-steps', body).innerHTML = steps.map((s, i) => `<div class="ct-flexrow" data-step="${i}">
+        <div class="fld"><label>Paso ${i + 1} · etiqueta</label><input type="text" data-sl="${i}" value="${esc(s.l)}"></div>
+        <div class="fld"><label>Título</label><input type="text" data-sb="${i}" value="${esc(s.b)}"></div>
+        <div class="fld"><label>Subtítulo</label><input type="text" data-ss="${i}" value="${esc(s.s)}"></div>
+      </div>`).join('');
+
+      // enlace editorial
+      const ef = document.createElement('form');
+      ef.innerHTML = A.form([{ k: 'href', label: 'Enlace de la tarjeta editorial (ej. /no-son-puntos-negros.html)' }], home.editorial);
+      ef.id = 'home-edlink-f';
+      $('#home-edlink', body).appendChild(ef);
+
+      $('#home-save', body).onclick = async () => {
+        const btn = $('#home-save', body); btn.disabled = true;
+        try {
+          const hv = A.read(hf);
+          const ev = A.read(ef);
+          const sections = {}; HOME_SECTIONS.forEach(([k]) => { sections[k] = $(`[data-sec="${k}"]`, body).checked; });
+          const stepsOut = steps.map((s, i) => ({ l: $(`[data-sl="${i}"]`, body).value, b: $(`[data-sb="${i}"]`, body).value, s: $(`[data-ss="${i}"]`, body).value }));
+
+          const freshHome = await freshContent('home', {});
+          const newHome = { ...freshHome, featured: featured.slice(), sections, steps: stepsOut, hero: { ...(freshHome.hero || {}), ...hv }, editorial: { ...(freshHome.editorial || {}), href: ev.href || '' } };
+          await A.act('content.save', { key: 'home', value: newHome });
+
+          const freshCms = await freshContent('cms', {});
+          const newCms = { ...freshCms };
+          HOME_CMS_FIELDS.forEach(([k]) => {
+            const el2 = body.querySelector(`[data-cmsk="${CSS.escape(k)}"]`);
+            const v = (el2.value || '').trim();
+            if (v) newCms[k] = v; else delete newCms[k];
+          });
+          await A.act('content.save', { key: 'cms', value: newCms });
+          HOME_CMS_FIELDS.forEach(([k]) => { cms[k] = newCms[k] || ''; });
+
+          A.toast('Guardado. La web lo muestra en menos de 1 minuto', 'ok');
+        } catch (e) { A.toast(e.message, 'bad'); }
+        finally { btn.disabled = false; }
+      };
+    };
+    draw();
+  }
+
+  /* ---------- Menú y pie (nav + footer) ---------- */
+  function tabNavFooter(body, navVal, footerVal) {
+    const nav = { items: [], menu: [], ...(navVal || {}) };
+    const items = (Array.isArray(nav.items) ? nav.items : []).map(x => ({ ...x }));
+    const menu = (Array.isArray(nav.menu) ? nav.menu : []).map(x => ({ ...x }));
+    const footer = { text: '', legal: '', ...(footerVal || {}) };
+
+    const rowsHtml = (list, withNote) => list.map((it, i) => `
+      <div class="ct-flexrow" data-ri="${i}">
+        <div class="fld"><label>Texto</label><input type="text" data-rf="label" value="${esc(it.label || '')}"></div>
+        <div class="fld"><label>Enlace</label><input type="text" data-rf="href" value="${esc(it.href || '')}"></div>
+        ${withNote ? `<div class="fld"><label>Nota</label><input type="text" data-rf="note" value="${esc(it.note || '')}"></div>` : ''}
+        <div class="ct-ac">
+          <button type="button" class="btn btn--s btn--g" data-rup="${i}" ${i === 0 ? 'disabled' : ''}>↑</button>
+          <button type="button" class="btn btn--s btn--g" data-rdown="${i}" ${i === list.length - 1 ? 'disabled' : ''}>↓</button>
+          <button type="button" class="btn btn--s btn--d" data-rdel="${i}">✕</button>
+        </div>
+      </div>`).join('') || '<p class="muted xs">Sin enlaces.</p>';
+
+    const syncRows = (box, list) => { $$('[data-ri]', box).forEach((row, i) => { $$('[data-rf]', row).forEach(inp => { list[i][inp.dataset.rf] = inp.value; }); }); };
+    const wireRows = (box, list, redraw) => {
+      $$('[data-rup]', box).forEach(b => b.onclick = () => { syncRows(box, list); const i = Number(b.dataset.rup); [list[i - 1], list[i]] = [list[i], list[i - 1]]; redraw(); });
+      $$('[data-rdown]', box).forEach(b => b.onclick = () => { syncRows(box, list); const i = Number(b.dataset.rdown); [list[i + 1], list[i]] = [list[i], list[i + 1]]; redraw(); });
+      $$('[data-rdel]', box).forEach(b => b.onclick = () => { syncRows(box, list); list.splice(Number(b.dataset.rdel), 1); redraw(); });
+    };
+
+    const draw = () => {
+      body.innerHTML = `
+        ${A.card('Menú de escritorio', `<div id="nav-items"></div><button type="button" class="btn btn--g mt" id="nav-items-add">+ Añadir enlace</button><button type="button" class="btn btn--p btn--w mt" id="nav-items-save">Guardar menú de escritorio</button>`)}
+        ${A.card('Menú lateral (móvil)', `<div id="nav-menu"></div><button type="button" class="btn btn--g mt" id="nav-menu-add">+ Añadir enlace</button><button type="button" class="btn btn--p btn--w mt" id="nav-menu-save">Guardar menú lateral</button>`)}
+        ${A.card('Pie de página', `<div id="footer-form"></div><button type="button" class="btn btn--p btn--w mt" id="footer-save">Guardar pie</button>`)}
+      `;
+      const itemsBox = $('#nav-items', body); itemsBox.innerHTML = rowsHtml(items, false); wireRows(itemsBox, items, draw);
+      $('#nav-items-add', body).onclick = () => { syncRows(itemsBox, items); items.push({ label: '', href: '' }); draw(); };
+      $('#nav-items-save', body).onclick = async e => {
+        syncRows(itemsBox, items);
+        const fresh = await freshContent('nav', {});
+        await saveContent('nav', { ...fresh, items: items.map(x => ({ label: x.label || '', href: x.href || '' })) }, e.target);
+      };
+
+      const menuBox = $('#nav-menu', body); menuBox.innerHTML = rowsHtml(menu, true); wireRows(menuBox, menu, draw);
+      $('#nav-menu-add', body).onclick = () => { syncRows(menuBox, menu); menu.push({ label: '', href: '', note: '' }); draw(); };
+      $('#nav-menu-save', body).onclick = async e => {
+        syncRows(menuBox, menu);
+        const fresh = await freshContent('nav', {});
+        await saveContent('nav', { ...fresh, menu: menu.map(x => ({ label: x.label || '', href: x.href || '', note: x.note || '' })) }, e.target);
+      };
+
+      const ff = document.createElement('form');
+      ff.innerHTML = A.form([{ k: 'text', label: 'Texto de marca' }, { k: 'legal', label: 'Línea legal' }], footer);
+      $('#footer-form', body).appendChild(ff);
+      $('#footer-save', body).onclick = () => saveContent('footer', A.read(ff), $('#footer-save', body));
+    };
+    draw();
+  }
+
+  /* ---------- Páginas (cms, resto de claves que no son home.*) ---------- */
+  const CT_PAGE_LABELS = { h1: 'Título (h1)', intro: 'Introducción' };
+  const ctFieldLabel = k => { const suf = k.split('.').pop(); return CT_PAGE_LABELS[suf] || suf; };
+  const ctPrettyPage = p => { const s = String(p || '').replace(/\.html$/, '').replace(/-/g, ' ').trim(); return s ? s.charAt(0).toUpperCase() + s.slice(1) : 'Sin página'; };
+
+  async function tabPages(body, cmsVal0) {
+    const defs = await cmsDefaults();
+    const cms = { ...(cmsVal0 || {}) };
+    const groups = {}; const order = [];
+    Object.keys(defs).sort().forEach(k => {
+      if (k.indexOf('home.') === 0) return;
+      const d = defs[k] || {}; const page = d.page || '';
+      if (!groups[page]) { groups[page] = []; order.push(page); }
+      groups[page].push(k);
+    });
+
+    body.innerHTML = order.map(page => {
+      const keys = groups[page];
+      return `<div class="card mb" data-page="${esc(page)}">
+        <div class="card__h"><h2>${esc(ctPrettyPage(page))} <span class="muted xs mono">${esc(page)}</span></h2>${page ? `<a class="btn btn--s btn--g" href="/${esc(page)}" target="_blank" rel="noopener">Ver página ↗</a>` : ''}</div>
+        ${keys.map(k => `<div class="fld" data-k="${esc(k)}">
+          <label>${esc(ctFieldLabel(k))} <span class="muted ct-key mono">${esc(k)}</span></label>
+          <textarea data-cmsk="${esc(k)}" rows="3" placeholder="${esc((defs[k] && defs[k].text) || '')}">${esc(cms[k] || '')}</textarea>
+          <div class="row" style="justify-content:flex-end;margin-top:4px"><button type="button" class="btn btn--s btn--g" data-reset="${esc(k)}">Restablecer</button></div>
+        </div>`).join('')}
+        <button type="button" class="btn btn--p btn--w mt" data-savepage="${esc(page)}">Guardar ${esc(ctPrettyPage(page))}</button>
+      </div>`;
+    }).join('') || '<p class="muted">No se pudieron cargar los textos por defecto (/admin/cms-defaults.json).</p>';
+
+    $$('[data-savepage]', body).forEach(btn => btn.onclick = async () => {
+      const page = btn.dataset.savepage;
+      btn.disabled = true;
+      try {
+        const card = body.querySelector(`[data-page="${CSS.escape(page)}"]`);
+        const keys = groups[page];
+        const fresh = await freshContent('cms', {});
+        const next = { ...fresh };
+        keys.forEach(k => {
+          const ta = card.querySelector(`[data-cmsk="${CSS.escape(k)}"]`);
+          const v = (ta.value || '').trim();
+          if (v) next[k] = v; else delete next[k];
+        });
+        await A.act('content.save', { key: 'cms', value: next });
+        keys.forEach(k => { cms[k] = next[k] || ''; });
+        A.toast('Guardado. La web lo muestra en menos de 1 minuto', 'ok');
+      } catch (e) { A.toast(e.message, 'bad'); }
+      finally { btn.disabled = false; }
+    });
+
+    $$('[data-reset]', body).forEach(btn => btn.onclick = async () => {
+      const k = btn.dataset.reset;
+      if (!await A.confirm('¿Restablecer "' + k + '" al texto por defecto?')) return;
+      try {
+        const fresh = await freshContent('cms', {});
+        const next = { ...fresh }; delete next[k];
+        await A.act('content.save', { key: 'cms', value: next });
+        cms[k] = '';
+        const wrap = body.querySelector(`[data-k="${CSS.escape(k)}"]`);
+        if (wrap) $('textarea', wrap).value = '';
+        A.toast('Restablecido. La web lo muestra en menos de 1 minuto', 'ok');
+      } catch (e) { A.toast(e.message, 'bad'); }
+    });
+  }
+
+  /* ---------- Opiniones (reviews.extra) ---------- */
+  function tabReviews(body, val) {
+    let rows = (val && Array.isArray(val.extra) ? val.extra : []).map(x => ({ ...x }));
+    const products = A.products();
+    const prodName = slug => { const p = products.find(x => x.slug === slug); return p ? p.name : slug; };
+    const persist = () => A.act('content.save', { key: 'reviews', value: { extra: rows } });
+
+    const draw = () => {
+      body.innerHTML = `<div class="row row--sb mb"><p class="muted xs">Opiniones añadidas a mano; se muestran primero en la ficha del producto.</p><button class="btn btn--p" id="rev-add" type="button">+ Añadir opinión</button></div><div id="rev-list"></div>`;
+      $('#rev-list', body).innerHTML = A.card('', A.table({
+        cols: [
+          { k: 'slug', label: 'Producto', render: r => esc(prodName(r.slug)) },
+          { k: 'name', label: 'Nombre', render: r => esc(r.name || '') },
+          { k: 'city', label: 'Ciudad', render: r => esc(r.city || '') },
+          { k: 'stars', label: 'Estrellas', render: r => '★'.repeat(Number(r.stars) || 0) + '☆'.repeat(Math.max(0, 5 - (Number(r.stars) || 0))) },
+          { k: 'text', label: 'Texto', render: r => `<span class="xs">${esc((r.text || '').slice(0, 90))}${(r.text || '').length > 90 ? '…' : ''}</span>` },
+          { k: 'ac', label: '', cls: 'right', render: r => `<button class="btn btn--s btn--g" data-edit="${r._i}">Editar</button> <button class="btn btn--s btn--d" data-del="${r._i}">Borrar</button>` }
+        ],
+        rows: rows.map((r, i) => ({ ...r, _i: i })), empty: 'Sin opiniones añadidas todavía.'
+      }));
+      $$('[data-edit]', body).forEach(b => b.onclick = () => reviewModal(Number(b.dataset.edit)));
+      $$('[data-del]', body).forEach(b => b.onclick = async () => {
+        const i = Number(b.dataset.del);
+        if (!await A.confirm('¿Borrar esta opinión?', { label: 'Borrar', danger: true })) return;
+        rows.splice(i, 1);
+        try { await persist(); A.toast('Borrada. La web lo muestra en menos de 1 minuto', 'ok'); draw(); } catch (e) { A.toast(e.message, 'bad'); }
+      });
+      $('#rev-add', body).onclick = () => reviewModal(null);
+    };
+
+    function reviewModal(i) {
+      const editing = i != null;
+      const values = editing ? rows[i] : { stars: 5 };
+      const f = document.createElement('form');
+      f.innerHTML = A.form([
+        { k: 'slug', label: 'Producto', type: 'select', options: [['', '(elegir producto)'], ...products.map(p => [p.slug, p.name])], required: true },
+        { k: 'name', label: 'Nombre', required: true },
+        { k: 'city', label: 'Ciudad' },
+        { k: 'stars', label: 'Estrellas (1 a 5)', type: 'number', min: 1, step: 1, required: true },
+        { k: 'text', label: 'Texto de la opinión', type: 'textarea', required: true }
+      ], values);
+      f.onsubmit = e => e.preventDefault();
+      A.modal({
+        title: editing ? 'Editar opinión' : 'Añadir opinión', body: f,
+        actions: [{ label: 'Cancelar' }, { label: 'Guardar', primary: true, onClick: async () => {
+          if (!f.reportValidity()) return false;
+          const v = A.read(f);
+          if (!v.slug) throw new Error('Elige un producto');
+          v.stars = Math.max(1, Math.min(5, Number(v.stars) || 5));
+          if (editing) rows[i] = v; else rows.push(v);
+          await persist();
+          A.toast('Guardado. La web lo muestra en menos de 1 minuto', 'ok');
+          draw();
+        } }]
+      });
+    }
+    draw();
   }
 
   function tabBar(body, val) {
@@ -474,7 +801,7 @@
   }
 
   function tabAdvanced(body, all) {
-    const KNOWN = ['bar', 'popup', 'shipping', 'gifts', 'whatsapp_public', 'announce', 'home'];
+    const KNOWN = ['bar', 'popup', 'shipping', 'gifts', 'whatsapp_public', 'announce', 'home', 'cms', 'nav', 'footer', 'reviews'];
     const keys = [...new Set([...KNOWN, ...all.map(r => r.key)])];
     body.innerHTML = `<div class="row row--sb mb"><p class="muted xs">Edición directa en JSON de cualquier clave de contenido. Úsalo si sabes lo que haces.</p><button class="btn btn--g" id="purge">Refrescar caché de la web</button></div><div id="adv-list" class="list"></div>`;
     $('#purge', body).onclick = async e => { try { e.target.disabled = true; await A.act('purge'); A.toast('Caché refrescada'); } catch (er) { A.toast(er.message, 'bad'); } finally { e.target.disabled = false; } };
