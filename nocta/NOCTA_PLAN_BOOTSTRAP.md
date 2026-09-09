@@ -43,11 +43,11 @@ En la web se dejan visibles solo Nariz, Granos y sus packs; el resto se oculta d
 
 ## 3. Proveedores y costes para un pedido mínimo
 
-Con 1.000 € el MOQ coreano normal (1.000 cajas, 3.000–4.500 €) no entra. Las tres vías realistas, de más barata a más «marca»:
+Con 1.000 € el MOQ coreano normal (NewY: 1.000 packs, 30 días de producción y 60 de entrega) no entra. Las tres vías realistas, de más barata a más «marca» (fichas reales, valoraciones, plazos y costes ocultos en la **Parte 2 · Estudio de proveedores**):
 
 | Vía | Proveedor | Qué se compra | Cantidad mínima | Coste unitario | Coste del lote | Plazo | Pros / contras |
 |---|---|---|---|---|---|---|---|
-| **A · Tirada pequeña China (recomendada para el test)** | Lvsenlan Healthcare (Foshan) o Yanse/Trummed con rollo «Korean grade», vía Alibaba | Parches de nariz hidrocoloide sin marca, en liner, a granel o en pouch neutro | Lvsenlan: desde 3 uds (pedir 1.200–1.600); Yanse: 3.000 | 0,14–0,21 $/parche · granos 0,03–0,05 $/punto | 1.200 parches ≈ 200–250 $ + 40–80 $ courier | 5–12 días muestras, 2–3 semanas lote | Barato y rápido. Sin claim *Made in Korea*; adhesión y transparencia a verificar con muestra (comprar 1 caja de Vue y comparar) |
+| **A · Tirada pequeña China (recomendada para el test)** | Lvsenlan Healthcare (Foshan) o Yanse/Trummed con rollo «Korean grade», vía Alibaba | Parches de nariz hidrocoloide sin marca, en liner, a granel o en pouch neutro | Lvsenlan: desde 3 uds (pedir 1.200–1.600); Yanse: 3.000 | 0,14–0,21 $/parche · granos 0,03–0,05 $/punto | 1.200 parches ≈ 200–250 $ + 40–80 $ courier | 5–12 días muestras, 2–3 semanas lote | Barato y rápido. Sin claim *Made in Korea* (el arancel UE es 0 % en ambos casos); adhesión y transparencia a verificar con muestra (comprar 1 caja de Vue y comparar) |
 | **B · Muestra grande coreana** | NewY Medical (sales@newymedical.com, WhatsApp +82-10-4885-3573) o Nurimedics (WhatsApp +82-10-2895-8520) | «Sample order» de 300–500 parches de nariz troquel de catálogo + 50 hojas de puntos | Negociable como muestra pagada | 0,45–0,60 $/parche · hojas 0,50 $ | 400 parches ≈ 200–240 $ + 60–100 $ envío + 50–150 $ fee de muestra | 3–4 semanas | Calidad y claim coreano; cantidad corta (50 cajas) y coste por caja casi el doble |
 | **C · Producto acabado de otra marca** | Catch Me Patch (Nico Medical) vía GBSA en Alibaba | Cajas de nose patch ya acabadas, con su marca | 160 uds | 2,09–2,31 $/ud | ≈ 350 $ + envío | 1–2 semanas | Solo para probar anuncios con producto real antes de fabricar; no es tu marca, no escala |
 
@@ -64,14 +64,14 @@ Con 1.000 € el MOQ coreano normal (1.000 cajas, 3.000–4.500 €) no entra. L
 
 | Concepto | Nariz (8 parches) | Granos (36 puntos) |
 |---|---:|---:|
-| Parches | 8 × 0,18 $ = 1,44 $ ≈ 1,32 € | 1,5 hojas × 0,45 $ ≈ 0,62 € |
+| Parches | 8 × 0,20 $ = 1,60 $ ≈ 1,47 € | 1,5 hojas × 0,30 $ ≈ 0,41 € |
 | Pouch / bolsa | 0,05 € | 0,03 € |
 | Caja + etiqueta + tarjeta | 0,45 € | 0,45 € |
-| Courier + aduana (prorrateado, lote de 200 cajas) | 0,55 € | 0,40 € |
-| Merma y muestras (10 %) | 0,25 € | 0,15 € |
+| Courier + gestión aduanera (prorrateado, lote de 165 cajas) | 0,70 € | 0,50 € |
+| Muestras, tarjeta y merma (prorrateado) | 0,45 € | 0,45 € |
 | **Total** | **≈ 3,20 €** | **≈ 1,90 €** |
 
-Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.
+Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable pero recorta 1,6 € por caja de contribución. Coste resultante en la variante A del estudio: ≈ 3,4 € por caja de nariz con el IVA como salida de caja (2,9 € si se recupera). Recomendación: **vía A para el test de 90 días, vía B (o coreano con troquel propio) para la primera reposición grande**, cuando los anuncios ya estén validados y el claim *Made in Korea* se pueda explotar en la creatividad.
 
 **Qué pedir y cómo (10 líneas):** 1) escribir a Lvsenlan y a Yanse pidiendo muestra de nose patch hidrocoloide transparente 0,5 mm en forma de nariz (adjuntar la ficha de 60 × 45 mm de `operaciones/manual_operativo.md`); 2) pagar 20–40 € de courier por 10–20 muestras; 3) comparar con una caja de Vue: adhesión 8 h, transparencia, blanqueo, residuo; 4) si pasa, pedir 1.200–1.600 parches + 80 hojas de puntos, pago por Alibaba Trade Assurance; 5) pedir a la vez las cajas kraft, etiquetas y sobres; 6) mientras llega (2–3 semanas), grabar los anuncios con las muestras.
 
@@ -79,20 +79,21 @@ Con Corea (vía B) la caja de nariz sale a ≈ 4,80 €; sigue siendo rentable p
 
 | Partida mes 0 | € | Nota |
 |---|---:|---|
-| Muestras de 2 proveedores + courier | 60 | Imprescindible: no se fabrica sin comparar con Vue |
-| Lote piloto: 1.400 parches de nariz (≈ 170 cajas) + 100 hojas de puntos (≈ 65 cajas de granos) | 330 | Alibaba, Trade Assurance, courier incluido |
-| Cajas kraft, etiquetas, tarjetas, sobres acolchados (250 uds) | 130 | Etiqueta impresa, no caja impresa |
+| Muestras de 2 proveedores + courier | 75 | Imprescindible: no se fabrica sin comparar con Vue |
+| Lote piloto: 1.000 parches de nariz (125 cajas) + 60 hojas de puntos (40 cajas de granos) + bolsas, con courier express | 330 | Alibaba, Trade Assurance (tarjeta +2,99 %) |
+| Cajas kraft neutras + etiquetas impresas + sobres acolchados (250 uds) | 112 | Etiqueta impresa; la caja impresa (500 uds ≈ 285 $ según ficha real) se decide en el mes 2 con ventas |
+| IVA a la importación (21 %) + gestión aduanera del courier (mín. 15 €) | 90 | Salida de caja real; el IVA se recupera si hay alta fiscal |
 | 1 caja de Vue + 1 de Hero como referencia | 35 | Benchmark físico y atrezo para anuncios comparativos |
 | Anuncios mes 0 (test de 10 creatividades, 15 días × 15 €) | 225 | Meta, una campaña, ver sección 8 |
 | Dominio .es + Packlink PRO + imprevistos | 70 | Web, Stripe, Resend y WhatsApp ya están; sin cuotas |
-| Reserva | 150 | Para duplicar el primer anuncio que venda |
+| Reserva | 63 | Para duplicar el primer anuncio que venda |
 | **Total** | **1000** | |
 
-Stock inicial: ≈ 170 cajas de nariz y 65 de granos. Vendido en packs de 2, son 85–110 pedidos, es decir, **2.500–3.000 € de ventas** con un coste de producto de 460 €. La primera reposición (1.000 cajas, ya con caja impresa) se paga con eso.
+Stock inicial: ≈ 125 cajas de nariz y 40 de granos (≈ 600 € con IVA y transporte, variante A del estudio de proveedores). Vendido en packs de 2, son 60–80 pedidos, es decir, **1.800–2.400 € de ventas**. La primera reposición (500–1.000 cajas, ya con caja impresa a 0,43–0,57 $) se paga con eso en el mes 2.
 
 | Mes | Aportación | Reinversión de ventas (50 % de la contribución) | Ads | Producto |
 |---|---:|---:|---:|---:|
-| 0 | 1.000 € | 0 | 225 € | 555 € |
+| 0 | 1.000 € | 0 | 225 € | 600 € (producto, packaging, muestras, IVA y aduana) |
 | 1 | 500 € | ≈ 0–150 € | 500 € | 0 (stock) |
 | 2 | 500 € | ≈ 200–400 € | 600–800 € | 100–200 € (reposición pequeña) |
 | 3 | 500 € (última si hay tracción) | ≈ 400–800 € | 800–1.200 € | 300–500 € (reposición 1.000 cajas, a plazos con Trade Assurance) |

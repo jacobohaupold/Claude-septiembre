@@ -124,7 +124,7 @@ w("Palancas comerciales activas y controlables desde el CRM: descuento de suscri
 
 # ---------- 4 proveedores ----------
 w("## 4. Proveedores: quién, a qué precio, con qué MOQ y cómo pedirlo\n")
-w("Detalle completo con URL y notas en `../vue-skin-research/informes/06_proveedores_marca_blanca.md`, especificaciones y proceso en `operaciones/manual_operativo.md` (sección c) y plantillas de email en `negocio/como_hacer_todo.md` (sección 1). Corea es el proveedor principal (arancel 0 % por el acuerdo UE-Corea y el claim *Made in Korea* que usa Vue); China es el respaldo barato (arancel 6,5 %, sin claim K-beauty).\n")
+w("Detalle completo con URL y notas en `../vue-skin-research/informes/06_proveedores_marca_blanca.md`, especificaciones y proceso en `operaciones/manual_operativo.md` (sección c) y plantillas de email en `negocio/como_hacer_todo.md` (sección 1). Corea es el proveedor de referencia por calidad del rollo y por el claim *Made in Korea* que usa Vue; China es la vía barata y rápida para lotes pequeños. Ojo: en la UE el arancel es **0 % en ambos casos** (capítulo 3304 y 3005, cualquier origen): la ventaja coreana es de calidad y de marketing, no fiscal. Estudio detallado de proveedores con fichas reales, plazos y costes ocultos en `proveedores/ESTUDIO_PROVEEDORES.md`.\n")
 w("### 4.1 Parches de hidrocoloide (nariz, barbilla, frente, superficie, granos)\n")
 w("| Proveedor | País | Qué hace | MOQ | Precio indicativo | Plazo | Certificados | Contacto |")
 w("|---|---|---|---|---|---|---|---|")
@@ -172,7 +172,7 @@ w("1. **RFQ simultánea** a 3–4 proveedores por categoría (parches: Nurimedic
 w("2. **Muestras**: coreanos 50–150 $ + envío (a veces reembolsable), chinos gratis + courier 20–40 €. 2–3 uds por troquel; 30–50 ml por fórmula. Plazo 5–10 días (China) a 3–4 semanas (Corea con troquel nuevo). Comprar 1 caja de Vue y 1 de Hero como benchmark físico.")
 w("3. **Evaluación** (rúbrica 1–5; descartar < 3 en adhesión o transparencia): adhesión 8 h (no despega > 10 % del perímetro), transparencia igual o mejor que Vue, sin residuo, blanqueo visible al absorber, grosor ± 0,05 mm, sin olor, sin irritación a 48 h en 3–5 testers. Líquidos: pH, textura, estabilidad 48 h a 40 °C.")
 w("4. **Negociación**: troquel propio 500–2.000 $ (exclusividad por escrito, gratis a partir de 20.000 uds), pago 30/70 (30 % T/T al confirmar, 70 % contra B/L tras inspección), inspección pre-embarque SGS/BV/TÜV 200–400 $, Incoterm **FOB Busan/Incheon** en el primer pedido (EXW + forwarder propio cuando haya volumen).")
-w("5. **Pedido piloto**: 1.000–3.000 uds por SKU; aéreo DHL/FedEx 3–6 días (4–7 €/kg para 50–100 kg) el primer lote; marítimo LCL 25–45 días en reposiciones. Agente de aduanas + declaración de origen para el 0 %.")
+w("5. **Pedido piloto**: 1.000–3.000 uds por SKU; aéreo DHL/FedEx 3–6 días (4–7 €/kg para 50–100 kg) el primer lote; marítimo LCL 25–45 días en reposiciones. Agente de aduanas o despacho del propio courier; el arancel es 0 % en la UE para este producto sea cual sea el origen.")
 w("6. **Compliance en paralelo, nunca después**: PIF + CPSR + Persona Responsable + CPNP + declaración responsable AEMPS (466,23 €). Consultoras: Aseconsa, Emeba, Cosmereg, ASC Services (ES); Biorius, Cosmeservice, EU Compliance Partner (UE).\n")
 
 # ---------- 5 costes y márgenes ----------

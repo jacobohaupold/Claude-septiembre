@@ -31,7 +31,8 @@ while i<n:
         if lvl==2:
             mm=re.match(r'^(\d+)\.\s+(.*)',txt)
             if mm:
-                sec=int(mm.group(1)); out.append(f'</section><section class="sec{" brk" if sec==1 else ""}" id="s{sec}"><div class="secnum">{sec:02d}</div><h2>{inline(mm.group(2))}</h2>'); toc.append((f'{sec:02d}',mm.group(2)))
+                sec=int(mm.group(1)); lab=f'{sec:02d}' if part==1 else f'{part}.{sec}'
+                out.append(f'</section><section class="sec{" brk" if (sec==1 and part==1) else ""}" id="{"s1" if (sec==1 and part==1) else f"p{part}s{sec}"}"><div class="secnum">{lab}</div><h2>{inline(mm.group(2))}</h2>'); toc.append((lab,mm.group(2)))
             elif txt=='Índice': out.append('</section><section class="sec" id="indice"><h2>Índice</h2>')
             else: out.append(f'</section><section class="sec fam"><h2 class="h2--fam">{inline(txt)}</h2>'); toc.append(('·',txt))
         else: out.append(f'<h{lvl}>{inline(txt)}</h{lvl}>')
