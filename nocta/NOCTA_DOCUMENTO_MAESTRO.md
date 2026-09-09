@@ -1,0 +1,474 @@
+# NOCTA — Documento maestro de negocio
+
+**Versión 1.0 · 9 de septiembre de 2026.** Este documento consolida en un solo sitio todo lo que se ha pedido y entregado a lo largo del proyecto: la investigación de Vue Skin, el catálogo, los proveedores, los costes y márgenes, la inversión, la economía de cada anuncio (cuánto tiene que convertir para ser rentable), la página de producto, el plan de marketing, el desarrollo de negocio, la parte legal, las operaciones, el stack técnico entregado y la lista de todo lo pedido con su estado. Donde ya existía un documento detallado se resume aquí y se enlaza; donde faltaba algo (economía por anuncio, tabla de inversión real, reglas de escalado por anuncio, KPIs de la página de producto) se ha hecho nuevo en este documento.
+
+> Todas las cifras de coste de producto son **estimaciones de sourcing** (rangos de cotización de proveedores, sin muestra física confirmada). En cuanto haya cotización en firme hay que meter el coste real de cada producto en el CRM (`/admin` → Precios y márgenes) y los márgenes de este documento se recalculan solos allí.
+
+## Índice
+
+1. Resumen ejecutivo (los 12 números que mandan)
+2. Qué hace Vue Skin y qué copiamos
+3. Catálogo, precios y planes (lo que vende la web hoy)
+4. Proveedores: quién, a qué precio, con qué MOQ y cómo pedirlo
+5. Costes y márgenes por producto, pack, plan y suscripción
+6. Inversión necesaria y calendario de caja
+7. Economía de los anuncios: cuánto tiene que convertir cada anuncio
+8. Reglas de gestión por anuncio (presupuesto, kill, escalado)
+9. Página de producto y embudo: KPIs y palancas
+10. Plan de marketing (creatividades, canales, calendario, retención)
+11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
+12. Stack técnico entregado y lo que queda en tu tejado
+13. Todo lo que pediste, mensaje a mensaje, y su estado
+14. Anexo: fórmulas y supuestos
+
+## 1. Resumen ejecutivo (los 12 números que mandan)
+
+| # | Número | Valor | De dónde sale |
+|---|---|---|---|
+| 1 | Precio héroe (Parches de Nariz, 8 uds.) | 16,95 € (14,41 € en suscripción) | Igual que Vue; catálogo de la web |
+| 2 | Coste desembarcado del héroe | ≈ 4,20 € (rango 3,0–5,4 €) desde Corea | Informe de sourcing, punto medio |
+| 3 | Margen bruto de producto (parches / líquidos / packs) | 67–87 % / 80–86 % / 57–71 % | Sección 5 |
+| 4 | Contribución de un pedido de 1 caja de nariz (antes de ads) | 4,84 € con 3PL · 6,49 € enviando tú | Sección 5 |
+| 5 | CPA máximo rentable en el primer pedido (héroe suelto) | 4,84 € | = contribución del pedido |
+| 6 | CPA máximo contando 90 días de recompra y suscripción (héroe) | 6,75 € | Sección 7 |
+| 7 | CPA máximo para el Dúo (36,90 €) / Plan 4 zonas (49 €/mes) | 17,58 € / 35,24 € a 90 días | Sección 7 |
+| 8 | Coste por clic esperado en Meta España | ≈ 0,63 € (CPM 7,5 € · CTR 1,2 %) | Sección 7 |
+| 9 | Conversión mínima del tráfico de un anuncio al héroe suelto para no perder dinero | 9,3 % (con LTV 90 d) · 12,9 % (solo primer pedido) | Sección 7 |
+| 10 | Conversión mínima si el anuncio vende Dúo / Plan | 3,6 % / 1,8 % | Sección 7 |
+| 11 | Punto muerto de la empresa | ≈ 123 pedidos/mes (≈ 4.700 €/mes con IVA) con 1.427 €/mes de fijos | Plan financiero |
+| 12 | Capital recomendado | ≈ 37.400 € de salida de caja hasta el primer mes de ventas con 10 SKU (recomendado disponer de 40.000 € por el valle de caja del mes 4); ≈ 25.400 € en la versión lean de 5 SKU | Sección 6 |
+
+**La conclusión que lo cambia todo:** un anuncio que vende **una sola caja de parches** casi nunca es rentable en el primer pedido (necesitaría convertir más del 10 % de los clics). El negocio es rentable **solo** si el anuncio lleva a un carrito de 35–50 € (Dúo, Kit, Plan, 2–3 cajas) o si se cuenta la recompra y la suscripción. Por eso la web ya empuja al pack, al Plan Noche y a la suscripción por encima de la compra suelta, y por eso las reglas de la sección 8 se miden con el CPA de LTV a 90 días y no con el del primer pedido.
+
+## 2. Qué hace Vue Skin y qué copiamos
+
+Investigación completa en `../vue-skin-research/informes/` (7 informes) con datos brutos en `../vue-skin-research/data/` (4.485 anuncios únicos de Meta, 2.587 vídeos transcritos, catálogo de productos, Google Ads, TikTok).
+
+- **Producto**: parches de hidrocoloide coreano (INCI idéntico a Hero Mighty Patch, rollo de T&L) en forma de nariz, barbilla, frente, superficie y puntos, más líquidos ODM de catálogo coreano (exfoliante salicílico 2 %, sérum niacinamida, tónico HA, peel-off de colágeno, mascarillas). Todo se vende como cosmético, no como producto sanitario.
+- **Precio**: 16,95 € el parche de nariz, 15,95 € granos/superficie, 25–32 € los líquidos, −15 % en suscripción, envío gratis desde 30 €, códigos del tipo TODAY15 y ofertas de hasta 40–45 % en Navidad/verano.
+- **Cómo anuncian**: 88 % vídeo vertical 9:16 de 15–45 s, tráfico frío directo a la ficha del parche de nariz (70 %) o del Dúo (16 %); 65 % de los vídeos atacan las tiras de poros y el apretar; 54 % citan la garantía de devolución; 49 % usan “no son puntos negros, son filamentos sebáceos”; 48 % el ángulo Corea vs Europa. Gasto estimado ≈ 1,8 M € acumulados en EU+UK; España solo el 5 % → hueco de mercado.
+- **Herramientas**: Shopify + Klaviyo + suscripción + reseñas + TikTok Shop (etiqueta `shoptok`) + Meta CAPI + advertoriales (“those aren't blackheads”).
+- **Lo que copiamos tal cual**: catálogo, precios, escalera de oferta (héroe → dúo → kit → suscripción), garantía, umbrales de carrito, la fórmula de anuncio (gancho 0–3 s → reencuadre → mecanismo → prueba visual → garantía y oferta) y los 10 ganchos más usados (sección 10).
+- **Lo que hacemos distinto**: español de España nativo, Plan Noche personalizado por zonas (no existe en Vue), garantía de adhesión, envío 24–48 h desde España, WhatsApp como canal de atención y recuperación, y CRM propio sin cuotas de Shopify.
+
+## 3. Catálogo, precios y planes (lo que vende la web hoy)
+
+Fuente única: `web/public/assets/js/products.js` + overrides del CRM. Precios con IVA.
+
+| Producto | Precio | Suscripción (−15 %) | Contenido |
+|---|---:|---:|---|
+| Parches de Nariz (8) | 16,95 € | 14,41 € | 8 parches 60×45 mm |
+| Parches para Granos (36) | 15,95 € | 13,56 € | 36 parches 10/12 mm |
+| Parches de Superficie (10) | 15,95 € | 13,56 € | 10 parches 40×30 mm |
+| Parches de Barbilla (8) | 16,95 € | 14,41 € | 8 parches |
+| Parches de Frente (5) | 16,95 € | 14,41 € | 5 parches |
+| Exfoliante Salicílico 2 % (110 ml) | 32,00 € | 27,20 € | 110 ml |
+| Sérum Niacinamida 2 % (30 ml) | 29,00 € | 24,65 € | 30 ml |
+| Mascarilla Peel-Off Colágeno (70 ml) | 29,00 € | 24,65 € | 70 ml |
+| Pack 4 Mascarillas de Tela | 15,00 € | 12,75 € | 4 mascarillas |
+| Tónico Ácido Hialurónico (130 ml) | 25,00 € | 21,25 € | 130 ml |
+| Dúo Poros Limpios (Exfoliante + Nariz) | 36,90 € | 31,36 € | Exfoliante 110 ml + 8 parches (ahorro 12,05 €) |
+| Kit Zona T (Frente + Nariz + Barbilla) | 37,90 € | 32,21 € | Frente 5 + Nariz 8 + Barbilla 8 (ahorro 12,95 €) |
+| Kit Cara Completa (5 parches) | 59,00 € | 50,15 € | Nariz, Superficie, Barbilla, Frente y Granos (ahorro 23,75 €) |
+| **Plan Noche mensual** (constructor por zonas) | 16 / 28 / 39 / 49 €/mes por 1 / 2 / 3 / 4 zonas · +21 €/mes skincare | ya es suscripción | Nariz, Frente, Barbilla, Granos + Exfoliante/Sérum/Tónico |
+| **Plan Semanal** | 14,90 €/semana | ya es suscripción | 1 caja por semana |
+
+Palancas comerciales activas y controlables desde el CRM: descuento de suscripción (15 %), descuento por 2 y 3 unidades (hoy 0 %, recomendación en sección 5), envío 3,90 € y gratis desde 30 €, regalos desde 50 € (mascarilla) y 80 € (parches de granos), popup de bienvenida −10 %, barra de anuncios, upsell post-compra y en carrito, ofertas con fecha, códigos de descuento con límite de usos.
+
+## 4. Proveedores: quién, a qué precio, con qué MOQ y cómo pedirlo
+
+Detalle completo con URL y notas en `../vue-skin-research/informes/06_proveedores_marca_blanca.md`, especificaciones y proceso en `operaciones/manual_operativo.md` (sección c) y plantillas de email en `negocio/como_hacer_todo.md` (sección 1). Corea es el proveedor principal (arancel 0 % por el acuerdo UE-Corea y el claim *Made in Korea* que usa Vue); China es el respaldo barato (arancel 6,5 %, sin claim K-beauty).
+
+### 4.1 Parches de hidrocoloide (nariz, barbilla, frente, superficie, granos)
+
+| Proveedor | País | Qué hace | MOQ | Precio indicativo | Plazo | Certificados | Contacto |
+|---|---|---|---|---|---|---|---|
+| Nurimedics Co., Ltd. | KR (Gimpo) | Parches de acné hidrocoloide OEM; caja, pouch o tarjeta; informe de irritación a nombre del comprador; MSDS/COA; ya sirve a UE | Negociable (stock 1.000) | Cotizar (referencia coreana 0,30–0,60 $/parche de nariz a 10.000) | Negociable | ISO 13485, ISO 22716, GMP | nurimedicskorea.com · WhatsApp +82-10-2895-8520 · Tradekorea P815755 |
+| NewY Medical Co., Ltd. | KR (Anseong) | Hojas de puntos 10/12 mm, private label, opcional salicílico/tea tree/centella; formas bajo pedido | 1.000 packs (Tradekorea) · 10.000 hojas (Alibaba) | 0,50 $/hoja (1k–9.999) → 0,40 $ (10k) → 0,35 $ → 0,32 $ (50k+) | 30 días + tránsito | 3 certificados verificados | newymedical.com · sales@newymedical.com · WhatsApp +82-10-4885-3573 |
+| DERMATECH | KR (Seúl) + EE. UU. | Turnkey private label: hidrocoloide, microaguja, formas a medida, impresión a todo color; en Sephora/Target | 1.000+ | Cotizar | ≈ 60 días | ISO 22716, ISO 13485, KCGMP, FDA, CE | dermatech.life · support@dermatech.life |
+| SourcingLab (Look To Go) | KR (Seúl) | Agente: parche de nariz hidrocoloide con salicílico de catálogo, ‘clinically tested 6–8 h’, gestiona regulatorio y logística | Cotizar | Cotizar (+10–25 % de margen de agente) | — | — | sourcing-lab.com · customer-care@sourcing-lab.com · +82-10-3009-2438 |
+| T&L Co., Ltd. | KR (Pyeongtaek) | Fabricante del rollo original (Hero Mighty Patch); >60 % cuota Corea | Alto / negociable | Negociable | — | Fabricante sanitario | tnl.co.kr · +82-31-651-6255 |
+| Twoa Korea / Awesome April | KR (Incheon) | Puntos 8/10/12 mm 100 % hidrocoloide, private label | No público | No público | — | — | awesomeapril.com · info@awesomeapril.com |
+| Yanse / Trummed / Hysent | CN | Converters con rollo ‘Korean grade’; muestras gratis (solo courier 20–40 €); MOQ 3.000–5.000 | 3.000–5.000 | 0,15–0,25 $/parche de nariz | Muestras 5–10 días | ISO 13485 (según fábrica) | Alibaba |
+| Lvsenlan Healthcare (Foshan) | CN | Nose pads hidrocoloide etiqueta blanca | 3 (muestra) | 0,14–0,21 $/ud | Rápido | — | Alibaba |
+| Nanjing J SUN Healthcare | CN | Nariz + rectangular | 10.000 | 0,17 $/ud | — | — | Alibaba |
+| Nico Medical (Catch Me Patch) vía GBSA | KR | Parche de nariz acabado con su marca (solo para test de mercado) | 160 | 2,09–2,31 $/ud | Inmediato | — | Alibaba (GBSA) · stylekorean.com/brands/612 |
+
+### 4.2 Líquidos (exfoliante, sérum, tónico, peel-off, mascarillas)
+
+| Proveedor | País | Qué hace | MOQ | Precio indicativo | Contacto |
+|---|---|---|---|---|---|
+| OEMKorea | KR (agente) | ODM de catálogo: tónico 1,5–5 $, sérum niacinamida 2,5–5,5 $, exfoliante 2–7 $, mascarilla de tela 0,5–2 $ (5.000+); gestiona CPSR/CPNP | 1.000–3.000 | Ver rangos; −20/40 % de 1.000 a 5.000 uds | oemkorea.com |
+| Mayk | KR (agente) | Fábrica-agente para sérum/exfoliante/peel-off con envase estándar | 500–3.000 | Cotizar | mayk-factory.com |
+| knok | KR (agente) | Private label coreano completo; coste de lanzamiento 5.000–15.000 $/SKU con envase a medida | 500–3.000 | Cotizar | knokglobal.com |
+| Cosmecca / Hankook Cosmetics | KR (fábrica Tier 1-2) | Fórmulas base de peel-off de colágeno y tónico HA | 3.000+ | Cotizar vía agente | a través de Mayk/OEMKorea |
+| KPrivateLabel | KR | Mascarillas de tela y básicos | 500–1.000 | Cotizar | kprivatelabel.com |
+| Awilke Branding | EE. UU./CN | BHA Liquid Exfoliant listo para etiquetar (alternativa rápida sin claim coreano) | 1.000 | 3,00 $/ud con etiqueta y estuche | awilke.com |
+| Guangzhou Xiran Cosmetics | CN | Nose patch + toda la gama facial; mascarillas de tela; FDA, ISO 22716, GMP | 1.000 (30.000 en sheet mask) | Cremas 3,5–4,5 $; sheet mask 0,15–0,40 $ | xiranskincare.com · bertha@xirancn.com |
+
+### 4.3 Especificación que va en toda petición de cotización (RFQ)
+
+| Parámetro | Nariz | Barbilla | Frente | Superficie | Granos |
+|---|---|---|---|---|---|
+| Forma | T/U anatómica | media luna | rectángulo curvo | rectángulo | puntos |
+| Tamaño | **60 × 45 mm** | 50–60 mm ancho | 70–90 × 25–35 mm | 40 × 30 mm | 10 y 12 mm |
+| Grosor | 0,5–0,6 mm | 0,5–0,6 mm | 0,5–0,6 mm | 0,5–0,6 mm | 0,4–0,5 mm |
+| Material | 100 % hidrocoloide (Polyisobutene, Cellulose Gum, Hydrogenated Styrene/Methylstyrene/Indene Copolymer, Pectin), transparente | ídem | ídem | ídem | ídem, opcional BHA |
+| Unidades/caja | 8 | 8 | 5 | 10 | 36 |
+| Liner / envase | PET siliconado troquelado; caja + pouch o blíster | ídem | ídem | ídem | hoja en sobre |
+
+Líquidos: volumen (110 / 30 / 70 / 130 ml), envase (bomba, gotero, tubo), pH objetivo (4,5–5,5 el exfoliante), activo y concentración (salicílico 2 %, niacinamida 2 %), INCI de referencia de Vue adjunto.
+
+### 4.4 Proceso, muestras, negociación y pedido piloto
+
+1. **RFQ simultánea** a 3–4 proveedores por categoría (parches: Nurimedics, NewY, Dermatech, SourcingLab + Yanse/Trummed/Hysent; líquidos: OEMKorea, Mayk, knok, Cosmecca + Awilke). Pedir tramos 1.000 / 3.000 / 5.000 / 10.000 / 30.000, Incoterm, plazo, condiciones, certificados (ISO 22716, ISO 13485), RIPT a nombre de NOCTA, MSDS/COA, declaración de origen UE-Corea.
+2. **Muestras**: coreanos 50–150 $ + envío (a veces reembolsable), chinos gratis + courier 20–40 €. 2–3 uds por troquel; 30–50 ml por fórmula. Plazo 5–10 días (China) a 3–4 semanas (Corea con troquel nuevo). Comprar 1 caja de Vue y 1 de Hero como benchmark físico.
+3. **Evaluación** (rúbrica 1–5; descartar < 3 en adhesión o transparencia): adhesión 8 h (no despega > 10 % del perímetro), transparencia igual o mejor que Vue, sin residuo, blanqueo visible al absorber, grosor ± 0,05 mm, sin olor, sin irritación a 48 h en 3–5 testers. Líquidos: pH, textura, estabilidad 48 h a 40 °C.
+4. **Negociación**: troquel propio 500–2.000 $ (exclusividad por escrito, gratis a partir de 20.000 uds), pago 30/70 (30 % T/T al confirmar, 70 % contra B/L tras inspección), inspección pre-embarque SGS/BV/TÜV 200–400 $, Incoterm **FOB Busan/Incheon** en el primer pedido (EXW + forwarder propio cuando haya volumen).
+5. **Pedido piloto**: 1.000–3.000 uds por SKU; aéreo DHL/FedEx 3–6 días (4–7 €/kg para 50–100 kg) el primer lote; marítimo LCL 25–45 días en reposiciones. Agente de aduanas + declaración de origen para el 0 %.
+6. **Compliance en paralelo, nunca después**: PIF + CPSR + Persona Responsable + CPNP + declaración responsable AEMPS (466,23 €). Consultoras: Aseconsa, Emeba, Cosmereg, ASC Services (ES); Biorius, Cosmeservice, EU Compliance Partner (UE).
+
+## 5. Costes y márgenes por producto, pack, plan y suscripción
+
+Supuestos por pedido (todos editables en el modelo `finanzas/modelo_financiero_nocta.xlsx` y en el CRM): IVA 21 %; pasarela 1,9 % + 0,25 €; envío medio 4,35 € (el cliente paga 3,90 € por debajo de 30 €); pick & pack 3PL 2,50 € (0,85 € si envías tú en fase 1); packaging 0,35 €; devoluciones 3 %; regalo 0,90 € en pedidos ≥ 50 €. Coste desembarcado = punto medio del rango del informe de sourcing (fábrica + envase + flete + arancel 0 %).
+
+### 5.1 Un pedido de una unidad, compra única (con 3PL)
+
+| Producto | Precio | Neto IVA | Coste prod. | Margen bruto | Pasarela | Envío neto | Fulfillment+caja | Devol.+regalo | **Contribución/pedido** | % s/neto |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Parches de Nariz (8) | 16,95 | 14,01 | 4,20 | 70,0 % | 0,57 | 1,13 | 2,85 | 0,42 | **4,84 €** | 34,5 % |
+| Parches para Granos (36) | 15,95 | 13,18 | 1,75 | 86,7 % | 0,55 | 1,13 | 2,85 | 0,40 | **6,51 €** | 49,4 % |
+| Parches de Superficie (10) | 15,95 | 13,18 | 3,45 | 73,8 % | 0,55 | 1,13 | 2,85 | 0,40 | **4,81 €** | 36,5 % |
+| Parches de Barbilla (8) | 16,95 | 14,01 | 4,40 | 68,6 % | 0,57 | 1,13 | 2,85 | 0,42 | **4,64 €** | 33,1 % |
+| Parches de Frente (5) | 16,95 | 14,01 | 4,65 | 66,8 % | 0,57 | 1,13 | 2,85 | 0,42 | **4,39 €** | 31,3 % |
+| Exfoliante Salicílico 2 % (110 ml) | 32,00 | 26,45 | 4,15 | 84,3 % | 0,86 | 4,35 | 2,85 | 0,79 | **13,44 €** | 50,8 % |
+| Sérum Niacinamida 2 % (30 ml) | 29,00 | 23,97 | 4,55 | 81,0 % | 0,80 | 1,13 | 2,85 | 0,72 | **13,92 €** | 58,1 % |
+| Mascarilla Peel-Off Colágeno (70 ml) | 29,00 | 23,97 | 3,30 | 86,2 % | 0,80 | 1,13 | 2,85 | 0,72 | **15,17 €** | 63,3 % |
+| Pack 4 Mascarillas de Tela | 15,00 | 12,40 | 3,55 | 71,4 % | 0,53 | 1,13 | 2,85 | 0,37 | **3,96 €** | 32,0 % |
+| Tónico Ácido Hialurónico (130 ml) | 25,00 | 20,66 | 4,10 | 80,2 % | 0,72 | 1,13 | 2,85 | 0,62 | **11,24 €** | 54,4 % |
+| Dúo Poros Limpios (Exfoliante + Nariz) | 36,90 | 30,50 | 8,95 | 70,7 % | 0,95 | 4,35 | 2,85 | 0,91 | **12,48 €** | 40,9 % |
+| Kit Zona T (Frente + Nariz + Barbilla) | 37,90 | 31,32 | 13,50 | 56,9 % | 0,97 | 4,35 | 2,85 | 0,94 | **8,71 €** | 27,8 % |
+| Kit Cara Completa (5 parches) | 59,00 | 48,76 | 19,35 | 60,3 % | 1,37 | 4,35 | 2,85 | 2,36 | **18,48 €** | 37,9 % |
+| Plan Noche · 1 zona (mes) | 16,00 | 13,22 | 4,30 | 67,5 % | 0,55 | 1,13 | 2,85 | 0,40 | **4,00 €** | 30,2 % |
+| Plan Noche · 4 zonas (mes) | 49,00 | 40,50 | 17,20 | 57,5 % | 1,18 | 4,35 | 2,85 | 1,21 | **13,70 €** | 33,8 % |
+| Plan Noche · 4 zonas + skincare (mes) | 70,00 | 57,85 | 21,35 | 63,1 % | 1,58 | 4,35 | 2,85 | 2,64 | **25,09 €** | 43,4 % |
+| Plan Semanal (1 caja/semana, cobro semanal) | 14,90 | 12,31 | 4,20 | 65,9 % | 0,53 | 1,13 | 2,85 | 0,37 | **3,23 €** | 26,3 % |
+
+Lectura: una caja suelta de parches deja **4–5 €** de contribución (2,7–3,5 € si el envío es gratis); un líquido 11–15 €; el Dúo ≈ 12,5 €; el Kit Cara Completa ≈ 18,5 €; el Plan de 4 zonas ≈ 13,7 €/mes (25 € con skincare). El 3PL y el envío se comen el margen de los pedidos pequeños: por eso hay que subir el ticket, no bajar el precio.
+
+### 5.2 Mismo pedido enviándolo tú (fase 1, hasta ~500 pedidos/mes)
+
+| Producto | Contribución con 3PL | Contribución casera | Diferencia |
+|---|---:|---:|---:|
+| Parches de Nariz (8) | 4,84 € | 6,49 € | +1,65 € |
+| Parches para Granos (36) | 6,51 € | 8,16 € | +1,65 € |
+| Exfoliante Salicílico 2 % (110 ml) | 13,44 € | 15,09 € | +1,65 € |
+| Dúo Poros Limpios (Exfoliante + Nariz) | 12,48 € | 14,13 € | +1,65 € |
+| Kit Zona T (Frente + Nariz + Barbilla) | 8,71 € | 10,36 € | +1,65 € |
+| Kit Cara Completa (5 parches) | 18,48 € | 20,13 € | +1,65 € |
+| Plan Noche · 4 zonas (mes) | 13,70 € | 15,35 € | +1,65 € |
+
+### 5.3 Suscripción (−15 %) y descuento por 2–3 unidades
+
+| Escenario (Parches de Nariz) | Precio pagado | Contribución del pedido | Comentario |
+|---|---:|---:|---|
+| 1 caja, compra única | 16,95 € | 4,84 € | envío pagado por el cliente |
+| 1 caja, suscripción | 14,41 € | 2,85 € | cada renovación deja lo mismo; a 6,7 pedidos de vida media (churn 15 %/mes) → 19,00 € por suscriptor |
+| 2 cajas, sin descuento (hoy) | 33,90 € | 10,23 € | envío gratis (≥ 30 €) |
+| 2 cajas con −10 % (recomendado) | 30,51 € | 7,58 € | sigue por encima de 30 € → envío gratis |
+| 3 cajas con −15 % (recomendado) | 43,22 € | 12,88 € | supera 50 € → cae el regalo (0,90 €) |
+| 3 cajas en suscripción con −15 % | 36,74 € | 7,80 € | ticket recurrente de 36,7 €/mes |
+
+**Lectura y recomendación para el CRM (Precios y márgenes):** pasar de 1 a 2 cajas sin descuento añade 5,4 € (el envío pasa a ser gratis y cuesta 4,35 €); con −10 % añade solo 2,7 €; 3 cajas con −15 % añaden 8 € sobre la caja suelta. Activar 2 uds −10 % y 3 uds −15 % solo si con ello más del 25 % de los pedidos pasan a ser de 2+ cajas; si no, dejarlo a 0 % y empujar el Dúo (12,5 € de contribución) o el Plan. Los packs ya están fijados con ahorro agresivo (Dúo 36,90 € = −25 % sobre 48,95 €; Kit Zona T 37,90 € = −25 %; Kit Cara 59 € = −29 %) tal y como pediste, y siguen dejando 57–71 % de margen bruto de producto.
+
+### 5.4 Plan Noche (suscripción por zonas)
+
+| Plan | Precio/mes | Coste producto | Contribución/mes | Vida media (churn 15 %) | Contribución esperada por cliente |
+|---|---:|---:|---:|---:|---:|
+| Plan Noche · 1 zona (mes) | 16,00 € | 4,30 € | 4,00 € | 6,7 meses | **26,64 €** |
+| Plan Noche · 2 zonas (mes) | 28,00 € | 8,60 € | 9,09 € | 6,7 meses | **60,58 €** |
+| Plan Noche · 3 zonas (mes) | 39,00 € | 12,90 € | 10,17 € | 6,7 meses | **67,82 €** |
+| Plan Noche · 4 zonas (mes) | 49,00 € | 17,20 € | 13,70 € | 6,7 meses | **91,33 €** |
+| Plan Noche · 4 zonas + skincare (mes) | 70,00 € | 21,35 € | 25,09 € | 6,7 meses | **167,24 €** |
+| Plan Semanal (1 caja/semana, cobro semanal) | 14,90 € | 4,20 € | 3,23 € | 8,0 semanas (est.) | **25,88 €** |
+
+El Plan de 1 zona (16 €) deja solo 4 €/mes con 3PL (el fulfillment de 2,85 € se come el margen): conviene empujar siempre a 2+ zonas (el constructor ya sube el precio por zona) o cobrar el envío en 1 zona. El plan semanal a 14,90 €/semana deja muy poco por envío: mantenerlo solo como producto de entrada y proponer el paso a mensual desde el 2.º envío (automatización de WhatsApp/email).
+
+## 6. Inversión necesaria y calendario de caja
+
+### 6.1 Presupuesto completo (10 SKU técnicos, como en el modelo financiero)
+
+| Partida | € |
+|---|---:|
+| Compliance 1.er producto (PIF + CPSR + Persona Responsable + CPNP) | 4.000 |
+| Compliance 9 productos adicionales (1.000 €/SKU) | 9.000 |
+| Declaración responsable de importación AEMPS (tasa 5.06) | 466 |
+| Registro de marca EUIPO (1 clase) | 850 |
+| Diseño de marca y packaging (ya hecho en `brand/`; reserva para imprenta y pruebas) | 2.000 |
+| Web (ya hecha y desplegada en Netlify; reserva dominio + Resend + WhatsApp Business) | 300 |
+| Fotos y vídeo de producto (ya hechos con IA; reserva para sesión real con muestras) | 800 |
+| UGC: 10 creadoras × 150 € | 1.500 |
+| Muestras de sourcing (10 SKU × 100 €) | 1.000 |
+| 4 troqueles propios (nariz, superficie, barbilla, frente) × 1.000 $ | 3.680 |
+| Pedido piloto de inventario (10 SKU, 1.000–3.000 uds) | 9.000 |
+| Ads mes 1 | 3.000 |
+| Seguro RC de producto (anual, estimación) | 600 |
+| Gestoría + alta (autónomo o SL; SL ≈ 3.000 € capital + 600 € constitución) | 1.200 |
+| **Total salida de caja hasta el primer mes de ventas** | **37.396 €** |
+
+A esto hay que sumar el valle de tesorería de los meses 2–6 (ads creciendo, reposición de stock, IVA trimestral): el modelo lo sitúa en **−9.904 € en el mes 4** con 25.000 € de aportación. Por eso la recomendación es **35.000–40.000 €** disponibles (aportación + línea de crédito), o escalar los ads más despacio.
+
+### 6.2 Versión lean recomendada para empezar (5 SKU)
+
+Lanzar con Nariz, Granos, Barbilla, Frente y Exfoliante (los que llevan el 90 % de las ventas de Vue y componen el Dúo, el Kit Zona T y el Plan Noche); Superficie, Sérum, Peel-off, Tónico y Mascarillas en el mes 4–6 con la primera reposición.
+
+| Partida | € |
+|---|---:|
+| Compliance 1 + 4 SKU | 8.000 |
+| AEMPS + EUIPO | 1.316 |
+| Packaging/imprenta + reserva web + fotos reales | 2.000 |
+| UGC 10 creadoras | 1.500 |
+| Muestras 5 SKU | 500 |
+| 3 troqueles (nariz, barbilla, frente) | 2.760 |
+| Inventario piloto 5 SKU (≈ 2.000 uds parches × 4 + 1.000 exfoliante) | 5.500 |
+| Ads mes 1 | 2.000 |
+| Seguro RC + gestoría | 1.800 |
+| **Total lean** | **25.376 €** |
+
+### 6.3 Calendario de caja (versión completa, escenario Base del modelo)
+
+| Mes | Qué pasa | Caja acumulada aprox. |
+|---|---|---:|
+| 0 (sept–nov) | Compliance, muestras, troqueles, depósito 30 % del pedido (2.700 €), marca, UGC | −3.700 € |
+| 1 (dic) | 70 % del pedido al embarcar, 3.000 € de ads, primeras ventas (CPA 18 €) | −9.000 € |
+| 2–4 | Ads +20 %/mes si ROAS ≥ 2,5; IVA 1T; primera reposición | **−9.900 € (mes 4, mínimo)** |
+| 5–8 | CPA baja hacia 11–14 €; suscriptores y recompra empiezan a pesar | −6.000 → −1.000 € |
+| 9–12 | EBITDA mensual positivo desde ≈ mes 9; acumulado positivo en el mes 11 | +1.850 € (mes 12) |
+
+PyG del mes 12 (Base): 1.802 pedidos, 65.715 € con IVA, margen bruto ≈ 51 % sobre neto, 12.899 € de ads, EBITDA 4.300 € (7,9 %), ROAS 4,2x. Escenarios pesimista / optimista: EBITDA acumulado año 1 −28.825 € / +170.899 €. Detalle en `finanzas/plan_financiero.md`.
+
+## 7. Economía de los anuncios: cuánto tiene que convertir cada anuncio
+
+Supuestos de Meta España (editables): CPM 7,5 € (rango 6–9 €), CTR saliente 1,2 % → **CPC ≈ 0,63 €** → 1.000 impresiones = 12 clics = 7,5 €. Un anuncio es rentable cuando el coste por compra (CPA) que genera está por debajo de la contribución que deja esa compra. Se dan tres varas de medir:
+
+- **CPA máx. 1.er pedido**: solo lo que deja el primer pedido. Es el límite “no pierdo dinero hoy”.
+- **CPA máx. LTV 90 d**: primer pedido + 15 % de suscriptores con 2 renovaciones (supervivencia 85 %/mes) + 30 % de recompra de no suscriptores. Es la vara con la que se gobiernan los anuncios (sección 8).
+- **CPA máx. LTV 180 d**: lo mismo a 6 meses (5 renovaciones, 45 % de recompra). Solo para decidir cuánto se puede forzar la escala, nunca para el día a día.
+
+**CPA objetivo** = 70 % del CPA máx. LTV 90 d (el 30 % restante paga los costes fijos y el error de estimación). **CVR mínima** = CPC / CPA máx. (qué porcentaje de los clics del anuncio tiene que comprar). **ROAS mínimo** = precio con IVA / CPA máx.
+
+| Anuncio que vende… | Precio | CPA máx. 1.er pedido | CPA máx. LTV 90 d | CPA máx. LTV 180 d | **CPA objetivo** | CVR mín. (LTV 90 d) | CVR mín. (1.er pedido) | ROAS mín. (LTV 90 d) | Compras por 1.000 impr. |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Parches de Nariz (8) | 16,95 | 4,84 € | 6,75 € | 8,04 € | **4,72 €** | 9,3 % | 12,9 % | 2,5x | 1,11 |
+| Parches para Granos (36) | 15,95 | 6,51 € | 9,26 € | 11,19 € | **6,48 €** | 6,8 % | 9,6 % | 1,7x | 0,81 |
+| Parches de Barbilla (8) | 16,95 | 4,64 € | 6,45 € | 7,67 € | **4,51 €** | 9,7 % | 13,5 % | 2,6x | 1,16 |
+| Exfoliante Salicílico 2 % (110 ml) | 32,00 | 13,44 € | 19,92 € | 24,69 € | **13,94 €** | 3,1 % | 4,6 % | 1,6x | 0,38 |
+| Sérum Niacinamida 2 % (30 ml) | 29,00 | 13,92 € | 19,95 € | 24,22 € | **13,97 €** | 3,1 % | 4,5 % | 1,5x | 0,38 |
+| Dúo Poros Limpios (Exfoliante + Nariz) | 36,90 | 12,48 € | 17,58 € | 21,11 € | **12,31 €** | 3,6 % | 5,0 % | 2,1x | 0,43 |
+| Kit Zona T (Frente + Nariz + Barbilla) | 37,90 | 8,71 € | 11,94 € | 14,06 € | **8,36 €** | 5,2 % | 7,2 % | 3,2x | 0,63 |
+| Kit Cara Completa (5 parches) | 59,00 | 18,48 € | 25,91 € | 31,01 € | **18,14 €** | 2,4 % | 3,4 % | 2,3x | 0,29 |
+| Plan Noche · 2 zonas (mes) | 28,00 | 9,09 € | 23,38 € | 37,73 € | **16,36 €** | 2,7 % | 6,9 % | 1,2x | 0,32 |
+| Plan Noche · 4 zonas (mes) | 49,00 | 13,70 € | 35,24 € | 56,89 € | **24,67 €** | 1,8 % | 4,6 % | 1,4x | 0,21 |
+| Plan Noche · 4 zonas + skincare (mes) | 70,00 | 25,09 € | 64,53 € | 104,16 € | **45,17 €** | 1,0 % | 2,5 % | 1,1x | 0,12 |
+
+Cómo leerlo con un ejemplo: un anuncio de **Parches de Nariz** que lleva a comprar una caja suelta necesita que **más del 10 % de los clics compren** para no perder dinero en el primer pedido (imposible: lo normal es 2–4 %). Contando 90 días de recompra y suscripción, necesita un **9 %**: todavía imposible. El mismo anuncio, si la ficha convierte a **Dúo**, necesita **3,6 %**; a **Kit Cara Completa**, **2,4 %**; y a **Plan Noche de 4 zonas**, **1,8 %** (1 % con skincare). Por eso la landing de todo anuncio de parches es la ficha con la suscripción y el pack preseleccionados, y por eso el CPA se mide por **AOV real del anuncio**, no por producto anunciado.
+
+### 7.1 La misma tabla en función del ticket real que consigue el anuncio (AOV)
+
+Cuando un anuncio mezcla productos, usa el AOV medio de sus pedidos. Contribución del pedido ≈ 0,6 × AOV neto − 3 € de costes por pedido (3PL, caja, pasarela, envío gratis), con coste de producto medio del 22 % del neto.
+
+| AOV del anuncio (con IVA) | Contribución 1.er pedido | CPA máx. LTV 90 d | CPA objetivo | CVR mín. | ROAS mín. |
+|---|---:|---:|---:|---:|---:|
+| 17 € | 5,99 € | 8,71 € | 6,10 € | 7,2 % | 2,0x |
+| 25 € | 10,79 € | 15,71 € | 11,00 € | 4,0 % | 1,6x |
+| 30 € | 10,58 € | 15,39 € | 10,77 € | 4,1 % | 1,9x |
+| 38 € | 15,38 € | 22,39 € | 15,67 € | 2,8 % | 1,7x |
+| 45 € | 19,59 € | 28,51 € | 19,96 € | 2,2 % | 1,6x |
+| 55 € | 24,70 € | 35,94 € | 25,16 € | 1,7 % | 1,5x |
+| 70 € | 33,71 € | 49,06 € | 34,34 € | 1,3 % | 1,4x |
+
+Objetivo operativo: **AOV ≥ 38 € desde el día 1 y ≥ 45 € en el mes 3**. Con 45 € el CPA objetivo es ≈ 20 € y basta con que el 2,2 % de los clics compren, que es el rango normal de una ficha bien hecha (2,8–3,2 % de objetivo en la sección 9). Con 17 € de ticket hace falta un 7 %, que no ocurre.
+
+### 7.2 Presupuesto de ads por fase y cuánto tiene que salir
+
+| Fase | Días | Meta/día | TikTok/día | Google/día | Gasto fase (medio) | CPA de salida | Pedidos esperados | ROAS plataforma |
+|---|---|---|---|---|---:|---|---:|---|
+| Soft launch + test | 1–30 | 40–60 € | 20–30 € | 10–15 € | 2.600 € | ≤ 25 € (aprendizaje; el modelo asume 18 €) | ≈ 130 | ≥ 1,6 |
+| Validación | 31–60 | 90–140 € | 40–60 € | 20–30 € | 5.700 € | ≤ 16 € | ≈ 380 | ≥ 2,5 |
+| Escala + retención | 61–90 | 150–250 € | 70–100 € | 30–50 € | 9.750 € | ≤ 13 € | ≈ 800 | ≥ 3 |
+
+Total 90 días a ritmo completo ≈ 18.000 €; versión lean solo Meta ≈ 11.000 €. El modelo financiero (3.000 € el mes 1, +20 %/mes si ROAS ≥ 2,5, techo 18.000 €/mes) está entre ambas. Los CPA de salida de esta tabla son más exigentes que los 32–55 € de la estrategia de marketing porque aquí se calculan con los costes reales de la sección 5: un CPA de 40 € solo es rentable con AOV > 90 € o a LTV de 12 meses.
+
+## 8. Reglas de gestión por anuncio (presupuesto, kill, escalado)
+
+Se aplican a cada anuncio (`utm_content` = número de la matriz) leyendo Meta + el panel `/admin` (pedidos por `utm_content`, CPA real con AOV real).
+
+| Momento | Regla | Acción |
+|---|---|---|
+| Al lanzar | Cada anuncio nuevo entra en la campaña de test con 15–20 €/día durante 3–5 días | No tocar antes de 3 días ni 2.000 impresiones |
+| 2.000 impresiones | Hook rate (3 s) < 25 % o CTR saliente < 0,8 % | Matar. El anuncio no engancha: cambiar el gancho, no el cuerpo |
+| Gasto = 1,5 × CPA objetivo sin ninguna compra | Con AOV 45 €: 18 € gastados y 0 compras | Matar |
+| 3 compras o más | CPA real > 1,3 × CPA objetivo | Matar o bajar al 50 % y revisar la landing |
+| 3 compras o más | CPA real ≤ CPA objetivo durante 3 días seguidos | Ganador: duplicar dentro de la campaña ASC+ (nunca mover el original); subir presupuesto +20 % cada 3 días |
+| Semanal | CVR de la ficha < 2 % con CTR sano | El problema es la página, no el anuncio: revisar precio visible, botón, suscripción preseleccionada, reseñas |
+| Cada 2–3 semanas (estáticos) / 4–6 (vídeo) | Frecuencia > 3 o CTR cae > 30 % vs su mejor semana | Refrescar creatividad (nueva variante A/B del mismo gancho) |
+| Mensual | ROAS de la cuenta (MER) < 2 en el mes | Parar la escala, volver al presupuesto anterior, producir 10 creatividades nuevas antes de volver a subir |
+| Siempre | Nunca doblar el presupuesto de golpe; nunca > 20 % cada 3–4 días | Evita reiniciar el aprendizaje |
+
+**Estructura de cuenta** (detalle en `marketing/estrategia_marketing.md` §6): Campaña 1 ASC+ amplia España 18–65 (60–65 % del presupuesto, 20–30 anuncios activos), Campaña 2 prospección por avatar Bea/Marisol/Álex (20–25 %, 3–5 anuncios por avatar, 30–50 €/día), Campaña 3 retargeting de catálogo (10–15 %, visitantes 30 d + carritos + compradores 180 d). Placements Advantage+, 9:16 obligatorio, optimización a compra, CAPI + píxel con calidad ≥ 8. Landing de frío: siempre ficha de producto o advertorial (`no-son-puntos-negros.html`) → ficha.
+
+**Cuántos anuncios y cuánto cuestan**: 10–15 creatividades nuevas al mes (matriz de 100 en `marketing/matriz_100_anuncios.md`: 10 ganchos × 5 formatos × 2 variantes). Coste de producción con la máquina de contenido: 150–250 créditos de Higgsfield por anuncio de vídeo (≈ 45 min), estáticos a coste 0. Tanda 1 producida (3 anuncios + turntable + réplicas de 3 anuncios ganadores de Vue en `marketing/anuncios/`); tanda 2 = ganchos G2 y G5 (8 anuncios); tanda 3 = ganchos baratos sin cara (12 anuncios).
+
+## 9. Página de producto y embudo: KPIs y palancas
+
+La ficha (`producto.html`) está construida para que todo lo que decide la compra quepa en la primera pantalla del móvil: foto completa del producto, precio, selector de suscripción **encima** del de cantidad, precios por cantidad que cambian entre compra única y suscripción, botón Comprar y Apple Pay/Google Pay a la misma altura, chip de pack. Debajo: vídeo, garantía, cómo se usa, reseñas, upsell.
+
+| Paso del embudo | Mínimo | Objetivo | Top | Palanca en la web / CRM |
+|---|---|---|---|---|
+| Clic → carga de la ficha (LCP móvil) | < 2,5 s | < 1,8 s | < 1,2 s | Netlify CDN, imágenes webp, vídeo diferido, catálogo cacheado 60 s |
+| Visitas que ven precio + botón sin scroll | 90 % | 100 % | — | Primera pantalla móvil verificada a 390 px |
+| Añadir al carrito / compra directa | 6 % | 9 % | 12 %+ | Suscripción preseleccionada en anuncios de plan, precio por cantidad visible, Apple Pay |
+| Carrito → checkout iniciado | 55 % | 65 % | 75 % | Umbral de envío gratis a 30 €, regalo a 50 €, upsell de carrito |
+| Checkout → pago | 55 % | 65 % | 75 % | Stripe con Apple Pay/Google Pay/Klarna, sin registro, código validado en línea |
+| **CVR de la ficha (compras / visitas)** | 2 % | 2,8–3,2 % | 5 %+ | Producto de las tres anteriores |
+| AOV | 38 € | 45–48 € | 60 €+ | Packs −25/29 %, Plan Noche, 2–3 unidades −10/15 %, regalos por umbral |
+| Suscripción sobre pedidos nuevos | 10 % | 15 % | 25 % | Selector de suscripción arriba, Plan Noche, −15 % |
+| Popup de bienvenida: captación de email/teléfono | 4 % | 6–8 % | 10 % | Popup centrado −10 %, se muestra en la primera página de la visita |
+| Carritos abandonados recuperados | 5 % | 10 % | 15 % | Automatizaciones email + WhatsApp a 1 h / 24 h / 72 h |
+| Ingresos por email/WhatsApp | 15 % | 25–30 % | 35 %+ | Newsletter Resend, campañas y automatizaciones del CRM |
+| Recompra a 90 días | 12 % | 20–25 % | 30 %+ | Post-compra: tutorial, recordatorio de reposición a 21 días, upsell −10 % |
+
+Qué medir cada semana en la ficha: visitas, CVR, AOV, % suscripción, % pack vs suelto, tasa de uso del selector de cantidad. Si la CVR baja del 2 % con CTR normal, el problema está en la página; si el AOV baja de 38 €, el problema está en el mix (empujar Dúo/Plan en la barra de anuncios y el popup).
+
+## 10. Plan de marketing (creatividades, canales, calendario, retención)
+
+Documento completo: `marketing/estrategia_marketing.md` (13 secciones), guiones en `marketing/guiones_anuncios.md`, matriz en `marketing/matriz_100_anuncios.md`.
+
+- **Posicionamiento**: “Esos puntitos no son puntos negros” — parches de hidrocoloide coreanos que absorben en una noche, sin tiras ni apretar. Tres avatares: Bea (18–28, TikTok/Reels), Marisol (35–50, Instagram/Facebook), Álex (22–40, hombre).
+- **Oferta**: escalera héroe 16,95 € → Dúo 36,90 € → Kit 37,90–59 € → Plan Noche 16–70 €/mes; garantía de adhesión + 60 días de satisfacción; envío gratis desde 30 €, regalo desde 50 €; popup −10 %; lotes numerados y códigos con caducidad real.
+- **Los 10 ganchos** (por frecuencia en los anuncios de Vue): no son puntos negros · asco satisfactorio · complejo · lo que no funciona (tiras) · reto de una noche · pareja/amigo · dermatólogo/ciencia · comparativa tira vs hidrocoloide · precio (menos de 2 € por noche) · garantía.
+- **Fórmula del anuncio** (0–3 s gancho, 3–10 s reencuadre, 10–20 s mecanismo, 20–32 s prueba visual del parche usado, 32–40 s garantía + oferta + CTA). Mix mensual: 40 % UGC, 20 % demo, 15 % estáticos, 15 % fundador/experta, 10 % catálogo.
+- **Canales**: Meta 55 %, TikTok 25 % (Spark Ads + Smart+; TikTok Shop ES desde el mes 3, comisión 4 % los primeros 60 días), Google 12 % (Search marca + Shopping + PMax), creadoras 8 % (20 nano/micro al mes, 50–800 €/vídeo, whitelisting), afiliación con códigos 10–20 %.
+- **Retención (ya construida en el CRM)**: bienvenida con código, carrito abandonado 1 h/24 h/72 h por email y WhatsApp, post-compra (tutorial, recordatorio de reposición a 21 días, upsell), newsletter Resend, campañas segmentadas (leads, clientes, suscriptores).
+- **Calendario 12 meses** (§8 de la estrategia): lanzamiento dic, Rebajas ene, San Valentín, Día de la Madre, verano (−30/40 % como Vue), vuelta al cole, Black Friday, Navidad (hasta −45 %). Cada campaña se crea en el CRM (Ofertas) con fecha de inicio/fin.
+
+## 11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
+
+### 11.1 Legal y compliance (paso a paso en `negocio/plan_de_negocio.md` §10)
+
+| Paso | Qué | Coste | Plazo |
+|---|---|---|---|
+| Forma jurídica | Autónomo para validar (alta RETA + censal, IAE 652.2) o SL (3.000 € capital, notaría + registro ≈ 600 €) | 0–600 € | 1–3 semanas |
+| EORI + ROI | Número EORI en AEAT y registro de operador intracomunitario | 0 € | 1–2 semanas |
+| Marca | EUIPO clase 3 (cosmética); comprobar antes en TMview | 850 € | 4–6 meses (protección desde solicitud) |
+| Cosmética (Reg. 1223/2009) | PIF + CPSR + Persona Responsable en la UE + notificación CPNP por producto; etiquetado en español (INCI, PAO, lote, RP) | 1.500–4.500 € el 1.º, 500–1.500 € cada adicional | 4–8 semanas por producto (en paralelo con la producción) |
+| AEMPS | Declaración responsable de importación de cosméticos (tasa 5.06) | 466,23 € | 2–4 semanas |
+| RGPD / LSSI / cookies | Textos legales, banner de cookies, registro de tratamientos (la web ya incluye legal.html y consentimiento en popup) | 0–300 € | 1 semana |
+| Venta a distancia | Desistimiento 14 días, garantía, condiciones (ya en `envios-devoluciones.html` y `garantia.html`) | 0 € | hecho |
+| Envases (RAP) | Adhesión a Ecoembes o SCRAP equivalente | ≈ 100–300 €/año | 1 mes |
+| Seguro RC de producto | Póliza de responsabilidad civil de producto | 300–900 €/año | 1 semana |
+
+### 11.2 Operaciones (manual completo en `operaciones/manual_operativo.md`)
+
+- **Stock**: pedido piloto 1.000–3.000 uds/SKU; reponer cuando queden 60 días de cobertura hasta 90 días; aéreo el primer lote, marítimo después.
+- **Fulfillment**: fase 1 casero con Sendcloud/Packlink (Correos/GLS 3,5–4,5 € Península, 6 € Baleares, 9 € Canarias) hasta 500–600 pedidos/mes; después 3PL (Byrd, Logisfashion, Cubyn) a 2,2–2,8 €/pedido. Envío 24–48 h como promesa de marca.
+- **Atención al cliente**: WhatsApp Business (integrado en la web y el CRM), email; SLA 24 h; garantía de adhesión con reposición inmediata; devoluciones sin envío físico para la garantía de 60 días (formulario con fotos).
+- **Calidad**: rúbrica de cata por lote (adhesión, transparencia, residuo, blanqueo), inspección pre-embarque en el primer pedido de cada proveedor, retención de 5 muestras por lote.
+
+### 11.3 Roadmap 90 días (detalle semanal en `negocio/roadmap_90_dias.md`)
+
+| Semanas | Hito |
+|---|---|
+| 1–2 | RFQ a 8–10 proveedores, alta legal, EORI, benchmark físico Vue/Hero comprado |
+| 3–5 | Muestras en tránsito y recibidas; cata; elección de proveedor; contratar consultora de compliance |
+| 6–7 | Negociación, proforma, depósito 30 %; arranque de producción; artwork final a imprenta |
+| 8–10 | PIF/CPSR/CPNP en paralelo; declaración AEMPS; inspección pre-embarque; web ya en producción con Stripe, Resend y WhatsApp conectados; 10 creadoras UGC grabando |
+| 11 | Tránsito aéreo y aduana con declaración de origen; recepción y control de calidad |
+| 12 | Primeros anuncios (tanda 1 + 2), popup y automatizaciones activas, 500–1.000 € de test |
+| 13 (día 90) | Medición: CPA, CVR, AOV, % suscripción; primeras decisiones de escalado con las reglas de la sección 8 |
+
+### 11.4 Roadmap 12 meses
+
+| Mes | Objetivo |
+|---|---|
+| 1–3 | Validar producto y CPA (≤ 16 € en el mes 3), AOV ≥ 42 €, 3+ anuncios ganadores, 100–400 pedidos/mes |
+| 4–6 | Segunda tanda de SKU (superficie, sérum, peel-off, tónico, mascarillas), primera reposición marítima, TikTok Shop ES, 20 creadoras/mes, 25 % de ingresos por email/WhatsApp, punto muerto superado (> 123 pedidos/mes) |
+| 7–9 | Escalar ads hasta el techo que aguante el ROAS ≥ 2,5, Amazon.es como canal incremental, afiliación con códigos, EBITDA mensual positivo |
+| 10–12 | 1.500–1.800 pedidos/mes, EBITDA acumulado positivo (mes 11), preparar Portugal/Italia (Vue factura el 8 % en Italia), segundo troquel/producto propio |
+
+### 11.5 Riesgos principales y mitigación
+
+Retraso de compliance (empezar en paralelo, SLA por escrito) · coste real de producto distinto del estimado (cotización en firme antes del pedido) · CPA que no baja (no escalar sin ROAS, producir más creatividades, subir AOV) · adhesión/transparencia peor que Vue (rúbrica de cata, benchmark físico, no aceptar < 3/5) · caja en el mes 4 (colchón de 10–15 k€) · dependencia de Meta (email/WhatsApp ≥ 25 % de ingresos, TikTok Shop, Google) · claims prohibidos (nunca “cura”, “trata el acné”, “elimina para siempre”, “medical-grade”).
+
+## 12. Stack técnico entregado y lo que queda en tu tejado
+
+**Entregado y en producción** (https://nocta-store.netlify.app, CRM en `/admin/`):
+
+- Web estática ultrarrápida con 16 páginas (inicio, catálogo, ficha, planes, cómo usar con secuencia real de 80 fotogramas, ciencia, advertorial “no son puntos negros”, quiz, checkout, gracias, garantía, envíos, legal, sobre, contacto, tablero).
+- Checkout Stripe con Apple Pay / Google Pay / Klarna, webhook firmado, pedidos y clientes en Supabase, códigos de descuento con límite de usos, carritos guardados y recuperables.
+- Newsletter y transaccionales con Resend; WhatsApp Cloud API (webhook, plantillas, consentimiento en popup); popup de bienvenida −10 % con nombre/email/teléfono.
+- CRM completo: dashboard, pedidos, carritos, clientes, leads, suscriptores, productos (precios, textos, imágenes, stock, coste), ofertas con fecha, contenido de todas las secciones y menús, reseñas, precios y márgenes (suscripción %, 2–3 unidades %, planes por zonas, upsell, envío y regalos), campañas de email/WhatsApp, automatizaciones por hora, integraciones (Stripe con un clic, Resend, WhatsApp).
+- Máquina de contenido: pipeline de imagen/vídeo (Seedance 2.5 para vídeo), packshots, vídeos de catálogo, 3 réplicas de anuncios ganadores de Vue, hero y secuencia de uso real.
+
+**Pendiente de ti (10–30 minutos cada uno):**
+
+1. Meter el **coste real de cada producto** en `/admin` → Precios y márgenes cuando tengas cotización (hasta entonces usa los de la sección 5).
+2. Conectar **Stripe** (pegar la clave secreta en Integraciones; el webhook se crea solo) y activar Apple Pay en el panel de Stripe con el dominio.
+3. Verificar el **dominio en Resend** (DNS) y poner el remitente; conectar **WhatsApp Cloud API** (token, phone id, verify token).
+4. **Revocar el token de Netlify** que pegaste en el chat y rotar la clave de Resend y la de Supabase que también pegaste: ya están cargadas como variables de entorno, no hacen falta en claro en ningún sitio.
+5. Dominio propio (nocta.es / nocta-skin.com) apuntando a Netlify; píxel de Meta + CAPI y TikTok pixel con los IDs de tus cuentas (los huecos están en el CRM → Integraciones).
+
+## 13. Todo lo que pediste, mensaje a mensaje, y su estado
+
+| Lo que pediste | Dónde está | Estado |
+|---|---|---|
+| Investigar al máximo Vue Skin: productos, ads en todas las redes, ofertas, canales, herramientas | `../vue-skin-research/informes/01–07` + datos brutos | Hecho |
+| Que el estudio se base en todo (todos los anuncios, no una muestra) | 4.485 anuncios únicos, 2.587 vídeos transcritos, censo de frases | Hecho |
+| Selección de 10 productos iguales a los de Vue, proveedores y packaging | `producto/catalogo_completo.md`, `producto/fichas_desarrollo_producto.md`, informe 06, `brand/packaging/` | Hecho (13 SKU + 2 planes) |
+| Todo en Claude-septiembre, nada en dc-intelligence; no quemar tokens con agentes | Todo bajo `nocta/`; agentes solo Sonnet y bajo demanda | Cumplido |
+| Permiso para Ad Multiplier y workflows creativos optimizando créditos de Higgsfield | 3 réplicas en `marketing/anuncios/`, saldo reportado en cada entrega | Hecho |
+| Entender vídeo por vídeo cómo se pone y se quita el parche (no un frame) | `producto/fisica_del_parche.md` + secuencia real de uso (80 fotogramas Seedance 2.5) | Hecho |
+| Carpetas con catálogo completo, vídeos, web y desarrollo completo de negocio y cómo hacer todo | `producto/`, `web/`, `brand/video/`, `negocio/`, `finanzas/`, `operaciones/`, `marketing/` | Hecho |
+| Web en Netlify, sin contraseña | https://nocta-store.netlify.app | Hecho |
+| Web smooth, moderna, minimalista, perfecta en móvil; producto sin fondo sobre el fondo de la web; menús creativos | Web v2 “Laboratorio Cálido” → v8 | Hecho |
+| Inspirarse en vueskin.com pero con animaciones y exposición de producto propias | Media reveal cinemático, grano, hero de vídeo, rail de destacados | Hecho |
+| Imágenes de más calidad (gpt image 2 4K, detail shots) | `web/public/assets/img/`, packshots y detalles por SKU | Hecho |
+| Página “cómo usar” con animación realista y humanizada | `como-usar.html` con secuencia real | Hecho |
+| Ficha de producto de lujo y UI avanzado; catálogo 2 por fila | `producto.html`, `catalogo.html` | Hecho |
+| Packs más agresivos para que el usuario prefiera el pack | Dúo 36,90 (−25 %), Kit Zona T 37,90 (−25 %), Kit Cara 59 (−29 %) | Hecho |
+| 3D más realistas → vídeo real; auditoría de UI página por página | Vídeo real Seedance 2.5 en hero, ficha y cómo funciona | Hecho |
+| CRM para controlar todo; newsletter Resend; popup −10 % con nombre/email/teléfono y consentimiento WhatsApp; WhatsApp; Stripe en toda la tienda con Apple Pay; Stripe desde el CRM | `/admin/`, funciones Netlify, Supabase | Hecho (faltan tus claves de Stripe/WhatsApp/dominio Resend) |
+| Imágenes que aparecen con efecto de polvo, cinemático, sin blancos | Media reveal v7 | Hecho |
+| Ficha: Comprar y Apple Pay visibles sin scroll; producto grande completo; suscripción encima de cantidades; precios por cantidad en suscripción; botones iguales; vídeo encajado | `producto.html` móvil | Hecho |
+| Popup centrado, fondo desenfocado, personal, cinemático, compacto y pro; en la primera página de la visita (incluida la ficha) | Popup v9 | Hecho |
+| Hero solo con piel perfecta + parche usado; caja más baja; sin borde azul | Hero v8 | Hecho |
+| Sección “lo más vendido” compacta bajo el hero, sin la palabra Parches, tamaño correcto, sin quedarse pegada | `#destacados` | Hecho |
+| Plan personalizado por zonas (1–4) con precio, imágenes y listas dinámicas; skincare opcional | `planes.html`, constructor de plan | Hecho |
+| Tarjeta “esos puntitos” más baja con botón; parches debajo; “cómo funciona” en un solo cuadro con 3 vídeos y parches al final | `index.html` | Hecho |
+| Packs antes que el skincare, 2 por fila | `index.html` | Hecho |
+| Que el CRM controle absolutamente todo, incluidos márgenes y ofertas | `m-pricing.js`, `m-products.js` (ofertas), contenido | Hecho |
+| Contraseña del CRM | `nocta-h1wsIPwUfmdH` (no cambiada, como dijiste) | Hecho |
+| Este documento: proveedores, desarrollo de negocio, ads y cuánto tiene que convertir cada anuncio, inversión, ficha de producto, todo | `NOCTA_DOCUMENTO_MAESTRO.md` | Hecho |
+
+**Lo que faltaba y se ha añadido en este documento**: economía por anuncio con CPA/CVR/ROAS mínimos por producto y por AOV (sección 7), reglas de kill/escalado por anuncio (8), KPIs del embudo de la ficha (9), tabla de inversión real con versión lean (6), contribución por producto con y sin 3PL, suscripción, 2–3 unidades y planes (5), y la recomendación de descuento por cantidad para el CRM.
+
+## 14. Anexo: fórmulas y supuestos
+
+```
+Neto = Precio / 1,21
+Contribución pedido = Neto − Coste producto − (1,9 % × Precio + 0,25) − Envío neto − Fulfillment − Packaging − 3 % × Neto − Regalo
+  Envío neto = 4,35 − 3,22 (si el cliente paga 3,90 € con IVA, pedidos < 30 €) ; = 4,35 si envío gratis
+  Fulfillment = 2,50 (3PL) ó 0,85 (casero) ; Packaging = 0,35 ; Regalo = 0,90 si pedido ≥ 50 €
+CPA máx. 1.er pedido = Contribución pedido
+CPA máx. LTV 90 d = C1 + 15 % × C_sub × (0,85 + 0,85²) + 85 % × 30 % × C1
+CPA máx. LTV 180 d = C1 + 15 % × C_sub × Σ(0,85^n, n=1..5) + 85 % × 45 % × C1
+Planes (ya suscripción): LTV 90 d = C × (1 + 0,85 + 0,85²) ; vida media = 1 / churn = 6,7 meses
+CPA objetivo = 0,7 × CPA máx. LTV 90 d
+CPC = CPM / 1000 / CTR = 7,5 / 1000 / 0,012 = 0,625 €
+CVR mínima = CPC / CPA máx.   ;   ROAS mínimo = Precio / CPA máx.   ;   Compras por 1.000 impresiones = CPM / CPA máx.
+Punto muerto = Costes fijos / Contribución media por pedido = 1.427 / 11,58 ≈ 123 pedidos/mes
+```
+Supuestos marcados como estimación (a sustituir por datos reales en los primeros 60 días): CPM y CTR de Meta España, CVR, tasa de suscripción 15 % y churn 15 %/mes, recompra 30 % a 90 días, devoluciones 3 %, costes de producto (rango de RFQ), mix regional de envíos.
+
+---
+*Documentos fuente: `negocio/plan_de_negocio.md`, `negocio/roadmap_90_dias.md`, `negocio/checklist_lanzamiento.md`, `negocio/como_hacer_todo.md`, `finanzas/plan_financiero.md` + `modelo_financiero_nocta.xlsx`, `marketing/estrategia_marketing.md`, `marketing/guiones_anuncios.md`, `marketing/matriz_100_anuncios.md`, `operaciones/manual_operativo.md`, `producto/*.md`, `../vue-skin-research/informes/*.md`, `README.md` (stack y CRM).*

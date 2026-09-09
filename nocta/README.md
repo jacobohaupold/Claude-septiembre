@@ -2,6 +2,10 @@
 
 Todo lo que hay en esta carpeta se ha construido a partir de la investigación de `../vue-skin-research/` (6.534 anuncios de Meta, TikTok, Google, transcripciones y censo de frases). NOCTA copia el catálogo, la mecánica de oferta y los ganchos que a Vue le funcionan, y los mejora en tres puntos: colocación del producto explicada y mostrada correctamente, funnels completos (quiz, advertorial, upsell post-compra, suscripción) y analítica propia de primera parte.
 
+## Documento maestro
+
+**`NOCTA_DOCUMENTO_MAESTRO.md`** reúne todo el negocio en un solo documento: investigación de Vue, catálogo y precios, proveedores con contactos/MOQ/precios, costes y márgenes por producto/pack/plan, inversión, economía de cada anuncio (CPA, CVR y ROAS mínimos por producto y por ticket), reglas de kill/escalado, KPIs de la ficha, plan de marketing, legal, operaciones, roadmap y el estado de todo lo pedido.
+
 ## Índice de carpetas
 
 | Carpeta | Qué contiene | Estado |
