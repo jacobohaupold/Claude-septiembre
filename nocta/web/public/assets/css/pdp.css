@@ -229,3 +229,12 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 }
 @media (max-width:899px){.n-pd-gal__s{height:min(44vh,340px)}.n-pd__panel{gap:6px;padding:12px 16px 16px}.n-pd__seg label{min-height:42px}.n-tier{min-height:44px}.n-pd__title{margin-top:-2px}}
 @media (max-width:899px){.n-pd-gal__s img{transform:scale(1.2)}}
+/* v7.6.3 · móvil: producto siempre completo en una caja más alta; panel más compacto; Apple Pay a la misma altura que Comprar */
+@media (max-width:899px){
+  .n-pd-gal__s{height:min(48vh,380px)}.n-pd-gal__s img{transform:scale(1.08)}
+  .n-pd__panel{gap:6px;padding:10px 14px 14px}.n-pd__title{font-size:23px}.n-pd__price b{font-size:23px}.n-pd__price{gap:4px 8px}.n-pd__price .n-pd__save{font-size:10px;padding:3px 7px}.n-pd__meta{font-size:11px}
+  .n-pd__seg{padding:3px}.n-pd__seg label{min-height:40px;padding:4px 6px}.n-pd__seg label b{font-size:11.5px}.n-pd__seg label span{font-size:11.5px}
+  .n-tiers{gap:6px}.n-tier{min-height:42px;padding:4px 4px}.n-tier b{font-size:10.5px}.n-tier span{font-size:13.5px}
+  .n-buy{gap:6px}.n-buy .n-btn--lg,.n-buy .n-pay,.n-buy .n-pay--apple{height:42px;min-height:42px;max-height:42px;line-height:1}.n-buy .n-btn--lg{padding:0 8px;font-size:11px}
+}
+@media (max-width:899px){.n-buy #addbtn,.n-pd .n-buy #addbtn{height:42px;min-height:42px;max-height:42px;padding:0 8px;font-size:11px;line-height:1}}

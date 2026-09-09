@@ -5,12 +5,12 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090244">
-<link rel="stylesheet" href="/assets/css/pdp.css?v=202609090244">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090248">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=202609090248">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609090244" defer></script>
+<script src="/assets/js/app.js?v=202609090248" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -18,9 +18,9 @@
 <div class="n-bbar n-bbar--pdp" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar</button><div class="n-bbar__pay" id="st-express"></div></div></div>
 <div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609090244"></script>
-<script src="/assets/js/reviews.js?v=202609090244"></script>
-<script src="/assets/js/products.js?v=202609090244"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090248"></script>
+<script src="/assets/js/reviews.js?v=202609090248"></script>
+<script src="/assets/js/products.js?v=202609090248"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
@@ -108,7 +108,7 @@ ${reviews}${upsSec}
 let qty=1,sub=false;
 const flash=el=>{el.classList.remove('n-pd__flash');void el.offsetWidth;el.classList.add('n-pd__flash');};
 const setT=(sel,v)=>{const e=$(sel);if(e)e.textContent=v;};
-const upd=()=>{const u=isPlan?p.price:(sub?p.sub:p.price);setT('#qv',qty);setT('#addprice',eur(u*qty)+(isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''));$('#pdpprice').innerHTML=eur(u)+nPlanSuf(p);flash($('#pdpprice'));flash($('#addprice'));setT('#st-price',eur(u*qty)+(isPlan?' '+p.plan.label:' · '+(qty>1?qty+' unidades':p.units)));setT('#buynote',isPlan?'Envío gratis incluido · sin permanencia':nNote(p,qty,sub));
+const upd=()=>{const u=isPlan?p.price:(sub?p.sub:p.price);setT('#qv',qty);document.querySelectorAll('.n-tier').forEach(t=>{const n=+t.querySelector('input').value;const sp=t.querySelector('span.n-num');if(sp)sp.textContent=eur(u*n);});setT('#addprice',eur(u*qty)+(isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''));$('#pdpprice').innerHTML=eur(u)+nPlanSuf(p);flash($('#pdpprice'));flash($('#addprice'));setT('#st-price',eur(u*qty)+(isPlan?' '+p.plan.label:' · '+(qty>1?qty+' unidades':p.units)));setT('#buynote',isPlan?'Envío gratis incluido · sin permanencia':nNote(p,qty,sub));
   if(!isPlan)setT('#segnote',sub?'Cada 30 días. Cancela o salta un envío desde el email de cada pedido.':'Sin compromiso. Puedes pasarte a suscripción cuando quieras.');
   document.querySelectorAll('#addbtn,#pdpexpress,#addcart,#st-add,#st-express .n-pay').forEach(b=>{b.dataset.qty=qty;b.dataset.sub=sub?1:0;});
   document.querySelectorAll('.n-tier').forEach(t=>t.classList.toggle('is-on',+t.querySelector('input').value===qty));};
