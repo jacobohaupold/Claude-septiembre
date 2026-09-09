@@ -5,11 +5,11 @@
 <title>NOCTA · Parches de hidrocoloide · Poros limpios mientras duermes</title>
 <meta name="description" content="Parches de hidrocoloide coreanos para nariz, barbilla, frente y granos. Absorben la grasa de los poros mientras duermes. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090258">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090303">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <link rel="preload" as="image" href="/assets/img/hero-poster.webp" fetchpriority="high">
-<script src="/assets/js/app.js?v=202609090258" defer></script>
+<script src="/assets/js/app.js?v=202609090303" defer></script>
 </head>
 <body class="n-v5 n-has-hero">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -30,17 +30,16 @@
     <div class="n-bento">
       <div class="n-c n-ed5 n-reveal">
         <img src="/assets/img/editorial-parche.webp" width="1400" height="1875" alt="Parche de nariz NOCTA puesto" loading="lazy" decoding="async">
-        <div class="n-ed5__t"><h2>Esos puntitos no son puntos negros.</h2><p>Son filamentos sebáceos: grasa que se acumula dentro del poro. El hidrocoloide la absorbe desde dentro mientras duermes, sin arrancar nada.</p><a class="n-btn n-btn--inv" href="/no-son-puntos-negros.html" onclick="nTrack('cta_hero',{pos:'editorial'})">Por qué vuelven</a></div>
+        <a class="n-ed5__t" href="/no-son-puntos-negros.html" onclick="nTrack('cta_hero',{pos:'editorial'})"><h2>Esos puntitos no son puntos negros.</h2><p>Son filamentos sebáceos: grasa que se acumula dentro del poro. El hidrocoloide la absorbe desde dentro mientras duermes, sin arrancar nada.</p><span class="n-btn n-btn--inv">Por qué vuelven</span></a>
       </div>
     </div>
   </section>
 
   <section id="metodo">
     <div class="n-sh"><h2>Cómo funciona</h2><a href="/como-usar.html">Guía completa</a></div>
-    <div class="n-bento n-bento--3 n-stagger" style="margin-top:0">
-      <div class="n-c n-vt5 n-vt n-reveal"><video src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 1: colocar el parche"></video><span class="n-vt5__l">01 · Ponlo</span><div class="n-vt5__c"><b>Sobre la nariz seca</b><span>Curva en el puente, alas sobre las aletas.</span></div></div>
-      <div class="n-c n-vt5 n-vt n-reveal"><video src="/assets/video/paso-2.mp4" poster="/assets/img/paso-2.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 2: presionar 20 segundos"></video><span class="n-vt5__l">02 · Presiona</span><div class="n-vt5__c"><b>20 segundos</b><span>El calor activa el adhesivo. Duerme.</span></div></div>
-      <div class="n-c n-vt5 n-vt n-reveal"><video src="/assets/video/paso-3.mp4" poster="/assets/img/paso-3.webp" muted loop playsinline preload="none" data-auto aria-label="Paso 3: retirar por la mañana"></video><span class="n-vt5__l">03 · Retira</span><div class="n-vt5__c"><b>Por la mañana</b><span>Se despega solo. Y mira lo que trae.</span></div></div>
+    <div class="n-c n-vt5 n-vt n-seq n-reveal" id="seq" data-steps='[{"src":"/assets/video/paso-1.mp4","poster":"/assets/img/paso-1.webp","l":"01 · Ponlo","b":"Sobre la nariz seca","s":"Curva en el puente, alas sobre las aletas."},{"src":"/assets/video/paso-2.mp4","poster":"/assets/img/paso-2.webp","l":"02 · Presiona","b":"20 segundos","s":"El calor activa el adhesivo. Duerme."},{"src":"/assets/video/paso-3.mp4","poster":"/assets/img/paso-3.webp","l":"03 · Retira","b":"Por la mañana","s":"Se despega solo. Y mira lo que trae."}]'>
+      <video class="n-seq__v is-live" src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted playsinline preload="none" aria-label="Cómo funciona: ponlo, presiona, retira"></video><video class="n-seq__v" muted playsinline preload="none" aria-hidden="true"></video>
+      <span class="n-vt5__l" id="seq-l">01 · Ponlo</span><div class="n-vt5__c"><b id="seq-b">Sobre la nariz seca</b><span id="seq-s">Curva en el puente, alas sobre las aletas.</span><i class="n-seq__dots" aria-hidden="true"><b class="is-on"></b><b></b><b></b></i></div>
     </div>
   </section>
   <section id="productos">
@@ -123,9 +122,17 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609090258"></script><script src="/api/catalog.js"></script>
-<script src="/assets/js/photos.js?v=202609090258"></script>
+<script src="/assets/js/products.js?v=202609090303"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090303"></script>
 <script>
+/* «Cómo funciona»: los tres pasos en un solo recuadro, uno tras otro, con fundido entre vídeos */
+(function(){const box=document.getElementById('seq');if(!box)return;const steps=JSON.parse(box.dataset.steps);const vs=[...box.querySelectorAll('video')];let i=0,cur=0,on=false;const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const show=k=>{const st=steps[k];document.getElementById('seq-l').textContent=st.l;document.getElementById('seq-b').textContent=st.b;document.getElementById('seq-s').textContent=st.s;[...box.querySelectorAll('.n-seq__dots b')].forEach((d,j)=>d.classList.toggle('is-on',j===k));};
+  const load=(v,k)=>{if(v.dataset.k===String(k))return;v.dataset.k=k;v.src=steps[k].src;v.poster=steps[k].poster;v.load();};
+  const next=()=>{const k=(i+1)%steps.length;const a=vs[cur],b=vs[1-cur];load(b,k);b.currentTime=0;const go=()=>{b.play().catch(()=>{});b.classList.add('is-live');a.classList.remove('is-live');i=k;cur=1-cur;show(k);setTimeout(()=>{a.pause();},600);};if(b.readyState>=2)go();else b.addEventListener('canplay',go,{once:true});};
+  vs.forEach(v=>v.addEventListener('ended',()=>{if(on)next();}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{on=e.isIntersecting;const v=vs[cur];if(on){if(RM){v.controls=true;return;}v.play().catch(()=>{});load(vs[1-cur],(i+1)%steps.length);}else v.pause();}),{threshold:.5});io.observe(box);
+  vs[0].dataset.k='0';})();
 document.addEventListener('DOMContentLoaded',()=>{const P=window.NOCTA_PRODUCTS;
 const h1=document.getElementById('h1');h1.innerHTML=h1.textContent.split(' ').map((w,i)=>`<span style="--i:${i}">${w}</span>`).join(' ');
 const hv=document.getElementById('herovid');if(hv&&!matchMedia('(prefers-reduced-motion:reduce)').matches){hv.hidden=false;}

@@ -572,3 +572,14 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 .n-plb{display:grid;gap:8px}.n-plb__pills{display:flex;flex-wrap:wrap;gap:6px}
 .n-plb__pills button{min-height:38px;padding:0 13px;border-radius:999px;border:1px solid var(--n-line-2);background:transparent;color:var(--n-navy);font:inherit;font-size:12px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .n-plb__pills button.is-on{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
+/* v7.8 · «Cómo funciona» en un solo recuadro: tres vídeos en secuencia con fundido */
+.n-seq{aspect-ratio:4/5;max-height:70vh}.n-seq .n-seq__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .55s var(--n-e)}.n-seq .n-seq__v.is-live{opacity:1}
+.n-seq__dots{display:flex;gap:5px;margin-top:8px}.n-seq__dots b{width:18px;height:3px;border-radius:999px;background:rgba(255,255,255,.4);transition:background .3s}.n-seq__dots b.is-on{background:#fff}
+@media (min-width:900px){.n-seq{aspect-ratio:16/9;max-height:560px}}
+/* v7.8 · editorial «no son puntos negros» en móvil: solo el titular arriba y la nariz justo debajo, caja baja */
+.n-ed5__t{text-decoration:none}
+@media (max-width:899px){
+  .n-ed5{aspect-ratio:16/10}.n-ed5 img,.n-ed5 video{object-position:50% 42%}
+  .n-ed5__t{align-content:start;gap:0;padding:var(--n-s4) var(--n-s4);background:linear-gradient(180deg,rgba(20,33,61,.55) 0%,rgba(20,33,61,.25) 45%,rgba(20,33,61,0) 70%)}
+  .n-ed5__t h2{font-size:24px;max-width:12ch}.n-ed5__t p,.n-ed5__t .n-btn{display:none}
+}
