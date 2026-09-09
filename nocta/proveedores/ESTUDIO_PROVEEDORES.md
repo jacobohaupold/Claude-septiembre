@@ -102,7 +102,20 @@ Para no depender de lo que cada proveedor escribe en su ficha, se ha cruzado cad
 - Keysing es en realidad la tienda nueva de Keysun, un fabricante de Xi'an de 2004 con 200 empleados cuyo negocio principal no es el hidrocoloide. Vale como alternativa, pidiendo la licencia para saber quién factura.
 - Vireo queda como «sin verificar»: solo se usa para comparar precio.
 - Para la reposición, los dos fabricantes reales con producto de nariz en catálogo son J SUN (100+ empleados, 3.000 m², 2014) y Trummed (grupo médico, ISO 13485 y SMETA declarados).
-- Lo que sigue sin poder verse sin sesión en Alibaba: la **tasa de entrega a tiempo** y las **transacciones de los últimos 6 meses** de cada tienda. Alibaba bloquea con un captcha deslizante cualquier segunda consulta automatizada, y su versión móvil devuelve error. Se han obtenido por vías indirectas para Artech (≥ 90 % de envío a tiempo, 38 % de reorden), Ningbo Alps (26 % de reorden, > 630.000 $/año) y Keysing (17–29 % de reorden). Para Lvsenlan, Vireo, J SUN y Vog esos dos datos se leen en 10 segundos abriendo la pestaña «Company profile» con tu cuenta: es la única comprobación que queda en tu tejado, y no cambia el veredicto.
+**Métricas de plataforma de Alibaba (entrega a tiempo, respuesta, reorden), obtenidas por vías indirectas:** Alibaba bloquea con un captcha deslizante con comprobación de huella de navegador cualquier consulta automatizada a los perfiles de empresa (se ha probado con Chromium sin cabeza, con cabeza bajo Xvfb, con la web móvil y con reintentos espaciados: solo la primera consulta de la sesión pasó). Las métricas se han sacado del único perfil renderizado (Lvsenlan) y de las páginas de comparación que Alibaba publica para buscadores, que reproducen los datos de las tiendas.
+
+| Proveedor | Entrega / envío a tiempo | Tiempo y tasa de respuesta | Tasa de reorden | Valoración (reseñas) | Transacciones / ingresos | Fuente |
+|---|---|---|---|---|---|---|
+| Lvsenlan Healthcare (risingland) | No publicada | ≤ 6 h · 95,04 % | No publicada | 5,0 (7) | «Transacciones: -» (sin volumen declarado) | Perfil de Alibaba renderizado el 9-9-2026 |
+| Shaanxi Keysing (keysingchina) | No publicada | No publicada | 17–29 % según ficha | 4,6–4,9 (30 en la ficha de nariz) | No publicada | Páginas de comparación de Alibaba |
+| Ningbo Alps (sophietang) | No publicada | < 3 h | **26 %** | 5,0 (Made-in-China) | **> 630.000 $/año** (Alibaba) | Página de comparación de Alibaba; Made-in-China |
+| Shenzhen Vireo | **100 %** | No publicada | No publicada | 5,0 | No publicada | Página de comparación de Alibaba |
+| Nanjing J SUN | **≥ 87 % de envío a tiempo** | ≤ 4 h | **11 %** | **4,6 (137 reseñas)**; nº 7 en «pimple patches» | No publicada | Página de comparación de Alibaba |
+| Guangzhou Vog | **99,4 %** | ≤ 2 h | No publicada | 4,3 (4) en la ficha | «Ingresos altos» (sin cifra) | Página de comparación de Alibaba |
+| Guangdong Artech | **≥ 90 % de envío a tiempo** | ≤ 2 h | **38 %** | 4,7 (132) | 60.991 uds vendidas | Ficha de producto de Alibaba |
+| GBSA / Catch Me Patch | No publicada | No publicada | No publicada | Verified, 1 año | No publicada | Ficha de producto |
+
+Lectura: J SUN es el único con una base de reseñas grande (137) y un dato de entrega a tiempo modesto (≥ 87 %) pero real; Vog y Vireo publican cifras casi perfectas sobre pocas transacciones; Alps tiene la mejor combinación de reorden (26 %) y volumen (> 630.000 $). Lvsenlan no declara transacciones: lo poco que hay (7 reseñas) es coherente con un distribuidor de 2024. Estos datos cambian mes a mes: antes de pagar, abre la pestaña «Company profile → Business performance» de la tienda con tu cuenta y anota la cifra del día; es un minuto y deja constancia.
 
 ## 4. Corea: calidad y claim, pero no para 1.000 €
 
