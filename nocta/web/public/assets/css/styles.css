@@ -583,3 +583,4 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
   .n-ed5__t{align-content:start;gap:0;padding:var(--n-s4) var(--n-s4);background:linear-gradient(180deg,rgba(20,33,61,.55) 0%,rgba(20,33,61,.25) 45%,rgba(20,33,61,0) 70%)}
   .n-ed5__t h2{font-size:24px;max-width:12ch}.n-ed5__t p,.n-ed5__t .n-btn{display:none}
 }
+@media (max-width:899px){.n-ed5__t .n-btn{display:inline-flex;position:absolute;left:var(--n-s4);bottom:var(--n-s4);min-height:38px;padding:0 14px;font-size:11px}.n-ed5{aspect-ratio:16/11}.n-ed5__t{background:linear-gradient(180deg,rgba(20,33,61,.55) 0%,rgba(20,33,61,.22) 40%,rgba(20,33,61,0) 62%,rgba(20,33,61,0) 78%,rgba(20,33,61,.45) 100%)}}
