@@ -6,6 +6,8 @@ Todo lo que hay en esta carpeta se ha construido a partir de la investigación d
 
 **`NOCTA_DOCUMENTO_MAESTRO.md`** (y su versión maquetada `NOCTA_Documento_Maestro.pdf`, generada con `tools/pdf/`) reúne todo el negocio en un solo documento: investigación de Vue, catálogo y precios, proveedores con contactos/MOQ/precios, costes y márgenes por producto/pack/plan, inversión, economía de cada anuncio (CPA, CVR y ROAS mínimos por producto y por ticket), reglas de kill/escalado, KPIs de la ficha, plan de marketing, legal, operaciones, roadmap y el estado de todo lo pedido.
 
+**`NOCTA_PLAN_BOOTSTRAP.md`** (PDF: `NOCTA_Plan_Bootstrap_100_Anuncios.pdf`) es el plan de arranque con 1.000 € + 500 €/mes: solo parches, proveedores para pedido mínimo, contribución por pack, CPA/CVR mínimos con 500 €/mes, estudio de longevidad de los 4.485 anuncios de Vue, plan de anuncios a 12 meses y reglas por anuncio. **`marketing/catalogo_100_anuncios.md`**: 100 conceptos de anuncio para elegir, con gancho, estructura, evidencia, producción y prioridad.
+
 ## Índice de carpetas
 
 | Carpeta | Qué contiene | Estado |

@@ -1,0 +1,140 @@
+N 4485 con transcripción 3758
+run days: median 15 mean 32.5 p75 40 p90 94
+run 0-3: 828 (18.5%)
+run 4-7: 711 (15.9%)
+run 8-14: 690 (15.4%)
+run 15-30: 899 (20.0%)
+run 31-60: 595 (13.3%)
+run 61-120: 584 (13.0%)
+run 121-9999: 178 (4.0%)
+winners(>=45d) 1035 losers(<=7d, ended) 1341
+
+== por formato
+VIDEO | n=3758 | win 23.2% | lose 29.3% | med 16.0
+IMAGE | n=521 | win 17.3% | lose 32.2% | med 9
+DCO | n=188 | win 33.5% | lose 36.7% | med 18.0
+DPA | n=10 | win 90.0% | lose 0.0% | med 87.5
+CAROUSEL | n=3 | win 0.0% | lose 0.0% | med 17
+
+== por familia
+
+== nº familias combinadas
+0 | n=4485 | win 23.1% | lose 29.9% | med 15
+
+== landing (top)
+hydrocolloid-nose-patches | n=3274 | win 23.8% | lose 28.3% | med 17.0
+all | n=394 | win 6.3% | lose 42.6% | med 8.0
+clear-pore-duo | n=296 | win 26.7% | lose 38.9% | med 23.0
+clear-t-zone-kit | n=152 | win 28.9% | lose 25.7% | med 19.5
+clearing-spot-patches | n=107 | win 41.1% | lose 38.3% | med 40
+patches | n=65 | win 0.0% | lose 23.1% | med 2
+collagen-peel-off-mask | n=42 | win 52.4% | lose 0.0% | med 46.0
+niacinamide-serum | n=37 | win 62.2% | lose 8.1% | med 64
+https://www.superdrug.com/skin/face-skin | n=30 | win 0.0% | lose 0.0% | med 18.0
+
+== duración vídeo
+<15 | n=145 | win 23.4% | lose 38.6% | med 12
+15-30 | n=584 | win 23.8% | lose 28.8% | med 16.0
+30-45 | n=1263 | win 27.4% | lose 27.9% | med 19
+45-60 | n=1137 | win 21.0% | lose 30.6% | med 15
+60-90 | n=569 | win 18.6% | lose 25.3% | med 14
+90+ | n=60 | win 13.3% | lose 55.0% | med 6.5
+
+== tipo de gancho (inicio de la transcripción)
+Other | n=1671 | win 22.5% | lose 30.9% | med 13
+First person story | n=631 | win 19.2% | lose 32.6% | med 12
+If your nose/you… | n=490 | win 22.7% | lose 28.2% | med 17.5
+Not blackheads… | n=253 | win 25.3% | lose 22.9% | med 20
+You/your… | n=193 | win 23.8% | lose 23.3% | med 20
+Question | n=164 | win 34.1% | lose 26.8% | med 22.5
+UGC address | n=126 | win 21.4% | lose 26.2% | med 17.5
+Listicle | n=116 | win 32.8% | lose 24.1% | med 21.0
+Stop/Don't… | n=113 | win 29.2% | lose 27.4% | med 23
+Expert | n=1 | win 0.0% | lose 100.0% | med 1
+
+== TOP 45 anuncios de vídeo más longevos
+#1 run=294 act=False coll=1 clear-pore-duo dur=25s [] :: Thanks for watching!
+#2 run=294 act=False coll=2 clear-pore-duo dur=30s [] :: If this world were mine Hey, Roman numeral seven bay, drop it like it's hot If this world was mine, I'd take your dreams and make them multiply If this world was mine, I'd take your enemies in front of God And shoot through some to that lig
+#3 run=294 act=False coll=1 clear-pore-duo dur=56s [] :: I'm about to show the only two products you need to transform your nose from this to this. Boost with salicylic toner is designed to clear clogged pores and smooth skin. With salicylic acid and glycolic acid it exfoliates, refines texture a
+#4 run=293 act=False coll=3 clear-pore-duo dur=41s [] :: I spent so much money on skincare products until I found this duo. If you're questioning whether to invest in the View Swiss Clearport duo, consider this. I used to use a separate toner, exfoliant and pore strips spending so much money ever
+#5 run=293 act=False coll=1 clear-pore-duo dur=50s [] :: This lazy girl K-beauty routine is selling out fast. Okay, I feel like I shouldn't be saying this online, but I found out that ViewSwiss is basically giving away their Korean-powered poor-perfecting solution in this genius little bundle, an
+#6 run=293 act=False coll=3 clear-pore-duo dur=41s [] :: tried everything for pores and blackheads with no success, here's why this duo is different. I know the frustration of trying product after product for your pores and blackheads with zero results. The view Swiss clear pore duo changed every
+#7 run=293 act=False coll=1 clear-pore-duo dur=36s [] :: I was skeptical until I saw these results, the duo that's changing skin care routines everywhere. You've seen this clear-poor duo in your feed, and there's a reason it keeps selling out. Over 90% of users saw visibly clearer skin in less th
+#8 run=293 act=False coll=3 clear-pore-duo dur=41s [] :: Still thinking about the Vue Swiss clear por duo. Here's your sign to finally try it. 10% extra offense tonight. I get it. You've been on the fence about trying the clear por duo, but here's the thing. Over 90% of users reported visibly cle
+#9 run=292 act=False coll=3 clear-pore-duo dur=36s [] :: The secret to clear pours isn't what you're using. It's what you're missing. Here's the duo that works. Let me guess. You've tried everything for those stubborn clogged pours, but nothing seems to work? That's because you need both steps. E
+#10 run=291 act=False coll=1 hydrocolloid-nose-patches dur=61s [] :: I was ready to do laser for my nose pores until I discovered this one game-changing solution. Ever noticed how your pores seem to get more visible no matter what you try? According to research, harsh treatments and aggressive scrubbing can 
+#11 run=291 act=False coll=1 clear-pore-duo dur=26s [] :: Want smoother skin by morning? Start here. This duo that I use literally minimized my pores in one week. It's a two-step treatment. Step one exfoliates and smooths with salicylic acid, and step two is the nose patch that draws out impuritie
+#12 run=290 act=False coll=1 hydrocolloid-nose-patches dur=27s [] :: This is the consequence of not taking care of my pores the right way. I'll show you what worked for me. Nose patches. They gently dissolve impurities and absorb all the gunk from my pores. My pores were enlarged and clogged because I was tr
+#13 run=290 act=False coll=1 hydrocolloid-nose-patches dur=47s [] :: Poor strips are a scam. Here's what actually works. If you have tried every scrub, cleanser, and poor strip out there in your blackheads, still won't budge. I promise it's not you. Here's what's actually happening. Oil, dirt, dead skin, the
+#14 run=290 act=False coll=2 hydrocolloid-nose-patches dur=19s [] :: Three reasons why you should not buy these patches. First, you will not stop touching your nose after seeing how smooth it is. It becomes a serious obsession for me. Two, you will not recognize your pores anymore, and it will be very, very 
+#15 run=290 act=False coll=1 hydrocolloid-nose-patches dur=10s [] :: This is how I made my nose pores invisible. They are 30% off for a limited time. Go get yours now.
+#16 run=290 act=False coll=1 hydrocolloid-nose-patches dur=40s [] :: Here are three reasons why I love hand patches and one reason why I don't. Number one, they work fast. And when I say fast, I mean you'll see your pores tighten and you're no smooth after just one use. Number two, the patches target sebaceo
+#17 run=290 act=False coll=2 hydrocolloid-nose-patches dur=15s [] :: Embarrassed of makeup looking like this. We got you girl apply nose patches overnight It pulls out all impurities into allowing pools to work properly You'll get smooth glow skin already after two weeks of using them your nose will look cle
+#18 run=290 act=False coll=1 hydrocolloid-nose-patches dur=33s [] :: why Korean skincare is 10 years ahead of European techniques. European skincare focuses on surface cleansing, but Korean beauty experts know the real problem lies deeper. While European products wash away surface oils, these Korean pore pat
+#19 run=290 act=False coll=1 hydrocolloid-nose-patches dur=35s [] :: Still dealing with clogged pores? These three red flags explain why. One, you're seeing blackheads or clogged pores that just won't budge. Two, pores appear larger or more visible over time. Three, your nose looks shiny or feels greasy even
+#20 run=289 act=False coll=1 hydrocolloid-nose-patches dur=34s [] :: Most women think they need to squeeze their pores when they're clogged. That's why we created a gentle patch that removes impurities without damaging your skin. Made in South Korea, the leading country in skincare innovation, we use an excl
+#21 run=289 act=False coll=1 hydrocolloid-nose-patches dur=55s [] :: My skin's a catfish, but I'm about to fix it. I used to edit every single selfie to hide my pores that made my nose look like a strawberry. Nothing worked, not the harsh products, not the expensive treatments, not even professional facials.
+#22 run=289 act=False coll=1 hydrocolloid-nose-patches dur=32s [] :: the Korean innovation changing European skincare. For truly K-Beauty clear skin, the secret lies in what happens while you sleep. That's when your skin naturally repairs and rejuvenates itself, but there's a problem. Your pores are still cl
+#23 run=289 act=False coll=1 hydrocolloid-nose-patches dur=33s [] :: Things Europeans don't know about Korean skincare, part seven. For truly K-Beauty clear skin, the secret lies in what happens while you sleep. That's when your skin naturally repairs and rejuvenates itself, but there's a problem. Your pores
+#24 run=289 act=False coll=1 hydrocolloid-nose-patches dur=35s [] :: Three reasons your pores keep breaking you out. Reason one, most products just sit on the surface of your skin without actively addressing pore congestion. Reason two, harsh ingredients can actually make the problem worse. Reason three, you
+#25 run=287 act=False coll=1 hydrocolloid-nose-patches dur=53s [] :: If your pores look like this or like this, you're not taking care of them properly. Here are three ways to maintain clear pores without damaging your skin. 1. Large pores in blackheads happen when excess oil and dead skin cells get trapped.
+#26 run=254 act=False coll=1 hydrocolloid-nose-patches dur=22s [] :: If you notice blackheads, do not squeeze them. Instead, use one of these. They are hydrocolloid nose patches from Beloved View, Swiss. They absorb impurities using hydrocolloid that gently trap excess oil and sebum to effectively clear your
+#27 run=225 act=False coll=3 hydrocolloid-nose-patches dur=42s [] :: How I went from a strawberry nose to a women's magnet. My pores were so visible I hated looking in the mirror. Nothing worked. Washing my face with water or cleansers didn't do anything. I honestly almost gave up trying to make my pores cle
+#28 run=225 act=False coll=4 hydrocolloid-nose-patches dur=49s [] :: Three things women notice before your height. Warning, it's on your face. Did you know men produce two times more sebum than women? This explains why your nose pores are more visible and prone to oxidation. And this is exactly the problem t
+#29 run=225 act=False coll=14 hydrocolloid-nose-patches dur=14s [] :: It feels so good. Just look at all of this gunk. It's disgusting. These view patches saved my life. My pores are way less visible. You get 100% money back guarantee if you're not satisfied with the results.
+#30 run=224 act=False coll=1 hydrocolloid-nose-patches dur=35s [] :: These are not blackheads. These are tobacco's filaments. First of all, they're completely normal, but they're really hard to remove. So here's the best tip for having a smooth nose always. No filter. Before going to bed, apply the strip and
+#31 run=224 act=False coll=1 hydrocolloid-nose-patches dur=29s [] :: Why is everyone switching to these nose patches? Every time I post my skin, people ask me the same thing. What product are you using? So let me spill the tea. These are view Swiss nose patches. They've been going viral lately and for good r
+#32 run=224 act=False coll=1 hydrocolloid-nose-patches dur=32s [] :: I was today as old when I found out these aren't actually blackheads, they're sebaceous filaments. My pores were a large and clogged because I was treating them as blackheads, kept coming back bigger, more clogged and even giving me acne. B
+#33 run=223 act=False coll=1 hydrocolloid-nose-patches dur=38s [] :: Here's the truth about those black dots on your nose that nobody talks about. Guys, listen up. Those black dots and pores, they're not just dirt. They're oxidized oil trapped deep in your pores. Regular cleansers and face wash, they don't c
+#34 run=223 act=False coll=1 hydrocolloid-nose-patches dur=21s [] :: This is the secret product that helped me transform my nose. Boost with snows patches, unclog your pores by removing dirt and oil and you can literally see it working. Native hydrocolloids gentle on the skin as opposed to traditional pore s
+#35 run=222 act=False coll=2 collagen-peel-off-mask dur=14s [] :: 
+#36 run=222 act=False coll=4 hydrocolloid-nose-patches dur=44s [] :: Si vous voulez des portes d'une éinvisible, vous avez besoin de ça. Laissez-moi vous montrer comment j'ai transformé ma peau, de ça à ça. Ma dermatologue m'a dit que me l'avait le visage, avec du savon ordinaire, n'aider pas mes portes. Sa 
+#37 run=222 act=False coll=4 hydrocolloid-nose-patches dur=65s [] :: Mapeau est un quatre-fiche, mais j'ai enfin trouvé comment la soigner. Avant, je retouchais chaque selfie pour cacher mes ports, monais ressemblait à une fraise. J'ai tout essayé, des produits agressifs, des soins professionnels, même des t
+#38 run=221 act=False coll=1 collagen-peel-off-mask dur=38s [] :: This is Maggie. For years she struggled with uneven dehydrated skin because Maggie has better things to do like yoga, spend time with the love of her life or well literally anything else. So she keeps it easy. At night she washes off the da
+#39 run=221 act=False coll=1 collagen-peel-off-mask dur=45s [] :: I was ready to do laser for a real skin reset until I found this. One game changing solution. Ever notice how your skin seems to lose its glow and texture, no matter what you try? According to research, harsh treatments and aggressive exfol
+#40 run=221 act=False coll=1 collagen-peel-off-mask dur=38s [] :: If you still don't know about the 15-minute Korean glass skin miracle, you're seriously missing out. Here's why. This collagen peel-off mask sits on top of your skin, actively lifting away dead skin cells and impurities, while other masks c
+#41 run=221 act=False coll=1 collagen-peel-off-mask dur=43s [] :: exposed. Skincare industry is 2.5 billion dollar secret. 73% of women are using masks that actually damaged their skin barrier. I read that statistic and laughed. Then I took a closer look at my skin after masking and stopped laughing. The 
+#42 run=221 act=False coll=1 collagen-peel-off-mask dur=40s [] :: When skin barrier is feeling irritated, dry, inflamed with uneven texture, do not irritate your skin any further by using harsh ingredients. Keep your night routine very simple with this Korean collagen peel off mask. This mask is incredibl
+#43 run=220 act=False coll=2 collagen-peel-off-mask dur=38s [] :: You know how your skin looks tired no matter how much you sleep? That's why I'm sitting here with this collagen mask on. This is actually so effortless, all I had to do was apply this collagen mask and let it do the rest. Okay, now that it'
+#44 run=220 act=False coll=8 hydrocolloid-nose-patches dur=41s [] :: These dark spots on your nose aren't blackheads. They're called sebaceous filaments, basically oil plugs that form naturally in your pores. And the reason why nothing you've tried works is because you've been treating them like blackheads, 
+#45 run=214 act=False coll=10 hydrocolloid-nose-patches dur=42s [] :: Most guys over 35 think these are blackheads, they're not. They're called sebaceous filaments. Basically oil plugs that form naturally in your pores. And the reason why nothing you've tried works is because you've been treating them like bl
+
+== 25 vídeos que murieron en ≤5 días
+#1 run=0 hydrocolloid-nose-patches dur=38s :: Here's the truth about those black dots on your nose that nobody talks about. Guys, listen up. Those black dots and pores, they're not just dirt. They're oxidized oil trapped deep in your pores. Regul
+#2 run=0 hydrocolloid-nose-patches dur=49s :: Three things women notice before your height. Warning, it's on your face. Did you know men produce two times more sebum than women? This explains why your nose pores are more visible and prone to oxid
+#3 run=0 clear-pore-duo dur=77s :: Do you also feel tiny dots when you rub your finger across your nose? Kind of like bumpy texture or those stubborn black dots? Yeah, that's actually your pores being clogged. Blogged pores can lead to
+#4 run=0 hydrocolloid-nose-patches dur=73s :: This is actually something that works. Seeing how people write online, how they're like posting their videos of their results, the before and afters, is obviously the best thing in the world. There's 
+#5 run=0 hydrocolloid-nose-patches dur=53s :: You're damaging your skin if you exfoliate every day to get rid of those dark dots on the nose. I was exfoliating every single day, sometimes twice, but those dark dots on my nose always came back mor
+#6 run=0 t-zone-patch-bundle dur=40s :: My mom always puts everyone else first, so this holiday season I'm putting her first for one. This T-zone patch bundle from View is honestly the best gift for moms who say they don't need anything, be
+#7 run=0 hydrocolloid-nose-patches dur=44s :: Most women think these are blackheads. They're not. They're called sebaceous filaments, basically oil plugs that form naturally in your pores. And the reason why nothing you've tried works is because 
+#8 run=0 holiday-patch-bundle dur=42s :: Guys, if she loves skincare, they all do. This holiday gift box is the easiest win of your life. So I'm the type of guy who Google's gifts last minute and still gets rolled. But this year, I found som
+#9 run=0 clear-t-zone-kit dur=23s :: I know you sent me out of my brain and saved my heart from defeated, only failure I'm the one who saved this sky, but you need to see your hands and your teeth, your vibes and care whether you've been
+#10 run=0 hydrocolloid-nose-patches dur=55s :: I was squeezing these dark dots on my nose after every gym session thinking their black heads turns out I was just making it worse. They're called sebaceous filaments, your skin's natural oil channels
+#11 run=0 hydrocolloid-nose-patches dur=61s :: If you're scared of harsh products but hate your dark nose dots, watch this. I get asked this all the time. Isn't it bad to remove all the oil from your nose? Here's the truth. Those dark dots aren't 
+#12 run=0 hydrocolloid-nose-patches dur=62s :: If you're worried that clearing dark nose dots means stripping your skin, you need to hear this. I get asked this all the time. Isn't it bad to remove all the oil from your nose? Here's the truth. Tho
+#13 run=0 hydrocolloid-nose-patches dur=46s :: If you have these tiny dark dots on your nose, they're probably not blackheads. A lot of people think these are blackheads but they're actually called sebaceous filaments. sebaceous filaments are like
+#14 run=0 hydrocolloid-nose-patches dur=42s :: A lot of people think these are blackheads but they're actually called sebaceous filaments. sebaceous filaments are like tiny tubes that help move oil from the deepest layer of your skin up to the sur
+#15 run=0 hydrocolloid-nose-patches dur=64s :: It's wild how much more confident I feel after fixing these dark nose dots. I never thought dark nose dots would mess with my confidence, but they did. I tried everything scrubs, strips, squeezing, wa
+#16 run=0 hydrocolloid-nose-patches dur=52s :: Every time you rip off a pore strip, you're damaging your skin. Here's what that damage actually looks like. But first, those dark spots aren't blackheads. They're oil channels that refill from deep w
+#17 run=0 hydrocolloid-nose-patches dur=71s :: I used to fake clear skin in photos, but here's how I got my confidence back. I used to edit every single selfie to hide the dark dots on my nose. It made my skin look like a strawberry, and nothing w
+#18 run=0 hydrocolloid-nose-patches dur=59s :: Three things, every guy gets wrong about dark-nosed dots. Myth one, they're blackheads. Truth, they're actually sebaceous filament. Tiny oil channels your skin refills every day. Natural part of your 
+#19 run=0 hydrocolloid-nose-patches dur=46s :: Hot-battie routine updated. My nose has never looked like this before. Okay, so my hot-battie routine was missing one thing, and I didn't even know it. Those dark dots on your nose? Not black heads. T
+#20 run=0 hydrocolloid-nose-patches dur=53s :: If your pores look like this or like this, you're not taking care of them properly. Here are three ways to maintain clear pores without damaging your skin. 1. Large pores in blackheads happen when exc
+#21 run=0 hydrocolloid-nose-patches dur=42s :: I accidentally fixed my biggest insecurity. If you see these dots on your nose, it's not dirt, it's not blackheads, it's oil buildup, called sebaceous filaments. That's probably why nothing you've tri
+#22 run=0 hydrocolloid-nose-patches dur=96s :: Okay, wait, look at this one. Same nose, one month apart. What are they doing differently? So they stop scrubbing their nose with these harsh abrasive products and use the nose patch that targets the 
+#23 run=0 hydrocolloid-nose-patches dur=60s :: I found out something the other day about those black dots people have on their nose that is going to blow your mind. What do you mean? They're not blackheads. They're actually called sebaceous filame
+#24 run=0 hydrocolloid-nose-patches dur=57s :: If your nose looks like this, you don't have black heads. You have sebaceous filaments, and having sebaceous filaments means those dots will keep coming back no matter how much you squeeze, scrub, or 
+#25 run=0 hydrocolloid-nose-patches dur=47s :: Do you ever wonder why those dark dots on your nose just keep coming back? Here are three reasons why. First, they're not blackheads. They're actually sebaceous filaments. Think of them as tiny oil ch
+
+== títulos en ganadores vs perdedores
+WIN [('From Oily Nose to Clear Skin', 188), ('Clear Nose Overnight ✨', 77), ('{{product.name}}', 72), ('No More Nose Bumps', 61), ('Clear Pores Overnight', 44), ('One Patch. Real Results.', 24), ('Break the Cycle', 24), ('BLACK FRIDAY SPECIAL 🖤', 22)]
+LOSE [('From Oily Nose to Clear Skin', 93), ('{{product.name}}', 68), ('Clear Nose Overnight ✨', 56), ('Clear Pores Overnight', 52), ('Break the Cycle', 40), ('No More Nose Bumps', 39), ('Cleaner pores, less shine', 36), ('One Patch. Real Results.', 35)]
+
+== coll (nº variantes agrupadas)
+1 | n=3995 | win 20.9% | lose 31.4% | med 14
+2-5 | n=414 | win 36.5% | lose 19.6% | med 19.5
+6-20 | n=76 | win 64.5% | lose 5.3% | med 75.0
+
+== primeras palabras más comunes en ganadores (bigrama inicial)
+[('if your nose', 21), ('', 19), ('most women think', 18), ('these dark spots', 16), ('you have these', 14), ("if you're over", 14), ('this is the', 13), ('if you see', 11), ('if you have', 11), ('every time you', 11), ('did you know', 10), ('stop treating these', 10), ('stop squeezing these', 10), ('if you think', 10), ('if your dark', 10), ('this is how', 9), ('do nose patches', 9), ('i was ready', 8), ('the secret to', 8), ('music', 8), ("i can't believe", 8), ('three reasons why', 7), ("my skin's a", 7), ('here are three', 7), ('still dealing with', 7)]
+LOSE [('if your nose', 37), ('', 24), ('i accidentally fixed', 19), ('music', 14), ('most men squeeze', 12), ('if this world', 11), ("if you're over", 11), ('if you see', 11), ('if your dark', 11), ('most women think', 10), ("if you've been", 10), ('wish someone told', 10), ('this is the', 9), ('these dark spots', 9), ('i thought laser', 9)]
