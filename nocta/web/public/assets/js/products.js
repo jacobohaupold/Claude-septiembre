@@ -156,7 +156,7 @@ window.NOCTA_PRODUCTS = [
     upsell: ["exfoliante-salicilico", "serum-niacinamida"]
   },
   {
-    slug: "plan-mensual", sku: "NC-PLAN-M", name: "Plan Noche mensual", short: "3 productos cada mes, envío gratis", plan: { interval: "month", label: "al mes", every: "cada mes", per: "mes", builder: { patch: [0, 16, 28, 39], skincare: 21 } },
+    slug: "plan-mensual", sku: "NC-PLAN-M", name: "Plan Noche mensual", short: "3 productos cada mes, envío gratis", plan: { interval: "month", label: "al mes", every: "cada mes", per: "mes", builder: { patch: [0, 16, 28, 39, 49], skincare: 21 } },
     bundle: ["parches-nariz", "parches-frente", "exfoliante-salicilico"],
     price: 49, compare: 65.9, sub: 49, units: "Cada mes", badge: "A TU MEDIDA", rating: 4.9, reviews: 38, gift: "Mascarilla de tela de regalo en tu primer envío",
     image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/parches-nariz.jpg", "/assets/img/exfoliante.jpg"], tags: ["plan", "bundle"],

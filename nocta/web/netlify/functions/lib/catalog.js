@@ -73,5 +73,5 @@ export function planPrice(p, opt) {
   const parts = String(opt || 'Nariz + Frente · Exfoliante').split(' · ');
   const zones = parts[0].split(' + ').map(x => x.trim()).filter(x => ['Nariz', 'Frente', 'Barbilla', 'Granos'].includes(x));
   const skin = ['Exfoliante', 'Sérum', 'Tónico'].includes((parts[1] || '').trim());
-  return Number(p.builder.patch[Math.min(3, Math.max(1, zones.length))]) + (skin ? Number(p.builder.skincare) : 0);
+  const t = p.builder.patch; return Number(t[Math.min(t.length - 1, Math.max(1, zones.length))]) + (skin ? Number(p.builder.skincare) : 0);
 }

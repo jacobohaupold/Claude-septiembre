@@ -101,7 +101,7 @@
             { k: 'ah', label: 'Ahorro cliente', cls: 'right num', render: r => r.p.compare ? A.money(r.p.compare - r.p.price) : '—' }
           ], rows: items, empty: 'Sin productos.'
         }))}
-        ${A.card('Plan Noche · combinaciones (1-3 zonas, con/sin skincare)', planNocheHtml())}
+        ${A.card('Plan Noche · combinaciones (1-4 zonas, con/sin skincare)', planNocheHtml())}
         ${A.card('Plan Semanal', planSemanalHtml())}
         <p class="xs muted mt">El coste es un dato interno: el servidor lo filtra siempre y nunca se publica en la web.</p>`;
       attach();
@@ -116,7 +116,7 @@
       const skinCosts = PLAN_SKIN.map(s => costOf(s[1])).filter(c => c != null);
       const avgSkin = skinCosts.length ? skinCosts.reduce((a, c) => a + c, 0) / skinCosts.length : null;
       const rows = [];
-      [1, 2, 3].forEach(n => [false, true].forEach(skin => {
+      [1, 2, 3, 4].forEach(n => [false, true].forEach(skin => {
         const price = Number(b.patch[n] || 0) + (skin ? Number(b.skincare || 0) : 0);
         const cost = avgPatch == null || (skin && avgSkin == null) ? null : avgPatch * n + (skin ? avgSkin : 0);
         rows.push({ n, skin, price, cost, m: fmtMargin(price, cost) });
@@ -231,7 +231,7 @@
     const planM = products.find(p => p.slug === 'plan-mensual');
     const planS = products.find(p => p.slug === 'plan-semanal');
     if (!planM || !planM.plan || !planS) { body.innerHTML = '<div class="card"><p class="err">No se encuentran los productos del Plan Noche (plan-mensual) o del Plan Semanal (plan-semanal) en el catálogo.</p></div>'; return; }
-    const builder = planM.plan.builder || { patch: [0, 16, 28, 39], skincare: 21 };
+    const builder = planM.plan.builder || { patch: [0, 16, 28, 39, 49], skincare: 21 };
     const shipping = { base: 3.9, freeFrom: 30, ...(((contentRes.rows || []).find(r => r.key === 'shipping') || {}).value || {}) };
 
     body.innerHTML = '<div id="pn"></div><div id="ps" class="mt"></div><div id="prev" class="mt"></div>';
@@ -243,8 +243,9 @@
       { k: 'p1', label: 'Precio con 1 zona (€/mes)', type: 'number', step: '0.01', min: 0, required: true },
       { k: 'p2', label: 'Precio con 2 zonas (€/mes)', type: 'number', step: '0.01', min: 0, required: true },
       { k: 'p3', label: 'Precio con 3 zonas (€/mes)', type: 'number', step: '0.01', min: 0, required: true },
+      { k: 'p4', label: 'Precio con 4 zonas (€/mes)', type: 'number', step: '0.01', min: 0, required: true },
       { k: 'skincare', label: 'Extra por añadir skincare (€/mes)', type: 'number', step: '0.01', min: 0, required: true }
-    ], { p1: builder.patch[1], p2: builder.patch[2], p3: builder.patch[3], skincare: builder.skincare });
+    ], { p1: builder.patch[1], p2: builder.patch[2], p3: builder.patch[3], p4: builder.patch[4] != null ? builder.patch[4] : 49, skincare: builder.skincare });
     $('.card', pnWrap).appendChild(pf);
     const pnBtn = document.createElement('button'); pnBtn.className = 'btn btn--p btn--w mt'; pnBtn.type = 'button'; pnBtn.textContent = 'Guardar Plan Noche';
     pf.appendChild(pnBtn);
@@ -267,7 +268,7 @@
       let pv, sv; try { pv = A.read(pf); sv = A.read(sf); } catch (e) { return; }
       const ref = refPrices();
       const rowsN = [];
-      [1, 2, 3].forEach(n => [false, true].forEach(skin => {
+      [1, 2, 3, 4].forEach(n => [false, true].forEach(skin => {
         const key = n === 1 ? 'p1' : n === 2 ? 'p2' : 'p3';
         const price = (Number(pv[key]) || 0) + (skin ? (Number(pv.skincare) || 0) : 0);
         let retail = ref.patch * n + (skin ? ref.skin : 0);
@@ -276,7 +277,7 @@
       }));
       const wPrice = Number(sv.price) || 0;
       let wRetail = ref.patch; if (wRetail < shipping.freeFrom) wRetail += shipping.base;
-      prevWrap.innerHTML = A.card('Vista previa · Plan Noche (8 combinaciones)', A.table({
+      prevWrap.innerHTML = A.card('Vista previa · Plan Noche (10 combinaciones)', A.table({
         cols: [
           { k: 'z', label: 'Zonas', render: r => r.n + (r.n === 1 ? ' zona' : ' zonas') },
           { k: 's', label: 'Skincare', render: r => r.skin ? 'Con skincare' : 'Sin skincare' },
@@ -298,7 +299,7 @@
         const dbRow = overridesMap['plan-mensual'];
         const baseOv = (dbRow && dbRow.overrides) || {};
         const planBase = (A.product('plan-mensual') || {}).plan || planM.plan || {};
-        const overrides = { ...baseOv, plan: { ...planBase, builder: { patch: [0, Number(v.p1) || 0, Number(v.p2) || 0, Number(v.p3) || 0], skincare: Number(v.skincare) || 0 } } };
+        const overrides = { ...baseOv, plan: { ...planBase, builder: { patch: [0, Number(v.p1) || 0, Number(v.p2) || 0, Number(v.p3) || 0, Number(v.p4) || 0], skincare: Number(v.skincare) || 0 } } };
         const active = dbRow ? dbRow.active !== false : true;
         const stock = dbRow && dbRow.stock != null ? dbRow.stock : null;
         pnBtn.disabled = true;
