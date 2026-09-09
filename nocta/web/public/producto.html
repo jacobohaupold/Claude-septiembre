@@ -5,12 +5,12 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609081753">
-<link rel="stylesheet" href="/assets/css/pdp.css?v=202609081753">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090235">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=202609090235">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609081753" defer></script>
+<script src="/assets/js/app.js?v=202609090235" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -18,9 +18,9 @@
 <div class="n-bbar n-bbar--pdp" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar</button><div class="n-bbar__pay" id="st-express"></div></div></div>
 <div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609081753"></script>
-<script src="/assets/js/reviews.js?v=202609081753"></script>
-<script src="/assets/js/products.js?v=202609081753"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090235"></script>
+<script src="/assets/js/reviews.js?v=202609090235"></script>
+<script src="/assets/js/products.js?v=202609090235"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
@@ -66,7 +66,7 @@ const panel=`<div class="n-c n-pd__panel">
 ${isPlan?'':`<fieldset class="n-tiers" aria-label="Cantidad"><legend class="n-vh">Cantidad</legend>${tier(1)}${tier(2,'Lo más elegido')}${tier(3)}</fieldset>
 <p class="n-pd__tiernote">${isPack?'Desde 2 unidades el envío es gratis.':'Desde 2 unidades el envío es gratis. Lo más elegido: 2.'}</p>`}
 <div class="n-pd__qtyrow"${isPlan?' hidden':''}><span class="n-lab">Cantidad</span><div class="n-qty" aria-label="Cantidad"><button type="button" id="qm" aria-label="Menos">${nIco('minus',16)}</button><span id="qv" class="n-num">1</span><button type="button" id="qp" aria-label="Más">${nIco('plus',16)}</button></div></div>
-<div class="n-buy" data-bbar-anchor><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">${isPlan?'Empezar':'Comprar ahora'} · <span id="addprice" class="n-num">${eur(p.price)}${isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
+<div class="n-buy" data-bbar-anchor><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">${isPlan?'Empezar':'Comprar<span class="n-pd__ahora"> ahora</span>'} · <span id="addprice" class="n-num">${eur(p.price)}${isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
 ${isPlan?zoneHtml:`<div class="n-pd__seg" role="radiogroup" aria-label="Modo de compra"><label class="is-on"><input type="radio" name="mode" value="one" checked><b>Compra única</b><span class="n-num">${eur(p.price)}</span></label><label><input type="radio" name="mode" value="sub"><b>Suscripción −15 %</b><span class="n-num">${eur(p.sub)}</span></label></div>
 <p class="n-pd__segnote" id="segnote">Sin compromiso. Puedes pasarte a suscripción cuando quieras.</p>`}
 <div class="n-pd__chips" aria-label="Garantías">${chips.map(c=>`<span>${c[0]}${c[1]}</span>`).join('')}</div>
