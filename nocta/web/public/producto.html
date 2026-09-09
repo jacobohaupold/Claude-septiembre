@@ -5,12 +5,12 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090251">
-<link rel="stylesheet" href="/assets/css/pdp.css?v=202609090251">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090258">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=202609090258">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609090251" defer></script>
+<script src="/assets/js/app.js?v=202609090258" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -18,9 +18,9 @@
 <div class="n-bbar n-bbar--pdp" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar</button><div class="n-bbar__pay" id="st-express"></div></div></div>
 <div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609090251"></script>
-<script src="/assets/js/reviews.js?v=202609090251"></script>
-<script src="/assets/js/products.js?v=202609090251"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090258"></script>
+<script src="/assets/js/reviews.js?v=202609090258"></script>
+<script src="/assets/js/products.js?v=202609090258"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
@@ -55,7 +55,7 @@ const incBlock=()=>{const comps=p.bundle.map(nBySlug).filter(Boolean);const sum=
   return `<div class="n-c n-pd-pk n-reveal"><div class="n-pd-pk__h"><span class="n-lab n-lab--navy">${isPlan?'Qué llega':'Qué incluye'}</span>${!isPlan&&sum>p.price?`<span class="n-pd__save">Ahorras ${eur(sum-p.price)}</span>`:''}</div><ul class="n-pd-pk__list">${comps.map(c=>`<li><img src="${foto(c)}" width="88" height="88" alt="" loading="lazy"><span><b>${c.name}</b><small>${c.units}${isPlan&&c.slug!=='exfoliante-salicilico'?' · zona a elegir':''}${isPlan&&c.slug==='exfoliante-salicilico'?' · skincare en rotación':''}</small></span><s class="n-num">${eur(c.price)}</s></li>`).join('')}${p.gift?`<li class="gift"><span class="n-pd-pk__gi">${I.gift}</span><span><b>${p.gift}</b><small>Incluido</small></span><s class="n-num">${p.slug==='kit-cara-completa'?'15,00 €':'3,75 €'}</s></li>`:''}</ul><p class="n-pd-pk__p"><b class="n-num">${eur(p.price)}${nPlanSuf(p)}</b>${sum>p.price?`<s class="n-num">${eur(sum)}</s>`:''}<span>Envío gratis incluido</span></p></div>`;};
 const planPromo=(isPlan||isPack||!p.tags.includes('parches'))?'':`<a class="n-c n-pd-plan n-reveal" href="/planes.html"><span class="n-pd-plan__t"><span class="n-lab">Plan Noche · 49 €/mes</span><b>Dos cajas de parches y un skincare cada mes, envío gratis y sin permanencia.</b></span><span class="n-pd-plan__c">${I.chevR}</span></a>`;
 const ZONES=[['Nariz','parches-nariz'],['Frente','parches-frente'],['Barbilla','parches-barbilla'],['Granos','parches-granos']];
-const zoneHtml=isPlan?`<div class="n-pd__zones" id="zones"><span class="n-lab">${p.plan.interval==='week'?'Zona de esta semana':'Zonas del primer mes (elige dos)'}</span><div class="n-pd__pills" role="group">${ZONES.map(([z],i)=>`<button type="button" data-z="${z}" class="${(p.plan.interval==='week'?i===0:i<2)?'is-on':''}" aria-pressed="${(p.plan.interval==='week'?i===0:i<2)}">${z}</button>`).join('')}</div><p class="n-pd__segnote">Se cobra hoy el primer envío y después ${p.plan.every}. Cambia de zona, pausa o cancela desde el email de cada envío.</p></div>`:'';
+const zoneHtml=isPlan?`<div class="n-pd__zones" id="zones"></div><p class="n-pd__segnote">Se cobra hoy el primer envío y después ${p.plan.every}. Cambia zonas, pausa o cancela desde el email de cada envío.</p>`:'';
 const panel=`<div class="n-c n-pd__panel">
 <div class="n-pd__head">
 <div class="n-pd__meta"><span>${nCat(p)}</span><a href="#opiniones">${nStarsHtml(p)}<b class="n-num">${String(p.rating).replace('.',',')}</b> · ${p.reviews}</a></div>
@@ -115,9 +115,10 @@ const upd=()=>{const u=isPlan?p.price:(sub?p.sub:p.price);setT('#qv',qty);docume
 document.querySelectorAll('input[name=qty]').forEach(r=>r.onchange=()=>{qty=+r.value;upd();nTrack('select_qty',{slug,qty});});
 if($('#qm')){$('#qm').onclick=()=>{qty=Math.max(1,qty-1);upd();};$('#qp').onclick=()=>{qty=Math.min(10,qty+1);upd();};}
 document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=()=>{sub=r.value==='sub';document.querySelectorAll('.n-pd__seg label').forEach(o=>o.classList.toggle('is-on',o.contains(r)));upd();nTrack('select_mode',{slug,sub});});
-if(isPlan){const sel=()=>[...document.querySelectorAll('#zones button.is-on')].map(b=>b.dataset.z).join(' + ');const applyOpt=()=>{const o=sel();document.querySelectorAll('#addbtn,#pdpexpress,#addcart,#st-add,#st-express .n-pay').forEach(b=>{b.dataset.opt=o;});};
-  document.querySelectorAll('#zones button').forEach(b=>b.addEventListener('click',()=>{const on=[...document.querySelectorAll('#zones button.is-on')];if(p.plan.interval==='week'){on.forEach(x=>{x.classList.remove('is-on');x.setAttribute('aria-pressed','false');});b.classList.add('is-on');b.setAttribute('aria-pressed','true');}else{if(b.classList.contains('is-on')){if(on.length>1){b.classList.remove('is-on');b.setAttribute('aria-pressed','false');}}else{if(on.length>=2){on[0].classList.remove('is-on');on[0].setAttribute('aria-pressed','false');}b.classList.add('is-on');b.setAttribute('aria-pressed','true');}}applyOpt();nTrack('plan_zone',{plan:slug,z:sel()});}));
-  setTimeout(applyOpt,0);}
+if(isPlan){const zbox=document.getElementById('zones');const applyPlan=st=>{document.querySelectorAll('#addbtn,#pdpexpress,#addcart,#st-add,#st-express .n-pay').forEach(b=>{b.dataset.opt=st.opt;});p.price=st.price;if(st.retail)p.compare=st.retail;upd();const pr=document.querySelector('.n-pd__price');if(pr){const sv=pr.querySelector('s');const sa=pr.querySelector('.n-pd__save');if(sv)sv.textContent=eur(st.retail);if(sa)sa.textContent='Ahorras '+eur(st.save);}
+    const inc=document.querySelector('.n-pd-pk__list');if(inc){inc.innerHTML=st.slugs.map(sl=>{const c=nBySlug(sl);return c?`<li><img src="${foto(c)}" width="88" height="88" alt="" loading="lazy"><span><b>${c.name}</b><small>${c.units}${c.tags.includes('skincare')?' · skincare del mes':' · cada mes'}</small></span><s class="n-num">${eur(c.price)}</s></li>`:'';}).join('')+(p.gift?`<li class="gift"><span class="n-pd-pk__gi">${I.gift}</span><span><b>${p.gift}</b><small>Incluido</small></span><s class="n-num">3,75 €</s></li>`:'');}
+    const pp=document.querySelector('.n-pd-pk__p');if(pp)pp.innerHTML=`<b class="n-num">${eur(st.price)}${nPlanSuf(p)}</b>${st.retail>st.price?`<s class="n-num">${eur(st.retail)}</s><span class="n-pd__save">Ahorras ${eur(st.save)}</span>`:''}`;};
+  const bld=nPlanBuilder(zbox,p,{opt:p.plan.interval==='week'?'Nariz':undefined,onChange:applyPlan});setTimeout(()=>applyPlan(bld.state),0);}
 const pc=$('.n-pd__packchip');if(pc)pc.onclick=e=>{e.preventDefault();const t=$('#pdpacks');if(t){t.scrollIntoView({behavior:'smooth',block:'center'});nTrack('packchip',{slug});}};
 $('#st-name').textContent=p.name;$('#st-img').src=nImg(p);$('#st-add').dataset.buy=slug;$('#st-express').innerHTML=nPay(slug,{src:'sticky'});upd();
 const addc=$('#addcart');addc.addEventListener('click',()=>{const t=addc.textContent;addc.innerHTML=`${I.check} Añadido al carrito`;addc.classList.add('n-pd__ok');setTimeout(()=>{addc.textContent=t;addc.classList.remove('n-pd__ok');},1600);});

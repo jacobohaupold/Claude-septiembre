@@ -1,7 +1,7 @@
 // POST /api/checkout → crea el pedido (Supabase) y la sesión de Stripe Checkout (tarjeta, Apple Pay, Google Pay, Bizum, Klarna, PayPal
 // según los métodos activos en tu panel de Stripe). Sin clave de Stripe: modo demo (registra el pedido y va a /gracias).
 import { db, dbOk, now, esc } from './lib/db.js';
-import { serverProducts, getDiscount, discountAmount } from './lib/catalog.js';
+import { serverProducts, getDiscount, discountAmount, planPrice } from './lib/catalog.js';
 import { stripe, stripeConfig } from './lib/stripe.js';
 import { json } from './lib/auth.js';
 
@@ -11,7 +11,7 @@ export default async (req) => {
   const { products: PRODUCTS, shipping: SHIPPING } = await serverProducts();
   const items = (body.items || []).map(i => { const p = PRODUCTS[i.slug]; if (!p) return null; if (p.stock != null && p.stock <= 0) return null;
     const opt = String(i.opt || '').replace(/[^\p{L}\p{N} +·,.-]/gu, '').slice(0, 40);
-    return { slug: p.slug, name: p.name + (opt ? ' · ' + opt : ''), opt, qty: p.plan ? 1 : Math.max(1, Math.min(10, Number(i.qty) || 1)), unit: p.plan ? p.price : (i.sub ? p.sub : p.price), sub: !p.plan && !!i.sub, plan: p.plan || null, image: p.image || null }; }).filter(Boolean);
+    return { slug: p.slug, name: p.name + (opt ? ' · ' + opt : ''), opt, qty: p.plan ? 1 : Math.max(1, Math.min(10, Number(i.qty) || 1)), unit: p.plan ? planPrice(p, opt) : (i.sub ? p.sub : p.price), sub: !p.plan && !!i.sub, plan: p.plan || null, image: p.image || null }; }).filter(Boolean);
   if (!items.length) return json({ error: 'empty' }, 400);
   const recurring = items.some(i => i.plan || i.sub);
   const subtotal = +items.reduce((a, i) => a + i.unit * i.qty, 0).toFixed(2);

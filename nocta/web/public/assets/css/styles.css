@@ -568,3 +568,7 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 @media (min-width:900px){.n-rail--mini>*{flex-basis:calc((100% - var(--n-gap)*4)/5)}.n-tops__lab{padding:22px 8px 10px}.n-pm{padding:10px 10px 12px;gap:8px}.n-pm__i b{font-size:13.5px}.n-pm__i .n-num{font-size:15px}}
 @media (max-width:399px){.n-rail--mini>*{flex-basis:58%}}
 @media (min-width:900px){.n-pm__w{aspect-ratio:1}}
+/* v7.7 · constructor de plan (zonas + skincare), compartido por planes y ficha */
+.n-plb{display:grid;gap:8px}.n-plb__pills{display:flex;flex-wrap:wrap;gap:6px}
+.n-plb__pills button{min-height:38px;padding:0 13px;border-radius:999px;border:1px solid var(--n-line-2);background:transparent;color:var(--n-navy);font:inherit;font-size:12px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.n-plb__pills button.is-on{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}

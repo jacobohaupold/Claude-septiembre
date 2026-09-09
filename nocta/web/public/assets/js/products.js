@@ -156,9 +156,9 @@ window.NOCTA_PRODUCTS = [
     upsell: ["exfoliante-salicilico", "serum-niacinamida"]
   },
   {
-    slug: "plan-mensual", sku: "NC-PLAN-M", name: "Plan Noche mensual", short: "3 productos cada mes, envío gratis", plan: { interval: "month", label: "al mes", every: "cada mes", per: "mes" },
+    slug: "plan-mensual", sku: "NC-PLAN-M", name: "Plan Noche mensual", short: "3 productos cada mes, envío gratis", plan: { interval: "month", label: "al mes", every: "cada mes", per: "mes", builder: { patch: [0, 16, 28, 39], skincare: 21 } },
     bundle: ["parches-nariz", "parches-frente", "exfoliante-salicilico"],
-    price: 49, compare: 65.9, sub: 49, units: "3 productos al mes", badge: "AHORRA 26 %", rating: 4.9, reviews: 38, gift: "Mascarilla de tela de regalo en tu primer envío",
+    price: 49, compare: 65.9, sub: 49, units: "Cada mes", badge: "A TU MEDIDA", rating: 4.9, reviews: 38, gift: "Mascarilla de tela de regalo en tu primer envío",
     image: "/assets/img/gama.jpg", gallery: ["/assets/img/gama.jpg", "/assets/img/parches-nariz.jpg", "/assets/img/exfoliante.jpg"], tags: ["plan", "bundle"],
     desc: "Tu rutina de poros completa, en casa cada mes sin pensar en nada: dos cajas de parches de las zonas que elijas y un producto de skincare para poros (rotamos exfoliante, sérum y tónico). Envío gratis siempre y precio bloqueado. Cancela, pausa o cambia de zonas desde el email de cada envío.",
     bullets: ["2 cajas de parches al mes: eliges las zonas (nariz, frente, barbilla, granos)", "1 skincare para poros cada mes: Exfoliante Salicílico, Sérum Niacinamida o Tónico, en rotación", "Envío gratis, regalo el primer mes y precio bloqueado mientras sigas", "Cancela o pausa cuando quieras, sin permanencia"],

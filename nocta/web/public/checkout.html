@@ -6,10 +6,10 @@
 <title>Finalizar compra · NOCTA</title>
 <meta name="description" content="Finaliza tu pedido NOCTA: datos de envío y pago seguro con tarjeta, Bizum, Klarna o PayPal.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090251">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090258">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609090251" defer></script>
+<script src="/assets/js/app.js?v=202609090258" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -82,14 +82,14 @@
 </div>
 
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609090251"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/products.js?v=202609090258"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 document.getElementById('checktrust').innerHTML=nTrust();
 document.getElementById('expresspay').innerHTML=nPay(null,{cart:true,src:'checkout'});
 const render=()=>{
   const t=nCart.totals();
-  document.getElementById('sum').innerHTML=t.items.map(i=>{const p=nBySlug(i.slug);const u=p.plan?p.price:(i.sub?p.sub:p.price);return `<div class="n-line"><div class="n-cut"><img src="${nImg(p)}" width="64" height="64" alt="" loading="lazy"></div><div class="n-line__t"><b>${p.name}${i.opt?' · '+i.opt:''}${p.plan?' <span class="n-lab">'+p.plan.every+'</span>':''}</b><small>${i.qty} × ${nEur(u)}${i.sub?' · Suscripción':''}</small></div><div class="n-line__p"><b class="n-num">${nEur(u*i.qty)}</b></div></div>`;}).join('')
+  document.getElementById('sum').innerHTML=t.items.map(i=>{const p=nBySlug(i.slug);const u=p.plan?nPlanCalc(p,i.opt).price:(i.sub?p.sub:p.price);return `<div class="n-line"><div class="n-cut"><img src="${nImg(p)}" width="64" height="64" alt="" loading="lazy"></div><div class="n-line__t"><b>${p.name}${i.opt?' · '+i.opt:''}${p.plan?' <span class="n-lab">'+p.plan.every+'</span>':''}</b><small>${i.qty} × ${nEur(u)}${i.sub?' · Suscripción':''}</small></div><div class="n-line__p"><b class="n-num">${nEur(u*i.qty)}</b></div></div>`;}).join('')
     +t.gifts.map(g=>`<div class="n-line n-line--gift"><div class="n-line__t"><span class="n-lab n-lab--navy">Regalo</span><b>${g.label}</b></div><b class="n-num">0,00 €</b></div>`).join('');
   document.getElementById('sumtot').innerHTML=`<div class="n-sums"><div><span>Subtotal</span><span class="n-num">${nEur(t.sub)}</span></div>${t.dAmt?`<div class="ok"><span>Código ${t.disc.code}</span><span class="n-num">−${nEur(t.dAmt)}</span></div>`:''}<div><span>Envío</span><span class="n-num">${t.ship?nEur(t.ship):'Gratis'}</span></div></div><div class="n-tot"><span>Total</span><span class="n-num">${nEur(t.total)}</span></div>`;
   document.getElementById('sumfoldtot').textContent=nEur(t.total);
@@ -97,7 +97,7 @@ const render=()=>{
   const next=window.NOCTA_GIFTS.find(g=>t.sub-t.dAmt<g.threshold);
   document.getElementById('giftmsg').textContent=next?`Añade ${nEur(next.threshold-(t.sub-t.dAmt))} más y consigue: ${next.label}`:'Todos los regalos desbloqueados';
   const sub=document.getElementById('subnotice');const planItems=t.items.filter(i=>nBySlug(i.slug).plan);const subItems=t.items.filter(i=>i.sub&&!nBySlug(i.slug).plan);
-  if(planItems.length){sub.textContent=planItems.map(i=>{const p=nBySlug(i.slug);return `${p.name}: ${nEur(p.price)} ${p.plan.every}`;}).join(' · ')+'. Hoy se cobra el primer envío; después, el mismo día de cada periodo. Cancela o pausa desde el email de cada envío. Solo tarjeta en planes.';sub.hidden=false;}else
+  if(planItems.length){sub.textContent=planItems.map(i=>{const p=nBySlug(i.slug);return `${p.name} (${i.opt||''}): ${nEur(nPlanCalc(p,i.opt).price)} ${p.plan.every}`;}).join(' · ')+'. Hoy se cobra el primer envío; después, el mismo día de cada periodo. Cancela o pausa desde el email de cada envío. Solo tarjeta en planes.';sub.hidden=false;}else
   if(subItems.length){const subTotal=subItems.reduce((a,i)=>a+nBySlug(i.slug).sub*i.qty,0);sub.textContent=`Se te cobrarán ${nEur(subTotal)} cada 30, 45 o 60 días hasta que canceles. Puedes cancelar o saltar un envío desde el email de cada pedido.`;sub.hidden=false;}else{sub.hidden=true;}
   document.getElementById('paybtn').disabled=!t.items.length;
 };

@@ -73,3 +73,6 @@
 }
 
 .n-pl--m .n-pl__box figcaption{color:rgba(243,239,230,.82)}
+/* v7.7 · plan personalizado: producto entero en su caja y píldoras de zonas/skincare */
+.n-pl__box img{object-fit:contain;background:#F4F0E8}
+.n-pl--m .n-plb__pills button{border-color:rgba(243,239,230,.35);color:var(--n-cream)}.n-pl--m .n-plb__pills button.is-on{background:var(--n-cream);color:var(--n-navy);border-color:var(--n-cream)}

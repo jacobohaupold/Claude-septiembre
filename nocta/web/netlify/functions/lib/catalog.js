@@ -32,7 +32,7 @@ export async function getCatalog(fresh = false) {
 export async function serverProducts() {
   const c = await getCatalog();
   const map = {};
-  c.products.forEach(p => { if (p.active !== false) map[p.slug] = { slug: p.slug, name: p.name, price: Number(p.price), sub: Number(p.sub || p.price), plan: p.plan ? p.plan.interval : null, units: p.units, image: p.image, stock: p.stock, bundle: p.bundle || null }; });
+  c.products.forEach(p => { if (p.active !== false) map[p.slug] = { slug: p.slug, name: p.name, price: Number(p.price), sub: Number(p.sub || p.price), plan: p.plan ? p.plan.interval : null, builder: p.plan && p.plan.builder || null, units: p.units, image: p.image, stock: p.stock, bundle: p.bundle || null }; });
   const ex = map['exfoliante-salicilico'];
   if (ex) map['upsell-exfoliante'] = { slug: 'exfoliante-salicilico', name: ex.name + ' (oferta post-compra −30 %)', price: +(ex.price * 0.7).toFixed(2), sub: +(ex.price * 0.7).toFixed(2), plan: null, image: ex.image };
   return { products: map, shipping: c.shipping, gifts: c.gifts, content: c.content };
@@ -56,4 +56,13 @@ export async function getDiscount(code, subtotal = 0) {
 export function discountAmount(d, subtotal) {
   if (!d || d.error) return 0;
   return +(d.type === 'pct' ? subtotal * d.value / 100 : Math.min(subtotal, d.value)).toFixed(2);
+}
+
+// Precio de un plan personalizado a partir de su opt («Nariz + Frente · Exfoliante»). Misma tabla que el front (plan.builder).
+export function planPrice(p, opt) {
+  if (!p || !p.plan || !p.builder) return p ? Number(p.price) : 0;
+  const parts = String(opt || 'Nariz + Frente · Exfoliante').split(' · ');
+  const zones = parts[0].split(' + ').map(x => x.trim()).filter(x => ['Nariz', 'Frente', 'Barbilla', 'Granos'].includes(x));
+  const skin = ['Exfoliante', 'Sérum', 'Tónico'].includes((parts[1] || '').trim());
+  return Number(p.builder.patch[Math.min(3, Math.max(1, zones.length))]) + (skin ? Number(p.builder.skincare) : 0);
 }

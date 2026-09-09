@@ -5,11 +5,11 @@
 <title>Planes NOCTA · Tu rutina en casa cada mes o cada semana</title>
 <meta name="description" content="Plan Noche mensual (49 €/mes, 3 productos, envío gratis) y Plan Semanal (14,90 €/semana, una caja de parches cada 7 días). Sin permanencia: pausa o cancela desde el email de cada envío.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090251">
-<link rel="stylesheet" href="/assets/css/planes.css?v=202609090251">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090258">
+<link rel="stylesheet" href="/assets/css/planes.css?v=202609090258">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609090251" defer></script>
+<script src="/assets/js/app.js?v=202609090258" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -25,34 +25,29 @@
 <section class="n-bento n-bento--2 n-pl-grid" id="planes">
   <article class="n-c n-pl n-pl--m n-reveal" data-slug="plan-mensual">
     <div class="n-pl__top"><span class="n-lab n-lab--navy">Plan Noche · mensual</span><span class="n-pl__badge">Lo más completo</span></div>
-    <p class="n-pl__price"><b class="n-num">49 €</b><span>al mes</span><s class="n-num">hasta 65,90 €</s></p>
-    <p class="n-pl__lead">Tu rutina de poros completa cada mes: dos cajas de parches de las zonas que elijas y un skincare para poros.</p>
-    <div class="n-pl__box" aria-label="Qué llega cada mes">
+    <p class="n-pl__price" id="price-m"><b class="n-num">49 €</b><span>al mes</span><s class="n-num">hasta 65,90 €</s></p>
+    <p class="n-pl__lead" id="lead-m">Tu rutina de poros completa cada mes: dos cajas de parches de las zonas que elijas y un skincare para poros.</p>
+    <div class="n-pl__box" id="box-m" aria-label="Qué llega cada mes">
       <figure><img src="/assets/img/foto/parches-nariz.webp" width="1200" height="1600" alt="Parches de nariz" loading="lazy"><figcaption>Parches · zona 1</figcaption></figure>
       <figure><img src="/assets/img/foto/parches-frente.webp" width="1200" height="1600" alt="Parches de frente" loading="lazy"><figcaption>Parches · zona 2</figcaption></figure>
       <figure><img src="/assets/img/foto/exfoliante-salicilico.webp" width="1200" height="1600" alt="Exfoliante salicílico" loading="lazy"><figcaption>Skincare en rotación</figcaption></figure>
     </div>
-    <ul class="n-list n-pl__list">
+    <ul class="n-list n-pl__list" id="list-m">
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>2 cajas de parches</b> al mes: eliges las zonas (nariz, frente, barbilla o granos)</span></li>
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>1 skincare para poros</b>: Exfoliante Salicílico, Sérum Niacinamida o Tónico, en rotación</span></li>
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Mascarilla de tela de regalo</b> en el primer envío y envío gratis siempre</span></li>
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Sin permanencia</b>: pausa, cambia o cancela en un clic desde el email</span></li>
     </ul>
-    <div class="n-pl__zones" id="zones-m">
-      <span class="n-lab">Zonas del primer mes</span>
-      <div class="n-pl__pills" role="group" aria-label="Elige dos zonas">
-        <button type="button" class="is-on" data-z="Nariz" aria-pressed="true">Nariz</button><button type="button" class="is-on" data-z="Frente" aria-pressed="true">Frente</button><button type="button" data-z="Barbilla" aria-pressed="false">Barbilla</button><button type="button" data-z="Granos" aria-pressed="false">Granos</button>
-      </div>
-    </div>
+    <div class="n-pl__zones" id="zones-m"></div>
     <div class="n-buy" id="buy-m"></div>
-    <p class="n-pl__foot">Hoy se cobra el primer envío (49 €). Después, 49 € el mismo día de cada mes hasta que canceles.</p>
+    <p class="n-pl__foot" id="foot-m">Hoy se cobra el primer envío (49 €). Después, 49 € el mismo día de cada mes hasta que canceles.</p>
   </article>
 
   <article class="n-c n-pl n-pl--s n-reveal" data-slug="plan-semanal">
     <div class="n-pl__top"><span class="n-lab n-lab--navy">Plan Semanal</span><span class="n-pl__badge">Para varias zonas</span></div>
     <p class="n-pl__price"><b class="n-num">14,90 €</b><span>a la semana</span><s class="n-num">20,85 € suelto con envío</s></p>
     <p class="n-pl__lead">Una caja nueva de 8 parches cada 7 días, de la zona que elijas. Nunca te quedas sin parches.</p>
-    <div class="n-pl__box n-pl__box--1" aria-label="Qué llega cada semana">
+    <div class="n-pl__box n-pl__box--1" id="box-s" aria-label="Qué llega cada semana">
       <figure><img src="/assets/img/foto/parches-nariz-detalle.webp" width="1200" height="1600" alt="Parche de nariz" loading="lazy"><figcaption>1 caja · 8 parches</figcaption></figure>
     </div>
     <ul class="n-list n-pl__list">
@@ -61,12 +56,7 @@
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Cambia de zona</b> cada semana desde el email del envío</span></li>
       <li><svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Sin permanencia</b>: pausa o cancela cuando quieras</span></li>
     </ul>
-    <div class="n-pl__zones" id="zones-s">
-      <span class="n-lab">Zona de esta semana</span>
-      <div class="n-pl__pills" role="radiogroup" aria-label="Elige una zona">
-        <button type="button" class="is-on" data-z="Nariz" role="radio" aria-checked="true">Nariz</button><button type="button" data-z="Frente" role="radio" aria-checked="false">Frente</button><button type="button" data-z="Barbilla" role="radio" aria-checked="false">Barbilla</button><button type="button" data-z="Granos" role="radio" aria-checked="false">Granos</button>
-      </div>
-    </div>
+    <div class="n-pl__zones" id="zones-s"></div>
     <div class="n-buy" id="buy-s"></div>
     <p class="n-pl__foot">Hoy se cobra la primera caja (14,90 €). Después, 14,90 € cada semana hasta que canceles.</p>
   </article>
@@ -118,28 +108,29 @@
 <p style="text-align:center;margin:28px 0 8px"><a class="n-btn" href="/quiz.html">No sé qué plan me va: hacer el test</a></p>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609090251"></script>
-<script src="/assets/js/products.js?v=202609090251"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090258"></script>
+<script src="/assets/js/products.js?v=202609090258"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
-  const state={m:['Nariz','Frente'],s:'Nariz'};
-  const draw=()=>{
-    document.getElementById('buy-m').innerHTML=nBuyBlock('plan-mensual',{src:'planes',label:'Empezar el Plan Noche · 49 €/mes'});
-    document.getElementById('buy-s').innerHTML=nBuyBlock('plan-semanal',{src:'planes',label:'Empezar el Plan Semanal · 14,90 €/sem'});
-    document.querySelectorAll('#buy-m [data-buy],#buy-m [data-buy-express],#buy-m [data-add]').forEach(b=>b.dataset.opt=state.m.join(' + '));
-    document.querySelectorAll('#buy-s [data-buy],#buy-s [data-buy-express],#buy-s [data-add]').forEach(b=>b.dataset.opt=state.s);
+  const PM=nBySlug('plan-mensual'),PSm=nBySlug('plan-semanal');const chk='<svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  const foto=sl=>`/assets/img/foto/${sl}.webp`;const nice=a=>a.length>1?a.slice(0,-1).join(', ')+' y '+a[a.length-1]:a[0];
+  const drawM=st=>{
+    document.getElementById('price-m').innerHTML=`<b class="n-num">${nEur(st.price).replace(',00','')}</b><span>al mes</span><s class="n-num">${nEur(st.retail)} suelto</s>`;
+    document.getElementById('lead-m').textContent=`${st.n===1?'Una caja':st.n===2?'Dos cajas':'Tres cajas'} de parches (${nice(st.zones.map(z=>z.toLowerCase()))})${st.skin?' y '+st.skin.toLowerCase()+' para poros':''}, cada mes en casa. Envío gratis y precio bloqueado.`;
+    document.getElementById('box-m').innerHTML=st.slugs.map(sl=>{const q=nBySlug(sl);return `<figure><img src="${foto(sl)}" width="1200" height="1600" alt="${q?q.name:''}" loading="lazy"><figcaption>${q&&q.plan?'':q?q.name.replace('Parches de ','').replace('Parches para ','').replace(' Ácido Salicílico 2 %','').replace(' Niacinamida 2 %','').replace(' Ácido Hialurónico',''):''}</figcaption></figure>`;}).join('');
+    document.getElementById('box-m').style.gridTemplateColumns=`repeat(${st.slugs.length},1fr)`;
+    document.getElementById('list-m').innerHTML=[`<b>${st.n} ${st.n===1?'caja':'cajas'} de parches</b> al mes: ${nice(st.zones)}`,st.skin?`<b>${st.skin} para poros</b> cada mes (puedes cambiarlo desde el email)`:`<b>Solo parches</b>: añade un skincare cuando quieras`,`<b>Ahorras ${nEur(st.save)}</b> al mes frente a comprarlo suelto, con envío gratis y regalo el primer mes`,`<b>Sin permanencia</b>: pausa, cambia o cancela en un clic desde el email`].map(t=>`<li>${chk}<span>${t}</span></li>`).join('');
+    document.getElementById('buy-m').innerHTML=nBuyBlock('plan-mensual',{src:'planes',label:`Empezar mi plan · ${nEur(st.price).replace(',00','')}/mes`});
+    document.querySelectorAll('#buy-m [data-buy],#buy-m [data-buy-express],#buy-m [data-add]').forEach(b=>b.dataset.opt=st.opt);
+    document.getElementById('foot-m').textContent=`Hoy se cobra el primer envío (${nEur(st.price).replace(',00','')}). Después, ${nEur(st.price).replace(',00','')} el mismo día de cada mes hasta que canceles.`;
   };
-  draw();
-  document.querySelectorAll('#zones-m button').forEach(b=>b.addEventListener('click',()=>{
-    const z=b.dataset.z;const i=state.m.indexOf(z);
-    if(i>=0){if(state.m.length>1)state.m.splice(i,1);}else{state.m.push(z);if(state.m.length>2)state.m.shift();}
-    document.querySelectorAll('#zones-m button').forEach(x=>{const on=state.m.includes(x.dataset.z);x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on);});
-    draw();nTrack('plan_zone',{plan:'m',z:state.m.join('+')});
-  }));
-  document.querySelectorAll('#zones-s button').forEach(b=>b.addEventListener('click',()=>{
-    state.s=b.dataset.z;document.querySelectorAll('#zones-s button').forEach(x=>{const on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-checked',on);});
-    draw();nTrack('plan_zone',{plan:'s',z:state.s});
-  }));
+  const drawS=st=>{
+    const sl=st.slugs[0];document.getElementById('box-s').innerHTML=`<figure><img src="${foto(sl)}" width="1200" height="1600" alt="" loading="lazy"><figcaption>1 caja · ${st.zones[0]} · 8 parches</figcaption></figure>`;
+    document.getElementById('buy-s').innerHTML=nBuyBlock('plan-semanal',{src:'planes',label:'Empezar el Plan Semanal · 14,90 €/sem'});
+    document.querySelectorAll('#buy-s [data-buy],#buy-s [data-buy-express],#buy-s [data-add]').forEach(b=>b.dataset.opt=st.opt);
+  };
+  const bm=nPlanBuilder(document.getElementById('zones-m'),PM,{onChange:drawM});drawM(bm.state);
+  const bs=nPlanBuilder(document.getElementById('zones-s'),PSm,{opt:'Nariz',onChange:drawS});drawS(bs.state);
   nReveal();nTrack('view_plans');
 });
 </script>
