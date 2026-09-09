@@ -220,7 +220,7 @@ A esto hay que sumar el valle de tesorería de los meses 2–6 (ads creciendo, r
 
 ### 6.2 Versión lean recomendada para empezar (5 SKU)
 
-Lanzar con Nariz, Granos, Barbilla, Frente y Exfoliante (los que llevan el 90 % de las ventas de Vue y componen el Dúo, el Kit Zona T y el Plan Noche); Superficie, Sérum, Peel-off, Tónico y Mascarillas en el mes 4–6 con la primera reposición.
+Lanzar con Nariz, Granos, Barbilla, Frente y Exfoliante (los que reciben el 86 % del tráfico de anuncios de Vue: la ficha de nariz el 70 % y la del Dúo el 16 %; componen el Dúo, el Kit Zona T y el Plan Noche); Superficie, Sérum, Peel-off, Tónico y Mascarillas en el mes 4–6 con la primera reposición.
 
 | Partida | € |
 |---|---:|
@@ -257,7 +257,7 @@ Supuestos de Meta España (editables): CPM 7,5 € (rango 6–9 €), CTR salien
 
 **CPA objetivo** = 70 % del CPA máx. LTV 90 d (el 30 % restante paga los costes fijos y el error de estimación). **CVR mínima** = CPC / CPA máx. (qué porcentaje de los clics del anuncio tiene que comprar). **ROAS mínimo** = precio con IVA / CPA máx.
 
-| Anuncio que vende… | Precio | CPA máx. 1.er pedido | CPA máx. LTV 90 d | CPA máx. LTV 180 d | **CPA objetivo** | CVR mín. (LTV 90 d) | CVR mín. (1.er pedido) | ROAS mín. (LTV 90 d) | Compras por 1.000 impr. |
+| Anuncio que vende… | Precio | CPA máx. 1.er pedido | CPA máx. LTV 90 d | CPA máx. LTV 180 d | **CPA objetivo** | CVR mín. (LTV 90 d) | CVR mín. (1.er pedido) | ROAS mín. (LTV 90 d) | Compras / 1.000 impr. |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Parches de Nariz (8) | 16,95 | 4,84 € | 6,75 € | 8,04 € | **4,72 €** | 9,3 % | 12,9 % | 2,5x | 1,11 |
 | Parches para Granos (36) | 15,95 | 6,51 € | 9,26 € | 11,19 € | **6,48 €** | 6,8 % | 9,6 % | 1,7x | 0,81 |
@@ -288,6 +288,18 @@ Cuando un anuncio mezcla productos, usa el AOV medio de sus pedidos. Contribuci�
 | 70 € | 33,71 € | 49,06 € | 34,34 € | 1,3 % | 1,4x |
 
 Objetivo operativo: **AOV ≥ 38 € desde el día 1 y ≥ 45 € en el mes 3**. Con 45 € el CPA objetivo es ≈ 20 € y basta con que el 2,2 % de los clics compren, que es el rango normal de una ficha bien hecha (2,8–3,2 % de objetivo en la sección 9). Con 17 € de ticket hace falta un 7 %, que no ocurre.
+
+### 7.1b Sensibilidad: si el clic sale más caro, la conversión mínima sube en la misma proporción
+
+CVR mínima = CPC / CPA máx. Estos son los CPC según CPM y CTR reales de tu cuenta; multiplica la columna de CVR mínima de las tablas anteriores por el factor.
+
+| CTR saliente \ CPM | 6 € | 7,5 € | 9 € | 12 € (Navidad/Rebajas) |
+|---|---:|---:|---:|---:|
+| 0,8 % | 0,75 € (×1,2) | 0,94 € (×1,5) | 1,12 € (×1,8) | 1,50 € (×2,4) |
+| 1,2 % | 0,50 € (×0,8) | 0,62 € (×1,0) | 0,75 € (×1,2) | 1,00 € (×1,6) |
+| 2,0 % | 0,30 € (×0,5) | 0,38 € (×0,6) | 0,45 € (×0,7) | 0,60 € (×1,0) |
+
+Ejemplo: en Navidad con CPM 12 € y CTR 1,2 % el clic cuesta 1 €: el anuncio de Dúo pasa a necesitar un 5,7 % de conversión, que no es realista. En esas semanas solo se anuncian Kits y Plan, o se sube el AOV con la oferta.
 
 ### 7.2 Presupuesto de ads por fase y cuánto tiene que salir
 
@@ -329,14 +341,14 @@ La ficha (`producto.html`) está construida para que todo lo que decide la compr
 | Visitas que ven precio + botón sin scroll | 90 % | 100 % | — | Primera pantalla móvil verificada a 390 px |
 | Añadir al carrito / compra directa | 6 % | 9 % | 12 %+ | Suscripción preseleccionada en anuncios de plan, precio por cantidad visible, Apple Pay |
 | Carrito → checkout iniciado | 55 % | 65 % | 75 % | Umbral de envío gratis a 30 €, regalo a 50 €, upsell de carrito |
-| Checkout → pago | 55 % | 65 % | 75 % | Stripe con Apple Pay/Google Pay/Klarna, sin registro, código validado en línea |
+| Checkout → pago | 55 % | 65 % | 75 % | Stripe con Apple Pay/Google Pay, sin registro, código validado en línea |
 | **CVR de la ficha (compras / visitas)** | 2 % | 2,8–3,2 % | 5 %+ | Producto de las tres anteriores |
 | AOV | 38 € | 45–48 € | 60 €+ | Packs −25/29 %, Plan Noche, 2–3 unidades −10/15 %, regalos por umbral |
 | Suscripción sobre pedidos nuevos | 10 % | 15 % | 25 % | Selector de suscripción arriba, Plan Noche, −15 % |
 | Popup de bienvenida: captación de email/teléfono | 4 % | 6–8 % | 10 % | Popup centrado −10 %, se muestra en la primera página de la visita |
-| Carritos abandonados recuperados | 5 % | 10 % | 15 % | Automatizaciones email + WhatsApp a 1 h / 24 h / 72 h |
+| Carritos abandonados recuperados | 5 % | 10 % | 15 % | Automatización de carrito abandonado: email a las 3 h con código −10 % (retraso y código configurables en el CRM) |
 | Ingresos por email/WhatsApp | 15 % | 25–30 % | 35 %+ | Newsletter Resend, campañas y automatizaciones del CRM |
-| Recompra a 90 días | 12 % | 20–25 % | 30 %+ | Post-compra: tutorial, recordatorio de reposición a 21 días, upsell −10 % |
+| Recompra a 90 días | 12 % | 20–25 % | 30 %+ | Guía post-compra a las 20 h, winback con código −15 %, upsell post-compra y campañas segmentadas desde el CRM |
 
 Qué medir cada semana en la ficha: visitas, CVR, AOV, % suscripción, % pack vs suelto, tasa de uso del selector de cantidad. Si la CVR baja del 2 % con CTR normal, el problema está en la página; si el AOV baja de 38 €, el problema está en el mix (empujar Dúo/Plan en la barra de anuncios y el popup).
 
@@ -349,7 +361,7 @@ Documento completo: `marketing/estrategia_marketing.md` (13 secciones), guiones 
 - **Los 10 ganchos** (por frecuencia en los anuncios de Vue): no son puntos negros · asco satisfactorio · complejo · lo que no funciona (tiras) · reto de una noche · pareja/amigo · dermatólogo/ciencia · comparativa tira vs hidrocoloide · precio (menos de 2 € por noche) · garantía.
 - **Fórmula del anuncio** (0–3 s gancho, 3–10 s reencuadre, 10–20 s mecanismo, 20–32 s prueba visual del parche usado, 32–40 s garantía + oferta + CTA). Mix mensual: 40 % UGC, 20 % demo, 15 % estáticos, 15 % fundador/experta, 10 % catálogo.
 - **Canales**: Meta 55 %, TikTok 25 % (Spark Ads + Smart+; TikTok Shop ES desde el mes 3, comisión 4 % los primeros 60 días), Google 12 % (Search marca + Shopping + PMax), creadoras 8 % (20 nano/micro al mes, 50–800 €/vídeo, whitelisting), afiliación con códigos 10–20 %.
-- **Retención (ya construida en el CRM)**: bienvenida con código, carrito abandonado 1 h/24 h/72 h por email y WhatsApp, post-compra (tutorial, recordatorio de reposición a 21 días, upsell), newsletter Resend, campañas segmentadas (leads, clientes, suscriptores).
+- **Retención (ya construida en el CRM)**: bienvenida con código del popup, carrito abandonado por email (3 h, −10 %, configurable), guía post-compra (20 h), winback (−15 %), campañas de email y WhatsApp segmentadas (leads, clientes, suscriptores) y newsletter con Resend. Lo que no existe todavía y conviene añadir: recordatorio de reposición a los 21 días y segunda cadencia de carrito abandonado.
 - **Calendario 12 meses** (§8 de la estrategia): lanzamiento dic, Rebajas ene, San Valentín, Día de la Madre, verano (−30/40 % como Vue), vuelta al cole, Black Friday, Navidad (hasta −45 %). Cada campaña se crea en el CRM (Ofertas) con fecha de inicio/fin.
 
 ## 11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
@@ -394,7 +406,7 @@ Documento completo: `marketing/estrategia_marketing.md` (13 secciones), guiones 
 | 1–3 | Validar producto y CPA (≤ 16 € en el mes 3), AOV ≥ 42 €, 3+ anuncios ganadores, 100–400 pedidos/mes |
 | 4–6 | Segunda tanda de SKU (superficie, sérum, peel-off, tónico, mascarillas), primera reposición marítima, TikTok Shop ES, 20 creadoras/mes, 25 % de ingresos por email/WhatsApp, punto muerto superado (> 123 pedidos/mes) |
 | 7–9 | Escalar ads hasta el techo que aguante el ROAS ≥ 2,5, Amazon.es como canal incremental, afiliación con códigos, EBITDA mensual positivo |
-| 10–12 | 1.500–1.800 pedidos/mes, EBITDA acumulado positivo (mes 11), preparar Portugal/Italia (Vue factura el 8 % en Italia), segundo troquel/producto propio |
+| 10–12 | 1.500–1.800 pedidos/mes, EBITDA acumulado positivo (mes 11), preparar Portugal/Italia (Italia recibe el 8 % del gasto en anuncios de Vue, España solo el 5 %), segundo troquel/producto propio |
 
 ### 11.5 Riesgos principales y mitigación
 
@@ -405,7 +417,7 @@ Retraso de compliance (empezar en paralelo, SLA por escrito) · coste real de pr
 **Entregado y en producción** (https://nocta-store.netlify.app, CRM en `/admin/`):
 
 - Web estática ultrarrápida con 16 páginas (inicio, catálogo, ficha, planes, cómo usar con secuencia real de 80 fotogramas, ciencia, advertorial “no son puntos negros”, quiz, checkout, gracias, garantía, envíos, legal, sobre, contacto, tablero).
-- Checkout Stripe con Apple Pay / Google Pay / Klarna, webhook firmado, pedidos y clientes en Supabase, códigos de descuento con límite de usos, carritos guardados y recuperables.
+- Checkout Stripe con Apple Pay / Google Pay (Klarna, Bizum o PayPal se activan desde el CRM cuando los tengas en Stripe), webhook firmado, pedidos y clientes en Supabase, códigos de descuento con límite de usos, carritos guardados y recuperables.
 - Newsletter y transaccionales con Resend; WhatsApp Cloud API (webhook, plantillas, consentimiento en popup); popup de bienvenida −10 % con nombre/email/teléfono.
 - CRM completo: dashboard, pedidos, carritos, clientes, leads, suscriptores, productos (precios, textos, imágenes, stock, coste), ofertas con fecha, contenido de todas las secciones y menús, reseñas, precios y márgenes (suscripción %, 2–3 unidades %, planes por zonas, upsell, envío y regalos), campañas de email/WhatsApp, automatizaciones por hora, integraciones (Stripe con un clic, Resend, WhatsApp).
 - Máquina de contenido: pipeline de imagen/vídeo (Seedance 2.5 para vídeo), packshots, vídeos de catálogo, 3 réplicas de anuncios ganadores de Vue, hero y secuencia de uso real.
@@ -447,7 +459,7 @@ Retraso de compliance (empezar en paralelo, SLA por escrito) · coste real de pr
 | Tarjeta “esos puntitos” más baja con botón; parches debajo; “cómo funciona” en un solo cuadro con 3 vídeos y parches al final | `index.html` | Hecho |
 | Packs antes que el skincare, 2 por fila | `index.html` | Hecho |
 | Que el CRM controle absolutamente todo, incluidos márgenes y ofertas | `m-pricing.js`, `m-products.js` (ofertas), contenido | Hecho |
-| Contraseña del CRM | `nocta-h1wsIPwUfmdH` (no cambiada, como dijiste) | Hecho |
+| Contraseña del CRM | Te la di en el chat; no se cambió, como pediste después. No se escribe aquí por seguridad | Hecho |
 | Este documento: proveedores, desarrollo de negocio, ads y cuánto tiene que convertir cada anuncio, inversión, ficha de producto, todo | `NOCTA_DOCUMENTO_MAESTRO.md` | Hecho |
 
 **Lo que faltaba y se ha añadido en este documento**: economía por anuncio con CPA/CVR/ROAS mínimos por producto y por AOV (sección 7), reglas de kill/escalado por anuncio (8), KPIs del embudo de la ficha (9), tabla de inversión real con versión lean (6), contribución por producto con y sin 3PL, suscripción, 2–3 unidades y planes (5), y la recomendación de descuento por cantidad para el CRM.
@@ -466,9 +478,9 @@ Planes (ya suscripción): LTV 90 d = C × (1 + 0,85 + 0,85²) ; vida media = 1 /
 CPA objetivo = 0,7 × CPA máx. LTV 90 d
 CPC = CPM / 1000 / CTR = 7,5 / 1000 / 0,012 = 0,625 €
 CVR mínima = CPC / CPA máx.   ;   ROAS mínimo = Precio / CPA máx.   ;   Compras por 1.000 impresiones = CPM / CPA máx.
-Punto muerto = Costes fijos / Contribución media por pedido = 1.427 / 11,58 ≈ 123 pedidos/mes
+Punto muerto = Costes fijos / Contribución media por pedido = 1.427 / 11,58 ≈ 123 pedidos/mes (modelo, 1,6 uds/pedido); con la contribución de este documento a AOV 38 € (15,4 €) serían ≈ 93 pedidos/mes
 ```
 Supuestos marcados como estimación (a sustituir por datos reales en los primeros 60 días): CPM y CTR de Meta España, CVR, tasa de suscripción 15 % y churn 15 %/mes, recompra 30 % a 90 días, devoluciones 3 %, costes de producto (rango de RFQ), mix regional de envíos.
 
 ---
-*Documentos fuente: `negocio/plan_de_negocio.md`, `negocio/roadmap_90_dias.md`, `negocio/checklist_lanzamiento.md`, `negocio/como_hacer_todo.md`, `finanzas/plan_financiero.md` + `modelo_financiero_nocta.xlsx`, `marketing/estrategia_marketing.md`, `marketing/guiones_anuncios.md`, `marketing/matriz_100_anuncios.md`, `operaciones/manual_operativo.md`, `producto/*.md`, `../vue-skin-research/informes/*.md`, `README.md` (stack y CRM).*
+*Documentos fuente: `negocio/plan_de_negocio.md`, `negocio/roadmap_90_dias.md`, `negocio/checklist_lanzamiento.md`, `negocio/como_hacer_todo.md`, `finanzas/plan_financiero.md` + `modelo_financiero_nocta.xlsx`, `marketing/estrategia_marketing.md`, `marketing/guiones_anuncios.md`, `marketing/matriz_100_anuncios.md`, `operaciones/manual_operativo.md`, `producto/*.md`, `../vue-skin-research/informes/` (7 informes), `README.md` (stack y CRM).*

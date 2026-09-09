@@ -1,0 +1,50 @@
+@font-face{font-family:'Inter';font-weight:100 900;font-style:normal;src:url('file:///home/user/Claude-septiembre/nocta/web/public/assets/fonts/inter-var.woff2') format('woff2')}
+:root{--navy:#14213D;--navy2:#0E1830;--bg:#FAF8F3;--cream:#F3EFE6;--sage:#9FB3A1;--sage-ink:#576D5B;--ink:#14213D;--ink2:#3B4257;--muted:#5F5C55;--line:#E6E1D6;--line2:#D9D3C5;--ok:#22794A;--alert:#A03B28}
+@page{size:A4;margin:16mm 15mm 18mm 15mm}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:9.2pt;line-height:1.48;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:"cv05" 1,"ss03" 1,"tnum" 1}
+p{margin:0 0 7pt;max-width:100%}
+a{color:inherit;text-decoration:none}
+b{color:var(--navy);font-weight:600}
+code{font-family:"DejaVu Sans Mono",monospace;font-size:8.2pt;background:var(--cream);padding:0 3px;border-radius:3px;color:var(--ink2)}
+pre{font-family:"DejaVu Sans Mono",monospace;font-size:8pt;line-height:1.45;background:var(--cream);border-left:3px solid var(--sage);padding:9pt 11pt;border-radius:6px;white-space:pre-wrap;margin:6pt 0 10pt}
+ul,ol{margin:0 0 8pt;padding-left:16pt}li{margin-bottom:3pt}
+/* portada */
+.cover{height:297mm;width:210mm;background:var(--navy);color:var(--cream);padding:22mm 20mm;display:flex;flex-direction:column;justify-content:space-between;page-break-after:always;border-radius:0}
+.wordmark{font-weight:600;letter-spacing:.32em;font-size:15pt}
+.cover__lab{font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-top:8pt}
+.cover h1{font-size:34pt;line-height:1.08;letter-spacing:-.02em;font-weight:500;margin:0 0 14pt;color:#fff}
+.cover__lead{font-size:11.5pt;line-height:1.5;color:rgba(243,239,230,.82);max-width:118mm;margin:0}
+.cover__bot{display:flex;justify-content:space-between;font-size:8.5pt;color:rgba(243,239,230,.7);border-top:1px solid rgba(243,239,230,.25);padding-top:10pt;letter-spacing:.04em}
+/* índice */
+.toc{display:grid;grid-template-columns:1fr 1fr;gap:4pt 18pt;margin:8pt 0 16pt}
+.toc__i{display:flex;gap:9pt;padding:6pt 0;border-bottom:1px solid var(--line);font-size:9.6pt}
+.toc__n{color:var(--sage-ink);font-weight:600;min-width:18pt}
+.intro p{font-size:9.4pt;color:var(--ink2)}
+.callout{background:var(--cream);border-left:3px solid var(--navy);padding:8pt 11pt;border-radius:6px;margin:6pt 0 10pt;font-size:9.2pt;color:var(--ink2)}
+/* secciones */
+.sec{margin-top:22pt;page-break-inside:auto}.sec.brk{page-break-before:always;margin-top:0}
+.tocpage{page-break-after:auto}
+h2{page-break-after:avoid}
+.secnum{font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-ink);font-weight:600;margin-bottom:4pt}
+h2{font-size:20pt;line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--navy);margin:0 0 10pt;padding-bottom:8pt;border-bottom:1.5px solid var(--navy)}
+h3{font-size:12pt;font-weight:600;color:var(--navy);margin:14pt 0 5pt;page-break-after:avoid}
+h4{font-size:10pt;font-weight:600;color:var(--navy);margin:10pt 0 4pt;page-break-after:avoid}
+/* tablas */
+table{width:100%;border-collapse:collapse;margin:4pt 0 11pt;font-size:8.3pt;line-height:1.35;page-break-inside:auto}
+thead{display:table-header-group}
+tr{page-break-inside:avoid}
+th{background:var(--cream);color:var(--navy);font-weight:600;text-align:left;padding:5pt 6pt;border-bottom:1.2px solid var(--line2);font-size:8.2pt;letter-spacing:.01em;vertical-align:bottom}
+td{padding:4.5pt 6pt;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+td b{color:var(--navy)}
+th.r,td.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tbody tr:nth-child(even) td{background:#FCFBF8}
+.tbl--wide{font-size:7.9pt}.tbl--wide th,.tbl--wide td{padding:4pt 4.5pt}
+.tbl--x{font-size:7.3pt}.tbl--x th,.tbl--x td{padding:3.5pt 3.5pt}
+.tbl--x td.r,.tbl--wide td.r{white-space:normal}
+.src{font-size:8pt;color:var(--muted);border-top:1px solid var(--line);padding-top:8pt;margin-top:14pt}
+
+.tbl--x th.r{white-space:normal}.tbl--x td:first-child,.tbl--x th:first-child{min-width:64pt}
+
+table:not(.tbl--wide) td:first-child,table:not(.tbl--wide) th:first-child{min-width:120pt}
+.toc__i{font-size:9.2pt}

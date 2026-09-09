@@ -4,7 +4,7 @@ Todo lo que hay en esta carpeta se ha construido a partir de la investigación d
 
 ## Documento maestro
 
-**`NOCTA_DOCUMENTO_MAESTRO.md`** reúne todo el negocio en un solo documento: investigación de Vue, catálogo y precios, proveedores con contactos/MOQ/precios, costes y márgenes por producto/pack/plan, inversión, economía de cada anuncio (CPA, CVR y ROAS mínimos por producto y por ticket), reglas de kill/escalado, KPIs de la ficha, plan de marketing, legal, operaciones, roadmap y el estado de todo lo pedido.
+**`NOCTA_DOCUMENTO_MAESTRO.md`** (y su versión maquetada `NOCTA_Documento_Maestro.pdf`, generada con `tools/pdf/`) reúne todo el negocio en un solo documento: investigación de Vue, catálogo y precios, proveedores con contactos/MOQ/precios, costes y márgenes por producto/pack/plan, inversión, economía de cada anuncio (CPA, CVR y ROAS mínimos por producto y por ticket), reglas de kill/escalado, KPIs de la ficha, plan de marketing, legal, operaciones, roadmap y el estado de todo lo pedido.
 
 ## Índice de carpetas
 
