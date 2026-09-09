@@ -5,11 +5,11 @@
 <title>NOCTA · Parches de hidrocoloide · Poros limpios mientras duermes</title>
 <meta name="description" content="Parches de hidrocoloide coreanos para nariz, barbilla, frente y granos. Absorben la grasa de los poros mientras duermes. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090417">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090422">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <link rel="preload" as="image" href="/assets/img/hero-poster.webp" fetchpriority="high">
-<script src="/assets/js/app.js?v=202609090417" defer></script>
+<script src="/assets/js/app.js?v=202609090422" defer></script>
 </head>
 <body class="n-v5 n-has-hero">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -34,17 +34,17 @@
       </div>
     </div>
   </section>
+  <section id="productos">
+    <div class="n-sh"><h2>Parches</h2><div class="n-rail__nav"></div></div>
+    <div class="n-rail n-stagger" id="grid-parches"><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article></div>
+  </section>
 
   <section id="metodo">
     <div class="n-sh"><h2>Cómo funciona</h2><a href="/como-usar.html">Guía completa</a></div>
     <div class="n-c n-vt5 n-vt n-seq n-reveal" id="seq" data-steps='[{"src":"/assets/video/paso-1.mp4","poster":"/assets/img/paso-1.webp","l":"01 · Ponlo","b":"Sobre la nariz seca","s":"Curva en el puente, alas sobre las aletas."},{"src":"/assets/video/paso-2.mp4","poster":"/assets/img/paso-2.webp","l":"02 · Presiona","b":"20 segundos","s":"El calor activa el adhesivo. Duerme."},{"src":"/assets/video/paso-3.mp4","poster":"/assets/img/paso-3.webp","l":"03 · Retira","b":"Por la mañana","s":"Se despega solo. Y mira lo que trae."}]'>
       <video class="n-seq__v is-live" src="/assets/video/paso-1.mp4" poster="/assets/img/paso-1.webp" muted playsinline preload="none" aria-label="Cómo funciona: ponlo, presiona, retira"></video><video class="n-seq__v" muted playsinline preload="none" aria-hidden="true"></video>
-      <span class="n-vt5__l" id="seq-l">01 · Ponlo</span><div class="n-vt5__c"><b id="seq-b">Sobre la nariz seca</b><span id="seq-s">Curva en el puente, alas sobre las aletas.</span><i class="n-seq__dots" aria-hidden="true"><b class="is-on"></b><b></b><b></b></i></div>
+      <div class="n-seq__end" id="seq-end" hidden><span class="n-lab n-lab--navy">Y ahora, los tuyos</span><h3>Elige tus parches.</h3><div class="n-seq__cards" id="seq-cards"></div><a class="n-link" href="/catalogo.html">Ver todos los parches</a><button type="button" class="n-seq__again" id="seq-again" aria-label="Ver otra vez">↺ Ver otra vez</button></div><span class="n-vt5__l" id="seq-l">01 · Ponlo</span><div class="n-vt5__c"><b id="seq-b">Sobre la nariz seca</b><span id="seq-s">Curva en el puente, alas sobre las aletas.</span><i class="n-seq__dots" aria-hidden="true"><b class="is-on"></b><b></b><b></b></i></div>
     </div>
-  </section>
-  <section id="productos">
-    <div class="n-sh"><h2>Parches</h2><div class="n-rail__nav"></div></div>
-    <div class="n-rail n-stagger" id="grid-parches"><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article><article class="n-pc n-sk" aria-hidden="true"><span class="n-pc__w"></span><span class="n-pc__i"></span></article></div>
   </section>
 
   <section>
@@ -122,16 +122,20 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609090417"></script><script src="/api/catalog.js"></script>
-<script src="/assets/js/photos.js?v=202609090417"></script>
+<script src="/assets/js/products.js?v=202609090422"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609090422"></script>
 <script>
 /* «Cómo funciona»: los tres pasos en un solo recuadro, uno tras otro, con fundido entre vídeos */
 (function(){const box=document.getElementById('seq');if(!box)return;const steps=JSON.parse(box.dataset.steps);const vs=[...box.querySelectorAll('video')];let i=0,cur=0,on=false;const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
   const show=k=>{const st=steps[k];document.getElementById('seq-l').textContent=st.l;document.getElementById('seq-b').textContent=st.b;document.getElementById('seq-s').textContent=st.s;[...box.querySelectorAll('.n-seq__dots b')].forEach((d,j)=>d.classList.toggle('is-on',j===k));};
   const load=(v,k)=>{if(v.dataset.k===String(k))return;v.dataset.k=k;v.src=steps[k].src;v.poster=steps[k].poster;v.load();};
   const next=()=>{const k=(i+1)%steps.length;const a=vs[cur],b=vs[1-cur];load(b,k);b.currentTime=0;const go=()=>{b.play().catch(()=>{});b.classList.add('is-live');a.classList.remove('is-live');i=k;cur=1-cur;show(k);setTimeout(()=>{a.pause();},600);};if(b.readyState>=2)go();else b.addEventListener('canplay',go,{once:true});};
-  vs.forEach(v=>v.addEventListener('ended',()=>{if(on)next();}));
-  const io=new IntersectionObserver(es=>es.forEach(e=>{on=e.isIntersecting;const v=vs[cur];if(on){if(RM){v.controls=true;return;}v.play().catch(()=>{});load(vs[1-cur],(i+1)%steps.length);}else v.pause();}),{threshold:.5});io.observe(box);
+  const end=document.getElementById('seq-end');const cards=document.getElementById('seq-cards');let ended=false,endT=null;
+  const showEnd=()=>{ended=true;if(!cards.children.length){cards.innerHTML=['parches-nariz','parches-granos','parches-frente','parches-barbilla'].map(sl=>nBySlug(sl)).filter(Boolean).map(q=>nCardM(q,{src:'seq'})).join('');}end.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>box.classList.add('is-end')));box.querySelector('.n-vt5__l').hidden=true;box.querySelector('.n-vt5__c').hidden=true;};
+  const restart=()=>{ended=false;box.classList.remove('is-end');setTimeout(()=>{end.hidden=true;},500);box.querySelector('.n-vt5__l').hidden=false;box.querySelector('.n-vt5__c').hidden=false;i=steps.length-1;next();};
+  document.getElementById('seq-again').onclick=restart;box.nSeqEnd=showEnd;
+  vs.forEach(v=>v.addEventListener('ended',()=>{if(!on)return;if(i===steps.length-1){showEnd();}else next();}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{on=e.isIntersecting;const v=vs[cur];if(on){if(RM){v.controls=true;return;}if(!ended){v.play().catch(()=>{});load(vs[1-cur],(i+1)%steps.length);}}else v.pause();}),{threshold:.5});io.observe(box);
   vs[0].dataset.k='0';})();
 document.addEventListener('DOMContentLoaded',()=>{const P=window.NOCTA_PRODUCTS;
 const h1=document.getElementById('h1');h1.innerHTML=h1.textContent.split(' ').map((w,i)=>`<span style="--i:${i}">${w}</span>`).join(' ');
