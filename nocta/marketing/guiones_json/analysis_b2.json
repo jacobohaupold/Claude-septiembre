@@ -1,0 +1,1331 @@
+[
+{
+"rank": 13,
+"id_video": "1617698659670900.mp4",
+"titulo_meta": "No More Nose Bumps",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 40,
+"metricas": {
+"anuncios": 22,
+"videos": 8,
+"dias_totales": 782,
+"dias_max": 117,
+"variantes": 43,
+"primera_fecha": "2026-01-06",
+"ultima_fecha": "2026-08-13"
+},
+"transcripcion_en": "If you see these dots on your nose, it's not dirt, it's not blackheads, it's oil buildup, called sebaceous filaments. That's probably why nothing you've tried has worked. Not the scrubs, not the strips, not the fancy cleansers. They're not solving the problem, they're just making your skin angrier. It's a cycle clear for a few hours, then the dots are back. That's because sebaceous filaments are oil channels that refill naturally. Here's what actually works. Hydrocolloid nose patches. They work like a magnet, absorb the excess oil from inside your pores while you sleep, no ripping, no redness, no daily battle. Check my before and after. Now I no longer wake up to the same old dots. They're on sale right now with a 60 day money back guarantee. So click below and finally get your nose under control.",
+"traduccion_es": "Si ves estos puntitos en la nariz: no es suciedad, no son puntos negros, es grasa acumulada, se llaman filamentos sebáceos. Probablemente por eso nada de lo que has probado ha funcionado. Ni los exfoliantes, ni las tiras, ni los limpiadores caros. No resuelven el problema: solo cabrean a tu piel. Es un ciclo: limpia unas horas y los puntitos vuelven. Porque los filamentos sebáceos son canales de grasa que se rellenan solos. Esto es lo que funciona de verdad: parches de nariz de hidrocoloide. Funcionan como un imán: absorben el exceso de grasa desde dentro del poro mientras duermes. Sin arrancar, sin rojeces, sin batalla diaria. Mira mi antes y después. Ya no me despierto con los mismos puntitos de siempre. Están de oferta ahora mismo con 60 días de garantía. Pincha abajo y controla tu nariz de una vez.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho triple negación",
+"dice": "If you see these dots on your nose, it's not dirt, it's not blackheads, it's oil buildup",
+"pasa_en_pantalla": "Macro nariz (inferido).",
+"funcion": "Tres negaciones rápidas: ritmo y reencuadre en 3 s."
+},
+{
+"seg_ini": 3,
+"seg_fin": 12,
+"bloque": "absolución",
+"dice": "That's probably why nothing you've tried has worked… they're just making your skin angrier",
+"pasa_en_pantalla": "Botes (inferido).",
+"funcion": "No eres tú + los productos «cabrean» la piel."
+},
+{
+"seg_ini": 12,
+"seg_fin": 18,
+"bloque": "ciclo",
+"dice": "It's a cycle clear for a few hours, then the dots are back",
+"pasa_en_pantalla": "Mañana/noche (inferido).",
+"funcion": "Recurrencia."
+},
+{
+"seg_ini": 18,
+"seg_fin": 29,
+"bloque": "mecanismo imán",
+"dice": "They work like a magnet, absorb the excess oil from inside your pores while you sleep, no ripping, no redness, no daily battle",
+"pasa_en_pantalla": "Aplicación (inferido).",
+"funcion": "Solución + mantra."
+},
+{
+"seg_ini": 29,
+"seg_fin": 34,
+"bloque": "prueba",
+"dice": "Check my before and after. Now I no longer wake up to the same old dots.",
+"pasa_en_pantalla": "Antes/después (inferido).",
+"funcion": "Visual."
+},
+{
+"seg_ini": 34,
+"seg_fin": 40,
+"bloque": "oferta + cta",
+"dice": "on sale right now with a 60 day money back guarantee. So click below and finally get your nose under control.",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre con verbo de control."
+}
+],
+"gancho": {
+"tipo": "Triple negación",
+"texto_en": "it's not dirt, it's not blackheads, it's oil buildup",
+"texto_es": "no es suciedad, no son puntos negros, es grasa",
+"por_que_para_el_scroll": "El ritmo de tres golpes y la corrección doble (no suciedad, no puntos negros) en 3 segundos: máxima información por segundo."
+},
+"reencuadre": "Grasa que se rellena, no suciedad.",
+"mecanismo": "Imán desde dentro, de noche; tres negaciones.",
+"prueba": [
+"Antes/después",
+"«Ya no me despierto con los mismos puntitos»"
+],
+"objeciones_resueltas": [
+"«Es suciedad, me lavo más» → no es suciedad",
+"«Vuelven» → ciclo",
+"«Irrita» → sin rojeces"
+],
+"disparadores_emocionales": [
+"Alivio",
+"Control («get your nose under control»)"
+],
+"tecnicas_persuasion": [
+"Triple negación",
+"Absolución",
+"Metáfora imán",
+"Mantra de tres",
+"CTA con verbo de control"
+],
+"frases_clave": [
+{
+"en": "it's not dirt, it's not blackheads, it's oil buildup",
+"es": "no es suciedad, no son puntos negros: es grasa"
+},
+{
+"en": "they're just making your skin angrier",
+"es": "solo cabrean a tu piel"
+},
+{
+"en": "finally get your nose under control",
+"es": "controla tu nariz de una vez"
+}
+],
+"oferta_cta": "Oferta + 60 días + click below.",
+"por_que_funciona": "22 anuncios y 43 variantes en 8 meses: la versión más compacta (40 s) de la plantilla maestra, con el gancho más rápido del ranking (tres negaciones). Se estiró a 115 s en R56 (11 anuncios, 88 días) y funcionó peor por segundo: la evidencia de que 40 s es el punto óptimo de esta estructura.",
+"senales_de_conversion": "22 anuncios, 8 vídeos, 43 variantes, 782 días (ene–ago 2026); la versión larga R56 acumuló 418 días más.",
+"que_copiar_para_nocta": [
+"Gancho de triple negación",
+"«Cabrean a tu piel»",
+"CTA «controla tu nariz»",
+"Mantener 40 s"
+],
+"que_no_se_puede_decir_en_espana": [
+"Ninguno grave; «on sale» solo si hay oferta activa en el CRM"
+],
+"adaptacion_espana": "Todos. Muy bueno para Reels."
+},
+{
+"rank": 15,
+"id_video": "1584088272180999.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 40,
+"metricas": {
+"anuncios": 12,
+"videos": 1,
+"dias_totales": 857,
+"dias_max": 290,
+"variantes": 16,
+"primera_fecha": "2025-06-16",
+"ultima_fecha": "2026-05-15"
+},
+"transcripcion_en": "Here are three reasons why I love hand patches and one reason why I don't. Number one, they work fast. And when I say fast, I mean you'll see your pores tighten and you're no smooth after just one use. Number two, the patches target sebaceous filaments where excess oil builds up. This is where reducing sebum is key for clearer, healthier skin in the long term. Number three, the patches don't contain alcohol-based or comdogenic ingredients, which is a big plus considering what other skincare brands put in their products. Their hydrocolloid formula is cruelty-free and gentle on the skin. And the one thing I don't love, my sister keeps stealing my patches to get rid of her clogged pores. The patches are currently 30% off for a limited time, so get them while they're still in stock.",
+"traduccion_es": "Tres razones por las que me encantan estos parches y una por la que no. Uno: funcionan rápido. Y cuando digo rápido es que ves los poros más cerrados y la nariz lisa con un solo uso. Dos: los parches van a por los filamentos sebáceos, donde se acumula el exceso de grasa; reducir el sebo es la clave de una piel más limpia a largo plazo. Tres: no llevan alcohol ni ingredientes comedogénicos, que ya es más de lo que ponen otras marcas en sus productos; su hidrocoloide es cruelty free y suave con la piel. Y lo que no me gusta: que mi hermana me los roba para quitarse ella los poros tapados. Ahora están con un 30 % de descuento por tiempo limitado, así que cógelos mientras queden.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho listicle con giro",
+"dice": "Here are three reasons why I love these patches and one reason why I don't.",
+"pasa_en_pantalla": "Caja en mano (inferido).",
+"funcion": "La «pega» anunciada crea curiosidad y credibilidad."
+},
+{
+"seg_ini": 3,
+"seg_fin": 12,
+"bloque": "razón 1: rapidez",
+"dice": "they work fast… after just one use",
+"pasa_en_pantalla": "Nariz lisa (inferido).",
+"funcion": "Beneficio inmediato."
+},
+{
+"seg_ini": 12,
+"seg_fin": 24,
+"bloque": "razón 2: mecanismo",
+"dice": "target sebaceous filaments where excess oil builds up",
+"pasa_en_pantalla": "Macro (inferido).",
+"funcion": "Racional."
+},
+{
+"seg_ini": 24,
+"seg_fin": 33,
+"bloque": "razón 3: ingredientes",
+"dice": "don't contain alcohol-based or comedogenic ingredients… cruelty-free",
+"pasa_en_pantalla": "Etiqueta (inferido).",
+"funcion": "Seguridad."
+},
+{
+"seg_ini": 33,
+"seg_fin": 37,
+"bloque": "la pega (humor)",
+"dice": "my sister keeps stealing my patches",
+"pasa_en_pantalla": "Hermana (inferido).",
+"funcion": "Prueba social disfrazada de queja."
+},
+{
+"seg_ini": 37,
+"seg_fin": 40,
+"bloque": "oferta",
+"dice": "30% off for a limited time… while they're still in stock",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Urgencia."
+}
+],
+"gancho": {
+"tipo": "Listicle con giro",
+"texto_en": "three reasons why I love these patches and one reason why I don't",
+"texto_es": "Tres razones por las que me encantan y una por la que no",
+"por_que_para_el_scroll": "La promesa de una pega desarma el escepticismo y obliga a quedarse hasta el final."
+},
+"reencuadre": "Menos sebo = piel más limpia a largo plazo.",
+"mecanismo": "Va a por el sebo de los filamentos.",
+"prueba": [
+"Un solo uso",
+"Ingredientes",
+"La hermana (prueba social)"
+],
+"objeciones_resueltas": [
+"«¿Tarda?» → un uso",
+"«¿Lleva cosas malas?» → sin alcohol ni comedogénicos",
+"«¿Es un anuncio?» → hay una pega"
+],
+"disparadores_emocionales": [
+"Humor",
+"Confianza"
+],
+"tecnicas_persuasion": [
+"Listicle",
+"Pega falsa (humor)",
+"Urgencia"
+],
+"frases_clave": [
+{
+"en": "three reasons why I love… and one reason why I don't",
+"es": "tres razones por las que me encantan y una por la que no"
+},
+{
+"en": "my sister keeps stealing my patches",
+"es": "mi hermana me los roba"
+}
+],
+"oferta_cta": "30 % por tiempo limitado.",
+"por_que_funciona": "290 días con un solo vídeo. La «pega» final es la técnica más elegante del ranking: convierte la prueba social en broma y hace que el anuncio parezca una opinión. La razón 1 (resultado en un uso) es un claim fuerte que en España hay que suavizar.",
+"senales_de_conversion": "12 anuncios, 1 vídeo, 16 variantes, 857 días; 290 días.",
+"que_copiar_para_nocta": [
+"Listicle con pega final (humor)",
+"Argumento de ingredientes (sin activos, sin alcohol)"
+],
+"que_no_se_puede_decir_en_espana": [
+"«pores tighten after just one use» → «por la mañana ves en el parche lo que ha salido»",
+"«cruelty-free» solo si se puede acreditar"
+],
+"adaptacion_espana": "Bea. La hermana/compañera de piso que roba parches es muy español."
+},
+{
+"rank": 16,
+"id_video": "1540818283776538.mp4",
+"titulo_meta": "Finally Clear Skin for Guys",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 42,
+"metricas": {
+"anuncios": 7,
+"videos": 3,
+"dias_totales": 818,
+"dias_max": 214,
+"variantes": 17,
+"primera_fecha": "2025-10-03",
+"ultima_fecha": "2026-05-19"
+},
+"transcripcion_en": "Most guys over 35 think these are blackheads, they're not. They're called sebaceous filaments. Basically oil plugs that form naturally in your pores. And the reason why nothing you've tried works is because you've been treating them like blackheads, but they need completely different care. That's why they keep coming back. These view nose patches are made in Korea and they're specifically designed for sebaceous filaments, not blackheads, which is why they actually work. They gently absorb the oil buildup overnight instead of ripping your skin like those painful strips. I saw a huge improvement, and after three weeks, those dark spots were completely gone, check it out. Tons of guys finally understand why nothing worked before and now they're getting clear skin for the first time. They also offer a money back guarantee if you're not happy with the results.",
+"traduccion_es": "La mayoría de los tíos de más de 35 cree que esto son puntos negros. No lo son. Se llaman filamentos sebáceos… (resto idéntico al nº 1).",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho identidad (hombre +35)",
+"dice": "Most guys over 35 think these are blackheads, they're not.",
+"pasa_en_pantalla": "Hombre 35–45 señalando la nariz (inferido).",
+"funcion": "Segmento con edad."
+},
+{
+"seg_ini": 3,
+"seg_fin": 42,
+"bloque": "resto",
+"dice": "(idéntico al nº 1)",
+"pasa_en_pantalla": "(idéntico)",
+"funcion": "Plantilla maestra."
+}
+],
+"gancho": {
+"tipo": "Identidad + edad + contradicción",
+"texto_en": "Most guys over 35 think these are blackheads, they're not.",
+"texto_es": "La mayoría de los tíos de más de 35 cree que esto son puntos negros. No lo son.",
+"por_que_para_el_scroll": "Nombrar edad y sexo en la primera frase filtra a la audiencia y la hace sentir aludida."
+},
+"reencuadre": "El del nº 1.",
+"mecanismo": "El del nº 1.",
+"prueba": [
+"Las del nº 1"
+],
+"objeciones_resueltas": [
+"Las del nº 1"
+],
+"disparadores_emocionales": [
+"Identidad masculina madura"
+],
+"tecnicas_persuasion": [
+"Segmentación por edad y sexo en el gancho"
+],
+"frases_clave": [
+{
+"en": "Most guys over 35 think these are blackheads",
+"es": "La mayoría de los tíos de más de 35 cree que esto son puntos negros"
+}
+],
+"oferta_cta": "Garantía; «Finally Clear Skin for Guys».",
+"por_que_funciona": "Demuestra que el guion nº 1 vende también a hombres de 35+ (214 días, 17 variantes) sin cambiar nada más que la primera frase. Para NOCTA: Álex (y su versión 35+) se atiende con la misma plantilla.",
+"senales_de_conversion": "7 anuncios, 3 vídeos, 17 variantes, 818 días; 214 días máximo.",
+"que_copiar_para_nocta": [
+"Versión Álex 35+ de la plantilla maestra"
+],
+"que_no_se_puede_decir_en_espana": [
+"Las del nº 1"
+],
+"adaptacion_espana": "«Tíos» para Álex; «hombres» para 40+."
+},
+{
+"rank": 17,
+"id_video": "506276245249736.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 53,
+"metricas": {
+"anuncios": 8,
+"videos": 1,
+"dias_totales": 846,
+"dias_max": 287,
+"variantes": 15,
+"primera_fecha": "2025-06-16",
+"ultima_fecha": "2026-05-16"
+},
+"transcripcion_en": "If your pores look like this or like this, you're not taking care of them properly. Here are three ways to maintain clear pores without damaging your skin. 1. Large pores in blackheads happen when excess oil and dead skin cells get trapped. Using an overnight patch helps draw out these impurities while you sleep, keeping your pores clear and healthy. 2. Use a patch with hydrocolloid in it. I recommend using pore patches from View Swiss. They work like a magnet to gently pull out oil and impurities without scrubbing or squeezing. 3. Consistent use helps maintain clear pores long-term. These patches protect your skin's natural barrier while removing impurities, so your skin stays healthy and balanced. Plus, they're made in Korea, which is the leading country in skincare innovation. My skin feels like silk after I use it, and my pores are literally invisible. It's so satisfying to see the results on the patch in the morning. So if you're looking for better-looking pores overnight for less than the price of a mascara, you have got to try it. You will be so glad you did.",
+"traduccion_es": "Si tus poros se ven así o así, no los estás cuidando bien. Tres formas de mantener los poros limpios sin dañar la piel. Uno: los poros grandes y los puntos negros aparecen cuando el exceso de grasa y las células muertas se quedan atrapadas; un parche nocturno ayuda a sacar esas impurezas mientras duermes. Dos: usa un parche con hidrocoloide; yo recomiendo los de Vue: funcionan como un imán para sacar grasa e impurezas sin frotar ni apretar. Tres: la constancia mantiene los poros limpios a largo plazo. Estos parches protegen la barrera natural de la piel mientras sacan impurezas. Además están hechos en Corea, el país líder en innovación en cuidado de la piel. Mi piel queda como la seda y mis poros son literalmente invisibles. Es muy satisfactorio ver el resultado en el parche por la mañana. Así que, si quieres unos poros mejores de la noche a la mañana por menos de lo que cuesta un rímel, tienes que probarlos. Te alegrarás de haberlo hecho.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 4,
+"bloque": "gancho visual doble",
+"dice": "If your pores look like this or like this, you're not taking care of them properly.",
+"pasa_en_pantalla": "Dos macros de nariz (inferido).",
+"funcion": "Dos imágenes = dos tipos de espectador."
+},
+{
+"seg_ini": 4,
+"seg_fin": 30,
+"bloque": "3 formas",
+"dice": "1… overnight patch… 2… hydrocolloid… magnet… 3… consistent use",
+"pasa_en_pantalla": "Rutina (inferido).",
+"funcion": "Consejo útil con el producto dentro."
+},
+{
+"seg_ini": 30,
+"seg_fin": 40,
+"bloque": "origen + resultado",
+"dice": "made in Korea… skin feels like silk… pores literally invisible",
+"pasa_en_pantalla": "Nariz (inferido).",
+"funcion": "Beneficio sensorial."
+},
+{
+"seg_ini": 40,
+"seg_fin": 46,
+"bloque": "prueba",
+"dice": "It's so satisfying to see the results on the patch in the morning.",
+"pasa_en_pantalla": "Parche usado (inferido).",
+"funcion": "Peel reveal."
+},
+{
+"seg_ini": 46,
+"seg_fin": 53,
+"bloque": "ancla precio + cta",
+"dice": "less than the price of a mascara… You will be so glad you did.",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Ancla barata."
+}
+],
+"gancho": {
+"tipo": "Reconocimiento visual doble",
+"texto_en": "If your pores look like this or like this",
+"texto_es": "Si tus poros se ven así… o así",
+"por_que_para_el_scroll": "Enseñar dos narices distintas duplica la probabilidad de que el espectador se reconozca."
+},
+"reencuadre": "Cuidar ≠ atacar: consejos.",
+"mecanismo": "Imán + barrera intacta.",
+"prueba": [
+"Satisfacción del parche por la mañana",
+"Piel como la seda"
+],
+"objeciones_resueltas": [
+"«Es caro» → menos que un rímel",
+"«¿Cómo se usa?» → 3 pasos"
+],
+"disparadores_emocionales": [
+"Satisfacción",
+"Aspiración («invisibles»)"
+],
+"tecnicas_persuasion": [
+"Doble reconocimiento",
+"Consejo educativo",
+"Ancla de precio cotidiano",
+"Sensorialidad"
+],
+"frases_clave": [
+{
+"en": "If your pores look like this or like this",
+"es": "Si tus poros se ven así… o así"
+},
+{
+"en": "My skin feels like silk",
+"es": "La piel me queda como la seda"
+},
+{
+"en": "for less than the price of a mascara",
+"es": "por menos de lo que cuesta un rímel"
+}
+],
+"oferta_cta": "Ancla de precio; garantía en el texto.",
+"por_que_funciona": "287 días con un vídeo. Dos ideas que nadie más usa: el gancho con dos imágenes («así o así») y el ancla de precio cotidiano (un rímel). El formato «3 formas» convierte el anuncio en consejo. Claim a vigilar: «poros literalmente invisibles».",
+"senales_de_conversion": "8 anuncios, 1 vídeo, 15 variantes, 846 días; 287 días.",
+"que_copiar_para_nocta": [
+"Gancho «así… o así» con dos narices",
+"«Por menos de lo que cuesta un rímel / un café» (pack de 2 = 1,87 €/noche)",
+"Peel reveal como satisfacción"
+],
+"que_no_se_puede_decir_en_espana": [
+"«pores literally invisible» → «se notan mucho menos»"
+],
+"adaptacion_espana": "Bea y Marisol."
+},
+{
+"rank": 19,
+"id_video": "2148549259002516.mp4",
+"titulo_meta": "Clearer Pores While You Sleep 😴",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 37,
+"metricas": {
+"anuncios": 10,
+"videos": 7,
+"dias_totales": 749,
+"dias_max": 173,
+"variantes": 11,
+"primera_fecha": "2025-11-07",
+"ultima_fecha": "2026-05-15"
+},
+"transcripcion_en": "The secret to smooth pores after 40 is not using a laser. If you want to go from visible black dots to a glass smooth nose, from oily shine to matte glow, instead of burning your skin with a laser, these hydro-coloid patches use a scientific approach to target what's clogging your pores overnight without harming your skin barrier. Dermatologists warn that lasers can thin the skin and weaken the barrier over time. In just three weeks, these patches turn stubborn blackheads and greasy shine into smooth, clean looking skin. Check it out, thousands of women over 40 plus swear this is the first thing that actually made their pores look clean. Click below to get up to 45% off and finally smooth out your pores.",
+"traduccion_es": "El secreto de unos poros lisos después de los 40 no es el láser. Si quieres pasar de puntitos visibles a una nariz lisa como el cristal, de brillo graso a un acabado mate, en vez de quemarte la piel con láser, estos parches de hidrocoloide usan un enfoque científico para ir a por lo que tapona los poros durante la noche, sin dañar la barrera. Los dermatólogos advierten de que el láser puede afinar la piel y debilitar la barrera con el tiempo. En solo tres semanas estos parches convierten los puntos negros rebeldes y el brillo en una piel lisa y limpia. Míralo: miles de mujeres de más de 40 dicen que es lo primero que de verdad les ha limpiado los poros. Pincha abajo para hasta un 45 % de descuento.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 4,
+"bloque": "gancho secreto + edad + anti-láser",
+"dice": "The secret to smooth pores after 40 is not using a laser.",
+"pasa_en_pantalla": "Mujer 40+ (inferido).",
+"funcion": "Edad + negación de la opción cara."
+},
+{
+"seg_ini": 4,
+"seg_fin": 14,
+"bloque": "transformación",
+"dice": "from visible black dots to a glass smooth nose, from oily shine to matte glow",
+"pasa_en_pantalla": "Antes/después (inferido).",
+"funcion": "Dos contrastes paralelos."
+},
+{
+"seg_ini": 14,
+"seg_fin": 24,
+"bloque": "autoridad contra el láser",
+"dice": "Dermatologists warn that lasers can thin the skin",
+"pasa_en_pantalla": "Rótulo (inferido).",
+"funcion": "Miedo racional."
+},
+{
+"seg_ini": 24,
+"seg_fin": 31,
+"bloque": "plazo + prueba",
+"dice": "In just three weeks… Check it out",
+"pasa_en_pantalla": "Antes/después (inferido).",
+"funcion": "Visual."
+},
+{
+"seg_ini": 31,
+"seg_fin": 37,
+"bloque": "prueba social + oferta",
+"dice": "thousands of women over 40… up to 45% off",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre."
+}
+],
+"gancho": {
+"tipo": "Secreto + edad + anti-caro",
+"texto_en": "The secret to smooth pores after 40 is not using a laser.",
+"texto_es": "El secreto de unos poros lisos después de los 40 no es el láser.",
+"por_que_para_el_scroll": "«Secreto» + «después de los 40» + «no es el láser»: tres ganchos en una frase para Marisol."
+},
+"reencuadre": "Lo agresivo envejece la piel.",
+"mecanismo": "Enfoque científico nocturno sin dañar la barrera.",
+"prueba": [
+"Transformación doble",
+"3 semanas",
+"Miles de mujeres 40+"
+],
+"objeciones_resueltas": [
+"«A mi edad solo funciona lo agresivo» → al revés"
+],
+"disparadores_emocionales": [
+"Miedo a envejecer la piel",
+"Pertenencia 40+"
+],
+"tecnicas_persuasion": [
+"Paralelismo (de X a Y, de A a B)",
+"Autoridad negativa (contra el láser)",
+"Plazo",
+"Prueba social segmentada",
+"Descuento alto"
+],
+"frases_clave": [
+{
+"en": "from visible black dots to a glass smooth nose, from oily shine to matte glow",
+"es": "de puntitos visibles a nariz lisa; de brillo a mate"
+},
+{
+"en": "Harsh treatments don't age well on the skin",
+"es": "Lo agresivo envejece mal (R38)"
+}
+],
+"oferta_cta": "Hasta 45 %.",
+"por_que_funciona": "Familia con R38 («Harsh treatments don't age well») y R41: el mismo cuerpo con tres ganchos distintos, 30 anuncios en total. Es EL guion de Marisol: edad explícita, miedo a dañar la piel madura, paralelismo de transformación y prueba social de su grupo.",
+"senales_de_conversion": "10 anuncios, 7 vídeos, 11 variantes, 749 días; con R38 y R41 ≈ 32 anuncios.",
+"que_copiar_para_nocta": [
+"Gancho por edad para Marisol",
+"Paralelismo «de X a Y»",
+"Contra láser/cabina con precio real"
+],
+"que_no_se_puede_decir_en_espana": [
+"«Dermatologists warn» → «los tratamientos agresivos pueden dañar la barrera» sin citar médicos",
+"«glass smooth» → «mucho más lisa»"
+],
+"adaptacion_espana": "Marisol."
+},
+{
+"rank": 20,
+"id_video": "762290962859054.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 22,
+"metricas": {
+"anuncios": 10,
+"videos": 1,
+"dias_totales": 800,
+"dias_max": 254,
+"variantes": 19,
+"primera_fecha": "2025-07-22",
+"ultima_fecha": "2026-05-13"
+},
+"transcripcion_en": "If you notice blackheads, do not squeeze them. Instead, use one of these. They are hydrocolloid nose patches from Beloved View, Swiss. They absorb impurities using hydrocolloid that gently trap excess oil and sebum to effectively clear your pores. My skin looks just so much cleaner and smoother when I use these. Go get this nose patches only if you're ready to have smooth and clean skin.",
+"traduccion_es": "Si notas puntos negros, no los aprietes. Usa esto. Son parches de nariz de hidrocoloide de Vue. Absorben las impurezas con hidrocoloide que atrapa con suavidad el exceso de grasa y sebo para limpiar los poros. Mi piel se ve mucho más limpia y lisa cuando los uso. Cómpralos solo si estás lista para tener la piel lisa y limpia.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho orden + sustitución",
+"dice": "If you notice blackheads, do not squeeze them. Instead, use one of these.",
+"pasa_en_pantalla": "Parche en mano (inferido).",
+"funcion": "Orden + objeto."
+},
+{
+"seg_ini": 3,
+"seg_fin": 14,
+"bloque": "mecanismo mínimo",
+"dice": "hydrocolloid that gently trap excess oil and sebum",
+"pasa_en_pantalla": "Aplicación (inferido).",
+"funcion": "Una frase."
+},
+{
+"seg_ini": 14,
+"seg_fin": 22,
+"bloque": "resultado + cta con reto",
+"dice": "cleaner and smoother… only if you're ready",
+"pasa_en_pantalla": "Nariz (inferido).",
+"funcion": "CTA que reta."
+}
+],
+"gancho": {
+"tipo": "Orden + sustitución",
+"texto_en": "If you notice blackheads, do not squeeze them. Instead, use one of these.",
+"texto_es": "Si te ves puntos negros, no los aprietes. Ponte esto.",
+"por_que_para_el_scroll": "Da la solución en el segundo 2: para gente que ya conoce el problema."
+},
+"reencuadre": "Apretar → parche.",
+"mecanismo": "Atrapa grasa y sebo.",
+"prueba": [
+"Ninguna visual explícita"
+],
+"objeciones_resueltas": [
+"Ninguna: es un recordatorio"
+],
+"disparadores_emocionales": [
+"Reto («solo si estás lista»)"
+],
+"tecnicas_persuasion": [
+"Brevedad",
+"CTA de reto (takeaway)"
+],
+"frases_clave": [
+{
+"en": "Instead, use one of these.",
+"es": "Ponte esto."
+},
+{
+"en": "only if you're ready to have smooth and clean skin",
+"es": "solo si estás lista para tener la piel limpia"
+}
+],
+"oferta_cta": "30 % en el texto; 254 días.",
+"por_que_funciona": "22 segundos, 254 días, 19 variantes: la prueba de que un anuncio ultracorto funciona como recordatorio/retargeting cuando el mercado ya conoce el reencuadre. Para NOCTA es el formato para Reels de 15 s y para el retargeting por email.",
+"senales_de_conversion": "10 anuncios, 1 vídeo, 19 variantes, 800 días; 254 días.",
+"que_copiar_para_nocta": [
+"Formato de 15–20 s: orden + objeto + una frase de mecanismo + reto"
+],
+"que_no_se_puede_decir_en_espana": [
+"«effectively clear your pores» → «ayudan a limpiar los poros»"
+],
+"adaptacion_espana": "Bea; TikTok/Reels."
+},
+{
+"rank": 21,
+"id_video": "1715477885688274.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 38,
+"metricas": {
+"anuncios": 12,
+"videos": 5,
+"dias_totales": 700,
+"dias_max": 223,
+"variantes": 12,
+"primera_fecha": "2025-07-14",
+"ultima_fecha": "2026-05-15"
+},
+"transcripcion_en": "Here's the truth about those black dots on your nose that nobody talks about. Guys, listen up. Those black dots and pores, they're not just dirt. They're oxidized oil trapped deep in your pores. Regular cleansers and face wash, they don't cut it. They can't reach deep enough to pull that stuff out. That's why hydrocolloid nose patches are getting so much attention at the moment. They work like a magnet, pulling out all the deep impurities while you sleep. No scrubbing, no squeezing, no mess. Just clear fresh pores by morning, simple as that. One pack is all it took for me to see the difference. Still skeptical? Try them yourself and see. I'm using the patches from View Swiss because they offer a money-back guarantee if you're not happy with the results.",
+"traduccion_es": "Esta es la verdad sobre esos puntos negros de la nariz que nadie te cuenta. Chicos, escuchad. Esos puntitos y poros no son solo suciedad: son grasa oxidada atrapada al fondo de los poros. Los limpiadores normales no llegan; no pueden bajar tanto. Por eso los parches de hidrocoloide están llamando tanto la atención ahora mismo: funcionan como un imán, sacando las impurezas profundas mientras duermes. Sin frotar, sin apretar, sin líos. Solo poros limpios por la mañana, así de simple. A mí me bastó un paquete para ver la diferencia. ¿Sigues con dudas? Pruébalos tú mismo. Yo uso los de Vue porque ofrecen garantía de devolución si no quedas contento.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 4,
+"bloque": "gancho secreto",
+"dice": "Here's the truth about those black dots on your nose that nobody talks about. Guys, listen up.",
+"pasa_en_pantalla": "Hombre a cámara (inferido).",
+"funcion": "Secreto + llamada al grupo."
+},
+{
+"seg_ini": 4,
+"seg_fin": 14,
+"bloque": "reencuadre grasa oxidada",
+"dice": "not just dirt. They're oxidized oil trapped deep in your pores",
+"pasa_en_pantalla": "Macro (inferido).",
+"funcion": "Explicación."
+},
+{
+"seg_ini": 14,
+"seg_fin": 26,
+"bloque": "mecanismo imán",
+"dice": "like a magnet, pulling out all the deep impurities while you sleep. No scrubbing, no squeezing, no mess.",
+"pasa_en_pantalla": "Parche (inferido).",
+"funcion": "Solución + tres negaciones."
+},
+{
+"seg_ini": 26,
+"seg_fin": 32,
+"bloque": "prueba",
+"dice": "One pack is all it took for me to see the difference.",
+"pasa_en_pantalla": "Nariz (inferido).",
+"funcion": "Resultado en un paquete."
+},
+{
+"seg_ini": 32,
+"seg_fin": 38,
+"bloque": "reto + garantía",
+"dice": "Still skeptical? Try them yourself… money-back guarantee",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre."
+}
+],
+"gancho": {
+"tipo": "Secreto + llamada al grupo",
+"texto_en": "Here's the truth about those black dots on your nose that nobody talks about. Guys, listen up.",
+"texto_es": "La verdad sobre esos puntos negros de la nariz que nadie te cuenta. Chicos, atentos.",
+"por_que_para_el_scroll": "Promesa de información oculta + interpelación directa al grupo masculino."
+},
+"reencuadre": "Grasa oxidada profunda, no suciedad.",
+"mecanismo": "Imán profundo de noche.",
+"prueba": [
+"Un paquete bastó"
+],
+"objeciones_resueltas": [
+"«Me lavo la cara» → no llega al fondo",
+"«Sigo con dudas» → pruébalo, garantía"
+],
+"disparadores_emocionales": [
+"Curiosidad (secreto)",
+"Reto"
+],
+"tecnicas_persuasion": [
+"Secreto",
+"Interpelación",
+"Metáfora",
+"Reto al escéptico"
+],
+"frases_clave": [
+{
+"en": "that nobody talks about",
+"es": "que nadie te cuenta"
+},
+{
+"en": "Regular cleansers… can't reach deep enough",
+"es": "Los limpiadores no llegan tan abajo"
+},
+{
+"en": "Still skeptical? Try them yourself.",
+"es": "¿Sigues con dudas? Pruébalo."
+}
+],
+"oferta_cta": "Garantía; 30 % en el texto.",
+"por_que_funciona": "223 días: la versión masculina del reencuadre con la palabra «secreto». El mismo guion murió en 0 días con otra persona (ver perdedores): la ejecución importa tanto como el texto.",
+"senales_de_conversion": "12 anuncios, 5 vídeos, 12 variantes, 700 días; 223 días.",
+"que_copiar_para_nocta": [
+"Gancho «la verdad que nadie te cuenta» para Álex",
+"Reto al escéptico antes de la garantía"
+],
+"que_no_se_puede_decir_en_espana": [
+"Ninguno grave"
+],
+"adaptacion_espana": "Álex."
+},
+{
+"rank": 23,
+"id_video": "4486009394968676.mp4",
+"titulo_meta": "Clogged Pores? 30% OFF Sale",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 27,
+"metricas": {
+"anuncios": 6,
+"videos": 1,
+"dias_totales": 756,
+"dias_max": 290,
+"variantes": 7,
+"primera_fecha": "2025-06-16",
+"ultima_fecha": "2026-05-13"
+},
+"transcripcion_en": "This is the consequence of not taking care of my pores the right way. I'll show you what worked for me. Nose patches. They gently dissolve impurities and absorb all the gunk from my pores. My pores were enlarged and clogged because I was treating them like they were blackheads. But they were actually sabacus filaments which can be really hard to remove. I use these patches every week. When I peel it off, my nose is left so smooth and my pores just feel a lot smaller too. Here you can see the white spots that formed on the patch. Go try them. You'll thank me later.",
+"traduccion_es": "Esta es la consecuencia de no cuidar bien mis poros. Te enseño lo que me funcionó: parches de nariz. Disuelven las impurezas con suavidad y absorben toda la porquería de los poros. Tenía los poros dilatados y tapados porque los trataba como puntos negros, pero en realidad eran filamentos sebáceos, que cuestan mucho de quitar. Uso estos parches cada semana. Cuando me lo quito, la nariz queda lisísima y los poros parecen mucho más pequeños. Aquí puedes ver los puntos blancos que se han formado en el parche. Pruébalos. Me lo agradecerás.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho consecuencia",
+"dice": "This is the consequence of not taking care of my pores the right way.",
+"pasa_en_pantalla": "Macro nariz (inferido).",
+"funcion": "Muestra el daño primero."
+},
+{
+"seg_ini": 3,
+"seg_fin": 8,
+"bloque": "promesa",
+"dice": "I'll show you what worked for me. Nose patches.",
+"pasa_en_pantalla": "Caja (inferido).",
+"funcion": "Solución nombrada pronto."
+},
+{
+"seg_ini": 8,
+"seg_fin": 18,
+"bloque": "reencuadre personal",
+"dice": "I was treating them like they were blackheads. But they were actually sebaceous filaments",
+"pasa_en_pantalla": "Macro (inferido).",
+"funcion": "Diagnóstico."
+},
+{
+"seg_ini": 18,
+"seg_fin": 24,
+"bloque": "uso + resultado",
+"dice": "every week… so smooth… pores just feel a lot smaller",
+"pasa_en_pantalla": "Nariz (inferido).",
+"funcion": "Frecuencia real (semanal)."
+},
+{
+"seg_ini": 24,
+"seg_fin": 27,
+"bloque": "prueba + cta",
+"dice": "Here you can see the white spots that formed on the patch. Go try them.",
+"pasa_en_pantalla": "Parche usado (inferido).",
+"funcion": "Peel reveal."
+}
+],
+"gancho": {
+"tipo": "Consecuencia (mostrar el daño)",
+"texto_en": "This is the consequence of not taking care of my pores the right way.",
+"texto_es": "Esto es lo que pasa por no cuidar bien los poros.",
+"por_que_para_el_scroll": "Muestra la nariz «mal» en el segundo 0 con una frase de culpa asumida."
+},
+"reencuadre": "Filamentos, no puntos negros.",
+"mecanismo": "Absorbe la porquería.",
+"prueba": [
+"Puntos blancos en el parche (explícito)",
+"Uso semanal"
+],
+"objeciones_resueltas": [
+"«¿Cada cuánto?» → cada semana"
+],
+"disparadores_emocionales": [
+"Vergüenza asumida",
+"Satisfacción"
+],
+"tecnicas_persuasion": [
+"Mostrar el daño",
+"Frecuencia honesta",
+"Peel reveal"
+],
+"frases_clave": [
+{
+"en": "This is the consequence of not taking care of my pores",
+"es": "Esto es lo que pasa por no cuidar los poros"
+},
+{
+"en": "Here you can see the white spots that formed on the patch",
+"es": "Mira los puntos blancos que se han formado en el parche"
+}
+],
+"oferta_cta": "30 %; 290 días.",
+"por_que_funciona": "27 segundos y 290 días: enseña el daño en el segundo 0 y el parche blanco en el 24. Es el guion con menos palabras por prueba visual del ranking; y dice «cada semana», que es la frecuencia real de uso (2–3 noches por semana): honesto y coherente con la caja de 8.",
+"senales_de_conversion": "6 anuncios, 1 vídeo, 7 variantes, 756 días; 290 días.",
+"que_copiar_para_nocta": [
+"Empezar por el daño",
+"Decir la frecuencia real (2–3 noches/semana)",
+"Puntos blancos en el parche como cierre"
+],
+"que_no_se_puede_decir_en_espana": [
+"«dissolve impurities» → «absorben»"
+],
+"adaptacion_espana": "Bea."
+},
+{
+"rank": 25,
+"id_video": "667511742894805.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "clear-pore-duo",
+"duracion_s": 56,
+"metricas": {
+"anuncios": 8,
+"videos": 1,
+"dias_totales": 732,
+"dias_max": 294,
+"variantes": 8,
+"primera_fecha": "2025-05-21",
+"ultima_fecha": "2026-05-11"
+},
+"transcripcion_en": "I'm about to show the only two products you need to transform your nose from this to this. Boost with salicylic toner is designed to clear clogged pores and smooth skin. With salicylic acid and glycolic acid it exfoliates, refines texture and really keeps pores clear. And when it's paired with their best-selling hydrocolloid nose patches, this duo absorbs excess oils and draws out impurities overnight. Unlike harsh scrubs or extractions, these patches work without damaging your skin barrier, making them perfect even for really, really sensitive skin. Boost with is now offering an exclusive pore care bundle so you can get both products together for the best results. Are you struggling with blackheads or uneven texture? Now's the perfect time to try it out yourself. Plus, they're offering 60-day money-back guarantee if you're not happy with the results. Try it out!",
+"traduccion_es": "Te voy a enseñar los dos únicos productos que necesitas para transformar tu nariz de esto a esto. El tónico con salicílico está diseñado para destapar poros y alisar la piel; con ácido salicílico y glicólico exfolia, refina la textura y mantiene los poros limpios. Y combinado con sus parches de nariz de hidrocoloide, el dúo absorbe el exceso de grasa y saca las impurezas durante la noche. A diferencia de los exfoliantes agresivos o las extracciones, estos parches no dañan la barrera de la piel, así que van bien incluso para piel muy, muy sensible. Ahora ofrecen un pack de cuidado de poros para llevarte los dos juntos. ¿Tienes puntos negros o textura irregular? Es el momento de probarlo. Además, 60 días de garantía si no quedas contenta.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 4,
+"bloque": "gancho «los dos únicos»",
+"dice": "the only two products you need to transform your nose from this to this",
+"pasa_en_pantalla": "Antes/después (inferido).",
+"funcion": "Simplicidad + transformación."
+},
+{
+"seg_ini": 4,
+"seg_fin": 18,
+"bloque": "paso 1",
+"dice": "Boost with salicylic toner… exfoliates, refines texture",
+"pasa_en_pantalla": "Tónico (inferido).",
+"funcion": "Mecanismo 1."
+},
+{
+"seg_ini": 18,
+"seg_fin": 30,
+"bloque": "paso 2",
+"dice": "paired with their best-selling hydrocolloid nose patches… absorbs excess oils… overnight",
+"pasa_en_pantalla": "Parche (inferido).",
+"funcion": "Mecanismo 2."
+},
+{
+"seg_ini": 30,
+"seg_fin": 40,
+"bloque": "seguridad",
+"dice": "without damaging your skin barrier… really, really sensitive skin",
+"pasa_en_pantalla": "Piel (inferido).",
+"funcion": "Objeción sensibilidad."
+},
+{
+"seg_ini": 40,
+"seg_fin": 56,
+"bloque": "pack + garantía",
+"dice": "exclusive pore care bundle… 60-day money-back guarantee",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre de pack."
+}
+],
+"gancho": {
+"tipo": "Simplicidad («los dos únicos») + transformación",
+"texto_en": "the only two products you need to transform your nose from this to this",
+"texto_es": "Los dos únicos productos que necesitas para pasar de esto a esto",
+"por_que_para_el_scroll": "Reduce el skincare a dos cosas y enseña el antes/después en el segundo 2."
+},
+"reencuadre": "No necesitas 10 pasos: dos.",
+"mecanismo": "Exfoliar + absorber.",
+"prueba": [
+"Antes/después",
+"Best-seller"
+],
+"objeciones_resueltas": [
+"«Piel sensible» → sin dañar la barrera",
+"«Muchos pasos» → solo dos"
+],
+"disparadores_emocionales": [
+"Alivio de simplicidad"
+],
+"tecnicas_persuasion": [
+"Reducción («los dos únicos»)",
+"Sistema de dos pasos",
+"Pack"
+],
+"frases_clave": [
+{
+"en": "the only two products you need",
+"es": "los dos únicos productos que necesitas"
+},
+{
+"en": "from this to this",
+"es": "de esto a esto"
+}
+],
+"oferta_cta": "Pack exclusivo + 60 días; 294 días.",
+"por_que_funciona": "El anuncio de Dúo más longevo (294 días). Vende el pack con un argumento de simplicidad («solo dos») y un mecanismo en dos pasos que se entiende. Para NOCTA es el molde del anuncio del Dúo Noche (nariz + granos): «los dos únicos parches que necesitas».",
+"senales_de_conversion": "8 anuncios, 1 vídeo, 8 variantes, 732 días; 294 días.",
+"que_copiar_para_nocta": [
+"«Los dos únicos» para el Dúo Noche",
+"Argumento de piel sensible"
+],
+"que_no_se_puede_decir_en_espana": [
+"Ninguno grave"
+],
+"adaptacion_espana": "Marisol y Bea."
+},
+{
+"rank": 26,
+"id_video": "873621904612893.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 15,
+"metricas": {
+"anuncios": 8,
+"videos": 1,
+"dias_totales": 720,
+"dias_max": 290,
+"variantes": 10,
+"primera_fecha": "2025-06-16",
+"ultima_fecha": "2026-05-13"
+},
+"transcripcion_en": "Embarrassed of makeup looking like this. We got you girl apply nose patches overnight It pulls out all impurities into allowing pools to work properly You'll get smooth glow skin already after two weeks of using them your nose will look clear and clean with use with nose patches Click the link below to get 30% off now",
+"traduccion_es": "¿Te da vergüenza que el maquillaje se te vea así? Te ayudamos: ponte parches de nariz por la noche. Sacan todas las impurezas y dejan que los poros funcionen bien. Con dos semanas de uso tendrás la piel lisa y luminosa y la nariz limpia. Pincha abajo para un 30 % de descuento.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho vergüenza maquillaje",
+"dice": "Embarrassed of makeup looking like this.",
+"pasa_en_pantalla": "Base cuarteada en la nariz (inferido).",
+"funcion": "Problema visual concreto."
+},
+{
+"seg_ini": 3,
+"seg_fin": 10,
+"bloque": "solución",
+"dice": "apply nose patches overnight",
+"pasa_en_pantalla": "Parche (inferido).",
+"funcion": "Directo."
+},
+{
+"seg_ini": 10,
+"seg_fin": 15,
+"bloque": "plazo + oferta",
+"dice": "after two weeks… 30% off",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre."
+}
+],
+"gancho": {
+"tipo": "Vergüenza + prueba visual del maquillaje",
+"texto_en": "Embarrassed of makeup looking like this.",
+"texto_es": "¿Te da vergüenza que el maquillaje se te vea así?",
+"por_que_para_el_scroll": "El maquillaje cuarteado en la nariz es un problema que Marisol ve cada mañana."
+},
+"reencuadre": "El maquillaje falla por los poros, no por la base.",
+"mecanismo": "Saca impurezas de noche.",
+"prueba": [
+"Plazo de dos semanas"
+],
+"objeciones_resueltas": [
+"«¿Cuánto tarda?» → dos semanas"
+],
+"disparadores_emocionales": [
+"Vergüenza"
+],
+"tecnicas_persuasion": [
+"Problema visual",
+"Brevedad",
+"Descuento"
+],
+"frases_clave": [
+{
+"en": "Embarrassed of makeup looking like this",
+"es": "¿Te da vergüenza que la base se te vea así?"
+}
+],
+"oferta_cta": "30 %; 290 días.",
+"por_que_funciona": "15 segundos, 290 días, 10 variantes: el anuncio más corto del ranking. Vive de una sola imagen (base cuarteada) y un solo beneficio.",
+"senales_de_conversion": "8 anuncios, 1 vídeo, 10 variantes, 720 días; 290 días.",
+"que_copiar_para_nocta": [
+"Ángulo maquillaje para Marisol en 15 s"
+],
+"que_no_se_puede_decir_en_espana": [
+"«pulls out all impurities» → «absorbe la grasa»"
+],
+"adaptacion_espana": "Marisol."
+},
+{
+"rank": 28,
+"id_video": "822761193551016.mp4",
+"titulo_meta": "One Patch, Visible Results",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 26,
+"metricas": {
+"anuncios": 13,
+"videos": 3,
+"dias_totales": 644,
+"dias_max": 200,
+"variantes": 22,
+"primera_fecha": "2025-09-24",
+"ultima_fecha": "2026-05-15"
+},
+"transcripcion_en": "So let me show you how I took my skin from this to this. Now you can see all the gunk stuck on this nose patch. All you need is to apply your nose patch. I just go to sleep with it, and I'm about to take it off. Guys, this is insane. This is why your skin doesn't look as good as it could be. Routine that's definitely gonna elevate your look. And trust me, your girl's gonna notice. Try this for yourself and thank me when you're going on your second date.",
+"traduccion_es": "Te enseño cómo pasé de esto a esto. Mira toda la porquería que se ha quedado en el parche. Solo tienes que ponerte el parche, dormir con él, y ahora me lo quito. Tíos, esto es una locura. Por esto tu piel no se ve tan bien como podría. Una rutina que te va a subir el nivel. Y créeme: tu chica lo va a notar. Pruébalo y me lo agradeces en la segunda cita.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho transformación + prueba",
+"dice": "let me show you how I took my skin from this to this. Now you can see all the gunk stuck on this nose patch.",
+"pasa_en_pantalla": "Antes/después + parche usado (inferido).",
+"funcion": "Prueba en el segundo 2."
+},
+{
+"seg_ini": 3,
+"seg_fin": 14,
+"bloque": "uso en tiempo real",
+"dice": "apply… go to sleep… I'm about to take it off. Guys, this is insane.",
+"pasa_en_pantalla": "Retirada en cámara (inferido).",
+"funcion": "Peel reveal en directo."
+},
+{
+"seg_ini": 14,
+"seg_fin": 26,
+"bloque": "beneficio social + cta",
+"dice": "your girl's gonna notice… thank me when you're going on your second date",
+"pasa_en_pantalla": "Sonrisa (inferido).",
+"funcion": "Beneficio de ligar."
+}
+],
+"gancho": {
+"tipo": "Transformación + peel reveal inmediato",
+"texto_en": "let me show you how I took my skin from this to this",
+"texto_es": "Te enseño cómo pasé de esto a esto",
+"por_que_para_el_scroll": "Antes/después y parche usado en los tres primeros segundos."
+},
+"reencuadre": "Ninguno: pura demostración.",
+"mecanismo": "Ninguno explícito.",
+"prueba": [
+"Retirada del parche en cámara",
+"«Toda la porquería»"
+],
+"objeciones_resueltas": [
+"«¿Para qué?» → para ligar"
+],
+"disparadores_emocionales": [
+"Asco satisfactorio",
+"Deseo (segunda cita)"
+],
+"tecnicas_persuasion": [
+"Demostración en directo",
+"Beneficio social masculino",
+"Humor"
+],
+"frases_clave": [
+{
+"en": "Guys, this is insane.",
+"es": "Tíos, esto es una locura."
+},
+{
+"en": "thank me when you're going on your second date",
+"es": "me lo agradeces en la segunda cita"
+}
+],
+"oferta_cta": "«Try it now»; 200 días.",
+"por_que_funciona": "13 anuncios y 22 variantes en 26 segundos sin explicar nada: es el anuncio de puro «asco satisfactorio» para hombres, con un beneficio social explícito. Demuestra que para Álex la demostración vale más que la explicación.",
+"senales_de_conversion": "13 anuncios, 3 vídeos, 22 variantes, 644 días; 200 días.",
+"que_copiar_para_nocta": [
+"Peel reveal en directo en el segundo 3 para Álex",
+"Beneficio social («lo va a notar»)"
+],
+"que_no_se_puede_decir_en_espana": [
+"Ninguno"
+],
+"adaptacion_espana": "Álex, TikTok."
+},
+{
+"rank": 29,
+"id_video": "1175132053823619.mp4",
+"titulo_meta": "From Oily Nose to Clear Skin",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 27,
+"metricas": {
+"anuncios": 11,
+"videos": 2,
+"dias_totales": 656,
+"dias_max": 161,
+"variantes": 20,
+"primera_fecha": "2025-06-16",
+"ultima_fecha": "2026-05-14"
+},
+"transcripcion_en": "Three warning signs, your pores need immediate help. One, your nose is constantly oily and shiny. Two, you experience blackheads despite having a skincare routine. Three, your pores are visibly large when you look in the mirror. Bestie, there's a better way now. It's View Swiss's poor nose patches, goodbye enlarged pores, blackheads, oily nose, rough texture, make your pores cleaner, smaller, invisible, backed by Korean skincare science. And best of all, they come with a 60-day money-back guarantee. Get your View Swiss nose patches now.",
+"traduccion_es": "Tres señales de alarma de que tus poros necesitan ayuda ya. Una: la nariz siempre grasa y brillante. Dos: te salen puntos negros aunque tengas rutina. Tres: los poros se te ven grandes en el espejo. Amiga, ahora hay una forma mejor: los parches de nariz de Vue. Adiós poros dilatados, puntos negros, nariz grasa, textura áspera. Poros más limpios, más pequeños, invisibles, con la ciencia coreana detrás. Y lo mejor: 60 días de garantía. Consigue los tuyos.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 3,
+"bloque": "gancho listicle urgente",
+"dice": "Three warning signs, your pores need immediate help.",
+"pasa_en_pantalla": "Rótulo (inferido).",
+"funcion": "Urgencia + lista."
+},
+{
+"seg_ini": 3,
+"seg_fin": 13,
+"bloque": "3 señales",
+"dice": "oily and shiny… blackheads despite routine… visibly large",
+"pasa_en_pantalla": "Nariz (inferido).",
+"funcion": "Auto-diagnóstico."
+},
+{
+"seg_ini": 13,
+"seg_fin": 22,
+"bloque": "solución en ráfaga",
+"dice": "goodbye enlarged pores, blackheads, oily nose, rough texture",
+"pasa_en_pantalla": "Producto (inferido).",
+"funcion": "Lista de beneficios."
+},
+{
+"seg_ini": 22,
+"seg_fin": 27,
+"bloque": "garantía + cta",
+"dice": "60-day money-back guarantee. Get your… now.",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre."
+}
+],
+"gancho": {
+"tipo": "Listicle urgente",
+"texto_en": "Three warning signs, your pores need immediate help.",
+"texto_es": "Tres señales de que tus poros necesitan ayuda ya.",
+"por_que_para_el_scroll": "Lista + urgencia; el vídeo orgánico más visto de Vue en TikTok usa este texto."
+},
+"reencuadre": "Síntomas → un problema.",
+"mecanismo": "Ciencia coreana (genérico).",
+"prueba": [
+"Ninguna visual"
+],
+"objeciones_resueltas": [
+"«¿Es para mí?»"
+],
+"disparadores_emocionales": [
+"Urgencia",
+"Complicidad («bestie»)"
+],
+"tecnicas_persuasion": [
+"Listicle",
+"Ráfaga de beneficios",
+"Tono de amiga"
+],
+"frases_clave": [
+{
+"en": "Bestie, there's a better way now.",
+"es": "Amiga, ahora hay una forma mejor."
+},
+{
+"en": "you experience blackheads despite having a skincare routine",
+"es": "te salen puntos negros aunque tengas rutina"
+}
+],
+"oferta_cta": "60 días.",
+"por_que_funciona": "27 segundos, 11 anuncios, 20 variantes. Versión rápida y «de amiga» del listicle R9; probada orgánicamente en TikTok antes. Claim «invisibles» a suavizar.",
+"senales_de_conversion": "11 anuncios, 2 vídeos, 20 variantes, 656 días; 161 días.",
+"que_copiar_para_nocta": [
+"Tono «amiga» para Bea",
+"Probar el texto orgánico primero"
+],
+"que_no_se_puede_decir_en_espana": [
+"«invisible» → «mucho menos visibles»",
+"«backed by Korean skincare science» → condicional"
+],
+"adaptacion_espana": "Bea."
+},
+{
+"rank": 30,
+"id_video": "2070732903463784.mp4",
+"titulo_meta": "No More Nose Bumps",
+"landing": "hydrocolloid-nose-patches",
+"duracion_s": 57,
+"metricas": {
+"anuncios": 8,
+"videos": 2,
+"dias_totales": 661,
+"dias_max": 184,
+"variantes": 17,
+"primera_fecha": "2025-10-22",
+"ultima_fecha": "2026-05-15"
+},
+"transcripcion_en": "I had to teach my boyfriend these aren't blackheads. I watched him squeeze and scrub his nose for months, getting frustrated because nothing worked. Finally, I had to step in and educate him. These are called sebaceous filaments, basically oil plugs that form naturally in your pores. Guys, you can't just rip them out or scrub them away like dirt. They need completely different care than actual blackheads. That's why any girl would tell you to stop picking at your face. You're making it worse. So I got him these Korean nose patches that are specifically designed for sebaceous filaments, not blackheads. They gently absorb the oil buildup overnight while he sleeps. No more scrubbing face with soap, no more red irritated skin from those painful strips he used to use. After three weeks, his nose looks so much smoother. Even he admits I was right and trust me, that doesn't happen often. Now, he's telling all his guy friends about it. Girlfriends everywhere are thanking me for finally getting their boyfriends to listen. And the best part, they offer a money back guarantee. So there's no risk. You can also save up to 30% plus free shipping right now. Grab yours today.",
+"traduccion_es": "Tuve que explicarle a mi novio que esto no son puntos negros. Le vi meses apretándose y frotándose la nariz, frustrado porque nada funcionaba. Al final tuve que intervenir y educarle. Se llaman filamentos sebáceos: tapones de grasa que se forman de forma natural. Chicos, no podéis arrancarlos ni frotarlos como si fueran suciedad. Necesitan un cuidado distinto. Por eso cualquier chica os diría que dejéis de tocaros la cara: lo empeoráis. Así que le compré estos parches coreanos hechos para filamentos, no para puntos negros. Absorben la grasa mientras duerme. Se acabó frotarse con jabón y la piel roja de las tiras que usaba. A las tres semanas su nariz está mucho más lisa. Hasta él admite que yo tenía razón, y créeme, eso no pasa a menudo. Ahora se lo cuenta a sus amigos. Novias de todo el mundo me dan las gracias por conseguir que sus novios escuchen. Y lo mejor: garantía de devolución, sin riesgo. Y ahora hasta un 30 % de descuento más envío gratis.",
+"estructura": [
+{
+"seg_ini": 0,
+"seg_fin": 4,
+"bloque": "gancho relación",
+"dice": "I had to teach my boyfriend these aren't blackheads.",
+"pasa_en_pantalla": "Pareja (inferido).",
+"funcion": "Historia con tercero."
+},
+{
+"seg_ini": 4,
+"seg_fin": 14,
+"bloque": "observación",
+"dice": "I watched him squeeze and scrub his nose for months",
+"pasa_en_pantalla": "Él frustrado (inferido).",
+"funcion": "Espejo para hombres, contado por ella."
+},
+{
+"seg_ini": 14,
+"seg_fin": 26,
+"bloque": "reencuadre + regaño cariñoso",
+"dice": "Guys, you can't just rip them out… any girl would tell you to stop picking",
+"pasa_en_pantalla": "Ella a cámara (inferido).",
+"funcion": "Voz de autoridad doméstica."
+},
+{
+"seg_ini": 26,
+"seg_fin": 40,
+"bloque": "solución + resultado",
+"dice": "Korean nose patches… After three weeks, his nose looks so much smoother",
+"pasa_en_pantalla": "Él con parche (inferido).",
+"funcion": "Prueba con plazo."
+},
+{
+"seg_ini": 40,
+"seg_fin": 50,
+"bloque": "humor + prueba social",
+"dice": "Even he admits I was right… Girlfriends everywhere are thanking me",
+"pasa_en_pantalla": "Ambos (inferido).",
+"funcion": "Doble público."
+},
+{
+"seg_ini": 50,
+"seg_fin": 57,
+"bloque": "garantía + oferta",
+"dice": "money back guarantee… 30% plus free shipping",
+"pasa_en_pantalla": "Web (inferido).",
+"funcion": "Cierre."
+}
+],
+"gancho": {
+"tipo": "Relación (novia educa a novio)",
+"texto_en": "I had to teach my boyfriend these aren't blackheads.",
+"texto_es": "Tuve que explicarle a mi novio que esto no son puntos negros.",
+"por_que_para_el_scroll": "Historia de pareja con el reencuadre dentro; apela a ella (compradora) y a él (usuario)."
+},
+"reencuadre": "El del nº 1, contado por un tercero.",
+"mecanismo": "Absorbe de noche; sin jabón ni tiras.",
+"prueba": [
+"Tres semanas",
+"«Él admite que tenía razón»",
+"Novias agradecidas"
+],
+"objeciones_resueltas": [
+"«Los hombres no se cuidan» → ella se lo compra",
+"«¿Duele?» → adiós rojez de tiras"
+],
+"disparadores_emocionales": [
+"Complicidad de pareja",
+"Humor",
+"Orgullo (tener razón)"
+],
+"tecnicas_persuasion": [
+"Narración en tercera persona",
+"Doble público",
+"Humor de pareja",
+"Oferta apilada"
+],
+"frases_clave": [
+{
+"en": "I had to teach my boyfriend these aren't blackheads.",
+"es": "Tuve que explicarle a mi novio que eso no son puntos negros."
+},
+{
+"en": "Even he admits I was right, and trust me, that doesn't happen often.",
+"es": "Hasta él admite que yo tenía razón, y eso no pasa a menudo."
+},
+{
+"en": "Girlfriends everywhere are thanking me",
+"es": "Novias de todo el mundo me dan las gracias"
+}
+],
+"oferta_cta": "30 % + envío gratis + garantía.",
+"por_que_funciona": "184 días, 17 variantes: el guion de pareja convierte porque la mujer compra para el hombre (regalo/cuidado) y el hombre se reconoce sin que le vendan directamente. El humor («no pasa a menudo») da credibilidad.",
+"senales_de_conversion": "8 anuncios, 2 vídeos, 17 variantes, 661 días; 184 días.",
+"que_copiar_para_nocta": [
+"Guion de pareja para vender a Álex a través de Bea/Marisol",
+"Humor doméstico"
+],
+"que_no_se_puede_decir_en_espana": [
+"Corea → condicional"
+],
+"adaptacion_espana": "Bea/Marisol con pareja."
+}
+]

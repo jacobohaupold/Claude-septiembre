@@ -1,0 +1,553 @@
+[
+ {
+  "n": 91,
+  "nombre": "Estático: parche usado a contraluz",
+  "familia": "F12 · Estáticos, carruseles y formatos especiales",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": "—",
+  "referencias_vue": [
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "parche usado como imagen central"
+   },
+   {
+    "rank": 7,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 14 var.",
+    "que_se_toma": "la foto del parche como prueba"
+   }
+  ],
+  "concepto": "Imagen del parche usado a contraluz + «Esto salió de una nariz en 8 horas». — Una imagen, una frase, CTA",
+  "guion": [
+   {
+    "t": "Imagen",
+    "plano": "Foto: parche usado a contraluz en la ventana, luz de mañana",
+    "texto_pantalla": "Esto salió de una nariz en 8 horas",
+    "voz": "—",
+    "nota": "Imagen principal: la foto y el titular hacen todo el trabajo."
+   },
+   {
+    "t": "Texto",
+    "plano": "Subtítulo pequeño bajo la foto",
+    "texto_pantalla": "Parche de hidrocoloide NOCTA · absorbe, no arranca",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "CTA",
+    "plano": "Botón/CTA",
+    "texto_pantalla": "Pack de 2 · 29,90 € · envío gratis",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "asco",
+    "texto": "Esto salió de una nariz en 8 horas."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes qué es todo esto?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "8 horas. Una nariz. Esto."
+   }
+  ],
+  "prueba_visual": "Foto: parche usado a contraluz en la ventana, luz de mañana",
+  "cta": "Pack de 2 · 29,90 € · envío gratis → Ficha Nariz (pack 2 preseleccionado)",
+  "copy_meta": {
+   "texto_principal": [
+    "Esto salió de una nariz en 8 horas Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Esto salió de una nariz en 8 horas. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Esto salió de una nariz en 8 horas",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Foto propia. 0 €",
+   "planos_necesarios": [
+    "Foto: parche usado a contraluz en la ventana, luz de mañana",
+    "Subtítulo pequeño bajo la foto",
+    "Botón/CTA"
+   ],
+   "atrezo": [
+    "ventana con luz de mañana",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "20 min (foto + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "hidrocoloide",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Estático de coste cero con el plano más potente de Vue; sirve para retargeting y para probar textos (cambiar el titular = anuncio nuevo).",
+  "revision": [
+   "Pieza estática/carrusel: sin voz; el titular hace de gancho y el pie de foto de oferta.",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 8 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 92,
+  "nombre": "Estático: «No son puntos negros»",
+  "familia": "F12 · Estáticos, carruseles y formatos especiales",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": "—",
+  "referencias_vue": [
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "titular «these aren't blackheads» (el más usado por Vue)"
+   },
+   {
+    "rank": 13,
+    "titulo": "No More Nose Bumps · 117 d · 43 var.",
+    "que_se_toma": "«no es suciedad, no son puntos negros»"
+   }
+  ],
+  "concepto": "Macro de nariz + titular «No son puntos negros» + subtítulo «Son filamentos. Se vacían, no se arrancan». — Titular + macro + CTA",
+  "guion": [
+   {
+    "t": "Imagen",
+    "plano": "Foto: macro de nariz con luz de ventana; titular grande",
+    "texto_pantalla": "No son puntos negros.",
+    "voz": "—",
+    "nota": "Imagen principal: la foto y el titular hacen todo el trabajo."
+   },
+   {
+    "t": "Texto",
+    "plano": "Subtítulo",
+    "texto_pantalla": "Son filamentos. Se vacían, no se arrancan.",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "CTA",
+    "plano": "CTA",
+    "texto_pantalla": "Lee por qué vuelven siempre →",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "contradicción",
+    "texto": "No son puntos negros."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Y si no fueran puntos negros?"
+   },
+   {
+    "tipo": "orden",
+    "texto": "Deja de tratarlos como puntos negros."
+   }
+  ],
+  "prueba_visual": "Imagen única: Foto: macro de nariz con luz de ventana; titular grande",
+  "cta": "Lee por qué vuelven siempre → → Advertorial «no son puntos negros» → ficha",
+  "copy_meta": {
+   "texto_principal": [
+    "No son puntos negros. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "No son puntos negros. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "No son puntos negros.",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Foto + Canva. 0 €",
+   "planos_necesarios": [
+    "Foto: macro de nariz con luz de ventana",
+    "Subtítulo",
+    "CTA"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "20 min (foto + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "sin claims de riesgo (no se promete curar, eliminar ni aval médico)",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "El titular más usado por Vue en imagen; lleva al advertorial, que hace la venta. Coste cero.",
+  "revision": [
+   "Pieza estática/carrusel: sin voz; el titular hace de gancho y el pie de foto de oferta.",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 4 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 93,
+  "nombre": "Carrusel: 5 pasos",
+  "familia": "F12 · Estáticos, carruseles y formatos especiales",
+  "prioridad": "B",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": "—",
+  "referencias_vue": [
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "secuencia «así pasé de esto a esto»"
+   },
+   {
+    "rank": 20,
+    "titulo": "From Oily Nose to Clear Skin · 254 d · 19 var.",
+    "que_se_toma": "instrucción de uso simple"
+   }
+  ],
+  "concepto": "5 tarjetas: nariz limpia y seca → pegar → dormir → retirar → lo que sale. — 5 imágenes secuenciales con texto corto",
+  "guion": [
+   {
+    "t": "Tarjeta 1",
+    "plano": "Tarjeta 1: foto de la nariz limpia y seca con toalla",
+    "texto_pantalla": "1 · Nariz limpia y seca",
+    "voz": "—",
+    "nota": "Imagen principal: la foto y el titular hacen todo el trabajo."
+   },
+   {
+    "t": "Tarjeta 2",
+    "plano": "Tarjeta 2: pegar el parche antes de dormir",
+    "texto_pantalla": "2 · Pega el parche y presiona 10 s",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 3",
+    "plano": "Tarjeta 3: luz apagada, reloj",
+    "texto_pantalla": "3 · Duerme (mínimo 6 horas)",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 4",
+    "plano": "Tarjeta 4: retirada despacio por la mañana",
+    "texto_pantalla": "4 · Retira despacio por la mañana",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 5",
+    "plano": "Tarjeta 5: parche a contraluz",
+    "texto_pantalla": "5 · Esto es lo que sale",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 6",
+    "plano": "Tarjeta 6: pack de 2",
+    "texto_pantalla": "Pack de 2 · 29,90 € · envío gratis · garantía 60 días",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "lista",
+    "texto": "Cinco pasos. Una noche."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cómo se usa? Desliza."
+   },
+   {
+    "tipo": "prueba",
+    "texto": "Paso 5: lo que sale."
+   }
+  ],
+  "prueba_visual": "Tarjeta 4: retirada despacio por la mañana",
+  "cta": "Pack de 2 · 29,90 € · envío gratis · garantía 60 días → Ficha Nariz (pack 2 preseleccionado)",
+  "copy_meta": {
+   "texto_principal": [
+    "1 · Nariz limpia y seca Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "1 · Nariz limpia y seca. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "1 · Nariz limpia y seca",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Fotos propias. 0 €",
+   "planos_necesarios": [
+    "Tarjeta 1: foto de la nariz limpia y seca con toalla",
+    "Tarjeta 2: pegar el parche antes de dormir",
+    "Tarjeta 3: luz apagada, reloj",
+    "Tarjeta 4: retirada despacio por la mañana",
+    "Tarjeta 5: parche a contraluz",
+    "Tarjeta 6: pack de 2"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "móvil con time-lapse y lámpara fija",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "toalla"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45 min (fotos + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "garantía",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Carrusel educativo para Instagram/Facebook: la retención por deslizamiento hace de prueba; enseña el uso correcto y reduce devoluciones.",
+  "revision": [
+   "Pieza estática/carrusel: sin voz; el titular hace de gancho y el pie de foto de oferta.",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 5 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 94,
+  "nombre": "Carrusel: mito / verdad",
+  "familia": "F12 · Estáticos, carruseles y formatos especiales",
+  "prioridad": "C",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": "—",
+  "referencias_vue": [
+   {
+    "rank": 13,
+    "titulo": "No More Nose Bumps · 117 d · 43 var.",
+    "que_se_toma": "triple negación «no es suciedad, no son puntos negros»"
+   },
+   {
+    "rank": 46,
+    "titulo": "Clearer Without the Stress · 115 d · 40 var.",
+    "que_se_toma": "lo que hace la tira"
+   },
+   {
+    "rank": 36,
+    "titulo": "Wake Up To Clearer Skin · 129 d · 14 var.",
+    "que_se_toma": "se rellenan cada 24 h"
+   }
+  ],
+  "concepto": "4 tarjetas mito/verdad («se cierran los poros» / «no, se vacían»). — Mito a la izquierda, verdad a la derecha",
+  "guion": [
+   {
+    "t": "Tarjeta 1",
+    "plano": "Tarjeta 1: mito a la izquierda, verdad a la derecha",
+    "texto_pantalla": "Mito: los poros se cierran · Verdad: se vacían",
+    "voz": "—",
+    "nota": "Imagen principal: la foto y el titular hacen todo el trabajo."
+   },
+   {
+    "t": "Tarjeta 2",
+    "plano": "Tarjeta 2",
+    "texto_pantalla": "Mito: es suciedad · Verdad: es grasa oxidada",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 3",
+    "plano": "Tarjeta 3",
+    "texto_pantalla": "Mito: las tiras los sacan · Verdad: arrancan la capa de arriba",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 4",
+    "plano": "Tarjeta 4",
+    "texto_pantalla": "Mito: apretar los quita · Verdad: los ensancha y vuelven en 3 días",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "Tarjeta 5",
+    "plano": "Tarjeta 5 (CTA)",
+    "texto_pantalla": "No son puntos negros → léelo entero",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "contradicción",
+    "texto": "Cuatro mitos sobre tu nariz. Desliza."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Se cierran los poros? No. Desliza."
+   },
+   {
+    "tipo": "lista",
+    "texto": "Mito / verdad: la nariz en 4 tarjetas."
+   }
+  ],
+  "prueba_visual": "Imagen única: Tarjeta 1: mito a la izquierda, verdad a la derecha",
+  "cta": "No son puntos negros → léelo entero → Advertorial «no son puntos negros» → ficha",
+  "copy_meta": {
+   "texto_principal": [
+    "Mito: los poros se cierran · Verdad: se vacían Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "Mito: los poros se cierran · Verdad: se vacían. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Canva. 0 €",
+   "planos_necesarios": [
+    "Tarjeta 1: mito a la izquierda, verdad a la derecha",
+    "Tarjeta 2",
+    "Tarjeta 3",
+    "Tarjeta 4",
+    "Tarjeta 5 (CTA)"
+   ],
+   "atrezo": [
+    "móvil"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "45 min (fotos + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "sin claims de riesgo (no se promete curar, eliminar ni aval médico)",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Formato de guardados (saves) alto en Instagram; cada tarjeta es un reencuadre de un ganador de Vue. Lleva al advertorial.",
+  "revision": [
+   "Pieza estática/carrusel: sin voz; el titular hace de gancho y el pie de foto de oferta.",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 8 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 95,
+  "nombre": "Estático: comparativa tira vs parche",
+  "familia": "F12 · Estáticos, carruseles y formatos especiales",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": "—",
+  "referencias_vue": [
+   {
+    "rank": 8,
+    "titulo": "From Oily Nose to Clear Skin · 290 d · 13 var.",
+    "que_se_toma": "«las tiras son una estafa; esto es lo que funciona»"
+   },
+   {
+    "rank": 46,
+    "titulo": "Clearer Without the Stress · 115 d · 40 var.",
+    "que_se_toma": "el daño de la tira"
+   }
+  ],
+  "concepto": "Foto de tira usada (pelusa) junto a parche usado (grasa blanquecina) con dos etiquetas. — Dos fotos, dos etiquetas, CTA",
+  "guion": [
+   {
+    "t": "Imagen",
+    "plano": "Foto: tira usada (pelusa y piel) junto a parche usado (grasa blanquecina), fondo crema",
+    "texto_pantalla": "Tira: pelusa y piel · Parche: grasa del poro",
+    "voz": "—",
+    "nota": "Imagen principal: la foto y el titular hacen todo el trabajo."
+   },
+   {
+    "t": "Texto",
+    "plano": "Subtítulo",
+    "texto_pantalla": "La tira arranca la capa de arriba. El parche absorbe lo que hay dentro.",
+    "voz": "—",
+    "nota": ""
+   },
+   {
+    "t": "CTA",
+    "plano": "CTA",
+    "texto_pantalla": "Pack de 2 · 29,90 € · envío gratis",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "comparativa",
+    "texto": "Tira o parche: mira lo que sale en cada uno."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes qué se lleva de verdad una tira?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "La tira no saca filamentos. Saca piel."
+   }
+  ],
+  "prueba_visual": "Foto: tira usada (pelusa y piel) junto a parche usado (grasa blanquecina), fondo crema",
+  "cta": "Pack de 2 · 29,90 € · envío gratis → Ficha Nariz (pack 2 preseleccionado)",
+  "copy_meta": {
+   "texto_principal": [
+    "Tira: pelusa y piel · Parche: grasa del poro Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Tira: pelusa y piel · Parche: grasa del poro. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Foto propia. 3 €",
+   "planos_necesarios": [
+    "Foto: tira usada (pelusa y piel) junto a parche usado (grasa blanquecina), fondo crema",
+    "Subtítulo",
+    "CTA"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "20 min (foto + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "sin claims de riesgo (no se promete curar, eliminar ni aval médico)",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Traduce el anuncio nº 20 del catálogo a imagen: prueba contra prueba, coste 3 € (una tira de farmacia).",
+  "revision": [
+   "Pieza estática/carrusel: sin voz; el titular hace de gancho y el pie de foto de oferta.",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 8 palabras (≤ 20, bien)."
+  ]
+ }
+]

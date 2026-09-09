@@ -1,0 +1,711 @@
+[
+ {
+  "n": 51,
+  "nombre": "El parche a contraluz",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 19,
+  "referencias_vue": [
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "«mira toda la porquería pegada en el parche»: la prueba antes que la explicación"
+   },
+   {
+    "rank": 7,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 14 var.",
+    "que_se_toma": "el plano del parche usado como cierre emocional"
+   },
+   {
+    "rank": 8,
+    "titulo": "From Oily Nose to Clear Skin · 290 d · 13 var.",
+    "que_se_toma": "«absorbe, no arranca» como diferencia con la tira"
+   }
+  ],
+  "concepto": "«Ponlo a contraluz por la mañana y entiendes por qué nada más funcionaba.» — Parche usado contra la ventana → puntos visibles → CTA",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Parche usado pegado al cristal de la ventana; la luz de la mañana lo atraviesa",
+    "texto_pantalla": "A contraluz",
+    "voz": "Ponlo a contraluz por la mañana y entiendes por qué nada más funcionaba.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–9 s",
+    "plano": "Macro del parche contra la ventana: puntos blancos y amarillentos repartidos por toda la superficie",
+    "texto_pantalla": "Esto estaba dentro",
+    "voz": "Todo esto estaba dentro de los poros de la nariz. Una sola noche.",
+    "nota": "Peel reveal (R28, R7) en su versión más limpia: sin cara, sin voz larga; el plano hace el trabajo."
+   },
+   {
+    "t": "9–13 s",
+    "plano": "Nariz lisa y mate al lado del parche",
+    "texto_pantalla": "Sin arrancar nada",
+    "voz": "Sin arrancar nada. Solo absorbe mientras duermes.",
+    "nota": "Contraste con la tira en 4 palabras (R8)."
+   },
+   {
+    "t": "13–19 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "prueba",
+    "texto": "Ponlo a contraluz y lo entiendes todo."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes qué es todo esto que se ve en el parche?"
+   },
+   {
+    "tipo": "asco",
+    "texto": "Ocho horas. Esto es lo que sale de una nariz normal."
+   }
+  ],
+  "prueba_visual": "Parche usado pegado al cristal de la ventana; la luz de la mañana lo atraviesa",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Ponlo a contraluz por la mañana y entiendes por qué nada más funcionaba. Todo esto estaba dentro de los poros de la nariz. Una sola noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "A contraluz. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "A contraluz",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Parche usado pegado al cristal de la ventana",
+    "Macro del parche contra la ventana: puntos blancos y amarillentos repartidos por toda la superficie",
+    "Nariz lisa y mate al lado del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "30 min de grabación + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "sin arrancar",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Es el plano más repetido de los 60 ganadores (retirada + parche a contraluz) reducido a 15 s para Reels: la curiosidad la crea la imagen, no el texto. Coste cero y muy compartible.",
+  "revision": [
+   "Duración: catálogo 15 s; bloques 17 s; voz 52 palabras → 19 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 4 s para que la voz quepa sin acelerar; si hay que respetar 15 s, recortar ~3 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 13 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 52,
+  "nombre": "Tres personas, una noche",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 37,
+  "referencias_vue": [
+   {
+    "rank": 53,
+    "titulo": "Clear Nose Overnight ✨ · 114 d · 13 var.",
+    "que_se_toma": "«mira lo que pasa cuando deja de tratarlos como puntos negros»: formato de observación"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "el parche usado como prueba central"
+   },
+   {
+    "rank": 51,
+    "titulo": "One Patch. Real Results. · 60 d · 30 var.",
+    "que_se_toma": "condición «si tu nariz se ve así» para incluir a todos"
+   }
+  ],
+  "concepto": "«Tres personas distintas, una noche, el mismo parche. Mira los tres.» — Bea, Marisol y Álex se lo ponen → tres retiradas → «funciona en cualquier piel grasa»",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Pantalla partida en tres: Bea, Marisol y Álex con el parche en la mano",
+    "texto_pantalla": "3 personas · 1 noche",
+    "voz": "Tres personas distintas, una noche, el mismo parche. Mira los tres.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–10 s",
+    "plano": "Los tres se ponen el parche antes de dormir, sincronizados; rótulo con nombre y edad",
+    "texto_pantalla": "Bea 24 · Marisol 43 · Álex 36",
+    "voz": "Bea, veinticuatro. Marisol, cuarenta y tres. Álex, treinta y seis. Tres pieles distintas, el mismo parche, la misma noche.",
+    "nota": "Prueba social visual con los tres avatares (R1 «tons of guys», R2 «most women», R33 «girls in their 20s») en un solo anuncio."
+   },
+   {
+    "t": "10–18 s",
+    "plano": "Tres retiradas por la mañana, sincronizadas; los tres parches a contraluz",
+    "texto_pantalla": "Tres mañanas",
+    "voz": "Por la mañana, los tres: mira lo que ha salido en cada uno.",
+    "nota": "Triple peel reveal (R28)."
+   },
+   {
+    "t": "18–23 s",
+    "plano": "Los tres parches en fila sobre fondo crema",
+    "texto_pantalla": "Piel grasa = funciona",
+    "voz": "Si tu nariz brilla y tiene puntitos, esto te vale. Da igual la edad.",
+    "nota": "Condición de inclusión (R51 «si tu nariz se ve así»)."
+   },
+   {
+    "t": "23–31 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "31–37 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "prueba",
+    "texto": "Tres narices, una noche, tres parches. Míralos."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Funciona igual en una piel de 24 que en una de 43?"
+   },
+   {
+    "tipo": "reto",
+    "texto": "Tres personas que no se creían esto. Una noche."
+   }
+  ],
+  "prueba_visual": "Tres retiradas por la mañana, sincronizadas; los tres parches a contraluz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Tres personas distintas, una noche, el mismo parche. Mira los tres. Bea, veinticuatro. Marisol, cuarenta y tres. Álex, treinta y seis. Tres pieles distintas, el mismo parche, la misma noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "3 personas · 1 noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "3 personas · 1 noche",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 3 personas. 0 €",
+   "planos_necesarios": [
+    "Pantalla partida en tres: Bea, Marisol y Álex con el parche en la mano",
+    "Los tres se ponen el parche antes de dormir, sincronizados",
+    "Tres retiradas por la mañana, sincronizadas",
+    "Los tres parches en fila sobre fondo crema",
+    "Parche NOCTA en la mano",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "1 noche con 3 personas + 45 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Resuelve la objeción «a mí no me funcionará» enseñando tres pieles a la vez; cada avatar se ve reflejado en uno de los tres. Cuesta una noche y tres móviles.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 35 s; voz 100 palabras → 37 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 7 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 11 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 53,
+  "nombre": "La textura al tacto",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 21,
+  "referencias_vue": [
+   {
+    "rank": 41,
+    "titulo": "Clear Skin, Zero Effort · 112 d · 23 var.",
+    "que_se_toma": "«de puntos negros a nariz lisa»: el beneficio expresado como textura"
+   },
+   {
+    "rank": 33,
+    "titulo": "Clear Pores Overnight · 163 d · 22 var.",
+    "que_se_toma": "gesto de auto-comprobación en el segundo 4"
+   },
+   {
+    "rank": 19,
+    "titulo": "Clearer Pores While You Sleep 😴 · 173 d · 11 var.",
+    "que_se_toma": "«nariz lisa como cristal» como resultado sensorial"
+   }
+  ],
+  "concepto": "«No es lo que se ve. Es lo que se nota al pasar el dedo.» (dedo antes/después) — Dedo sobre la nariz antes (arenilla) → parche → dedo después (liso)",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "POV: yema del dedo pasando despacio por la nariz; la piel se ve granulosa",
+    "texto_pantalla": "Se nota, no se ve",
+    "voz": "No es lo que se ve. Es lo que se nota al pasar el dedo.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–10 s",
+    "plano": "Macro del dedo sobre la nariz; rótulo",
+    "texto_pantalla": "Arenilla",
+    "voz": "Pásate el dedo por la nariz ahora. ¿Notas arenilla? Eso son filamentos llenos de grasa.",
+    "nota": "Auto-comprobación sensorial (como el zoom de R33): convierte al espectador en participante."
+   },
+   {
+    "t": "10–15 s",
+    "plano": "Parche puesto; corte a la mañana; el dedo pasa de nuevo y la piel está lisa",
+    "texto_pantalla": "Liso",
+    "voz": "Una noche con el parche. Ahora pasa el dedo. Liso.",
+    "nota": "«De esto a esto» (R28, R41) en versión táctil."
+   },
+   {
+    "t": "15–21 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "gesto",
+    "texto": "Pásate el dedo por la nariz. ¿Notas arenilla?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "No es lo que se ve. Es lo que se nota."
+   },
+   {
+    "tipo": "prueba",
+    "texto": "Antes: arenilla. Una noche después: liso."
+   }
+  ],
+  "prueba_visual": "Parche puesto; corte a la mañana; el dedo pasa de nuevo y la piel está lisa",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "No es lo que se ve. Es lo que se nota al pasar el dedo. Pásate el dedo por la nariz ahora. ¿Notas arenilla? Eso son filamentos llenos de grasa. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Se nota, no se ve. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Se nota, no se ve",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "POV: yema del dedo pasando despacio por la nariz",
+    "Macro del dedo sobre la nariz",
+    "Parche puesto",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Ataca un dolor que las macros no enseñan (la textura al tacto) y lo demuestra con un gesto que cualquiera puede repetir en el momento. Complementa a los anuncios de peel reveal sin repetirlos.",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 18 s; voz 59 palabras → 21 s finales (2,8 pal/s, máximo cómodo 3,3).",
+   "Se alarga 1 s para que la voz quepa sin acelerar; si hay que respetar 20 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 54,
+  "nombre": "Un mes después (sin trampas)",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 48,
+  "referencias_vue": [
+   {
+    "rank": 4,
+    "titulo": "Clear Nose Overnight ✨ · 121 d · 38 var.",
+    "que_se_toma": "«los filamentos no se curan, se controlan» como promesa honesta"
+   },
+   {
+    "rank": 53,
+    "titulo": "Clear Nose Overnight ✨ · 114 d · 13 var.",
+    "que_se_toma": "«mira lo que pasa en tres semanas»: formato de seguimiento"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "«así pasé de esto a esto» con el parche como prueba"
+   },
+   {
+    "rank": 54,
+    "titulo": "From Oily Nose to Clear Skin · 182 d · 14 var.",
+    "que_se_toma": "testimonio de años de inseguridad resuelto sin drama"
+   }
+  ],
+  "concepto": "«Un mes usándolos 3 noches por semana. Sin filtro, sin láser, sin mentiras.» — Día 0 macro → semanas 1–4 → lo que cambió y lo que no → «se gestiona, no se cura» → pack",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Marisol a cámara, sin maquillar, luz de ventana; rótulo con la fecha",
+    "texto_pantalla": "1 mes · sin filtro",
+    "voz": "Un mes usándolos tres noches por semana. Sin filtro, sin láser, sin mentiras.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–10 s",
+    "plano": "Día 0: macro de la nariz de Marisol con la fecha en pantalla, luz del baño",
+    "texto_pantalla": "Día 0",
+    "voz": "Día cero. Esta es mi nariz de cerca, con la luz del baño, que es la que no perdona.",
+    "nota": "Punto de partida honesto (R54: «años sintiéndome insegura por mis poros»)."
+   },
+   {
+    "t": "10–18 s",
+    "plano": "Semanas 1 y 2: parche por la noche, retirada por la mañana, parches a contraluz con fecha",
+    "texto_pantalla": "Semana 1 · 2",
+    "voz": "Primera semana: sale un montón. Segunda: sigue saliendo, pero por la mañana la nariz ya no brilla igual.",
+    "nota": "Cronología con expectativas realistas (R53: tres semanas)."
+   },
+   {
+    "t": "18–28 s",
+    "plano": "Semanas 3 y 4: macro con la misma luz; dos rótulos «cambió» / «no cambió»",
+    "texto_pantalla": "Semana 3 · 4",
+    "voz": "Semana cuatro. Lo que ha cambiado: los puntitos se notan mucho menos y la base ya no se me cuartea. Lo que no: los poros siguen ahí, porque los poros no se cierran.",
+    "nota": "Honestidad radical: lo que no cambia, dicho antes de que lo pregunten (R4)."
+   },
+   {
+    "t": "28–34 s",
+    "plano": "Marisol a cámara, tranquila",
+    "texto_pantalla": "Se gestiona, no se cura",
+    "voz": "Esto no se cura. Se gestiona: tres noches por semana y se queda así.",
+    "nota": "«No se curan, se controlan» (R4, R47): la frase que protege de reclamaciones."
+   },
+   {
+    "t": "34–42 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "42–48 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "honestidad",
+    "texto": "Un mes. Sin filtro, sin láser, sin mentiras."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Qué cambia de verdad en un mes con parches de nariz?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "Tres noches por semana, cuatro semanas. Esto es lo que pasa."
+   }
+  ],
+  "prueba_visual": "Semanas 1 y 2: parche por la noche, retirada por la mañana, parches a contraluz con fecha",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Un mes usándolos tres noches por semana. Sin filtro, sin láser, sin mentiras. Día cero. Esta es mi nariz de cerca, con la luz del baño, que es la que no perdona. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "1 mes · sin filtro. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "1 mes · sin filtro",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 30 días. 0 €",
+   "planos_necesarios": [
+    "Marisol a cámara, sin maquillar, luz de ventana",
+    "Día 0: macro de la nariz de Marisol con la fecha en pantalla, luz del baño",
+    "Semanas 1 y 2: parche por la noche, retirada por la mañana, parches a contraluz con fecha",
+    "Semanas 3 y 4: macro con la misma luz",
+    "Marisol a cámara, tranquila",
+    "Parche NOCTA en la mano",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "30 días de seguimiento (1 foto por semana) + 1 h de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "no se cura / se gestiona",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "se notan mucho menos",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Es el anuncio que más confianza genera en Marisol porque dice lo que no cambia. Vue nunca lo hace (promete «completely gone»); en España la honestidad convierte mejor y evita reclamaciones. Sirve además como pieza de retargeting para quien vio los de 15–20 s.",
+  "revision": [
+   "Se quita el bloque social (2 cajas · 29,90 €) para no pasar de 50 s; la razón del pack de 2 queda en el cierre.",
+   "Duración: catálogo 45 s; bloques 48 s; voz 140 palabras → 48 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 3 s para que la voz quepa sin acelerar; si hay que respetar 45 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 13 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 55,
+  "nombre": "Si tienes más de 35 y esto sigue saliendo",
+  "familia": "F7 · Piel adulta (+35)",
+  "prioridad": "A",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 46,
+  "referencias_vue": [
+   {
+    "rank": 48,
+    "titulo": "Clear Nose Overnight ✨ · 75 d · 28 var.",
+    "que_se_toma": "apertura «si tienes más de 40 y todavía…» (28 variantes en 75 días)"
+   },
+   {
+    "rank": 27,
+    "titulo": "Stop Treating Blackheads Wrong · 198 d · 7 var.",
+    "que_se_toma": "versión «women over 40» del guion de no apretar"
+   },
+   {
+    "rank": 55,
+    "titulo": "One Patch. Real Results. · 75 d · 31 var.",
+    "que_se_toma": "«ojalá me lo hubieran dicho a los 20: a nuestra edad…»"
+   },
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "reencuadre + absolución + mecanismo + prueba + garantía"
+   }
+  ],
+  "concepto": "«Si tienes más de 35 y esto te sigue saliendo, no es cosa de adolescentes: es grasa y poros que se han ido abriendo.» — Reencuadre por edad → «apretar a los 40 deja marca» → parche → prueba",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Marisol a cámara, primer plano; rótulo grande",
+    "texto_pantalla": "+35 y sigue saliendo",
+    "voz": "Si tienes más de 35 y esto te sigue saliendo, no es cosa de adolescentes.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–12 s",
+    "plano": "Macro de la nariz de Marisol; esquema de un poro que se va abriendo con los años",
+    "texto_pantalla": "A los 35 el poro se abre",
+    "voz": "Con los años la piel pierde firmeza y el poro se va abriendo. Cuanto más grasa dentro, más se ve.",
+    "nota": "Reencuadre por edad (R48: «si tienes más de 40 y sigues peleando con esto»)."
+   },
+   {
+    "t": "12–18 s",
+    "plano": "Dedos apretando la nariz; marca roja que se queda",
+    "texto_pantalla": "Apretar a los 40 deja marca",
+    "voz": "A los 20 apretar se perdonaba. A los 40 deja marca y el poro se queda más abierto.",
+    "nota": "Consecuencia específica de la edad (R27: «mujeres de más de 40, no apretéis»)."
+   },
+   {
+    "t": "18–24 s",
+    "plano": "Macro de la nariz, muy cerca; rótulo",
+    "texto_pantalla": "FILAMENTOS = grasa que se rellena",
+    "voz": "Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día.",
+    "nota": "Reencuadre de R1: nombrar el problema (46 de los 60 ganadores lo hacen aquí)."
+   },
+   {
+    "t": "24–32 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "32–40 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "40–46 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "condición",
+    "texto": "Si tienes más de 35 y esto te sigue saliendo, mira."
+   },
+   {
+    "tipo": "identidad",
+    "texto": "La mayoría de las mujeres de más de 35 cree que esto son puntos negros."
+   },
+   {
+    "tipo": "dato",
+    "texto": "A partir de los 35 el poro se abre. Por eso ahora se nota más."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "Si tienes más de 35 y esto te sigue saliendo, no es cosa de adolescentes. Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "+35 y sigue saliendo. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "+35 y sigue saliendo",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, mujer 35–50. 0 €",
+   "planos_necesarios": [
+    "Marisol a cámara, primer plano",
+    "Macro de la nariz de Marisol",
+    "Dedos apretando la nariz",
+    "Macro de la nariz, muy cerca",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "animación 2D simple (Canva/CapCut)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "«If you're over 35/40» es una de las aperturas con más longevos de Vue (14 anuncios ≥ 45 días) y su guion +35 duró 214 días. Aquí se une con la consecuencia que más pesa a Marisol: apretar a esta edad deja marca.",
+  "revision": [
+   "Duración: catálogo 40 s; bloques 41 s; voz 133 palabras → 46 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 6 s para que la voz quepa sin acelerar; si hay que respetar 40 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ }
+]

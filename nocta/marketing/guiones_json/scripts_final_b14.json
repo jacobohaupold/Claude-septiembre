@@ -1,0 +1,641 @@
+[
+ {
+  "n": 66,
+  "nombre": "Sin rutina: un parche",
+  "familia": "F8 · Hombres",
+  "prioridad": "A",
+  "avatar": "Álex (hombre 28–45)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 21,
+  "referencias_vue": [
+   {
+    "rank": 41,
+    "titulo": "Clear Skin, Zero Effort · 112 d · 23 var.",
+    "que_se_toma": "«piel limpia, cero esfuerzo»"
+   },
+   {
+    "rank": 60,
+    "titulo": "Clear Skin, No Effort · 111 d · 9 var.",
+    "que_se_toma": "«sin esfuerzo» como argumento de compra masculino"
+   },
+   {
+    "rank": 20,
+    "titulo": "From Oily Nose to Clear Skin · 254 d · 19 var.",
+    "que_se_toma": "«si notas esto, no aprietes: usa uno de estos» (instrucción simple)"
+   }
+  ],
+  "concepto": "«No tengo rutina. Tengo un parche que me pongo 2 noches por semana. Ya está.» — Cero pasos → parche → mañana → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "POV manos: caja, parche, nariz; sin cara",
+    "texto_pantalla": "Cero rutina",
+    "voz": "No tengo rutina. Tengo un parche que me pongo dos noches por semana. Ya está.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–10 s",
+    "plano": "Lavar la cara, secar, pegar el parche, apagar la luz",
+    "texto_pantalla": "Cero pasos",
+    "voz": "Lavar la cara, secar, parche, dormir.",
+    "nota": "Simplicidad (R41, R60 «sin esfuerzo»)."
+   },
+   {
+    "t": "10–15 s",
+    "plano": "Mañana: retirada; parche a contraluz",
+    "texto_pantalla": "Mañana",
+    "voz": "Por la mañana lo quitas y ves lo que ha salido. Eso es todo.",
+    "nota": "Prueba en 5 s."
+   },
+   {
+    "t": "15–21 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "contradicción",
+    "texto": "No tengo rutina. Tengo un parche."
+   },
+   {
+    "tipo": "dato",
+    "texto": "Dos noches por semana. Cero pasos. Ya está."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuántos pasos tiene tu rutina? La mía, uno."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada; parche a contraluz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "No tengo rutina. Tengo un parche que me pongo dos noches por semana. Ya está. Lavar la cara, secar, parche, dormir. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Cero rutina. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Cero rutina",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "POV manos: caja, parche, nariz",
+    "Lavar la cara, secar, pegar el parche, apagar la luz",
+    "Mañana: retirada",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Álex (hombre 28–45) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Vende lo que más valora Álex: no pensar. 20 segundos sin cara (cualquiera puede grabarlo) y sin identidad, con la prueba visual al final.",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 18 s; voz 54 palabras → 21 s finales (2,6 pal/s, máximo cómodo 3,3).",
+   "Se alarga 1 s para que la voz quepa sin acelerar; si hay que respetar 20 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 67,
+  "nombre": "Bro, mírate la nariz con esta luz",
+  "familia": "F8 · Hombres",
+  "prioridad": "B",
+  "avatar": "Álex (hombre 28–45)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 25,
+  "referencias_vue": [
+   {
+    "rank": 50,
+    "titulo": "No More Nose Bumps · 108 d · 25 var.",
+    "que_se_toma": "registro «bro / colega» del guion masculino de 108 días"
+   },
+   {
+    "rank": 56,
+    "titulo": "Your Pores Deserve Better · 88 d · 17 var.",
+    "que_se_toma": "«si tu nariz se ve así» con luz real"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "antes/después + parche usado"
+   }
+  ],
+  "concepto": "«Bro, mírate la nariz con la luz del baño. Ahora mira esto.» — Luz dura → macro → parche → luz dura al día siguiente",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Luz del baño desde arriba; macro dura de la nariz de Álex",
+    "texto_pantalla": "Con la luz del baño",
+    "voz": "Bro, mírate la nariz con la luz del baño. Ahora mira esto.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–9 s",
+    "plano": "Macro dura; rótulo",
+    "texto_pantalla": "Con esta luz",
+    "voz": "Con esta luz se ve todo lo que hay en el poro.",
+    "nota": "Luz dura como prueba creíble."
+   },
+   {
+    "t": "9–13 s",
+    "plano": "Parche puesto; luz apagada",
+    "texto_pantalla": "Esta noche",
+    "voz": "Esta noche, parche.",
+    "nota": "Mecanismo mínimo."
+   },
+   {
+    "t": "13–19 s",
+    "plano": "Misma luz del baño, mañana; nariz mate; parche a contraluz",
+    "texto_pantalla": "Misma luz, mañana",
+    "voz": "Misma luz, a la mañana siguiente. Y mira el parche.",
+    "nota": "Antes/después + peel reveal (R28)."
+   },
+   {
+    "t": "19–25 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "gesto",
+    "texto": "Bro, mírate la nariz con la luz del baño."
+   },
+   {
+    "tipo": "reto",
+    "texto": "Con la luz del baño no hay filtro. Mira."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Te has mirado la nariz con la luz del baño desde arriba?"
+   }
+  ],
+  "prueba_visual": "Misma luz del baño, mañana; nariz mate; parche a contraluz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Bro, mírate la nariz con la luz del baño. Ahora mira esto. Con esta luz se ve todo lo que hay en el poro. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Con la luz del baño. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Con la luz del baño",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Luz del baño desde arriba",
+    "Macro dura",
+    "Parche puesto",
+    "Misma luz del baño, mañana",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Álex (hombre 28–45)",
+   "tiempo_estimado": "30 min de grabación + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Registro «bro» que Vue usa en su segmento masculino, con la luz más dura de casa como prueba. 25 s, cero coste, y sirve de variante del nº 61 para hombres.",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 23 s; voz 56 palabras → 25 s finales (2,2 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 12 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 68,
+  "nombre": "Tu novia ya lo usa",
+  "familia": "F8 · Hombres",
+  "prioridad": "C",
+  "avatar": "Álex (hombre 28–45)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 28,
+  "referencias_vue": [
+   {
+    "rank": 30,
+    "titulo": "No More Nose Bumps · 184 d · 17 var.",
+    "que_se_toma": "«tuve que enseñarle a mi novio que no son puntos negros»"
+   },
+   {
+    "rank": 60,
+    "titulo": "Clear Skin, No Effort · 111 d · 9 var.",
+    "que_se_toma": "«mira a mi novio, está usando mis parches»"
+   },
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "«un montón de tíos por fin entienden»"
+   }
+  ],
+  "concepto": "«Tu novia ya lo usa. Por eso ella no tiene esto y tú sí.» — Contraste pareja → parche → él por la mañana",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Pareja en el baño; ella con el parche puesto, él con la nariz brillante en macro",
+    "texto_pantalla": "Ella sí, tú no",
+    "voz": "Tu novia ya lo usa. Por eso ella no tiene esto y tú sí.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Ella se pone el parche; él se aprieta la nariz en el espejo",
+    "texto_pantalla": "Ella absorbe, tú aprietas",
+    "voz": "Ella se pone uno dos noches por semana. Tú te aprietas la nariz en el espejo.",
+    "nota": "Contraste de conductas (R30)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Mañana: él se quita el parche que ella le puso; su cara al verlo",
+    "texto_pantalla": "Su cara",
+    "voz": "Le puso uno anoche. Esta es su cara por la mañana.",
+    "nota": "Prueba con reacción real (R60)."
+   },
+   {
+    "t": "17–22 s",
+    "plano": "Pack de 2 cajas sobre fondo crema",
+    "texto_pantalla": "2 cajas · 29,90 €",
+    "voz": "Dos cajas son un mes entero, tres noches por semana. Y el envío va gratis.",
+    "nota": "Razón de uso para el pack de 2 (R23: frecuencia real)."
+   },
+   {
+    "t": "22–28 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "social",
+    "texto": "Tu novia ya lo usa. Por eso ella no tiene esto."
+   },
+   {
+    "tipo": "humor",
+    "texto": "Le puso uno anoche. Mira su cara por la mañana."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué tu novia no tiene puntitos en la nariz y tú sí?"
+   }
+  ],
+  "prueba_visual": "Mañana: él se quita el parche que ella le puso; su cara al verlo",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Tu novia ya lo usa. Por eso ella no tiene esto y tú sí. Ella se pone uno dos noches por semana. Tú te aprietas la nariz en el espejo. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Ella sí, tú no. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Ella sí, tú no",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 2 personas. 0 €",
+   "planos_necesarios": [
+    "Pareja en el baño",
+    "Ella se pone el parche",
+    "Mañana: él se quita el parche que ella le puso",
+    "Pack de 2 cajas sobre fondo crema",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "espejo con luz dura",
+    "segunda persona (pareja/familia)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Álex (hombre 28–45)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Prueba social de pareja (uno de los guiones más copiados de Vue) contada desde el hombre: la reacción real al ver el parche vende más que cualquier frase, y el pack de 2 se explica solo («uno para cada uno»).",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 25 s; voz 75 palabras → 28 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 3 s para que la voz quepa sin acelerar; si hay que respetar 25 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 69,
+  "nombre": "Afeitado + nariz",
+  "familia": "F8 · Hombres",
+  "prioridad": "C",
+  "avatar": "Álex (hombre 28–45)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 27,
+  "referencias_vue": [
+   {
+    "rank": 21,
+    "titulo": "From Oily Nose to Clear Skin · 223 d · 12 var.",
+    "que_se_toma": "la explicación masculina de la grasa oxidada"
+   },
+   {
+    "rank": 43,
+    "titulo": "Stop Scrubbing · 103 d · 33 var.",
+    "que_se_toma": "«arreglé sin querer mi mayor inseguridad»"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "parche usado como prueba"
+   }
+  ],
+  "concepto": "«Después de afeitarte, la nariz es lo único que sigue igual. Esto lo cambia.» — Afeitado (limpio) → nariz (brillo/puntos) → parche → mañana",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "POV afeitado; cara limpia; macro de la nariz con brillo y puntitos",
+    "texto_pantalla": "Todo limpio menos esto",
+    "voz": "Después de afeitarte, la nariz es lo único que sigue igual. Esto lo cambia.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Macro de la nariz recién afeitado",
+    "texto_pantalla": "Afeitar no vacía el poro",
+    "voz": "Cara limpia, piel lisa… y la nariz igual: brillo y puntitos. Porque afeitar no vacía el poro.",
+    "nota": "Momento de espejo masculino."
+   },
+   {
+    "t": "11–16 s",
+    "plano": "Parche puesto por la noche",
+    "texto_pantalla": "Esta noche",
+    "voz": "Esta noche, un parche en la nariz.",
+    "nota": "Mecanismo mínimo."
+   },
+   {
+    "t": "16–21 s",
+    "plano": "Mañana: parche a contraluz; nariz mate",
+    "texto_pantalla": "Mañana",
+    "voz": "Por la mañana, esto es lo que había dentro.",
+    "nota": "Peel reveal."
+   },
+   {
+    "t": "21–27 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "ocasión",
+    "texto": "Después de afeitarte, la nariz es lo único que sigue igual."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué después de afeitarte la nariz sigue igual?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "Afeitar limpia la cara. No vacía el poro."
+   }
+  ],
+  "prueba_visual": "Mañana: parche a contraluz; nariz mate",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Después de afeitarte, la nariz es lo único que sigue igual. Esto lo cambia. Cara limpia, piel lisa… y la nariz igual: brillo y puntitos. Porque afeitar no vacía el poro. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Todo limpio menos esto. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Todo limpio menos esto",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "POV afeitado",
+    "Macro de la nariz recién afeitado",
+    "Parche puesto por la noche",
+    "Mañana: parche a contraluz",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Álex (hombre 28–45) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Usa el único momento en que casi todos los hombres se miran la cara de cerca (el afeitado) y donde la nariz destaca por contraste. Sin cara, sin identidad: lo puede grabar cualquiera.",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 24 s; voz 66 palabras → 27 s finales (2,4 pal/s, máximo cómodo 3,3).",
+   "Se alarga 2 s para que la voz quepa sin acelerar; si hay que respetar 25 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 70,
+  "nombre": "Ingeniero explica el parche",
+  "familia": "F8 · Hombres",
+  "prioridad": "B",
+  "avatar": "Álex (hombre 28–45)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 36,
+  "referencias_vue": [
+   {
+    "rank": 5,
+    "titulo": "No More Nose Bumps · 124 d · 42 var.",
+    "que_se_toma": "«¿funcionan de verdad los parches de nariz?» + explicación del blanqueo"
+   },
+   {
+    "rank": 41,
+    "titulo": "Clear Skin, Zero Effort · 112 d · 23 var.",
+    "que_se_toma": "«enfoque científico» sin médicos"
+   },
+   {
+    "rank": 46,
+    "titulo": "Clearer Without the Stress · 115 d · 40 var.",
+    "que_se_toma": "lo que hace la tira a la piel"
+   }
+  ],
+  "concepto": "«Te explico cómo funciona un parche de hidrocoloide en 20 segundos, sin marketing.» — Explicación técnica (absorción por gradiente, gel) → prueba → «por eso funciona y las tiras no»",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Texto en pantalla sobre clip macro del parche; sin cara",
+    "texto_pantalla": "Cómo funciona, sin marketing",
+    "voz": "Te explico cómo funciona un parche de hidrocoloide en veinte segundos, sin marketing.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–11 s",
+    "plano": "Esquema: capa de gel sobre el poro; flechas",
+    "texto_pantalla": "Gel hidrocoloide",
+    "voz": "El hidrocoloide es un gel que absorbe líquido. Se usa en apósitos para heridas desde hace décadas.",
+    "nota": "Autoridad técnica comprobable (sin claims médicos sobre el producto)."
+   },
+   {
+    "t": "11–18 s",
+    "plano": "Esquema: gradiente de humedad; la grasa sube del poro al gel",
+    "texto_pantalla": "Gradiente",
+    "voz": "Sobre un poro lleno, el gel crea un gradiente: la grasa se mueve hacia el parche, no al revés.",
+    "nota": "Mecanismo de R5 explicado con rigor."
+   },
+   {
+    "t": "18–22 s",
+    "plano": "Tira frente a parche: una arranca, otra absorbe",
+    "texto_pantalla": "Absorbe ≠ arranca",
+    "voz": "Por eso funciona y las tiras no: absorbe, no arranca.",
+    "nota": "Contraste con la tira (R8, R46)."
+   },
+   {
+    "t": "22–30 s",
+    "plano": "Macro del parche empezando a ponerse blanco",
+    "texto_pantalla": "Se pone blanco = está funcionando",
+    "voz": "El hidrocoloide es un gel: la grasa lo toca, lo absorbe y el parche se pone blanco. Así ves que está funcionando.",
+    "nota": "Explicación del blanqueo como prueba objetiva (R5)."
+   },
+   {
+    "t": "30–36 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "promesa",
+    "texto": "Cómo funciona, en veinte segundos, sin marketing."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes por qué el parche se pone blanco?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "No es magia. Es un gradiente de humedad."
+   }
+  ],
+  "prueba_visual": "Macro del parche empezando a ponerse blanco",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "Te explico cómo funciona un parche de hidrocoloide en veinte segundos, sin marketing. El hidrocoloide es un gel que absorbe líquido. Se usa en apósitos para heridas desde hace décadas. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "Cómo funciona, sin marketing. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "Cómo funciona, sin marketing",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Texto + clips. 0 €",
+   "planos_necesarios": [
+    "Texto en pantalla sobre clip macro del parche",
+    "Esquema: capa de gel sobre el poro",
+    "Esquema: gradiente de humedad",
+    "Tira frente a parche: una arranca, otra absorbe",
+    "Macro del parche empezando a ponerse blanco",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "animación 2D simple (Canva/CapCut)",
+    "apósito hidrocoloide de farmacia (2 €)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Álex (hombre 28–45) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min (CapCut/ffmpeg) + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "se pone blanco",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "hidrocoloide",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Álex compra por mecanismo, no por emoción: este anuncio es el bloque «mecanismo» del ganador racional de Vue (R5, 21 anuncios) contado como un ingeniero, con el blanqueo del parche como prueba objetiva.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 34 s; voz 100 palabras → 36 s finales (2,8 pal/s, máximo cómodo 3,3).",
+   "Se alarga 6 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 13 palabras (≤ 20, bien)."
+  ]
+ }
+]

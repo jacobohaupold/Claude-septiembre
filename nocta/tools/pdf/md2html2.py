@@ -43,6 +43,7 @@ while i<n:
         head=rows[0]; align=rows[1]; body=rows[2:]
         al=['r' if a.endswith(':') and not a.startswith(':') else 'l' for a in align]; ncol=len(head)
         cls='tbl'+(' tbl--wide' if ncol>=7 else '')+(' tbl--x' if ncol>=9 else '')
+        if head and head[0]=='Tiempo': cls='tbl tbl--guion'
         h='<table class="'+cls+'"><thead><tr>'+''.join(f'<th class="{al[k] if k<len(al) else "l"}">{inline(c)}</th>' for k,c in enumerate(head))+'</tr></thead><tbody>'
         for r in body: h+='<tr>'+''.join(f'<td class="{al[k] if k<len(al) else "l"}">{inline(c)}</td>' for k,c in enumerate(r))+'</tr>'
         out.append(h+'</tbody></table>'); continue
@@ -71,6 +72,15 @@ css=open('style.css').read()+'''
 .tag{display:inline-block;font-size:7pt;letter-spacing:.08em;text-transform:uppercase;padding:1.5pt 6pt;border-radius:999px;vertical-align:middle;margin-left:6pt;font-weight:600}
 .tag--A{background:#14213D;color:#F3EFE6}.tag--B{background:#9FB3A1;color:#14213D}.tag--C{background:#E6E1D6;color:#5F5C55}
 h4{font-size:10.5pt;margin:12pt 0 3pt;page-break-after:avoid}
+.tbl--guion{font-size:7.9pt;line-height:1.34;table-layout:fixed}
+.tbl--guion td:first-child,.tbl--guion th:first-child{min-width:0;width:9%;white-space:nowrap;font-weight:600;color:#576D5B}
+.tbl--guion th:nth-child(2),.tbl--guion td:nth-child(2){width:24%}
+.tbl--guion th:nth-child(3),.tbl--guion td:nth-child(3){width:16%;font-weight:600}
+.tbl--guion th:nth-child(4),.tbl--guion td:nth-child(4){width:33%}
+.tbl--guion th:nth-child(5),.tbl--guion td:nth-child(5){width:18%;color:#5F5C55;font-size:7.4pt}
+.tbl--guion td{vertical-align:top;padding:3.5pt 4pt}
+.tbl--guion tr{page-break-inside:avoid}
+.fam h4{border-top:1px solid #E6E1D6;padding-top:8pt;margin-top:14pt}
 .fam{margin-top:18pt}.h2--fam{font-size:15pt;border-bottom-width:1px;color:#576D5B}
 .h2--part{font-size:24pt}
 .card{page-break-inside:avoid;break-inside:avoid}

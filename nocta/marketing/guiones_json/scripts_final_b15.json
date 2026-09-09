@@ -1,0 +1,732 @@
+[
+ {
+  "n": 71,
+  "nombre": "Iba a hacerme un láser",
+  "familia": "F9 · Contra tratamientos caros",
+  "prioridad": "A",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 44,
+  "referencias_vue": [
+   {
+    "rank": 10,
+    "titulo": "From Oily Nose to Clear Skin · 291 d · 11 var.",
+    "que_se_toma": "gancho literal «iba a hacerme un láser hasta que descubrí esto» (291 días)"
+   },
+   {
+    "rank": 31,
+    "titulo": "Clearer Pores While You Sleep 😴 · 186 d · 17 var.",
+    "que_se_toma": "«el láser puede dañar la piel para siempre»"
+   },
+   {
+    "rank": 19,
+    "titulo": "Clearer Pores While You Sleep 😴 · 173 d · 11 var.",
+    "que_se_toma": "«el secreto después de los 40 no es el láser»"
+   }
+  ],
+  "concepto": "«Iba a hacerme un láser de 300 € para los poros hasta que descubrí esto.» — Presupuesto de clínica en pantalla → «el láser no vacía filamentos» → parche → resultado → precio por noche",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Marisol a cámara con un presupuesto de clínica en la mano",
+    "texto_pantalla": "Iba a hacerme un láser",
+    "voz": "Iba a hacerme un láser de 300 € para los poros hasta que descubrí esto.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Presupuesto recreado en pantalla: 300 € por sesión × 3 sesiones",
+    "texto_pantalla": "900 € en total",
+    "voz": "Trescientos euros por sesión. Tres sesiones. Y me avisaron de que los poros no se cierran del todo.",
+    "nota": "Precio en pantalla (R10, 291 días)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Esquema: el láser trabaja la superficie; el filamento sigue dentro y se rellena",
+    "texto_pantalla": "El láser no vacía el poro",
+    "voz": "El láser trabaja la superficie. El filamento sigue dentro del poro y se rellena cada día.",
+    "nota": "Ciencia sencilla (R36)."
+   },
+   {
+    "t": "17–22 s",
+    "plano": "Calculadora en pantalla: 29,90 € ÷ 16 noches",
+    "texto_pantalla": "1,87 € por noche",
+    "voz": "Esto: menos de dos euros por noche.",
+    "nota": "Comparación de precio por uso."
+   },
+   {
+    "t": "22–30 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "30–38 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "38–44 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "anécdota",
+    "texto": "Iba a hacerme un láser de 300 € hasta que descubrí esto."
+   },
+   {
+    "tipo": "precio",
+    "texto": "900 € de láser o 1,87 € por noche. Misma nariz."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes lo que el láser no puede hacer con tus poros?"
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Iba a hacerme un láser de 300 € para los poros hasta que descubrí esto. Trescientos euros por sesión. Tres sesiones. Y me avisaron de que los poros no se cierran del todo. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Iba a hacerme un láser. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Iba a hacerme un láser",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Marisol a cámara con un presupuesto de clínica en la mano",
+    "Presupuesto recreado en pantalla: 300 € por sesión × 3 sesiones",
+    "Esquema: el láser trabaja la superficie",
+    "Calculadora en pantalla: 29,90 € ÷ 16 noches",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "cifras recreadas en pantalla (Canva/CapCut)",
+    "animación 2D simple (Canva/CapCut)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Guion de 291 días en Vue: precio + ciencia. Para Marisol, que ya ha pedido presupuestos, el contraste 900 € frente a 1,87 € por noche es el argumento; el «no se cierran del todo» protege de prometer lo que el láser tampoco cumple.",
+  "revision": [
+   "Duración: catálogo 40 s; bloques 41 s; voz 119 palabras → 44 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 4 s para que la voz quepa sin acelerar; si hay que respetar 40 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 72,
+  "nombre": "Limpieza facial de 60 € vs 2 €",
+  "familia": "F9 · Contra tratamientos caros",
+  "prioridad": "A",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 32,
+  "referencias_vue": [
+   {
+    "rank": 10,
+    "titulo": "From Oily Nose to Clear Skin · 291 d · 11 var.",
+    "que_se_toma": "tratamiento caro frente a parche"
+   },
+   {
+    "rank": 36,
+    "titulo": "Wake Up To Clearer Skin · 129 d · 14 var.",
+    "que_se_toma": "«se rellenan cada 24 h»: por qué la cabina dura una semana"
+   },
+   {
+    "rank": 38,
+    "titulo": "Clearer Pores While You Sleep 😴 · 156 d · 12 var.",
+    "que_se_toma": "«los tratamientos agresivos no envejecen bien»"
+   }
+  ],
+  "concepto": "«Limpieza facial en cabina: 60 € y dura una semana. Esto: menos de 2 € por noche.» — Precio en pantalla → comparación de resultado → parche → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Pantalla partida: recibo de cabina 60 € / pack NOCTA 29,90 €",
+    "texto_pantalla": "60 € vs 1,87 €",
+    "voz": "Limpieza facial en cabina: 60 € y dura una semana. Esto: menos de 2 € por noche.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–12 s",
+    "plano": "Recibo de cabina; calendario con una semana tachada",
+    "texto_pantalla": "60 € · 1 semana",
+    "voz": "Sesenta euros, una hora en cabina, y a la semana la nariz otra vez igual. Porque los poros se rellenan.",
+    "nota": "Recurrencia (R36) aplicada al tratamiento caro."
+   },
+   {
+    "t": "12–18 s",
+    "plano": "Parche puesto; retirada por la mañana; parche a contraluz",
+    "texto_pantalla": "Lo mismo, en casa",
+    "voz": "El parche saca lo mismo que la extracción, sin apretar y mientras duermes.",
+    "nota": "Equivalencia honesta: vaciar, no cerrar."
+   },
+   {
+    "t": "18–26 s",
+    "plano": "Antes/después con misma luz y fecha; parche usado",
+    "texto_pantalla": "Días, no horas",
+    "voz": "Mira el antes y el después. La nariz me dura limpia días, no horas.",
+    "nota": "«Días, no horas» de R4."
+   },
+   {
+    "t": "26–32 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "comparativa",
+    "texto": "60 € en cabina o 1,87 € por noche."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué la limpieza en cabina te dura una semana?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "Una limpieza en cabina dura 7 días. Un parche, cada noche que quieras."
+   }
+  ],
+  "prueba_visual": "Antes/después con misma luz y fecha; parche usado — Días, no horas",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Limpieza facial en cabina: 60 € y dura una semana. Esto: menos de 2 € por noche. Sesenta euros, una hora en cabina, y a la semana la nariz otra vez igual. Porque los poros se rellenan. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "60 € vs 1,87 €. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "60 € vs 1,87 €",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil + texto. 0 €",
+   "planos_necesarios": [
+    "Pantalla partida: recibo de cabina 60 € / pack NOCTA 29,90 €",
+    "Recibo de cabina",
+    "Parche puesto",
+    "Antes/después con misma luz y fecha",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "cifras recreadas en pantalla (Canva/CapCut)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "días, no horas",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Comparativa económica clara sin atacar a nadie por nombre. La razón por la que la cabina «no dura» (los poros se rellenan) es la misma que vende el parche: hay que vaciar cada noche, no una vez al mes.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 28 s; voz 81 palabras → 32 s finales (2,5 pal/s, máximo cómodo 3,3).",
+   "Se alarga 2 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 73,
+  "nombre": "Lo que gasté en 2025",
+  "familia": "F9 · Contra tratamientos caros",
+  "prioridad": "B",
+  "avatar": "Bea (mujer 18–28)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 37,
+  "referencias_vue": [
+   {
+    "rank": 54,
+    "titulo": "From Oily Nose to Clear Skin · 182 d · 14 var.",
+    "que_se_toma": "«pasé años sintiéndome insegura y probándolo todo»"
+   },
+   {
+    "rank": 8,
+    "titulo": "From Oily Nose to Clear Skin · 290 d · 13 var.",
+    "que_se_toma": "«si has probado todos los limpiadores, exfoliantes y tiras…»"
+   },
+   {
+    "rank": 21,
+    "titulo": "From Oily Nose to Clear Skin · 223 d · 12 var.",
+    "que_se_toma": "«los limpiadores no llegan al fondo del poro»"
+   }
+  ],
+  "concepto": "«Lo que gasté en 2025 en productos para la nariz: 214 €. Lo que uso en 2026: esto.» — Botes con precios sumando en pantalla → total → parche → «29,90 € al mes»",
+  "guion": [
+   {
+    "t": "0–6 s",
+    "plano": "POV: botes sobre la mesa; el precio de cada uno aparece y suma en pantalla",
+    "texto_pantalla": "214 € en 2025",
+    "voz": "Lo que gasté en 2025 en productos para la nariz: 214 €. Lo que uso en 2026: esto.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "6–14 s",
+    "plano": "Cada bote con su precio; el total sube",
+    "texto_pantalla": "24 € + 18 € + 32 € + …",
+    "voz": "Limpiador con ácido, dos exfoliantes, tiras, una mascarilla de arcilla, un sérum… Doscientos catorce euros.",
+    "nota": "Suma en pantalla (R54 «años y dinero probando de todo»)."
+   },
+   {
+    "t": "14–19 s",
+    "plano": "Se apartan todos los botes; queda la caja NOCTA",
+    "texto_pantalla": "Un parche",
+    "voz": "Nada de eso llegaba al fondo del poro. Esto sí.",
+    "nota": "«Los limpiadores no llegan» (R21)."
+   },
+   {
+    "t": "19–23 s",
+    "plano": "Precio en pantalla",
+    "texto_pantalla": "29,90 € · 5 semanas",
+    "voz": "Veintinueve con noventa, cinco semanas de nariz limpia.",
+    "nota": "Precio por periodo."
+   },
+   {
+    "t": "23–31 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "31–37 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "dato",
+    "texto": "214 € en productos para la nariz en 2025. En 2026, esto."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes cuánto gastaste el año pasado en productos para la nariz?"
+   },
+   {
+    "tipo": "lista",
+    "texto": "Ácidos, exfoliantes, tiras, arcilla, sérum. Nada. Un parche, sí."
+   }
+  ],
+  "prueba_visual": "Sin plano de parche usado: añadir 3 s de parche a contraluz antes del cierre (el plano más repetido de los 60 ganadores).",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Lo que gasté en 2025 en productos para la nariz: 214 €. Lo que uso en 2026: esto. Limpiador con ácido, dos exfoliantes, tiras, una mascarilla de arcilla, un sérum… Doscientos catorce euros. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "214 € en 2025. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "214 € en 2025",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil + botes. 0 €",
+   "planos_necesarios": [
+    "POV: botes sobre la mesa",
+    "Cada bote con su precio",
+    "Se apartan todos los botes",
+    "Precio en pantalla",
+    "Parche NOCTA en la mano",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "botes de productos propios con precio",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Bea (mujer 18–28) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Guion de Vue («gasté un dineral en productos hasta que encontré esto») con cifras reales en pantalla, que es lo que lo hace creíble. Sin cara: lo puede grabar cualquiera con sus botes.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 33 s; voz 93 palabras → 37 s finales (2,5 pal/s, máximo cómodo 3,3).",
+   "Se alarga 7 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 17 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 74,
+  "nombre": "El dermatólogo no te lo vende",
+  "familia": "F9 · Contra tratamientos caros",
+  "prioridad": "C",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 39,
+  "referencias_vue": [
+   {
+    "rank": 10,
+    "titulo": "From Oily Nose to Clear Skin · 291 d · 11 var.",
+    "que_se_toma": "tratamiento de clínica frente a parche"
+   },
+   {
+    "rank": 31,
+    "titulo": "Clearer Pores While You Sleep 😴 · 186 d · 17 var.",
+    "que_se_toma": "«el láser puede dañar la piel»: por qué no ir a la clínica"
+   },
+   {
+    "rank": 19,
+    "titulo": "Clearer Pores While You Sleep 😴 · 173 d · 11 var.",
+    "que_se_toma": "resultado realista sin láser"
+   }
+  ],
+  "concepto": "«Esto no te lo venden en la clínica porque cuesta 16 € y no necesita consulta.» — Ángulo precio → mecanismo → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Caja NOCTA junto a un presupuesto de clínica recreado; rótulo",
+    "texto_pantalla": "16,95 € · sin cita",
+    "voz": "Esto no te lo venden en la clínica porque cuesta 16,95 € y no necesita consulta.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Caja; calendario sin citas",
+    "texto_pantalla": "Sin cita, sin sesiones",
+    "voz": "Sin cita, sin consulta, sin sesiones. Una caja, ocho noches.",
+    "nota": "Ángulo precio + comodidad. Nunca decir «recomendado por dermatólogos» (claims)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Macro de la nariz, muy cerca; rótulo",
+    "texto_pantalla": "FILAMENTOS = grasa que se rellena",
+    "voz": "Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día.",
+    "nota": "Reencuadre de R1: nombrar el problema (46 de los 60 ganadores lo hacen aquí)."
+   },
+   {
+    "t": "17–25 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "25–33 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "33–39 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "precio",
+    "texto": "Cuesta 16,95 € y no necesita consulta."
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "En la clínica no te lo venden. Y no es porque no funcione."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué en la clínica no te ofrecen esto?"
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "Esto no te lo venden en la clínica porque cuesta 16,95 € y no necesita consulta. Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "16,95 € · sin cita. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "16,95 € · sin cita",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Caja NOCTA junto a un presupuesto de clínica recreado",
+    "Caja",
+    "Macro de la nariz, muy cerca",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "cifras recreadas en pantalla (Canva/CapCut)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Ángulo precio con un toque de «lo que no te cuentan», sin atacar a nadie ni citar médicos. Va al advertorial porque el espectador necesita la explicación completa antes de comprar.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 36 s; voz 106 palabras → 39 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 9 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~7 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 16 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 75,
+  "nombre": "Microdermoabrasión: no",
+  "familia": "F9 · Contra tratamientos caros",
+  "prioridad": "B",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 38,
+  "referencias_vue": [
+   {
+    "rank": 54,
+    "titulo": "From Oily Nose to Clear Skin · 182 d · 14 var.",
+    "que_se_toma": "testimonio de «lo probé todo» resuelto con prueba, no con promesa"
+   },
+   {
+    "rank": 39,
+    "titulo": "Clear Pores Overnight · 135 d · 21 var.",
+    "que_se_toma": "«durante años frotaba, apretaba y probaba de todo»"
+   },
+   {
+    "rank": 38,
+    "titulo": "Clearer Pores While You Sleep 😴 · 156 d · 12 var.",
+    "que_se_toma": "tratamientos agresivos frente a absorber"
+   }
+  ],
+  "concepto": "«Probé microdermoabrasión, peelings y tiras. Lo único que enseñó resultado en el parche fue esto.» — Lista de tratamientos → prueba visual del parche → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Marisol a cámara; lista en pantalla con cruces",
+    "texto_pantalla": "Lo probé todo",
+    "voz": "Probé microdermoabrasión, peelings y tiras. Lo único que enseñó resultado en el parche fue esto.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–12 s",
+    "plano": "Lista con cruz: microdermoabrasión, peeling químico, tiras, limpieza en cabina",
+    "texto_pantalla": "× × × ×",
+    "voz": "Microdermoabrasión: dos días roja. Peeling: la piel fina y los puntitos igual. Tiras: pelusa y dolor.",
+    "nota": "Descarte de alternativas con consecuencia (R38 «los tratamientos agresivos no envejecen bien»)."
+   },
+   {
+    "t": "12–16 s",
+    "plano": "Marisol a cámara",
+    "texto_pantalla": "No prometo. Enseño",
+    "voz": "No te prometo nada. Te enseño el parche.",
+    "nota": "Promesa honesta (R4)."
+   },
+   {
+    "t": "16–24 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "24–32 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "32–38 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "lista",
+    "texto": "Microdermoabrasión, peelings, tiras. Solo esto enseñó resultado."
+   },
+   {
+    "tipo": "honestidad",
+    "texto": "No te prometo nada. Te enseño el parche."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Qué tratamiento te ha enseñado alguna vez lo que sacó?"
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Probé microdermoabrasión, peelings y tiras. Lo único que enseñó resultado en el parche fue esto. Microdermoabrasión: dos días roja. Peeling: la piel fina y los puntitos igual. Tiras: pelusa y dolor. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Lo probé todo. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Lo probé todo",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Marisol a cámara",
+    "Lista con cruz: microdermoabrasión, peeling químico, tiras, limpieza en cabina",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Testimonio de «lo probé todo» con la diferencia que importa: lo único que enseña resultado físico es el parche. Para Marisol, que ha gastado en cabina y clínica, la prueba visual pesa más que cualquier promesa.",
+  "revision": [
+   "Duración: catálogo 35 s; bloques 35 s; voz 103 palabras → 38 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 3 s para que la voz quepa sin acelerar; si hay que respetar 35 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ }
+]

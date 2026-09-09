@@ -1,0 +1,565 @@
+[
+ {
+  "n": 86,
+  "nombre": "Lote #001",
+  "familia": "F11 · Oferta, garantía y prueba social",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 22,
+  "referencias_vue": [
+   {
+    "rank": 58,
+    "titulo": "Clogged Pores? Try this 👆 · 223 d · 3 var.",
+    "que_se_toma": "«el producto secreto… se agotan»"
+   },
+   {
+    "rank": 4,
+    "titulo": "Clear Nose Overnight ✨ · 121 d · 38 var.",
+    "que_se_toma": "«se agotan rápido» como cierre"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "parche usado"
+   }
+  ],
+  "concepto": "«Lote número 1. 170 cajas. Cuando se acaben, tardan 3 semanas en volver.» — Caja con número de lote → escasez real → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Caja con el número de lote escrito a mano; contador de cajas restantes",
+    "texto_pantalla": "Lote 001",
+    "voz": "Lote número uno. Ciento veinticinco cajas. Cuando se acaben, tardan tres semanas en volver.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Caja numerada; contador bajando",
+    "texto_pantalla": "Cada caja lleva su número",
+    "voz": "Es el primer lote de NOCTA. Cada caja lleva su número. Cuando se acaben, tres semanas de espera.",
+    "nota": "Escasez verdadera (stock piloto real: 125 cajas de nariz)."
+   },
+   {
+    "t": "11–16 s",
+    "plano": "Parche a contraluz",
+    "texto_pantalla": "Lo que hace",
+    "voz": "Esto es lo que hace en una noche.",
+    "nota": "Prueba."
+   },
+   {
+    "t": "16–22 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "escasez",
+    "texto": "Lote 1: 125 cajas. Luego, tres semanas de espera."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes por qué cada caja lleva un número?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "Primer lote. 125 cajas. Sin reposición hasta dentro de tres semanas."
+   }
+  ],
+  "prueba_visual": "Parche a contraluz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Lote número uno. Ciento veinticinco cajas. Cuando se acaben, tardan tres semanas en volver. Es el primer lote de NOCTA. Cada caja lleva su número. Cuando se acaben, tres semanas de espera. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Lote 001. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Lote 001",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Caja con el número de lote escrito a mano",
+    "Caja numerada",
+    "Parche a contraluz",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Escasez real (el lote piloto son 125 cajas de nariz y la reposición tarda ~3 semanas), no fingida: la cifra tiene que ser la del CRM en el momento de emitir. Actualizar el contador cada semana.",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 19 s; voz 59 palabras → 22 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Se alarga 2 s para que la voz quepa sin acelerar; si hay que respetar 20 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 87,
+  "nombre": "Lo que dicen los primeros 50",
+  "familia": "F11 · Oferta, garantía y prueba social",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 30,
+  "referencias_vue": [
+   {
+    "rank": 42,
+    "titulo": "From Oily Nose to Clear Skin · 224 d · 10 var.",
+    "que_se_toma": "«¿por qué todo el mundo se está pasando a estos parches?» (prueba social)"
+   },
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "«un montón de gente por fin entiende por qué nada le funcionaba»"
+   }
+  ],
+  "concepto": "«Lo que dijeron los primeros 50 pedidos.» (mensajes de WhatsApp reales, con permiso) — Capturas de mensajes → parche → CTA",
+  "guion": [
+   {
+    "t": "0–3 s",
+    "plano": "Texto en pantalla sobre capturas de WhatsApp",
+    "texto_pantalla": "Los primeros 50",
+    "voz": "Lo que dijeron los primeros cincuenta pedidos.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "3–11 s",
+    "plano": "Capturas reales una tras otra, nombres tapados, con permiso escrito",
+    "texto_pantalla": "Mensajes reales",
+    "voz": "Mensajes reales de clientes, con su permiso: lo que vieron en el parche, si se pegó, quién de casa se lo robó.",
+    "nota": "SOLO con 50 pedidos reales y permisos por escrito; nunca inventar mensajes. Las frases exactas se sustituyen por las reales."
+   },
+   {
+    "t": "11–16 s",
+    "plano": "Parche a contraluz",
+    "texto_pantalla": "Lo que ven",
+    "voz": "Esto es lo que ven por la mañana.",
+    "nota": "Prueba."
+   },
+   {
+    "t": "16–24 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "24–30 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "social",
+    "texto": "Lo que dijeron los primeros cincuenta pedidos."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Qué dicen los primeros cincuenta que lo probaron?"
+   },
+   {
+    "tipo": "prueba",
+    "texto": "Cincuenta pedidos. Estos son sus mensajes."
+   }
+  ],
+  "prueba_visual": "Parche a contraluz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Lo que dijeron los primeros cincuenta pedidos. Mensajes reales de clientes, con su permiso: lo que vieron en el parche, si se pegó, quién de casa se lo robó. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Los primeros 50. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Los primeros 50",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Capturas + ffmpeg. 0 €",
+   "planos_necesarios": [
+    "Texto en pantalla sobre capturas de WhatsApp",
+    "Capturas reales una tras otra, nombres tapados, con permiso escrito",
+    "Parche a contraluz",
+    "Parche NOCTA en la mano",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "capturas de WhatsApp con permiso escrito",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min (CapCut/ffmpeg) + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Prueba social real desde el CRM/WhatsApp, que Vue no puede tener en español. Condición: existir 50 pedidos y tener permisos; hasta entonces, no emitir.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 29 s; voz 80 palabras → 30 s finales (2,7 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 7 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 88,
+  "nombre": "Código de esta semana",
+  "familia": "F11 · Oferta, garantía y prueba social",
+  "prioridad": "C",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 6,
+  "referencias_vue": [
+   {
+    "rank": 23,
+    "titulo": "Clogged Pores? 30% OFF Sale · 290 d · 7 var.",
+    "que_se_toma": "oferta con descuento y urgencia (290 días)"
+   }
+  ],
+  "concepto": "«Código NOCHE10 solo esta semana: −10 % en el pack de 2.» — Packshot + código con fecha → CTA",
+  "guion": [
+   {
+    "t": "0–1 s",
+    "plano": "Packshot del pack de 2 con el código grande",
+    "texto_pantalla": "NOCHE10 · −10 % en el pack de 2",
+    "voz": "—",
+    "nota": "Gancho (0–1 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "1–4 s",
+    "plano": "Fecha de caducidad del código bajo el packshot",
+    "texto_pantalla": "Solo hasta el domingo",
+    "voz": "—",
+    "nota": "Código creado en el CRM con caducidad real."
+   },
+   {
+    "t": "4–6 s",
+    "plano": "CTA",
+    "texto_pantalla": "Pack de 2 · 26,91 € con el código",
+    "voz": "—",
+    "nota": ""
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "precio",
+    "texto": "NOCHE10: −10 % en el pack de 2 solo esta semana."
+   },
+   {
+    "tipo": "escasez",
+    "texto": "Hasta el domingo. Luego el código deja de funcionar."
+   },
+   {
+    "tipo": "orden",
+    "texto": "Usa NOCHE10 antes del domingo."
+   }
+  ],
+  "prueba_visual": "Sin plano de parche usado: añadir 3 s de parche a contraluz antes del cierre (el plano más repetido de los 60 ganadores).",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "NOCHE10 · −10 % en el pack de 2 Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "NOCHE10 · −10 % en el pack de 2. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "NOCHE10 · −10 % en el pack de 2",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Canva. 0 €",
+   "planos_necesarios": [
+    "Packshot del pack de 2 con el código grande",
+    "Fecha de caducidad del código bajo el packshot",
+    "CTA"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "20 min (foto + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "porcentaje",
+    "estado": "revisar",
+    "alternativa": "solo cifras reales de NOCTA (CRM) o con fuente"
+   }
+  ],
+  "por_que_convertira": "Estático de oferta con caducidad real para retargeting (email, WhatsApp, Reels). La urgencia es verdad porque el código expira en el CRM.",
+  "revision": [
+   "Duración: catálogo 6 s; bloques 6 s; voz 0 palabras → 6 s finales (0,0 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 7 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 89,
+  "nombre": "Envío en 24–48 h desde España",
+  "familia": "F11 · Oferta, garantía y prueba social",
+  "prioridad": "C",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 19,
+  "referencias_vue": [
+   {
+    "rank": 23,
+    "titulo": "Clogged Pores? 30% OFF Sale · 290 d · 7 var.",
+    "que_se_toma": "oferta clara y directa"
+   },
+   {
+    "rank": 20,
+    "titulo": "From Oily Nose to Clear Skin · 254 d · 19 var.",
+    "que_se_toma": "instrucción simple: «usa uno de estos»"
+   }
+  ],
+  "concepto": "«Pedido hoy, en tu buzón mañana o pasado. Envío desde España.» — Sobre saliendo de casa → buzón → parche esa noche",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Sobre NOCTA saliendo de casa; etiqueta; buzón",
+    "texto_pantalla": "Desde España · 24–48 h",
+    "voz": "Pedido hoy, en tu buzón mañana o pasado. Envío desde España.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–9 s",
+    "plano": "Etiqueta del envío; mapa de España",
+    "texto_pantalla": "Desde España",
+    "voz": "Se envía desde España, no desde fuera. Sin aduanas, sin esperas.",
+    "nota": "Ventaja frente a Vue (envía desde fuera)."
+   },
+   {
+    "t": "9–13 s",
+    "plano": "Esa noche: parche puesto",
+    "texto_pantalla": "Esa misma noche",
+    "voz": "Y esa misma noche, parche.",
+    "nota": "Cierra la objeción de plazo."
+   },
+   {
+    "t": "13–19 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "dato",
+    "texto": "Pedido hoy, en tu buzón mañana o pasado."
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "No viene de fuera. Sale de España."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuánto tarda en llegar? Mañana o pasado."
+   }
+  ],
+  "prueba_visual": "Sin plano de parche usado: añadir 3 s de parche a contraluz antes del cierre (el plano más repetido de los 60 ganadores).",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Pedido hoy, en tu buzón mañana o pasado. Envío desde España. Se envía desde España, no desde fuera. Sin aduanas, sin esperas. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Desde España · 24–48 h. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Desde España · 24–48 h",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Sobre NOCTA saliendo de casa",
+    "Etiqueta del envío",
+    "Esa noche: parche puesto",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Resuelve la objeción del plazo (Vue tarda) en 15 s; sirve de retargeting para quien vio la ficha y no compró.",
+  "revision": [
+   "Duración: catálogo 15 s; bloques 17 s; voz 46 palabras → 19 s finales (2,4 pal/s, máximo cómodo 3,3).",
+   "Se alarga 4 s para que la voz quepa sin acelerar; si hay que respetar 15 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 11 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 90,
+  "nombre": "Qué pasa si no se pega",
+  "familia": "F11 · Oferta, garantía y prueba social",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 20,
+  "referencias_vue": [
+   {
+    "rank": 5,
+    "titulo": "No More Nose Bumps · 124 d · 42 var.",
+    "que_se_toma": "resolver la objeción práctica antes de vender"
+   },
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "garantía como cierre"
+   }
+  ],
+  "concepto": "«¿Y si no se pega? Te mandamos otra caja. Así de simple.» — Objeción → garantía de adhesión → cómo ponerlo bien (nariz seca) → CTA",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Persona a cámara con el parche en la mano",
+    "texto_pantalla": "¿Y si no se pega?",
+    "voz": "¿Y si no se pega? Te mandamos otra caja. Así de simple.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–10 s",
+    "plano": "Cómo ponerlo bien: nariz limpia, seca con toalla, presionar 10 segundos",
+    "texto_pantalla": "Seca · presiona 10 s",
+    "voz": "Para que se pegue: nariz limpia, bien seca, y presiona diez segundos. Ni crema ni sérum antes.",
+    "nota": "Instrucción que evita el 80 % de los «no se pega»."
+   },
+   {
+    "t": "10–15 s",
+    "plano": "Parche puesto toda la noche; por la mañana intacto",
+    "texto_pantalla": "Toda la noche",
+    "voz": "Así aguanta toda la noche. Y si aun así se despega, te mandamos otra caja.",
+    "nota": "Garantía de adhesión NOCTA."
+   },
+   {
+    "t": "15–20 s",
+    "plano": "Cara a cámara, sonrisa",
+    "texto_pantalla": "¿Sigues con dudas? Pruébalo",
+    "voz": "¿Sigues con dudas? Pruébalo 60 días. Si no te convence, te devolvemos el dinero.",
+    "nota": "Reto al escéptico (R21)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "pregunta",
+    "texto": "¿Y si no se pega? Te mandamos otra caja."
+   },
+   {
+    "tipo": "orden",
+    "texto": "Nariz seca y diez segundos de presión. Así se pega."
+   },
+   {
+    "tipo": "reto",
+    "texto": "Si se te despega, la caja la pagamos nosotros."
+   }
+  ],
+  "prueba_visual": "Parche puesto toda la noche; por la mañana intacto",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "¿Y si no se pega? Te mandamos otra caja. Así de simple. Para que se pegue: nariz limpia, bien seca, y presiona diez segundos. Ni crema ni sérum antes. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "¿Y si no se pega?. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "¿Y si no se pega?",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Persona a cámara con el parche en la mano",
+    "Cómo ponerlo bien: nariz limpia, seca con toalla, presionar 10 segundos",
+    "Parche puesto toda la noche",
+    "Cara a cámara, sonrisa"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "toalla"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Resuelve la objeción nº 2 (¿se cae?) y enseña el uso correcto, lo que reduce devoluciones. La garantía de adhesión es exclusiva de NOCTA.",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 18 s; voz 58 palabras → 20 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 12 palabras (≤ 20, bien)."
+  ]
+ }
+]

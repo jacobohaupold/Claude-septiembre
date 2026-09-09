@@ -1,0 +1,574 @@
+[
+ {
+  "n": 41,
+  "nombre": "¿Por qué brilla a las 11?",
+  "familia": "F5 · Preguntas y bucle abierto",
+  "prioridad": "B",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 35,
+  "referencias_vue": [
+   {
+    "rank": 36,
+    "titulo": "Wake Up To Clearer Skin · 129 d · 14 var.",
+    "que_se_toma": "«por eso tu nariz nunca se queda mate»"
+   },
+   {
+    "rank": 9,
+    "titulo": "From Oily Nose to Clear Skin · 290 d · 21 var.",
+    "que_se_toma": "señal del brillo"
+   }
+  ],
+  "concepto": "«¿Por qué tu nariz brilla a las 11 de la mañana aunque te la hayas lavado a las 8?» — Pregunta → filamentos llenos = brillo → vaciarlos de noche → menos brillo de día",
+  "guion": [
+   {
+    "t": "0–6 s",
+    "plano": "Marisol en la oficina a las 11, se mira en el móvil",
+    "texto_pantalla": "Brilla a las 11",
+    "voz": "¿Por qué tu nariz brilla a las once de la mañana aunque te la hayas lavado a las ocho?",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "6–13 s",
+    "plano": "Animación de poros llenos que «rebosan»",
+    "texto_pantalla": "Poros llenos = brillo",
+    "voz": "Porque los poros están llenos y rebosan. Vaciarlos por la noche es lo único que baja el brillo de día.",
+    "nota": "Ángulo brillo de R36 (129 días) para Marisol y Álex."
+   },
+   {
+    "t": "13–21 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "21–29 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "29–35 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué te brilla la nariz a las once?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "Tus poros se rellenan cada 24 horas. Por eso brilla."
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "No es que te laves mal. Es que están llenos."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "¿Por qué tu nariz brilla a las once de la mañana aunque te la hayas lavado a las ocho? Porque los poros están llenos y rebosan. Vaciarlos por la noche es lo único que baja el brillo de día. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "Brilla a las 11. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "Brilla a las 11",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Marisol en la oficina a las 11, se mira en el móvil",
+    "Animación de poros llenos que «rebosan»",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "animación 2D simple (Canva/CapCut)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45 min (voz + B-roll) + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "El único ángulo del ranking sobre brillo: amplía el público más allá de quien ve «puntos». Marisol y Álex se reconocen a las 11.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 30 s; voz 103 palabras → 35 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 5 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~4 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 19 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 42,
+  "nombre": "¿Cuánto cuesta una noche de nariz limpia?",
+  "familia": "F5 · Preguntas y bucle abierto",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 10,
+  "referencias_vue": [
+   {
+    "rank": 17,
+    "titulo": "From Oily Nose to Clear Skin · 287 d · 15 var.",
+    "que_se_toma": "ancla de precio cotidiano"
+   },
+   {
+    "rank": 20,
+    "titulo": "From Oily Nose to Clear Skin · 254 d · 19 var.",
+    "que_se_toma": "formato mínimo para retargeting"
+   }
+  ],
+  "concepto": "«¿Cuánto cuesta una noche de nariz limpia? Menos que un café.» — Packshot + cálculo (29,90 € / 16 noches = 1,87 €) + CTA",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Estático: packshot del pack de 2 + cálculo",
+    "texto_pantalla": "29,90 € ÷ 16 noches = 1,87 €",
+    "voz": "¿Cuánto cuesta una noche de nariz limpia? Menos que un café.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–10 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuánto cuesta una noche de nariz limpia?"
+   },
+   {
+    "tipo": "precio",
+    "texto": "1,87 € por noche."
+   },
+   {
+    "tipo": "comparativa",
+    "texto": "Menos que un café."
+   }
+  ],
+  "prueba_visual": "Sin plano de parche usado: añadir 3 s de parche a contraluz antes del cierre (el plano más repetido de los 60 ganadores).",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "¿Cuánto cuesta una noche de nariz limpia? Menos que un café. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "29,90 € ÷ 16 noches = 1,87 €. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "29,90 € ÷ 16 noches = 1,87 €",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "ffmpeg/Canva. 0 €",
+   "planos_necesarios": [
+    "Estático: packshot del pack de 2 + cálculo",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2",
+    "cifras recreadas en pantalla (Canva/CapCut)"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "20 min (foto + Canva)"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Estático para retargeting por email/Reels: una cifra verdadera y una comparación. Coste 0.",
+  "revision": [
+   "Duración: catálogo 6 s; bloques 8 s; voz 30 palabras → 10 s finales (3,0 pal/s, máximo cómodo 3,3).",
+   "Se alarga 4 s para que la voz quepa sin acelerar; si hay que respetar 6 s, recortar ~11 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 11 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 43,
+  "nombre": "Mi piel era un filtro andante",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Bea (mujer 18–28)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 45,
+  "referencias_vue": [
+   {
+    "rank": 7,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 14 var.",
+    "que_se_toma": "catfish → filtro andante; empezar por la prueba"
+   },
+   {
+    "rank": 3,
+    "titulo": "Clearer Without the Stress · 121 d · 56 var.",
+    "que_se_toma": "«se acabó esconderse en las fotos»"
+   }
+  ],
+  "concepto": "«Mi piel era un catfish: editaba cada selfie para tapar la nariz. Esto es sin filtro.» — Selfie editada vs real → historia corta → parche → selfie sin filtro",
+  "guion": [
+   {
+    "t": "0–7 s",
+    "plano": "Pantalla partida: selfie editada / selfie real de Bea",
+    "texto_pantalla": "Con filtro · Sin filtro",
+    "voz": "Mi piel era un filtro andante: editaba cada selfie para tapar la nariz. Esto es sin filtro.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "7–20 s",
+    "plano": "Bea enseña la app de retoque; luego la caja; parche puesto por la noche",
+    "texto_pantalla": "Editaba cada selfie",
+    "voz": "Me gastaba el dinero en cosas que me irritaban y el tiempo en retocar la nariz. Hasta que probé esto.",
+    "nota": "Historia que empieza por la prueba (R7, 289 días)."
+   },
+   {
+    "t": "20–29 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "29–38 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "38–45 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "confesión",
+    "texto": "Mi piel era un filtro andante. Ya no."
+   },
+   {
+    "tipo": "comparativa",
+    "texto": "Con filtro. Sin filtro. Misma nariz, un mes después."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Editas la nariz en las fotos? Yo también lo hacía."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Mi piel era un filtro andante: editaba cada selfie para tapar la nariz. Esto es sin filtro. Me gastaba el dinero en cosas que me irritaban y el tiempo en retocar la nariz. Hasta que probé esto. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Con filtro · Sin filtro. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Con filtro · Sin filtro",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Pantalla partida: selfie editada / selfie real de Bea",
+    "Bea enseña la app de retoque",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Bea (mujer 18–28)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "La única historia en primera persona que dura en Vue, adaptada al gesto español (retocar la nariz). El beneficio es social: subir fotos sin filtro.",
+  "revision": [
+   "Duración: catálogo 45 s; bloques 34 s; voz 101 palabras → 45 s finales (2,2 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 17 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 44,
+  "nombre": "Qué asco (y qué gusto)",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 17,
+  "referencias_vue": [
+   {
+    "rank": 50,
+    "titulo": "No More Nose Bumps · 108 d · 25 var.",
+    "que_se_toma": "reacción y asco satisfactorio"
+   },
+   {
+    "rank": 23,
+    "titulo": "Clogged Pores? 30% OFF Sale · 290 d · 7 var.",
+    "que_se_toma": "puntos blancos como cierre"
+   }
+  ],
+  "concepto": "«Qué asco me daba mi nariz. Mira lo que sale.» (retirada del parche en macro) — Retirada del parche lenta → «esto llevaba dentro» → CTA",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Macro extremo: retirada lenta del parche a contraluz; puntos blancos",
+    "texto_pantalla": "Qué asco. Y qué gusto.",
+    "voz": "Qué asco me daba mi nariz. Mira lo que sale.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–11 s",
+    "plano": "Macro del parche a contraluz; corte a la nariz lisa",
+    "texto_pantalla": "Esto llevaba dentro",
+    "voz": "Esto llevaba dentro. Una noche.",
+    "nota": "Peel reveal puro (R21 «gunk», 225 días, 14 variantes)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "asco",
+    "texto": "Qué asco me daba mi nariz. Mira lo que sale."
+   },
+   {
+    "tipo": "reto",
+    "texto": "Una noche. Mira lo que sale."
+   },
+   {
+    "tipo": "curiosidad",
+    "texto": "Esto es lo que había en mi nariz."
+   }
+  ],
+  "prueba_visual": "Macro extremo: retirada lenta del parche a contraluz; puntos blancos",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Qué asco me daba mi nariz. Mira lo que sale. Esto llevaba dentro. Una noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Qué asco. Y qué gusto. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Qué asco. Y qué gusto.",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil con macro, luz lateral. 8 €",
+   "planos_necesarios": [
+    "Macro extremo: retirada lenta del parche a contraluz",
+    "Macro del parche a contraluz",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "30 min de grabación + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "El plano más rentable de la cuenta como anuncio entero: 15 s, sin explicar, con el CTA en el texto del anuncio.",
+  "revision": [
+   "Duración: catálogo 15 s; bloques 15 s; voz 34 palabras → 17 s finales (2,0 pal/s, máximo cómodo 3,3).",
+   "Se alarga 2 s para que la voz quepa sin acelerar; si hay que respetar 15 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 10 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 45,
+  "nombre": "Reto: una noche",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 20,
+  "referencias_vue": [
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "«de esto a esto» sin explicación"
+   },
+   {
+    "rank": 20,
+    "titulo": "From Oily Nose to Clear Skin · 254 d · 19 var.",
+    "que_se_toma": "formato corto"
+   }
+  ],
+  "concepto": "«Me lo puse una noche y esto es lo que salió.» (parche puesto → alarma → retirada) — Noche → alarma 7:00 → retirada → macro del parche → macro de la nariz",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "POV manos: parche puesto; alarma del móvil a las 7:00",
+    "texto_pantalla": "Reto: una noche",
+    "voz": "Me lo puse una noche y esto es lo que salió.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–13 s",
+    "plano": "Retirada del parche; macro del parche; macro de la nariz",
+    "texto_pantalla": "Una noche",
+    "voz": "Sin apretar, sin tiras, sin rutina. Una noche.",
+    "nota": "«Reto de una noche» sin cara: el más barato de escalar."
+   },
+   {
+    "t": "13–20 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "reto",
+    "texto": "Me lo puse una noche y esto es lo que salió."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Qué sale de tu nariz en una noche?"
+   },
+   {
+    "tipo": "orden",
+    "texto": "Ponte uno esta noche. Mira mañana."
+   }
+  ],
+  "prueba_visual": "Retirada del parche; macro del parche; macro de la nariz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Me lo puse una noche y esto es lo que salió. Sin apretar, sin tiras, sin rutina. Una noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Reto: una noche. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Reto: una noche",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "POV manos: parche puesto",
+    "Retirada del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Formato POV sin cara: se regraba con cualquiera y no depende de la persona. Ideal para multiplicar variantes (57 en el nº 1).",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 16 s; voz 38 palabras → 20 s finales (1,9 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 11 palabras (≤ 20, bien)."
+  ]
+ }
+]

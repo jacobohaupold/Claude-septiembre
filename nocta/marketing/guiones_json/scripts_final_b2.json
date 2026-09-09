@@ -1,0 +1,722 @@
+[
+ {
+  "n": 6,
+  "nombre": "Grasa oxidada, no suciedad",
+  "familia": "F1 · Reencuadre educativo",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 39,
+  "referencias_vue": [
+   {
+    "rank": 21,
+    "titulo": "From Oily Nose to Clear Skin · 223 d · 12 var.",
+    "que_se_toma": "«grasa oxidada al fondo del poro; los limpiadores no llegan»"
+   },
+   {
+    "rank": 8,
+    "titulo": "From Oily Nose to Clear Skin · 290 d · 13 var.",
+    "que_se_toma": "«no eres tú» y el contraste con la tira"
+   }
+  ],
+  "concepto": "«El punto oscuro es grasa oxidada por el aire, no suciedad. Frotar no la saca.» — Gancho → demostración con una gota de aceite oxidándose (o vídeo de una manzana) → «el parche la absorbe sin frotar» → prueba",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "POV: gota de aceite en un plato, se oscurece con el tiempo (time-lapse)",
+    "texto_pantalla": "Grasa oxidada, no suciedad",
+    "voz": "El punto oscuro es grasa oxidada por el aire, no suciedad. Frotar no la saca.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Manzana cortada oscureciéndose junto a la nariz en macro",
+    "texto_pantalla": "Se oxida, como una manzana",
+    "voz": "Se oxida como una manzana cortada. Por eso es oscuro y por eso lavarte más no sirve.",
+    "nota": "Metáfora visual nueva sobre la base de R21 («oxidized oil»)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Tira arrancada en macro; rojez",
+    "texto_pantalla": "Solo la capa de arriba",
+    "voz": "La tira solo se lleva la capa de arriba. Y cada vez que la arrancas, te dañas la piel.",
+    "nota": "Contraste con la tira (R6, R8, R46)."
+   },
+   {
+    "t": "17–25 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "25–33 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "33–39 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "contradicción",
+    "texto": "No es suciedad. Es grasa oxidada."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Por qué son negros si te lavas la cara?"
+   },
+   {
+    "tipo": "orden",
+    "texto": "Deja de frotarte la nariz. Es grasa, no suciedad."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "El punto oscuro es grasa oxidada por el aire, no suciedad. Frotar no la saca. Se oxida como una manzana cortada. Por eso es oscuro y por eso lavarte más no sirve. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "Grasa oxidada, no suciedad. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "Grasa oxidada, no suciedad",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "POV: gota de aceite en un plato, se oscurece con el tiempo (time-lapse)",
+    "Manzana cortada oscureciéndose junto a la nariz en macro",
+    "Tira arrancada en macro",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "móvil con time-lapse y lámpara fija",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "manzana / plato con aceite"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Responde a la objeción «me lavo más» con una prueba visual (la manzana) que nadie usa. El contraste tira/parche cierra con R8.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 34 s; voz 115 palabras → 39 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 9 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~16 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 7,
+  "nombre": "Lo que ves con la lupa",
+  "familia": "F1 · Reencuadre educativo",
+  "prioridad": "A",
+  "avatar": "Bea (mujer 18–28)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 38,
+  "referencias_vue": [
+   {
+    "rank": 48,
+    "titulo": "Clear Nose Overnight ✨ · 75 d · 28 var.",
+    "que_se_toma": "diferencia visual entre punto negro y filamento"
+   },
+   {
+    "rank": 7,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 14 var.",
+    "que_se_toma": "empezar la historia por la prueba, no por «yo antes»"
+   }
+  ],
+  "concepto": "«Hice zoom a mi nariz con la lupa del móvil y entendí por qué nada funcionaba.» — Zoom con macro del móvil → «filamentos, no puntos negros» → parche → zoom al día siguiente",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Bea acerca el móvil con lente macro a su nariz; la imagen se llena de puntitos",
+    "texto_pantalla": "Con la lupa del móvil",
+    "voz": "Hice zoom a mi nariz con la lupa del móvil y entendí por qué nada funcionaba.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–10 s",
+    "plano": "Macro extremo: filamentos grises en toda la nariz",
+    "texto_pantalla": "Filamentos, no puntos negros",
+    "voz": "Cientos, grises, en toda la nariz. Eso son filamentos, no puntos negros. Y se rellenan solos.",
+    "nota": "R48: la diferencia visual punto negro/filamento (gris, muchos, solo en la nariz)."
+   },
+   {
+    "t": "10–16 s",
+    "plano": "Tira de farmacia arrancada, dedos apretando, botes de exfoliante",
+    "texto_pantalla": "Por eso vuelven",
+    "voz": "Nada te ha funcionado porque los tratabas como puntos negros. Por eso vuelven siempre.",
+    "nota": "Absolución + recurrencia (R1, R4, R13): la objeción nº 1 resuelta antes del producto."
+   },
+   {
+    "t": "16–24 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "24–32 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "32–38 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "curiosidad",
+    "texto": "Hice zoom a mi nariz y entendí por qué nada funcionaba."
+   },
+   {
+    "tipo": "reto",
+    "texto": "Haz zoom a tu nariz ahora. Te espero."
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "Lo que ves con la lupa no son puntos negros."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Hice zoom a mi nariz con la lupa del móvil y entendí por qué nada funcionaba. Cientos, grises, en toda la nariz. Eso son filamentos, no puntos negros. Y se rellenan solos. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Con la lupa del móvil. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Con la lupa del móvil",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil con lente macro de 8 €. 8 €",
+   "planos_necesarios": [
+    "Bea acerca el móvil con lente macro a su nariz",
+    "Macro extremo: filamentos grises en toda la nariz",
+    "Tira de farmacia arrancada, dedos apretando, botes de exfoliante",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "bolsa de farmacia",
+    "botes de productos propios con precio"
+   ],
+   "persona": "Bea (mujer 18–28)",
+   "tiempo_estimado": "30 min de grabación + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Prueba visual barata (lente de 8 €) que convierte el reencuadre en algo que el espectador puede repetir. El macro aparece en el 60 % de los ganadores; aquí es el gancho.",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 35 s; voz 110 palabras → 38 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 8 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~11 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 16 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 8,
+  "nombre": "Filamento vs punto negro",
+  "familia": "F1 · Reencuadre educativo",
+  "prioridad": "B",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 32,
+  "referencias_vue": [
+   {
+    "rank": 48,
+    "titulo": "Clear Nose Overnight ✨ · 75 d · 28 var.",
+    "que_se_toma": "tabla punto negro vs filamento"
+   },
+   {
+    "rank": 51,
+    "titulo": "One Patch. Real Results. · 60 d · 30 var.",
+    "que_se_toma": "landing adv con el pack preseleccionado"
+   }
+  ],
+  "concepto": "«Punto negro: uno, aislado, oscuro. Filamento: cientos, grises, en toda la nariz. ¿Cuál tienes tú?» — Dos fotos lado a lado con etiquetas → «si es lo segundo, esto es lo tuyo» → parche → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Pantalla partida: foto de un punto negro aislado / foto de una nariz con filamentos",
+    "texto_pantalla": "¿Cuál tienes tú?",
+    "voz": "Punto negro: uno, negro, aislado. Filamento: cientos, grises, en toda la nariz. ¿Cuál tienes tú?",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–10 s",
+    "plano": "Zoom a la imagen de la derecha",
+    "texto_pantalla": "Si es esto → sigue",
+    "voz": "Si es lo segundo, esto es lo tuyo: no se arrancan, se absorben.",
+    "nota": "Test de 3 segundos derivado de la «tabla verbal» de R48."
+   },
+   {
+    "t": "10–18 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "18–26 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "26–32 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuál de los dos tienes tú?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "Eso no es un punto negro. Mira la diferencia."
+   },
+   {
+    "tipo": "dato",
+    "texto": "El 90 % de lo que llamas puntos negros no lo es."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "Punto negro: uno, negro, aislado. Filamento: cientos, grises, en toda la nariz. ¿Cuál tienes tú? Si es lo segundo, esto es lo tuyo: no se arrancan, se absorben. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "¿Cuál tienes tú?. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "¿Cuál tienes tú?",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Fotos propias + texto. 0 €",
+   "planos_necesarios": [
+    "Pantalla partida: foto de un punto negro aislado / foto de una nariz con filamentos",
+    "Zoom a la imagen de la derecha",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "1 noche de parche + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Convierte el reencuadre en un test binario que el espectador resuelve solo. El «dato» del 90 % no se usa en el guion (no hay fuente): solo como variante si se encuentra fuente.",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 29 s; voz 92 palabras → 32 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 7 s para que la voz quepa sin acelerar; si hay que respetar 25 s, recortar ~10 palabras (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 15 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 9,
+  "nombre": "Tu dermatólogo lo llama así",
+  "familia": "F1 · Reencuadre educativo",
+  "prioridad": "C",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Advertorial «no son puntos negros» → ficha",
+  "duracion_total_s": 33,
+  "referencias_vue": [
+   {
+    "rank": 10,
+    "titulo": "From Oily Nose to Clear Skin · 291 d · 11 var.",
+    "que_se_toma": "tono de autoridad, sin el claim «mi dermatóloga me lo recomendó»"
+   },
+   {
+    "rank": 4,
+    "titulo": "Clear Nose Overnight ✨ · 121 d · 38 var.",
+    "que_se_toma": "«no se curan, se controlan»"
+   }
+  ],
+  "concepto": "«Tu dermatólogo lo llama filamento sebáceo. Tú lo llamas “esa cosa de la nariz”.» — Humor ligero → explicación → «lo que sí hacen los dermatólogos: no apretar, absorber» → parche",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Marisol a cámara, tono de humor",
+    "texto_pantalla": "Filamento sebáceo",
+    "voz": "Tu dermatólogo lo llama filamento sebáceo. Tú lo llamas «esa cosa de la nariz».",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–12 s",
+    "plano": "Rótulos: «No apretar» · «No arrancar» · «Absorber»",
+    "texto_pantalla": "Lo que sí hacen en consulta",
+    "voz": "Lo que sí te dirían en consulta: no apretar, no arrancar, absorber. Y eso es exactamente lo que hace un parche de hidrocoloide.",
+    "nota": "Autoridad sin aval: describe una práctica, no una recomendación de producto."
+   },
+   {
+    "t": "12–20 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "20–28 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "28–33 s",
+    "plano": "Cara a cámara, sonrisa",
+    "texto_pantalla": "¿Sigues con dudas? Pruébalo",
+    "voz": "¿Sigues con dudas? Pruébalo 60 días. Si no te convence, te devolvemos el dinero.",
+    "nota": "Reto al escéptico (R21)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "humor",
+    "texto": "Tu dermatólogo lo llama filamento. Tú, «esa cosa de la nariz»."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes cómo lo llama un dermatólogo?"
+   },
+   {
+    "tipo": "orden",
+    "texto": "No lo aprietes. Absórbelo."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "«Lee por qué vuelven siempre» → advertorial no-son-puntos-negros.html → ficha Nariz (pack de 2)",
+  "copy_meta": {
+   "texto_principal": [
+    "Tu dermatólogo lo llama filamento sebáceo. Tú lo llamas «esa cosa de la nariz». Lo que sí te dirían en consulta: no apretar, no arrancar, absorber. Y eso es exactamente lo que hace un parche de hidrocoloide. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen. Envío desde España en 24–48 h y garantía de 60 días.",
+    "Filamento sebáceo. Te lo explicamos en dos minutos: qué son de verdad, por qué vuelven siempre y qué hace el parche que las tiras no hacen."
+   ],
+   "titulares": [
+    "Filamento sebáceo",
+    "Por qué vuelven siempre (no son puntos negros)",
+    "Lo que nadie te cuenta de tu nariz",
+    "Filamentos, no puntos negros"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Marisol a cámara, tono de humor",
+    "Rótulos: «No apretar» · «No arrancar» · «Absorber»",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Cara a cámara, sonrisa"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "dermatólogo (mención sin aval)",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "hidrocoloide",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Toma la autoridad de R10 sin el claim prohibido: nombra la práctica correcta (absorber) y deja que el parche encaje. Cierre con reto al escéptico (R21).",
+  "revision": [
+   "Duración: catálogo 30 s; bloques 29 s; voz 96 palabras → 33 s finales (2,9 pal/s, máximo cómodo 3,3).",
+   "Se alarga 3 s para que la voz quepa sin acelerar; si hay que respetar 30 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 10,
+  "nombre": "Nada te ha funcionado (y no es culpa tuya)",
+  "familia": "F1 · Reencuadre educativo",
+  "prioridad": "A",
+  "avatar": "Marisol (mujer 35–50)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 45,
+  "referencias_vue": [
+   {
+    "rank": 1,
+    "titulo": "Finally Clear Skin for Guys · 220 d · 57 var.",
+    "que_se_toma": "absolución: «nada te funcionó porque los tratabas como puntos negros»"
+   },
+   {
+    "rank": 39,
+    "titulo": "Clear Pores Overnight · 135 d · 21 var.",
+    "que_se_toma": "«no estás sola» y quitar la culpa"
+   }
+  ],
+  "concepto": "«Si has probado exfoliantes, tiras y limpiadores y sigue igual, no es culpa tuya: estabas tratando otra cosa.» — Empatía → lista de lo probado (enseñar los botes) → reencuadre → parche → prueba",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Marisol con cinco botes en la mesa; los va apartando",
+    "texto_pantalla": "Lo has probado todo",
+    "voz": "Si has probado exfoliantes, tiras y limpiadores y sigue igual, no es culpa tuya.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–11 s",
+    "plano": "Marisol señala cada bote",
+    "texto_pantalla": "No era el producto. Era el diagnóstico.",
+    "voz": "No era el producto. Era el diagnóstico: estabas tratando otra cosa.",
+    "nota": "«That's probably why nothing you've tried has worked» (4 de los 10 más longevos)."
+   },
+   {
+    "t": "11–17 s",
+    "plano": "Macro de la nariz, muy cerca; rótulo",
+    "texto_pantalla": "FILAMENTOS = grasa que se rellena",
+    "voz": "Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día.",
+    "nota": "Reencuadre de R1: nombrar el problema (46 de los 60 ganadores lo hacen aquí)."
+   },
+   {
+    "t": "17–23 s",
+    "plano": "Tira de farmacia arrancada, dedos apretando, botes de exfoliante",
+    "texto_pantalla": "Por eso vuelven",
+    "voz": "Nada te ha funcionado porque los tratabas como puntos negros. Por eso vuelven siempre.",
+    "nota": "Absolución + recurrencia (R1, R4, R13): la objeción nº 1 resuelta antes del producto."
+   },
+   {
+    "t": "23–31 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "31–39 s",
+    "plano": "Antes/después con misma luz y fecha; parche usado",
+    "texto_pantalla": "Días, no horas",
+    "voz": "Mira el antes y el después. La nariz me dura limpia días, no horas.",
+    "nota": "«Días, no horas» de R4."
+   },
+   {
+    "t": "39–45 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "empatía",
+    "texto": "No es culpa tuya. Estabas tratando otra cosa."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuántas cosas has probado para la nariz?"
+   },
+   {
+    "tipo": "contradicción",
+    "texto": "No has fallado tú. Ha fallado el diagnóstico."
+   }
+  ],
+  "prueba_visual": "Antes/después con misma luz y fecha; parche usado — Días, no horas",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Si has probado exfoliantes, tiras y limpiadores y sigue igual, no es culpa tuya. Se llaman filamentos sebáceos: grasa que tu piel fabrica sola y que se rellena cada día. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Lo has probado todo. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Lo has probado todo",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil + botes reales. 0 €",
+   "planos_necesarios": [
+    "Marisol con cinco botes en la mesa",
+    "Marisol señala cada bote",
+    "Macro de la nariz, muy cerca",
+    "Tira de farmacia arrancada, dedos apretando, botes de exfoliante",
+    "Parche NOCTA en la mano",
+    "Antes/después con misma luz y fecha",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "bolsa de farmacia",
+    "botes de productos propios con precio"
+   ],
+   "persona": "Marisol (mujer 35–50)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "días, no horas",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "El bloque de absolución del nº 1 convertido en gancho, con los botes reales como atrezo. Marisol lleva años comprando: este anuncio le dice que no fue tonta.",
+  "revision": [
+   "Se quita el bloque social (2 cajas · 29,90 € · envío gratis) para no pasar de 45 s; la razón del pack de 2 queda en el cierre.",
+   "Duración: catálogo 40 s; bloques 47 s; voz 112 palabras → 45 s finales (2,5 pal/s, máximo cómodo 3,3).",
+   "Se alarga 5 s para que la voz quepa sin acelerar; si hay que respetar 40 s, recortar ~1 palabra (empezar por el bloque social o el reencuadre).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ }
+]

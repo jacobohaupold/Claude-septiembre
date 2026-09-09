@@ -1,0 +1,578 @@
+[
+ {
+  "n": 46,
+  "nombre": "7 noches, 7 parches",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 25,
+  "referencias_vue": [
+   {
+    "rank": 53,
+    "titulo": "Clear Nose Overnight ✨ · 114 d · 13 var.",
+    "que_se_toma": "semana 1, 2, 3"
+   },
+   {
+    "rank": 24,
+    "titulo": "No More Nose Bumps · 119 d · 24 var.",
+    "que_se_toma": "la pega convertida en pack"
+   }
+  ],
+  "concepto": "«Guardé los 7 parches de la semana. Mira cómo cambia lo que absorben.» (7 parches alineados) — Fila de parches del día 1 al 7 → cada vez menos blanquecino → «por eso son 8 por caja»",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Fila de 7 parches usados alineados sobre fondo crema, del 1 al 7",
+    "texto_pantalla": "7 noches, 7 parches",
+    "voz": "Guardé los siete parches de la semana. Mira cómo cambia lo que absorben.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–13 s",
+    "plano": "Cámara recorre la fila: cada vez menos blanco",
+    "texto_pantalla": "Cada vez menos",
+    "voz": "El uno, blanco entero. El cuatro, la mitad. El siete, casi limpio. Por eso son ocho por caja y por eso dos cajas.",
+    "nota": "Cronología visual (R53) que justifica la caja de 8 y el pack de 2."
+   },
+   {
+    "t": "13–18 s",
+    "plano": "Pack de 2 cajas sobre fondo crema",
+    "texto_pantalla": "2 cajas · 29,90 €",
+    "voz": "Dos cajas son un mes entero, tres noches por semana. Y el envío va gratis.",
+    "nota": "Razón de uso para el pack de 2 (R23: frecuencia real)."
+   },
+   {
+    "t": "18–25 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "prueba",
+    "texto": "Siete noches, siete parches. Mira cómo cambian."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Qué pasa si guardas los parches de una semana?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "El séptimo parche casi no se mancha. Eso es el objetivo."
+   }
+  ],
+  "prueba_visual": "Fila de 7 parches usados alineados sobre fondo crema, del 1 al 7",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Guardé los siete parches de la semana. Mira cómo cambia lo que absorben. El uno, blanco entero. El cuatro, la mitad. El siete, casi limpio. Por eso son ocho por caja y por eso dos cajas. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "7 noches, 7 parches. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "7 noches, 7 parches",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 7 días. 0 €",
+   "planos_necesarios": [
+    "Fila de 7 parches usados alineados sobre fondo crema, del 1 al 7",
+    "Cámara recorre la fila: cada vez menos blanco",
+    "Pack de 2 cajas sobre fondo crema",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Todos (sin identidad explícita) · sin cara (manos/nariz)",
+   "tiempo_estimado": "30 min + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Prueba de progreso que nadie hace: convierte la caja de 8 en una historia y vende el pack de 2 con lógica, no con descuento.",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 21 s; voz 70 palabras → 25 s finales (2,8 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 13 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 47,
+  "nombre": "Antes / después de 14 días",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 15,
+  "referencias_vue": [
+   {
+    "rank": 4,
+    "titulo": "Clear Nose Overnight ✨ · 121 d · 38 var.",
+    "que_se_toma": "honestidad"
+   },
+   {
+    "rank": 28,
+    "titulo": "One Patch, Visible Results · 200 d · 22 var.",
+    "que_se_toma": "antes/después"
+   }
+  ],
+  "concepto": "«14 días. Misma luz, mismo sitio, sin filtro.» — Antes y después lado a lado con fecha → CTA",
+  "guion": [
+   {
+    "t": "0–3 s",
+    "plano": "Pantalla partida antes/después con fecha y misma luz",
+    "texto_pantalla": "Día 1 · Día 14",
+    "voz": "Catorce días. Misma luz, mismo sitio, sin filtro.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "3–9 s",
+    "plano": "Zoom lento a las dos narices",
+    "texto_pantalla": "Sin promesas",
+    "voz": "No desaparecen. Se notan mucho menos. Eso sí es verdad.",
+    "nota": "Antes/después honesto (claims)."
+   },
+   {
+    "t": "9–15 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "prueba",
+    "texto": "14 días. Misma luz. Sin filtro."
+   },
+   {
+    "tipo": "honestidad",
+    "texto": "No desaparecen. Se notan mucho menos."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Quieres ver 14 días de verdad?"
+   }
+  ],
+  "prueba_visual": "Pantalla partida antes/después con fecha y misma luz",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Catorce días. Misma luz, mismo sitio, sin filtro. No desaparecen. Se notan mucho menos. Eso sí es verdad. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Día 1 · Día 14. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Día 1 · Día 14",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 14 días. 0 €",
+   "planos_necesarios": [
+    "Pantalla partida antes/después con fecha y misma luz",
+    "Zoom lento a las dos narices",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "caja NOCTA y pack de 2"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "1 noche de parche + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "no desaparecen (honesto)",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "se notan mucho menos",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Antes/después con la promesa honesta escrita: protege legalmente y aumenta la credibilidad (R4).",
+  "revision": [
+   "Duración: catálogo 15 s; bloques 14 s; voz 37 palabras → 15 s finales (2,5 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 8 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 48,
+  "nombre": "Lo que no se ve en las fotos",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "B",
+  "avatar": "Bea (mujer 18–28)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 35,
+  "referencias_vue": [
+   {
+    "rank": 55,
+    "titulo": "One Patch. Real Results. · 75 d · 31 var.",
+    "que_se_toma": "«lo notas en cada videollamada, en cada reunión»"
+   },
+   {
+    "rank": 7,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 14 var.",
+    "que_se_toma": "beneficio de identidad"
+   }
+  ],
+  "concepto": "«En las fotos no se ve. En persona sí. Por eso empecé con esto.» — Selfie normal vs macro → la inseguridad real → parche → macro después",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Selfie normal a un metro / macro de la misma nariz",
+    "texto_pantalla": "Lo que no se ve en las fotos",
+    "voz": "En las fotos no se ve. En persona, sí. Por eso empecé con esto.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–13 s",
+    "plano": "Bea en una conversación cercana; luego parche por la noche",
+    "texto_pantalla": "A 30 cm se ve todo",
+    "voz": "A treinta centímetros se ve todo. Y no quería pensar en la nariz cada vez que alguien se acercaba.",
+    "nota": "Insight de Bea: la distancia social."
+   },
+   {
+    "t": "13–21 s",
+    "plano": "Parche NOCTA en la mano; se pega en la nariz limpia y seca antes de dormir",
+    "texto_pantalla": "Absorbe. No arranca.",
+    "voz": "Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.",
+    "nota": "Mecanismo + contraste de R1 (55 de 60 ganadores lo explican en ≤ 10 s)."
+   },
+   {
+    "t": "21–29 s",
+    "plano": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa",
+    "texto_pantalla": "Mira lo que sale",
+    "voz": "Por la mañana lo ves en el parche. Todo eso estaba dentro. Y a las tres semanas casi no se notan.",
+    "nota": "Peel reveal + plazo honesto (R1, R7, R23): el plano más repetido de los 60."
+   },
+   {
+    "t": "29–35 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "confesión",
+    "texto": "En las fotos no se ve. En persona sí."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Sabes lo que se ve de tu nariz a 30 cm?"
+   },
+   {
+    "tipo": "empatía",
+    "texto": "Si piensas en tu nariz cuando alguien se acerca, mira esto."
+   }
+  ],
+  "prueba_visual": "Mañana: retirada lenta del parche; parche a contraluz con puntos blancos; nariz lisa — Mira lo que sale",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "En las fotos no se ve. En persona, sí. Por eso empecé con esto. A treinta centímetros se ve todo. Y no quería pensar en la nariz cada vez que alguien se acercaba. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Lo que no se ve en las fotos. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Lo que no se ve en las fotos",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil. 0 €",
+   "planos_necesarios": [
+    "Selfie normal a un metro / macro de la misma nariz",
+    "Bea en una conversación cercana",
+    "Parche NOCTA en la mano",
+    "Mañana: retirada lenta del parche",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "lente macro para móvil (8 €) o modo macro",
+    "ventana con luz de mañana",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Bea (mujer 18–28)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "tres semanas",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "casi no se notan",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Habla del dolor real (la cercanía), no del poro. Es el ángulo emocional más fuerte para Bea sin dramatizar.",
+  "revision": [
+   "Duración: catálogo 35 s; bloques 32 s; voz 97 palabras → 35 s finales (2,8 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 49,
+  "nombre": "Mi novio se ríe (hasta que ve esto)",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "B",
+  "avatar": "Bea (mujer 18–28)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 25,
+  "referencias_vue": [
+   {
+    "rank": 30,
+    "titulo": "No More Nose Bumps · 184 d · 17 var.",
+    "que_se_toma": "«hasta él admite que yo tenía razón»"
+   },
+   {
+    "rank": 60,
+    "titulo": "Clear Skin, No Effort · 111 d · 9 var.",
+    "que_se_toma": "«tú compras el siguiente lote»"
+   }
+  ],
+  "concepto": "«Mi novio se ríe de mis parches hasta que vio esto por la mañana.» — Parche puesto (risa) → mañana: retirada delante de él → su cara → CTA",
+  "guion": [
+   {
+    "t": "0–5 s",
+    "plano": "Bea con el parche puesto; su pareja se ríe detrás",
+    "texto_pantalla": "Se reía",
+    "voz": "Mi novio se ríe de mis parches. Hasta que vio esto por la mañana.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "5–14 s",
+    "plano": "Mañana: Bea retira el parche delante de él; su cara; él lo coge para mirarlo",
+    "texto_pantalla": "Su cara",
+    "voz": "Mira su cara. Ahora pide él la segunda caja.",
+    "nota": "Guion de pareja (R30, R60) comprimido."
+   },
+   {
+    "t": "14–19 s",
+    "plano": "Pack de 2 cajas sobre fondo crema",
+    "texto_pantalla": "2 cajas · 29,90 €",
+    "voz": "Dos cajas son un mes entero, tres noches por semana. Y el envío va gratis.",
+    "nota": "Razón de uso para el pack de 2 (R23: frecuencia real)."
+   },
+   {
+    "t": "19–25 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "social",
+    "texto": "Mi novio se reía de mis parches. Hasta esta mañana."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Quieres ver la cara de mi novio al ver el parche?"
+   },
+   {
+    "tipo": "humor",
+    "texto": "Se reía. Ahora quiere una caja."
+   }
+  ],
+  "prueba_visual": "Mañana: Bea retira el parche delante de él; su cara; él lo coge para mirarlo",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Mi novio se ríe de mis parches. Hasta que vio esto por la mañana. Mira su cara. Ahora pide él la segunda caja. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "Se reía. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "Se reía",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil, 2 personas. 0 €",
+   "planos_necesarios": [
+    "Bea con el parche puesto",
+    "Mañana: Bea retira el parche delante de él",
+    "Pack de 2 cajas sobre fondo crema",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)",
+    "segunda persona (pareja/familia)",
+    "sobre de envío NOCTA y etiqueta"
+   ],
+   "persona": "Bea (mujer 18–28)",
+   "tiempo_estimado": "45–60 min de grabación + 30 min de montaje"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "La pareja como prueba social y como segundo comprador: vende el pack de 2 («una para cada uno»).",
+  "revision": [
+   "Duración: catálogo 25 s; bloques 22 s; voz 57 palabras → 25 s finales (2,3 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 14 palabras (≤ 20, bien)."
+  ]
+ },
+ {
+  "n": 50,
+  "nombre": "Time-lapse de 8 horas",
+  "familia": "F6 · Prueba visual, reto y transformación",
+  "prioridad": "A",
+  "avatar": "Todos (sin identidad explícita)",
+  "landing": "Ficha Nariz (pack 2 preseleccionado)",
+  "duracion_total_s": 20,
+  "referencias_vue": [
+   {
+    "rank": 5,
+    "titulo": "No More Nose Bumps · 124 d · 42 var.",
+    "que_se_toma": "el blanqueo como prueba objetiva"
+   },
+   {
+    "rank": 44,
+    "titulo": "From Oily Nose to Clear Skin · 289 d · 7 var.",
+    "que_se_toma": "«lo que pasa mientras duermes»"
+   }
+  ],
+  "concepto": "«8 horas en 8 segundos: mira cómo el parche se va llenando.» — Time-lapse nocturno del parche cambiando de color → retirada → CTA",
+  "guion": [
+   {
+    "t": "0–4 s",
+    "plano": "Time-lapse nocturno del parche: de transparente a blanco, con reloj",
+    "texto_pantalla": "8 horas en 8 segundos",
+    "voz": "Ocho horas en ocho segundos: mira cómo el parche se va llenando.",
+    "nota": "Gancho (0–3 s): texto grande en pantalla, decide la retención; variantes A/B/C abajo."
+   },
+   {
+    "t": "4–13 s",
+    "plano": "Retirada por la mañana; parche a contraluz",
+    "texto_pantalla": "Se llena de grasa",
+    "voz": "Mientras duermes, se llena de la grasa que había dentro. Por la mañana lo ves.",
+    "nota": "Mecanismo demostrado (R5) en tiempo real: nadie en Vue lo hace."
+   },
+   {
+    "t": "13–20 s",
+    "plano": "Web NOCTA con la garantía subrayada; pack de 2",
+    "texto_pantalla": "Si no se pega, te lo cambiamos · 60 días",
+    "voz": "Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.",
+    "nota": "Garantía + CTA (54 de 60 ganadores citan la garantía)."
+   }
+  ],
+  "hook_variantes": [
+   {
+    "tipo": "prueba",
+    "texto": "8 horas en 8 segundos. Mira cómo se llena."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Quieres ver lo que hace el parche mientras duermes?"
+   },
+   {
+    "tipo": "dato",
+    "texto": "Se llena en 8 horas. Míralo."
+   }
+  ],
+  "prueba_visual": "Time-lapse nocturno del parche: de transparente a blanco, con reloj",
+  "cta": "Pack de 2 cajas · 29,90 € · envío gratis · garantía 60 días → ficha Nariz con el pack de 2 preseleccionado",
+  "copy_meta": {
+   "texto_principal": [
+    "Ocho horas en ocho segundos: mira cómo el parche se va llenando. Mientras duermes, se llena de la grasa que había dentro. Por la mañana lo ves. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar. Pack de 2 cajas 29,90 €, envío gratis desde España en 24–48 h y garantía de 60 días.",
+    "8 horas en 8 segundos. Parche de hidrocoloide para la nariz: absorbe la grasa del poro mientras duermes, sin arrancar."
+   ],
+   "titulares": [
+    "8 horas en 8 segundos",
+    "No son puntos negros. Se vacían, no se arrancan.",
+    "Absorbe mientras duermes. Sin arrancar.",
+    "Pack de 2 · 29,90 € · envío gratis"
+   ],
+   "descripcion": "Envío 24–48 h desde España · Garantía 60 días · Pago seguro"
+  },
+  "produccion": {
+   "como": "Móvil con time-lapse y luz fija. 0 €",
+   "planos_necesarios": [
+    "Time-lapse nocturno del parche: de transparente a blanco, con reloj",
+    "Retirada por la mañana",
+    "Web NOCTA con la garantía subrayada"
+   ],
+   "atrezo": [
+    "1 tira de poros de farmacia (3 €)",
+    "ventana con luz de mañana",
+    "móvil con time-lapse y lámpara fija",
+    "caja NOCTA y pack de 2",
+    "parches NOCTA (1 nuevo + 2–3 usados)"
+   ],
+   "persona": "Todos (sin identidad explícita)",
+   "tiempo_estimado": "30 min de grabación + 1 noche de parche"
+  },
+  "claims_check": [
+   {
+    "afirmacion": "mientras duermes",
+    "estado": "permitida",
+    "alternativa": ""
+   },
+   {
+    "afirmacion": "te devolvemos el dinero",
+    "estado": "permitida",
+    "alternativa": ""
+   }
+  ],
+  "por_que_convertira": "Prueba del mecanismo que ningún ganador de Vue tiene; coste: un móvil con time-lapse y una lámpara fija.",
+  "revision": [
+   "Duración: catálogo 20 s; bloques 16 s; voz 46 palabras → 20 s finales (2,3 pal/s, máximo cómodo 3,3).",
+   "Claims: ninguno a cambiar (no cura, no elimina, sin aval médico, plazos honestos).",
+   "Gancho: 12 palabras (≤ 20, bien)."
+  ]
+ }
+]
