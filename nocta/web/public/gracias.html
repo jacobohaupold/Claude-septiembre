@@ -6,10 +6,10 @@
 <title>¡Pedido confirmado! · NOCTA</title>
 <meta name="description" content="Gracias por tu pedido NOCTA. Confirmación, seguimiento y consejos para sacarle el máximo a tus parches mientras llega.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609090422">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609090426">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609090422" defer></script>
+<script src="/assets/js/app.js?v=202609090426" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -48,11 +48,11 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609090422"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/products.js?v=202609090426"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',async()=>{
 document.getElementById('successmark').innerHTML=nIco('check',24);
-document.getElementById('upimg').src=nImg(nBySlug('exfoliante-salicilico'));
+const UP=(window.NOCTA_CFG&&window.NOCTA_CFG.upsell)||{slug:'exfoliante-salicilico',pct:30,enabled:true};const upP=nBySlug(UP.slug)||nBySlug('exfoliante-salicilico');if(UP.enabled===false||!upP){document.getElementById('upsell').hidden=true;}else{document.getElementById('upimg').src=nImg(upP);const pr=document.querySelector('#upsell .n-price');if(pr)pr.innerHTML=`<b class="n-num">${nEur(+(upP.price*(1-UP.pct/100)).toFixed(2))}</b><s>${nEur(upP.price)}</s>`;const un=document.getElementById('upname');if(un)un.textContent=upP.name;}
 const q=new URLSearchParams(location.search);const id=q.get('o');document.getElementById('oid').textContent=id||'';
 const last=JSON.parse(sessionStorage.getItem('n_lastorder')||'null');
 if(last&&last.id===id&&!sessionStorage.getItem('n_purch_'+id)){

@@ -85,6 +85,14 @@ Rediseño completo mobile-first de la tienda (misma URL, mismos endpoints y even
 
 **Web**: popup de bienvenida (nombre + email + móvil + consentimiento WhatsApp, −10 % configurable), `?code=` se valida en el servidor, códigos del checkout contra la base de datos, autocompletado del checkout con el lead, revelado cinematográfico de todas las imágenes y vídeos (fondo cálido, grano que se disipa, desenfoque→nitidez; nunca un hueco blanco), aviso de cookies apilado en móvil, y en «Cómo usar» la escena muestra **imagen real** (secuencia de fotogramas Seedance 2.5 sobre la modelo y el parche reales, controlada por el scroll) con el corte 3D como vista alternativa.
 
+### v8 «todo desde el CRM» (9 sep 2026): palancas de negocio y textos de toda la web
+
+- **Precios y márgenes** (CRM → Tienda → Precios y márgenes): coste por producto (`products.overrides.cost`, nunca se publica), margen € y % en venta única y suscripción, márgenes de packs (suma de componentes) y de cada combinación de plan; % de la suscripción (`content.pricing.sub_pct`, recalcula todos los precios «sub» sin sub fijo), descuento por 2 y 3 unidades (`pricing.multi`, aplicado en ficha, carrito, checkout y servidor), precios del constructor del Plan Noche (`plan.builder`) y del Plan Semanal, oferta post-compra (`content.upsell`), reglas de «Completa tu rutina» (`content.cart_upsell`), envío y regalos.
+- **Plan Noche a medida**: 1-3 zonas + skincare opcional; precio = `builder.patch[zonas] + builder.skincare`; el `opt` («Nariz + Frente · Exfoliante») viaja al carrito, al checkout y a Stripe, y `lib/catalog.js → planPrice()` lo cobra en el servidor.
+- **Textos y web**: portada (textos del hero, editorial y resultado, medios del hero, destacados, secciones visibles, pasos de «Cómo funciona»), barra, aviso bajo la cabecera (`content.announce`), popup, menú de escritorio y lateral (`content.nav`), pie (`content.footer`), textos de todas las páginas (`content.cms`, claves marcadas con `data-cms` en el HTML y listadas en `public/admin/cms-defaults.json`, generado por `stamp.py`), opiniones añadidas (`content.reviews.extra`), WhatsApp público y JSON avanzado.
+- Portada: «Lo más vendido» compacto bajo el hero, editorial 16:9 con los parches debajo, «Cómo funciona» en un solo recuadro con los tres vídeos en secuencia y un cierre cinematográfico con los parches.
+- Ficha móvil: foto entera y grande, suscripción sobre las cantidades (precios por cantidad), Comprar y Apple Pay a la misma altura, todo en la primera pantalla.
+
 ## Cómo desplegar la web (Netlify, 10 minutos)
 
 1. `cd nocta/web && npm install` (solo `@netlify/blobs`).

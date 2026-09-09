@@ -1,0 +1,114 @@
+{
+ "catalogo.h1": {
+  "page": "catalogo.html",
+  "text": "Todo NOCTA en una página"
+ },
+ "catalogo.intro": {
+  "page": "catalogo.html",
+  "text": "Los 13 productos de la gama. Mismo hidrocoloide en todos los parches, envío 24-48 h desde España y garantía 60 días."
+ },
+ "ciencia.h1": {
+  "page": "ciencia.html",
+  "text": "Por qué un apósito de hospital limpia mejor los poros que cualquier tira"
+ },
+ "ciencia.intro": {
+  "page": "ciencia.html",
+  "text": "El hidrocoloide se usa desde los años 80 en heridas: crea un ambiente húmedo y sellado que absorbe exudado sin dañar el tejido nuevo. Aplicado a la nariz hace exactamente lo mismo con la grasa del poro."
+ },
+ "como-usar.h1": {
+  "page": "como-usar.html",
+  "text": "Ponlo. Duerme. Despega."
+ },
+ "como-usar.intro": {
+  "page": "como-usar.html",
+  "text": "Tres gestos, ocho horas y cero tirones. El 90 % de los «no me funciona» vienen de dos cosas: piel con crema y parche mal presionado."
+ },
+ "contacto.h1": {
+  "page": "contacto.html",
+  "text": "¿Alguna duda? Escríbenos"
+ },
+ "contacto.intro": {
+  "page": "contacto.html",
+  "text": "Somos un equipo pequeño en España y contestamos nosotros mismos, sin bots. Antes de un pedido, sobre uno que ya tienes o sobre la garantía: cuéntanos."
+ },
+ "envios.h1": {
+  "page": "envios-devoluciones.html",
+  "text": "Envíos y devoluciones"
+ },
+ "envios.intro": {
+  "page": "envios-devoluciones.html",
+  "text": "Enviamos desde nuestro almacén en España. Esto es todo lo que necesitas saber sobre plazos, coste y cómo devolver un pedido."
+ },
+ "garantia.h1": {
+  "page": "garantia.html",
+  "text": "60 días. Si no ves la diferencia, te devolvemos el dinero."
+ },
+ "garantia.intro": {
+  "page": "garantia.html",
+  "text": "No hay que devolver nada: nos escribes, nos cuentas qué ha pasado y en menos de 24 horas te decimos cómo seguimos."
+ },
+ "home.hero.title": {
+  "page": "index.html",
+  "text": "Poros limpios mientras duermes."
+ },
+ "home.hero.cta": {
+  "page": "index.html",
+  "text": "Parches de nariz"
+ },
+ "home.featured.label": {
+  "page": "index.html",
+  "text": "Lo más vendido"
+ },
+ "home.editorial.title": {
+  "page": "index.html",
+  "text": "Esos puntitos no son puntos negros."
+ },
+ "home.editorial.text": {
+  "page": "index.html",
+  "text": "Son filamentos sebáceos: grasa que se acumula dentro del poro. El hidrocoloide la absorbe desde dentro mientras duermes, sin arrancar nada."
+ },
+ "home.editorial.cta": {
+  "page": "index.html",
+  "text": "Por qué vuelven"
+ },
+ "home.result.title": {
+  "page": "index.html",
+  "text": "Lo que sale en una noche."
+ },
+ "home.result.text": {
+  "page": "index.html",
+  "text": "Todo lo que ves en el parche estaba dentro de tus poros."
+ },
+ "legal.h1": {
+  "page": "legal.html",
+  "text": "Información legal"
+ },
+ "legal.intro": {
+  "page": "legal.html",
+  "text": "Titular: NOCTA Skin S.L. (en constitución) · NIF: [pendiente] · Domicilio: [dirección], España · Email: hola@nocta.es. Inscrita en el Registro Mercantil de [ciudad]. Persona Responsable (Reglamento CE 1223/2009): [nombre y dirección]. Los productos son cosméticos notificados en el CPNP."
+ },
+ "no-son-puntos-negros.h1": {
+  "page": "no-son-puntos-negros.html",
+  "text": "Si tu nariz se ve así, no tienes puntos negros."
+ },
+ "no-son-puntos-negros.intro": {
+  "page": "no-son-puntos-negros.html",
+  "text": "Y por eso nada te ha funcionado. Son filamentos sebáceos: se vacían, no se arrancan."
+ },
+ "planes.h1": {
+  "page": "planes.html",
+  "text": "Poros limpios en automático."
+ },
+ "planes.intro": {
+  "page": "planes.html",
+  "text": "Elige un plan y olvídate de volver a comprar: te llega en casa, con envío gratis y el precio bloqueado. Sin permanencia: pausa, cambia de zona o cancela desde el email de cada envío."
+ },
+ "sobre.h1": {
+  "page": "sobre.html",
+  "text": "Nacimos de una nariz que no había forma de limpiar"
+ },
+ "sobre.intro": {
+  "page": "sobre.html",
+  "text": "NOCTA empezó en 2026 en España con una obsesión muy concreta: los puntitos de la nariz que vuelven cada semana hagas lo que hagas. Probamos tiras, scrubs, aspiradores y láser. Lo único que funcionó fue un parche coreano de hidrocoloide que un amigo trajo de Seúl."
+ }
+}

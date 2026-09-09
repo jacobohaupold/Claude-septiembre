@@ -16,15 +16,18 @@ export async function getCatalog(fresh = false) {
     } catch (e) { /* sin DB: catálogo base */ }
   }
   const ov = Object.fromEntries(rows.map(r => [r.slug, r]));
+  const pricing = { sub_pct: 15, multi: { 2: 0, 3: 0 }, ...(content.pricing || {}) };
   const products = BASE.map(b => {
-    const o = ov[b.slug]; if (!o) return { ...b, active: true, stock: null };
-    const m = { ...b, ...(o.overrides || {}) }; m.active = o.active !== false; m.stock = o.stock == null ? null : Number(o.stock); return m;
+    const o = ov[b.slug]; const ovr = (o && o.overrides) || {};
+    const m = { ...b, ...ovr }; m.active = !o || o.active !== false; m.stock = !o || o.stock == null ? null : Number(o.stock);
+    if (!m.plan && ovr.sub == null) m.sub = +(Number(m.price) * (1 - Number(pricing.sub_pct) / 100)).toFixed(2);
+    return m;
   });
   // productos creados solo en el CRM (overrides completos)
   rows.filter(r => !BASE.some(b => b.slug === r.slug) && r.overrides && r.overrides.name && r.overrides.price != null).forEach(r => products.push({ slug: r.slug, gallery: [], tags: [], bullets: [], claims: [], how: [], faq: [], ...r.overrides, active: r.active !== false, stock: r.stock == null ? null : Number(r.stock) }));
   const shipping = { ...SHIPPING, ...(content.shipping || {}) };
   const gifts = Array.isArray(content.gifts) && content.gifts.length ? content.gifts : GIFTS;
-  cache = { t: Date.now(), v: { products, shipping, gifts, content } };
+  cache = { t: Date.now(), v: { products, shipping, gifts, content, pricing } };
   return cache.v;
 }
 
@@ -33,9 +36,15 @@ export async function serverProducts() {
   const c = await getCatalog();
   const map = {};
   c.products.forEach(p => { if (p.active !== false) map[p.slug] = { slug: p.slug, name: p.name, price: Number(p.price), sub: Number(p.sub || p.price), plan: p.plan ? p.plan.interval : null, builder: p.plan && p.plan.builder || null, units: p.units, image: p.image, stock: p.stock, bundle: p.bundle || null }; });
-  const ex = map['exfoliante-salicilico'];
-  if (ex) map['upsell-exfoliante'] = { slug: 'exfoliante-salicilico', name: ex.name + ' (oferta post-compra −30 %)', price: +(ex.price * 0.7).toFixed(2), sub: +(ex.price * 0.7).toFixed(2), plan: null, image: ex.image };
-  return { products: map, shipping: c.shipping, gifts: c.gifts, content: c.content };
+  const up = { slug: 'exfoliante-salicilico', pct: 30, enabled: true, ...((c.content && c.content.upsell) || {}) };
+  const ex = map[up.slug];
+  if (ex && up.enabled !== false) map['upsell-exfoliante'] = map.upsell = { slug: ex.slug, name: ex.name + ' (oferta post-compra −' + up.pct + ' %)', price: +(ex.price * (1 - up.pct / 100)).toFixed(2), sub: +(ex.price * (1 - up.pct / 100)).toFixed(2), plan: null, image: ex.image, compare: ex.price };
+  return { products: map, shipping: c.shipping, gifts: c.gifts, content: c.content, pricing: c.pricing };
+}
+// Precio unitario con descuento por cantidad (content.pricing.multi = {2: %, 3: %}).
+export function unitPrice(p, qty, sub, pricing) {
+  const base = sub ? Number(p.sub) : Number(p.price); const m = (pricing && pricing.multi) || {}; const pct = qty >= 3 ? Number(m[3] || 0) : qty >= 2 ? Number(m[2] || 0) : 0;
+  return +(base * (1 - pct / 100)).toFixed(2);
 }
 
 // Descuento: tabla discounts (fallback a los 3 códigos históricos si no hay DB).

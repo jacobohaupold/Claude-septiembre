@@ -22,3 +22,15 @@ ship=src[m:n].replace('window.NOCTA_SHIPPING =','export const SHIPPING =').repla
 os.makedirs('netlify/functions/lib',exist_ok=True)
 open('netlify/functions/lib/products-data.js','w').write('// GENERADO por stamp.py desde public/assets/js/products.js. No editar a mano.\n'+body+'\n'+gifts+'\n'+ship+'\n')
 print('products-data ok')
+
+# Textos editables desde el CRM: recoge todos los data-cms de las páginas y guarda sus valores por defecto.
+import html as _h
+cms={}
+for p in sorted(glob.glob('public/*.html')):
+    t=open(p).read()
+    for m in re.finditer(r'<([a-z0-9]+)[^>]*data-cms="([^"]+)"[^>]*>(.*?)</\1>',t,re.S):
+        txt=re.sub(r'<[^>]+>','',m.group(3)); txt=_h.unescape(re.sub(r'\s+',' ',txt)).strip()
+        cms.setdefault(m.group(2),{'page':os.path.basename(p),'text':txt})
+import json as _j
+open('public/admin/cms-defaults.json','w').write(_j.dumps(cms,ensure_ascii=False,indent=1))
+print('cms defaults',len(cms))

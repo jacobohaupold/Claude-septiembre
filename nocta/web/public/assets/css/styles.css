@@ -597,3 +597,5 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 .n-seq__cards .n-pm:nth-child(n+3){display:none}
 .n-seq__end .n-link{font-size:12px;margin-top:2px}.n-seq__again{position:absolute;right:12px;top:12px;background:rgba(20,33,61,.08);border:0;border-radius:999px;padding:8px 12px;font:inherit;font-size:11.5px;color:var(--n-navy);cursor:pointer}
 @media (min-width:900px){.n-seq__cards{grid-template-columns:repeat(4,1fr);max-width:900px}.n-seq__cards .n-pm:nth-child(n+3){display:flex}.n-seq__end h3{font-size:32px}}
+/* v8 · aviso configurable bajo la cabecera */
+.n-announce{background:var(--n-navy);color:var(--n-cream);text-align:center;font-size:12.5px;letter-spacing:.02em;padding:9px var(--n-gutter)}.n-announce a{color:inherit;text-decoration:underline;text-underline-offset:3px}

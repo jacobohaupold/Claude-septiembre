@@ -10,12 +10,13 @@ export default async (req) => {
   c.products.forEach(p => {
     if (p.active === false) { inactive.push(p.slug); return; }
     const b = base[p.slug];
-    if (!b) { extra.push(p); return; }
-    const diff = {}; Object.keys(p).forEach(k => { if (k === 'active') return; if (JSON.stringify(p[k]) !== JSON.stringify(b[k])) diff[k] = p[k]; });
+    if (!b) { const { cost, ...rest } = p; extra.push(rest); return; }
+    const diff = {}; Object.keys(p).forEach(k => { if (k === 'active' || k === 'cost') return; if (JSON.stringify(p[k]) !== JSON.stringify(b[k])) diff[k] = p[k]; });
     if (Object.keys(diff).length) ov[p.slug] = diff;
   });
   const ct = c.content || {};
-  const cfg = { bar: ct.bar || null, popup: ct.popup || null, shipping: c.shipping, gifts: c.gifts, whatsapp: ct.whatsapp_public || null, home: ct.home || null, announce: ct.announce || null, t: Date.now() };
+  const up = { slug: 'exfoliante-salicilico', pct: 30, enabled: true, ...(ct.upsell || {}) };
+  const cfg = { bar: ct.bar || null, popup: ct.popup || null, shipping: c.shipping, gifts: c.gifts, whatsapp: ct.whatsapp_public || null, home: ct.home || null, announce: ct.announce || null, pricing: c.pricing || null, nav: ct.nav || null, footer: ct.footer || null, cms: ct.cms || null, reviews: ct.reviews || null, upsell: up, cart_upsell: ct.cart_upsell || null, t: Date.now() };
   const js = `window.NOCTA_CFG=${JSON.stringify(cfg)};(function(){var P=window.NOCTA_PRODUCTS;if(!P)return;var ov=${JSON.stringify(ov)},off=${JSON.stringify(inactive)},extra=${JSON.stringify(extra)};
 for(var i=P.length-1;i>=0;i--){var p=P[i];if(off.indexOf(p.slug)>-1){P.splice(i,1);continue;}if(ov[p.slug])Object.assign(p,ov[p.slug]);}
 extra.forEach(function(e){P.push(e);});window.NOCTA_SHIPPING=Object.assign(window.NOCTA_SHIPPING||{},${JSON.stringify(c.shipping)});window.NOCTA_GIFTS=${JSON.stringify(c.gifts)};})();`;
