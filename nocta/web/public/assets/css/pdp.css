@@ -238,3 +238,8 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
   .n-buy{gap:6px}.n-buy .n-btn--lg,.n-buy .n-pay,.n-buy .n-pay--apple{height:42px;min-height:42px;max-height:42px;line-height:1}.n-buy .n-btn--lg{padding:0 8px;font-size:11px}
 }
 @media (max-width:899px){.n-buy #addbtn,.n-pd .n-buy #addbtn{height:42px;min-height:42px;max-height:42px;padding:0 8px;font-size:11px;line-height:1}}
+/* v7.6.4 · el vídeo de producto se encaja entero en su recuadro, con su propio fotograma desenfocado de fondo */
+.n-pd-gal__s.is-video{background:#C9BDB5}
+.n-pd-gal__s.is-video::before{content:"";position:absolute;inset:-12%;background:var(--pb) center/cover no-repeat;filter:blur(26px) saturate(1.05);opacity:.95;transform:scale(1.1)}
+.n-pd-gal__s.is-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none;z-index:1}
+@media (max-width:899px){.n-pd-gal__s.is-video video{object-fit:contain;transform:none}}
