@@ -1,6 +1,6 @@
 # NOCTA — Documento maestro de negocio
 
-**Versión 1.0 · 9 de septiembre de 2026.** Este documento consolida en un solo sitio todo lo que se ha pedido y entregado a lo largo del proyecto: la investigación de Vue Skin, el catálogo, los proveedores, los costes y márgenes, la inversión, la economía de cada anuncio (cuánto tiene que convertir para ser rentable), la página de producto, el plan de marketing, el desarrollo de negocio, la parte legal, las operaciones, el stack técnico entregado y la lista de todo lo pedido con su estado. Donde ya existía un documento detallado se resume aquí y se enlaza; donde faltaba algo (economía por anuncio, tabla de inversión real, reglas de escalado por anuncio, KPIs de la página de producto) se ha hecho nuevo en este documento.
+**Versión 1.1 · 12 de septiembre de 2026.** Este documento consolida en un solo sitio todo lo que se ha pedido y entregado a lo largo del proyecto: la investigación de Vue Skin, el catálogo, los proveedores, los costes y márgenes, la inversión, la economía de cada anuncio (cuánto tiene que convertir para ser rentable), la página de producto, el plan de marketing, el desarrollo de negocio, la parte legal, las operaciones, el stack técnico entregado y la lista de todo lo pedido con su estado. La versión 1.1 añade la producción de los 25 anuncios (sección 10.1) y el estudio de los proveedores de las capturas de Alibaba. Donde ya existía un documento detallado se resume aquí y se enlaza; donde faltaba algo (economía por anuncio, tabla de inversión real, reglas de escalado por anuncio, KPIs de la página de producto) se ha hecho nuevo en este documento.
 
 > Todas las cifras de coste de producto son **estimaciones de sourcing** (rangos de cotización de proveedores, sin muestra física confirmada). En cuanto haya cotización en firme hay que meter el coste real de cada producto en el CRM (`/admin` → Precios y márgenes) y los márgenes de este documento se recalculan solos allí.
 
@@ -15,7 +15,7 @@
 7. Economía de los anuncios: cuánto tiene que convertir cada anuncio
 8. Reglas de gestión por anuncio (presupuesto, kill, escalado)
 9. Página de producto y embudo: KPIs y palancas
-10. Plan de marketing (creatividades, canales, calendario, retención)
+10. Plan de marketing (creatividades, canales, calendario, retención) y producción de los 25 anuncios
 11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
 12. Stack técnico entregado y lo que queda en tu tejado
 13. Todo lo que pediste, mensaje a mensaje, y su estado
@@ -352,7 +352,7 @@ La ficha (`producto.html`) está construida para que todo lo que decide la compr
 
 Qué medir cada semana en la ficha: visitas, CVR, AOV, % suscripción, % pack vs suelto, tasa de uso del selector de cantidad. Si la CVR baja del 2 % con CTR normal, el problema está en la página; si el AOV baja de 38 €, el problema está en el mix (empujar Dúo/Plan en la barra de anuncios y el popup).
 
-## 10. Plan de marketing (creatividades, canales, calendario, retención)
+## 10. Plan de marketing (creatividades, canales, calendario, retención) y producción de los 25 anuncios
 
 Documento completo: `marketing/estrategia_marketing.md` (13 secciones), guiones en `marketing/guiones_anuncios.md`, matriz en `marketing/matriz_100_anuncios.md`.
 
@@ -363,6 +363,40 @@ Documento completo: `marketing/estrategia_marketing.md` (13 secciones), guiones 
 - **Canales**: Meta 55 %, TikTok 25 % (Spark Ads + Smart+; TikTok Shop ES desde el mes 3, comisión 4 % los primeros 60 días), Google 12 % (Search marca + Shopping + PMax), creadoras 8 % (20 nano/micro al mes, 50–800 €/vídeo, whitelisting), afiliación con códigos 10–20 %.
 - **Retención (ya construida en el CRM)**: bienvenida con código del popup, carrito abandonado por email (3 h, −10 %, configurable), guía post-compra (20 h), winback (−15 %), campañas de email y WhatsApp segmentadas (leads, clientes, suscriptores) y newsletter con Resend. Lo que no existe todavía y conviene añadir: recordatorio de reposición a los 21 días y segunda cadencia de carrito abandonado.
 - **Calendario 12 meses** (§8 de la estrategia): lanzamiento dic, Rebajas ene, San Valentín, Día de la Madre, verano (−30/40 % como Vue), vuelta al cole, Black Friday, Navidad (hasta −45 %). Cada campaña se crea en el CRM (Ofertas) con fecha de inicio/fin.
+
+### 10.1 Producción de los 25 anuncios: qué hay hecho y dónde está
+
+Todo el material de producción vive en `marketing/anuncios/` y tiene su propio índice en
+`marketing/anuncios/README.md`.
+
+| Pieza | Fichero | Qué contiene |
+|---|---|---|
+| Las 375 tomas | `marketing/anuncios/PROMPTS_375_TOMAS.md` | Por cada uno de los 25 anuncios: las 15 tomas, qué se ve en cada una, el prompt de imagen en inglés para GPT Image 2.5, qué fotos hay que adjuntarle, el prompt de vídeo y los segundos del plano. Además, el anuncio entero en uno o dos bloques para copiar y pegar en el generador de vídeo, con los cortes duros dentro. |
+| Reglas comprobadas | `marketing/anuncios/BIBLIA_VISUAL.md` | La ficha física del parche, los cinco estados en los que puede estar y las cinco reglas que arreglaron fallos reales al generar. |
+| Imágenes del anuncio 1 | `marketing/anuncios/img/a01/` | Las 15 tomas generadas y revisadas una a una, más una alternativa para el despegado. Cada una aparece en el documento con el prompt exacto con el que se generó. |
+| Manual del motor de vídeo | `marketing/anuncios/MANUAL_VIDEO_SEEDANCE.md` | Cómo funciona la IA de vídeo: por qué el prompt describe el cambio y no la escena, la anatomía del prompt modelo por modelo, qué modelo usar para cada tipo de plano y los fallos típicos con la frase que evita cada uno. |
+| Manual de Higgsfield | `marketing/anuncios/MANUAL_HIGGSFIELD.md` | Qué hace cada herramienta de verdad, el flujo de producción paso a paso, cómo se consigue que el personaje y el producto no cambien entre planos, los tells que delatan a la IA y el reparto de créditos. |
+| Fotorrealismo | `marketing/anuncios/MANUAL_GPT_IMAGE_2_5.md` | Por qué una imagen parece foto y otra parece render, y cómo se pide cada cosa. |
+| Referencias reales | `marketing/anuncios/REFERENCIAS_VISUALES.md` | Cómo se ve y cómo se mueve esto de verdad, y cómo se convierte una referencia en un prompt. |
+| Lenguaje visual de Vue | `marketing/anuncios/LENGUAJE_VISUAL_VUE.md` | Qué copiamos de Vue Skin, qué copiamos cambiado y qué no. |
+
+**Las tres cosas que más fallan al generar, con su arreglo.**
+
+1. *El parche sale con otra forma.* Describirlo con palabras no basta: el modelo se inventa una mancha. Hay que
+   adjuntar las fotos reales del producto como referencia en toda imagen donde salga y abrir el prompt con
+   «The patch must be EXACTLY the product in the reference photographs».
+2. *La nariz «después» sale igual de sucia que la de antes.* El avatar de referencia tiene la nariz con puntos y el
+   modelo los conserva. Se arregla adjuntando como segunda referencia un fotograma ya generado de esa misma nariz
+   limpia.
+3. *El despegado no tiene sentido físico.* Hay que describirlo como una sola lámina continua que se levanta por una
+   única frontera, nunca como «la mitad izquierda despegada y la derecha pegada», que genera dos parches.
+
+**Coste.** Las 15 imágenes del anuncio 1, con las repeticiones que hicieron falta hasta que el parche salió bien,
+costaron 27 créditos de Higgsfield a 1k y calidad media. Los 24 anuncios restantes a 15 imágenes son 360 imágenes
+como mínimo y, contando repeticiones, 430-480 créditos. El saldo actual de la cuenta es de 275,93 créditos, así que
+alcanza para unos 15 anuncios completos, no para los 24. Lo que sí está entregado para los 25 anuncios son los
+prompts.
+
 
 ## 11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
 
@@ -460,6 +494,14 @@ Retraso de compliance (empezar en paralelo, SLA por escrito) · coste real de pr
 | Packs antes que el skincare, 2 por fila | `index.html` | Hecho |
 | Que el CRM controle absolutamente todo, incluidos márgenes y ofertas | `m-pricing.js`, `m-products.js` (ofertas), contenido | Hecho |
 | Contraseña del CRM | Te la di en el chat; no se cambió, como pediste después. No se escribe aquí por seguridad | Hecho |
+| Revisar el CRM pantalla por pantalla, en móvil y en ordenador, sin scroll horizontal | `web/CRM_UI.md`, `tools/crm-qa/` | Hecho: 360 comprobaciones automáticas (20 pantallas × 36 vistas × 10 anchos de 320 a 2560 px) y 17 modales, con cero desbordes |
+| Estudiar todos los proveedores de las capturas de Alibaba: si son buenos y por qué, precio real, a qué correo escribir y qué escribirle | `proveedores/ESTUDIO_PROVEEDORES_ALIBABA.md` | Hecho por proveedor: ficha con fuentes, fábrica o intermediario, hidrocoloide o hidrogel, MOQ y precio reales, y el correo redactado en inglés y en español |
+| Explorar cómo se editan las ads en Higgsfield de manera profesional | `marketing/anuncios/MANUAL_HIGGSFIELD.md` | Hecho |
+| 15 fotografías por anuncio generadas con GPT Image 2.5, con prompt perfecto por escena y sin subtítulos | `marketing/anuncios/PROMPTS_375_TOMAS.md`, `marketing/anuncios/img/a01/` | Prompts: los 375, hechos. Imágenes: las 15 del anuncio 1, generadas y verificadas; el resto se generan al lanzar cada anuncio porque no hay créditos para las 360 |
+| Usar fotogramas de Vue y referencias reales de internet para que salga realista | `marketing/anuncios/REFERENCIAS_VISUALES.md`, `marketing/anuncios/LENGUAJE_VISUAL_VUE.md` | Hecho |
+| Entender cómo funciona la IA de vídeo para que el guion y las escenas sean exactos | `marketing/anuncios/MANUAL_VIDEO_SEEDANCE.md` | Hecho |
+| Que todo esté en un prompt para copiar y pegar, junto con las imágenes | Dentro de cada anuncio en `PROMPTS_375_TOMAS.md`, sección «El anuncio entero en un prompt» | Hecho |
+| Respetar la forma exacta del parche, cómo se pone, cómo se quita y cómo queda | `marketing/anuncios/BIBLIA_VISUAL.md` | Hecho: se arregló alimentando al modelo con fotos reales del producto, y las cinco reglas que lo resuelven están escritas |
 | Este documento: proveedores, desarrollo de negocio, ads y cuánto tiene que convertir cada anuncio, inversión, ficha de producto, todo | `NOCTA_DOCUMENTO_MAESTRO.md` | Hecho |
 
 **Lo que faltaba y se ha añadido en este documento**: economía por anuncio con CPA/CVR/ROAS mínimos por producto y por AOV (sección 7), reglas de kill/escalado por anuncio (8), KPIs del embudo de la ficha (9), tabla de inversión real con versión lean (6), contribución por producto con y sin 3PL, suscripción, 2–3 unidades y planes (5), y la recomendación de descuento por cantidad para el CRM.
