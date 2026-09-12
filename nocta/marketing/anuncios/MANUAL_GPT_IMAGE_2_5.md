@@ -1,15 +1,33 @@
 # FOTORREALISMO CON GPT IMAGE 2.5: por qué una imagen parece foto y otra parece render
 
-**Versión 1.0 · 12 de septiembre de 2026 · manual interno NOCTA.**
+**Versión 1.1 · 12 de septiembre de 2026 · manual interno NOCTA.**
 Este documento reúne tres fuentes y ninguna más. Primera: la investigación de fotorrealismo hecha para NOCTA
 (`inv_gpt-image-fotorrealismo.json`), que a su vez cita la guía de prompting de GPT Image de fal.ai, la documentación
 de generación de imágenes de OpenAI, los módulos internos de Higgsfield expuestos por su MCP (`ugc-board.md`,
 `ugc-character.md`, el workflow `character-sheet` y el pase obligatorio de *de-slop* del workflow `ugc-review-video`),
 prompt-architects, hedra y fichas técnicas de las cámaras del iPhone. Segunda: la biblia visual de NOCTA
 (`biblia.md`), que recoge lo que ya se ha comprobado generando 22 imágenes reales con GPT Image 2.5 (variante flare).
-Tercera: el catálogo de modelos del MCP de Higgsfield consultado hoy, 12 de septiembre de 2026, con
-`models_explore(get, gpt_image_2)`. Todo lo que no venga de ahí va marcado como "sin verificar". No hay precios
-inventados en este manual: donde no hay dato publicado, lo digo.
+Tercera: el catálogo de modelos del MCP de Higgsfield, consultado el 12 de septiembre de 2026 con
+`models_explore(get, gpt_image_2_5)` y `models_explore(get, soul_2)`. Todo lo que no venga de ahí va marcado como
+"sin verificar". Donde no hay dato publicado, lo digo en vez de rellenarlo.
+
+**Aviso de modelo, y es importante.** La investigación está escrita sobre GPT Image 2 (`gpt_image_2`), que en el
+catálogo de Higgsfield es un modelo distinto del que usa la biblia. El que tú vas a llamar es este:
+
+| Campo | Valor verificado hoy en el MCP |
+|---|---|
+| `model_id` | `gpt_image_2_5` (nombre: "GPT Image 2.5", proveedor OpenAI) |
+| `variant` | `flare` \| `sunburst` — por defecto `flare`, que es la variante con la que se generaron las 22 imágenes de la biblia |
+| `quality` | `low` \| `medium` \| `high` \| `xhigh` \| `max` — por defecto `low` |
+| `resolution` | `1k` \| `2k` \| `4k` — por defecto `1k` |
+| `background` | `auto` \| `opaque` \| `transparent` — omítelo y se queda el del modelo |
+| `medias` | imágenes con rol `image_references`, sin tope declarado |
+| `aspect_ratio` | incluye `9:16` (y `auto`, `4:5`, `21:9`, `27:16`…) |
+
+Lo que esto cambia en la práctica: el modelo viejo (`gpt_image_2`) sólo tiene tres tramos de calidad
+(`low/medium/high`); el 2.5 tiene cinco. Cualquier frase de la investigación que hable de "quality high como techo"
+está hablando del modelo viejo. Y `variant: sunburst` existe, pero **no está probado en NOCTA**: no lo uses en los
+375 planos sin comparar antes, porque cambiaría el look de la serie entera a mitad de producción.
 
 Para qué sirve: tienes 25 anuncios, 15 tomas cada uno, 375 imágenes. Este manual es lo que miras antes de escribir un
 prompt y lo que miras antes de dar una imagen por buena. Los bloques en inglés están para copiar y pegar tal cual.
@@ -33,10 +51,11 @@ prompt y lo que miras antes de dar una imagen por buena. Los bloques en inglés 
 ## 1. Por qué las imágenes de IA parecen de IA
 
 Una imagen no se delata por un fallo grande. Se delata por seis o siete detalles pequeños que van todos en la misma
-dirección: demasiado limpio, demasiado ordenado, demasiado bonito. El ojo no los lista, los suma. Por eso corregir
-una sola señal casi nunca salva la imagen y corregir seis la salva siempre.
+dirección: demasiado limpio, demasiado ordenado, demasiado bonito. Por eso corregir una sola señal casi nunca salva
+la imagen: hay que corregirlas todas a la vez, en el mismo prompt.
 
-Aquí están las señales, qué las provoca en el prompt y la frase exacta que las arregla.
+Aquí están las señales, qué las provoca en el prompt y la frase exacta que las arregla. Las nueve frases de la
+columna derecha van juntas en todos los planos de persona; no son un menú del que elegir.
 
 | Señal | Qué la provoca | Frase que la arregla |
 |---|---|---|
@@ -46,7 +65,7 @@ Aquí están las señales, qué las provoca en el prompt y la frase exacta que l
 | Luz imposible | dos fuentes, o `dramatic lighting` | `one single motivated light source`, con dirección y consecuencias |
 | Bokeh de estudio | `bokeh`, `shallow depth of field` fuera del macro | `deep focus — the background stays sharp, the way any phone photo looks` |
 | Ojos demasiado limpios | el modelo por defecto | `naturally muted catchlights, no oversized specular glare in the iris` |
-| Producto agrandado | el modelo por defecto | `the patch is about 5 cm wide, roughly the width of three fingers` |
+| Producto agrandado | el modelo por defecto | `the patch is about 6 cm wide, roughly the width of three fingers` |
 | Encuadre perfecto | `centered composition`, `eye-level` | `framing slightly off-centre, slight natural tilt, not composed` |
 | Brillo HDR de anuncio | `cinematic`, `HDR`, `award-winning` | `mild HDR flattening, slight highlight clipping, faint digital noise` |
 
@@ -71,8 +90,18 @@ no airbrushing, no plastic skin, no glossy retouched finish, no glow.
 
 Segunda causa de la piel de plástico, menos conocida y más decisiva: **la luz**. La textura de poro sólo se ve con
 fuente pequeña y dura en ángulo rasante. Con luz difusa grande (ventana enorme, día nublado, softbox) la piel se
-aplana y por muchos poros que pidas no aparecen (prompt-architects). Si un plano necesita textura de poro, la luz es
-la bombilla del espejo o la linterna del móvil, no la ventana.
+aplana y por muchos poros que pidas no aparecen (prompt-architects).
+
+Traducido a instrucción: si el plano tiene que enseñar poro (macro, diagnóstico, detalle del problema, nariz
+después), la fuente es la bombilla del espejo o la linterna del móvil, y se escribe así:
+
+```
+lit by one small hard source at a low raking angle — the bare bulb above the mirror from the upper
+left, or the phone's own torch — throwing short-edged shadows that reveal every pore
+```
+
+Si el plano no tiene que enseñar poro (hablar a cámara, plano de cuerpo, dormitorio), sí puedes usar ventana, pero
+mantén entero el bloque de piel del apartado 9.B: la luz difusa favorece la cara y no hace falta poro forense.
 
 ### 1.2 Poros en cuadrícula
 
@@ -102,11 +131,17 @@ faint natural facial asymmetry, one eyebrow slightly higher than the other, fain
 smile, natural uneven tone across the cheeks
 ```
 
-Por avatar, la asimetría se concreta:
+Por avatar, la asimetría y la piel se concretan. Esta tabla manda sobre cualquier descripción improvisada: los rasgos
+salen de la biblia, los subtonos de la investigación.
 
-- **Marisol (43)**: `mature adult bone structure, longer facial thirds, visible nasolabial folds, crow's feet, slightly crepey skin under the eyes`, y la negativa `no babyface`.
-- **Bea (24)**: `one small healing spot on the chin, faint under-eye shadows` — imperfección joven, no envejecimiento.
-- **Álex (36)**: `visible five o'clock shadow, a small scar through the right eyebrow, some redness across the cheeks`.
+| Avatar | Subtono (va siempre) | Marcas concretas que hay que pedir | Negativa propia |
+|---|---|---|---|
+| **Bea, 24** | `fair skin with neutral-pink undertones` | `two small healing spots on the chin, a mole under the left cheekbone, faint under-eye shadows, thick natural eyebrows` — imperfección joven, no envejecimiento | `no makeup, no foundation` |
+| **Marisol, 43** | `light olive skin with warm undertones` | `mature adult bone structure, longer facial thirds, visible nasolabial folds, crow's feet, slightly crepey skin under the eyes, a few grey hairs at the temple, one sun spot on the cheekbone, enlarged pores on the nose` | `no babyface` |
+| **Álex, 36** | `medium olive skin with warm undertones` | `visible five o'clock shadow, a small scar through the right eyebrow, some redness across the cheeks, a clearly oily nose with dark filaments` | `no clean-shaven, no groomed beard` |
+
+Ojo con Bea: la biblia dice **dos** granitos en curación en la barbilla, no uno. Si pides uno, la cara se lee más
+limpia de lo que debería en el plano "antes".
 
 ### 1.4 Luz imposible
 
@@ -118,22 +153,46 @@ persona look like a stock-photo ad, not a real creator» (`ugc-character.md`). A
 nada de luz dorada: `cool early-morning overcast light through a half-closed blind`.
 
 La segunda es **más de una fuente**. Una foto real de baño tiene una luz que manda. Si describes ventana y bombilla a
-la vez, el balance de blancos se pelea (la ventana es fría, la bombilla cálida) y sale un render sucio. Regla: una
-fuente motivada por plano, y se dice cuál es, de dónde viene y qué hace.
+la vez como dos focos, las sombras apuntan a dos sitios y sale un render sucio. La regla es una fuente motivada por
+plano, y se escribe con el patrón fijo *qué es · de dónde viene · qué le hace a la cara*:
+
+```
+One single motivated light source: [soft cool daylight from the window on the left / a bare warm
+LED bulb above the mirror / the phone's own torch], coming from the [upper left], so the shadow
+under the nose and the chin falls [down and to the right] and the [right] side of the face is a
+stop darker. No second light, no fill, no rim light.
+```
+
+Rellenas los corchetes y ya está. Lo que no vale es escribir sólo `window light`.
 
 La tercera es **decir la hora sin decir las consecuencias**. Escribir `night bathroom, 23:30` da una imagen de día.
 Esto está comprobado generando y tiene arreglo literal (ver apartado 7, regla 3).
 
+Y una cuarta que no es de luz pero viaja con ella: **nada de superficies que devuelvan una persona**. La biblia es
+tajante y gana: ni espejos, ni ventana con los azulejos reflejados, ni el grifo devolviendo la cara. Toda superficie
+reflectante es la vía más rápida a un brazo de más o a una segunda persona en cuadro.
+
 ### 1.5 Bokeh de estudio
 
 El fondo cremoso desenfocado es el delator número uno del retrato de IA, porque un móvil sólo lo consigue simulándolo
-con Modo Retrato. A 24 mm y f/1.8 con un sensor de móvil, a un metro de distancia está casi todo enfocado. Por eso el
-bloque de cámara de Higgsfield dice `DEEP focus — background stays sharp` y prohíbe `no shallow depth of field, no
-bokeh` (`ugc-board.md`, Step 11).
+con Modo Retrato. Con un sensor de móvil, a un metro de distancia está casi todo enfocado. Por eso el bloque de
+cámara de Higgsfield dice `DEEP focus — background stays sharp` y prohíbe `no shallow depth of field, no bokeh`
+(`ugc-board.md`, Step 11).
+
+Las cifras reales de las ópticas del iPhone 15/16, que son las que hay que escribir en el prompt:
+
+| Óptica | Dato real | Para qué plano |
+|---|---|---|
+| Principal | 24 mm equivalente, f/1.78 (en el iPhone 16 base: 26 mm f/1.6) | todo menos el macro |
+| Ultra gran angular | 13 mm f/2.2 — es la que hace el modo macro | los 25 macros |
+| Frontal | look de 23 mm equivalente según `ugc-board.md` | selfies |
+
+En el prompt vale escribir `main camera, 24mm-equivalent f/1.8` (redondeo de f/1.78, el modelo no distingue), pero no
+inventes otras distancias focales.
 
 **Excepción única y muy importante: el macro de nariz.** Un macro real de iPhone se hace con el ultra gran angular
-(13 mm f/2.2) a dos o tres centímetros de la piel, y ahí la profundidad de campo real es de dos o tres milímetros: la
-punta de la nariz está nítida y el ala ya está borrosa. Si pides foco profundo en un macro, sale una lámina médica.
+a dos o tres centímetros de la piel, y ahí la profundidad de campo real es de dos o tres milímetros: la punta de la
+nariz está nítida y el ala ya está borrosa. Si pides foco profundo en un macro, sale una lámina médica.
 En los 25 macros de nariz hay que **quitar de la cola negativa** `no shallow depth of field` y `no bokeh`, y escribir:
 
 ```
