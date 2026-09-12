@@ -1,6 +1,7 @@
 # MANUAL DE HIGGSFIELD: cómo se editan los anuncios de verdad, paso a paso
 
-**Versión 1.0 · 12 de septiembre de 2026 · NOCTA (parches de nariz de hidrocoloide).**
+**Versión 1.1 · 12 de septiembre de 2026 · NOCTA (parches de nariz de hidrocoloide).**
+Revisión hostil sobre la 1.0: se han corregido contra la API los precios que estaban mal (Nano Banana, Seed Audio, créditos del plan), se ha marcado **sin verificar** todo lo que la investigación daba por medido y no aparece en `transactions` (Genjutsu, 1080p, calidad `high` a 1k), se ha añadido el aviso de la recarga automática, y se han resuelto a favor de la biblia las contradicciones del Anexo C, incluida una que no existía.
 Este manual está escrito para la persona que se sienta delante de Higgsfield y genera los 25 anuncios. No genera nada por sí mismo: es el procedimiento que hay que seguir. Los datos vienen de tres sitios y cada afirmación dice de cuál: (1) las instrucciones del flujo oficial `ugc-review-video` v1.1 que el propio Higgsfield sirve por MCP (`get_workflow_instructions` y `get_workflow_bundle_file`, con sus ficheros `references/ugc-board.md`, `ugc-clip.md` y `ugc-character.md`), consultadas en la investigación de esta semana; (2) el catálogo de modelos y precios medidos en nuestra propia cuenta (`models_explore`, `transactions`, `balance`, e historial en `brand/qa/control_calidad_imagenes.md`); (3) la biblia visual de NOCTA (`ads/in/biblia.md`), que son reglas comprobadas generando 22 imágenes reales. Todos los precios y el saldo se han vuelto a comprobar contra la API el 12/09/2026 con `balance` y `transactions`: **275,93 créditos, plan Plus**. Lo que no aparece en ese historial de cargos lleva la marca **sin verificar**, aunque la investigación lo diera por bueno.
 
 ---
@@ -361,7 +362,7 @@ Each Cut depicts ONE physical product interaction at most.
 
 Una presión, un despegado, un gesto. Si la acción necesita más pasos, se parte entre cortes. Frases que Seedance interpreta literalmente como **bucle de movimiento** y están prohibidas: `presses repeatedly`, `presses again`, `taps twice`, `back and forth`, `opens and closes`, `applies multiple coats`, `swipes again`, `sprays again`.
 
-Tres reglas que vienen con esto:
+Cuatro reglas que vienen con esto:
 
 - **Causa antes que efecto.** Presionar, luego el resultado. Nunca al revés.
 - **Un cambio de estado por corte.** Máximo uno.
@@ -375,6 +376,14 @@ She is peeling the patch off in ONE CONTINUOUS SHEET: the right portion is still
 ```
 
 Escribir "la mitad izquierda despegada y la derecha pegada" genera **dos parches separados**. Está comprobado.
+
+Y el reverso se describe siempre, en el mismo corte, porque es la prueba que vende el producto:
+
+```
+irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores
+```
+
+**Si el despegado a medias no sale a la primera, no se insiste.** La biblia trae una alternativa más fácil de generar que enseña lo mismo: el parche ya fuera, sujeto delante de la nariz limpia, que muestra a la vez las manchas blancas y la nariz sin puntos. Se cambia el plano y el anuncio no pierde nada. Insistir en el despegado a medias es de los sitios donde más créditos se van.
 
 ### 7.6 El morphing entre planos
 

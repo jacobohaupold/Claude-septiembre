@@ -33,8 +33,9 @@ Las reglas que hacen que el parche salga con su forma exacta están en `BIBLIA_V
 | 37 | ¿Sabías que…? | Álex | Tres de los cinco sitios de la biblia, en la s | 15 | [abrir](prompts/anuncio_37_sabias_que.md) |
 | 38 | ¿Te pasa que al pasar el dedo…? | Bea | Tres de los cinco sitios de la biblia, en este | 15 | [abrir](prompts/anuncio_38_te_pasa_que_al_pasar_el_dedo.md) |
 | 40 | ¿Funcionan de verdad los parches de nariz? | Álex | Cuatro de los cinco sitios de la biblia, con e | 15 | [abrir](prompts/anuncio_40_funcionan_de_verdad_los_parches_de_nariz.md) |
+| 44 | Qué asco (y qué gusto) | Álex | Sitio 4 de la biblia, "ventana de mañana": luz | 15 | [abrir](prompts/anuncio_44_que_asco_y_que_gusto.md) |
 
-> **Pendientes de escribir en esta versión:** anuncios 44, 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
+> **Pendientes de escribir en esta versión:** anuncios 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
 
 ## Las imágenes del anuncio 1
 

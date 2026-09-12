@@ -59,7 +59,7 @@ En el prompt de vídeo no se repite esa ficha ni esa frase. Las fotos del produc
 | Poros irregulares, filamentos, vello, ruido de sensor | Nada: la textura ya está horneada |
 | Luz del sitio 1-5 con hora y dirección | Solo si la luz CAMBIA durante el clip. Si no, "light unchanged" |
 | Óptica, profundidad de campo, encuadre | Nada. Encuadre y ratio están bloqueados por la imagen |
-| "No text, no logos, no watermark" | "No subtitles." |
+| "No text, no logos, no watermark" | "No subtitles, no text, no watermark." |
 | — | **La acción: posición inicial → posición final** |
 | — | **Un movimiento de cámara** |
 | — | **Lo que no puede cambiar** |
@@ -495,10 +495,10 @@ No subtitles, no text, no watermark.
 | **Morphing entre planos** | La cara de Bea es otra en la toma 11 que en la 2; los pendientes cambian de forma a mitad de clip | Deriva de identidad. Es el fallo nº 1 documentado en imagen a vídeo | `maintain the exact face, skin and hair of the image` + `image_references` del avatar en Seedance 2.0 |
 | **Deriva flotante** | El azulejo del fondo se desliza despacio, la pared "respira", el encuadre se va aunque no pediste cámara | El modelo no tiene orden de congelar nada, así que se inventa un movimiento suave | `the framing does not change, the background stays still` |
 | **Manos de más** | Seis dedos, nudillos fundidos, muñeca doblada al revés, un pulgar que aparece en el segundo 3 | Has pedido un gesto y el modelo ha inventado la trayectoria | Frame Lock + `Start: ... End: ...` + `anatomically correct hands, realistic finger articulation` |
-| **El producto rota y enseña caras que no existen** | La caja gira y el lado que aparece tiene otro logotipo, o el texto se convierte en garabatos | Órbita larga sobre tipografía compleja: *"complex typography distorts"* | Órbita corta: `One continuous slow 180-degree orbit at constant radius` + `The lettering on the box does not change.` Y solo 2-3 s útiles en montaje |
+| **El producto rota y enseña caras que no existen** | La caja gira y el lado que aparece tiene otro logotipo, o el texto se convierte en garabatos | Cualquier órbita sobre tipografía compleja: *"complex typography distorts"* | No orbitar nunca, que es lo que manda la biblia: `Very slow push in, the camera moves straight forward and does not rotate.` + `The lettering on the box does not change.` |
 | **Piel de plástico** | La nariz se repule a mitad de clip: los poros desaparecen y queda una superficie de cera | El modelo "limpia" la piel cuando hay mucho movimiento o reescalado. Y `8k`, `cinematic`, `perfect`, `glowing` son órdenes de borrar textura | Movimiento casi nulo + 1080p desde el principio + `the skin stays matte and unretouched with visible pores`. Si la still ya es de plástico, **no hay prompt que la arregle**: se repite la imagen |
 | **El parche cambia de silueta** | Empieza siendo la mariposa y acaba siendo un óvalo o una mancha | Has descrito el parche en el prompt de vídeo y el modelo lo ha vuelto a dibujar | Quitar toda la ficha del parche. Dejar solo `the patch keeps its shape and translucency` |
-| **Texto quemado** | Aparece un subtítulo en inglés que no pediste, o una marca de agua | `generate_audio` estaba en `true` (es el valor por defecto) | `generate_audio=false` + `No subtitles.` + cero corchetes `{ }` y `【 】` |
+| **Texto quemado** | Aparece un subtítulo en inglés que no pediste, o una marca de agua | `generate_audio` estaba en `true` (es el valor por defecto) | `generate_audio=false` + `No subtitles, no text, no watermark.` + cero corchetes `( )`, `< >`, `{ }` y `【 】` |
 | **Jitter de cuadro** | Temblor nervioso, como si el trípode vibrara | Dos movimientos de cámara apilados: *"use only one primary camera instruction"* | Una sola instrucción de cámara. Nunca `slow push in while orbiting` |
 | **El clip se rompe al final** | Los primeros 2 s están bien y el último segundo se deforma | La coherencia se degrada más allá de 5-10 s y el tramo que falla es siempre el final | Generar 4 s y montar 1,5-3 s, entrando con el movimiento ya empezado |
 | **Estados 4 y 5 mezclados** | El parche está en la mano **y** pegado en la nariz a la vez | La still ya venía mal | Se arregla en la imagen, no en el vídeo: un solo estado por toma (regla de la biblia) |
@@ -515,8 +515,23 @@ El orden no es negociable, y la razón está publicada: *"Every reliable shot in
 3. **Prompt de vídeo de ≤ 90 palabras**, un solo verbo de cámara, contado antes de lanzar.
 4. **Pase de prueba a 720p** (Seedance 2.0 Mini o 1.5 Pro). Solo se repite a 1080p la toma confirmada.
 5. **Test de 3 s de manos** antes de lanzar una serie entera: las manos delatan el fallo temporal antes que la cara.
-6. **Generar 4 s, montar 1,5-3 s.** TikTok tolera cortes cada 1,5-3 s, Reels 2,5-4 s. 15 planos × 2 s de media = 30 s, dentro del rango pedido.
+6. **Generar 4 s y montar 3 s** en los planos con persona y producto, 2 s en los macros de apoyo. Los números y el motivo están en la tabla de aquí abajo.
 7. **Guardar el prompt validado junto a su still**, con el nombre del archivo de referencia, el nombre de salida, el modelo y la fecha. Se itera sobre una base probada, no desde cero.
+
+### Las duraciones, en números
+
+| Dato | Valor | De dónde sale |
+|---|---|---|
+| Duración a generar por plano | 4 s | Seedance 1.5 Pro solo admite 4 / 8 / 12 s |
+| Duración a montar, planos con persona y producto | 3 s | Mínimo que pide la biblia (3-5 s por plano) |
+| Duración a montar, macros de apoyo (tomas 3, 4, 6, 9) | 2 s | Decisión nuestra para no pasarnos de 45 s |
+| Corte que tolera TikTok | 1,5-3 s | Investigación |
+| Corte que tolera Reels | 2,5-4 s | Investigación |
+| Corte que tolera Shorts | 3-5 s | Investigación |
+| Duración del anuncio | 12-45 s | Rango pedido en el encargo |
+| Lo que suma nuestro reparto | 11 planos × 3 s + 4 planos × 2 s = 41 s | Dentro del rango, con cuatro segundos de margen |
+
+**Aquí hay un choque y conviene verlo antes de montar el primer anuncio.** La biblia pide 3-5 s por plano; con 15 tomas, 3 s clavados ya son 45 s, o sea el tope del rango. La investigación, en cambio, dice que TikTok tolera cortes de 1,5-3 s, que es un ritmo bastante más rápido. Las dos cosas no caben. Lo que hacemos mientras el dueño no diga otra cosa es el reparto de la tabla (41 s). Si se quiere de verdad el ritmo rápido de TikTok, la salida no es recortar los quince planos a 1,5 s: es bajar el número de tomas por anuncio.
 
 ### Checklist de diez líneas
 
@@ -528,7 +543,7 @@ El orden no es negociable, y la razón está publicada: *"Every reliable shot in
 [ ] Hay UNA sola instrucción de cámara, sacada del diccionario
 [ ] No aparecen: cinematic, epic, beautiful, perfect, 8k, 24fps, f/1.8, probe lens
 [ ] Está el bloque de restricciones positivas
-[ ] Termina en "No subtitles."
+[ ] Termina en "No subtitles, no text, no watermark."
 [ ] generate_audio = false
 [ ] Si hay manos: start_image + end_image, y las manos van en la primera frase
 ```
@@ -543,3 +558,12 @@ El orden no es negociable, y la razón está publicada: *"Every reliable shot in
 - **Los hallazgos sobre textura de piel y sobre contraluz del parche** están marcados con confianza media en la investigación: las fuentes son buenas pero no son documentación oficial de modelo.
 - **Kling 2.x con `negative_prompt`** no está disponible dentro de Higgsfield: allí solo hay Kling 3.0 Turbo, que ya no tiene ese campo. Escribir negativos de estabilidad solo es posible fuera de la plataforma.
 - **La nota de cumplimiento de ByteDance** ("Seedance 2.x no admite subir referencias con caras humanas reales") no nos afecta porque los tres avatares son sintéticos. Pero no se puede cambiar eso sobre la marcha subiendo una foto real.
+- **La focal de 35 mm** para los planos con persona sale de que un móvil ronda los 26-28 mm equivalentes y de que la lista de Cinema Studio es 8 / 14 / 35 / 50 / 75 mm. No se ha comparado 35 contra 50 generando: **sin verificar**.
+- **El 3 % de recorte del `end_image`** para forzar un movimiento deliberado es cifra nuestra. La investigación solo dice "la misma imagen ligeramente reposicionada": **sin verificar**.
+- **Combinar `image_references` con `end_image` en Seedance 2.0** (tomas 7 y 8) no está probado en la API: **sin verificar**. Si la rechaza, manda el Frame Lock.
+- **Los recuentos de palabras** de los ejemplos están contados con `wc -w` sobre el texto tal cual aparece en el bloque. Si cambias una frase, vuelve a contar: la versión 1.0 de este manual daba cifras que no cuadraban (decía 58 donde había 62, y 24 donde había 27).
+
+### Dos cosas que tiene que decidir el dueño
+
+1. **Ritmo de montaje.** La biblia pide 3-5 s por plano y TikTok pide 1,5-3 s. No caben las dos con 15 tomas. Mientras no se decida, vale el reparto del punto 11 (41 s por anuncio).
+2. **La órbita del packshot.** La investigación la recomienda, la biblia la prohíbe, y este manual ha hecho ganar a la biblia. Si alguien quiere recuperarla, que sea después de tirar un plano con órbita y otro con push-in y mirar los dos.
