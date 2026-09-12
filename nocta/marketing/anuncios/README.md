@@ -42,8 +42,23 @@ imágenes ya generadas del anuncio 1.
 
 ## Aviso de créditos
 
-Las imágenes del anuncio 1 costaron 27 créditos de Higgsfield (1k, calidad media, 9:16, 1 crédito por imagen,
-contando las repeticiones que hubo que hacer hasta que el parche salió bien). Generar los 24 anuncios restantes a
-15 imágenes cada uno son **360 imágenes como mínimo**, y con las repeticiones normales sube a 430-480 créditos.
-El saldo de la cuenta ahora mismo es de **275,93 créditos** (plan Plus), así que no dan para los 24. Dan para
-unos 15 anuncios completos. Lo que sí está entregado para los 25 son los prompts.
+Las imágenes son baratas; lo caro es el vídeo. Conviene tenerlo claro antes de decidir presupuesto.
+
+| Concepto | Coste medido |
+|---|---|
+| Una imagen con GPT Image 2.5 Flare, 1k, calidad media, 9:16 | 1 crédito |
+| Las 15 tomas del anuncio 1, con las 12 repeticiones que hicieron falta | 27 créditos |
+| Las 360 imágenes de los 24 anuncios restantes, con repeticiones | 430-480 créditos |
+| Un clip de vídeo de 15 s a 720p con Seedance 2.5 | 97,5 créditos |
+| Los 25 anuncios en vídeo con el método de boards | unos 6.150 créditos |
+
+El saldo de la cuenta es de **275,93 créditos** (plan Plus, 1.200 al mes que **caducan** cada ciclo, no se
+acumulan). Con eso:
+
+- **Sí da** para generar las imágenes de unos 15 anuncios completos.
+- **Sí da** para un anuncio piloto entero en vídeo de 30 segundos con el método de boards (214 créditos).
+- **No da** para las imágenes de los 24 anuncios y además el vídeo.
+- **No da**, ni de lejos, para los 25 anuncios en vídeo: faltan unos 5.900 créditos.
+
+Lo que sí está entregado para los 25 anuncios son **los prompts**, que es la parte que no caduca.
+El desglose completo está en `MANUAL_HIGGSFIELD.md` §9.

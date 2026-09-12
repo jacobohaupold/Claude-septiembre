@@ -554,8 +554,12 @@ No son precios de nota de prensa: salen del historial de `transactions` y de `br
 |---|---|
 | Soul V2, 1 imagen | 0,12 cr |
 | Nano Banana Pro, 1 imagen | ≈1,9 cr |
-| GPT Image 2, calidad `medium` | 2,5 cr |
-| GPT Image 2, calidad `high` | 11 cr |
+| GPT Image 2.5 Flare, 1k, calidad `medium`, 9:16 | **1 cr** (medido en `transactions` el 12-09-2026, 27 cargos seguidos de −1 al generar el anuncio 1) |
+| GPT Image 2.5 Flare, 1k, calidad `high`, 9:16 | 2 cr |
+| GPT Image 2.5 Flare, 2k, calidad `medium` | 1,5 cr |
+| GPT Image 2.5 Flare, 2k, calidad `high` | 3 cr |
+| GPT Image 2, calidad `medium` | 2,5 cr (modelo anterior, cifra del QA de la semana pasada) |
+| GPT Image 2, calidad `high` | 11 cr (modelo anterior) |
 | GPT Image 2, board 21:9 a 2k | 6,5 cr |
 | Seedream 5 Pro, 1 pase | 3 cr |
 | `remove_background` | 1 cr |
@@ -569,6 +573,15 @@ No son precios de nota de prensa: salen del historial de `transactions` y de `br
 Seedance a 720p en clips completos: 4 s = 26 cr; 5 s = 32,5; 6 s = 40; **15 s = 97,5**.
 
 Plan: Plus son 1.200 créditos al mes (≈47-59 $ según las fuentes de la investigación); Ultra son 3.000. **Los créditos de suscripción caducan al final de cada ciclo de facturación: no se acumulan.** Los packs de recarga tienen una ventana de 90 días. Las dos quejas recurrentes de la comunidad son exactamente esas: la caducidad y los reembolsos de generaciones fallidas.
+
+
+> **Corrección medida el 12-09-2026.** Las 15 tomas del anuncio 1 se generaron con **GPT Image 2.5 Flare a 1k,
+> calidad media y 9:16, y cuestan 1 crédito por imagen**, no 2,5. Está comprobado en el historial de
+> `transactions`: 27 cargos consecutivos de −1 crédito, que son las 15 tomas finales más las 12 repeticiones que
+> hicieron falta hasta que el parche salió con su forma. Eso cambia la aritmética de las imágenes: **15 imágenes
+> por anuncio son 15 créditos**, y con repeticiones 18-20. Las 360 imágenes de los 24 anuncios que faltan salen
+> por **430-480 créditos**, no por miles. Lo que sigue siendo caro es el **vídeo**, no la imagen: ahí es donde se
+> va el presupuesto y donde el método de boards ahorra de verdad.
 
 ### 9.2 Los 25 anuncios, con cada método
 

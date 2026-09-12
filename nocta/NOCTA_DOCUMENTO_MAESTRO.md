@@ -391,11 +391,17 @@ Todo el material de producción vive en `marketing/anuncios/` y tiene su propio 
 3. *El despegado no tiene sentido físico.* Hay que describirlo como una sola lámina continua que se levanta por una
    única frontera, nunca como «la mitad izquierda despegada y la derecha pegada», que genera dos parches.
 
-**Coste.** Las 15 imágenes del anuncio 1, con las repeticiones que hicieron falta hasta que el parche salió bien,
-costaron 27 créditos de Higgsfield a 1k y calidad media. Los 24 anuncios restantes a 15 imágenes son 360 imágenes
-como mínimo y, contando repeticiones, 430-480 créditos. El saldo actual de la cuenta es de 275,93 créditos, así que
-alcanza para unos 15 anuncios completos, no para los 24. Lo que sí está entregado para los 25 anuncios son los
-prompts.
+**Coste.** Las imágenes son baratas y el vídeo es caro; conviene no confundirlo. Una imagen con GPT Image 2.5 a
+1k y calidad media cuesta **1 crédito** (medido en el historial de la cuenta). Las 15 tomas del anuncio 1, con las
+12 repeticiones que hicieron falta hasta que el parche salió con su forma, costaron **27 créditos**. Las 360
+imágenes de los 24 anuncios restantes salen por **430-480 créditos** con repeticiones. El vídeo es otra cosa: un
+clip de 15 segundos a 720p cuesta **97,5 créditos**, y los 25 anuncios en vídeo con el método de boards rondan los
+**6.150 créditos**.
+
+El saldo de la cuenta es de **275,93 créditos** (plan Plus: 1.200 al mes que caducan cada ciclo, no se acumulan).
+Da para las imágenes de unos 15 anuncios, o para un anuncio piloto entero en vídeo de 30 segundos. No da para
+las dos cosas, y no da para los 25 anuncios en vídeo. Lo que sí está entregado para los 25 son los prompts, que
+es la parte que no caduca. El desglose está en `marketing/anuncios/MANUAL_HIGGSFIELD.md` §9.
 
 
 ## 11. Desarrollo de negocio: legal, operaciones, roadmap 90 días y 12 meses
