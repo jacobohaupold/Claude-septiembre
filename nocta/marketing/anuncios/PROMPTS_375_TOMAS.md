@@ -57,72 +57,240 @@ Notas de montaje: todos los cortes son secos, sin fundidos ni transiciones; la v
 
 Este es el único anuncio cuyas imágenes están generadas y verificadas una a una. Sirven de patrón de calidad para los otros 24: si una imagen tuya no se parece a estas, el fallo está en el prompt o en las referencias adjuntas, no en el modelo.
 
-![Toma 1 · Gancho A · la nariz a 15 cm con el dedo señalando](img/a01/a01_01.jpg)
+Debajo de cada imagen está el prompt EXACTO con el que se generó y las fotos que se le adjuntaron. No es una reconstrucción: es lo que se envió a GPT Image 2.5.
 
-*Toma 1 — Gancho A · la nariz a 15 cm con el dedo señalando*
+![Gancho A · la nariz a 15 cm con el dedo señalando](img/a01/a01_01.jpg)
 
-![Toma 2 · Gancho B · el mismo momento desde más lejos, mirando a cámara](img/a01/a01_02.jpg)
+**Toma 1 — Gancho A · la nariz a 15 cm con el dedo señalando**
 
-*Toma 2 — Gancho B · el mismo momento desde más lejos, mirando a cámara*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 3 · Diagnóstico · la nariz entera de frente, sin dedo](img/a01/a01_03.jpg)
+```text
+Vertical 9:16 handheld iPhone photo, extreme macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; frame filled by the right ala and tip of his nose from 15 cm. Enlarged pores with grey-brown sebaceous filament plugs inside each one, fine vellus hair, thin red capillaries in the nostril crease, oily sheen on the bridge, uneven skin tone. His index fingertip enters from the right and points at the ala without touching it. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the ala, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 3 — Diagnóstico · la nariz entera de frente, sin dedo*
+![Gancho B · el mismo momento desde más lejos, mirando a cámara](img/a01/a01_02.jpg)
 
-![Toma 4 · Detalle del problema · tres centímetros cuadrados de aleta](img/a01/a01_04.jpg)
+**Toma 2 — Gancho B · el mismo momento desde más lejos, mirando a cámara**
 
-*Toma 4 — Detalle del problema · tres centímetros cuadrados de aleta*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 5 · La grasa que se rellena · el puente a contraluz rasante](img/a01/a01_05.jpg)
+```text
+Vertical 9:16 handheld iPhone photo. Álex, 36, short dark hair with a cowlick over the right temple, three-day stubble, small scar through the right eyebrow, charcoal grey crew-neck t-shirt with a stretched collar; head and shoulders three-quarter view from 40 cm, eyes to the lens. Visibly oily nose with dark filaments across both alae, red capillaries on the cheeks, one healing spot near the left jaw, uneven skin tone, shiny forehead. He taps the side of his own nose once with his index finger. Day bathroom, white subway tile, chrome tap out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 5 — La grasa que se rellena · el puente a contraluz rasante*
+![Diagnóstico · la nariz entera de frente, sin dedo](img/a01/a01_03.jpg)
 
-![Toma 6 · El error 1 · la tira de farmacia recién arrancada](img/a01/a01_06.jpg)
+**Toma 3 — Diagnóstico · la nariz entera de frente, sin dedo**
 
-*Toma 6 — El error 1 · la tira de farmacia recién arrancada*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 7 · El error 2 · apretar, y la rojez inmediata](img/a01/a01_07.jpg)
+```text
+Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; the nose fills the frame straight on from 20 cm, both alae and the tip, eyes and mouth cropped out. Dozens of enlarged pores in an uneven field over the tip, grey-brown sebaceous filament plugs, a few standing slightly proud of the skin, fine vellus hair catching the light, thin red capillaries along the nostril creases, oily sheen on the bridge, uneven skin tone. He holds still and breathes out. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 7 — El error 2 · apretar, y la rojez inmediata*
+![Detalle del problema · tres centímetros cuadrados de aleta](img/a01/a01_04.jpg)
 
-![Toma 8 · Entrada del producto · la caja en la mano y el sobre saliendo](img/a01/a01_08.jpg)
+**Toma 4 — Detalle del problema · tres centímetros cuadrados de aleta**
 
-*Toma 8 — Entrada del producto · la caja en la mano y el sobre saliendo*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 9 · El parche fuera del sobre · mariposa traslúcida a 10 cm](img/a01/a01_09.jpg)
+```text
+Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Three square centimetres of a 36-year-old man's left nasal ala fill the whole frame; no other feature is recognisable, a charcoal grey t-shirt blurred far behind. Around forty enlarged pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches along the nostril crease and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Most hold a grey-brown sebaceous filament plug with a slightly domed tip, a few are empty and open, several are stretched into short slits. Fine colourless vellus hairs lying flat across the skin, thin red capillaries, a few dry flakes at the nostril crease, an oily film between the pores, uneven reddish blotchy skin tone. The skin stays still. Day bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on one dense cluster of pores slightly off-centre, the rest falling out of focus, slight handheld motion blur at the edges, natural digital sensor noise, visible grain. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
+```
 
-*Toma 9 — El parche fuera del sobre · mariposa traslúcida a 10 cm*
+![La grasa que se rellena · el puente a contraluz rasante](img/a01/a01_05.jpg)
 
-![Toma 10 · Colocación · las dos yemas presionando diez segundos, de noche](img/a01/a01_10.jpg)
+**Toma 5 — La grasa que se rellena · el puente a contraluz rasante**
 
-*Toma 10 — Colocación · las dos yemas presionando diez segundos, de noche*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 11 · Retirada · el ala del parche levantándose por la mañana](img/a01/a01_11.jpg)
+```text
+Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt; the bridge of his nose and the inner corner of the right eye from 15 cm, seen almost edge-on along the surface of the skin. A long specular strip of oil lies on the bridge, tiny beads of sebum sit at the pore mouths, grey-brown filament plugs, fine vellus hair standing up against the light, thin red capillaries beside the nostril, one healing spot below the inner eye corner, uneven skin tone. He blinks once. Day bathroom, white subway tile, raking north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the oily strip, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 11 — Retirada · el ala del parche levantándose por la mañana*
+![El error 1 · la tira de farmacia recién arrancada](img/a01/a01_06.jpg)
 
-![Toma 12 · La prueba · el parche usado a contraluz](img/a01/a01_12.jpg)
+**Toma 6 — El error 1 · la tira de farmacia recién arrancada**
 
-*Toma 12 — La prueba · el parche usado a contraluz*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 13 · Nariz después · el mismo encuadre de la toma 3](img/a01/a01_13.jpg)
+```text
+Vertical 9:16 handheld iPhone photo, close shot. A 36-year-old man's hand, short nails, a hangnail on the thumb, dark hair on the back of the fingers, charcoal grey t-shirt sleeve at the edge of frame; he holds a just-removed pharmacy pore strip between thumb and index finger at 25 cm, the strip curled and stiff. Its sticky side is matted with grey fibres, a dusting of dead skin, three fine hairs pulled out, only a couple of tiny plugs, nothing dramatic. Behind, out of focus, a chrome tap, a white towel and two unlabelled scrub jars on a shelf. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the sticky side of the strip, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 13 — Nariz después · el mismo encuadre de la toma 3*
+![El error 2 · apretar, y la rojez inmediata](img/a01/a01_07.jpg)
 
-![Toma 14 · Garantía · el móvil y el pack de 2 en el mármol](img/a01/a01_14.jpg)
+**Toma 7 — El error 2 · apretar, y la rojez inmediata**
 
-*Toma 14 — Garantía · el móvil y el pack de 2 en el mármol*
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
 
-![Toma 15 · Cierre · packshot del pack de 2 con un parche al lado](img/a01/a01_15.jpg)
+```text
+Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt; his two index fingertips press hard on either side of the left nasal ala from 18 cm, the skin pinched between the nails. The skin under the nails is blanched white, a hot red ring is already spreading around it, one pore is torn and wet-looking, tiny scratches from the nail edges, grey-brown filament plugs still sitting in the untouched pores, fine vellus hair, thin red capillaries, uneven skin tone. He squeezes and holds. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pinched skin, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
 
-*Toma 15 — Cierre · packshot del pack de 2 con un parche al lado*
+![Entrada del producto · la caja en la mano y el sobre saliendo](img/a01/a01_08.jpg)
 
-![Alternativa a la toma 11](img/a01/a01_11bis.jpg)
+**Toma 8 — Entrada del producto · la caja en la mano y el sobre saliendo**
 
-*Alternativa a la toma 11 — el parche ya fuera, sujeto delante de la nariz limpia. Es un plano más fácil de generar bien que el despegado a medias y enseña las dos cosas a la vez.*
+Referencias adjuntas: avatar (Álex), caja real. Ajustes: 1k · medium · 9:16.
+
+```text
+The box must be EXACTLY the product in the reference photographs: same matte cream carton, same printed layout. Do not invent a different design. Vertical 9:16 handheld iPhone photo, close shot from 30 cm. A 36-year-old man's left hand, short nails, dark hair on the knuckles, charcoal grey t-shirt sleeve in frame, holds the matte cream uncoated cardboard NOCTA box the size of a deck of cards at chest height; his right hand pulls a small matte cream sachet halfway out of it. Visible paper fibre on the board, one soft dent in the corner, no gloss anywhere, fingerprints on the skin, thin red capillaries on the knuckles. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the sachet leaving the box, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No added text beyond what is printed on the box, no invented logos, no watermark.
+```
+
+![El parche fuera del sobre · mariposa traslúcida a 10 cm](img/a01/a01_09.jpg)
+
+**Toma 9 — El parche fuera del sobre · mariposa traslúcida a 10 cm**
+
+Referencias adjuntas: parche real sobre su liner, parche real puesto en la nariz. Ajustes: 1k · medium · 9:16.
+
+```text
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance. Vertical 9:16 handheld iPhone photo from 20 cm. A man's thumb and index fingertip pinch one wing of a translucent matte hydrocolloid nose patch and hold the whole piece up in the air: one wide central lobe and two symmetrical side wings that spread sideways and downwards, a shallow rounded notch in the middle of the lower edge, every corner rounded, 60 mm wide, 0.55 mm thick with a bevelled edge catching a thin line of light. The piece sags slightly under its own weight and one corner is still lifted off its shiny transparent release liner, which hangs below. The material is almost clear with a fine matte veil; the tiled wall is visible straight through it, faint dust specks on the surface. Day bathroom, white subway tile out of focus behind, soft north-facing window light from the left, 10:00. Shallow depth of field, focus exactly on the bevelled edge of the near wing, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. Never opaque, never black, never a straight strip, never an oval. No text, no logos, no watermark.
+```
+
+![Colocación · las dos yemas presionando diez segundos, de noche](img/a01/a01_10.jpg)
+
+**Toma 10 — Colocación · las dos yemas presionando diez segundos, de noche**
+
+Referencias adjuntas: avatar (Álex), parche real puesto en la nariz, parche real puesto, segundo ángulo. Ajustes: 1k · medium · 9:16.
+
+```text
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the small window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo from 35 cm. A man of 36, short dark hair, three-day stubble, small scar through the right eyebrow, a charcoal grey crew-neck t-shirt, a white towel over his left shoulder; he presses a translucent matte butterfly hydrocolloid patch onto his clean dry nose with both index fingers, one on each wing, eyes down, mouth relaxed. Tired shadows under the eyes, red capillaries on the cheeks, damp hairline. The patch is already sealed and conforms to the curve of the nose and to both nostril wings with no wrinkles and no lifted corners, one shade paler than the skin, a thin line of light along the bevelled edge, the pores faintly readable through the film. Night bathroom, white subway tile, 23:30. Shallow depth of field, focus exactly on the patch, slight handheld motion blur at the edges, natural digital sensor noise, warm tungsten colour cast. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
+
+![Retirada · el ala del parche levantándose por la mañana](img/a01/a01_11.jpg)
+
+**Toma 11 — Retirada · el ala del parche levantándose por la mañana**
+
+Referencias adjuntas: avatar (Álex), nariz limpia ya generada (toma 13), parche real sobre su liner. Ajustes: 1k · medium · 9:16.
+
+```text
+Three reference photographs are attached. The FIRST is the man's face: keep his identity. The SECOND is his nose AFTER the treatment: the skin of the nose in the image you generate must look EXACTLY like that second reference, with open EMPTY pores and no dark dots. The THIRD is the product: the patch must keep that silhouette and translucent matte material. Vertical 9:16 handheld iPhone photo, three-quarter view, macro from 20 cm, the nose in the middle of the frame and the eye only clipped at the top edge. A man of 36, three-day stubble, hair flattened on one side by the pillow, charcoal grey crew-neck t-shirt. He is peeling the hydrocolloid patch off his nose in one continuous sheet: the right portion is still stuck flat and translucent on the right side of the nose, and without any break it lifts along one single boundary down the ridge and hangs from his thumb and index finger at the left, curled, limp, its underside turned to the camera. That underside is covered in irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. CRITICAL: the front and the left side of the nose are now UNCOVERED and CLEAN, exactly like the second reference photograph: the pores are open, EMPTY, flat and pale, there are NO dark dots, NO grey-brown plugs and NO blackheads anywhere on that skin, only a faint pink adhesive mark and a slight dampness. Morning window light from the left, white subway tile out of focus behind, 07:40. Shallow depth of field, focus on the boundary between the stuck and the peeled part, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism, no beauty retouching, no skin smoothing. No text, no logos, no watermark.
+```
+
+![La prueba · el parche usado a contraluz](img/a01/a01_12.jpg)
+
+**Toma 12 — La prueba · el parche usado a contraluz**
+
+Referencias adjuntas: parche real sobre su liner, parche real puesto en la nariz. Ajustes: 1k · medium · 9:16.
+
+```text
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE used patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance, one wide central lobe, two symmetrical side wings, a shallow rounded notch in the middle of the lower edge, every corner rounded. Vertical 9:16 handheld iPhone photo from 25 cm. A man's thumb and index finger pinch one wing and hold the used hydrocolloid patch up flat against a bright window, backlit. Where it sat over the pores it has turned opaque milky white in irregular islands, with dozens of small raised white and pale-yellow domes and a few grey-brown threads stretched inside the film; the outer border of the piece is still translucent amber and the bevelled edge reads as a thin bright line; one wing is slightly stretched and the piece keeps the memory of the curve of a nose, its edges curling in. Out-of-focus window frame and pale sky behind. Morning window light coming from behind the patch, 07:45. Shallow depth of field, focus exactly on the white domes, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. Never black, never a straight strip, never an oval, never a shapeless blob. No text, no logos, no watermark.
+```
+
+![Nariz después · el mismo encuadre de la toma 3](img/a01/a01_13.jpg)
+
+**Toma 13 — Nariz después · el mismo encuadre de la toma 3**
+
+Referencias adjuntas: avatar (Álex). Ajustes: 1k · medium · 9:16.
+
+```text
+FRAMING IS CRITICAL: extreme macro, the nose alone fills the whole vertical frame from 20 cm, straight on, tip and both nostril wings edge to edge; the eyes and the mouth are OUTSIDE the frame or only just clipped at the border. Not a portrait, not a head and shoulders. Vertical 9:16 handheld iPhone photo with a clip-on macro lens. A 36-year-old man, short dark hair flattened on one side by the pillow, three-day stubble at the bottom edge of the frame. The pores of the nose are still clearly visible but EMPTY and flat: the grey-brown sebaceous plugs are gone from all of them except one near the tip that still holds a dark plug. The surface is matte, not oily, with a faint pink butterfly-shaped mark where the adhesive sat, fine vellus hair, thin red capillaries in the nostril crease, uneven blotchy skin tone. No patch on the nose and no patch anywhere in the frame. Morning window light, lateral and clean, white subway tile behind and out of focus, 07:50. Shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+```
+
+![Garantía · el móvil y el pack de 2 en el mármol](img/a01/a01_14.jpg)
+
+**Toma 14 — Garantía · el móvil y el pack de 2 en el mármol**
+
+Referencias adjuntas: caja real. Ajustes: 1k · medium · 9:16.
+
+```text
+The cream cardboard boxes must be EXACTLY the product in the reference photograph: same matte uncoated cream board, same proportions, same printing. Do not invent different packaging and do not add any text beyond what is printed on the box in the reference. Vertical 9:16 handheld iPhone photo from 40 cm, over the shoulder. A man's hand, short nails, dark hair on the knuckles, a charcoal grey t-shirt sleeve in frame, holds a black phone tilted away from the camera so the screen is only a pale sheet of blown-out light with nothing readable on it; two matte cream cardboard boxes lie in the foreground beside his forearm. Fingerprints and a small scratch on the phone back, dust specks on the stone, a hangnail on the thumb. Cream marble table, soft window light from the left, short shadow, 11:00. Very shallow depth of field, focus exactly on the front box, the phone screen out of focus, slight handheld motion blur at the edges, natural digital sensor noise, unretouched documentary realism. No added text, no logos beyond the box, no watermark.
+```
+
+![Cierre · packshot del pack de 2 con un parche al lado](img/a01/a01_15.jpg)
+
+**Toma 15 — Cierre · packshot del pack de 2 con un parche al lado**
+
+Referencias adjuntas: parche real sobre su liner, caja real. Ajustes: 1k · medium · 9:16.
+
+```text
+The box and the patch must be EXACTLY the products in the reference photographs: same cream matte uncoated board and printing, same patch silhouette and translucent matte material. Do not add text beyond what is printed on the box in the reference. THE PATCH IS THE HERO OF THE FOREGROUND and must be large and fully visible: a clean translucent butterfly-shaped hydrocolloid nose patch lying flat on the marble in the near foreground, complete inside the frame with space around it, seen from slightly above so its whole die-cut outline reads at a glance: one wide central lobe, two symmetrical side wings spreading sideways and down, a shallow rounded notch in the middle of the lower edge, every corner rounded. It is a solid 0.55 mm sheet of film, not a liquid, not a puddle, not a spill, not crumpled cling film and not a limp noodle: its bevelled edge catches a thin line of light, one wing is lifted a few millimetres off the stone and casts a small sharp shadow under it. Vertical 9:16 handheld iPhone photo from 35 cm. Behind it, two matte cream uncoated cardboard boxes on a cream marble table, one standing and one lying flat, slightly out of focus. Visible paper fibre on the board, a soft dent in one corner, a faint thumbprint on the lid, dust specks and grey veining in the marble, no gloss anywhere. Nobody in frame. Soft window light from the left, short soft shadow to the right, 11:00. Shallow depth of field, focus exactly on the patch, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No added text, no watermark.
+```
+
+![Alternativa a la toma 11 · el parche ya fuera, delante de la nariz limpia](img/a01/a01_11bis.jpg)
+
+**Toma 11 bis — Alternativa a la toma 11 · el parche ya fuera, delante de la nariz limpia**
+
+Referencias adjuntas: avatar (Álex), nariz limpia ya generada (toma 13), parche real sobre su liner. Ajustes: 1k · medium · 9:16.
+
+```text
+Three reference photographs are attached. The FIRST is the man's face: keep his identity. The SECOND is his nose AFTER the treatment: the skin of the nose you generate must look EXACTLY like that second reference, open EMPTY pores, no dark dots. The THIRD is the product. Vertical 9:16 handheld iPhone photo, macro from 20 cm, straight on, the nose filling the middle of the frame, eyes clipped at the top edge. A man of 36, three-day stubble, hair flattened by the pillow, charcoal grey t-shirt. The patch is now COMPLETELY OFF his nose: he holds the whole used piece between thumb and index finger just in front of and slightly below his nose, tilted toward the camera so its inner face is fully visible, soft and curling at the edges, keeping the memory of the curve of the nose. Its inner face is covered in irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes and a few grey-brown threads stretched in the film. Behind it his nose is bare, with NO patch on it and no patch residue: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere, the surface is matte instead of oily and a faint pink butterfly-shaped mark shows where the adhesive sat. Morning window light, lateral and clean, white subway tile out of focus, 07:45. Shallow depth of field, focus on the used patch with the nose slightly softer behind it, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism, no beauty retouching. No text, no logos, no watermark.
+```
+
+> La toma 11 bis es el plano de recambio: el parche ya fuera, sujeto delante de la nariz limpia. Sale bien a la primera mucho más a menudo que el despegado a medias y enseña las dos cosas en un solo fotograma, las manchas blancas y la nariz sin puntos.
+
+> A 12 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
 
-### Las 15 tomas
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 20 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The index fingertip moves two centimetres closer to the ala and stops, without touching the skin
+Hard cut to.
+Cut 2: He taps the side of his nose once with his index finger and lowers the hand
+Hard cut to.
+Cut 3: The nose stays still and only the nostrils widen slightly with one slow exhale
+Hard cut to.
+Cut 4: A single very slow push in of about five per cent towards the central row of pores, nothing else moves
+Hard cut to.
+Cut 5: He blinks once, slowly, and the specular strip of oil on the bridge shifts a few millimetres with the movement
+Hard cut to.
+Cut 6: He tilts the used strip a few degrees towards the window so the light crosses its sticky side, one single movement of the wrist
+Hard cut to.
+Cut 7: The two fingertips press a little harder and then release, and the blanched skin floods back to red where they were
+Hard cut to.
+Cut 8: The right hand slides the sachet fully out of the box in one continuous movement and stops
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 20 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The patch flexes once as the fingers turn it a few degrees and the light slides along its bevelled edge
+Hard cut to.
+Cut 2: He presses down on both wings of the patch with his index fingers and slowly lifts the fingers away, leaving the patch stuck to the nose
+Hard cut to.
+Cut 3: The fingers peel the patch two centimetres further off the nose, very slowly, and the white underside turns towards the camera
+Hard cut to.
+Cut 4: The fingers tilt the used patch a few degrees against the window so the backlight crosses the white domes and they read one by one
+Hard cut to.
+Cut 5: The nose stays still and only one slow exhale widens the nostrils a couple of millimetres
+Hard cut to.
+Cut 6: The thumb makes one short scroll movement on the phone screen while the rest of the frame stays still
+Hard cut to.
+Cut 7: A very slow pull back of about eight per cent that reveals a little more of the marble around the two boxes
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 3 y 4 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 4 y 5 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 12 y 13 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 14 y 15 están en la misma banda de distancia (primer plano) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · la nariz a 15 cm con el dedo señalando
 
@@ -132,10 +300,12 @@ Este es el único anuncio cuyas imágenes están generadas y verificadas una a u
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, extreme macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; frame filled by the right ala and tip of his nose from 15 cm. Enlarged pores with grey-brown sebaceous filament plugs inside each one, fine vellus hair, thin red capillaries in the nostril crease, oily sheen on the bridge, uneven skin tone. His index fingertip enters from the right and points at the ala without touching it. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the ala, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, extreme macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; frame filled by the right ala and tip of his nose from 15 cm. Enlarged pores with grey-brown sebaceous filament plugs inside each one, fine vellus hair, thin red capillaries in the nostril crease, oily sheen on the bridge, uneven skin tone. His index fingertip enters from the right and points at the ala without touching it. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the ala, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -176,10 +346,12 @@ The image comes alive: he taps the side of his nose once with his index finger a
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; the nose fills the frame straight on from 20 cm, both alae and the tip, eyes and mouth cropped out. Dozens of enlarged pores in an uneven field over the tip, grey-brown sebaceous filament plugs, a few standing slightly proud of the skin, fine vellus hair catching the light, thin red capillaries along the nostril creases, oily sheen on the bridge, uneven skin tone. He holds still and breathes out. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt at the bottom edge; the nose fills the frame straight on from 20 cm, both alae and the tip, eyes and mouth cropped out. Dozens of enlarged pores in an uneven field over the tip, grey-brown sebaceous filament plugs, a few standing slightly proud of the skin, fine vellus hair catching the light, thin red capillaries along the nostril creases, oily sheen on the bridge, uneven skin tone. He holds still and breathes out. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -196,12 +368,14 @@ The image comes alive: the nose stays still and only the nostrils widen slightly
 
 **Qué se ve.** Macro extremo, tan cerca que ya no se reconoce que es una nariz: solo piel, unos cuarenta poros, y dentro de cada uno un cilindro gris-marrón con la punta abombada. Algunos poros vacíos y abiertos. Es la prueba visual de que no son puntos negros sino canales llenos.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Three square centimetres of Álex's left nasal ala fill the whole frame; no other feature is recognisable, the charcoal grey t-shirt blurred far behind. Around forty enlarged pores, each holding a grey-brown sebaceous filament plug with a slightly domed tip, some pores empty and open, fine colourless vellus hairs lying across the skin, thin red capillaries, dry flakes at the nostril crease, an oily film between the pores, uneven reddish skin tone. The skin stays still. Day bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the row of pores in the centre, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Three square centimetres of Álex's left nasal ala fill the whole frame; no other feature is recognisable, the charcoal grey t-shirt blurred far behind. Around forty enlarged pores, each holding a grey-brown sebaceous filament plug with a slightly domed tip, some pores empty and open, fine colourless vellus hairs lying across the skin, thin red capillaries, dry flakes at the nostril crease, an oily film between the pores, uneven reddish skin tone. The skin stays still. Day bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the row of pores in the centre, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -264,10 +438,12 @@ The image comes alive: he tilts the used strip a few degrees towards the window 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt; his two index fingertips press hard on either side of the left nasal ala from 18 cm, the skin pinched between the nails. The skin under the nails is blanched white, a hot red ring is already spreading around it, one pore is torn and wet-looking, tiny scratches from the nail edges, grey-brown filament plugs still sitting in the untouched pores, fine vellus hair, thin red capillaries, uneven skin tone. He squeezes and holds. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pinched skin, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens. Álex, 36, short dark hair, three-day stubble, charcoal grey crew-neck t-shirt; his two index fingertips press hard on either side of the left nasal ala from 18 cm, the skin pinched between the nails. The skin under the nails is blanched white, a hot red ring is already spreading around it, one pore is torn and wet-looking, tiny scratches from the nail edges, grey-brown filament plugs still sitting in the untouched pores, fine vellus hair, thin red capillaries, uneven skin tone. He squeezes and holds. Day bathroom, white subway tile, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pinched skin, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -286,10 +462,12 @@ The image comes alive: the two fingertips press a little harder and then release
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close shot from 30 cm. Álex's left hand, short nails, dark hair on the knuckles, charcoal grey t-shirt sleeve in frame, holds a matte cream uncoated cardboard box the size of a deck of cards at chest height; his right hand pulls a small matte cream sachet halfway out of it. Visible paper fibre on the board, one soft dent in the corner, no gloss anywhere, fingerprints on the skin, thin red capillaries on the knuckles. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the sachet leaving the box, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, close shot from 30 cm. Álex's left hand, short nails, dark hair on the knuckles, charcoal grey t-shirt sleeve in frame, holds a matte cream uncoated cardboard box the size of a deck of cards at chest height; his right hand pulls a small matte cream sachet halfway out of it. Visible paper fibre on the board, one soft dent in the corner, no gloss anywhere, fingerprints on the skin, thin red capillaries on the knuckles. Day bathroom, white subway tile behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the sachet leaving the box, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -306,12 +484,14 @@ The image comes alive: the right hand slides the sachet fully out of the box in 
 
 **Qué se ve.** Macro extremo del parche entre el pulgar y el índice: la mariposa de 60 mm, lóbulo central y dos alas, traslúcida con velo mate, el borde biselado y los 0,55 mm de grosor. Se ven las huellas dactilares y un capilar rojo a través del material. Una esquina despegada del liner.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Álex's thumb and index fingertip hold a translucent matte hydrocolloid nose patch shaped like a butterfly, one central lobe and two side wings, 60 mm wide, 0.55 mm thick with a bevelled edge; it fills the frame at 10 cm and bends slightly under its own weight. The material is almost clear with a fine matte veil, the fingerprint ridges and a thin red capillary are visible straight through it, one corner still lifted off the release liner, faint dust specks on the surface. Day bathroom, white subway tile out of focus, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the bevelled edge, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Álex's thumb and index fingertip hold a translucent matte hydrocolloid nose patch shaped like a butterfly, one central lobe and two side wings, 60 mm wide, 0.55 mm thick with a bevelled edge; it fills the frame at 10 cm and bends slightly under its own weight. The material is almost clear with a fine matte veil, the fingerprint ridges and a thin red capillary are visible straight through it, one corner still lifted off the release liner, faint dust specks on the surface. Day bathroom, white subway tile out of focus, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the bevelled edge, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -330,10 +510,12 @@ The image comes alive: the patch flexes once as the fingers turn it a few degree
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from 35 cm. Álex, 36, short dark hair, three-day stubble, small scar through the right eyebrow, the same charcoal grey crew-neck t-shirt, a white towel over his left shoulder; he presses a translucent matte butterfly hydrocolloid patch onto his clean dry nose with both index fingers, one on each wing, eyes down, mouth relaxed. Tired shadows under the eyes, red capillaries on the cheeks, damp hairline, the patch already conforming to the ala and turning slightly clearer where it touches the skin. Night bathroom, white subway tile, hard ceiling light from above, 23:30. Very shallow depth of field, focus exactly on the patch, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo from 35 cm. Álex, 36, short dark hair, three-day stubble, small scar through the right eyebrow, the same charcoal grey crew-neck t-shirt, a white towel over his left shoulder; he presses a translucent matte butterfly hydrocolloid patch onto his clean dry nose with both index fingers, one on each wing, eyes down, mouth relaxed. Tired shadows under the eyes, red capillaries on the cheeks, damp hairline, the patch already conforming to the ala and turning slightly clearer where it touches the skin. Night bathroom, white subway tile, hard ceiling light from above, 23:30. Very shallow depth of field, focus exactly on the patch, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -350,12 +532,14 @@ The image comes alive: he presses down on both wings of the patch with his index
 
 **Qué se ve.** Macro a 20 cm con luz de mañana: pulgar e índice despegan el parche, el ala derecha ya levantada y curvándose, todavía pegado por el puente. En la cara interna que asoma se ve el blanco opaco por zonas y los puntitos amarillentos. Pelo aplastado por la almohada, marca de la funda en el pómulo.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares; 1 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, macro from 20 cm. Álex, 36, short dark hair flattened on one side from the pillow, three-day stubble, the same charcoal grey crew-neck t-shirt, a pillow crease on the right cheek; his thumb and index finger peel the hydrocolloid butterfly patch off his nose, the right wing already lifted and curling while the centre is still stuck along the bridge. The lifted underside is opaque white in irregular patches with small yellowish dots where the pores were, the skin under it slightly paler and damp. Fine vellus hair, thin red capillaries, uneven skin tone. Morning window light, lateral and clean, white subway tile behind, 07:40. Very shallow depth of field, focus exactly on the lifting wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, macro from 20 cm. Álex, 36, short dark hair flattened on one side from the pillow, three-day stubble, the same charcoal grey crew-neck t-shirt, a pillow crease on the right cheek; his thumb and index finger peel the hydrocolloid butterfly patch off his nose, the right wing already lifted and curling while the centre is still stuck along the bridge. The lifted underside is opaque white in irregular patches with small yellowish dots where the pores were, the skin under it slightly paler and damp. Fine vellus hair, thin red capillaries, uneven skin tone. Morning window light, lateral and clean, white subway tile behind, 07:40. Very shallow depth of field, focus exactly on the lifting wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -372,12 +556,14 @@ The image comes alive: the fingers peel the patch two centimetres further off th
 
 **Qué se ve.** Macro extremo del parche usado sostenido contra la ventana. Donde tocaba los poros se ha vuelto blanco lechoso en islas irregulares, con decenas de cupulitas blancas y amarillentas y algún filamento gris-marrón estirado dentro de la película; el resto sigue traslúcido ambarino. El borde biselado se lee como una línea fina y clara.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Álex's thumb and index finger hold the used butterfly hydrocolloid patch up against a window at 12 cm, backlit, the patch filling the frame. Where it sat over the pores it has turned opaque milky white in irregular islands, with dozens of small raised white and yellowish domes and a few grey-brown threads stretched inside the film; the rest of the material is still translucent amber and the bevelled edge reads as a thin bright line, one wing slightly stretched. Out-of-focus window frame and pale sky behind. Morning window light coming from behind the patch, 07:45. Very shallow depth of field, focus exactly on the white domes, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Álex's thumb and index finger hold the used butterfly hydrocolloid patch up against a window at 12 cm, backlit, the patch filling the frame. Where it sat over the pores it has turned opaque milky white in irregular islands, with dozens of small raised white and yellowish domes and a few grey-brown threads stretched inside the film; the rest of the material is still translucent amber and the bevelled edge reads as a thin bright line, one wing slightly stretched. Out-of-focus window frame and pale sky behind. Morning window light coming from behind the patch, 07:45. Very shallow depth of field, focus exactly on the white domes, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -394,12 +580,14 @@ The image comes alive: the fingers tilt the used patch a few degrees against the
 
 **Qué se ve.** Exactamente el encuadre de la toma 3, ahora con luz de mañana: los poros siguen ahí pero vacíos y planos, sin los tapones gris-marrón, la piel mate en vez de grasa. Un poro aún lleno cerca de la punta y una marca rosada tenue con forma de mariposa donde estuvo el adhesivo. Honesto, no milagroso.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens, the same framing as the earlier diagnostic shot. Álex, 36, short dark hair flattened on one side, three-day stubble, the same charcoal grey crew-neck t-shirt at the bottom edge; the nose fills the frame straight on from 20 cm. The pores are still there but empty and flat, the grey-brown plugs gone from most of them, the surface matte instead of oily, one pore still full near the tip, a faint pink butterfly-shaped mark where the adhesive sat, fine vellus hair, thin red capillaries, uneven skin tone. He breathes out and stays still. Morning window light, lateral and clean, white subway tile, 07:50. Very shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, macro with a clip-on macro lens, the same framing as the earlier diagnostic shot. Álex, 36, short dark hair flattened on one side, three-day stubble, the same charcoal grey crew-neck t-shirt at the bottom edge; the nose fills the frame straight on from 20 cm. The pores are still there but empty and flat, the grey-brown plugs gone from most of them, the surface matte instead of oily, one pore still full near the tip, a faint pink butterfly-shaped mark where the adhesive sat, fine vellus hair, thin red capillaries, uneven skin tone. He breathes out and stays still. Morning window light, lateral and clean, white subway tile, 07:50. Very shallow depth of field, focus exactly on the tip of the nose, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -418,10 +606,12 @@ The image comes alive: the nose stays still and only one slow exhale widens the 
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from 40 cm, over the shoulder. Álex's hand, short nails, dark hair on the knuckles, charcoal grey t-shirt sleeve in frame, holds a black phone tilted away from the camera so the screen is only a pale sheet of blown-out light with nothing readable on it; two matte cream cardboard boxes lie in the foreground beside his forearm. Fingerprints and a small scratch on the phone back, dust specks on the stone. Cream marble table, soft window light from the left, short shadow, 11:00. Very shallow depth of field, focus exactly on the front box, the phone screen out of focus, slight handheld motion blur at the edges, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo from 40 cm, over the shoulder. Álex's hand, short nails, dark hair on the knuckles, charcoal grey t-shirt sleeve in frame, holds a black phone tilted away from the camera so the screen is only a pale sheet of blown-out light with nothing readable on it; two matte cream cardboard boxes lie in the foreground beside his forearm. Fingerprints and a small scratch on the phone back, dust specks on the stone. Cream marble table, soft window light from the left, short shadow, 11:00. Very shallow depth of field, focus exactly on the front box, the phone screen out of focus, slight handheld motion blur at the edges, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -438,12 +628,14 @@ The image comes alive: the thumb makes one short scroll movement on the phone sc
 
 **Qué se ve.** Dos cajas de cartón crema mate sobre mármol crema, una de pie y otra tumbada delante, con un sobrecito abierto al lado y un parche limpio traslúcido apoyado medio sobre la piedra con el borde levantado. Nadie en cuadro. Luz de ventana suave, sombra corta a la derecha. El precio va en subtítulo, no en la imagen.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from 35 cm. Two matte cream uncoated cardboard boxes on a cream marble table, one standing and one lying flat in front of it, an opened matte cream sachet beside them and a clean translucent butterfly hydrocolloid patch resting half on the stone with one edge lifted. Visible paper fibre on the board, one soft dent in a corner, a faint thumbprint on the lid, tiny dust specks and grey veining in the marble, no gloss anywhere. Nobody in frame. Cream marble table by the window, soft window light from the left, short soft shadow to the right, 11:00. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo from 35 cm. Two matte cream uncoated cardboard boxes on a cream marble table, one standing and one lying flat in front of it, an opened matte cream sachet beside them and a clean translucent butterfly hydrocolloid patch resting half on the stone with one edge lifted. Visible paper fibre on the board, one soft dent in a corner, a faint thumbprint on the lid, tiny dust specks and grey veining in the marble, no gloss anywhere. Nobody in frame. Cream marble table by the window, soft window light from the left, short soft shadow to the right, 11:00. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -497,8 +689,74 @@ The image comes alive: a very slow pull back of about eight per cent that reveal
 
 Duración total de las 15 tomas animadas: 59 s de material para un anuncio de 45 s. Ese 30 % de más es el margen de montaje: se recorta por los extremos de cada plano, nunca se estira ninguno.
 
+> A 10 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 28 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: She tips her nose a few centimetres closer to the lens and blinks once
+Hard cut to.
+Cut 2: She exhales through her nose, her nostrils widening very slightly and settling again
+Hard cut to.
+Cut 3: She moves the phone two centimetres closer to her nose and holds it there
+Hard cut to.
+Cut 4: The still comes alive with a very slow push in toward the nose tip, four percent closer across the shot; the face stays completely still and nothing else moves
+Hard cut to.
+Cut 5: The still comes alive with the tiniest handheld drift, as if the hand holding the phone were breathing; the skin itself does not move at all
+Hard cut to.
+Cut 6: The still comes alive as the handheld macro drifts a few millimetres and the focus settles onto the filament tip, sharpening it
+Hard cut to.
+Cut 7: She tilts the curled pore strip a few degrees toward the window so the light crosses its glue side
+Hard cut to.
+Cut 8: She lifts both fingertips off her nose and the pressed skin stays red where they were
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 31 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: She rotates her fingertip about fifteen degrees so the light slides along the bevelled edge and the translucency reads
+Hard cut to.
+Cut 2: Her two fingertips press the patch wing down onto the nostril and stay there, the skin dimpling slightly under them
+Hard cut to.
+Cut 3: Her shoulder and ribcage rise and fall once with a slow sleeping breath
+Hard cut to.
+Cut 4: Her fingers peel the patch wing back another two centimetres, very slowly, the material bending but not tearing
+Hard cut to.
+Cut 5: Her fingers turn the used patch about twenty degrees against the window so the backlight moves through it and the white plugs stand out
+Hard cut to.
+Cut 6: The still comes alive with a slow pull back of about ten percent, opening out from the pore to a little more of the nose
+Hard cut to.
+Cut 7: The still comes alive with a very slow push in toward the two boxes; the boxes, the sachet and the patch stay completely still on the marble
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 5 y 6 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 13 y 14 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · Bea a cámara, la nariz por delante
 
@@ -508,10 +766,12 @@ Duración total de las 15 tomas animadas: 59 s de material para un anuncio de 45
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, selfie at arm's length. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt. Her face fills the frame, nose nearest the lens: enlarged pores on both nose wings, grey-brown sebaceous filament plugs in each, vellus hair on the upper lip, a thin red capillary at the nostril crease, oily sheen on the T-zone. She looks into the lens and tips her nose toward it. Day bathroom, white subway tile, chrome tap, soft north-facing window light from the left, 10 a.m. Very shallow depth of field, focus exactly on the nose pores, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, selfie at arm's length. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt. Her face fills the frame, nose nearest the lens: enlarged pores on both nose wings, grey-brown sebaceous filament plugs in each, vellus hair on the upper lip, a thin red capillary at the nostril crease, oily sheen on the T-zone. She looks into the lens and tips her nose toward it. Day bathroom, white subway tile, chrome tap, soft north-facing window light from the left, 10 a.m. Very shallow depth of field, focus exactly on the nose pores, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -596,10 +856,12 @@ The still comes alive with a very slow push in toward the nose tip, four percent
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge. The frame holds two centimetres of skin on the side of the nose bridge: dozens of enlarged pores in rows, each with a grey-brown sebaceous filament plug standing a fraction above the skin, one pore stretched wider than the rest, colourless vellus hairs lying flat, a thin red capillary across the top corner, uneven beige and pink tone, a film of sebum between the pores. The skin stays still. Day bathroom, window light raking from the left, 10 a.m. Paper-thin depth of field, focus exactly on the central pore, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge. The frame holds two centimetres of skin on the side of the nose bridge: dozens of enlarged pores in rows, each with a grey-brown sebaceous filament plug standing a fraction above the skin, one pore stretched wider than the rest, colourless vellus hairs lying flat, a thin red capillary across the top corner, uneven beige and pink tone, a film of sebum between the pores. The skin stays still. Day bathroom, window light raking from the left, 10 a.m. Paper-thin depth of field, focus exactly on the central pore, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -616,12 +878,14 @@ The still comes alive with the tiniest handheld drift, as if the hand holding th
 
 **Qué se ve.** Macro extremo aún más cerca: un único poro de la aleta izquierda ampliado hasta el tamaño de una moneda. El tapón de filamento gris-marrón lo llena y asoma un poco por la boca del poro, con la punta más oscura por la oxidación. El borde del cráter está rosado y levantado, la piel de alrededor tiene manchas beige y rojas, dos pelillos cruzan el cuadro y la grasa brilla en los pliegues.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge. The frame holds one single pore on the left nose wing, magnified to the size of a coin: a grey-brown sebaceous filament plug fills it and rises slightly out of the opening, its tip darker where the air oxidised it, the crater rim pink and raised, surrounding skin rough with beige and red patches, two fine vellus hairs crossing, sebum shining in the creases. The skin stays still. Day bathroom, window light raking from the left, 10 a.m. Paper-thin depth of field, focus exactly on the filament tip, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge. The frame holds one single pore on the left nose wing, magnified to the size of a coin: a grey-brown sebaceous filament plug fills it and rises slightly out of the opening, its tip darker where the air oxidised it, the crater rim pink and raised, surrounding skin rough with beige and red patches, two fine vellus hairs crossing, sebum shining in the creases. The skin stays still. Day bathroom, window light raking from the left, 10 a.m. Paper-thin depth of field, focus exactly on the filament tip, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -682,12 +946,14 @@ The still comes alive: she lifts both fingertips off her nose and the pressed sk
 
 **Qué se ve.** Macro extremo del parche NOCTA recién sacado del sobre, apoyado en la yema del índice: lóbulo central y dos alas curvas, 60 mm de ancho, hidrocoloide traslúcido mate y ligeramente lechoso, con el borde biselado de medio milímetro cogiendo la luz y alguna burbujita de aire dentro. Se ven las crestas de la huella dactilar a través del material. Detrás, desenfocados, la caja de cartón crema mate y el sobrecito. Baño de noche.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja; consecuencias de la luz de noche; 1 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A butterfly-shaped hydrocolloid nose patch, sixty millimetres wide, rests on the pad of an index finger: one central lobe, two curved wings, translucent matte and slightly milky, its half-millimetre bevelled edge catching the light, a few air bubbles trapped inside, the fingerprint ridges visible through it. A woman's hand, short unpainted nails, grey ribbed sleeve; a cream matte cardboard box and a small cream sachet out of focus behind. She holds the patch steady. Night bathroom, hard ceiling light from above, 11.30 p.m. Paper-thin depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A butterfly-shaped hydrocolloid nose patch, sixty millimetres wide, rests on the pad of an index finger: one central lobe, two curved wings, translucent matte and slightly milky, its half-millimetre bevelled edge catching the light, a few air bubbles trapped inside, the fingerprint ridges visible through it. A woman's hand, short unpainted nails, grey ribbed sleeve; a cream matte cardboard box and a small cream sachet out of focus behind. She holds the patch steady. Night bathroom, hard ceiling light from above, 11.30 p.m. Paper-thin depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -706,10 +972,12 @@ The still comes alive: she rotates her fingertip about fifteen degrees so the li
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close-up of the middle of a face from slightly below. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt. A translucent matte butterfly-shaped hydrocolloid patch is already on her nose, central lobe from mid-bridge to tip, two wings wrapped around the nostrils; her pores and the mole show through the film. Two fingertips press the left wing down and hold. Night bathroom, white subway tile, hard ceiling light from above, 11.30 p.m., shadows under her eyes. Very shallow depth of field, focus exactly on the patch edge at the nostril, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, close-up of the middle of a face from slightly below. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt. A translucent matte butterfly-shaped hydrocolloid patch is already on her nose, central lobe from mid-bridge to tip, two wings wrapped around the nostrils; her pores and the mole show through the film. Two fingertips press the left wing down and hold. Night bathroom, white subway tile, hard ceiling light from above, 11.30 p.m., shadows under her eyes. Very shallow depth of field, focus exactly on the patch edge at the nostril, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 5 s):**
@@ -728,10 +996,12 @@ The still comes alive: her two fingertips press the patch wing down onto the nos
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from above, at a bed's edge. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt, asleep on her side on a creased white sheet, cheek squashed into the pillow, claw clip loosened, lips parted. The translucent matte butterfly patch sits on her nose, wings around the nostrils, a faint milky cloud starting in its centre; chin pimples and the mole catch the light. She breathes slowly. Night bedroom, warm bedside lamp from the right, the rest of the room nearly dark. Shallow depth of field, focus exactly on the patch, slight handheld motion blur, heavy natural digital sensor noise in the shadows. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo from above, at a bed's edge. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt, asleep on her side on a creased white sheet, cheek squashed into the pillow, claw clip loosened, lips parted. The translucent matte butterfly patch sits on her nose, wings around the nostrils, a faint milky cloud starting in its centre; chin pimples and the mole catch the light. She breathes slowly. Night bedroom, warm bedside lamp from the right, the rest of the room nearly dark. Shallow depth of field, focus exactly on the patch, slight handheld motion blur, heavy natural digital sensor noise in the shadows. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 5 s):**
@@ -748,12 +1018,14 @@ The still comes alive: her shoulder and ribcage rise and fall once with a slow s
 
 **Qué se ve.** Mañana, luz de ventana lateral limpia. Primer plano del centro de la cara, con el pelo más despeinado y la marca de la almohada en la mejilla. El pulgar y el índice han levantado un ala del parche del orificio izquierdo y tiran despacio: la parte levantada está blanca opaca por zonas, con puntitos blancos y amarillentos donde estaban los poros. La piel de debajo se ve pálida y algo húmeda.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close-up of the middle of a face. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt, hair messier, a pillow crease on her cheek. Her thumb and index finger have lifted one wing of the butterfly patch off the left nostril and are peeling it back slowly; the lifted part has gone opaque white in patches, with small white and yellowish dots where the pores were. The skin underneath is pale and damp. She peels, slow. Morning window light, clean and lateral from the left. Very shallow depth of field, focus exactly on the lifting edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, close-up of the middle of a face. Bea, an ordinary 24-year-old Spaniard, light brown hair in a matte black claw clip, thick eyebrows, a mole under her left cheekbone, gold studs, two healing chin pimples, grey ribbed t-shirt, hair messier, a pillow crease on her cheek. Her thumb and index finger have lifted one wing of the butterfly patch off the left nostril and are peeling it back slowly; the lifted part has gone opaque white in patches, with small white and yellowish dots where the pores were. The skin underneath is pale and damp. She peels, slow. Morning window light, clean and lateral from the left. Very shallow depth of field, focus exactly on the lifting edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 5 s):**
@@ -770,12 +1042,14 @@ The still comes alive: her fingers peel the patch wing back another two centimet
 
 **Qué se ve.** Macro extremo del parche usado sujeto entre el índice y el pulgar contra la ventana, a contraluz, con la luz atravesándolo. La película traslúcida se ha vuelto blanca opaca en islas irregulares y decenas de tapones blancos y amarillentos en relieve destacan como puntitos con el centro oscuro, dibujando el mapa de dónde estaban los poros, más densos en el lóbulo central. El borde biselado está curvado y un ala tiene una huella dactilar. Detrás, desenfocados, el alféizar y los tejados grises.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A used butterfly-shaped hydrocolloid patch held between finger and thumb against a bright window, backlit so light passes through it. The translucent film has turned opaque white in uneven islands, and dozens of small raised white and yellowish plugs stand out as dark-cored dots mapping where the pores were, thickest along the central lobe; the bevelled edge is curled and one wing carries a fingerprint. Out of focus behind: the windowsill and grey rooftops. She holds it up to the light. Morning window light, lateral and clean. Paper-thin depth of field, focus exactly on the white plugs, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A used butterfly-shaped hydrocolloid patch held between finger and thumb against a bright window, backlit so light passes through it. The translucent film has turned opaque white in uneven islands, and dozens of small raised white and yellowish plugs stand out as dark-cored dots mapping where the pores were, thickest along the central lobe; the bevelled edge is curled and one wing carries a fingerprint. Out of focus behind: the windowsill and grey rooftops. She holds it up to the light. Morning window light, lateral and clean. Paper-thin depth of field, focus exactly on the white plugs, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -792,12 +1066,14 @@ The still comes alive: her fingers turn the used patch about twenty degrees agai
 
 **Qué se ve.** Macro extremo exactamente del mismo trozo de piel que la toma 5: los mismos dos centímetros del lateral del puente, mismo ángulo. Los poros siguen ahí, pero vacíos y menos profundos, sin los tapones gris-marrón, con las bocas rosa pálido y algo húmedas. Queda un poco de brillo de hidrocoloide en dos pliegues, el mismo capilar rojo en la esquina superior, los mismos pelillos tumbados y una escamita seca. Luz de mañana lateral.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge, the same two centimetres of nose-bridge skin as before. The pores are still there but empty and shallower, the grey-brown plugs gone, the openings pale pink and slightly damp; a little residual hydrocolloid shine in two creases, the same red capillary across the top corner, the same vellus hairs lying flat, tone still uneven beige and pink, one dry flake left behind. The skin stays still. Morning window light, clean and lateral from the left, same angle as before. Paper-thin depth of field, focus exactly on the central pore, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The same woman's nose, matte black claw clip and grey ribbed collar at the frame edge, the same two centimetres of nose-bridge skin as before. The pores are still there but empty and shallower, the grey-brown plugs gone, the openings pale pink and slightly damp; a little residual hydrocolloid shine in two creases, the same red capillary across the top corner, the same vellus hairs lying flat, tone still uneven beige and pink, one dry flake left behind. The skin stays still. Morning window light, clean and lateral from the left, same angle as before. Paper-thin depth of field, focus exactly on the central pore, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -814,12 +1090,14 @@ The still comes alive with a slow pull back of about ten percent, opening out fr
 
 **Qué se ve.** Vista cenital de tres cuartos sobre la mesa de mármol crema. Dos cajas de cartón crema mate idénticas, una tumbada y otra apoyada encima, con las esquinas algo golpeadas de uso, un sobrecito crema al lado y un parche traslúcido asomando medio fuera del sobre con el borde biselado cogiendo la luz. Grano fino del cartón, una huella en la caja de arriba, una mota de polvo en el mármol y las vetas de la piedra en diagonal. Una mano sale de cuadro, desenfocada.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a table. Two identical cream matte cardboard boxes on a cream marble surface, one flat and one leaning against it, corners slightly knocked from handling, a small cream sachet beside them and one translucent butterfly patch lying half out of the sachet, its bevelled edge catching the light. Fine paper grain on the cardboard, a fingerprint on the top box, a speck of dust on the marble, stone veins running diagonally. A hand pulls back out of frame, out of focus at the edge. Soft window light from the left, short shadows. Shallow depth of field, focus exactly on the front box's top edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a table. Two identical cream matte cardboard boxes on a cream marble surface, one flat and one leaning against it, corners slightly knocked from handling, a small cream sachet beside them and one translucent butterfly patch lying half out of the sachet, its bevelled edge catching the light. Fine paper grain on the cardboard, a fingerprint on the top box, a speck of dust on the marble, stone veins running diagonally. A hand pulls back out of frame, out of focus at the edge. Soft window light from the left, short shadows. Shallow depth of field, focus exactly on the front box's top edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -858,8 +1136,76 @@ The still comes alive with a very slow push in toward the two boxes; the boxes, 
 
 **Orden de montaje.** Montaje lineal 1→15, 41 segundos exactos. Bloque 1 (0-6 s, gancho): tomas 1, 2 y 3, dos segundos cada una; la voz «¿Por qué vuelven a los tres días de apretarlos? Porque no son suciedad: son grasa que fabrica tu piel» arranca sobre la toma 1 y la palabra «grasa» debe caer encima del macro de la toma 3. La toma 2 es la variante A/B: en el corte alternativo se intercambia con la 1 y no se usan las dos. Bloque 2 (6-13 s): toma 4 (3 s) y toma 5 (4 s), con la animación 2D del poro de Canva superpuesta o intercalada entre ambas; la voz «No se eliminan. Se vacían. Y se vuelven a llenar» va sobre la 4 y la pregunta «cómo vaciarlos cada noche» sobre la 5. Bloque 3 (13-19 s): tomas 6 y 7, tres segundos cada una, corte seco entre ellas para que se note el salto noche→mañana; la voz nombra el ciclo justo en ese corte. Bloque 4 (19-27 s): toma 8 (3 s), toma 9 (3 s) y toma 10 (2 s); «absorbe la grasa desde dentro del poro mientras duermes» empieza en la 8 y «en vez de arrancarte la piel como las tiras» cae sobre la 10. Bloque 5 (27-35 s): toma 11 (3 s), toma 12 (3 s) y toma 13 (2 s); «por la mañana lo ves en el parche» sobre la 11, «todo eso estaba dentro» exactamente sobre el contraluz de la 12, que es el plano de prueba y el que no se puede acortar, y «a las tres semanas casi no se notan» sobre la 13. Bloque 6 (35-41 s): toma 14 (3 s) y toma 15 (3 s); la captura real de la web con la garantía subrayada se superpone sobre la toma 14 como picture-in-picture o corte de un segundo robado a esa toma, y la voz del precio y el envío termina sobre la 15. Los subtítulos de los seis rótulos del guion se añaden encima en edición: ninguna imagen los lleva dibujados.
 
+> A 13 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 22 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: She exhales once and her shoulders drop, eyes staying on the lens
+Hard cut to.
+Cut 2: She turns her head a few degrees toward the mirror, eyes staying on the lens
+Hard cut to.
+Cut 3: Only her breathing moves the skin, a single slow nostril flare
+Hard cut to.
+Cut 4: The skin lifts and settles once with a single shallow breath, the empty crater holding its shape
+Hard cut to.
+Cut 5: A faint sheen creeps across the skin as the plug sits flush in the pore, nothing else moving
+Hard cut to.
+Cut 6: Her two fingers press in once and release, the blanched skin flushing back to colour
+Hard cut to.
+Cut 7: The skin moves faintly with one slow breath while the pink pressure marks sit unchanged
+Hard cut to.
+Cut 8: Her fingertip tilts a few degrees and the bevelled edge of the patch catches the light
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 19 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: Both index fingers press down on the patch wings and hold, the sealed edge flattening against the skin
+Hard cut to.
+Cut 2: She lowers her eyelids and breathes out once, the patch sitting still on her nose
+Hard cut to.
+Cut 3: Her fingers peel one wing of the patch slowly away from the nose, the film stretching a little
+Hard cut to.
+Cut 4: Her fingers tilt the used patch a few degrees against the window and the backlight moves through the translucent edges
+Hard cut to.
+Cut 5: Only a single slow breath moves the skin, the emptied pores holding still
+Hard cut to.
+Cut 6: The soft window light shifts slightly across the cardboard as a cloud passes, the boxes themselves completely still
+Hard cut to.
+Cut 7: She nods once, holding the two boxes steady at chest height, eyes on the lens
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 3 y 4 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 4 y 5 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 7 y 8 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 12 y 13 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · la pregunta a cámara
 
@@ -913,10 +1259,12 @@ The image comes alive: she turns her head a few degrees toward the mirror, eyes 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the frame filled by the nose and the skin from eyebrow to upper lip of Marisol, 43, dark brown hair worn loose falling into the top corner of the frame. Dozens of enlarged pores across the bridge and wings, each holding a grey-brown sebaceous filament plug standing slightly proud of the skin, fine vellus hair catching the light, thin red capillaries at the nostril crease, uneven skin tone, a light sheen along the bridge. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the frame filled by the nose and the skin from eyebrow to upper lip of Marisol, 43, dark brown hair worn loose falling into the top corner of the frame. Dozens of enlarged pores across the bridge and wings, each holding a grey-brown sebaceous filament plug standing slightly proud of the skin, fine vellus hair catching the light, thin red capillaries at the nostril crease, uneven skin tone, a light sheen along the bridge. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -933,12 +1281,14 @@ The image comes alive: only her breathing moves the skin, a single slow nostril 
 
 **Qué se ve.** Macro extremo de un único poro de la aleta izquierda, recién vaciado: cráter abierto, borde algo rojo, sin tapón dentro. Luz dura de plafón, de noche. Es el fotograma real sobre el que monta la animación 2D.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a single pore on the left wing of a 43-year-old Spanish woman's nose filling most of the frame, surrounding skin out of focus. The pore is an open empty crater with a faintly reddened rim and no plug inside, neighbouring pores still holding grey-brown filaments, fine vellus hairs crossing the frame, tiny flakes of dry skin at the edge of the crater, a thin sheen on the ridge. The skin is still and taut. Hard overhead ceiling light in a white subway-tile bathroom at 23:30, small hard shadow inside the crater. Very shallow depth of field, focus exactly on the rim of the empty pore, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a single pore on the left wing of a 43-year-old Spanish woman's nose filling most of the frame, surrounding skin out of focus. The pore is an open empty crater with a faintly reddened rim and no plug inside, neighbouring pores still holding grey-brown filaments, fine vellus hairs crossing the frame, tiny flakes of dry skin at the edge of the crater, a thin sheen on the ridge. The skin is still and taut. Hard overhead ceiling light in a white subway-tile bathroom at 23:30, small hard shadow inside the crater. Very shallow depth of field, focus exactly on the rim of the empty pore, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -957,10 +1307,12 @@ The image comes alive: the skin lifts and settles once with a single shallow bre
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the same single pore on the left wing of a 43-year-old Spanish woman's nose filling the frame, identical angle and distance as before. The crater is now filled flush by a grey-brown sebaceous filament plug with a slightly darker oxidised tip, an oily sheen spreading across the surrounding skin, neighbouring pores fuller, the same fine vellus hairs crossing the frame, the redness of the rim gone. The skin is still. Soft north-facing window light from the left in a white subway-tile bathroom at 10:00, softer shadows than the night frame. Very shallow depth of field, focus exactly on the head of the plug, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the same single pore on the left wing of a 43-year-old Spanish woman's nose filling the frame, identical angle and distance as before. The crater is now filled flush by a grey-brown sebaceous filament plug with a slightly darker oxidised tip, an oily sheen spreading across the surrounding skin, neighbouring pores fuller, the same fine vellus hairs crossing the frame, the redness of the rim gone. The skin is still. Soft north-facing window light from the left in a white subway-tile bathroom at 10:00, softer shadows than the night frame. Very shallow depth of field, focus exactly on the head of the plug, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -979,10 +1331,12 @@ The image comes alive: a faint sheen creeps across the skin as the plug sits flu
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close three-quarter framing from forehead to chin. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, pressing both index fingers either side of her nose wing, short unpainted nails, knuckles slightly dry. The skin blanches white around the nail edges and reddens just beyond, enlarged pores stretched open under the pressure, thin red capillaries in the nostril crease, sheen on the forehead. She squeezes and squints. Hard overhead ceiling light in a white subway-tile bathroom at 23:30, shadows under her eyes and under the nose. Very shallow depth of field, focus exactly on her fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, close three-quarter framing from forehead to chin. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, pressing both index fingers either side of her nose wing, short unpainted nails, knuckles slightly dry. The skin blanches white around the nail edges and reddens just beyond, enlarged pores stretched open under the pressure, thin red capillaries in the nostril crease, sheen on the forehead. She squeezes and squints. Hard overhead ceiling light in a white subway-tile bathroom at 23:30, shadows under her eyes and under the nose. Very shallow depth of field, focus exactly on her fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1001,10 +1355,12 @@ The image comes alive: her two fingers press in once and release, the blanched s
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the nose and cheeks of Marisol, 43, filling the frame, a strand of her loose dark brown hair crossing the top corner. Two fading pink pressure marks either side of the left wing, the skin around them slightly swollen, and the dark filament plugs already back inside the same pores, a few tiny dry flakes where the skin was pinched, thin red capillaries, uneven skin tone, a fresh sheen along the bridge. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pressure marks, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the nose and cheeks of Marisol, 43, filling the frame, a strand of her loose dark brown hair crossing the top corner. Two fading pink pressure marks either side of the left wing, the skin around them slightly swollen, and the dark filament plugs already back inside the same pores, a few tiny dry flakes where the skin was pinched, thin red capillaries, uneven skin tone, a fresh sheen along the bridge. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pressure marks, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1021,12 +1377,14 @@ The image comes alive: the skin moves faintly with one slow breath while the pin
 
 **Qué se ve.** Macro del parche mariposa sobre la yema del índice de Marisol, de noche: se ve el grosor de medio milímetro, el borde biselado y lo traslúcido que es. El sobrecito crema abierto al lado.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja; consecuencias de la luz de noche; 1 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a translucent matte hydrocolloid butterfly-shaped nose patch resting on the index fingertip of a 43-year-old woman with short unpainted nails and dry knuckles, the patch 60 mm wide with a central lobe and two wings, its 0.55 mm thickness and bevelled edge catching a thin specular highlight, the fingerprint ridges faintly readable through the film. A plain cream matte single sachet lies open on the white basin behind, out of focus. Her navy t-shirt sleeve blurred at the frame edge. Hard overhead ceiling light in a white subway-tile bathroom at 23:30. Very shallow depth of field, focus exactly on the bevelled edge of the patch, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a translucent matte hydrocolloid butterfly-shaped nose patch resting on the index fingertip of a 43-year-old woman with short unpainted nails and dry knuckles, the patch 60 mm wide with a central lobe and two wings, its 0.55 mm thickness and bevelled edge catching a thin specular highlight, the fingerprint ridges faintly readable through the film. A plain cream matte single sachet lies open on the white basin behind, out of focus. Her navy t-shirt sleeve blurred at the frame edge. Hard overhead ceiling light in a white subway-tile bathroom at 23:30. Very shallow depth of field, focus exactly on the bevelled edge of the patch, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1043,12 +1401,14 @@ The image comes alive: her fingertip tilts a few degrees and the bevelled edge o
 
 **Qué se ve.** Las dos manos de Marisol colocando el parche sobre el puente y presionando las alas contra las aletas. Toalla blanca colgada al fondo. Noche.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close framing from her eyebrows to her chin. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, pressing a translucent matte hydrocolloid film across the bridge and wings of her clean dry nose with the pads of both index fingers, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges sealed flat against the skin. Nasolabial folds, fine vellus hair on the upper lip, thin capillaries visible beside the sealed edge. She presses and holds. Hard overhead ceiling light, white subway tile, white towel hanging behind, 23:30. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, close framing from her eyebrows to her chin. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, pressing a translucent matte hydrocolloid film across the bridge and wings of her clean dry nose with the pads of both index fingers, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges sealed flat against the skin. Nasolabial folds, fine vellus hair on the upper lip, thin capillaries visible beside the sealed edge. She presses and holds. Hard overhead ceiling light, white subway tile, white towel hanging behind, 23:30. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1067,10 +1427,12 @@ The image comes alive: both index fingers press down on the patch wings and hold
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, three-quarter profile from shoulder to crown. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt. A translucent matte hydrocolloid film clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed against the skin. Nasolabial fold, fine lines at the eye corner, sun spot on the cheekbone, shine on the forehead outside the patch. She lowers her eyes, calm, about to go to bed. Hard overhead ceiling light, white subway tile, 23:30, shadow under the brow. Very shallow depth of field, focus exactly on the patch on the bridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, three-quarter profile from shoulder to crown. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt. A translucent matte hydrocolloid film clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed against the skin. Nasolabial fold, fine lines at the eye corner, sun spot on the cheekbone, shine on the forehead outside the patch. She lowers her eyes, calm, about to go to bed. Hard overhead ceiling light, white subway tile, 23:30, shadow under the brow. Very shallow depth of field, focus exactly on the patch on the bridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1087,12 +1449,14 @@ The image comes alive: she lowers her eyelids and breathes out once, the patch s
 
 **Qué se ve.** Mañana, luz de ventana: los dedos levantan una esquina del parche usado, que ya está blanco por zonas y todavía pegado en el otro lóbulo. Piel de debajo sin rojez.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close framing from her eyes to her upper lip. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, lifting one wing of the hydrocolloid patch away from her nose with thumb and index finger, the film stretching slightly as it peels. The patch is now opaque white in blotches with small pale-yellow dots where the pores were, still translucent at the edges, the other lobe still sealed to the bridge. The skin revealed underneath is calm, not red, pores visible but emptier. Soft north-facing window light from the left, white subway tile, 08:00. Very shallow depth of field, focus exactly on the peeling edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, close framing from her eyes to her upper lip. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, lifting one wing of the hydrocolloid patch away from her nose with thumb and index finger, the film stretching slightly as it peels. The patch is now opaque white in blotches with small pale-yellow dots where the pores were, still translucent at the edges, the other lobe still sealed to the bridge. The skin revealed underneath is calm, not red, pores visible but emptier. Soft north-facing window light from the left, white subway tile, 08:00. Very shallow depth of field, focus exactly on the peeling edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1109,12 +1473,14 @@ The image comes alive: her fingers peel one wing of the patch slowly away from t
 
 **Qué se ve.** El parche usado sujeto contra la ventana: se ve blanco opaco por zonas con decenas de puntitos blancos y amarillentos, traslúcido por los bordes. Sin cara, solo dedos y luz.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a used butterfly-shaped hydrocolloid nose patch held up against a bright window by the thumb and index finger of a 43-year-old woman with short unpainted nails, backlit. The film is opaque white in blotches with dozens of small pale-yellow and white dots where the pores were, still translucent at the bevelled edges so the window light passes through, a slight curl at one wing, a faint fingerprint smudge on the surface. Clean side light from a north-facing window at 08:00, white subway tile out of focus behind. Very shallow depth of field, focus exactly on the yellow dots in the central lobe, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, a used butterfly-shaped hydrocolloid nose patch held up against a bright window by the thumb and index finger of a 43-year-old woman with short unpainted nails, backlit. The film is opaque white in blotches with dozens of small pale-yellow and white dots where the pores were, still translucent at the bevelled edges so the window light passes through, a slight curl at one wing, a faint fingerprint smudge on the surface. Clean side light from a north-facing window at 08:00, white subway tile out of focus behind. Very shallow depth of field, focus exactly on the yellow dots in the central lobe, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1133,10 +1499,12 @@ The image comes alive: her fingers tilt the used patch a few degrees against the
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the frame filled by the nose and skin from eyebrow to upper lip of Marisol, 43, dark brown hair worn loose falling into the top corner, identical angle and distance to the earlier macro. The pores are still visible but emptied, the grey-brown plugs gone or much paler, a couple of pores on the right wing still faintly filled, less sheen along the bridge, the same thin red capillaries at the nostril crease, the same fine vellus hair, uneven skin tone unchanged. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, the frame filled by the nose and skin from eyebrow to upper lip of Marisol, 43, dark brown hair worn loose falling into the top corner, identical angle and distance to the earlier macro. The pores are still visible but emptied, the grey-brown plugs gone or much paler, a couple of pores on the right wing still faintly filled, less sheen along the bridge, the same thin red capillaries at the nostril crease, the same fine vellus hair, uneven skin tone unchanged. She holds still and breathes. Soft north-facing window light from the left, white subway-tile bathroom, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1155,10 +1523,12 @@ The image comes alive: only a single slow breath moves the skin, the emptied por
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close product shot from slightly above. Two plain cream matte cardboard boxes of the same small size on a cream marble table, one standing upright and one lying flat in front of it, a single cream matte sachet leaning against the standing box, the cardboard showing a faint uncoated grain and one soft dent on the top corner. Short soft shadows to the right, a few dust specks on the marble, a faint veining line running under the boxes. Nothing else on the table. Soft window light from the left, midday. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the frame edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, close product shot from slightly above. Two plain cream matte cardboard boxes of the same small size on a cream marble table, one standing upright and one lying flat in front of it, a single cream matte sachet leaning against the standing box, the cardboard showing a faint uncoated grain and one soft dent on the top corner. Short soft shadows to the right, a few dust specks on the marble, a faint veining line running under the boxes. Nothing else on the table. Soft window light from the left, midday. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the frame edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1177,10 +1547,12 @@ The image comes alive: the soft window light shifts slightly across the cardboar
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, chest-up at arm's length, matching the opening framing. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, holding two plain cream matte cardboard boxes stacked in one hand at chest height, her short unpainted nails and dry knuckles visible against the cardboard. Nasolabial folds, fine lines at the outer eye corners, sun spot on the right cheekbone, pores on the nose now emptied, a light sheen on the forehead. She looks into the lens and nods once, mouth relaxed. Soft north-facing window light from the left, white subway-tile bathroom, chrome tap behind, 10:00. Very shallow depth of field, focus exactly on her eyes, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, chest-up at arm's length, matching the opening framing. Marisol, 43, dark brown shoulder-length hair worn loose with grey strands at the left temple, small silver hoop earrings, plain navy crew-neck t-shirt, holding two plain cream matte cardboard boxes stacked in one hand at chest height, her short unpainted nails and dry knuckles visible against the cardboard. Nasolabial folds, fine lines at the outer eye corners, sun spot on the right cheekbone, pores on the nose now emptied, a light sheen on the forehead. She looks into the lens and nods once, mouth relaxed. Soft north-facing window light from the left, white subway-tile bathroom, chrome tap behind, 10:00. Very shallow depth of field, focus exactly on her eyes, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1217,8 +1589,74 @@ The image comes alive: she nods once, holding the two boxes steady at chest heig
 
 **Orden de montaje.** Montaje lineal 1→15, sin saltos, total 40 s exactos. Bloque 0-6 s (gancho): tomas 1 (2 s), 2 (2 s) y 3 (2 s) — la voz «La mayoría de las mujeres cree que esto son puntos negros. No lo son. Y quitarlos así lo empeora.» arranca en el fotograma 1 sin silencio previo; «No lo son» cae justo en el corte a la toma 2 y «lo empeora» sobre la toma 3. El rótulo «La mayoría se equivoca» va grande sobre las tomas 1-2. Para el test A/B se sustituyen SOLO las tomas 1-2 por las variantes de gancho (identidad / orden / pregunta) y el resto del montaje no se toca. Bloque 6-12 s (tres errores): tomas 4, 5 y 6, 2 s cada una, cortes secos sin transición, una frase por toma («Apretar los ensancha» / «Las tiras se llevan la capa de arriba» / «Exfoliar a diario cabrea a tu piel»); la cruz roja aparece en el segundo 1 de cada toma, nunca en la imagen generada. Bloque 12-18 s (reencuadre): tomas 7 (3 s) y 8 (3 s); la voz nombra «filamentos sebáceos» sobre la toma 7 y «se rellena cada día» sobre la 8, que es el macro más cerrado; el rótulo «FILAMENTOS = grasa que se rellena» entra con el corte a la 7. Bloque 18-26 s (mecanismo): tomas 9 (4 s) y 10 (4 s); «absorbe la grasa desde dentro del poro» sobre el parche en la mano y «mientras duermes, en vez de arrancarte la piel» sobre la colocación de noche; el rótulo «Absorbe. No arranca.» entra en el corte a la toma 10. Bloque 26-34 s (prueba): tomas 11 (3 s), 12 (3 s) y 13 (2 s); «Mira el antes y el después» sobre la retirada, la frase se calla durante la toma 12 para que el parche usado respire en silencio dos segundos, y «La nariz me dura limpia días, no horas» cierra sobre la toma 13; el rótulo «Días, no horas» entra con la 13. Bloque 34-40 s (CTA): tomas 14 (3 s) y 15 (3 s); «Y si no te convence, te devolvemos el dinero» sobre el packshot con el rótulo «Si no se pega, te lo cambiamos · 60 días», y «Pack de 2 cajas, 29,90 €, envío gratis desde España» sobre el cierre de Marisol, con el precio en pantalla los últimos 2 s. Toda la voz se graba aparte y se monta encima: los vídeos van con el audio apagado.
 
+> A 10 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 18 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: She keeps talking to the lens and her fingertips slide two centimetres down the side of her nose, one single movement
+Hard cut to.
+Cut 2: She turns her chin a few degrees toward the lens while her hand finishes lowering out of frame, one single movement
+Hard cut to.
+Cut 3: Her fingertip slides slowly from the bridge to the tip of her nose, one single continuous movement, the skin dragging very slightly under it
+Hard cut to.
+Cut 4: The two fingernails press harder and then release, the blanched white skin flushing back to red, one single movement
+Hard cut to.
+Cut 5: She pulls the paper strip a little further off her nose and her eyes squeeze shut, one single movement
+Hard cut to.
+Cut 6: Her three fingertips make one small circular rub across the nose, dragging the white granules over the skin, a single movement
+Hard cut to.
+Cut 7: The nose breathes, lifting the skin about a millimetre, and the oily sheen shifts across the bridge, one single movement
+Hard cut to.
+Cut 8: The oil film on the skin creeps very slightly and one plug catches a moving highlight as the hand holding the phone drifts
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 22 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: She tilts the patch a few degrees between her fingers and the highlight travels along its bevelled edge, one single movement
+Hard cut to.
+Cut 2: Both index fingertips press down on the patch and hold, the skin around the edge flattening slightly, one single movement
+Hard cut to.
+Cut 3: She peels the patch a centimetre further off her nose, the film stretching slowly, one single movement
+Hard cut to.
+Cut 4: She rotates the used patch a few degrees against the window light and the white blotches shift from dull to bright, one single movement
+Hard cut to.
+Cut 5: The nose breathes once, lifting the skin about a millimetre, matching the earlier shot exactly
+Hard cut to.
+Cut 6: The framing drifts a few millimetres to the left as the phone is held by hand, the short shadow shifting slightly
+Hard cut to.
+Cut 7: She lifts the two boxes two centimetres toward the lens while finishing her sentence, one single movement
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 7 y 8 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 8 y 9 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · la mano en la nariz, a cámara
 
@@ -1294,10 +1732,12 @@ The still image comes to life: her fingertip slides slowly from the bridge to th
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. Two short unpainted fingernails press either side of a pore on the wing of a nose, skin blanched white under the nail edges and turning red a millimetre away. Heavy skin texture: enlarged stretched pores, grey-brown sebaceous filament plugs, two pores already widened into small craters, thin red broken capillaries, fine vellus hair, uneven skin tone, oily sheen. Skin of a 43-year-old woman, no makeup. White subway tile bathroom out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pressed pore, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. Two short unpainted fingernails press either side of a pore on the wing of a nose, skin blanched white under the nail edges and turning red a millimetre away. Heavy skin texture: enlarged stretched pores, grey-brown sebaceous filament plugs, two pores already widened into small craters, thin red broken capillaries, fine vellus hair, uneven skin tone, oily sheen. Skin of a 43-year-old woman, no makeup. White subway tile bathroom out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pressed pore, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1360,10 +1800,12 @@ The still image comes to life: her three fingertips make one small circular rub 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The whole nose of a 43-year-old woman fills the frame, seen straight on from just below, mouth and eyes cropped out. Dozens of enlarged pores across the bridge and wings, each holding a grey-brown sebaceous filament plug that sits slightly proud of the skin, a wet oily sheen along the bridge, thin red capillaries at the nostril crease, fine pale vellus hair catching the light, uneven skin tone with a faint yellow cast on the tip. No makeup. White subway tile bathroom far out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. The whole nose of a 43-year-old woman fills the frame, seen straight on from just below, mouth and eyes cropped out. Dozens of enlarged pores across the bridge and wings, each holding a grey-brown sebaceous filament plug that sits slightly proud of the skin, a wet oily sheen along the bridge, thin red capillaries at the nostril crease, fine pale vellus hair catching the light, uneven skin tone with a faint yellow cast on the tip. No makeup. White subway tile bathroom far out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1382,10 +1824,12 @@ The still image comes to life: the nose breathes, lifting the skin about a milli
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, so close that only two or three pores fill the frame. Human nose skin, 43-year-old woman, no makeup. Each pore is a widened funnel holding a sebaceous filament plug, dark grey only at the very tip and pale yellow deeper down, one plug sitting a fraction above the skin surface, tiny rim of dead skin around the opening, fine pale vellus hairs crossing the frame, a thin film of oil pooling in the skin folds, one broken red capillary running diagonally. Soft north-facing window light from the left, 10:00, white subway tile bathroom completely out of focus. Very shallow depth of field, focus exactly on the central plug, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, so close that only two or three pores fill the frame. Human nose skin, 43-year-old woman, no makeup. Each pore is a widened funnel holding a sebaceous filament plug, dark grey only at the very tip and pale yellow deeper down, one plug sitting a fraction above the skin surface, tiny rim of dead skin around the opening, fine pale vellus hairs crossing the frame, a thin film of oil pooling in the skin folds, one broken red capillary running diagonally. Soft north-facing window light from the left, 10:00, white subway tile bathroom completely out of focus. Very shallow depth of field, focus exactly on the central plug, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1402,12 +1846,14 @@ The still image comes to life: the oil film on the skin creeps very slightly and
 
 **Qué se ve.** Macro del parche NOCTA recién sacado del sobrecito crema, sujeto entre el pulgar y el índice de Marisol: mariposa traslúcida, borde biselado, 0,55 mm de grosor, casi invisible salvo por el velo mate. El sobre crema apoyado abajo.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; cláusula de fidelidad de la caja; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A translucent matte hydrocolloid patch shaped like a butterfly, one central lobe and two wings, 60 mm wide, held at its edge between the thumb and index finger of a 43-year-old woman with short unpainted nails; its bevelled edge catches a thin specular highlight and the 0.55 mm thickness is visible in cross section, the film faintly hazy rather than clear. Her fingertip skin shows fine ridges, a hangnail and visible pores. A plain matte cream paper sachet rests out of focus below. Same bathroom, chrome tap behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16. A translucent matte hydrocolloid patch shaped like a butterfly, one central lobe and two wings, 60 mm wide, held at its edge between the thumb and index finger of a 43-year-old woman with short unpainted nails; its bevelled edge catches a thin specular highlight and the 0.55 mm thickness is visible in cross section, the film faintly hazy rather than clear. Her fingertip skin shows fine ridges, a hangnail and visible pores. A plain matte cream paper sachet rests out of focus below. Same bathroom, chrome tap behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -1426,10 +1872,12 @@ The still image comes to life: she tilts the patch a few degrees between her fin
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close framing on the face from eyebrows to chin. Same 43-year-old Spanish woman, dark brown hair loose over the right shoulder, small silver hoop earrings, plain navy blue cotton t-shirt, no makeup, a white towel over her shoulder, tired shadows under her eyes. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed. Both index fingertips press on it. Skin matte and clean, expression lines, deep nasolabial folds, sun spot on the right cheekbone. Same white subway tile bathroom, hard ceiling light from above, 23:30. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, close framing on the face from eyebrows to chin. Same 43-year-old Spanish woman, dark brown hair loose over the right shoulder, small silver hoop earrings, plain navy blue cotton t-shirt, no makeup, a white towel over her shoulder, tired shadows under her eyes. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed. Both index fingertips press on it. Skin matte and clean, expression lines, deep nasolabial folds, sun spot on the right cheekbone. Same white subway tile bathroom, hard ceiling light from above, 23:30. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -1446,12 +1894,14 @@ The still image comes to life: both index fingertips press down on the patch and
 
 **Qué se ve.** De vuelta a la luz de ventana. Marisol levanta despacio una esquina del parche, que ya está blanco opaco por zonas. Debajo asoma la piel de la nariz.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close framing on the nose and mouth. Same 43-year-old Spanish woman, dark brown hair loose, small silver hoop earrings, plain navy blue cotton t-shirt, no makeup. Her thumb and index finger lift one wing of the hydrocolloid patch slowly off the side of her nose; the patch is now opaque white in blotches with small pale-yellow dots where the pores were, still translucent at its bevelled edges, stretching very slightly as it peels. The skin revealed underneath is faintly imprinted, not red. Expression lines, deep nasolabial folds, fine vellus hair. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the lifting edge of the patch, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, close framing on the nose and mouth. Same 43-year-old Spanish woman, dark brown hair loose, small silver hoop earrings, plain navy blue cotton t-shirt, no makeup. Her thumb and index finger lift one wing of the hydrocolloid patch slowly off the side of her nose; the patch is now opaque white in blotches with small pale-yellow dots where the pores were, still translucent at its bevelled edges, stretching very slightly as it peels. The skin revealed underneath is faintly imprinted, not red. Expression lines, deep nasolabial folds, fine vellus hair. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the lifting edge of the patch, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1468,12 +1918,14 @@ The still image comes to life: she peels the patch a centimetre further off her 
 
 **Qué se ve.** Marisol sostiene el parche usado contra la ventana del baño. A contraluz se ven las zonas blancas opacas y los puntitos amarillentos, uno por cada poro. Es el plano más importante del anuncio.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close framing, a used butterfly-shaped hydrocolloid patch held up against a window between the thumb and index finger of a 43-year-old woman, short unpainted nails, navy blue cotton t-shirt sleeve just in frame. Backlit, the patch reads as opaque white in irregular blotches across the central lobe with dozens of small pale-yellow dots where the pores were, still translucent and grey at the bevelled edges, one faint fingerprint smudge on the film. Window ledge and white subway tile edge out of focus, clean side light from a morning window, 10:00. Very shallow depth of field, focus exactly on the pale-yellow dots, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. Vertical 9:16 handheld iPhone photo, close framing, a used butterfly-shaped hydrocolloid patch held up against a window between the thumb and index finger of a 43-year-old woman, short unpainted nails, navy blue cotton t-shirt sleeve just in frame. Backlit, the patch reads as opaque white in irregular blotches across the central lobe with dozens of small pale-yellow dots where the pores were, still translucent and grey at the bevelled edges, one faint fingerprint smudge on the film. Window ledge and white subway tile edge out of focus, clean side light from a morning window, 10:00. Very shallow depth of field, focus exactly on the pale-yellow dots, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1492,10 +1944,12 @@ The still image comes to life: she rotates the used patch a few degrees against 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, identical framing and distance to a previous shot: the whole nose of the same 43-year-old woman fills the frame, seen straight on from just below. The pores are still visible but empty, no grey-brown plugs standing proud, a couple of faint pink marks where the biggest ones were, the skin matte instead of oily, fine pale vellus hair, the same thin red capillaries at the nostril crease, the same uneven skin tone. No makeup. White subway tile bathroom far out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, identical framing and distance to a previous shot: the whole nose of the same 43-year-old woman fills the frame, seen straight on from just below. The pores are still visible but empty, no grey-brown plugs standing proud, a couple of faint pink marks where the biggest ones were, the skin matte instead of oily, fine pale vellus hair, the same thin red capillaries at the nostril crease, the same uneven skin tone. No makeup. White subway tile bathroom far out of focus behind, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the left nose wing, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1514,10 +1968,12 @@ The still image comes to life: the nose breathes once, lifting the skin about a 
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, slightly from above, two matte cream cardboard boxes on a cream marble table, one standing and one lying in front of it, two small matte cream paper sachets fanned beside them. The cardboard shows its uncoated grain, one soft dent on the corner of the front box, a faint shadow line where the lid meets the body, no gloss and no foil. Cream marble with grey veining and a few dust specks. Soft window light from the left, short shadow to the right, 10:00. Very shallow depth of field, focus exactly on the front edge of the lying box, slight handheld motion blur at the edges, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, slightly from above, two matte cream cardboard boxes on a cream marble table, one standing and one lying in front of it, two small matte cream paper sachets fanned beside them. The cardboard shows its uncoated grain, one soft dent on the corner of the front box, a faint shadow line where the lid meets the body, no gloss and no foil. Cream marble with grey veining and a few dust specks. Soft window light from the left, short shadow to the right, 10:00. Very shallow depth of field, focus exactly on the front edge of the lying box, slight handheld motion blur at the edges, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1536,10 +1992,12 @@ The still image comes to life: the framing drifts a few millimetres to the left 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, chest-up framing, a little wider than the opening shot. Same 43-year-old Spanish woman, dark brown shoulder-length hair loose with grey strands at the left temple, small silver hoop earrings, plain navy blue cotton t-shirt slightly creased at the right shoulder, no makeup. She holds two matte cream cardboard boxes at chest height, tilted toward the lens, short unpainted nails on the cardboard, and talks to camera with a small closed-mouth smile. Expression lines around the eyes, deep nasolabial folds, sun spot on the right cheekbone, nose skin matte with visible but empty pores. White subway tile bathroom, white towel hanging right of frame, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on her eyes, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, chest-up framing, a little wider than the opening shot. Same 43-year-old Spanish woman, dark brown shoulder-length hair loose with grey strands at the left temple, small silver hoop earrings, plain navy blue cotton t-shirt slightly creased at the right shoulder, no makeup. She holds two matte cream cardboard boxes at chest height, tilted toward the lens, short unpainted nails on the cardboard, and talks to camera with a small closed-mouth smile. Expression lines around the eyes, deep nasolabial folds, sun spot on the right cheekbone, nose skin matte with visible but empty pores. White subway tile bathroom, white towel hanging right of frame, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on her eyes, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1589,8 +2047,76 @@ The still image comes to life: she lifts the two boxes two centimetres toward th
 
 Todos los subtítulos y rótulos se añaden después en el editor: ninguna de las 15 imágenes lleva letras.
 
+> A 14 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 21 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: Bea moves the macro-lens phone one or two centimetres closer to her nose and her eyes cross a little more following it
+Hard cut to.
+Cut 2: Bea tilts her head about five degrees so the light slides across the oily bridge of her nose
+Hard cut to.
+Cut 3: The magnified skin on the phone screen drifts slowly sideways as her hand shifts, staying sharp
+Hard cut to.
+Cut 4: The image comes alive with a very slow push in towards the densest field of pores, the grey filament plugs becoming a little larger in frame
+Hard cut to.
+Cut 5: The whole frame breathes with a barely perceptible handheld drift while the light on the oily ridges shifts a touch
+Hard cut to.
+Cut 6: Bea turns the torn strip a few degrees towards the window so its underside catches the light
+Hard cut to.
+Cut 7: Bea releases the pressure and lifts both fingertips a centimetre from the nose, the blanched skin flushing pink where they were
+Hard cut to.
+Cut 8: Bea lifts the hydrocolloid piece two centimetres clear of its shiny liner, the gel stretching slightly and settling
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 19 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: Bea's two fingertips slide outward from the centre of the patch towards the nostril wings, smoothing it down once
+Hard cut to.
+Cut 2: Only Bea's chest and shoulders rise and fall once with a slow sleeping breath
+Hard cut to.
+Cut 3: Bea pulls the wing two or three millimetres further, parallel to the skin, and the single boundary advances slowly; the peeled part rolls a touch more, the stuck part stays flat
+Hard cut to.
+Cut 4: Bea rotates the used patch a few degrees against the window so the backlight passes through it and the pale-yellow plugs stand out
+Hard cut to.
+Cut 5: The image comes alive with a very slow push in on the empty pores, the clean skin filling a little more of the frame
+Hard cut to.
+Cut 6: Bea lifts the two stacked boxes about five centimetres towards the camera and holds them there
+Hard cut to.
+Cut 7: The image comes alive with a very slow pull back from the boxes, revealing a little more of the cream marble around them
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 1 y 2 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 2 y 3 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 3 y 4 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 4 y 5 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · el móvil con lupa contra la nariz
 
@@ -1600,10 +2126,12 @@ Todos los subtítulos y rótulos se añaden después en el editor: ninguna de la
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. Bea, an ordinary 24-year-old Spanish woman framed chest-up, light brown hair twisted into a matte black claw clip with loose strands at the nape, grey ribbed cotton T-shirt, small gold stud earrings, a mole under her left cheekbone, no makeup. Her nose is oily: enlarged pores, grey-brown sebaceous filaments, vellus hair on the cheeks, thin red capillaries at the nostril creases. She holds a second phone with a small black clip-on macro lens three centimetres from her own nose, eyes crossing down towards it. White subway tile bathroom, chrome tap, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the lens barrel and nose tip, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo. Bea, an ordinary 24-year-old Spanish woman framed chest-up, light brown hair twisted into a matte black claw clip with loose strands at the nape, grey ribbed cotton T-shirt, small gold stud earrings, a mole under her left cheekbone, no makeup. Her nose is oily: enlarged pores, grey-brown sebaceous filaments, vellus hair on the cheeks, thin red capillaries at the nostril creases. She holds a second phone with a small black clip-on macro lens three centimetres from her own nose, eyes crossing down towards it. White subway tile bathroom, chrome tap, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the lens barrel and nose tip, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1622,10 +2150,12 @@ The still image comes alive: Bea moves the macro-lens phone one or two centimetr
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, tight three-quarter profile from her right, the frame filled by Bea's nose, cheek and the phone she holds. Light brown hair in a matte black claw clip, grey ribbed cotton T-shirt collar at the bottom edge, one gold stud earring, mole under her left cheekbone. Oily nose, enlarged pores along both sides of the bridge, grey-brown sebaceous filament plugs, vellus hair, uneven skin tone with faint redness on the cheek. The black clip-on macro lens hovers two centimetres from her nostril wing. White subway tile bathroom, chrome tap out of focus, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the pores of the nose, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo, tight three-quarter profile from her right, the frame filled by Bea's nose, cheek and the phone she holds. Light brown hair in a matte black claw clip, grey ribbed cotton T-shirt collar at the bottom edge, one gold stud earring, mole under her left cheekbone. Oily nose, enlarged pores along both sides of the bridge, grey-brown sebaceous filament plugs, vellus hair, uneven skin tone with faint redness on the cheek. The black clip-on macro lens hovers two centimetres from her nostril wing. White subway tile bathroom, chrome tap out of focus, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the pores of the nose, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1644,10 +2174,12 @@ The image comes alive: Bea tilts her head about five degrees so the light slides
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo taken over Bea's shoulder. Her hand holds the phone with the black clip-on macro lens; the bright screen fills most of the frame showing hugely magnified nose skin, dozens of open pores with grey-brown sebaceous filaments plugging them, vellus hairs, a sheen of oil. Behind the phone, out of focus, her light brown hair in the matte black claw clip and the grey ribbed cotton T-shirt shoulder against white subway tile. Short unpainted thumbnail, a freckle on the back of her hand. Soft north-facing window light from the left, ten in the morning, faint screen reflection on her fingers. Very shallow depth of field, focus exactly on the phone screen, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Vertical 9:16 handheld iPhone photo taken over Bea's shoulder. Her hand holds the phone with the black clip-on macro lens; the bright screen fills most of the frame showing hugely magnified nose skin, dozens of open pores with grey-brown sebaceous filaments plugging them, vellus hairs, a sheen of oil. Behind the phone, out of focus, her light brown hair in the matte black claw clip and the grey ribbed cotton T-shirt shoulder against white subway tile. Short unpainted thumbnail, a freckle on the back of her hand. Soft north-facing window light from the left, ten in the morning, faint screen reflection on her fingers. Very shallow depth of field, focus exactly on the phone screen, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1666,10 +2198,12 @@ The image comes alive: the magnified skin on the phone screen drifts slowly side
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The frame is filled by the side of the bridge and the tip of Bea's nose, skin only. Hundreds of enlarged pores in dense rows, each holding a grey-brown sebaceous filament plug standing slightly proud of the skin, a few darker at the mouth; fine colourless vellus hairs lying flat; thin red capillaries; an oily sheen along the ridge and a drier matte patch near the nostril crease; uneven skin tone. State 1, no patch anywhere. White subway tile bathroom, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the central pores, edges falling soft, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The frame is filled by the side of the bridge and the tip of Bea's nose, skin only. Hundreds of enlarged pores in dense rows, each holding a grey-brown sebaceous filament plug standing slightly proud of the skin, a few darker at the mouth; fine colourless vellus hairs lying flat; thin red capillaries; an oily sheen along the ridge and a drier matte patch near the nostril crease; uneven skin tone. State 1, no patch anywhere. White subway tile bathroom, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the central pores, edges falling soft, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1686,12 +2220,14 @@ The image comes alive with a very slow push in towards the densest field of pore
 
 **Qué se ve.** Macro al límite: cuatro o cinco poros llenan el cuadro. El central, ovalado, tiene el tapón gris-marrón sobresaliendo una fracción de milímetro, amarillento en la base. Un pelillo incoloro cruza en diagonal. Estado 1.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Only four or five pores of Bea's nose fill the whole frame. One central pore is stretched into an oval and its grey-brown sebaceous filament plug stands a fraction of a millimetre above the skin, yellow at the base; the neighbours are shallower, one almost empty, one with a flake of dry skin at its rim. A single colourless vellus hair crosses diagonally. Faint red capillary underneath, oily specular sheen on the ridges between pores. State 1, no patch. Soft north-facing window light from the left, ten in the morning. Extremely shallow depth of field, focus exactly on the central plug, everything else soft, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Only four or five pores of Bea's nose fill the whole frame. One central pore is stretched into an oval and its grey-brown sebaceous filament plug stands a fraction of a millimetre above the skin, yellow at the base; the neighbours are shallower, one almost empty, one with a flake of dry skin at its rim. A single colourless vellus hair crosses diagonally. Faint red capillary underneath, oily specular sheen on the ridges between pores. State 1, no patch. Soft north-facing window light from the left, ten in the morning. Extremely shallow depth of field, focus exactly on the central plug, everything else soft, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1730,12 +2266,14 @@ The image comes alive: Bea turns the torn strip a few degrees towards the window
 
 **Qué se ve.** Muy cerca del centro de la cara en el espejo: dos yemas apretando a los lados de la aleta, la piel blanqueada bajo los dedos y un anillo rosa furioso alrededor, capilares rotos y dos marcas rojas de haber apretado antes. Los poros siguen llenos. Estado 1.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, very close on the centre of Bea's face, eyebrows to upper lip, shot in the bathroom mirror. Light brown hair in the matte black claw clip, grey ribbed cotton T-shirt at the bottom edge, thick eyebrows, mole under her left cheekbone, no makeup. Two index fingertips press hard on either side of the nostril wing; the skin under them is blanched white with a ring of angry pink spreading around it, thin broken capillaries and two small raised red marks from earlier squeezing. The pores are still full of grey filaments. State 1, no patch. White subway tile, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the pressed skin, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Vertical 9:16 handheld iPhone photo, very close on the centre of Bea's face, eyebrows to upper lip, shot in the bathroom mirror. Light brown hair in the matte black claw clip, grey ribbed cotton T-shirt at the bottom edge, thick eyebrows, mole under her left cheekbone, no makeup. Two index fingertips press hard on either side of the nostril wing; the skin under them is blanched white with a ring of angry pink spreading around it, thin broken capillaries and two small raised red marks from earlier squeezing. The pores are still full of grey filaments. State 1, no patch. White subway tile, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the pressed skin, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1752,12 +2290,14 @@ The image comes alive: Bea releases the pressure and lifts both fingertips a cen
 
 **Qué se ve.** Macro extremo: los dedos de Bea levantan el parche de hidrocoloide traslúcido del liner brillante, que queda debajo reflejando. Se ve la mariposa completa, el grosor de 0,55 mm y el borde biselado con su línea de brillo. Baño de noche, luz de plafón.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Bea's thumb and index finger, short unpainted nails, hold a single piece of translucent matte hydrocolloid just lifted off its shiny transparent liner, which lies below still catching a bright reflection. The piece is 60 mm wide, 45 mm tall, shaped like a wide butterfly: one central lobe and two symmetrical 23 mm wings, a shallow 6 mm rounded notch on the lower edge between them, corners rounded, 0.55 mm thick with a bevelled edge catching a thin specular line. The gel is almost transparent with a matte veil, tacky, stretching a millimetre where she pinches it. Night bathroom, hard overhead ceiling light, half past eleven. Shallow depth of field, focus on the bevelled edge, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Bea's thumb and index finger, short unpainted nails, hold a single piece of translucent matte hydrocolloid just lifted off its shiny transparent liner, which lies below still catching a bright reflection. The piece is 60 mm wide, 45 mm tall, shaped like a wide butterfly: one central lobe and two symmetrical 23 mm wings, a shallow 6 mm rounded notch on the lower edge between them, corners rounded, 0.55 mm thick with a bevelled edge catching a thin specular line. The gel is almost transparent with a matte veil, tacky, stretching a millimetre where she pinches it. Night bathroom, hard overhead ceiling light, half past eleven. Shallow depth of field, focus on the bevelled edge, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1776,10 +2316,12 @@ The image comes alive: Bea lifts the hydrocolloid piece two centimetres clear of
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close on Bea's nose and cheeks in the bathroom mirror, freshly washed skin still matte and dry, a white towel over the shoulder of her grey ribbed cotton T-shirt, light brown hair in the matte black claw clip, mole under her left cheekbone. State 2, just applied: a translucent matte hydrocolloid film clearly visible across the bridge and wings of her nose, butterfly outline with a central lobe and two 23 mm wings folded over the nostril wings, bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, no wrinkles. Both index fingertips press outward from the centre. Night bathroom, hard overhead ceiling light, half past eleven. Shallow depth of field, focus on the patch edge, sensor noise. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, close on Bea's nose and cheeks in the bathroom mirror, freshly washed skin still matte and dry, a white towel over the shoulder of her grey ribbed cotton T-shirt, light brown hair in the matte black claw clip, mole under her left cheekbone. State 2, just applied: a translucent matte hydrocolloid film clearly visible across the bridge and wings of her nose, butterfly outline with a central lobe and two 23 mm wings folded over the nostril wings, bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, no wrinkles. Both index fingertips press outward from the centre. Night bathroom, hard overhead ceiling light, half past eleven. Shallow depth of field, focus on the patch edge, sensor noise. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1798,10 +2340,12 @@ The image comes alive: Bea's two fingertips slide outward from the centre of the
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from above and slightly to the side, Bea lying on her back on a crumpled white sheet, eyes closed, asleep, light brown hair still in the matte black claw clip with strands loose on the pillow, grey ribbed cotton T-shirt collar, mole under her left cheekbone, a pillow crease on the cheek, lips slightly parted. State 2: the translucent matte hydrocolloid patch clearly visible across the bridge and wings of her nose, butterfly outline, bevelled edge catching a thin line of lamp light, a shade lighter and less shiny than her skin, edges sealed. Warm bedside lamp on the right, the rest of the room in shadow, late night. Very shallow depth of field, focus exactly on the patch and nose, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo from above and slightly to the side, Bea lying on her back on a crumpled white sheet, eyes closed, asleep, light brown hair still in the matte black claw clip with strands loose on the pillow, grey ribbed cotton T-shirt collar, mole under her left cheekbone, a pillow crease on the cheek, lips slightly parted. State 2: the translucent matte hydrocolloid patch clearly visible across the bridge and wings of her nose, butterfly outline, bevelled edge catching a thin line of lamp light, a shade lighter and less shiny than her skin, edges sealed. Warm bedside lamp on the right, the rest of the room in shadow, late night. Very shallow depth of field, focus exactly on the patch and nose, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1818,12 +2362,14 @@ The image comes alive: only Bea's chest and shoulders rise and fall once with a 
 
 **Qué se ve.** Mañana, espejo del baño de día. Los dedos tiran del ala izquierda despacio y en paralelo a la piel: esa parte se ha enrollado sobre sí misma y cuelga blanda, blanca por dentro con puntitos amarillentos. Una sola frontera; a la derecha el parche sigue plano y pegado, blanco a manchas. La piel ya descubierta está limpia y rosada. Estado 4.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close on Bea's nose in the bathroom mirror next morning, light brown hair in the matte black claw clip, grey ribbed cotton T-shirt, mole under her left cheekbone, no makeup. State 4, half removed: thumb and index finger pull the left wing of the hydrocolloid slowly and parallel to the skin; that part has rolled softly on itself and hangs limp, opaque white inside with pale-yellow dots. There is one single boundary: everything right of it is still flat and sealed, white in blotches, translucent at the edges. The skin already uncovered is clean, faintly pink and matte, pores empty, no dark specks. Soft north-facing window light from the left, ten in the morning, white subway tile. Shallow depth of field, focus on the boundary, sensor noise. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, close on Bea's nose in the bathroom mirror next morning, light brown hair in the matte black claw clip, grey ribbed cotton T-shirt, mole under her left cheekbone, no makeup. State 4, half removed: thumb and index finger pull the left wing of the hydrocolloid slowly and parallel to the skin; that part has rolled softly on itself and hangs limp, opaque white inside with pale-yellow dots. There is one single boundary: everything right of it is still flat and sealed, white in blotches, translucent at the edges. The skin already uncovered is clean, faintly pink and matte, pores empty, no dark specks. Soft north-facing window light from the left, ten in the morning, white subway tile. Shallow depth of field, focus on the boundary, sensor noise. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1840,12 +2386,14 @@ The image comes alive: Bea pulls the wing two or three millimetres further, para
 
 **Qué se ve.** Bea sujeta el parche ya retirado a contraluz contra la ventana. Blando, algo abombado, enrollado por los bordes, con la memoria de la curva de la nariz. Blanco opaco a manchas, más denso donde estaban los lados del puente y la punta, con decenas de tapones amarillentos; el borde sigue traslúcido. Estado 5.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, Bea's thumb and index finger holding the fully removed hydrocolloid patch up against the bright window, backlit. State 5: the patch is off her face entirely, soft and slightly domed, curling at the edges, keeping the memory of the curve of her nose; the butterfly outline is intact, opaque white in blotches, densest where the bridge sides and tip were, dotted with dozens of small pale-yellow plugs pushed out of the pores, the rim still translucent and glassy. Short unpainted nails, grey ribbed cotton T-shirt cuff, light brown hair in the matte black claw clip blurred behind. Clean side window light, ten in the morning, windowsill and white subway tile out of focus. Shallow depth of field, focus exactly on the yellow plugs, sensor noise. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. Vertical 9:16 handheld iPhone photo, Bea's thumb and index finger holding the fully removed hydrocolloid patch up against the bright window, backlit. State 5: the patch is off her face entirely, soft and slightly domed, curling at the edges, keeping the memory of the curve of her nose; the butterfly outline is intact, opaque white in blotches, densest where the bridge sides and tip were, dotted with dozens of small pale-yellow plugs pushed out of the pores, the rim still translucent and glassy. Short unpainted nails, grey ribbed cotton T-shirt cuff, light brown hair in the matte black claw clip blurred behind. Clean side window light, ten in the morning, windowsill and white subway tile out of focus. Shallow depth of field, focus exactly on the yellow plugs, sensor noise. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1862,12 +2410,14 @@ The image comes alive: Bea rotates the used patch a few degrees against the wind
 
 **Qué se ve.** Macro extremo en el MISMO ángulo y distancia que la toma 4: los poros ahora se ven vacíos, abiertos pero limpios, sin filamentos grises. La piel algo rosada y mate por el adhesivo, con la marca tenue del borde del parche. Dos poros cerca de la aleta siguen medio llenos, para que sea honesto. Estado 5.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, framed on exactly the same side of the bridge and tip of Bea's nose as before, same angle and distance. State 5, the patch is gone: the pores are visibly empty, open but clean, no grey-brown filament plugs left, the skin faintly pink and matte from the adhesive, a soft tide line where the bevelled edge sat, fine vellus hairs, thin red capillaries. Two pores near the nostril crease are still shallowly filled, honest rather than perfect. White subway tile bathroom, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the empty pores, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, framed on exactly the same side of the bridge and tip of Bea's nose as before, same angle and distance. State 5, the patch is gone: the pores are visibly empty, open but clean, no grey-brown filament plugs left, the skin faintly pink and matte from the adhesive, a soft tide line where the bevelled edge sat, fine vellus hairs, thin red capillaries. Two pores near the nostril crease are still shallowly filled, honest rather than perfect. White subway tile bathroom, soft north-facing window light from the left, ten in the morning. Very shallow depth of field, focus exactly on the empty pores, natural digital sensor noise. Unretouched documentary realism, no skin smoothing. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -1886,10 +2436,12 @@ The image comes alive with a very slow push in on the empty pores, the clean ski
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, Bea framed chest-up facing the camera, calm and plain, holding two identical cream matte cardboard boxes stacked flat in one hand at chest height, their printed faces left blank. Light brown hair in the matte black claw clip with loose strands at the nape, grey ribbed cotton T-shirt, small gold stud earrings, mole under her left cheekbone, two healing spots on her chin, no makeup, nose now clean and matte with empty pores and a faint tide line. Vellus hair on her cheeks, thin capillaries at the nostrils. White subway tile bathroom, chrome tap, soft north-facing window light from the left, ten in the morning. Shallow depth of field, focus exactly on her face, the boxes slightly softer, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, Bea framed chest-up facing the camera, calm and plain, holding two identical cream matte cardboard boxes stacked flat in one hand at chest height, their printed faces left blank. Light brown hair in the matte black claw clip with loose strands at the nape, grey ribbed cotton T-shirt, small gold stud earrings, mole under her left cheekbone, two healing spots on her chin, no makeup, nose now clean and matte with empty pores and a faint tide line. Vellus hair on her cheeks, thin capillaries at the nostrils. White subway tile bathroom, chrome tap, soft north-facing window light from the left, ten in the morning. Shallow depth of field, focus exactly on her face, the boxes slightly softer, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1908,10 +2460,12 @@ The image comes alive: Bea lifts the two stacked boxes about five centimetres to
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream marble table top. Two identical cream matte cardboard boxes, their printed faces left blank, one lying flat and one standing leaned against it, plus a single small cream matte sachet placed in front, its serrated top edge visible. Tiny fibres and a hairline dent in the cardboard, one corner very slightly bumped, a faint crumb of dust on the marble, the natural grey-beige veining of the stone. No patch on show, no hands in frame. Soft window light from the left, short soft shadows, late morning. Shallow depth of field, focus exactly on the front edge of the standing box, the far corner of the table falling soft, natural digital sensor noise. Plain honest product snapshot, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream marble table top. Two identical cream matte cardboard boxes, their printed faces left blank, one lying flat and one standing leaned against it, plus a single small cream matte sachet placed in front, its serrated top edge visible. Tiny fibres and a hairline dent in the cardboard, one corner very slightly bumped, a faint crumb of dust on the marble, the natural grey-beige veining of the stone. No patch on show, no hands in frame. Soft window light from the left, short soft shadows, late morning. Shallow depth of field, focus exactly on the front edge of the standing box, the far corner of the table falling soft, natural digital sensor noise. Plain honest product snapshot, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -1957,8 +2511,75 @@ The image comes alive with a very slow pull back from the boxes, revealing a lit
 
 Nota de duraciones: los 15 clips suman 51 s generados frente a los 40 s del anuncio. Es deliberado: se generan con margen y se recortan por delante y por detrás en el montaje, que es donde se ajusta la sincronía con la voz. Los subtítulos ("Las tiras no sirven", "Pelusa vs grasa", "Solo la capa de arriba", "Absorbe. No arranca.", "Días, no horas", "Si no se pega, te lo cambiamos · 60 días") se añaden en edición sobre los bloques correspondientes: ninguna imagen del lote lleva letras.
 
+> A 11 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 25 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The man turns the pore strip a few degrees between his fingers towards the lens and nothing else moves
+Hard cut to.
+Cut 2: His index fingertip presses once along the strip on the nose and stops
+Hard cut to.
+Cut 3: His fingers keep peeling the strip off the nose in one continuous pull, the skin dragging with it, and he flinches slightly at the end
+Hard cut to.
+Cut 4: The fingertips tilt the used strip slowly so the raking window light travels across the lint and the torn hairs
+Hard cut to.
+Cut 5: The fingers rotate the used patch a few degrees against the window so the backlight moves through the white blotches and the yellow plugs
+Hard cut to.
+Cut 6: The hand moves once from the used strip to the patch and the fingertip stops beside it
+Hard cut to.
+Cut 7: The nose breathes once, the nostril wing widening a millimetre, while the raking light shifts slightly
+Hard cut to.
+Cut 8: He lowers his fingertip from the nose and lets his hand drop out of frame, lips closing
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 26 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The fingertips lift the hydrocolloid patch off its shiny liner in one slow continuous peel, the gel stretching a millimetre
+Hard cut to.
+Cut 2: The two fingertips slide once from the centre of the patch outwards over one wing and press it down
+Hard cut to.
+Cut 3: He blinks once and lowers his chin a few degrees, breathing out
+Hard cut to.
+Cut 4: The fingers keep pulling the wing of the patch sideways, parallel to the skin, and the peeled part rolls a little further on itself
+Hard cut to.
+Cut 5: The nose breathes once and the light shifts a hair across the clean pores
+Hard cut to.
+Cut 6: He lifts the two stacked boxes a few centimetres towards the lens and holds them there
+Hard cut to.
+Cut 7: A hand enters from the bottom edge, slides the clean patch on its liner one centimetre towards the boxes and withdraws
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 4 y 5 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 12 y 13 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 14 y 15 están en la misma banda de distancia (plano medio) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · la tira en la mano
 
@@ -2056,10 +2677,12 @@ The image comes to life: the fingertips tilt the used strip slowly so the raking
 
 **Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; regla de encuadre completo del parche; regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 5 (patch off, in the hand). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A used translucent matte hydrocolloid butterfly patch, 60 mm wide and 45 mm tall, one central lobe and two symmetrical wings 23 mm deep with a shallow rounded notch between them, corners rounded, 0.55 mm thick with a bevelled edge, pinched by one wing between thumb and index finger and raised against the window. The gel is opaque white in blotches with dozens of small pale-yellow plugs where the pores were, still translucent at the edges, soft, slightly domed, curling at one corner. Backlit by 10:00 window light from the left, white subway tile behind. Very shallow depth of field, focus exactly on the yellow plugs, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. State 5 (patch off, in the hand). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A used translucent matte hydrocolloid butterfly patch, 60 mm wide and 45 mm tall, one central lobe and two symmetrical wings 23 mm deep with a shallow rounded notch between them, corners rounded, 0.55 mm thick with a bevelled edge, pinched by one wing between thumb and index finger and raised against the window. The gel is opaque white in blotches with dozens of small pale-yellow plugs where the pores were, still translucent at the edges, soft, slightly domed, curling at one corner. Backlit by 10:00 window light from the left, white subway tile behind. Very shallow depth of field, focus exactly on the yellow plugs, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2078,10 +2701,12 @@ The image comes to life: the fingers rotate the used patch a few degrees against
 
 **Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 5 (patch off). Vertical 9:16 handheld iPhone photo from directly above, close in. Two objects lie side by side on the white ceramic rim of a bathroom sink, a few centimetres apart: on the left the used plain white pore strip, adhesive side up, grey lint, skin flakes and torn vellus hairs on it; on the right the used translucent matte hydrocolloid butterfly patch, central lobe and two 23 mm wings, bevelled edge, opaque white in blotches with pale-yellow plugs, edges still translucent and curling. A man's hand with short nails enters frame and points at the patch. White subway tile behind, 10:00 window light from the left, short soft shadows. Very shallow depth of field, focus exactly on both objects, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. State 5 (patch off). Vertical 9:16 handheld iPhone photo from directly above, close in. Two objects lie side by side on the white ceramic rim of a bathroom sink, a few centimetres apart: on the left the used plain white pore strip, adhesive side up, grey lint, skin flakes and torn vellus hairs on it; on the right the used translucent matte hydrocolloid butterfly patch, central lobe and two 23 mm wings, bevelled edge, opaque white in blotches with pale-yellow plugs, edges still translucent and curling. A man's hand with short nails enters frame and points at the patch. White subway tile behind, 10:00 window light from the left, short soft shadows. Very shallow depth of field, focus exactly on both objects, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2098,12 +2723,14 @@ The image comes to life: the hand moves once from the used strip to the patch an
 
 **Qué se ve.** Macro extremo del lateral del puente y un ala de la nariz justo después del tirón: piel rosa a manchas, una línea recta pálida donde estaba el borde de la tira, escamitas levantadas… y los poros SIGUEN llenos de filamentos gris-marrón.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 1 (no patch). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the side of the bridge and one nostril wing of the same 36-year-old Spanish man. The skin is freshly irritated from the strip: blotchy pink, a faint straight tide line where the strip edge sat, a few lifted skin flakes, fine red capillaries. The enlarged pores are still full, each one holding a grey-brown sebaceous filament plug standing slightly proud, and a greasy sheen remains on the tip. White subway tile bathroom, 10:00 window light from the left raking across the skin. Very shallow depth of field, focus exactly on the pores on the bridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. State 1 (no patch). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the side of the bridge and one nostril wing of the same 36-year-old Spanish man. The skin is freshly irritated from the strip: blotchy pink, a faint straight tide line where the strip edge sat, a few lifted skin flakes, fine red capillaries. The enlarged pores are still full, each one holding a grey-brown sebaceous filament plug standing slightly proud, and a greasy sheen remains on the tip. White subway tile bathroom, 10:00 window light from the left raking across the skin. Very shallow depth of field, focus exactly on the pores on the bridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2120,12 +2747,14 @@ The image comes to life: the nose breathes once, the nostril wing widening a mil
 
 **Qué se ve.** Plano medio de la clavícula a debajo de los ojos: Álex echa un poco la cabeza atrás y se toca el lateral de la nariz con la yema, con gesto de escozor. La nariz está enrojecida y a manchas, con una banda más clara donde pisaba el borde de la tira.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 1 (no patch). Vertical 9:16 handheld iPhone photo, framed from the collarbone to just under the eyes so the eyes are cropped out. The same 36-year-old Spanish man in the dark grey crew-neck t-shirt, three-day stubble, tips his head back a little and touches the side of his nose with one fingertip, wincing slightly, lips parted. The nose is reddened and blotchy after the strip, with a paler band where the strip edge sat, visible enlarged pores, vellus hair, red capillaries on the nostril wings, sheen on the tip. White subway tile bathroom, chrome tap behind, 10:00 window light from the left. Very shallow depth of field, focus exactly on the nose, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. State 1 (no patch). Vertical 9:16 handheld iPhone photo, framed from the collarbone to just under the eyes so the eyes are cropped out. The same 36-year-old Spanish man in the dark grey crew-neck t-shirt, three-day stubble, tips his head back a little and touches the side of his nose with one fingertip, wincing slightly, lips parted. The nose is reddened and blotchy after the strip, with a paler band where the strip edge sat, visible enlarged pores, vellus hair, red capillaries on the nostril wings, sheen on the tip. White subway tile bathroom, chrome tap behind, 10:00 window light from the left. Very shallow depth of field, focus exactly on the nose, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2142,12 +2771,14 @@ The image comes to life: he lowers his fingertip from the nose and lets his hand
 
 **Qué se ve.** Macro extremo de las yemas despegando el parche limpio de su liner transparente brillante: mariposa traslúcida mate de 60x45 mm, dos alas de 23 mm, muesca central, borde biselado con una línea fina de brillo, el gel se estira un milímetro. Baño de noche.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; regla de encuadre completo del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia; consecuencias de la luz de noche; 2 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 2 (patch clean, not yet applied). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A man's fingertips hold a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly: one central lobe and two symmetrical wings 23 mm deep, a shallow rounded 6 mm notch between the wings, corners rounded with a 2 mm radius, 0.55 mm thick with a bevelled edge catching one thin specular highlight; it peels off a shiny transparent liner and the gel stretches a millimetre. Short nails, a hangnail, fine hairs on the finger. Bathroom at 23:30, hard ceiling light from above, white subway tile. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. State 2 (patch clean, not yet applied). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A man's fingertips hold a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly: one central lobe and two symmetrical wings 23 mm deep, a shallow rounded 6 mm notch between the wings, corners rounded with a 2 mm radius, 0.55 mm thick with a bevelled edge catching one thin specular highlight; it peels off a shiny transparent liner and the gel stretches a millimetre. Short nails, a hangnail, fine hairs on the finger. Bathroom at 23:30, hard ceiling light from above, white subway tile. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2166,10 +2797,12 @@ The image comes to life: the fingertips lift the hydrocolloid patch off its shin
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 2 (patch just applied). Vertical 9:16 handheld iPhone photo, tight framing from the upper lip to the eyebrows, eyes cropped at the top edge. The same 36-year-old Spanish man, three-day stubble, dark grey crew-neck t-shirt, presses the translucent matte hydrocolloid butterfly patch onto his clean dry nose with two fingertips, pushing from the centre outwards; the film is clearly visible across bridge and wings, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the skin, edges sealing flat. Pores and grey-brown filaments still visible under the film. Bathroom at 23:30, hard ceiling light from above. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. State 2 (patch just applied). Vertical 9:16 handheld iPhone photo, tight framing from the upper lip to the eyebrows, eyes cropped at the top edge. The same 36-year-old Spanish man, three-day stubble, dark grey crew-neck t-shirt, presses the translucent matte hydrocolloid butterfly patch onto his clean dry nose with two fingertips, pushing from the centre outwards; the film is clearly visible across bridge and wings, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the skin, edges sealing flat. Pores and grey-brown filaments still visible under the film. Bathroom at 23:30, hard ceiling light from above. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2188,10 +2821,12 @@ The image comes to life: the two fingertips slide once from the centre of the pa
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** cláusula de fidelidad del parche; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 2 (patch just applied). Vertical 9:16 handheld iPhone photo, near profile from the right, framed from chin to hairline at arm's length. The same 36-year-old Spanish man, short dark hair, three-day stubble, small scar through the right eyebrow, dark grey crew-neck t-shirt, lowers his hands and looks down at the sink. The translucent matte hydrocolloid film is clearly visible across the bridge and wings of the nose, butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the skin, edges perfectly sealed, following the curve of the nose, no lifted corners. Bathroom at 23:30, hard ceiling light from above, white subway tile, shadows under the eyes. Very shallow depth of field, focus exactly on the patch outline, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. State 2 (patch just applied). Vertical 9:16 handheld iPhone photo, near profile from the right, framed from chin to hairline at arm's length. The same 36-year-old Spanish man, short dark hair, three-day stubble, small scar through the right eyebrow, dark grey crew-neck t-shirt, lowers his hands and looks down at the sink. The translucent matte hydrocolloid film is clearly visible across the bridge and wings of the nose, butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the skin, edges perfectly sealed, following the curve of the nose, no lifted corners. Bathroom at 23:30, hard ceiling light from above, white subway tile, shadows under the eyes. Very shallow depth of field, focus exactly on the patch outline, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2208,12 +2843,14 @@ The image comes to life: he blinks once and lowers his chin a few degrees, breat
 
 **Qué se ve.** Macro extremo de la nariz (estado 4): los dedos tiran del ala derecha en paralelo a la piel; la parte despegada se enrolla blanda y cuelga mostrando el gel blanco y los tapones amarillentos, el resto sigue plano y pegado. Una sola frontera. La piel que ya quedó al aire está limpia, mate y rosada.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; regla de encuadre completo del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares; 2 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 4 (half removed). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the nose of the same 36-year-old Spanish man. Thumb and index finger hold the right wing of the hydrocolloid patch and pull it slowly sideways, parallel to the skin; the peeled part is rolled soft on itself and hangs, opaque white with pale-yellow plugs on its inner face, while the rest stays flat and sealed on the bridge. One single boundary between the two parts, the skin lifting a little there. The skin already uncovered is clean, matte, faintly pink, pores empty, no dark dots. White subway tile bathroom, 10:00 window light from the left. Very shallow depth of field, focus exactly on that boundary, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. State 4 (half removed). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the nose of the same 36-year-old Spanish man. Thumb and index finger hold the right wing of the hydrocolloid patch and pull it slowly sideways, parallel to the skin; the peeled part is rolled soft on itself and hangs, opaque white with pale-yellow plugs on its inner face, while the rest stays flat and sealed on the bridge. One single boundary between the two parts, the skin lifting a little there. The skin already uncovered is clean, matte, faintly pink, pores empty, no dark dots. White subway tile bathroom, 10:00 window light from the left. Very shallow depth of field, focus exactly on that boundary, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 5 s):**
@@ -2230,12 +2867,14 @@ The image comes to life: the fingers keep pulling the wing of the patch sideways
 
 **Qué se ve.** El mismo macro exacto de la toma 7, misma luz y mismo encuadre, pero ahora los poros están abiertos y vacíos: nada de filamentos oscuros, piel mate y rosada uniforme, la marca tenue del borde del parche y cero rojez de tirón.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 1 (patch gone, nose clean). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, exactly the same framing, angle and distance as the earlier macro of the irritated bridge and nostril wing. The pores are open but empty, no grey-brown filament plugs, no dark dots, the skin matte and evenly pink with a faint tide line where the patch edge sat, vellus hair, fine red capillaries at the nostril crease, one small healing spot near the wing. No tearing redness. Same 36-year-old Spanish man, same white subway tile bathroom, 10:00 window light from the left raking the skin. Very shallow depth of field, focus exactly on the pores on the bridge, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. State 1 (patch gone, nose clean). Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, exactly the same framing, angle and distance as the earlier macro of the irritated bridge and nostril wing. The pores are open but empty, no grey-brown filament plugs, no dark dots, the skin matte and evenly pink with a faint tide line where the patch edge sat, vellus hair, fine red capillaries at the nostril crease, one small healing spot near the wing. No tearing redness. Same 36-year-old Spanish man, same white subway tile bathroom, 10:00 window light from the left raking the skin. Very shallow depth of field, focus exactly on the pores on the bridge, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2254,10 +2893,12 @@ The image comes to life: the nose breathes once and the light shifts a hair acro
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, framed from the waist to just under the eyes. The same 36-year-old Spanish man in the dark grey crew-neck t-shirt holds two identical matte cream carton boxes stacked in one hand at chest height, turning them slightly so the printed front faces away and stays unreadable; plain uncoated cardboard, soft corners, one small crease on the lower box, no gloss. His other hand rests on the sink. His nose is clean and matte. White subway tile bathroom, chrome tap behind, 10:00 window light from the left, short soft shadow on the tile. Very shallow depth of field, focus exactly on the front box and its cardboard grain, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, framed from the waist to just under the eyes. The same 36-year-old Spanish man in the dark grey crew-neck t-shirt holds two identical matte cream carton boxes stacked in one hand at chest height, turning them slightly so the printed front faces away and stays unreadable; plain uncoated cardboard, soft corners, one small crease on the lower box, no gloss. His other hand rests on the sink. His nose is clean and matte. White subway tile bathroom, chrome tap behind, 10:00 window light from the left, short soft shadow on the tile. Very shallow depth of field, focus exactly on the front box and its cardboard grain, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2274,12 +2915,14 @@ The image comes to life: he lifts the two stacked boxes a few centimetres toward
 
 **Qué se ve.** Cenital cerrado sobre mármol crema: las dos cajas crema tumbadas, una solapando a la otra con la cara impresa girada y desenfocada, un sobrecito crema al lado y un parche limpio sobre su liner brillante, con el borde biselado cogiendo un hilo de brillo.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo from directly above, close in on a cream marble table top. Two matte cream carton boxes lie flat, one slightly overlapping the other with its printed face turned away from the lens and out of focus, next to a small cream matte sachet and one clean translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, 60 mm wide, central lobe and two 23 mm wings, bevelled edge catching a thin specular highlight. Visible cardboard grain, one soft dent in a corner, faint marble veining and crumbs of dust. Soft window light from the left at 10:00, short shadows. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo from directly above, close in on a cream marble table top. Two matte cream carton boxes lie flat, one slightly overlapping the other with its printed face turned away from the lens and out of focus, next to a small cream matte sachet and one clean translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, 60 mm wide, central lobe and two 23 mm wings, bevelled edge catching a thin specular highlight. Visible cardboard grain, one soft dent in a corner, faint marble veining and crumbs of dust. Soft window light from the left at 10:00, short shadows. Very shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2328,8 +2971,75 @@ The image comes to life: a hand enters from the bottom edge, slides the clean pa
 
 Variantes A/B del gancho: se montan tres versiones cambiando solo los primeros 3 segundos (toma 1 con el rótulo orden, toma 2 con el rótulo dato, y una tercera abriendo por la toma 3 con el rótulo pregunta). El resto del anuncio es idéntico, así el test mide el gancho y no el anuncio.
 
+> A 10 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 18 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The two fingertips press in a little harder and the skin between them blanches further, nothing else moves
+Hard cut to.
+Cut 2: She releases the squeeze and the fingers lift a centimetre away from the nose, leaving two pale marks
+Hard cut to.
+Cut 3: The sebaceous plug in the central pore creeps a fraction further out of the skin as the pressure holds
+Hard cut to.
+Cut 4: Only a very slight breathing movement of the skin, the widened pore holding still in the centre of the frame
+Hard cut to.
+Cut 5: The nose moves a few millimetres with a quiet breath and the greasy sheen on the bridge shifts slightly
+Hard cut to.
+Cut 6: She exhales and the reddened nose rises and falls once, the pink crescent marks staying visible
+Hard cut to.
+Cut 7: The fingers peel the patch fully off the shiny liner and it hangs soft from their grip
+Hard cut to.
+Cut 8: The two fingertips slide outwards along the wings of the patch and press them down against the nostril wings, then stop
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 17 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: Only her slow sleeping breath moves, the shoulder rising and falling once under the navy t-shirt
+Hard cut to.
+Cut 2: She tilts her head two degrees towards the window and the light slides across the white blotches of the patch
+Hard cut to.
+Cut 3: The fingers pull the loose wing two centimetres further sideways and a little more clean skin appears at the boundary
+Hard cut to.
+Cut 4: The fingers rotate the used patch a few degrees against the window and the backlight passes through the translucent rim
+Hard cut to.
+Cut 5: The nose moves a few millimetres with a quiet breath, the empty pores holding still in focus
+Hard cut to.
+Cut 6: Nothing moves except the light, which shifts a fraction as a cloud passes the window
+Hard cut to.
+Cut 7: The hand lifts the two boxes three centimetres closer to the camera and stops
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 3 y 4 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 4 y 5 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 12 y 13 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · los dos dedos apretando
 
@@ -2383,10 +3093,12 @@ The image comes to life: she releases the squeeze and the fingers lift a centime
 
 **Referencias que hay que adjuntar:** ninguna
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The frame is filled by two centimetres of skin on the side of a nose tip, pushed into a ridge by two fingertips just outside the frame. One enlarged pore in the centre is under tension and its grey-brown sebaceous filament plug is pushed half out like a short soft thread; around it a dozen smaller pores, fine vellus hair, thin red capillaries, uneven skin tone, an oily sheen along the ridge. White subway tile bathroom, soft window light from the left, 10:00. Very shallow depth of field, focus exactly on the central pore, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The frame is filled by two centimetres of skin on the side of a nose tip, pushed into a ridge by two fingertips just outside the frame. One enlarged pore in the centre is under tension and its grey-brown sebaceous filament plug is pushed half out like a short soft thread; around it a dozen smaller pores, fine vellus hair, thin red capillaries, uneven skin tone, an oily sheen along the ridge. White subway tile bathroom, soft window light from the left, 10:00. Very shallow depth of field, focus exactly on the central pore, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2427,10 +3139,12 @@ The image comes to life: only a very slight breathing movement of the skin, the 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the left nostril wing and half the bridge of a 43-year-old woman's nose, seen at a slight three-quarter angle. Orange-peel texture with dozens of clearly enlarged pores, a dark grey-brown sebaceous filament plug inside most of them, a greasy sheen along the bridge, fine vellus hair catching the light, thin red capillaries near the crease of the nostril, uneven skin tone. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the nostril wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the left nostril wing and half the bridge of a 43-year-old woman's nose, seen at a slight three-quarter angle. Orange-peel texture with dozens of clearly enlarged pores, a dark grey-brown sebaceous filament plug inside most of them, a greasy sheen along the bridge, fine vellus hair catching the light, thin red capillaries near the crease of the nostril, uneven skin tone. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the nostril wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2469,12 +3183,14 @@ The image comes to life: she exhales and the reddened nose rises and falls once,
 
 **Qué se ve.** Baño de noche, 23:30. Macro de la mariposa hidrocoloide traslúcida levantada del liner brillante entre pulgar e índice; el gel se estira un par de milímetros y el borde biselado coge una línea fina de brillo del plafón.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A 43-year-old woman's thumb and index finger, short unpainted nails, thin silver ring on the ring finger, lift a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly with one central lobe and two symmetrical wings 23 mm deep, off a shiny transparent plastic liner; the gel stretches two millimetres and the bevelled 0.55 mm edge catches a thin specular highlight. Visible fingerprints, dry knuckle skin, a hangnail. Same white subway tile bathroom, hard overhead ceiling light, 23:30. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A 43-year-old woman's thumb and index finger, short unpainted nails, thin silver ring on the ring finger, lift a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly with one central lobe and two symmetrical wings 23 mm deep, off a shiny transparent plastic liner; the gel stretches two millimetres and the bevelled 0.55 mm edge catches a thin specular highlight. Visible fingerprints, dry knuckle skin, a hangnail. Same white subway tile bathroom, hard overhead ceiling light, 23:30. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2493,10 +3209,12 @@ The image comes to life: the fingers peel the patch fully off the shiny liner an
 
 **Referencias que hay que adjuntar:** `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette and proportions. Vertical 9:16 handheld iPhone photo, crop from the eyebrows to the chin of a 43-year-old Spanish woman with shoulder-length dark brown hair tucked behind the right ear, grey hair at the left temple, small silver hoop earrings, navy crew-neck t-shirt, no makeup. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges sealed flat. Two fingertips press it outwards from the centre. Visible pores on the cheeks, nasolabial folds, a sun spot on the left cheekbone, tired shadows under the eyes. Same white subway tile bathroom, hard overhead ceiling light, 23:30. Shallow depth of field, focus exactly on the patch edge, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette and proportions. Vertical 9:16 handheld iPhone photo, crop from the eyebrows to the chin of a 43-year-old Spanish woman with shoulder-length dark brown hair tucked behind the right ear, grey hair at the left temple, small silver hoop earrings, navy crew-neck t-shirt, no makeup. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of her nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges sealed flat. Two fingertips press it outwards from the centre. Visible pores on the cheeks, nasolabial folds, a sun spot on the left cheekbone, tired shadows under the eyes. Same white subway tile bathroom, hard overhead ceiling light, 23:30. Shallow depth of field, focus exactly on the patch edge, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2513,7 +3231,9 @@ The image comes to life: the two fingertips slide outwards along the wings of th
 
 **Qué se ve.** Dormitorio de noche, 03:40. Marisol dormida de perfil sobre la almohada blanca arrugada, misma camiseta azul marino, el parche traslúcido visible en la nariz. Lámpara de mesilla cálida a la derecha, resto en penumbra, despertador desenfocado al fondo.
 
-**Referencias que hay que adjuntar:** `parche_puesto` — la foto real del parche colocado en la nariz; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_puesto` — la foto real del parche colocado en la nariz; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+
+**Reglas añadidas:** referencia lamina_parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
@@ -2557,12 +3277,14 @@ The image comes to life: she tilts her head two degrees towards the window and t
 
 **Qué se ve.** Pulgar e índice tiran del ala izquierda despacio y en paralelo a la piel. Esa parte cuelga enrollada y blanda; la otra mitad sigue plana y pegada. Una sola frontera. La piel que ya ha quedado al aire está limpia, rosada y mate.
 
-**Referencias que hay que adjuntar:** `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs. Vertical 9:16 handheld iPhone photo, close crop of the nose and mouth of a 43-year-old Spanish woman, navy crew-neck t-shirt, dark brown hair tucked behind the right ear, small silver hoop earrings, no makeup. Her thumb and index finger, short unpainted nails and a thin silver ring, pull the left wing of the hydrocolloid patch slowly sideways, parallel to the skin; the freed half has rolled over on itself and hangs soft and white, while the right half is still flat and sealed on the nose. There is a single boundary between the two halves. The skin already uncovered is clean, faintly pink and matte, with empty pores and no dark dots. White subway tile bathroom, soft window light from the left, 10:00. Shallow depth of field, focus exactly on the boundary, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The patch must be EXACTLY the product in the reference photographs. Vertical 9:16 handheld iPhone photo, close crop of the nose and mouth of a 43-year-old Spanish woman, navy crew-neck t-shirt, dark brown hair tucked behind the right ear, small silver hoop earrings, no makeup. Her thumb and index finger, short unpainted nails and a thin silver ring, pull the left wing of the hydrocolloid patch slowly sideways, parallel to the skin; the freed half has rolled over on itself and hangs soft and white, while the right half is still flat and sealed on the nose. There is a single boundary between the two halves. The skin already uncovered is clean, faintly pink and matte, with empty pores and no dark dots. White subway tile bathroom, soft window light from the left, 10:00. Shallow depth of field, focus exactly on the boundary, natural digital sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2579,12 +3301,14 @@ The image comes to life: the fingers pull the loose wing two centimetres further
 
 **Qué se ve.** El parche ya fuera, sujeto por un ala contra la ventana del baño. A contraluz se ven las manchas blancas densas y los tapones blanco-amarillentos que han salido de los poros; el parche conserva la curva de la nariz y se enrolla por los bordes. Nada de parche en la cara.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; regla de encuadre completo del parche; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same butterfly silhouette, same translucent matte material. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A used hydrocolloid patch is held by one wing between a woman's thumb and index finger, short unpainted nails, and lifted against a bathroom window; it is soft and slightly domed, still curved from the nose, the edges curling. Backlit, the material shows dense opaque white blotches and dozens of small pale-yellow plugs pulled out of the pores, with the rim still translucent. Fine dry skin on the knuckles behind it, white subway tile out of focus. Soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the yellow plugs, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. The patch must be EXACTLY the product in the reference photographs: same butterfly silhouette, same translucent matte material. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A used hydrocolloid patch is held by one wing between a woman's thumb and index finger, short unpainted nails, and lifted against a bathroom window; it is soft and slightly domed, still curved from the nose, the edges curling. Backlit, the material shows dense opaque white blotches and dozens of small pale-yellow plugs pulled out of the pores, with the rim still translucent. Fine dry skin on the knuckles behind it, white subway tile out of focus. Soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the yellow plugs, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2601,12 +3325,14 @@ The image comes to life: the fingers rotate the used patch a few degrees against
 
 **Qué se ve.** Clon exacto de la toma 5: misma ala de la nariz, mismo ángulo, misma luz de las 10:00. Ahora los poros están vacíos, sin puntos oscuros, la piel algo rosada y mate y con la marca tenue del borde del parche. Es la mitad derecha del split.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the left nostril wing and half the bridge of the same 43-year-old woman's nose, at the same slight three-quarter angle as the earlier macro. The pores are now empty and shallow with no dark filament plugs inside, the skin faintly pink and matte with no greasy sheen, a very faint line across the bridge where the edge of the patch sat, fine vellus hair, the same thin red capillaries near the nostril crease, the same uneven skin tone. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the nostril wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with the left nostril wing and half the bridge of the same 43-year-old woman's nose, at the same slight three-quarter angle as the earlier macro. The pores are now empty and shallow with no dark filament plugs inside, the skin faintly pink and matte with no greasy sheen, a very faint line across the bridge where the edge of the patch sat, fine vellus hair, the same thin red capillaries near the nostril crease, the same uneven skin tone. White subway tile bathroom, soft north-facing window light from the left, 10:00. Very shallow depth of field, focus exactly on the pores of the nostril wing, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2625,10 +3351,12 @@ The image comes to life: the nose moves a few millimetres with a quiet breath, t
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, slightly from above, of two matte cream cardboard boxes exactly as in the reference photograph of the product, one standing upright and one lying flat in front of it, with a single small matte cream sachet leaning against them. The cardboard shows its real uncoated grain, one soft dent on a corner and a faint fingerprint. They sit on a cream marble table with grey veining. Soft window light from the left, short natural shadow, mid morning. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the edges, natural digital sensor noise. Plain domestic setting, unretouched documentary realism, no gloss, no reflective surfaces added. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, slightly from above, of two matte cream cardboard boxes exactly as in the reference photograph of the product, one standing upright and one lying flat in front of it, with a single small matte cream sachet leaning against them. The cardboard shows its real uncoated grain, one soft dent on a corner and a faint fingerprint. They sit on a cream marble table with grey veining. Soft window light from the left, short natural shadow, mid morning. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the edges, natural digital sensor noise. Plain domestic setting, unretouched documentary realism, no gloss, no reflective surfaces added. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2647,10 +3375,12 @@ The image comes to life: nothing moves except the light, which shifts a fraction
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo of a 43-year-old woman's right hand, short unpainted nails, a thin silver ring on the ring finger, visible knuckle creases and one small old scar, the cuff of a navy crew-neck t-shirt at the edge of the frame, lifting two matte cream cardboard boxes exactly as in the reference photograph off a cream marble table and holding them towards the camera at chest distance. The cardboard grain and one softly dented corner are visible, the marble blurred behind. Soft window light from the left, short shadow, mid morning. Shallow depth of field, focus exactly on the front box, slight handheld motion blur, natural digital sensor noise. Plain domestic setting, no beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo of a 43-year-old woman's right hand, short unpainted nails, a thin silver ring on the ring finger, visible knuckle creases and one small old scar, the cuff of a navy crew-neck t-shirt at the edge of the frame, lifting two matte cream cardboard boxes exactly as in the reference photograph off a cream marble table and holding them towards the camera at chest distance. The cardboard grain and one softly dented corner are visible, the marble blurred behind. Soft window light from the left, short shadow, mid morning. Shallow depth of field, focus exactly on the front box, slight handheld motion blur, natural digital sensor noise. Plain domestic setting, no beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2688,8 +3418,75 @@ The image comes to life: the hand lifts the two boxes three centimetres closer t
 
 **Orden de montaje.** Montaje de 30 s, versión A. 0:00-0:03 — pantalla partida con las tomas 1 y 2 a la vez, la 1 recortada a la mitad izquierda del cuadro y la 2 a la derecha, línea de corte vertical limpia en el centro; entra la voz «Tira en el lado izquierdo, parche en el derecho. Ocho horas.» y el subtítulo grande «Tira vs parche. 8 horas.» arriba. 0:03-0:05 — corte a la toma 4 (reloj a las 23:00) con la palabra «Mira». 0:05-0:11 — pantalla partida otra vez con las tomas 5 y 6 aceleradas como time-lapse de la noche, la 5 a la izquierda y la 6 a la derecha; la voz arranca «La tira: roja y con pelusa. El parche: blanco de grasa y la piel lisa.» 0:11-0:12 — toma 7 (reloj a las 7:00), un solo golpe seco que cierra las ocho horas. 0:12-0:14 — tomas 8 y 9 en corte rápido alterno (tira fuera / parche fuera), cerrando con «Mismo poro, misma noche» sobre el final de la 9. 0:14-0:17 — tomas 10 y 11 seguidas, mismo tamaño de plano, el corte hace el trabajo; subtítulo «Días, no horas». 0:17-0:20 — toma 12, el parche usado a contraluz, sobre «Mira el antes y el después». 0:20-0:23 — toma 13, Álex a cámara con el parche en la mano, «La nariz me dura limpia días, no horas». 0:23-0:26 — toma 14, packshot del pack de 2, entra la voz de la garantía; encima se monta la grabación de pantalla de la ficha con la garantía subrayada (no es una imagen generada). 0:26-0:30 — toma 15, Álex con las dos cajas, subtítulo «Si no se pega, te lo cambiamos · 60 días» y el CTA del pack de 2 a 29,90 € con envío gratis en el aire de la derecha del encuadre. La voz se graba aparte y se monta encima: ningún clip lleva audio propio. Variante B del test A/B: se sustituyen los 3 primeros segundos por la toma 3 con el gancho «Mismo poro, misma noche. A ver cuál gana.» y el resto del montaje no cambia; variante C, la misma estructura con la locución en pregunta («¿Tira o parche? Lo probé en la misma nariz.»). Las tomas 1 y 2 quedan entonces como recurso de 0:03 a 0:05. Adaptación de la columna vertebral de la biblia: este guion no tiene «preparación» ni «colocación» separadas (la aplicación es el propio gancho) ni una sola «entrada del producto», así que esas tres tomas se han sustituido por los dos platos gemelos del time-lapse y por el segundo bodegón de reloj, y el «error» y su «consecuencia» son directamente la tira, tomas 8 y 10.
 
+> A 13 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 23 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: He presses the pore strip flat along his nose with two fingertips and lowers his hand
+Hard cut to.
+Cut 2: He lowers both hands away from his nose and holds still, blinking once
+Hard cut to.
+Cut 3: He lifts the hand holding the hydrocolloid patch a few centimetres closer to the lens
+Hard cut to.
+Cut 4: The clock's second hand ticks forward a few seconds while everything else stays still
+Hard cut to.
+Cut 5: His chest rises and falls once with a slow breath, the sheet shifting a centimetre
+Hard cut to.
+Cut 6: He breathes in once and his head settles a few millimetres deeper into the pillow
+Hard cut to.
+Cut 7: The second hand ticks forward while a faint shadow edge creeps a millimetre across the shelf
+Hard cut to.
+Cut 8: The fingers pull the stiff pore strip a centimetre further off the skin, the lint fibres swaying
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 24 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The fingers draw the patch two more centimetres parallel to the skin and the freed part rolls a little further onto itself
+Hard cut to.
+Cut 2: The nose shifts a couple of millimetres as he breathes and the single paper fibre trembles
+Hard cut to.
+Cut 3: The nose shifts a couple of millimetres with one quiet breath
+Hard cut to.
+Cut 4: The fingers tilt the used patch a few degrees so the backlight moves across the white blotches
+Hard cut to.
+Cut 5: He raises the used patch a few centimetres toward the lens while holding the camera's gaze
+Hard cut to.
+Cut 6: The hand-held camera drifts very slowly forward over the marble in a gentle push in
+Hard cut to.
+Cut 7: He lifts the two boxes a few centimetres toward the lens and holds them steady
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 8 y 9 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 9 y 10 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 10 y 11 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · plato izquierdo (la tira)
 
@@ -2699,10 +3496,12 @@ The image comes to life: the hand lifts the two boxes three centimetres closer t
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. State 1, no NOCTA patch anywhere. Chest-up, camera 50 cm away: a 36-year-old ordinary Spanish man, short dark hair with no product, three-day stubble, pale scar through the right eyebrow, plain dark grey cotton crew-neck t-shirt with a stretched collar. A plain white drugstore pore strip lies across the bridge and the left wing of his nose, still damp, faintly wrinkled at one corner. Enlarged pores on the cheeks, thin red capillaries beside the nostrils, vellus hair along the jaw, oily shine on the forehead. He presses the strip down with two fingertips. White subway-tile bathroom, chrome tap, hard ceiling light from directly overhead, 23:00, shadows under the eyes. Very shallow depth of field, focus exactly on the nose, slight handheld motion blur at the edges, natural sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo. State 1, no NOCTA patch anywhere. Chest-up, camera 50 cm away: a 36-year-old ordinary Spanish man, short dark hair with no product, three-day stubble, pale scar through the right eyebrow, plain dark grey cotton crew-neck t-shirt with a stretched collar. A plain white drugstore pore strip lies across the bridge and the left wing of his nose, still damp, faintly wrinkled at one corner. Enlarged pores on the cheeks, thin red capillaries beside the nostrils, vellus hair along the jaw, oily shine on the forehead. He presses the strip down with two fingertips. White subway-tile bathroom, chrome tap, hard ceiling light from directly overhead, 23:00, shadows under the eyes. Very shallow depth of field, focus exactly on the nose, slight handheld motion blur at the edges, natural sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2721,10 +3520,12 @@ The image comes alive: he presses the pore strip flat along his nose with two fi
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. State 2, patch just applied. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material; do not invent a different shape. Same chest-up framing and 50 cm distance as the previous frame: the same 36-year-old Spanish man, short dark hair, three-day stubble, pale scar through the right eyebrow, dark grey crew-neck t-shirt with a stretched collar. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of his nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed; dark sebaceous filaments still show through it. He lowers both hands. White subway-tile bathroom, hard overhead ceiling light, 23:00. Shallow depth of field, focus exactly on the nose, handheld blur at the edges, sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo. State 2, patch just applied. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material; do not invent a different shape. Same chest-up framing and 50 cm distance as the previous frame: the same 36-year-old Spanish man, short dark hair, three-day stubble, pale scar through the right eyebrow, dark grey crew-neck t-shirt with a stretched collar. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of his nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed; dark sebaceous filaments still show through it. He lowers both hands. White subway-tile bathroom, hard overhead ceiling light, 23:00. Shallow depth of field, focus exactly on the nose, handheld blur at the edges, sensor noise. No beauty retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2741,12 +3542,14 @@ The image comes alive: he lowers both hands away from his nose and holds still, 
 
 **Qué se ve.** Plano medio más cerrado y ligeramente en picado: Álex sostiene la tira de poros blanca despegada en la mano izquierda y el parche NOCTA sobre su liner transparente en la derecha, a la altura del pecho, la cara desenfocada detrás. Es el gancho alternativo para el test A/B («Mismo poro, misma noche»).
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** referencia parche_puesto; regla de encuadre completo del parche; física del despegado; regla de nariz limpia; referencia nariz_limpia; consecuencias de la luz de noche; 1 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, slightly high angle, camera 35 cm away. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. Two hands held at chest height: the left holds a plain white drugstore pore strip peeled off its backing, stiff and slightly curled; the right holds the translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, its bevelled edge catching a thin line of light. Short bitten nails, a few dark hairs on the knuckles, dry skin on one thumb. Behind and out of focus, a 36-year-old Spanish man, three-day stubble, dark grey crew-neck t-shirt. White subway-tile bathroom, hard overhead ceiling light, 23:00. Shallow depth of field, focus exactly on the two products, handheld blur, sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. Vertical 9:16 handheld iPhone photo, slightly high angle, camera 35 cm away. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. Two hands held at chest height: the left holds a plain white drugstore pore strip peeled off its backing, stiff and slightly curled; the right holds the translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, its bevelled edge catching a thin line of light. Short bitten nails, a few dark hairs on the knuckles, dry skin on one thumb. Behind and out of focus, a 36-year-old Spanish man, three-day stubble, dark grey crew-neck t-shirt. White subway-tile bathroom, hard overhead ceiling light, 23:00. Shallow depth of field, focus exactly on the two products, handheld blur, sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2765,10 +3568,12 @@ The image comes alive: he lifts the hand holding the hydrocolloid patch a few ce
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, camera 30 cm from a bathroom shelf. A small round alarm clock with a plain white face, thin black baton markers and no numerals, hands at eleven, a faint dust line on its chrome rim. Behind it the cream matte carton box from the reference photograph stands on its edge, its printed label exactly as in the reference; in front, an opened cream sachet with one torn corner. Water spots on the white subway tile behind, a chrome tap edge catching light. Hard ceiling light from directly overhead, 23:00, short hard shadows under the clock. Shallow depth of field, focus exactly on the clock hands, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, camera 30 cm from a bathroom shelf. A small round alarm clock with a plain white face, thin black baton markers and no numerals, hands at eleven, a faint dust line on its chrome rim. Behind it the cream matte carton box from the reference photograph stands on its edge, its printed label exactly as in the reference; in front, an opened cream sachet with one torn corner. Water spots on the white subway tile behind, a chrome tap edge catching light. Hard ceiling light from directly overhead, 23:00, short hard shadows under the clock. Shallow depth of field, focus exactly on the clock hands, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2831,10 +3636,12 @@ The image comes alive: he breathes in once and his head settles a few millimetre
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, camera 30 cm from the same bathroom shelf, identical angle to the night frame. The same small round alarm clock with a plain white face, thin baton markers and no numerals, hands now at seven, same dust line on the chrome rim. The same cream matte carton box from the reference photograph stands behind it, printed label exactly as in the reference; the torn cream sachet lies in front. White subway tile with the same water spots. Soft north-facing window light from the left at 07:30, long soft shadow falling to the right, the hard overhead light now off. Shallow depth of field, focus exactly on the clock hands, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, camera 30 cm from the same bathroom shelf, identical angle to the night frame. The same small round alarm clock with a plain white face, thin baton markers and no numerals, hands now at seven, same dust line on the chrome rim. The same cream matte carton box from the reference photograph stands behind it, printed label exactly as in the reference; the torn cream sachet lies in front. White subway tile with the same water spots. Soft north-facing window light from the left at 07:30, long soft shadow falling to the right, the hard overhead light now off. Shallow depth of field, focus exactly on the clock hands, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -2853,10 +3660,12 @@ The image comes alive: the second hand ticks forward while a faint shadow edge c
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 8 cm from the skin. Two fingertips pull a plain white drugstore pore strip upward off the left side of a 36-year-old man's nose; the strip comes away stiff and arched like a shell, loose paper fibres and white lint hanging from its edge, a few grey-brown plugs stuck to it. The skin left behind is red and irritated with a bright rectangular border of redness, several pores still plugged with dark sebaceous filaments, fine vellus hair flattened, a thin red capillary visible. Soft north-facing window light from the left at 07:30, white subway tile out of focus behind. Very shallow depth of field, focus exactly on the lifting edge of the strip, handheld blur, sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 8 cm from the skin. Two fingertips pull a plain white drugstore pore strip upward off the left side of a 36-year-old man's nose; the strip comes away stiff and arched like a shell, loose paper fibres and white lint hanging from its edge, a few grey-brown plugs stuck to it. The skin left behind is red and irritated with a bright rectangular border of redness, several pores still plugged with dark sebaceous filaments, fine vellus hair flattened, a thin red capillary visible. Soft north-facing window light from the left at 07:30, white subway tile out of focus behind. Very shallow depth of field, focus exactly on the lifting edge of the strip, handheld blur, sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2873,12 +3682,14 @@ The image comes alive: the fingers pull the stiff pore strip a centimetre furthe
 
 **Qué se ve.** Macro del otro lado: el pulgar y el índice cogen el ala derecha del parche y tiran despacio en paralelo a la piel. La parte despegada cuelga blanda y enrollada sobre sí misma, la parte que sigue pegada está plana sobre la nariz, hay UNA sola frontera y la piel que ya ha quedado al aire está limpia.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** física del despegado; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 8 cm from the skin. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. State 4: a thumb and index finger peel the right wing of the hydrocolloid patch slowly and parallel to the skin; the freed part hangs soft and rolled onto itself, opaque white inside with pale-yellow plugs, while the rest stays flat and sealed on the nose, one single boundary between the two parts, the skin lifting a fraction at that line. The skin already uncovered is clean, matte and faintly pink, pores empty. Soft window light from the left, 07:30. Shallow depth of field, focus exactly on the peeling boundary, handheld blur, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+PHYSICS OF THE PEEL: he peels the patch off in ONE CONTINUOUS SHEET. One part is still stuck flat and translucent on the nose and, without any break, it lifts along ONE single boundary and hangs from his fingers, curled and limp, its underside turned to the camera. There is no patch material anywhere over skin that has already been uncovered. That underside shows irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 8 cm from the skin. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. State 4: a thumb and index finger peel the right wing of the hydrocolloid patch slowly and parallel to the skin; the freed part hangs soft and rolled onto itself, opaque white inside with pale-yellow plugs, while the rest stays flat and sealed on the nose, one single boundary between the two parts, the skin lifting a fraction at that line. The skin already uncovered is clean, matte and faintly pink, pores empty. Soft window light from the left, 07:30. Shallow depth of field, focus exactly on the peeling boundary, handheld blur, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2897,10 +3708,12 @@ The image comes alive: the fingers draw the patch two more centimetres parallel 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 7 cm from the left side of a 36-year-old man's nose, no patch and no strip present. The skin is inflamed pink with a faint rectangular border where the pore strip was, two thin red capillaries near the nostril crease, several enlarged pores still holding grey-brown sebaceous filament plugs, one white paper fibre stuck to the skin beside the nostril wing, fine vellus hair, an oily sheen along the crease. Three-day stubble begins at the frame edge. Soft north-facing window light from the left at 07:30, white subway tile blurred behind. Very shallow depth of field, focus exactly on the plugged pores, slight handheld motion blur, natural sensor noise. No skin smoothing, no retouching, unretouched documentary realism. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 7 cm from the left side of a 36-year-old man's nose, no patch and no strip present. The skin is inflamed pink with a faint rectangular border where the pore strip was, two thin red capillaries near the nostril crease, several enlarged pores still holding grey-brown sebaceous filament plugs, one white paper fibre stuck to the skin beside the nostril wing, fine vellus hair, an oily sheen along the crease. Three-day stubble begins at the frame edge. Soft north-facing window light from the left at 07:30, white subway tile blurred behind. Very shallow depth of field, focus exactly on the plugged pores, slight handheld motion blur, natural sensor noise. No skin smoothing, no retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2917,12 +3730,14 @@ The image comes alive: the nose shifts a couple of millimetres as he breathes an
 
 **Qué se ve.** Mismo macro, misma distancia y misma luz, pero en el lado derecho: los poros se ven vacíos y abiertos pero sin tapón oscuro, la piel está mate y algo rosada, y queda la marca tenue del borde del parche siguiendo la curva de la aleta.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 7 cm from the right side of the same man's nose, identical distance and angle to the previous macro; no patch on the skin. The pores are open but empty, no dark sebaceous filaments left, the skin matte and faintly pink with a very faint curved line where the patch edge sat, following the nostril wing. Fine vellus hair, one small red capillary, uneven skin tone toward the cheek, three-day stubble at the frame edge. Soft north-facing window light from the left at 07:30, same white subway tile blurred behind. Very shallow depth of field, focus exactly on the empty pores, slight handheld motion blur, natural sensor noise. No skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, vertical 9:16, lens 7 cm from the right side of the same man's nose, identical distance and angle to the previous macro; no patch on the skin. The pores are open but empty, no dark sebaceous filaments left, the skin matte and faintly pink with a very faint curved line where the patch edge sat, following the nostril wing. Fine vellus hair, one small red capillary, uneven skin tone toward the cheek, three-day stubble at the frame edge. Soft north-facing window light from the left at 07:30, same white subway tile blurred behind. Very shallow depth of field, focus exactly on the empty pores, slight handheld motion blur, natural sensor noise. No skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -2941,10 +3756,12 @@ The image comes alive: the nose shifts a couple of millimetres with one quiet br
 
 **Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
+**Reglas añadidas:** regla de encuadre completo del parche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, camera 20 cm away, shot against a bathroom window. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. State 5: the used hydrocolloid butterfly patch is held up between thumb and index finger, backlit by soft north-facing window light at 07:30 so the light passes through it; dense opaque white blotches sit where the pores were, small pale-yellow plugs stand out as darker specks, the edges are still translucent, the gel is soft and slightly domed and the corners curl, keeping the memory of the nose curve. Short nails, a hangnail, dark hairs on the knuckles. The bathroom falls dark behind. Shallow depth of field, focus exactly on the white blotches, handheld blur, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. Vertical 9:16 handheld iPhone photo, camera 20 cm away, shot against a bathroom window. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. State 5: the used hydrocolloid butterfly patch is held up between thumb and index finger, backlit by soft north-facing window light at 07:30 so the light passes through it; dense opaque white blotches sit where the pores were, small pale-yellow plugs stand out as darker specks, the edges are still translucent, the gel is soft and slightly domed and the corners curl, keeping the memory of the nose curve. Short nails, a hangnail, dark hairs on the knuckles. The bathroom falls dark behind. Shallow depth of field, focus exactly on the white blotches, handheld blur, sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -2961,7 +3778,9 @@ The image comes alive: the fingers tilt the used patch a few degrees so the back
 
 **Qué se ve.** Plano medio a la luz de la ventana: Álex mira a cámara, nariz limpia y mate, y levanta el parche usado a la altura de la barbilla. Estado 5 puro: el parche está en la mano y no hay nada pegado en la nariz.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
@@ -2983,12 +3802,14 @@ The image comes alive: he raises the used patch a few centimetres toward the len
 
 **Qué se ve.** Las dos cajas crema de NOCTA sobre mármol crema con luz de ventana: una de pie, otra tumbada delante, y al lado un sobrecito cerrado y un parche limpio sobre su liner para que se vea la forma de mariposa y el grosor del borde.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, slightly high angle, camera 40 cm from a cream marble table. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. Two cream matte carton boxes exactly as in the reference photograph, one standing on its edge and one lying in front of it, printed label identical to the reference; beside them a closed cream sachet and one clean translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, its bevelled 0.55 mm edge catching a thin line of light. Tiny dust specks and a faint fingerprint on the marble. Soft window light from the left at 10:00, short soft shadows. Shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, slightly high angle, camera 40 cm from a cream marble table. The patch must be EXACTLY the product in the reference photographs: same silhouette, proportions and translucent matte material; do not invent a different shape. Two cream matte carton boxes exactly as in the reference photograph, one standing on its edge and one lying in front of it, printed label identical to the reference; beside them a closed cream sachet and one clean translucent matte hydrocolloid butterfly patch resting on its shiny transparent liner, its bevelled 0.55 mm edge catching a thin line of light. Tiny dust specks and a faint fingerprint on the marble. Soft window light from the left at 10:00, short soft shadows. Shallow depth of field, focus exactly on the patch edge, slight handheld motion blur, natural sensor noise. Unretouched documentary realism, no retouching. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3005,12 +3826,14 @@ The image comes alive: the hand-held camera drifts very slowly forward over the 
 
 **Qué se ve.** Vuelta al baño con la luz de ventana: Álex sostiene las dos cajas a la altura del pecho, nariz limpia, mirando a cámara con media sonrisa. Es el fotograma sobre el que se monta la tarjeta de la garantía y el pack de 2.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; cláusula de fidelidad de la caja; regla de nariz limpia; referencia nariz_limpia
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, chest-up, camera 70 cm away, leaving empty tiled wall on the right of the frame. A 36-year-old ordinary Spanish man, short dark hair flattened at the right temple, three-day stubble, pale scar through the right eyebrow, dark grey crew-neck t-shirt creased at the left shoulder. He holds two cream matte carton boxes at chest height, exactly the boxes in the reference photograph with the printed label unchanged. His nose is bare, clean and matte, pores empty, a faint pink line where the patch edge sat, red capillaries on the cheeks, half a smile, looking into the lens. Same white subway-tile bathroom, soft north-facing window light from the left at 07:30. Shallow depth of field, focus on the eyes, handheld blur, sensor noise. No makeup, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, chest-up, camera 70 cm away, leaving empty tiled wall on the right of the frame. A 36-year-old ordinary Spanish man, short dark hair flattened at the right temple, three-day stubble, pale scar through the right eyebrow, dark grey crew-neck t-shirt creased at the left shoulder. He holds two cream matte carton boxes at chest height, exactly the boxes in the reference photograph with the printed label unchanged. His nose is bare, clean and matte, pores empty, a faint pink line where the patch edge sat, red capillaries on the cheeks, half a smile, looking into the lens. Same white subway-tile bathroom, soft north-facing window light from the left at 07:30. Shallow depth of field, focus on the eyes, handheld blur, sensor noise. No makeup, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -3047,8 +3870,75 @@ The image comes alive: he lifts the two boxes a few centimetres toward the lens 
 
 **Orden de montaje.** Montaje lineal 1 a 15, tal cual, sobre los 25 segundos del guion. Bloque 1 (0-5 s, voz «Mira lo que hay en una tira de poros usada. No es lo que crees.»): tomas 1, 2, 3 y 4. En la copia principal se monta la 1 como primer fotograma y la 2 queda reservada para la variante A/B del gancho; en esa variante entran 2, 1, 3, 4. Los cuatro planos son de 3-4 segundos generados pero en el montaje se usan trozos de 1 a 1,5 segundos: corta seco entre ellos, sin transiciones. El rótulo «Mira lo que hay en una tira» entra en el fotograma 1 y se mantiene hasta la toma 3. Bloque 2 (5-11 s, «Pelusa, piel muerta, algún pelo. Ahora mira el parche: aquí sí está la grasa que había dentro.»): tomas 5, 6, 7 y 8. La palabra «Ahora» cae exactamente en el corte de la toma 4 a la toma 5, que es el giro del anuncio; la 5 y la 6 son las más largas de todo el montaje, 1,8 segundos cada una, porque son la prueba; la 7 da escala y la 8 cierra el bloque con la comparación, que además es el fotograma para la miniatura. Rótulo «Aquí sí: grasa» sobre la toma 5. Bloque 3 (11-19 s, «Este parche está hecho para eso: absorbe la grasa desde dentro del poro mientras duermes, en vez de arrancarte la piel como las tiras.»): tomas 9, 10, 11 y 12, unos 2 segundos cada una, que es el bloque que más respira. «Absorbe» cae sobre la toma 9, «desde dentro del poro» sobre la 10, «mientras duermes» sobre la 12; el rótulo «Absorbe. No arranca.» entra en la 11 y aguanta hasta el final del bloque. Bloque 4 (19-25 s, «Y si no te convence, te devolvemos el dinero. Pack de 2 cajas, 29,90 €, envío gratis desde España.»): tomas 13, 14 y 15, unos 2 segundos cada una. La 13 sostiene la frase de la garantía con el rótulo «Si no se pega, te lo cambiamos · 60 días» encima; la 14 recibe el precio; la 15 es el último fotograma, con el pull back terminado y el aire a la derecha para el botón. La voz se graba entera de una sola toma y se monta debajo; los vídeos van sin audio.
 
+> A 9 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 29 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The fingers rotate the used strip about fifteen degrees so the morning light rakes across the lint and the two hairs lift slightly
+Hard cut to.
+Cut 2: The hand tilts the backlit strip slowly downward so the window light slides along its edge and the lint fibres flicker into silhouette
+Hard cut to.
+Cut 3: A very slow push in toward the trapped hair, one or two centimetres of travel, while the flakes of dead skin stay perfectly still
+Hard cut to.
+Cut 4: A man's index finger enters from the bottom of the frame and nudges the arched strip so it rocks once on the marble and settles
+Hard cut to.
+Cut 5: The fingers tilt the used patch a few degrees toward the window so the backlight sweeps across it and the pale pore dots come up brighter one after another
+Hard cut to.
+Cut 6: The palm tilts a few degrees so the raking morning light travels across the saturated gel and the pale plugs cast tiny moving shadows
+Hard cut to.
+Cut 7: The fingers close very slightly and the used patch settles a millimetre deeper into the palm, its rolled wing relaxing
+Hard cut to.
+Cut 8: A very slow push in that ends framing both objects a little tighter, nothing else moving on the marble
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 24 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The thumb and index finger peel the new patch one more centimetre off its glossy liner, the gel stretching a millimetre as it lifts
+Hard cut to.
+Cut 2: He lowers the folded towel away from the nose in one short movement and the skin is left bare and matte
+Hard cut to.
+Cut 3: The two fingertips slide outward from the centre of the nose along the patch, smoothing the wings down against the nostril wings in one single movement
+Hard cut to.
+Cut 4: He breathes out once and the nostril wings move a millimetre under the sealed patch, nothing else changes
+Hard cut to.
+Cut 5: The thumb makes one short scroll movement on the blurred phone screen while the boxes stay completely still
+Hard cut to.
+Cut 6: A slow pull back of a few centimetres that reveals a little more marble around the two boxes, nothing moving on the table
+Hard cut to.
+Cut 7: The hand finishes leaving the frame at the bottom and the fanned sachets settle a millimetre back into the open box
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 1 y 2 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 2 y 3 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+- Las tomas 5 y 6 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · la tira usada entre los dedos
 
@@ -3146,10 +4036,12 @@ The image comes alive: a man's index finger enters from the bottom of the frame 
 
 **Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** regla de encuadre completo del parche; regla de poros irregulares
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. State 5, patch removed. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A man's thumb and index finger hold a used NOCTA hydrocolloid patch up against a north-facing window at 10:00: a single butterfly shape 60 mm wide and 45 mm tall, one central lobe and two wings 23 mm deep, corners rounded, bevelled edge. Backlit, it reads opaque white in blotches with dozens of small pale-yellow dots where the pores were, still translucent at the edges, softly domed and rolled at one corner. Short square nails, dark grey t-shirt cuff in shadow. Very shallow depth of field, focus exactly on the pale dots, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. State 5, patch removed. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A man's thumb and index finger hold a used NOCTA hydrocolloid patch up against a north-facing window at 10:00: a single butterfly shape 60 mm wide and 45 mm tall, one central lobe and two wings 23 mm deep, corners rounded, bevelled edge. Backlit, it reads opaque white in blotches with dozens of small pale-yellow dots where the pores were, still translucent at the edges, softly domed and rolled at one corner. Short square nails, dark grey t-shirt cuff in shadow. Very shallow depth of field, focus exactly on the pale dots, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 5 s):**
@@ -3166,12 +4058,14 @@ The image comes alive: the fingers tilt the used patch a few degrees toward the 
 
 **Qué se ve.** Macro extremísimo de un trozo de la cara interna del parche usado: el gel blanco saturado, abombado, y los tapones blanco-amarillentos que han salido de los poros formando una constelación irregular.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; regla de encuadre completo del parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 5, patch removed. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with two centimetres of the inner face of a used NOCTA hydrocolloid patch resting in a man's open palm. The gel is saturated opaque white, gently swollen, crossed by shallow ridges that kept the curve of a nose; a scatter of small pale-yellow plugs stands slightly proud of the surface, each with a tiny dimple around it. Palm lines, fine dark hair and a small mole visible out of focus below. Morning window light from the left at 10:00. Very shallow depth of field, focus exactly on the plugs, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 5, patch removed. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, filling the frame with two centimetres of the inner face of a used NOCTA hydrocolloid patch resting in a man's open palm. The gel is saturated opaque white, gently swollen, crossed by shallow ridges that kept the curve of a nose; a scatter of small pale-yellow plugs stands slightly proud of the surface, each with a tiny dimple around it. Palm lines, fine dark hair and a small mole visible out of focus below. Morning window light from the left at 10:00. Very shallow depth of field, focus exactly on the plugs, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -3232,7 +4126,9 @@ The image comes alive: a very slow push in that ends framing both objects a litt
 
 **Qué se ve.** Macro del parche NOCTA nuevo todavía sobre su liner transparente, recién salido del sobrecito crema, sostenido sobre la mesa. Se ve el grosor de medio milímetro, el borde biselado y lo traslúcido que es cuando está limpio. La caja crema al fondo, desenfocada.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
@@ -3254,12 +4150,14 @@ The image comes alive: the thumb and index finger peel the new patch one more ce
 
 **Qué se ve.** Baño de noche, 23:30. Encuadre solo del tercio central de la cara, de la punta de la ceja a la barbilla: la nariz recién lavada y secada con una toalla blanca, todavía con los poros llenos y los filamentos oscuros visibles. Sin parche aún.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-State 1, no patch. Vertical 9:16 handheld iPhone photo, very close, framing only the middle third of a man's face from the eyebrow tips down to the chin, both eyes cropped out. Short dark hair, three-day stubble, dark grey t-shirt shoulder. The nose is freshly washed and dry: enlarged pores along the sides of the bridge and across the tip, grey-brown sebaceous filament plugs sitting in them, fine vellus hair, thin red capillaries at the nostril crease, a little redness on the cheeks, matte damp skin. He presses a folded white towel against the side of the nose. Hard ceiling light from the plafond at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the pores of the nose tip, sensor noise, no makeup, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. State 1, no patch. Vertical 9:16 handheld iPhone photo, very close, framing only the middle third of a man's face from the eyebrow tips down to the chin, both eyes cropped out. Short dark hair, three-day stubble, dark grey t-shirt shoulder. The nose is freshly washed and dry: enlarged pores along the sides of the bridge and across the tip, grey-brown sebaceous filament plugs sitting in them, fine vellus hair, thin red capillaries at the nostril crease, a little redness on the cheeks, matte damp skin. He presses a folded white towel against the side of the nose. Hard ceiling light from the plafond at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the pores of the nose tip, sensor noise, no makeup, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3278,10 +4176,12 @@ The image comes alive: he lowers the folded towel away from the nose in one shor
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
 
+**Reglas añadidas:** luz de noche cenital
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 2, patch just applied. Vertical 9:16 handheld iPhone photo, very close, middle third of a man's face only, eyes cropped, short dark hair, three-day stubble, dark grey t-shirt. Two index fingertips press a translucent matte hydrocolloid film down onto the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, wings folded against the nostril wings, edges perfectly sealed. Under the film the pores and grey-brown filaments are still visible. Stubble, thin red capillaries, uneven skin tone. Hard plafond light at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the fingertips, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 2, patch just applied. Vertical 9:16 handheld iPhone photo, very close, middle third of a man's face only, eyes cropped, short dark hair, three-day stubble, dark grey t-shirt. Two index fingertips press a translucent matte hydrocolloid film down onto the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, wings folded against the nostril wings, edges perfectly sealed. Under the film the pores and grey-brown filaments are still visible. Stubble, thin red capillaries, uneven skin tone. Hard plafond light at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the fingertips, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -3298,12 +4198,14 @@ The image comes alive: the two fingertips slide outward from the centre of the n
 
 **Qué se ve.** La nariz de tres cuartos con el parche ya sellado, visto desde ligeramente abajo: la mariposa traslúcida se lee por el brillo del borde y por ser un punto más mate y más clara que la piel. Sigue sin verse la cara entera.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_puesto_2`
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_puesto_2`; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+
+**Reglas añadidas:** referencia lamina_parche; luz de noche cenital
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 2, patch just applied. Vertical 9:16 handheld iPhone photo, three-quarter view of a man's nose from slightly below, framing only from the eyebrow tip to the upper lip, eyes cropped out. Short dark hair, three-day stubble, dark grey t-shirt shoulder. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, following the curve of the nose with no wrinkles. Stubble, red capillaries, shine on the forehead edge. Hard plafond light at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the patch edge, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. State 2, patch just applied. Vertical 9:16 handheld iPhone photo, three-quarter view of a man's nose from slightly below, framing only from the eyebrow tip to the upper lip, eyes cropped out. Short dark hair, three-day stubble, dark grey t-shirt shoulder. A translucent matte hydrocolloid film is clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, following the curve of the nose with no wrinkles. Stubble, red capillaries, shine on the forehead edge. Hard plafond light at 23:30, white subway tile behind. Shallow depth of field, focus exactly on the patch edge, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3322,10 +4224,12 @@ The image comes alive: he breathes out once and the nostril wings move a millime
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo shot from above, close, on a cream marble table. A man's left hand holds a phone upright at the left of the frame; the phone screen is turned slightly away and rendered completely out of focus, a soft pale rectangle with no readable content. In focus on the right, two cream matte cardboard NOCTA boxes lie stacked one half over the other, plain untextured cardboard, a small navy crescent moon and nothing else. Hand with short square nails, a small mole on the back, fine dark hair, dark grey t-shirt cuff. Soft window light from the left at 09:45, short soft shadows, faint marble veining. Shallow depth of field, focus exactly on the top box corner, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo shot from above, close, on a cream marble table. A man's left hand holds a phone upright at the left of the frame; the phone screen is turned slightly away and rendered completely out of focus, a soft pale rectangle with no readable content. In focus on the right, two cream matte cardboard NOCTA boxes lie stacked one half over the other, plain untextured cardboard, a small navy crescent moon and nothing else. Hand with short square nails, a small mole on the back, fine dark hair, dark grey t-shirt cuff. Soft window light from the left at 09:45, short soft shadows, faint marble veining. Shallow depth of field, focus exactly on the top box corner, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3344,10 +4248,12 @@ The image comes alive: the thumb makes one short scroll movement on the blurred 
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, close, slightly above eye level of the table. Two cream matte cardboard NOCTA boxes on a cream marble surface: one standing upright, one lying flat in front of it with a corner overlapping, plain uncoated cardboard with visible fibre texture, one small navy crescent moon, no shine, no foil. Real cardboard imperfections: a soft dent on the top edge, a slightly open flap, a fingerprint on the side. Faint grey marble veining and a little dust. Soft window light from the left at 09:45, one short soft shadow to the right, no fill. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the corners, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, close, slightly above eye level of the table. Two cream matte cardboard NOCTA boxes on a cream marble surface: one standing upright, one lying flat in front of it with a corner overlapping, plain uncoated cardboard with visible fibre texture, one small navy crescent moon, no shine, no foil. Real cardboard imperfections: a soft dent on the top edge, a slightly open flap, a fingerprint on the side. Faint grey marble veining and a little dust. Soft window light from the left at 09:45, one short soft shadow to the right, no fill. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the corners, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**
@@ -3366,10 +4272,12 @@ The image comes alive only through the camera: a slow pull back of a few centime
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo shot from directly above, close, on a cream marble table. An open cream matte cardboard NOCTA box with its lid flap folded back, eight individual cream matte sachets fanned out inside and two of them lifted slightly above the rim, one sachet already torn open at the top right corner. Plain uncoated cardboard and paper, small navy crescent moon, no shine. A man's hand with short square nails and a dark grey t-shirt cuff is leaving the frame at the bottom edge, partly blurred by movement. Soft window light from the left at 09:45, short soft shadows inside the box, faint marble veining. Shallow depth of field, focus exactly on the fanned sachets, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo shot from directly above, close, on a cream marble table. An open cream matte cardboard NOCTA box with its lid flap folded back, eight individual cream matte sachets fanned out inside and two of them lifted slightly above the rim, one sachet already torn open at the top right corner. Plain uncoated cardboard and paper, small navy crescent moon, no shine. A man's hand with short square nails and a dark grey t-shirt cuff is leaving the frame at the bottom edge, partly blurred by movement. Soft window light from the left at 09:45, short soft shadows inside the box, faint marble veining. Shallow depth of field, focus exactly on the fanned sachets, sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3416,8 +4324,73 @@ The image comes alive: the hand finishes leaving the frame at the bottom and the
 
 29–35 s · garantía y CTA (planos 14 y 15, 3 s + 3 s). «Y si no te convence, te devolvemos el dinero» sobre el packshot (14) con el subtítulo «Si no se pega, te lo cambiamos · 60 días»; «Pack de 2 cajas, 29,90 €, envío gratis desde España» sobre el 15, que se congela medio segundo extra al final para el botón del CTA hacia el advertorial.
 
+> A 14 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
-### Las 15 tomas
+
+### El anuncio entero en un prompt para copiar y pegar
+
+Esto es el anuncio completo en 2 bloque(s), con los cortes duros dentro del propio prompt. Es el formato que entiende el generador de vídeo: un clip con varios cortes sale más barato y mucho más consistente que generar los planos sueltos y pegarlos después. Se adjuntan como referencia la foto del personaje, la del parche real y la de la caja, y se usan las imágenes de las tomas como fotogramas de arranque de cada corte.
+
+**Bloque 1 · tomas 1 a 8 · unos 19 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 7 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The three raised fingers push two centimetres closer to the lens and hold, the rest of the body still
+Hard cut to.
+Cut 2: The man turns his head two or three degrees towards the lens and stops, nothing else moves
+Hard cut to.
+Cut 3: The skin lifts and falls once with a slow breath, the filaments and pores staying exactly where they are
+Hard cut to.
+Cut 4: The two fingertips squeeze a millimetre tighter and then release, the skin flushing redder as they let go
+Hard cut to.
+Cut 5: The fingers tilt the curled strip slowly towards the light so its stiff surface catches a highlight, the bottle behind staying still
+Hard cut to.
+Cut 6: The thumb pushes the lid open another centimetre and the sachets inside shift slightly
+Hard cut to.
+Cut 7: The two fingers peel the patch a further centimetre off the shiny liner, the gel stretching slightly at the contact point
+Hard cut to.
+Cut 8: The two fingertips slide once from the centre of the bridge outwards and press the lifted wing flat against the nostril
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Bloque 2 · tomas 9 a 15 · unos 16 s**
+
+```text
+Vertical 9:16 handheld iPhone UGC ad, shot on a phone in one take and cut 6 times.
+IDENTITY LOCK: the same person, the same clothes, the same hair and the same room in every cut, exactly as in the attached reference photographs. Nobody else appears.
+PRODUCT LOCK: the patch is the product in the attached reference photographs. Same silhouette, same proportions, same translucent matte material. It never changes shape, never turns opaque black, never becomes a straight strip or an oval, and the box never shows text that is not printed on the reference box.
+HANDS: in every cut, each visible hand has one job and only one; a hand that is not acting stays out of frame. No mirrors, no reflections, no phone visible in frame.
+PACE: each cut is one single action, held steady, no zoom inside a cut unless the cut asks for it.
+No on-screen text, no subtitles, no captions, no logos, no watermark. No music and no dialogue: silent.
+
+Cut 1: The man blinks once, slowly, and his shoulders drop with a breath
+Hard cut to.
+Cut 2: The man tilts his chin up two degrees so the window light rakes across the white blotches on the patch
+Hard cut to.
+Cut 3: The fingers pull the wing two centimetres further, the freed part curling a little more while the still-stuck part stays flat
+Hard cut to.
+Cut 4: The fingers rotate the used patch a few degrees against the window so the backlight moves through it and the plugs stand out
+Hard cut to.
+Cut 5: The skin lifts and falls once with a slow breath, the empty pores staying exactly where they are
+Hard cut to.
+Cut 6: The window light shifts a touch across the marble as a cloud passes, the boxes and the patch completely still
+Hard cut to.
+Cut 7: The arm pushes the two boxes five centimetres closer to the lens and holds, the body behind staying still
+End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
+```
+
+**Avisos de este anuncio (planos seguidos que el generador puede fundir en vez de cortar):**
+
+- Las tomas 3 y 4 están en la misma banda de distancia (macro) y van seguidas: el generador tiende a fundirlas en vez de cortar. Cambia el encuadre de una de las dos o separa los planos en el montaje.
+
+
+### Las 15 tomas, una a una
 
 #### Toma 1 · Gancho A · tres dedos delante de la nariz grasa
 
@@ -3425,12 +4398,14 @@ The image comes alive: the hand finishes leaving the frame at the bottom and the
 
 **Qué se ve.** Álex de frente, recortado del labio superior hacia abajo (sin ojos, identidad no explícita). Su mano izquierda sube cerca del objetivo levantando tres dedos, muy en primer término. Detrás, desenfocado, el azulejo blanco y el grifo. Es el primer fotograma exacto del anuncio: el dedo entra antes de que se lea nada.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. A 36-year-old ordinary Spanish man framed from the upper lip down to the collarbones, face cropped above the mouth, three-day stubble along the jaw, wearing a worn dark grey cotton t-shirt. State 1, no patch. His left hand rises close to the lens holding up three fingers, the index slightly bent, dry cracked knuckles, a small callus on the thumb, fine dark hairs between the knuckles, a thin red scratch on the wrist. White subway tile bathroom at 23:30, hard ceiling light falling straight down, chrome tap blurred behind. Very shallow depth of field, focus exactly on the three fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo. A 36-year-old ordinary Spanish man framed from the upper lip down to the collarbones, face cropped above the mouth, three-day stubble along the jaw, wearing a worn dark grey cotton t-shirt. State 1, no patch. His left hand rises close to the lens holding up three fingers, the index slightly bent, dry cracked knuckles, a small callus on the thumb, fine dark hairs between the knuckles, a thin red scratch on the wrist. White subway tile bathroom at 23:30, hard ceiling light falling straight down, chrome tap blurred behind. Very shallow depth of field, focus exactly on the three fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3447,12 +4422,14 @@ The image comes alive: the three raised fingers push two centimetres closer to t
 
 **Qué se ve.** El mismo instante desde tres cuartos y algo más lejos: los tres dedos quedan a un lado y quien está en foco ahora es la nariz, brillante y con poros llenos. Sirve como variante A/B del gancho y ya presenta el problema sin decir nada.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo, three-quarter angle from the right, half a step further back than the previous frame. The same 36-year-old Spanish man, short dark hair, three-day stubble, same worn dark grey cotton t-shirt, cropped just below the eyes so only nose, mouth and jaw are in frame. State 1, no patch: the nose oily along the ridge with a hard specular sheen, enlarged pores visible on the wing, two thin red capillaries beside the left nostril. Three raised fingers sit at the left edge of the frame, out of focus. White subway tile bathroom at 23:30, hard overhead ceiling light, shadow under the nose. Very shallow depth of field, focus exactly on the greasy nose ridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo, three-quarter angle from the right, half a step further back than the previous frame. The same 36-year-old Spanish man, short dark hair, three-day stubble, same worn dark grey cotton t-shirt, cropped just below the eyes so only nose, mouth and jaw are in frame. State 1, no patch: the nose oily along the ridge with a hard specular sheen, enlarged pores visible on the wing, two thin red capillaries beside the left nostril. Three raised fingers sit at the left edge of the frame, out of focus. White subway tile bathroom at 23:30, hard overhead ceiling light, shadow under the nose. Very shallow depth of field, focus exactly on the greasy nose ridge, slight handheld motion blur, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3469,12 +4446,14 @@ The image comes alive: the man turns his head two or three degrees towards the l
 
 **Qué se ve.** Macro extremo: la punta y el ala derecha de la nariz llenan el cuadro. Se ven los poros abiertos en hileras y dentro de casi todos un filamento sebáceo gris-marrón, dos de ellos asomando. No hay ojos ni boca: piel pura. Es el plano de diagnóstico.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de poros irregulares; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip and right wing of the same man's nose fill the entire frame, skin only, no eyes or mouth in shot. State 1, no patch: enlarged pores in open rows, a grey-brown sebaceous filament plug standing inside almost every pore, two of them slightly raised above the surface, fine vellus hairs catching the light, thin red capillaries at the crease of the nostril, uneven skin tone and a greasy specular sheen along the ridge. White subway tile bathroom at 23:30, hard ceiling light from straight above. Very shallow depth of field, focus exactly on the pores of the nose tip, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip and right wing of the same man's nose fill the entire frame, skin only, no eyes or mouth in shot. State 1, no patch: enlarged pores in open rows, a grey-brown sebaceous filament plug standing inside almost every pore, two of them slightly raised above the surface, fine vellus hairs catching the light, thin red capillaries at the crease of the nostril, uneven skin tone and a greasy specular sheen along the ridge. White subway tile bathroom at 23:30, hard ceiling light from straight above. Very shallow depth of field, focus exactly on the pores of the nose tip, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3491,12 +4470,14 @@ The image comes alive: the skin lifts and falls once with a slow breath, the fil
 
 **Qué se ve.** Macro: dos yemas aprietan a ambos lados de la nariz. La piel se blanquea bajo la presión y se enrojece alrededor. En el centro, un poro claramente estirado y un filamento medio expulsado. Es el error y su consecuencia en un solo plano.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Two fingertips with short slightly ridged nails press either side of the same man's nose, the skin blanching white under the pressure and flushing red around it. State 1, no patch: one pore visibly stretched wide open with a raised rim, a pale filament half expelled beside it, the surrounding skin pushed into fine creases, vellus hairs bent flat, thin broken capillaries near the nostril crease. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the stretched pore between the fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Two fingertips with short slightly ridged nails press either side of the same man's nose, the skin blanching white under the pressure and flushing red around it. State 1, no patch: one pore visibly stretched wide open with a raised rim, a pale filament half expelled beside it, the surrounding skin pushed into fine creases, vellus hairs bent flat, thin broken capillaries near the nostril crease. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the stretched pore between the fingertips, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3515,10 +4496,12 @@ The image comes alive: the two fingertips squeeze a millimetre tighter and then 
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. The same man's hand holds a used chemist pore strip close to the lens, the strip peeled off and curled stiff, grey-white, with cotton lint and a few skin flakes stuck to its underside and only three or four tiny dark specks on it; his dark grey cotton t-shirt sleeve and dry knuckles at the edge of frame. An unlabelled plain white plastic scrub bottle with the cap off sits out of focus on the sink behind, gritty beige paste on its rim, next to a chrome tap. State 1, no NOCTA product in shot. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the curled edge of the strip, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo. The same man's hand holds a used chemist pore strip close to the lens, the strip peeled off and curled stiff, grey-white, with cotton lint and a few skin flakes stuck to its underside and only three or four tiny dark specks on it; his dark grey cotton t-shirt sleeve and dry knuckles at the edge of frame. An unlabelled plain white plastic scrub bottle with the cap off sits out of focus on the sink behind, gritty beige paste on its rim, next to a chrome tap. State 1, no NOCTA product in shot. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the curled edge of the strip, slight handheld motion blur, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3537,10 +4520,12 @@ The image comes alive: the fingers tilt the curled strip slowly towards the ligh
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja; consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. The same man's left hand holds a cream matte carton box at chest height, his thumb lifting the lid so two cream matte sachets show inside; the printed front of the box stays soft and unreadable at this focus. His worn dark grey cotton t-shirt fills the background, out of focus. Skin detail: dry knuckles, a torn hangnail on the thumb, fine dark hairs on the back of the hand, a faint pale line at the wrist, short nails. White subway tile bathroom at 23:30, hard ceiling light straight down, chrome tap blurred behind. Very shallow depth of field, focus exactly on the open lip of the box, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. Vertical 9:16 handheld iPhone photo. The same man's left hand holds a cream matte carton box at chest height, his thumb lifting the lid so two cream matte sachets show inside; the printed front of the box stays soft and unreadable at this focus. His worn dark grey cotton t-shirt fills the background, out of focus. Skin detail: dry knuckles, a torn hangnail on the thumb, fine dark hairs on the back of the hand, a faint pale line at the wrist, short nails. White subway tile bathroom at 23:30, hard ceiling light straight down, chrome tap blurred behind. Very shallow depth of field, focus exactly on the open lip of the box, slight handheld motion blur at the edges, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3557,12 +4542,14 @@ The image comes alive: the thumb pushes the lid open another centimetre and the 
 
 **Qué se ve.** Macro extremo: dos dedos levantan el parche de su liner transparente y brillante. Se ve la mariposa entera, el grosor, el borde biselado con su línea fina de brillo y el gel estirándose un milímetro donde tira la yema. Es el plano que demuestra que es un producto, no una tira.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `caja` — la foto real de la caja crema de NOCTA; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Two fingers lift it off a shiny transparent liner: one piece of translucent matte hydrocolloid 60 mm wide and 45 mm tall, a central lobe with two symmetrical wings 23 mm deep, a shallow rounded notch between them, corners rounded, 0.55 mm thick with a bevelled edge catching a thin line of light; the gel stretches a millimetre where the fingertip pulls. Fingerprint ridges, a dry cuticle. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. Two fingers lift it off a shiny transparent liner: one piece of translucent matte hydrocolloid 60 mm wide and 45 mm tall, a central lobe with two symmetrical wings 23 mm deep, a shallow rounded notch between them, corners rounded, 0.55 mm thick with a bevelled edge catching a thin line of light; the gel stretches a millimetre where the fingertip pulls. Fingerprint ridges, a dry cuticle. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the bevelled edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3581,10 +4568,12 @@ The image comes alive: the two fingers peel the patch a further centimetre off t
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
 
+**Reglas añadidas:** consecuencias de la luz de noche
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette and proportions. Vertical 9:16 handheld iPhone photo, cropped just below the eyes. The same 36-year-old man, short dark hair, three-day stubble, same dark grey cotton t-shirt. State 2, patch just applied: two fingertips press the translucent matte hydrocolloid film from the centre outwards along the bridge, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, one wing still lifted a millimetre against the nostril. Skin clean, matte and towel-dry, stubble hairs, a red capillary by the nostril. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the fingertip pressing the bridge, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette and proportions. Vertical 9:16 handheld iPhone photo, cropped just below the eyes. The same 36-year-old man, short dark hair, three-day stubble, same dark grey cotton t-shirt. State 2, patch just applied: two fingertips press the translucent matte hydrocolloid film from the centre outwards along the bridge, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, one wing still lifted a millimetre against the nostril. Skin clean, matte and towel-dry, stubble hairs, a red capillary by the nostril. White subway tile bathroom at 23:30, hard ceiling light straight down. Very shallow depth of field, focus exactly on the fingertip pressing the bridge, natural digital sensor noise. No skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3601,12 +4590,14 @@ The image comes alive: the two fingertips slide once from the centre of the brid
 
 **Qué se ve.** Perfil casi completo bajo el plafón, ojos apenas visibles y bajos. El parche se lee claramente sobre el puente y el ala: mate, un punto más claro que la piel, con la línea de brillo del borde biselado siguiendo la curva de la nariz. Sin arrugas, sin esquinas levantadas. Es la imagen de «puesto y sellado».
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+
+**Reglas añadidas:** referencia lamina_parche; consecuencias de la luz de noche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions. Vertical 9:16 handheld iPhone photo, near profile from the right, head and shoulders. The same man, short dark hair unbrushed, three-day stubble, same dark grey cotton t-shirt, eyes low and half shadowed. State 2: a translucent matte hydrocolloid film clearly visible across the bridge and wing of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, no wrinkles, no lifted corners, following the curve of the nose. Stubble, a small scar through the right eyebrow, mild redness on the cheek. White subway tile bathroom at 23:30, hard overhead ceiling light, shadows under the eyes. Very shallow depth of field, focus exactly on the patch edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+IT MUST READ AS NIGHT: everything beyond the light source falls into real darkness, any window in shot is black, the shadows are short and hard with almost no fill, and there is heavy sensor noise in the shadows. No daylight, no soft window light, no blue sky. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions. Vertical 9:16 handheld iPhone photo, near profile from the right, head and shoulders. The same man, short dark hair unbrushed, three-day stubble, same dark grey cotton t-shirt, eyes low and half shadowed. State 2: a translucent matte hydrocolloid film clearly visible across the bridge and wing of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed, no wrinkles, no lifted corners, following the curve of the nose. Stubble, a small scar through the right eyebrow, mild redness on the cheek. White subway tile bathroom at 23:30, hard overhead ceiling light, shadows under the eyes. Very shallow depth of field, focus exactly on the patch edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3623,7 +4614,9 @@ The image comes alive: the man blinks once, slowly, and his shoulders drop with 
 
 **Qué se ve.** Mismo baño, ahora a las 10:00 con luz de ventana por la izquierda. Plano corto de la nariz, recortado por debajo de los ojos. El parche se ha vuelto blanco opaco a manchas, más denso sobre los lados del puente y la punta, con puntitos blanco-amarillentos marcados y los bordes todavía traslúcidos. Camiseta gris oscuro arrugada del hombro.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+
+**Reglas añadidas:** referencia lamina_parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
@@ -3667,12 +4660,14 @@ The image comes alive: the fingers pull the wing two centimetres further, the fr
 
 **Qué se ve.** El parche ya fuera, cogido por un borde y levantado contra la ventana del baño. La luz lo atraviesa: los bordes siguen traslúcidos y el centro es un mapa blanco opaco con decenas de tapones blanco-amarillentos marcados donde estaban los poros. Está blando y abombado, conserva la curva de la nariz.
 
-**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** referencia parche_puesto; regla de encuadre completo del parche
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions. Vertical 9:16 handheld iPhone photo, close, held at arm's length. State 5, patch removed: the same man's thumb and index finger hold the used hydrocolloid up against the bathroom window at 10:00, backlit by soft north-facing daylight; the edges still translucent, the centre an opaque white map with dozens of small pale-yellow plugs standing where the pores were, the piece soft, slightly domed, keeping the memory of the curve of the nose, curling at one corner. Fingerprint ridges and fine hairs on the knuckles, dark grey t-shirt sleeve at the edge. Very shallow depth of field, focus exactly on the plugs, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance: one wide central lobe, two symmetrical side wings and a shallow rounded notch in the middle of the lower edge, every corner rounded. Never a straight strip, never an oval, never a shapeless blob, never black. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions. Vertical 9:16 handheld iPhone photo, close, held at arm's length. State 5, patch removed: the same man's thumb and index finger hold the used hydrocolloid up against the bathroom window at 10:00, backlit by soft north-facing daylight; the edges still translucent, the centre an opaque white map with dozens of small pale-yellow plugs standing where the pores were, the piece soft, slightly domed, keeping the memory of the curve of the nose, curling at one corner. Fingerprint ridges and fine hairs on the knuckles, dark grey t-shirt sleeve at the edge. Very shallow depth of field, focus exactly on the plugs, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3689,12 +4684,14 @@ The image comes alive: the fingers rotate the used patch a few degrees against t
 
 **Qué se ve.** Mismo macro que la toma 3, misma nariz, misma distancia, pero ahora limpia: los poros se ven vacíos, sin filamentos oscuros, la piel un minuto rosada y mate, con la marca tenue del borde del parche cruzando el puente. El antes y el después se montan seguidos.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz; `nariz_limpia` — un fotograma ya generado de esa misma nariz limpia (obligatorio en tomas de «después»)
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de nariz limpia; referencia nariz_limpia; regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, same distance and framing as the earlier diagnostic macro. The tip and right wing of the same man's nose fill the frame, skin only. State 5, after removal: the pores are open but empty, no dark filament plugs left, the skin matte and slightly pink for a minute, a faint straight edge-mark from the patch crossing the bridge, fine vellus hairs upright, the same two thin red capillaries at the nostril crease, uneven skin tone. The same white subway tile bathroom at 10:00, soft north-facing window light from the left. Very shallow depth of field, focus exactly on the empty pores of the nose tip, slight handheld motion blur, natural digital sensor noise. No skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld, same distance and framing as the earlier diagnostic macro. The tip and right wing of the same man's nose fill the frame, skin only. State 5, after removal: the pores are open but empty, no dark filament plugs left, the skin matte and slightly pink for a minute, a faint straight edge-mark from the patch crossing the bridge, fine vellus hairs upright, the same two thin red capillaries at the nostril crease, uneven skin tone. The same white subway tile bathroom at 10:00, soft north-facing window light from the left. Very shallow depth of field, focus exactly on the empty pores of the nose tip, slight handheld motion blur, natural digital sensor noise. No skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -3711,12 +4708,14 @@ The image comes alive: the skin lifts and falls once with a slow breath, the emp
 
 **Qué se ve.** Sin persona. Las dos cajas crema del pack, una de pie y otra tumbada, con un sobrecito individual abierto delante y el parche limpio asomando sobre su liner. Mesa de mármol crema, luz suave de ventana, sombra corta. Las caras impresas quedan blandas: los subtítulos del precio y la garantía los pone el usuario encima.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo looking down at a shallow angle. Two cream matte carton boxes on a cream marble table, one standing and one lying flat just behind it, a single cream matte sachet torn open in front with a translucent matte hydrocolloid patch half out on its shiny liner, its butterfly outline and bevelled edge catching a thin line of light; the printed faces of the boxes stay soft and unreadable. Real surface detail: fine grey veining in the marble, a dust speck, a slight card dent on one corner, a faint shadow where the boxes touch. Mesa lit by soft window light from the left at 10:00, short shadow. Very shallow depth of field, focus exactly on the front box edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo looking down at a shallow angle. Two cream matte carton boxes on a cream marble table, one standing and one lying flat just behind it, a single cream matte sachet torn open in front with a translucent matte hydrocolloid patch half out on its shiny liner, its butterfly outline and bevelled edge catching a thin line of light; the printed faces of the boxes stay soft and unreadable. Real surface detail: fine grey veining in the marble, a dust speck, a slight card dent on one corner, a faint shadow where the boxes touch. Mesa lit by soft window light from the left at 10:00, short shadow. Very shallow depth of field, focus exactly on the front box edge, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -3735,10 +4734,12 @@ The image comes alive: the window light shifts a touch across the marble as a cl
 
 **Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `caja` — la foto real de la caja crema de NOCTA
 
+**Reglas añadidas:** cláusula de fidelidad de la caja
+
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-Vertical 9:16 handheld iPhone photo. The same 36-year-old man, cropped just below the eyes, three-day stubble, the same creased dark grey cotton t-shirt, holds two cream matte carton boxes out towards the lens at chest height with a half-extended arm, the boxes sharp and his face soft behind them; the printed faces of the boxes stay unreadable. State 5, no patch on the nose, the skin matte and clean. Hand detail: dry knuckles, a torn hangnail, short nails, fine dark hairs. The same white subway tile bathroom at 10:00, soft north-facing window light from the left, chrome tap blurred behind. Very shallow depth of field, focus exactly on the front box edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo. The same 36-year-old man, cropped just below the eyes, three-day stubble, the same creased dark grey cotton t-shirt, holds two cream matte carton boxes out towards the lens at chest height with a half-extended arm, the boxes sharp and his face soft behind them; the printed faces of the boxes stay unreadable. State 5, no patch on the nose, the skin matte and clean. Hand detail: dry knuckles, a torn hangnail, short nails, fine dark hairs. The same white subway tile bathroom at 10:00, soft north-facing window light from the left, chrome tap blurred behind. Very shallow depth of field, focus exactly on the front box edge, slight handheld motion blur, natural digital sensor noise. Unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
