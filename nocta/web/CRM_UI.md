@@ -64,7 +64,14 @@ node shot.js carpeta 390 844 "dash:#/dashboard" "orders:#/orders"   # capturas c
 ```
 
 `audit.js` imprime `checks N con desborde 0` cuando todo está bien y, si algo falla, dice la ruta, el ancho y el
-elemento culpable. Los anchos que se prueban son 360, 390, 430, 768, 1280, 1440 y 1920 px.
+elemento culpable. Los anchos que se prueban son 320, 360, 390, 430, 768, 1024, 1280, 1440, 1920 y 2560 px.
 
-**Última comprobación (12-9-2026):** 252 mediciones (20 pantallas, 35 vistas con sus pestañas, 7 anchos) y 17
-diálogos, en móvil y en ordenador: **0 desbordes**, 0 errores de JavaScript.
+**Última comprobación (12-9-2026):** 360 mediciones (20 pantallas, 36 vistas con sus pestañas, 10 anchos de 320 a
+2560 px) y 17 diálogos, en móvil y en ordenador: **0 desbordes**, 0 errores de JavaScript. Se comprobó además:
+
+- **CRM vacío** (tienda recién abierta, sin ningún dato): `EMPTY=1 node server.js` — 360 mediciones, 0 desbordes, y
+  todas las pantallas con su mensaje de «todavía no hay…» y su siguiente paso.
+- **Interacciones** (`inter.js`): buscar, filtrar por chips, cambiar el periodo, navegar por el menú y **girar el
+  móvil** — la tabla pasa a tarjetas y vuelve a tabla sin dejar desborde en ningún momento.
+- **Acciones dentro de las celdas** (`click.js`): abrir un pedido o un cliente tocando la fila, escribir un coste,
+  accionar un interruptor y copiar un enlace siguen funcionando con la fila convertida en tarjeta.

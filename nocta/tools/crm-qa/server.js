@@ -2,7 +2,8 @@ const http=require('http'),fs=require('fs'),path=require('path'),url=require('ur
 const F=require('./fixtures.js');
 const ROOT=require('path').resolve(__dirname,'../../web/public');
 const MIME={'.html':'text/html;charset=utf-8','.css':'text/css;charset=utf-8','.js':'text/javascript;charset=utf-8','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2','.mp4':'video/mp4','.avif':'image/avif'};
-const T={orders:F.orders,customers:F.customers,subscriptions:F.subscriptions,leads:F.leads,carts:F.carts,messages:F.messages,campaigns:F.campaigns,automations:F.automations,settings:F.settings,content:F.content,discounts:F.discounts,products:F.products_rows};
+const EMPTY=process.env.EMPTY==='1';
+const T=EMPTY?{orders:[],customers:[],subscriptions:[],leads:[],carts:[],messages:[],campaigns:[],automations:[],settings:[],content:[],discounts:[],products:[]}:{orders:F.orders,customers:F.customers,subscriptions:F.subscriptions,leads:F.leads,carts:F.carts,messages:F.messages,campaigns:F.campaigns,automations:F.automations,settings:F.settings,content:F.content,discounts:F.discounts,products:F.products_rows};
 function j(res,o,code=200){const b=JSON.stringify(o);res.writeHead(code,{'content-type':'application/json','cache-control':'no-store'});res.end(b);}
 function filterRows(name,q){
   let rows=(T[name]||[]).slice();
@@ -32,8 +33,10 @@ http.createServer((req,res)=>{
     const rest=p.slice('/api/admin/'.length);
     if(rest==='me')return j(res,{ok:true,db:true,mail:true,site:'https://nocta-store.netlify.app'});
     if(rest==='login')return j(res,{token:'open'});
-    if(rest==='stats')return j(res,F.statsFor(Number(u.query.days||14)));
-    if(rest==='integrations')return j(res,F.integrations);
+    if(rest==='stats'){const st=F.statsFor(Number(u.query.days||14));
+      if(EMPTY)return j(res,{days:st.days,events:0,sessions:0,bounce_rate:0,funnel:{sessions:0,product:0,atc:0,checkout:0,purchase:0},abandoned_carts:0,revenue:0,orders:0,aov:0,daily:[],sources:[],pages:[],landing:[],exits:[],countries:[],devices:[],products:{},leads:0,leads_total:0,customers:0,subs_active:0,mrr:0,pending_ship:0,carts_open:0,messages:{email:0,whatsapp:0}});
+      return j(res,st);}
+    if(rest==='integrations')return j(res,EMPTY?{supabase:{configured:true,url:'https://x.supabase.co'},stripe:{configured:false,source:null,publishable:null,webhook:false,webhook_url:'https://nocta-store.netlify.app/api/stripe-webhook',account:null,oauth:true,methods:null,connected_at:null},resend:{configured:false,from:null,domains:[],audience:null,domain_pending:null},whatsapp:{configured:false,webhook_url:'https://nocta-store.netlify.app/api/whatsapp-webhook',verify_token:'nocta'},cron:null}:F.integrations);
     if(rest.startsWith('r/'))return j(res,filterRows(rest.slice(2).split('?')[0],u.search?u.search.slice(1):''));
     if(rest.startsWith('export/')){res.writeHead(200,{'content-type':'text/csv'});return res.end('id,total\n');}
     if(rest.startsWith('a/')){

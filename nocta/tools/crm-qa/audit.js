@@ -4,7 +4,7 @@ const fs=require('fs'),path=require('path');
 const BASE='http://localhost:8791/admin/';
 const OUT=process.argv[2]||'shots';
 fs.mkdirSync(OUT,{recursive:true});
-const VIEWS=[{n:'m360',w:360,h:740,m:true},{n:'m390',w:390,h:844,m:true},{n:'m430',w:430,h:932,m:true},{n:'t768',w:768,h:1024,m:false},{n:'d1280',w:1280,h:800,m:false},{n:'d1440',w:1440,h:900,m:false},{n:'d1920',w:1920,h:1080,m:false}];
+const VIEWS=[{n:'m320',w:320,h:568,m:true},{n:'m360',w:360,h:740,m:true},{n:'m390',w:390,h:844,m:true},{n:'m430',w:430,h:932,m:true},{n:'t768',w:768,h:1024,m:false},{n:'t1024',w:1024,h:768,m:false},{n:'d1280',w:1280,h:800,m:false},{n:'d1440',w:1440,h:900,m:false},{n:'d1920',w:1920,h:1080,m:false},{n:'d2560',w:2560,h:1440,m:false}];
 const ROUTES=[
  ['dashboard','#/dashboard'],['orders','#/orders'],['order','#/orders/NC-20261041'],['carts','#/carts'],
  ['customers','#/customers'],['customer','#/customers/cus_4'],['subscriptions','#/subscriptions'],['leads','#/leads'],
