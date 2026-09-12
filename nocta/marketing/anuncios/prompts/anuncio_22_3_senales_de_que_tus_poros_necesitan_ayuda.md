@@ -81,7 +81,7 @@ Cut 7: She gives one small nod and her half smile widens a fraction while the tw
 End on the last frame and hold it. No fades, no dissolves, no transitions of any kind: every change of shot is a hard cut.
 ```
 
-> A 11 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
+> A 10 de estas 15 tomas se les ha añadido automáticamente alguna de las reglas comprobadas (fidelidad del producto, encuadre completo del parche, nariz limpia, poros irregulares, física del despegado o consecuencias de la luz de noche). Van al principio del prompt y están marcadas en la línea «Reglas añadidas».
 
 
 ## Las 15 tomas, una a una
@@ -136,14 +136,12 @@ The image comes alive: she tilts her chin upwards a few degrees to catch the lig
 
 **Qué se ve.** Perfil de tres cuartos cerrado, de la ceja al labio superior. La nariz llena el cuadro con la luz de ventana rasante desde la izquierda, que deja el brillo graso del puente y la punta perfectamente legible. Estado 1: poros llenos, filamentos gris-marrón, un capilar rojo.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
-
-**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. Vertical 9:16 handheld iPhone photo, close three-quarter profile of Marisol, 43, same navy cotton t-shirt, same loose dark brown hair with grey strands at the left temple, small silver hoops. Her nose and cheek fill the frame from eyebrow to upper lip. STATE 1, no patch: the pores of the nose are full, each one holding a grey-brown sebaceous filament plug, the skin of the bridge and tip carries a wet specular sheen of oil, a few fine hairs, uneven skin tone, one small red capillary. She holds still, face turned to the window. Bathroom, 10:40, soft window light raking from the left so the oily sheen reads clearly. Shallow depth of field, focus exactly on the nose tip, sensor noise. No retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
+Vertical 9:16 handheld iPhone photo, close three-quarter profile of Marisol, 43, same navy cotton t-shirt, same loose dark brown hair with grey strands at the left temple, small silver hoops. Her nose and cheek fill the frame from eyebrow to upper lip. STATE 1, no patch: the pores of the nose are full, each one holding a grey-brown sebaceous filament plug, the skin of the bridge and tip carries a wet specular sheen of oil, a few fine hairs, uneven skin tone, one small red capillary. She holds still, face turned to the window. Bathroom, 10:40, soft window light raking from the left so the oily sheen reads clearly. Shallow depth of field, focus exactly on the nose tip, sensor noise. No retouching, no skin smoothing, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -160,14 +158,14 @@ The image comes alive: she turns her head five degrees towards the window so the
 
 **Qué se ve.** Macro extrema del ala izquierda y el lateral de la nariz, solo piel, sin ojos. Poros dilatados repartidos de forma irregular, en dos o tres racimos densos, cada uno de un tamaño y un ángulo, con filamento sebáceo dentro de muchos. Un brillo graso ancho en el pliegue de la aleta.
 
-**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio); `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `avatar` — la foto del personaje (Bea / Marisol / Álex, según el anuncio)
 
-**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; regla de poros irregulares
+**Reglas añadidas:** regla de poros irregulares
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The left wing and side of Marisol's nose fills the whole frame, skin only, no eyes. STATE 1: enlarged open pores scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and angle, never aligned in rows or a grid, never evenly spaced; a grey-brown sebaceous filament sits inside many of them, fine colourless vellus hairs, one thin red capillary, a broad oily highlight across the crease of the nostril. The skin is still. Bathroom, 10:40, soft window light from the left. Very shallow depth of field, focus on the pore cluster, sensor noise, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense clusters and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The left wing and side of Marisol's nose fills the whole frame, skin only, no eyes. STATE 1: enlarged open pores scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and angle, never aligned in rows or a grid, never evenly spaced; a grey-brown sebaceous filament sits inside many of them, fine colourless vellus hairs, one thin red capillary, a broad oily highlight across the crease of the nostril. The skin is still. Bathroom, 10:40, soft window light from the left. Very shallow depth of field, focus on the pore cluster, sensor noise, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
@@ -213,7 +211,7 @@ The image comes alive: the fingertip drags two centimetres downwards along the s
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip of Marisol's nose fills the frame, skin only. STATE 1: dozens of dark blackhead-like dots, each a grey-brown sebaceous filament plug raised very slightly above its pore, the pores scattered in a completely IRREGULAR, uneven distribution, clustered densely at the tip and sparse towards the bridge, every pore a different size and angle, never in rows or a grid; fine vellus hair, two thin red capillaries, a greasy specular sheen breaking over the ridges. Nothing moves. Bathroom, 10:40, soft window light from the left. Very shallow depth of field, focus on the densest cluster, sensor noise, no retouching, no skin smoothing, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
+The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense clusters and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip of Marisol's nose fills the frame, skin only. STATE 1: dozens of dark blackhead-like dots, each a grey-brown sebaceous filament plug raised very slightly above its pore, the pores scattered in a completely IRREGULAR, uneven distribution, clustered densely at the tip and sparse towards the bridge, every pore a different size and angle, never in rows or a grid; fine vellus hair, two thin red capillaries, a greasy specular sheen breaking over the ridges. Nothing moves. Bathroom, 10:40, soft window light from the left. Very shallow depth of field, focus on the densest cluster, sensor noise, no retouching, no skin smoothing, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -379,7 +377,7 @@ The image comes alive: the fingers rotate the used patch about fifteen degrees a
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip and left wing of Marisol's nose fill the frame, skin only, no patch anywhere. STATE 5, after treatment: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere; the skin is matte, faintly pink, with a very faint pressure mark from the patch edge across the bridge, fine vellus hair, one thin red capillary, uneven natural skin tone. The pores stay scattered in a completely IRREGULAR, uneven distribution, every one a different size and angle, never in rows or a grid. Bathroom, 08:15, soft window light from the left, same angle as the earlier macro. Very shallow depth of field, sensor noise, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
+The reference photograph of the clean nose is what the skin must look like: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere on the uncovered skin, only a faint pink adhesive mark. The pores are scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense clusters and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. The tip and left wing of Marisol's nose fill the frame, skin only, no patch anywhere. STATE 5, after treatment: the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere; the skin is matte, faintly pink, with a very faint pressure mark from the patch edge across the bridge, fine vellus hair, one thin red capillary, uneven natural skin tone. The pores stay scattered in a completely IRREGULAR, uneven distribution, every one a different size and angle, never in rows or a grid. Bathroom, 08:15, soft window light from the left, same angle as the earlier macro. Very shallow depth of field, sensor noise, unretouched documentary realism, not a 3D render. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 2 s):**
@@ -396,14 +394,14 @@ The image comes alive: the skin lifts a fraction as she breathes in and the fain
 
 **Qué se ve.** Vista cenital de tres cuartos sobre mesa de mármol crema. Las dos cajas de NOCTA juntas, una plana y otra apoyada encima, con un sobrecito individual y un parche sellado sobre su liner delante. Grano del cartón visible, una arruga suave en una esquina, motas de polvo en el mármol, sombra corta a la derecha. Nada más en la mesa.
 
-**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
+**Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner
 
-**Reglas añadidas:** cláusula de fidelidad del parche; referencia lamina_parche; referencia parche_puesto; cláusula de fidelidad de la caja
+**Reglas añadidas:** cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream matte marble table. Two cream matte cardboard NOCTA boxes, exactly the box in the reference photograph, lie side by side, one flat and one leaning on it, with a single cream matte individual sachet and one sealed patch on its shiny transparent liner in front of them. Visible cardboard grain, a soft crease on one corner, small dust specks on the marble, short soft shadows to the right. Nothing else on the table. Morning window light, soft, from the left, 08:30. Shallow depth of field, focus exactly on the front box edge, slight handheld tilt, natural sensor noise. No retouching, unretouched documentary realism, an ordinary phone snapshot of a product on a kitchen table. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream matte marble table. Two cream matte cardboard NOCTA boxes, exactly the box in the reference photograph, lie side by side, one flat and one leaning on it, with a single cream matte individual sachet and one sealed patch on its shiny transparent liner in front of them. Visible cardboard grain, a soft crease on one corner, small dust specks on the marble, short soft shadows to the right. Nothing else on the table. Morning window light, soft, from the left, 08:30. Shallow depth of field, focus exactly on the front box edge, slight handheld tilt, natural sensor noise. No retouching, unretouched documentary realism, an ordinary phone snapshot of a product on a kitchen table. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**

@@ -41,6 +41,28 @@ imágenes ya generadas del anuncio 1.
 | Manuales de Higgsfield, vídeo, GPT Image y referencias | Ver los ficheros de esta carpeta |
 | Imágenes de los anuncios 2 a 25 | **No generadas**: se generan al lanzar cada anuncio |
 
+## Comprobación automática antes de generar
+
+Hay un comprobador que lee los ficheros de `prompts/` y falla si algo no cuadra:
+
+```bash
+python3 nocta/tools/anuncios-qa/comprobar.py
+```
+
+Comprueba cinco cosas:
+
+1. **Cobertura del guion.** Las 15 tomas de cada anuncio tocan todos los bloques del guion real de ese anuncio,
+   que está en `datos/ads25_guiones.json`. Si un bloque se queda sin ninguna toma, ese anuncio está contando otra
+   cosa y hay que rehacer el desglose.
+2. **Quince tomas.** Ni catorce ni dieciséis.
+3. **Palabras prohibidas.** Ninguna toma lleva cinematic, flawless, bokeh, golden hour, 8k ni las demás de la
+   biblia, que son las que convierten una foto de móvil en un render.
+4. **Fidelidad del producto.** Toda toma donde salga el parche o la caja lleva su cláusula al principio y sus
+   fotos de referencia. Es el fallo que más caro sale: sin las fotos, el parche sale deforme.
+5. **Prohibición de texto.** Todos los prompts terminan prohibiendo texto y marcas de agua.
+
+Estado actual: **todo correcto** en los anuncios ya escritos.
+
 ## Aviso de créditos
 
 Las imágenes son baratas; lo caro es el vídeo. Conviene tenerlo claro antes de decidir presupuesto.

@@ -29,8 +29,10 @@ Las reglas que hacen que el parche salga con su forma exacta están en `BIBLIA_V
 | 21 | 3 razones por las que te vuelven cada 3 días | Álex | Sitios 1 y 2 de la biblia, que son EL MISMO ba | 15 | [abrir](prompts/anuncio_21_3_razones_por_las_que_te_vuelven_cada_3_di.md) |
 | 22 | 3 señales de que tus poros necesitan ayuda | Marisol | Sitio 1 de la biblia (baño de día: azulejo bla | 15 | [abrir](prompts/anuncio_22_3_senales_de_que_tus_poros_necesitan_ayuda.md) |
 | 31 | Deja de apretarte la nariz | Álex | Dos de los cinco sitios de la biblia, en una s | 15 | [abrir](prompts/anuncio_31_deja_de_apretarte_la_nariz.md) |
+| 32 | Deja de tratarlos como puntos negros | Marisol | Sitio principal: BAÑO DE NOCHE (sitio 2 de la  | 15 | [abrir](prompts/anuncio_32_deja_de_tratarlos_como_puntos_negros.md) |
+| 37 | ¿Sabías que…? | Álex | Tres de los cinco sitios de la biblia, en la s | 15 | [abrir](prompts/anuncio_37_sabias_que.md) |
 
-> **Pendientes de escribir en esta versión:** anuncios 32, 37, 38, 40, 44, 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
+> **Pendientes de escribir en esta versión:** anuncios 38, 40, 44, 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
 
 ## Las imágenes del anuncio 1
 
