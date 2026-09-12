@@ -16,6 +16,7 @@ imágenes ya generadas del anuncio 1.
 | Referencias reales de cómo se ve y se mueve esto | `REFERENCIAS_VISUALES.md` |
 | Saber qué copiamos de Vue Skin y qué no | `LENGUAJE_VISUAL_VUE.md` |
 | Saber qué modelo usar para cada toma y por qué | `MODELOS_CUAL_ELEGIR.md` |
+| Usar los fotogramas reales de Vue Skin como referencia | `FOTOGRAMAS_VUE.md` |
 | Ver cómo tiene que quedar una toma | `img/a01/` |
 
 ## Las tres cosas que más fallan, y su arreglo en una línea

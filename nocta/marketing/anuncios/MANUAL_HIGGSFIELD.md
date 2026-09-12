@@ -1,13 +1,13 @@
 # MANUAL DE HIGGSFIELD: cómo se editan los anuncios de verdad, paso a paso
 
 **Versión 1.0 · 12 de septiembre de 2026 · NOCTA (parches de nariz de hidrocoloide).**
-Este manual está escrito para la persona que se sienta delante de Higgsfield y genera los 25 anuncios. No genera nada por sí mismo: es el procedimiento que hay que seguir. Los datos vienen de tres sitios y cada afirmación dice de cuál: (1) las instrucciones del flujo oficial `ugc-review-video` v1.1 que el propio Higgsfield sirve por MCP (`get_workflow_instructions` y `get_workflow_bundle_file`, con sus ficheros `references/ugc-board.md`, `ugc-clip.md` y `ugc-character.md`), consultadas en la investigación de esta semana; (2) el catálogo de modelos y precios medidos en nuestra propia cuenta (`models_explore`, `transactions`, `balance`, e historial en `brand/qa/control_calidad_imagenes.md`); (3) la biblia visual de NOCTA (`ads/in/biblia.md`), que son reglas comprobadas generando 22 imágenes reales. El saldo se ha consultado hoy con la API (`balance`, 12/09/2026): **275,93 créditos, plan Plus**. Todo lo que no venga de ahí lleva la marca "sin verificar".
+Este manual está escrito para la persona que se sienta delante de Higgsfield y genera los 25 anuncios. No genera nada por sí mismo: es el procedimiento que hay que seguir. Los datos vienen de tres sitios y cada afirmación dice de cuál: (1) las instrucciones del flujo oficial `ugc-review-video` v1.1 que el propio Higgsfield sirve por MCP (`get_workflow_instructions` y `get_workflow_bundle_file`, con sus ficheros `references/ugc-board.md`, `ugc-clip.md` y `ugc-character.md`), consultadas en la investigación de esta semana; (2) el catálogo de modelos y precios medidos en nuestra propia cuenta (`models_explore`, `transactions`, `balance`, e historial en `brand/qa/control_calidad_imagenes.md`); (3) la biblia visual de NOCTA (`ads/in/biblia.md`), que son reglas comprobadas generando 22 imágenes reales. Todos los precios y el saldo se han vuelto a comprobar contra la API el 12/09/2026 con `balance` y `transactions`: **275,93 créditos, plan Plus**. Lo que no aparece en ese historial de cargos lleva la marca **sin verificar**, aunque la investigación lo diera por bueno.
 
 ---
 
 ## Índice
 
-1. [Resumen: las siete decisiones que cambian hoy](#1-resumen-las-siete-decisiones-que-cambian-hoy)
+1. [Resumen: las ocho decisiones que cambian hoy](#1-resumen-las-ocho-decisiones-que-cambian-hoy)
 2. [Qué es cada herramienta de Higgsfield y para qué se usa de verdad](#2-qué-es-cada-herramienta-de-higgsfield-y-para-qué-se-usa-de-verdad)
 3. [El flujo canónico completo, paso a paso](#3-el-flujo-canónico-completo-paso-a-paso)
 4. [Boards de 8 viñetas contra 15 imágenes sueltas: cuál elegimos y por qué](#4-boards-de-8-viñetas-contra-15-imágenes-sueltas-cuál-elegimos-y-por-qué)
@@ -23,7 +23,7 @@ Este manual está escrito para la persona que se sienta delante de Higgsfield y 
 
 ---
 
-## 1. Resumen: las siete decisiones que cambian hoy
+## 1. Resumen: las ocho decisiones que cambian hoy
 
 1. **Se acabaron las 15 imágenes sueltas por anuncio.** Un anuncio de 30 segundos son **2 imágenes de "board" y 2 clips**, no 15 y 15. El board es una hoja horizontal 21:9 con ocho viñetas verticales 9:16 en una sola fila, y un único clip de Seedance la convierte en 15 segundos con ocho cortes duros dentro (flujo `ugc-review-video` v1.1).
 2. **Un anuncio de 30 s pasa de ~525 créditos a ~214.** Los 25 anuncios pasan de más de 13.000 créditos a unos 5.350 (precios medidos en nuestra cuenta).
@@ -31,7 +31,8 @@ Este manual está escrito para la persona que se sienta delante de Higgsfield y 
 4. **La consistencia no se describe, se apila.** Mismo `character_media_id` en todo, board anterior como referencia del siguiente, y Angle Lock del producto. Describir a Bea con palabras no sirve.
 5. **Los clips se generan mudos** (`generate_audio: false`). La voz en español de Seedance ya se comprobó que no se entiende ("filimentos se vacales", en nuestra propia QA). La locución va en el montaje local.
 6. **Montaje, subtítulos y música, fuera de Higgsfield.** Con ffmpeg y Whisper cuestan cero créditos y ya lo tenemos hecho en `maquina/producir.py`.
-7. **Con 275,93 créditos no caben 25 anuncios.** Dan para **un** anuncio piloto de 30 s con colchón de reintentos. Hay que decidir recarga o plan superior antes de generar el anuncio número 2.
+7. **Con 275,93 créditos no caben 25 anuncios.** Dan para **un** anuncio piloto de 30 s con colchón de reintentos. Hay que decidir plan antes de generar el anuncio número 2.
+8. **La recarga automática está encendida y ya ha saltado siete veces.** En `transactions` hay siete asientos `Auto Top-Up` de +200 créditos, el último hoy a las 19:20. Cuando el saldo se acaba no se para la producción: se cobra otra recarga. Hay que mirar la factura y decidir si se deja encendida antes de lanzar la tanda (punto 9.5).
 
 ---
 
@@ -43,14 +44,14 @@ Esta tabla es la traducción operativa del catálogo del MCP (`models_explore`, 
 |---|---|---|
 | **Soul 2.0** (`soul_2`) | La **foto base de cada avatar**: una persona limpia, 3:4, calidad 2k, sin nada en las manos. Ese `job_id` es el `character_media_id` que se reutiliza en todo el proyecto. 0,12 cr/imagen. | Para los planos del anuncio. No es un generador de escenas con producto: si le metes el bote o la caja, la hornea en la imagen y rompe la composición posterior (`ugc-character.md`, sección "No Products in the Character Image"). |
 | **Soul ID** | Identidad **entrenada** con 20-80 fotos de la misma persona; entrena en minutos y luego se elige en la pestaña Character y como Element dentro de Seedance. Sirve para mantener una cara a lo largo de campañas enteras. | Como palanca principal de consistencia dentro de un anuncio. El flujo oficial de UGC **no la usa**: usa una sola imagen de referencia reutilizada. Y la propia ayuda admite que da "claramente la misma persona", no consistencia píxel a píxel. |
-| **GPT Image 2** (`gpt_image_2`) | Generar el **board 21:9 de ocho viñetas**. Calidad `medium` por defecto (2,5 cr); el board 21:9 a 2k salió a 6,5 cr en nuestra cuenta. | En calidad `high` por sistema: son 11 cr y nuestro propio A/B dijo que "la diferencia no es apreciable a tamaño web". Reservar `high` solo para el packshot donde el texto del envase tiene que leerse. |
+| **GPT Image 2** (`gpt_image_2`) | Generar el **board 21:9 de ocho viñetas**. El modelo viene de fábrica en `quality: 'low'` y `resolution: '1k'`, así que hay que escribir `quality: 'medium'` y `resolution: '2k'` a mano en cada llamada. Una imagen suelta en `medium` son 2,5 cr; el único board 21:9 que hay en el historial costó 6,5 cr. | En calidad `high` por sistema: son 11 cr y nuestro propio A/B dijo que "la diferencia no es apreciable a tamaño web". Reservar `high` solo para el packshot donde el texto del envase tiene que leerse. |
 | **Seedream v5 Pro** (`seedream_v5_pro`) | El **pase de de-slop** sobre el board ya generado: mata la piel de plástico sin tocar el encuadre. 3 cr por pase. | Para crear imágenes nuevas dentro de este flujo, o para reencuadrar. Su trabajo aquí es micro-realismo, no composición. |
 | **Seedream v5 Lite** (`seedream_v5_lite`) | Único uso: **reintento del de-slop** cuando el Pro lo bloquea la moderación. Una vez. Si vuelve a fallar, se usa el board crudo y se anota. | Como alternativa barata por defecto: la versión que trae la receta validada es la Pro. |
-| **Seedance 2.5** (`seedance_2_5`, `mode: omni_reference`) | El **clip**: convierte un board en 15 s verticales con ocho cortes duros internos, apilando referencias (board + personaje + producto). 6,5 cr/segundo a 720p. | A 1080p en fase de test (casi duplica el coste por segundo). Y con `generate_audio: true` en español, por lo dicho en el punto 5 del resumen. |
+| **Seedance 2.5** (`seedance_2_5`, `mode: omni_reference`) | El **clip**: convierte un board en 15 s verticales con ocho cortes duros internos, apilando referencias (board + personaje + producto). Admite de 4 a 30 s y las referencias van con `role: 'image_references'`, nunca `image`. 6,5 cr/segundo a 720p: los dos clips de 15 s del historial costaron 97,5 cr cada uno. | A 1080p en fase de test (casi duplica el coste por segundo). Y con `generate_audio: true` en español, por lo dicho en el punto 5 del resumen. |
 | **Cinema Studio** (`cinematic_studio_3_0`, `cinematic_studio_video_v2`) | Cine de verdad: hasta 4K, 15 s, control de género, speedramp, `multi_shots`. Para un hero shot de marca. | Para UGC. El look de cine es justo lo que convierte un vídeo de creadora en un anuncio, y entonces deja de funcionar como UGC. |
 | **Marketing Studio** (`marketing_studio_video`) | Ruta rápida "de un clic": plantillas por categoría con `hook_id` (el qué) y `setting_id` (el dónde), solo en los presets UGC, Tutorial, Unboxing, Product Review y UGC Virtual Try On. También acepta `ad_reference_id` para recrear la estructura de un anuncio de referencia. | Cuando el producto tiene una geometría difícil, que es nuestro caso: da menos control sobre el troquel del parche. Y ojo: `hook_id`/`setting_id` y `ad_reference_id` son **mutuamente excluyentes**, y el avatar y el producto **no** se heredan del `ad_reference` (hay que pasarlos en `avatar_ids` y `product_ids`). |
 | **Ad Multiplier** (`ad_multiplier`) | Coge un vídeo de 4-30 s y genera versiones independientes sustituyendo personas, producto, ropa, fondo o un texto concreto, conservando movimiento, encuadre, cortes y ritmo. ≈6,4 cr por segundo del vídeo fuente. | **Como entregable sobre anuncios de la competencia.** El vídeo base no es nuestro, y la moderación de Higgsfield ya nos bloqueó tres intentos por nsfw. Solo como storyboard interno. |
-| **Genjutsu — motion control** (`hf_mult_motion_control`) | Transfiere el movimiento de un vídeo de referencia a personajes de imágenes de referencia. 26 cr por clip de 3,5 s (medido). | Para planos normales. Solo para los 3-4 gestos de manos imposibles de acertar por prompt: el despegado con estiramiento y la presión en V, usando nuestros clips de `maquina/gestos/` como referencia. |
+| **Genjutsu — motion control** (`hf_mult_motion_control`) | Transfiere el movimiento de un vídeo de referencia a personajes de imágenes de referencia. Los 26 cr por clip de 3,5 s que circulan en la investigación están **sin verificar**: en `transactions` no hay ni un solo cargo con ese nombre, y el único −26 del historial es un Seedance de 4 s. Antes de meterlo en el presupuesto, lanza un clip corto y mira el cargo. | Para planos normales. Solo para los 3-4 gestos de manos imposibles de acertar por prompt: el despegado con estiramiento y la presión en V, usando nuestros clips de `maquina/gestos/` como referencia. |
 | **Genjutsu — replace object** (`hf_mult_replace_object`) | Sustituye objetos dentro de un vídeo fuente propio. Acepta vídeos de 3-30 s y hasta 30-40 imágenes de referencia, salida hasta 1080p. | Como atajo para cambiar la caja en clips ya rendidos: sale más caro que regenerar el clip si el board es bueno. |
 | **Draw-to-Video** | Dibujas flechas, notas y números sobre la imagen de partida ("rotate", "open hand") y los convierte en movimiento y orden de acciones. | Cuando el prompt escrito ya funciona. Es una muleta para el plano de colocación del parche (flecha puente → punta), no un método general. |
 | **Popcorn** | Storyboard multiplano de hasta 8 fotogramas manteniendo personaje, luz y atmósfera. Es el mismo principio que el board 21:9. | Si ya estás usando el board 21:9 con `gpt_image_2`, que es lo que el flujo oficial pide y lo que está calibrado para Seedance. |
@@ -70,7 +71,7 @@ Este es el flujo que trae escrito el propio Higgsfield en el bundle `ugc-review-
 
 ### Paso 0 · Antes de tocar nada
 
-Se escribe el guion completo en español, con el reparto de planos, **antes** de generar una sola imagen. Se decide duración. La tabla de duración a boards del flujo oficial es:
+Se escribe el guion completo en español, con el reparto de planos, **antes** de generar una sola imagen. La duración no se elige a ojo: se cuenta el guion leído en voz alta a velocidad normal y se redondea hacia arriba al tramo de la tabla, porque cada board son 15 s de clip y no se parten por la mitad. La tabla de duración a boards del flujo oficial es:
 
 | Duración del anuncio | Boards / clips |
 |---|---|
@@ -105,7 +106,7 @@ Cada board tiene **exactamente ocho** viñetas. Ni diez, ni doce, ni dos filas, 
 
 Bandas de distancia: **TIGHT** (primerísimo plano y macro), **MID** (medio y medio corto), **WIDE** (tres cuartos, cintura, cuerpo entero, producto extendido). Cada banda tiene que aparecer al menos dos veces en los ocho slots, y dos vecinos nunca comparten banda.
 
-Así se reparten nuestras 15 tomas de la biblia en 16 slots:
+Así se reparten las tomas de la biblia en los 16 slots. La cuenta exacta, porque la de "15 tomas en 16 slots" no sale: entran **14 de las 15 tomas**, cinco de ellas desdobladas en dos beats (8/8b, 10/10b, 12/12b, 13a/13b) y dos parejas fundidas en un solo slot (3+4 y 14+15). La que no entra es la **toma 2, el gancho B**: no es un plano más del anuncio, es la variante del slot 1 para el test A/B, y se genera aparte regenerando solo el board A con ese primer slot cambiado.
 
 **Board A — gancho, problema, entrada del producto**
 
@@ -223,16 +224,16 @@ El plan que teníamos era: 15 imágenes por anuncio con GPT Image, 15 conversion
 **Prompt exacto. Se copia literal, no se reescribe:**
 
 ```
-KEEP EXACTLY the framing, composition, slot layout, camera distances, poses, subjects and product of this horizontal storyboard sheet and every one of its side-by-side vertical slots — no reframe, no zoom, no crop, no re-layout, no change to the scene, to any person's face / hair / body, or to the product design. CHANGE ONLY micro-realism, applied identically in every slot: true-to-life pore-level skin with natural texture and fine vellus hair, real material detail, even natural daytime light with gentle highlight roll-off and faint true sensor noise, a flat authentic iPhone photo, deep focus. PRESERVE each face's exact shape / width / proportions 1:1 — do NOT squeeze / narrow / slim / stretch any face. AVOID AI-slop: waxy plastic skin, airbrushed poreless skin, beauty-filter smoothing, over-saturation, HDR glow / bloom / halos, oversharpening, teal-orange grade, shallow depth of field, bokeh, cinematic / DSLR look. Keep the NOCTA carton's own printed label exactly as in the reference, no added text, no watermark, no baked slot labels.
+KEEP EXACTLY the framing, composition, slot layout, camera distances, poses, subjects and product of this horizontal storyboard sheet and every one of its side-by-side vertical slots — no reframe, no zoom, no crop, no re-layout, no change to the scene, to any person's face / hair / body, or to the product design. CHANGE ONLY micro-realism, applied identically in every slot: true-to-life pore-level skin with natural texture and fine vellus hair, real material detail, even natural daytime light with gentle highlight roll-off and faint true sensor noise, a flat authentic iPhone photo. KEEP the reference sheet's existing depth of field exactly as it is — do not add background blur, do not sharpen a background that is already soft. PRESERVE each face's exact shape / width / proportions 1:1 — do NOT squeeze / narrow / slim / stretch any face. AVOID AI-slop: waxy plastic skin, airbrushed poreless skin, beauty-filter smoothing, over-saturation, HDR glow / bloom / halos, oversharpening, teal-orange grade, bokeh, cinematic / DSLR look. Keep the NOCTA carton's own printed label exactly as in the reference, no added text, no watermark, no baked slot labels.
 ```
 
 Tres detalles que no son decorativos:
 
 - La cláusula `PRESERVE each face's exact shape / width / proportions 1:1` está porque **Seedream tiende a adelgazar caras**. Sin esa frase, Bea sale más estrecha después del de-slop que antes, y entonces el board B ya no case con el A.
-- `deep focus` y la prohibición de `shallow depth of field, bokeh` están a propósito. Nuestra biblia pide poca profundidad de campo; eso se resuelve en el Anexo C.
+- El prompt original del flujo pide `deep focus` y mete `shallow depth of field` en su lista de AI-slop. La biblia pide justo lo contrario y está comprobada generando 22 imágenes, así que en la versión NOCTA se quitan las dos cosas y se sustituyen por la orden de no tocar el foco que ya trae el board. **No se copia la versión original.** Detalle en el Anexo C, punto 1.
 - La última frase es la versión NOCTA. El prompt original del flujo dice `Keep the product blank / unbranded`, que borraría nuestro logotipo. **No se copia esa versión.**
 
-**Si la moderación lo bloquea:** un reintento con `seedream_v5_lite`. Si también falla, se usa el board crudo, se anota en el parte del anuncio y se revisa con más lupa el QA de piel.
+**Si la moderación lo bloquea:** un reintento con `seedream_v5_lite`. Si también falla, se usa el board crudo, se anota en el parte del anuncio y, antes de lanzar el clip, se abre cada viñeta al 100 % de zoom buscando piel de cera: si la macro de poros sale alisada o los poros salen en cuadrícula, se regenera el board (6,5 cr) en lugar de gastar 97,5 cr en un vídeo que ya nace mal.
 
 ---
 
@@ -242,7 +243,7 @@ La consistencia no se pide, se construye. Son cuatro mecanismos que funcionan a 
 
 ### 6.1 Lo que funciona
 
-**1. El mismo `character_media_id` en todas las generaciones.** La imagen del avatar va como `role: 'image'` en cada board y en cada clip del proyecto, y en el prompt va esta frase literal:
+**1. El mismo `character_media_id` en todas las generaciones.** La imagen del avatar se adjunta en todos los boards y en todos los clips. Ojo con el rol, que cambia según el modelo y con el rol equivocado la llamada falla: en `gpt_image_2` y en `soul_2` es `role: 'image'`; en `gpt_image_2_5`, `seedream_v5_pro` y `seedance_2_5` es `role: 'image_references'` (comprobado con `models_explore` el 12-09-2026). En el prompt va esta frase literal:
 
 ```
 @Image2 is the character reference. The same person appears in every slot with identical face, hair, body, and identity. Do not alter facial features, hairstyle, body proportions, or skin tone between slots.
@@ -344,7 +345,13 @@ El parche se clona con una facilidad especial: uno en la nariz y otro en la mano
 Exactly one NOCTA carton and exactly one patch in frame wherever they appear — never duplicated, never a look-alike clone.
 ```
 
-Y encaja con la regla de los cinco estados de la biblia: cada imagen está en un estado y solo uno. Mezclar el estado 4 (a medio quitar) con el 5 (parche en la mano, nariz limpia) es la imagen que hay que repetir y que cuesta dinero. Se escribe el número de estado al principio de cada descripción de slot.
+Y encaja con la regla de los cinco estados de la biblia: cada imagen está en un estado y solo uno. Mezclar el estado 4 (a medio quitar) con el 5 (parche en la mano, nariz limpia) es la imagen que hay que repetir y que cuesta dinero. El número de estado se escribe al principio de cada descripción de slot, con esta forma exacta:
+
+```
+STATE 3 — patch saturated: the patch is opaque white in blotches on the nose, still translucent at its edges, nothing in her hands.
+```
+
+Los cinco estados de la biblia, para copiar la etiqueta que toque: 1 sin parche (poros llenos, filamentos oscuros), 2 recién puesto (traslúcido, nariz igual de llena por debajo), 3 saturado (blanco a manchas, por la mañana), 4 a medio quitar (un ala despegada y enrollada, una sola frontera, la piel ya al aire limpia), 5 fuera (el parche en la mano con manchas y tapones, la nariz limpia).
 
 ### 7.5 Una sola acción por corte
 
@@ -375,7 +382,7 @@ Seedance solo convierte la frontera entre dos slots en un corte nítido cuando l
 
 Reglas mecánicas:
 
-- El POV cambia siempre que se pueda (SELFIE ↔ STATIC).
+- El POV alterna SELFIE ↔ STATIC salvo cuando la acción necesita las dos manos. La cadencia por defecto del flujo oficial, que se copia tal cual cuando no hay más restricciones, es: SELFIE-MID → STATIC-WIDE → STATIC-MACRO → SELFIE-TIGHT → STATIC-MID → STATIC-MACRO → STATIC-WIDE → SELFIE-TIGHT. Cuando el POV no puede cambiar (el board B, que es casi todo STATIC), el corte lo tienen que forzar los otros tres ejes, y sobre todo el cambio de fondo.
 - La banda de distancia **siempre** cambia entre vecinos: TIGHT, MID, WIDE, rotando, y cada banda al menos dos veces en los ocho.
 - La acción física es distinta en cada slot; nunca la misma configuración de mano y producto dos veces seguidas.
 - El cuarto eje es el más potente: **cambiar de fondo o de micro-localización es el forzador de corte más fuerte que existe**. Por eso el salto dormitorio → baño de mañana entre los slots 4 y 5 del board B es tan limpio.
@@ -445,10 +452,10 @@ soft cool neutral daylight from the left window, one motivated source, consisten
 Ruido **digital**, nunca grano de película. Y la biblia añade una regla propia para los planos de noche: "de noche" no significa nada, hay que describir las consecuencias de la luz.
 
 ```
-IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky.
+IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black. No daylight, no soft window light, no blue sky. No mirror, no reflection, no reflective surface anywhere, no tiles reflected in the window, no face returned by the tap.
 ```
 
-(Ojo: esa última frase menciona reflejo en la ventana. Ver Anexo C, punto 3.)
+Es el texto literal de la biblia, regla 3, que ya prohíbe por su cuenta el reflejo de los azulejos en la ventana, el espejo y el grifo devolviendo la cara. No hay nada que negociar ahí con el flujo oficial: los dos dicen lo mismo.
 
 ### 7.10 Texto horneado y galimatías
 
@@ -514,6 +521,13 @@ Dos leyes del flujo que son las que separan un anuncio que funciona de uno que p
 
 Para NOCTA: el gancho abre con Bea ya pellizcándose la punta de la nariz. El pico único va en la revelación del parche usado a contraluz, con mandíbula que cae y se relaja en sonrisa más retroceso de hombros, no un grito. El beat de boca cerrada va en el plano de dormir, que ya es mudo por naturaleza.
 
+Esto no se resume en el prompt, se escribe. Bloque literal que va en la **Dynamic Description** del clip, uno por anuncio:
+
+```
+Cut 1 opens already mid-motion — her right hand is already pinching the tip of her nose before the first frame; never a settled pose, never a person waiting to start talking. The first spoken word lands between 0.0 and 0.4 s, with no breath before it.
+ONE unguarded micro-beat in this clip: mid-sentence her eyes flick away from the lens and come back, followed by a quick small self-correction. ONE silly beat: a short lopsided grimace. ONE closed-mouth beat: lips pressed together, no voice, about two seconds. Exactly ONE emotional peak, motivated by the product, carried by a body event — her shoulders pull back — and not by the face alone.
+```
+
 ### 7.15 La voz
 
 Seedance 2.5 genera voz nativa con `mode: omni_reference` y `generate_audio: true`, y el flujo oficial dice que no se llame nunca a `generate_audio` por separado. **En nuestro caso hacemos lo contrario, y con motivo:** en nuestra propia QA está documentado que la voz que Seedance genera en español no se entiende ("filimentos se vacales") y hubo que sustituirla por locución TTS.
@@ -536,7 +550,7 @@ La frontera es sencilla: **Higgsfield genera clips; todo lo demás se hace en el
 | Locución en español | Fuera en el montaje (audio generado con Seed Audio, ≈0,3 cr/línea) | La voz nativa en español no se entiende. |
 | Subtítulos | **Fuera** (Whisper + quemado) | Los tiempos tienen que salir de una transcripción **palabra a palabra** del audio final, nunca de beats planificados. Y el texto jamás se hornea en la generación. |
 | Música | **Fuera** | Por defecto, sin música. Si se pone, una sola línea, por debajo de la voz y **sin letra**: la letra pelea con el lip-sync. |
-| Grado de color | **Fuera** | Y muy poco: cualquier grado visible rompe el look UGC. |
+| Grado de color | **Fuera** | Nada de LUT ni de virado. Como mucho, igualar la exposición entre dos clips si uno sale visiblemente más oscuro. Un grado que se note rompe el look UGC. |
 | Cierre de marca | **Fuera** | Es una tarjeta estática. |
 | Upscale | Dentro, y solo de ganadores | No entra en "unlim". |
 
@@ -553,35 +567,64 @@ No son precios de nota de prensa: salen del historial de `transactions` y de `br
 | Operación | Coste |
 |---|---|
 | Soul V2, 1 imagen | 0,12 cr |
-| Nano Banana Pro, 1 imagen | ≈1,9 cr |
+| Nano Banana Pro, 1 imagen | **2 cr** (medido: decenas de cargos de −2 exactos; la investigación decía 1,9) |
 | GPT Image 2.5 Flare, 1k, calidad `medium`, 9:16 | **1 cr** (medido en `transactions` el 12-09-2026, 27 cargos seguidos de −1 al generar el anuncio 1) |
 | GPT Image 2.5 Flare, 1k, calidad `high`, 9:16 | 2 cr |
 | GPT Image 2.5 Flare, 2k, calidad `medium` | 1,5 cr |
 | GPT Image 2.5 Flare, 2k, calidad `high` | 3 cr |
 | GPT Image 2, calidad `medium` | 2,5 cr (modelo anterior, cifra del QA de la semana pasada) |
 | GPT Image 2, calidad `high` | 11 cr (modelo anterior) |
-| GPT Image 2, board 21:9 a 2k | 6,5 cr |
+| GPT Image 2, board 21:9 | 6,5 cr (un solo cargo, 06-09-2026). **La resolución de ese cargo no consta**: la investigación lo apunta como 4k y este manual lo daba por 2k. Ver Anexo C, punto 6 |
 | Seedream 5 Pro, 1 pase | 3 cr |
 | `remove_background` | 1 cr |
-| Seedance 2.5 a 720p | 6,5 cr por segundo |
+| Seedance 2.5 a 720p | 6,5 cr por segundo. **Los dos clips de 15 s del historial costaron 97,5 cr cada uno**: la cifra que sostiene todo el presupuesto está medida, no extrapolada |
 | Seedance 2.5 a 480p | ≈2,5 cr por segundo (medido a 4 s = 10 cr; la extrapolación a 15 s es **sin verificar**) |
 | Ad Multiplier | ≈6,4 cr por segundo del vídeo fuente |
-| Genjutsu motion control, clip de 3,5 s | 26 cr |
-| Seed Audio, 1 línea de locución | ≈0,3 cr |
+| Genjutsu motion control, clip de 3,5 s | 26 cr, **sin verificar**: no hay ningún cargo con ese nombre en `transactions` |
+| Seed Audio, 1 línea de locución | **0,1-0,5 cr** según lo larga que sea; media de los 40 cargos del historial ≈0,33, y el mayor es 1,2 |
 | Montaje, subtítulos, cierre (local) | 0 cr |
 
-Seedance a 720p en clips completos: 4 s = 26 cr; 5 s = 32,5; 6 s = 40; **15 s = 97,5**.
+Seedance a 720p, clip completo:
 
-Plan: Plus son 1.200 créditos al mes (≈47-59 $ según las fuentes de la investigación); Ultra son 3.000. **Los créditos de suscripción caducan al final de cada ciclo de facturación: no se acumulan.** Los packs de recarga tienen una ventana de 90 días. Las dos quejas recurrentes de la comunidad son exactamente esas: la caducidad y los reembolsos de generaciones fallidas.
+| Duración | Coste | ¿Está en `transactions`? |
+|---|---|---|
+| 4 s | 26 cr | sí |
+| 5 s | 32,5 cr | sí, varios cargos |
+| 6 s | 40 cr | no, extrapolado de 6,5 cr/s |
+| **15 s** | **97,5 cr** | **sí, dos cargos el 06-09-2026** |
+
+Plan y entradas de crédito:
+
+| Concepto | Cifra | De dónde sale |
+|---|---|---|
+| Créditos de suscripción que entran cada ciclo | **1.000 cr** | medido: el único asiento `Subscription Credits` del historial, +1.000 el 25-08-2026 |
+| Plus, cifra de catálogo | 1.200 cr/mes, ≈47-59 $ | investigación, **sin verificar** contra nuestra cuenta |
+| Ultra | 3.000 cr/mes | investigación, **sin verificar** |
+| Recarga automática | +200 cr por disparo | medido: siete asientos `Auto Top-Up` entre el 02-08 y el 12-09 |
+| Caducidad | los créditos de suscripción caducan al cerrar el ciclo, no se acumulan | investigación |
+| Packs de recarga | ventana de 90 días | investigación |
+
+Dos consecuencias que cambian el calendario. La primera: el ciclo se renovó el **25-08**, así que el siguiente corte cae alrededor del **25-09** y lo que quede sin gastar se pierde; el piloto hay que generarlo antes de esa fecha. La segunda: para planificar hay que usar **1.000 créditos por ciclo**, que es lo medido, no los 1.200 del catálogo, hasta que se vea el próximo asiento.
 
 
-> **Corrección medida el 12-09-2026.** Las 15 tomas del anuncio 1 se generaron con **GPT Image 2.5 Flare a 1k,
-> calidad media y 9:16, y cuestan 1 crédito por imagen**, no 2,5. Está comprobado en el historial de
-> `transactions`: 27 cargos consecutivos de −1 crédito, que son las 15 tomas finales más las 12 repeticiones que
-> hicieron falta hasta que el parche salió con su forma. Eso cambia la aritmética de las imágenes: **15 imágenes
-> por anuncio son 15 créditos**, y con repeticiones 18-20. Las 360 imágenes de los 24 anuncios que faltan salen
-> por **430-480 créditos**, no por miles. Lo que sigue siendo caro es el **vídeo**, no la imagen: ahí es donde se
-> va el presupuesto y donde el método de boards ahorra de verdad.
+> **Corrección medida el 12-09-2026, con el historial delante.** Las 15 tomas del anuncio 1 se generaron con
+> **GPT Image 2.5 Flare, 9:16**, y a 1k con calidad media cuestan **1 crédito por imagen**, no 2,5. Hasta ahí, bien.
+> Lo que no era cierto es lo que decía la versión anterior de este manual ("27 cargos consecutivos de −1"). El
+> historial de ese día tiene **68 cargos** de GPT Image 2.5 Flare, no 27, y no son todos iguales:
+>
+> | Cargo | Cuántos | Qué es | Total |
+> |---|---|---|---|
+> | −1 cr | 48 | 1k, calidad media | 48 cr |
+> | −1,5 cr | 19 | 2k, calidad media | 28,5 cr |
+> | −3 cr | 1 | 2k, calidad alta | 3 cr |
+> | **Total** | **68** | | **79,5 cr** |
+>
+> Dos cosas que hay que tragarse. Una: la parte de imagen del anuncio 1 costó **79,5 créditos**, no 15, porque
+> hicieron falta **más de cuatro generaciones por toma final** hasta que el parche salió con su forma. Dos: esa
+> tasa de repetición real (unas 4,5 tiradas por imagen buena) es el número que hay que usar para el colchón, y es
+> mucho peor que el 10-15 % de pérdidas por moderación del flujo oficial. Aun así, la conclusión de fondo no se
+> mueve: lo caro es el **vídeo**. Con el método antiguo, las imágenes de los 24 anuncios que faltan rondarían los
+> **1.900 créditos** con esta tasa de repetición, y los vídeos, más de doce mil.
 
 ### 9.2 Los 25 anuncios, con cada método
 
@@ -593,17 +636,21 @@ Plan: Plus son 1.200 créditos al mes (≈47-59 $ según las fuentes de la inves
 | Método antiguo, 15 imágenes + 15 clips de 5 s | ≈525 cr | **≈13.125 cr** |
 | Borrador entero a 480p para validar ritmo (30 s) | ≈94 cr | ≈2.350 cr |
 
-Hay que sumar un **10-15 % de generaciones perdidas** por moderación y fallos. Con el método de boards y anuncios de 30 s: **presupuesto realista ≈6.150 créditos** para los 25.
+A esto hay que sumarle las generaciones que se tiran. El flujo oficial presupuesta un **10-15 %** por moderación y fallos técnicos, y con eso el método de boards sale a **≈6.150 créditos** para los 25. Pero nuestra propia tasa de repetición medida el 12-09 fue mucho peor (4,5 tiradas por imagen final), así que hay que tomar ese 6.150 como **suelo, no como presupuesto**. La diferencia es que en el método de boards la repetición cara se corta en el QA del board (9,5 cr) y no en el clip (97,5 cr): el número que hay que vigilar semana a semana es cuántos boards se regeneran por anuncio. Si salen más de dos, el problema está en el prompt, no en el modelo.
 
 ### 9.3 Qué se puede hacer hoy con 275,93 créditos
 
 Saldo consultado con la API hoy: **275,93 créditos, plan Plus**.
 
-**Lo que SÍ cabe (elige una):**
+**Lo que SÍ cabe. Se elige una, no se mezclan:**
 
-- **Opción A, la recomendada.** Un anuncio piloto completo de 30 s con el método de boards: 214 cr. Quedan **61,93** de colchón, que dan para seis regeneraciones de board con su de-slop (9,5 cr cada una). Es exactamente lo que hace falta para aprender el flujo sin quemar nada.
-- **Opción B.** Dos anuncios de 15 s (107 + 107 = 214 cr), mismo colchón. Sirve si lo que se quiere es un test A/B de gancho rápido.
-- **Opción C, la más barata para aprender.** Rodar el piloto entero a 480p (≈94 cr) solo para validar composición, ritmo de cortes y manos; después relanzar a 720p solo el tramo que valga (97,5 cr reutilizando el board ya limpio). Total ≈192 cr, quedan ≈84. La extrapolación del precio de 480p a 15 s es **sin verificar**: haz un clip de prueba de 4 s (10 cr) y confirma la tarifa antes de lanzar el de 15 s.
+| Opción | Qué se hace | Coste | Sobran | Para qué sirve |
+|---|---|---|---|---|
+| **A, la recomendada** | Un anuncio piloto completo de 30 s con boards | 214 cr | 61,93 cr, seis regeneraciones de board con su de-slop | Aprender el flujo entero de una vez |
+| **B** | Dos anuncios de 15 s | 107 + 107 = 214 cr | 61,93 cr | Test A/B de gancho |
+| **C, la más barata** | Piloto entero a 480p y después solo el tramo bueno a 720p | ≈94 + 97,5 = ≈192 cr | ≈84 cr | Validar composición, ritmo de cortes y manos antes de pagar el 720p |
+
+En la opción C, el precio de 480p a 15 s está **sin verificar**: lo único medido son cargos de 10 cr por clips de 4 s. Antes de lanzar el de 15 s, tira un clip de prueba de 4 s (10 cr) y mira el cargo real en `transactions`.
 
 **Lo que NO cabe:**
 
@@ -613,7 +660,15 @@ Saldo consultado con la API hoy: **275,93 créditos, plan Plus**.
 
 **Nota sobre 1080p:** la investigación dice que 1080p "casi duplica el coste por segundo" respecto a 720p, pero no tenemos el precio medido en nuestra cuenta. Trátalo como **sin verificar** y no lo uses hasta comprobarlo con un clip corto.
 
-**Aviso de cifras que no cuadran.** El encargo de este manual dice 287,93 créditos, la investigación de la semana decía 151,43 y la API devuelve hoy 275,93. He usado la API. La diferencia no cambia ninguna conclusión: con cualquiera de las tres cifras da para un anuncio y no da para dos.
+**Por qué bailan las cifras de saldo, ya resuelto.** El encargo de este manual decía 287,93 créditos, la investigación de la semana decía 151,43 y la API devuelve hoy 275,93. No es que nadie se equivocara: el historial enseña un asiento `Auto Top-Up` de **+200 créditos a las 19:20 de hoy**, entre una consulta y otra. Con cualquiera de las tres cifras la conclusión es la misma: da para un anuncio y no da para dos.
+
+### 9.5 La recarga automática está encendida, y eso cambia la decisión
+
+En `transactions` hay **siete asientos `Auto Top-Up` de +200 créditos** entre el 02-08 y el 12-09 de este año. Significa que la cuenta tiene el auto-refill activo: cuando el saldo baja, Higgsfield compra créditos y los cobra sin preguntar. Tres consecuencias:
+
+1. **El saldo no es un tope.** Lanzar la tanda de 25 anuncios sin tocar nada no dará un error de "créditos insuficientes": irá comprando recargas de 200 en 200 hasta llegar a los ≈6.150 créditos, es decir, unas treinta recargas. Eso no es una decisión de producción, es una factura.
+2. **Hay que decidirlo antes de generar el piloto, no después.** O se apaga el auto-refill y se trabaja con tope duro, o se sube a un plan que cubra el ciclo. Las dos son válidas; lo que no vale es dejarlo como está y descubrirlo en el extracto.
+3. **El saldo tampoco se lo come solo la generación.** En el historial hay cargos de `Claude Opus 5` y `Web Search`: el trabajo del agente también gasta créditos de esta misma bolsa. El colchón de 61,93 del piloto no es solo para reintentos de imagen.
 
 ### 9.4 Qué hacer con el saldo, en orden
 
