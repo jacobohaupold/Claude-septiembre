@@ -4,6 +4,13 @@
 
 > La frase más honesta del estudio: **la ficha de Alibaba no es el precio**. El precio de la ficha es el 55–70 % de lo que vas a pagar por tener el producto en casa listo para vender. El resto son muestras, courier, tarjeta, IVA a la importación, gestión aduanera del courier y la caja. Está calculado en la sección 9 con cifras reales. Y la segunda frase honesta: **nada de lo que dice una ficha sustituye a una muestra sobre tu nariz comparada con una caja de Vue**.
 
+> **Hay un segundo estudio, más reciente y más profundo.** Este documento cubre los proveedores que se
+> localizaron buscando en Alibaba y Tradekorea. El estudio de las capturas que enviaste está en
+> [`ESTUDIO_PROVEEDORES_ALIBABA.md`](ESTUDIO_PROVEEDORES_ALIBABA.md): investiga a cada proveedor en fuentes
+> independientes de Alibaba (registros FDA, códigos NDC, fórmulas reales), separa fábricas de intermediarios con
+> prueba documental, distingue hidrocoloide auténtico de hidrogel y trae el correo ya redactado para cada uno.
+> Si vas a escribir a alguien hoy, empieza por ese.
+
 ## Índice de esta parte
 
 1. Qué se ha mirado y qué no
