@@ -422,7 +422,7 @@
       $('#gifts-list', giftsCard).innerHTML = giftRows.map((g, i) => `
         <div class="fld--row" data-gi="${i}" style="align-items:end">
           <div class="fld"><label>Importe mínimo (€)</label><input type="number" step="0.01" data-gf="threshold" value="${esc(g.threshold ?? '')}"></div>
-          <div class="fld" style="position:relative"><label>Regalo</label><input type="text" data-gf="label" value="${esc(g.label ?? '')}"><button type="button" class="btn btn--s btn--d" data-gdel="${i}" style="position:absolute;right:0;top:-2px">✕</button></div>
+          <div class="fld" style="position:relative"><label>Regalo</label><input type="text" data-gf="label" value="${esc(g.label ?? '')}"><button type="button" class="btn btn--s btn--d" data-gdel="${i}" aria-label="Quitar este tramo" title="Quitar" style="position:absolute;right:0;top:-2px">✕</button></div>
         </div>`).join('') || '<p class="muted xs">Sin tramos.</p>';
       $$('[data-gdel]', giftsCard).forEach(b => b.onclick = () => { giftRows.splice(Number(b.dataset.gdel), 1); drawGifts(); });
     };

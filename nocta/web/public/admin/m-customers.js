@@ -8,13 +8,15 @@
     .chipbar{display:flex;gap:6px;flex-wrap:wrap}
     .chip{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink)}
     .chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-    .tagx{border:0;background:none;cursor:pointer;color:inherit;opacity:.6;padding:0 0 0 5px;font-size:10px;line-height:1;vertical-align:middle}
+    .tagx{border:0;background:none;cursor:pointer;color:inherit;opacity:.6;font-size:11px;line-height:1;width:22px;height:22px;margin:-4px -6px -4px 2px;border-radius:50%;vertical-align:middle}
+    .tagx:hover{background:rgba(0,0,0,.06)}
     .tagx:hover{opacity:1}
     .detail-actions{display:flex;gap:8px;flex-wrap:wrap}
     .kv{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px;font-size:13px}
     .kv b{color:var(--muted);font-weight:500;min-width:92px}
     .subacts{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
     .grid > *{min-width:0}
+    .fld__lab{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:7px}
   </style>`;
 
   const nameOr = n => (n && String(n).trim()) ? esc(n) : '—';
@@ -273,8 +275,9 @@
           <p class="kv"><b>Gastado</b><span>${A.money(cust.total_spent)}</span></p>
           <p class="kv"><b>Primer pedido</b><span>${A.date(cust.first_order_at, false)}</span></p>
           <p class="kv"><b>Último pedido</b><span>${A.rel(cust.last_order_at)}</span></p>
-          <div class="mt"><b class="xs muted">ETIQUETAS</b><div class="mt" id="tags_box"></div></div>
-          <div class="mt"><label class="xs muted b" for="notes_box">Notas</label><textarea id="notes_box" rows="4">${esc(cust.notes || '')}</textarea><button type="button" class="btn btn--s btn--g mt" id="save_notes">Guardar notas</button></div>
+          <div class="mt"><span class="fld__lab">Etiquetas</span><div id="tags_box"></div></div>
+          <div class="fld mt"><label for="notes_box">Notas</label><textarea id="notes_box" rows="4" placeholder="Lo que convenga recordar de este cliente (preferencias de entrega, incidencias…)">${esc(cust.notes || '')}</textarea></div>
+          <button type="button" class="btn btn--s btn--g" id="save_notes">Guardar notas</button>
         </div>
         <div class="grid">
           ${A.card('Pedidos', customerOrdersTable(ordersRows))}
@@ -456,7 +459,7 @@
         cols: [
           { k: 'created_at', label: 'Fecha', render: r => A.date(r.created_at, false) },
           { k: 'name', label: 'Nombre', render: r => nameOr(r.name) },
-          { k: 'email', label: 'Email', render: r => esc(r.email) },
+          { k: 'email', label: 'Email', title: true, render: r => esc(r.email) },
           { k: 'phone', label: 'Teléfono', render: r => phoneHtml(r.phone) },
           { k: 'wa_optin', label: 'WhatsApp', render: r => r.wa_optin ? '<span class="bdg bdg--ok">Sí</span>' : '<span class="bdg">No</span>' },
           { k: 'source', label: 'Origen', render: r => esc(SOURCE_LABELS[r.source] || r.source || '—') },

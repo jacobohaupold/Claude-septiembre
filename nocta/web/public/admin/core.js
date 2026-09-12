@@ -43,7 +43,7 @@
     const aa = $('.mod__a', m); actions.forEach(a => { const bt = document.createElement('button'); bt.className = 'btn' + (a.primary ? ' btn--p' : a.danger ? ' btn--d' : ' btn--g'); bt.textContent = a.label; bt.onclick = async () => { bt.disabled = true; try { const r = await a.onClick(m, close); if (r !== false && a.closeAfter !== false) close(); } catch (e) { A.toast(e.message, 'bad'); } bt.disabled = false; }; aa.appendChild(bt); });
     if (!actions.length) aa.remove();
     $('[data-x]', m).onclick = close; m.addEventListener('click', e => { if (e.target === m) close(); }); document.addEventListener('keydown', esc1);
-    $('#modals').appendChild(m); const f = $('input,select,textarea,button:not([data-x])', b); f && setTimeout(() => f.focus(), 50);
+    $('#modals').appendChild(m); A.fit(m); const f = $('input,select,textarea,button:not([data-x])', b); f && setTimeout(() => f.focus(), 50);
     return { el: m, body: b, close };
   };
   A.confirm = (msg, { label = 'Confirmar', danger = false } = {}) => new Promise(res => { A.modal({ title: 'Confirmar', body: `<p>${esc(msg)}</p>`, actions: [{ label: 'Cancelar', onClick: () => res(false) }, { label, primary: !danger, danger, onClick: () => res(true) }], onClose: () => res(false) }); });
@@ -51,7 +51,46 @@
   A.kpi = (label, value, sub = '', cls = '') => `<div class="kpi${cls ? ' ' + cls : ''}"><small>${esc(label)}</small><b>${value}</b>${sub ? `<span class="sub">${sub}</span>` : ''}</div>`;
   A.card = (title, body, right = '') => `<section class="card">${title ? `<div class="card__h"><h2>${esc(title)}</h2><div class="row">${right}</div></div>` : ''}${body}</section>`;
   // tabla: cols [{k,label,render(row),cls,w}], rows, rowAttr(row) → string de atributos (p.ej. data-id) ; empty
-  A.table = ({ cols, rows, empty = 'Nada por aquí todavía.', rowAttr, click = true }) => `<div class="tbl-wrap"><table class="tbl"><thead><tr>${cols.map(c => `<th class="${c.cls || ''}" ${c.w ? `style="width:${c.w}"` : ''}>${esc(c.label)}</th>`).join('')}</tr></thead><tbody>${rows.length ? rows.map(r => `<tr class="${click && rowAttr ? 'click' : ''}" ${rowAttr ? rowAttr(r) : ''}>${cols.map(c => `<td class="${c.cls || ''}">${c.render ? c.render(r) : esc(r[c.k])}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${cols.length}"><div class="empty">${esc(empty)}</div></td></tr>`}</tbody></table></div>`;
+  // La tabla se convierte automáticamente en tarjetas cuando no cabe de ancho (A.fit), así nunca hay scroll horizontal.
+  // Columna que hace de título de la tarjeta: la marcada con title:true o, si no, la primera con etiqueta.
+  // minw: ancho mínimo de la tabla en px. Por defecto, 110 px por columna a partir de 4 columnas: así una tabla
+  // apretada pasa a tarjetas en el móvil en vez de quedarse con columnas de una palabra por línea.
+  A.table = ({ cols, rows, empty = 'Nada por aquí todavía.', rowAttr, click = true, minw }) => {
+    const pref = cols.findIndex(c => c.title);
+    const labeled = cols.map((c, i) => (c.label && String(c.label).trim()) ? i : -1).filter(i => i >= 0);
+    // Una celda se considera vacía (y se oculta en modo tarjeta) solo si no tiene texto útil NI ningún control o imagen.
+    const blank = v => { const h = String(v == null ? '' : v); if (/<(img|input|button|select|textarea|canvas|svg|video|label)\b/i.test(h)) return false; const t = h.replace(/<[^>]*>/g, '').replace(/&[a-z]+;/g, ' ').trim(); return !t || t === '—' || t === '-'; };
+    const min = minw != null ? minw : (cols.length >= 4 ? cols.length * 110 : 0);
+    const tr = r => {
+      const v = cols.map(c => c.render ? c.render(r) : esc(r[c.k]));
+      let ti = (pref >= 0 && !blank(v[pref])) ? pref : (labeled.find(i => !blank(v[i])) ?? -1);
+      return `<tr class="${click && rowAttr ? 'click' : ''}" ${rowAttr ? rowAttr(r) : ''}>${cols.map((c, i) => `<td class="${c.cls || ''}${i === ti ? ' td--k' : ''}${blank(v[i]) && i !== ti ? ' is-blank' : ''}" data-l="${esc(c.label || '')}"><span class="td__v">${v[i]}</span></td>`).join('')}</tr>`;
+    };
+    return `<div class="tbl-wrap"><table class="tbl"${min ? ` style="min-width:${min}px"` : ''}><thead><tr>${cols.map(c => `<th class="${c.cls || ''}" ${c.w ? `style="width:${c.w}"` : ''}>${esc(c.label)}</th>`).join('')}</tr></thead><tbody>${rows.length ? rows.map(tr).join('') : `<tr class="tr--empty"><td colspan="${cols.length}" data-l=""><div class="empty">${esc(empty)}</div></td></tr>`}</tbody></table></div>`;
+  };
+  /* ---------- ajuste automático de tablas (cero scroll horizontal) ---------- */
+  // Mide la tabla: si su ancho mínimo no cabe en el contenedor, pasa a tarjetas; si vuelve a caber (rotar el móvil,
+  // ampliar la ventana, cerrar el menú), vuelve a tabla. Se vigila cada contenedor con ResizeObserver.
+  A.fit = (root = document) => {
+    $$('.tbl-wrap', root).forEach(w => {
+      if (w._fit) { w._fit(); return; }
+      const t = $('table', w); if (!t) return;
+      const check = () => {
+        if (!w.isConnected || !w.clientWidth) return;
+        if (w.classList.contains('cards')) {
+          const min = Number(w.dataset.min || 0);
+          if (min && w.clientWidth >= min + 2) { w.classList.remove('cards'); w.removeAttribute('data-min'); requestAnimationFrame(measure); }
+          return;
+        }
+        measure();
+      };
+      const measure = () => { if (!w.isConnected) return; const over = t.scrollWidth > w.clientWidth + 1; if (over) { w.dataset.min = t.scrollWidth; w.classList.add('cards'); } };
+      w._fit = check; check();
+      if (window.ResizeObserver) { const ro = new ResizeObserver(() => check()); ro.observe(w); w._ro = ro; }
+    });
+  };
+  if (window.MutationObserver) { const mo = new MutationObserver(() => { clearTimeout(mo._t); mo._t = setTimeout(() => A.fit(), 40); }); mo.observe(document.documentElement, { childList: true, subtree: true }); }
+  addEventListener('resize', () => { clearTimeout(A._rt); A._rt = setTimeout(() => A.fit(), 120); });
   // formulario: fields [{k,label,type:'text|number|email|tel|textarea|select|toggle|date|datetime|json|hidden',options:[[v,l]],help,required,step,placeholder,row:true}]
   A.form = (fields, v = {}) => fields.map(f => {
     const val = f.k.split('.').reduce((o, k) => (o == null ? undefined : o[k]), v); const id = 'f_' + f.k.replace(/\W/g, '_');
@@ -67,10 +106,10 @@
     return `<div class="fld"><label for="${id}">${esc(f.label)}</label>${inp}${f.help ? `<span class="help">${f.help}</span>` : ''}</div>`;
   }).join('');
   A.read = form => { const o = {}; $$('input,select,textarea', form).forEach(i => { if (!i.name) return; let v = i.type === 'checkbox' ? i.checked : i.value; if (i.type === 'number') v = i.value === '' ? null : Number(i.value); if (i.dataset.json !== undefined) { try { v = i.value.trim() ? JSON.parse(i.value) : null; } catch (e) { throw new Error('JSON no válido en ' + i.name); } } if (i.type === 'datetime-local') v = v ? new Date(v).toISOString() : null; i.name.split('.').reduce((acc, k, idx, arr) => { if (idx === arr.length - 1) acc[k] = v; else acc[k] = acc[k] || {}; return acc[k]; }, o); }); return o; };
-  A.tabs = (el, tabs, initial) => { const bar = document.createElement('div'); bar.className = 'tabs'; const body = document.createElement('div'); el.appendChild(bar); el.appendChild(body); const go = k => { $$('button', bar).forEach(b => b.classList.toggle('on', b.dataset.k === k)); body.innerHTML = '<div class="loading">Cargando…</div>'; Promise.resolve(tabs[k](body)).catch(e => { body.innerHTML = `<p class="err">${esc(e.message)}</p>`; }); }; Object.keys(tabs).forEach(k => { const b = document.createElement('button'); b.dataset.k = k; b.textContent = k; b.onclick = () => go(k); bar.appendChild(b); }); go(initial || Object.keys(tabs)[0]); return go; };
+  A.tabs = (el, tabs, initial) => { const bar = document.createElement('div'); bar.className = 'tabs'; const body = document.createElement('div'); el.appendChild(bar); el.appendChild(body); const go = k => { $$('button', bar).forEach(b => { const on = b.dataset.k === k; b.classList.toggle('on', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); }); body.innerHTML = '<div class="loading">Cargando…</div>'; Promise.resolve(tabs[k](body)).then(() => A.fit(body)).catch(e => { body.innerHTML = `<p class="err">${esc(e.message)}</p>`; }); }; bar.setAttribute('role', 'tablist'); Object.keys(tabs).forEach(k => { const b = document.createElement('button'); b.dataset.k = k; b.type = 'button'; b.setAttribute('role', 'tab'); b.textContent = k; b.onclick = () => go(k); bar.appendChild(b); }); go(initial || Object.keys(tabs)[0]); return go; };
   A.search = (el, rows, keys, render) => { el.innerHTML = `<div class="row mb"><input class="search grow" placeholder="Buscar…" type="search"></div><div class="out"></div>`; const out = $('.out', el), inp = $('input', el); const draw = () => { const q = inp.value.toLowerCase().trim(); out.innerHTML = render(q ? rows.filter(r => keys.some(k => String(r[k] || '').toLowerCase().includes(q))) : rows); }; inp.oninput = draw; draw(); return draw; };
   A.copy = async t => { try { await navigator.clipboard.writeText(t); A.toast('Copiado'); } catch (e) { A.toast('No se pudo copiar', 'bad'); } };
-  A.chart = (canvas, cfg) => { if (!window.Chart) return null; if (canvas._c) canvas._c.destroy(); Chart.defaults.font.family = getComputedStyle(document.body).fontFamily; Chart.defaults.color = '#6B6F7B'; canvas._c = new Chart(canvas, cfg); return canvas._c; };
+  A.chart = (canvas, cfg) => { if (!window.Chart) { const box = canvas.parentElement; if (box) { box.style.height = 'auto'; box.innerHTML = '<p class="muted sm center" style="padding:22px 6px">No se han podido cargar los gráficos (sin conexión con el CDN). Los mismos datos están en las tablas de esta página.</p>'; } return null; } if (canvas._c) canvas._c.destroy(); Chart.defaults.font.family = getComputedStyle(document.body).fontFamily; Chart.defaults.color = '#6B6F7B'; canvas._c = new Chart(canvas, cfg); return canvas._c; };
   A.itemsText = items => (items || []).map(i => `${i.qty}× ${i.name}`).join(', ');
 
   /* ---------- módulos y router ---------- */
@@ -86,13 +125,20 @@
     main.innerHTML = '<div class="loading">Cargando…</div>'; window.scrollTo(0, 0);
     try { await m.render(main, r.params, r.query); } catch (e) { main.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p>${e.detail ? `<pre class="mono">${esc(JSON.stringify(e.detail, null, 2))}</pre>` : ''}</div>`; console.error(e); }
     $('#side').classList.remove('open'); $('#sidebg').classList.remove('open');
+    A.fit(main);
   };
-  A.nav = () => { let g = ''; $('#nav').innerHTML = A.order.map(n => { const m = A.mods[n]; if (m.hidden) return ''; const grp = m.group && m.group !== g ? `<div class="grp">${esc(m.group)}</div>` : ''; g = m.group || g; return grp + `<a href="#/${n}" data-m="${n}"><i>${m.icon || '•'}</i>${esc(m.title)}<span class="cnt" data-cnt="${n}" hidden></span></a>`; }).join(''); };
+  A.nav = () => {
+    let g = ''; const nav = $('#nav');
+    nav.innerHTML = A.order.map(n => { const m = A.mods[n]; if (m.hidden) return ''; const grp = m.group && m.group !== g ? `<div class="grp">${esc(m.group)}</div>` : ''; g = m.group || g; return grp + `<a href="#/${n}" data-m="${n}"><i>${m.icon || '•'}</i>${esc(m.title)}<span class="cnt" data-cnt="${n}" hidden></span></a>`; }).join('');
+    // Si el menú no cabe de alto, se difumina el borde inferior para que se vea que hay más y no quede un elemento cortado a medias.
+    const fade = () => { nav.classList.toggle('fade', nav.scrollHeight > nav.clientHeight + 1); nav.classList.toggle('fade--end', nav.scrollTop + nav.clientHeight >= nav.scrollHeight - 4); };
+    nav.onscroll = fade; addEventListener('resize', () => { clearTimeout(nav._t); nav._t = setTimeout(fade, 100); }); A._navFade = fade; setTimeout(fade, 0);
+  };
   A.count = (name, n) => { const c = $(`[data-cnt="${name}"]`); if (!c) return; c.textContent = n; c.hidden = !n; };
 
   A.start = async () => {
     $('#lgform').onsubmit = async e => { e.preventDefault(); const err = $('#lgerr'); err.hidden = true; try { const r = await fetch('/api/admin/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ password: $('#lgpass').value }) }); const j = await r.json(); if (!r.ok) throw new Error(j.error || 'Error'); localStorage.setItem('n_admin', j.token); boot(); } catch (x) { err.textContent = x.message; err.hidden = false; } };
-    $('#logout').onclick = A.logout; $('#menu').onclick = () => { $('#side').classList.toggle('open'); $('#sidebg').classList.toggle('open'); }; $('#sidebg').onclick = () => { $('#side').classList.remove('open'); $('#sidebg').classList.remove('open'); };
+    $('#logout').onclick = A.logout; $('#menu').onclick = () => { $('#side').classList.toggle('open'); $('#sidebg').classList.toggle('open'); A._navFade && A._navFade(); }; $('#sidebg').onclick = () => { $('#side').classList.remove('open'); $('#sidebg').classList.remove('open'); };
     $('#days').onchange = e => { A.state.days = Number(e.target.value); A.cache = {}; A.render(); }; $('#refresh').onclick = () => { A.cache = {}; A.render(); };
     addEventListener('hashchange', A.render);
     const boot = async () => { try { const r = await fetch('/api/admin/me', { headers: { 'x-admin-token': A.token() } }); if (!r.ok) { localStorage.removeItem('n_admin'); throw new Error('login'); } A.me = await r.json(); $('#login').hidden = true; $('#app').hidden = false; A.nav(); A.render(); A.badges && A.badges(); } catch (e) { $('#app').hidden = true; $('#login').hidden = false; } };

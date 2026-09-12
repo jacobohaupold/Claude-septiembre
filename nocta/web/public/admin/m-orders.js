@@ -47,7 +47,7 @@
         cols: [
           { k: 'created_at', label: 'Fecha', render: r => A.date(r.created_at), w: '85px' },
           { k: 'id', label: 'Pedido', render: r => `<span class="mono">${esc(r.id)}</span>`, w: '110px' },
-          { k: 'name', label: 'Cliente', render: r => `<b>${esc(r.name || '—')}</b><br><span class="muted xs">${esc(r.email || '')}</span>` },
+          { k: 'name', label: 'Cliente', title: true, render: r => `<b>${esc(r.name || '—')}</b><br><span class="muted xs">${esc(r.email || '')}</span>` },
           { k: 'items', label: 'Artículos', render: r => esc(A.itemsText(r.items)) },
           { k: 'status', label: 'Estado', render: r => A.badge(r.status), w: '130px' },
           { k: 'total', label: 'Total', render: r => A.money(r.total), cls: 'right num', w: '90px' }
@@ -108,7 +108,7 @@
     const rows = o.items || [];
     const body = A.table({
       cols: [
-        { k: 'img', label: '', render: r => { const p = A.product(r.slug); return p && p.image ? `<img class="thumb" src="${esc(p.image.replace(/\.(jpg|png)$/, '.webp'))}" alt="" loading="lazy">` : '<div class="thumb"></div>'; }, w: '54px' },
+        { k: 'img', label: '', render: r => { const p = A.product(r.slug); return p && p.image ? `<img class="thumb" src="${esc(p.image.replace(/\.(jpg|png)$/, '.webp'))}" alt="" loading="lazy">` : '<div class="thumb"></div>'; }, cls: 'td--img', w: '54px' },
         { k: 'name', label: 'Artículo', render: r => `<b>${esc(r.name || r.slug)}</b>${r.opt ? `<br><span class="muted xs">${esc(r.opt)}</span>` : ''}` },
         { k: 'qty', label: 'Cant.', render: r => r.qty || 1, cls: 'right num', w: '55px' },
         { k: 'unit', label: 'Precio', render: r => A.money(r.unit), cls: 'right num', w: '80px' },
@@ -264,7 +264,7 @@
       catch (e) { el.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p></div>`; return; }
       const table = A.table({
         cols: [
-          { k: 'who', label: 'Contacto', render: r => `<b>${esc(r.name || r.email || '—')}</b>${r.name && r.email ? `<br><span class="muted xs">${esc(r.email)}</span>` : ''}` },
+          { k: 'who', label: 'Contacto', render: r => `<b>${esc(r.name || r.email || 'Visitante sin email')}</b>${r.name && r.email ? `<br><span class="muted xs">${esc(r.email)}</span>` : ''}${!r.email ? `<br><span class="muted xs">No se le puede recordar por email</span>` : ''}` },
           { k: 'items', label: 'Artículos', render: r => esc(cartItemsText(r.items)) },
           { k: 'total', label: 'Total', render: r => A.money(r.total), cls: 'right num', w: '85px' },
           { k: 'updated_at', label: 'Actualizado', render: r => A.rel(r.updated_at), w: '95px' },

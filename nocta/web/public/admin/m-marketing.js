@@ -7,9 +7,9 @@
     if (document.getElementById('mktgStyle')) return;
     const st = document.createElement('style'); st.id = 'mktgStyle';
     st.textContent = `
-    .wa-shell{display:grid;grid-template-columns:280px 1fr;gap:14px;align-items:start}
-    .wa-list-pane{max-height:74vh;overflow:auto}
-    .wa-list{display:grid;gap:6px}
+    .wa-shell{display:grid;grid-template-columns:280px minmax(0,1fr);gap:14px;align-items:start}
+    .wa-list-pane{max-height:74vh;overflow-y:auto;overflow-x:hidden;min-width:0}
+    .wa-list{display:grid;gap:6px;grid-template-columns:minmax(0,1fr)}
     .wa-conv{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
     .wa-conv.on{border-color:var(--navy);background:#F3EFE6}
     .wa-conv .av{width:36px;height:36px;border-radius:50%;background:var(--sage2);display:grid;place-items:center;font-weight:600;color:var(--navy);flex:none;font-size:14px}
@@ -18,20 +18,22 @@
     .wa-conv__b span{display:block;font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .wa-conv__meta{text-align:right;flex:none}
     .wa-badge{display:inline-block;margin-top:3px;background:var(--red);color:#fff;font-size:11px;padding:1px 7px;border-radius:999px}
-    .wa-chat-pane{display:flex;flex-direction:column}
-    .wa-chat-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-    .wa-chat-h b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .wa-chat-h span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .wa-chat-pane{display:flex;flex-direction:column;min-width:0}
+    .wa-chat-h{display:flex;align-items:center;gap:10px;margin-bottom:8px;min-width:0}
+    .wa-chat-h b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .wa-chat-h span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .wa-back{display:none;flex:none}
     .wa-reply{display:flex;gap:8px;margin-top:10px;align-items:flex-end}
-    .wa-reply textarea{flex:1;min-height:44px;max-height:120px;padding:8px 11px;border:1px solid var(--line);border-radius:var(--r2);font:inherit;resize:vertical}
+    .wa-reply textarea{flex:1;min-width:0;min-height:44px;max-height:120px;padding:8px 11px;border:1px solid var(--line);border-radius:var(--r2);font:inherit;resize:vertical}
     @media (max-width:820px){
-      .wa-shell{grid-template-columns:1fr}
+      .wa-shell{grid-template-columns:minmax(0,1fr)}
       .wa-shell.show-chat .wa-list-pane{display:none}
       .wa-shell:not(.show-chat) .wa-chat-pane{display:none}
       .wa-back{display:inline-flex}
     }
     .blk__prod-list{display:flex;flex-wrap:wrap;gap:6px 16px}
+    .wa-conv__b b,.wa-conv__b span{min-width:0}
+    .wa-conv__meta{min-width:0;white-space:nowrap}
     .blk__prod-list label{display:flex;align-items:center;gap:6px;font-size:13px}
     `;
     document.head.appendChild(st);
@@ -149,9 +151,9 @@
   function blockHtml(b, i, total) {
     const name = (BLOCK_DEFS[b.type] || {}).label || b.type;
     return `<div class="blk" data-block="${i}"><div class="blk__h"><b>${esc(name)}</b><div class="row">
-      <button type="button" data-bup="${i}" ${i === 0 ? 'disabled' : ''} title="Subir">↑</button>
-      <button type="button" data-bdown="${i}" ${i === total - 1 ? 'disabled' : ''} title="Bajar">↓</button>
-      <button type="button" data-brm="${i}" title="Borrar">✕</button>
+      <button type="button" data-bup="${i}" ${i === 0 ? 'disabled' : ''} title="Subir" aria-label="Subir bloque">↑</button>
+      <button type="button" data-bdown="${i}" ${i === total - 1 ? 'disabled' : ''} title="Bajar" aria-label="Bajar bloque">↓</button>
+      <button type="button" data-brm="${i}" title="Borrar" aria-label="Borrar bloque">✕</button>
     </div></div>${blockFieldsHtml(b, i)}</div>`;
   }
   function blocksHtml(blocks) { return blocks.length ? blocks.map((b, i) => blockHtml(b, i, blocks.length)).join('') : `<p class="muted xs">Añade bloques abajo para construir el mensaje.</p>`; }
@@ -169,7 +171,7 @@
         { k: 'name', label: 'Nombre', render: r => `<b>${esc(r.name || '(sin nombre)')}</b>` },
         { k: 'channel', label: 'Canal', render: r => r.channel === 'whatsapp' ? '<span class="pill">💬 WhatsApp</span>' : '<span class="pill">✉ Email</span>', w: '120px' },
         { k: 'status', label: 'Estado', render: r => A.badge(r.status), w: '110px' },
-        { k: 'recipients', label: 'Destinatarios / enviados / fallidos', render: r => `<span class="num">${r.recipients ?? 0} / ${r.sent_count ?? 0} / ${r.failed_count ?? 0}</span>`, cls: 'right', w: '210px' },
+        { k: 'recipients', label: 'Envíos (dest./env./fallos)', render: r => `<span class="num">${r.recipients ?? 0} / ${r.sent_count ?? 0} / ${r.failed_count ?? 0}</span>`, cls: 'right', w: '210px' },
         { k: 'created_at', label: 'Fecha', render: r => A.date(r.sent_at || r.scheduled_at || r.created_at), w: '110px' },
         { k: 'acc', label: '', render: r => `<div class="row nowrap" style="gap:6px;flex-wrap:nowrap"><button class="btn btn--s btn--g" data-dup="${r.id}">Duplicar</button><button class="btn btn--s btn--d" data-del="${r.id}">Borrar</button></div>`, cls: 'right nowrap', w: '170px' }
       ],
@@ -419,7 +421,7 @@
     } catch (e) { el.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p></div>`; return; }
 
     let convs = buildConvs(rows);
-    let activeTo = convs[0] ? convs[0].to : null;
+    let activeTo = (convs[0] && window.innerWidth > 820) ? convs[0].to : null;   // en el móvil se entra por la lista, no por una conversación
     let skipNotice = null; // {to, link} · persiste tras recargar la conversación
 
     function headerHtml() {
@@ -616,7 +618,7 @@
           { k: 'created_at', label: 'Fecha', render: r => A.date(r.created_at), w: '110px' },
           { k: 'channel', label: 'Canal', render: r => r.channel === 'whatsapp' ? '💬 WhatsApp' : '✉ Email', w: '110px' },
           { k: 'direction', label: 'Dirección', render: r => r.direction === 'in' ? 'Entrante' : 'Saliente', w: '90px' },
-          { k: 'to_addr', label: 'Destinatario', render: r => esc(r.to_addr || '—') },
+          { k: 'to_addr', label: 'Destinatario', title: true, render: r => esc(r.to_addr || '—') },
           { k: 'template', label: 'Plantilla / asunto', render: r => esc(r.template || r.subject || '—') },
           { k: 'status', label: 'Estado', render: r => A.badge(r.status), w: '110px' }
         ], rows: filtered, empty: 'No hay mensajes todavía.', rowAttr: r => `data-id="${r.id}"`

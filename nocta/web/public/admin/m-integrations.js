@@ -56,7 +56,7 @@
     const table = A.table({
       cols: [
         { k: 'created', label: 'Fecha', render: c => A.date(new Date(c.created).toISOString()), w: '100px' },
-        { k: 'amount', label: 'Importe', render: c => A.money(c.amount), cls: 'right num', w: '90px' },
+        { k: 'amount', label: 'Importe', title: true, render: c => A.money(c.amount), cls: 'right num', w: '90px' },
         { k: 'status', label: 'Estado', render: c => chargeBadge(c.status), w: '110px' },
         { k: 'method', label: 'Método', render: methodBadge },
         { k: 'email', label: 'Email', render: c => esc(c.email || '—') }
@@ -149,7 +149,7 @@
         ${A.table({
         cols: [
           { k: 'type', label: 'Tipo', w: '70px' },
-          { k: 'name', label: 'Nombre' },
+          { k: 'name', label: 'Nombre', title: true },
           { k: 'value', label: 'Valor', render: rec => `<span class="mono xs">${esc(rec.value)}</span>` },
           { k: '_c', label: '', w: '70px', render: rec => `<button type="button" class="btn btn--s btn--g" data-act="resend-copy" data-val="${esc(rec.value)}">Copiar</button>` }
         ], rows: pending.records, empty: '—', click: false

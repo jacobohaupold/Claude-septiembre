@@ -102,7 +102,7 @@
     const body = A.table({
       cols: [
         { k: 'created_at', label: 'Fecha', render: r => A.date(r.created_at), w: '90px' },
-        { k: 'name', label: 'Cliente', render: r => `<b>${esc(r.name || r.email || r.id)}</b>` },
+        { k: 'name', label: 'Cliente', title: true, render: r => `<b>${esc(r.name || r.email || r.id)}</b>` },
         { k: 'status', label: 'Estado', render: r => A.badge(r.status), w: '110px' },
         { k: 'total', label: 'Total', render: r => A.money(r.total), cls: 'right num', w: '90px' }
       ], rows, empty: 'Todavía no hay pedidos.', rowAttr: r => `data-id="${esc(r.id)}"`
@@ -113,7 +113,7 @@
     const body = A.table({
       cols: [
         { k: 'created_at', label: 'Fecha', render: r => A.date(r.created_at), w: '90px' },
-        { k: 'email', label: 'Contacto', render: r => `<b>${esc(r.name || r.email)}</b>${r.name ? `<br><span class="muted xs">${esc(r.email)}</span>` : ''}` },
+        { k: 'email', label: 'Contacto', title: true, render: r => `<b>${esc(r.name || r.email)}</b>${r.name ? `<br><span class="muted xs">${esc(r.email)}</span>` : ''}` },
         { k: 'source', label: 'Origen', render: r => esc(r.source || '—'), w: '110px' }
       ], rows, empty: 'Todavía no hay leads.', click: false
     });

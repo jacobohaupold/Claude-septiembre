@@ -41,8 +41,28 @@
     }
   });
 
+  const P_STYLE = `<style>
+  .plist{display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+  .prow{display:grid;grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"img t go" "img p p" "img s s";column-gap:12px;row-gap:2px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit;color:inherit}
+  .prow:hover{border-color:#D8D2C4;background:#FBF9F4}
+  .prow__img{grid-area:img;width:52px;height:52px;border-radius:9px;object-fit:cover;background:#F3EFE6;align-self:start}
+  .prow__t{grid-area:t;min-width:0}
+  .prow__t b{display:block;font-size:14px;line-height:1.3;overflow-wrap:break-word}
+  .prow__t small{color:var(--muted);font-size:11.5px}
+  .prow__p{grid-area:p;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .prow__p .old{text-decoration:line-through;color:var(--muted);font-size:12px}
+  .prow__s{grid-area:s;display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--muted)}
+  .prow__go{grid-area:go;color:var(--muted);font-size:18px;line-height:1;align-self:start;padding-top:2px}
+  @media (min-width:760px){
+    .prow{grid-template-columns:52px minmax(0,1fr) minmax(108px,auto) minmax(152px,auto) 14px;grid-template-areas:"img t p s go";align-items:center;row-gap:0}
+    .prow__p{flex-direction:column;gap:1px}
+    .prow__s{justify-content:flex-end}
+    .prow__go{align-self:center;padding:0}
+  }
+  @media (min-width:1560px){.plist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>`;
   async function renderList(el) {
-    el.innerHTML = `<div class="row row--sb mb"><div class="row">${CATS.map(([k, l], i) => `<button class="btn btn--s ${i === 0 ? 'btn--p' : 'btn--g'}" data-cat="${k}">${esc(l)}</button>`).join('')}</div><button class="btn btn--p" id="new">+ Nuevo producto</button></div><div id="search"></div>`;
+    el.innerHTML = P_STYLE + `<div class="row row--sb mb"><div class="row">${CATS.map(([k, l], i) => `<button class="btn btn--s ${i === 0 ? 'btn--p' : 'btn--g'}" data-cat="${k}">${esc(l)}</button>`).join('')}</div><button class="btn btn--p" id="new">+ Nuevo producto</button></div><div id="search"></div>`;
     $$('button[data-cat]', el).forEach(b => b.onclick = () => { $$('button[data-cat]', el).forEach(x => x.className = 'btn btn--s btn--g'); b.className = 'btn btn--s btn--p'; draw(b.dataset.cat); } );
     $('#new', el).onclick = () => newProductModal();
     let all = [];
@@ -54,29 +74,25 @@
     const box = $('#search', el);
     draw = cat => {
       const rows = cat ? all.filter(p => catOf(p) === cat) : all;
-      A.search(box, rows, ['slug', 'name', 'short'], q => `<div class="grid grid--3">${q.map(cardHtml).join('') || '<p class="muted">Sin productos.</p>'}</div>`);
+      A.search(box, rows, ['slug', 'name', 'short'], q => q.length ? `<div class="plist">${q.map(rowHtml).join('')}</div>` : '<p class="muted">Sin productos con ese nombre.</p>');
     };
-    function cardHtml(p) {
+    function rowHtml(p) {
       const hidden = p.active === false;
       const modified = p._override && p._override.overrides && Object.keys(p._override.overrides).length;
-      return `<div class="card click" data-slug="${esc(p.slug)}" style="cursor:pointer;padding:0;overflow:hidden">
-        <div style="aspect-ratio:1/1;background:#F3EFE6;position:relative">
-          <img src="${esc(webp(p.image))}" alt="" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.opacity=0">
-          <div style="position:absolute;top:8px;left:8px;display:flex;gap:6px;flex-wrap:wrap">
-            ${p.badge ? `<span class="bdg bdg--info">${esc(p.badge)}</span>` : ''}
-            ${hidden ? `<span class="bdg bdg--bad">Oculto</span>` : ''}
-            ${modified ? `<span class="bdg bdg--warn">Modificado</span>` : ''}
-          </div>
-        </div>
-        <div style="padding:12px">
-          <b style="display:block;font-size:13.5px">${esc(p.name)}</b>
-          <div class="row" style="gap:8px;margin-top:4px">
-            <span class="b num">${A.money(p.price)}</span>
-            ${p.compare ? `<span class="muted num xs" style="text-decoration:line-through">${A.money(p.compare)}</span>` : ''}
-          </div>
-          <div class="xs muted mt" style="margin-top:6px">${p.sub ? 'Susc. ' + A.money(p.sub) + (p.plan ? ' ' + esc(p.plan.every) : '/mes') + ' · ' : ''}Stock: ${p.stock == null ? '—' : p.stock}</div>
-        </div>
-      </div>`;
+      const cost = p._override && p._override.overrides && p._override.overrides.cost;
+      const marg = cost ? (p.price - cost) / p.price * 100 : null;
+      return `<button class="prow" type="button" data-slug="${esc(p.slug)}">
+        <img class="prow__img" src="${esc(webp(p.image))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="prow__t"><b>${esc(p.name)}</b><small>${esc(p.units || p.slug)}${p.plan ? ' · plan ' + esc(p.plan.per) : ''}</small></span>
+        <span class="prow__p"><span class="b num">${A.money(p.price)}</span>${p.compare ? `<span class="old num">${A.money(p.compare)}</span>` : ''}${p.sub ? `<span class="muted xs num">Susc. ${A.money(p.sub)}</span>` : ''}</span>
+        <span class="prow__s">
+          ${p.badge ? `<span class="bdg bdg--info">${esc(p.badge)}</span>` : ''}
+          ${hidden ? '<span class="bdg bdg--bad">Oculto</span>' : ''}
+          ${modified ? '<span class="bdg bdg--warn">Modificado</span>' : ''}
+          <span class="num nowrap">${marg != null ? 'Margen ' + A.pct(marg) : 'Sin coste'} · Stock ${p.stock == null ? '∞' : p.stock}</span>
+        </span>
+        <span class="prow__go" aria-hidden="true">›</span>
+      </button>`;
     }
     box.addEventListener('click', e => { const c = e.target.closest('[data-slug]'); if (c) A.go('products/' + encodeURIComponent(c.dataset.slug)); });
     draw('');
@@ -348,7 +364,7 @@
       $('#gifts-list', giftsCard).innerHTML = giftRows.map((g, i) => `
         <div class="fld--row" data-gi="${i}" style="align-items:end">
           <div class="fld"><label>Importe mínimo (€)</label><input type="number" step="0.01" data-gf="threshold" value="${esc(g.threshold ?? '')}"></div>
-          <div class="fld" style="position:relative"><label>Regalo</label><input type="text" data-gf="label" value="${esc(g.label ?? '')}"><button type="button" class="btn btn--s btn--d" data-gdel="${i}" style="position:absolute;right:0;top:-2px">✕</button></div>
+          <div class="fld" style="position:relative"><label>Regalo</label><input type="text" data-gf="label" value="${esc(g.label ?? '')}"><button type="button" class="btn btn--s btn--d" data-gdel="${i}" aria-label="Quitar este tramo" title="Quitar" style="position:absolute;right:0;top:-2px">✕</button></div>
         </div>`).join('') || '<p class="muted xs">Sin tramos.</p>';
       $$('[data-gdel]', giftsCard).forEach(b => b.onclick = () => { giftRows.splice(Number(b.dataset.gdel), 1); drawGifts(); });
     };
@@ -486,7 +502,7 @@
           <span class="ct-ac">
             <button type="button" class="btn btn--s btn--g" data-fup="${i}" ${i === 0 ? 'disabled' : ''}>↑</button>
             <button type="button" class="btn btn--s btn--g" data-fdown="${i}" ${i === featured.length - 1 ? 'disabled' : ''}>↓</button>
-            <button type="button" class="btn btn--s btn--d" data-fdel="${i}">✕</button>
+            <button type="button" class="btn btn--s btn--d" data-fdel="${i}" aria-label="Quitar esta pregunta" title="Quitar">✕</button>
           </span>
         </div>`;
       }).join('') : '<p class="muted xs">Sin destacados todavía.</p>';
@@ -561,7 +577,7 @@
         <div class="ct-ac">
           <button type="button" class="btn btn--s btn--g" data-rup="${i}" ${i === 0 ? 'disabled' : ''}>↑</button>
           <button type="button" class="btn btn--s btn--g" data-rdown="${i}" ${i === list.length - 1 ? 'disabled' : ''}>↓</button>
-          <button type="button" class="btn btn--s btn--d" data-rdel="${i}">✕</button>
+          <button type="button" class="btn btn--s btn--d" data-rdel="${i}" aria-label="Quitar esta opinión" title="Quitar">✕</button>
         </div>
       </div>`).join('') || '<p class="muted xs">Sin enlaces.</p>';
 
@@ -678,7 +694,7 @@
       $('#rev-list', body).innerHTML = A.card('', A.table({
         cols: [
           { k: 'slug', label: 'Producto', render: r => esc(prodName(r.slug)) },
-          { k: 'name', label: 'Nombre', render: r => esc(r.name || '') },
+          { k: 'name', label: 'Nombre', title: true, render: r => esc(r.name || '') },
           { k: 'city', label: 'Ciudad', render: r => esc(r.city || '') },
           { k: 'stars', label: 'Estrellas', render: r => '★'.repeat(Number(r.stars) || 0) + '☆'.repeat(Math.max(0, 5 - (Number(r.stars) || 0))) },
           { k: 'text', label: 'Texto', render: r => `<span class="xs">${esc((r.text || '').slice(0, 90))}${(r.text || '').length > 90 ? '…' : ''}</span>` },
