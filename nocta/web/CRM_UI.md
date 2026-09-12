@@ -35,7 +35,7 @@ cortado a medias; el pie («Ver tienda», «Salir») siempre está visible.
 
 | Regla | Dónde |
 |---|---|
-| Contenido con ancho máximo de 1520 px y margen propio; nunca pegado al borde | `.main` |
+| Contenido con ancho máximo de 1520 px (1780 px a partir de 1800 px de pantalla); nunca pegado al borde | `.main` |
 | Respeto de zonas seguras del móvil (notch, barra inferior) | `.side`, `.top`, `.main` con `env(safe-area-inset-*)` |
 | Objetivos táctiles: botones ≥ 36 px, chips ≥ 32 px, enlaces de tabla con 5 px de relleno vertical | `.btn`, `.tabs button`, `.tbl td a` |
 | Interruptores de 40×22 px también dentro de un campo (`.fld`) | `.tog input` |
@@ -44,6 +44,7 @@ cortado a medias; el pie («Ver tienda», «Salir») siempre está visible.
 | Embudo del panel: etiqueta y cifra en la misma línea, barra debajo, en móvil | `.funnel .st` |
 | Si no carga la librería de gráficos, la tarjeta explica dónde están los datos en vez de quedarse en blanco | `A.chart` |
 | Foco visible con teclado en todo el CRM | `:focus-visible` |
+| Avisos (toast) de varias líneas, dentro de la pantalla y por encima de la zona segura | `.toasts`, `.toast` |
 | Productos: filas compactas con miniatura de 52 px (no una foto gigante por fila) | `.prow` en `m-products.js` |
 
 ## 3. Cómo volver a comprobarlo
