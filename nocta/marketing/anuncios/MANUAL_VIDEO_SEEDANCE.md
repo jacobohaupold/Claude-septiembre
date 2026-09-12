@@ -16,7 +16,7 @@ Este manual no es para copiar a ciegas. Es para que entiendas por qué un prompt
 6. [Fotograma inicial y final (Frame Lock)](#6-fotograma-inicial-y-final-frame-lock)
 7. [Prohibiciones cuando no hay prompt negativo](#7-prohibiciones-cuando-no-hay-prompt-negativo)
 8. [Audio y subtítulos: por qué lo apagamos todo](#8-audio-y-subtítulos-por-qué-lo-apagamos-todo)
-9. [Plantilla en blanco y tres ejemplos reales](#9-plantilla-en-blanco-y-tres-ejemplos-reales)
+9. [Plantilla en blanco y cuatro ejemplos reales](#9-plantilla-en-blanco-y-cuatro-ejemplos-reales)
 10. [Fallos típicos, su síntoma visible y la frase que los evita](#10-fallos-típicos-su-síntoma-visible-y-la-frase-que-los-evita)
 11. [Flujo de producción y checklist antes de generar](#11-flujo-de-producción-y-checklist-antes-de-generar)
 12. [Lo que no está verificado](#12-lo-que-no-está-verificado)
@@ -391,24 +391,25 @@ The lettering on the box does not change. No subtitles, no text, no watermark.
 
 ---
 
-## 9. Plantilla en blanco y tres ejemplos reales
+## 9. Plantilla en blanco y cuatro ejemplos reales
 
 ### La plantilla
 
 ```
 [ANCLA DE SUJETO] [ACCIÓN: posición inicial → posición final, un solo cambio]
-[RITMO] [CÁMARA: una sola instrucción] [LUZ: solo si cambia] [RESTRICCIONES POSITIVAS] No subtitles.
+[RITMO] [CÁMARA: una sola instrucción] [LUZ: solo si cambia] [RESTRICCIONES POSITIVAS]
+No subtitles, no text, no watermark.
 ```
 
 | Hueco | Qué se pone | Ejemplo | Cuándo se omite |
 |---|---|---|---|
-| **Ancla de sujeto** | 4-8 palabras: qué elemento de la imagen es el protagonista | `The woman from the image, maintain her exact face, skin and hair.` | En macros sin cara: `The nose from the image.` |
+| **Ancla de sujeto** | 8-12 palabras: qué elemento de la imagen es el protagonista | `The woman from the image, maintain her exact face, skin and hair.` | En macros sin cara: `The nose from the image.` |
 | **Acción** | UN cambio. Dónde está al empezar, dónde acaba. Números si hay distancias | `her index fingertip moves slowly down two centimetres along the nostril crease and stops` | Nunca se omite: es obligatoria |
 | **Ritmo** | Adverbios de grado. `slow`, `steady`, `subtle`, `deliberate`. Nunca lento y rápido juntos | `slow, steady` | Si la acción ya lleva `slowly` |
 | **Cámara** | Una sola frase del diccionario del punto 5 | `Locked-off close-up, the camera does not move.` | Nunca |
 | **Luz** | Solo si cambia durante el clip. Si no, se congela | `soft window light from the left, unchanged` | Si no aporta y el prompt va justo de palabras |
 | **Restricciones positivas** | El bloque fijo del punto 7, recortado a lo que aplique | `the background stays still, the patch keeps its shape` | Nunca del todo |
-| **No subtitles.** | Literal, al final | `No subtitles.` | Nunca |
+| **Cierre fijo** | Literal, al final | `No subtitles, no text, no watermark.` | Nunca |
 
 Además, fuera del prompt: `duration = 4`, `resolution = 1080p`, `generate_audio = false`, `mode = 'std'` si es Seedance 2.0 a 1080p.
 
@@ -421,10 +422,10 @@ The nose from the image. Only micro-movement: a faint breathing rise and fall of
 skin and a slow shift of the highlight on the tip. The pores and sebaceous filaments
 stay exactly as in the image. Locked-off extreme close-up, macro lens, the camera does
 not move and the framing does not change. Soft window light from the left, unchanged.
-No subtitles.
+No subtitles, no text, no watermark.
 ```
 
-58 palabras. Fíjate en lo que **no** hay: ni una palabra sobre poros irregulares, ni sobre ruido de sensor, ni sobre la luz del sitio 1. Todo eso ya está horneado en la still. Lo único que se pide es respirar y un reflejo que se desplaza.
+66 palabras (contadas con `wc -w`). Fíjate en lo que **no** hay: ni una palabra sobre poros irregulares, ni sobre ruido de sensor, ni sobre la luz del sitio 1. Todo eso ya está horneado en la still. Lo único que se pide es respirar y un reflejo que se desplaza.
 
 ### Ejemplo 2 — PERSONA. Anuncio 1, toma 10: colocación, baño de noche
 
@@ -436,10 +437,10 @@ of the nose. End: the patch lies flat on the nose, narrow end on the bridge, win
 folded over the nostrils. Move slowly and steadily between the two positions,
 anatomically correct hands, realistic finger articulation. Static shot, the camera
 does not move. The hard overhead light does not change. The background stays still.
-No subtitles.
+No subtitles, no text, no watermark.
 ```
 
-70 palabras. Las manos van en la **primera** frase. No se dice "she applies the patch": se dicen las dos posiciones. Y no se describe la mariposa del parche, solo dónde acaba cada parte.
+73 palabras. Las manos van en la **primera** frase. No se dice "she applies the patch": se dicen las dos posiciones. Y no se describe la mariposa del parche, solo dónde acaba cada parte.
 
 ### Ejemplo 3 — PRODUCTO. Anuncio 1, toma 15: packshot del pack de 2
 
@@ -447,13 +448,43 @@ Modelo: Seedance 2.0 `mode='std'` · 4 s · 1080p (o 4K si habrá zoom en montaj
 
 ```
 Use only the cream NOCTA box from @Image 1; do not use its background or its lighting.
-The two boxes stand still on the cream marble table. One continuous slow 180-degree
-orbit at constant radius and constant speed, decelerating smoothly into a static hold.
+The two boxes stand still on the cream marble table. Very slow push in, the camera
+moves straight forward and does not rotate, decelerating smoothly into a static hold.
 The lettering on the box does not change. Soft window light, unchanged. The background
-stays still. No subtitles.
+stays still. No subtitles, no text, no watermark.
 ```
 
-64 palabras. La segunda frase es obligatoria en Seedance 2.x y casi nadie la escribe: *"A reference carries everything visible — backgrounds, lighting, other people"*. Si no dices qué **no** tomar de la referencia, te trae también su fondo y su luz.
+68 palabras. La cámara entra de frente y no gira: la órbita que propone la investigación está descartada por la biblia (punto 5).
+
+La segunda frase es obligatoria en Seedance 2.x y casi nadie la escribe: *"A reference carries everything visible — backgrounds, lighting, other people"*. Si no dices qué **no** tomar de la referencia, te trae también su fondo y su luz.
+
+### Ejemplo 4 — ANTES / DESPUÉS. Anuncio 1, tomas 3 y 15a: la misma nariz, la misma luz
+
+Modelo: Seedance 1.5 Pro · 4 s · 1080p · dos clips · `generate_audio=false`.
+
+Esto no se consigue escribiendo mejor: se consigue con dos stills hermanas. Las dos se generan con el mismo prompt de imagen, el mismo preset de luz `Window`, la misma focal y el mismo encuadre, y lo único que cambia es el estado de la piel (estado 1 y estado 5 de la biblia). Después, dos prompts de vídeo idénticos salvo una frase.
+
+Clip A, la nariz de antes (62 palabras):
+
+```
+The nose from the image, seen straight on. The skin stays completely still apart from
+one faint breath. The pores are visible and the tip of the nose looks greasy, exactly as
+in the image. Identical static framing, the camera does not move, the light does not
+change. Locked-off close-up, macro lens. The background stays still.
+No subtitles, no text, no watermark.
+```
+
+Clip B, la nariz de después (64 palabras):
+
+```
+The nose from the image, seen straight on. The skin stays completely still apart from
+one faint breath. The tip of the nose stays matte and the pores stay open and empty,
+exactly as in the image. Identical static framing, the camera does not move, the light
+does not change. Locked-off close-up, macro lens. The background stays still.
+No subtitles, no text, no watermark.
+```
+
+**Cuidado con una cosa:** las dos variantes no se marcan nunca con corchetes dentro de un mismo prompt. En Seedance 2.x los corchetes son canales: `( )` música, `< >` efectos, `{ }` diálogo y `【 】` subtítulos. Escribir `[A: ...] / [B: ...]` para ahorrarte un prompt es la forma más rápida de que te salga texto quemado en pantalla. Se escriben los dos prompts enteros.
 
 ---
 
