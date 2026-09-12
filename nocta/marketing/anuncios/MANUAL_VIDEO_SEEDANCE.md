@@ -175,7 +175,7 @@ Y los tres casos que no son una toma fija:
 - **El plano hablado va en 2.0, no en 2.5.** La única ventaja de 2.5 aquí sería su audio nativo, y en NOCTA el audio va apagado en los 375 clips y la voz se graba y se monta aparte (punto 8). Mientras eso siga así, 2.5 no aporta nada y sí quita píxeles.
 - **Aviso sobre las tomas 7 y 8**, que llevan referencia y Frame Lock a la vez: **sin verificar** que la API de Seedance 2.0 acepte `image_references` y `end_image` en la misma llamada. Si la rechaza, manda el Frame Lock: quita la referencia y tira con `start_image` + `end_image`, porque el troquel y el lettering ya están horneados en la still.
 
-**Lo que NO se hace:** usar Seedance 2.5 para los macros. Tiene peor tope de resolución que 2.0 y más superficie para reinterpretar. Y tampoco se usan los "presets" de Higgsfield tipo EARTH ZOOM, ORBIT 360, STICKER PEEL o ACTION FIGURE: son plantillas virales de personaje, no controles de cámara, y no sirven para un anuncio de producto.
+**Lo que NO se hace:** usar Seedance 2.5 en ninguna de las 15 tomas. Tiene peor tope de resolución que 2.0 (1080p contra 4K) y más superficie para reinterpretar. Y tampoco se usan los "presets" de Higgsfield tipo EARTH ZOOM, ORBIT 360, STICKER PEEL o ACTION FIGURE: son plantillas virales de personaje, no controles de cámara, y no sirven para un anuncio de producto.
 
 ### El "look lock" de Higgsfield Cinema Studio
 
@@ -185,8 +185,8 @@ Traducción para NOCTA: el antes/después con la misma luz **solo es replicable 
 
 | Parámetro | Valor NOCTA | Por qué |
 |---|---|---|
-| Camera MoveSet Style | `Classic Static` | Congela el encuadre mientras la escena se mueve |
-| Lens Character | `Extreme Macro` solo en macros de poro y parche usado; el resto normal | Evita macro falsa en planos medios |
+| Camera MoveSet Style | `Classic Static` en todos los planos locked-off, que son casi todos; en los tres que llevan push in (dedo señalando, dormir, packshot), el MoveSet que corresponda a ese push in | `Classic Static` congela el encuadre mientras la escena se mueve. **Sin verificar**: la investigación solo inventaría esa opción de las diez de la lista, así que el MoveSet de los push in hay que elegirlo mirando la interfaz y anotarlo aquí |
+| Lens Character | `Extreme Macro` en los macros de poro y de parche usado (tomas 3, 4, 6, 8, 9, 14); en el resto no se toca, se deja el valor por defecto de la interfaz | Evita macro falsa en planos medios. De las seis opciones la investigación solo nombra `Extreme Macro` y `Clinical Sharp`: elegir a ciegas entre las otras cambia el look entre anuncios |
 | Aperture | `f/4` | A f/1.4 la punta de la nariz queda nítida y las alas no |
 | Focal Length | `35 mm` en planos con persona | La lista de Cinema Studio es 8 / 14 / 35 / 50 / 75 mm y la cámara principal de un móvil ronda los 26-28 mm equivalentes, así que 35 mm es la que más se acerca al look de la biblia. **Sin verificar**: no se ha comparado 35 contra 50 generando |
 | Lighting preset | `Window` en los planos de ventana | Restricción física, no texto reinterpretable |
@@ -233,7 +233,7 @@ Uno de estos, y solo uno, por plano:
 
 Seedance recomienda adverbios de grado para fijar la amplitud (`fast`, `large amplitude` de un lado; `slight`, `subtle` del otro) y **prohíbe instrucciones en conflicto**: no pidas lento y rápido a la vez. Higgsfield añade dos cosas que reducen la varianza entre tiradas:
 
-- **Notación de rampa por puntos discretos**, que el motor sí lee: `100% > 40% > 25%`.
+- **Notación de rampa por puntos discretos**: `100% > 40% > 25%`, es decir, empieza a velocidad plena y frena en dos escalones. Va en el campo de velocidad del movimiento de cámara de Cinema Studio; **sin verificar** si Seedance la lee dentro del texto del prompt, así que no la escribas en el prompt. En NOCTA el único plano con movimiento es el packshot y ya lleva el frenado escrito en palabras, así que de momento no usamos la rampa.
 - **El "settle"**: terminar el movimiento en una parada. `decelerating smoothly into a static hold`. Kling dice lo mismo con otras palabras: `then settles back into place`.
 
 En UGC de móvil queremos poco movimiento y mucha textura. Regla: todos los macros y planos de producto llevan `slow, steady` y final estático. Solo el plano de hablar a cámara lleva `handheld with slight natural drift`.
@@ -265,6 +265,8 @@ from the fingers with its inner side toward the camera, the nose bare and matte.
 ```
 
 ### Los cinco planos de NOCTA que llevan Frame Lock obligatorio
+
+(Hay un sexto condicional: la toma 5, cuando el error del guion es arrancar una tira de poros. Si el guion pide apretar o exfoliar, no hace falta.)
 
 | Toma | `start_image` | `end_image` | Frase clave del vídeo |
 |---|---|---|---|
@@ -314,7 +316,7 @@ Google lo formula mejor que nadie: *"Not recommended: using instructive language
 2. **Congelar lo que no debe moverse.** `the background stays still`, `the framing does not change`.
 3. **Sacarlo del encuadre en la still.** Lo que no está en la imagen no se puede deformar.
 4. **Bajar el movimiento.** Es la causa real de la mitad de los artefactos.
-5. **Lista de sustantivos** en vez de frases negativas, cuando toque nombrar algo.
+5. **Lista de sustantivos** en vez de frases negativas, cuando toque nombrar el fondo. En vez de `no mirror, no reflections`, se escribe lo que sí hay: `white subway tile and a chrome tap behind her`. La biblia avisa de que toda superficie que refleje a una persona es la vía más rápida a un brazo de más, así que esas superficies se quitan en la still y el fondo se nombra en positivo.
 
 ### Tabla de conversión para NOCTA
 
