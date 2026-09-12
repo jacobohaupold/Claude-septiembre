@@ -61,8 +61,9 @@ Comprueba cinco cosas:
 4. **Fidelidad del producto.** Toda toma donde salga el parche o la caja lleva su cláusula al principio y sus
    fotos de referencia. Es el fallo que más caro sale: sin las fotos, el parche sale deforme.
 5. **Prohibición de texto.** Todos los prompts terminan prohibiendo texto y marcas de agua.
+6. **Enlaces e imágenes.** Ningún documento apunta a un fichero o a una imagen que no existe.
 
-Estado actual: **todo correcto** en los anuncios ya escritos.
+Estado actual: **todo correcto** en los anuncios ya escritos y en los 85 enlaces internos de la documentación.
 
 ## Aviso de créditos
 

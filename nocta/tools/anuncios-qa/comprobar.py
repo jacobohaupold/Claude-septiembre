@@ -20,6 +20,8 @@ anuncio_*.md`. Comprueba cinco cosas y devuelve código 1 si alguna falla.
    deforme; está comprobado generando y es el fallo que más caro sale.
 5. PROHIBICIÓN DE TEXTO. Todo prompt de imagen termina prohibiendo texto y marcas de agua,
    porque los subtítulos se ponen en el montaje.
+6. ENLACES E IMÁGENES. Ningún documento de `nocta/` apunta a un fichero o a una imagen que no
+   existe. Se salta node_modules, que es código de terceros.
 """
 import json, os, re, sys, collections
 
@@ -85,6 +87,33 @@ def leer_fichero(ruta):
     return n, tomas
 
 
+def enlaces_rotos():
+    """Recorre los .md propios de nocta/ y devuelve los enlaces e imágenes que no resuelven."""
+    base = os.path.abspath(os.path.join(AQUI, '..', '..'))
+    rotos, total = [], 0
+    for dirpath, dirs, files in os.walk(base):
+        dirs[:] = [d for d in dirs if d not in ('node_modules', '.git', '.netlify', 'dist')]
+        for f in files:
+            if not f.endswith('.md'):
+                continue
+            p = os.path.join(dirpath, f)
+            try:
+                txt = open(p, encoding='utf-8', errors='ignore').read()
+            except Exception:
+                continue
+            for m in re.finditer(r'(?:!?\[[^\]]*\])\(([^)\s]+)\)', txt):
+                dest = m.group(1)
+                if dest.startswith(('http://', 'https://', '#', 'mailto:')):
+                    continue
+                total += 1
+                dest = dest.split('#')[0]
+                if not dest:
+                    continue
+                if not os.path.exists(os.path.normpath(os.path.join(dirpath, dest))):
+                    rotos.append('%s -> %s' % (os.path.relpath(p, base), dest))
+    return total, rotos
+
+
 def main():
     if not os.path.isdir(PROMPTS):
         print('No encuentro %s' % PROMPTS)
@@ -145,10 +174,15 @@ def main():
             if 'no text' not in low and 'no added text' not in low:
                 fallos['texto'].append('anuncio %d toma %d: no prohíbe el texto' % (n, t['num']))
 
+    n_enlaces, rotos = enlaces_rotos()
+    for x in rotos:
+        fallos['enlaces'].append(x)
+
     esperados = sorted(int(k) for k in guiones)
     faltan = [x for x in esperados if x not in anuncios]
 
-    print('anuncios comprobados: %d de %d · tomas: %d' % (len(anuncios), len(esperados), n_tomas))
+    print('anuncios comprobados: %d de %d · tomas: %d · enlaces internos: %d'
+          % (len(anuncios), len(esperados), n_tomas, n_enlaces))
     if faltan:
         print('anuncios todavía sin escribir: %s' % ', '.join(str(x) for x in faltan))
     titulos = [('formato', 'Ficheros o tomas mal formados'),
@@ -156,7 +190,8 @@ def main():
                ('cobertura', 'Bloques del guion sin ninguna toma'),
                ('palabras', 'Palabras prohibidas'),
                ('fidelidad', 'Tomas con producto sin cláusula o sin referencia'),
-               ('texto', 'Prompts que no prohíben el texto')]
+               ('texto', 'Prompts que no prohíben el texto'),
+               ('enlaces', 'Enlaces o imágenes que apuntan a algo que no existe')]
     total = 0
     for clave, titulo in titulos:
         lista = fallos.get(clave) or []
