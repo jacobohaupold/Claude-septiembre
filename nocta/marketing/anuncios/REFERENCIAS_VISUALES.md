@@ -1,721 +1,505 @@
 # REFERENCIAS REALES: cómo se ve y cómo se mueve esto de verdad
 
-**Versión 1.0 · 12 de septiembre de 2026.** Los datos de este documento salen de tres sitios y de ningún otro.
-Uno: una investigación con fuentes hecha en esta sesión, en la que se comprobó con `curl` el código HTTP de cada
-URL (no hay ninguna inventada) y en la que se descargaron y se miraron con los ojos seis imágenes clave —las tres
-fotos oficiales de Vue Skin del parche puesto, del parche usado y del antes/después, el blíster de Vue y las dos
-figuras clínicas de un caso publicado en JAAD Case Reports (PMC12890860)—. Dos: la documentación oficial de las
-marcas (Hero Cosmetics, Vue Skin, Bioré), que es la que da los tiempos reales de cada acción. Tres: la
-`BIBLIA_VISUAL.md` de NOCTA, con las reglas ya comprobadas generando 22 imágenes de verdad. Cuando algo no venga de
-ahí, lo verás escrito **sin verificar**.
+**Versión 1.0 · 12 de septiembre de 2026 · NOCTA · dirección de arte de los 25 anuncios**
 
-Este documento no genera nada. Es el manual de referencias que se usa **antes** de escribir un prompt y **después**
-de mirar el resultado, para decidir si una imagen o un vídeo se parecen a la realidad o se parecen a lo que la IA
-cree que es la realidad. Que no es lo mismo.
+De dónde salen los datos de este documento. Todo lo que aquí se afirma sobre imágenes y vídeos reales viene de dos sitios. Uno: la investigación de referencias visuales hecha para NOCTA, en la que se comprobó con `curl` el código HTTP de cada URL y además se descargaron y se miraron una a una seis imágenes clave (la foto "durante" de Vue Skin, la foto del parche usado de Vue, el antes/después de Vue, el blíster de Vue y las dos figuras clínicas del caso publicado en JAAD Case Reports, PMC12890860). Dos: la biblia visual de NOCTA, que recoge lo aprendido generando 22 imágenes de verdad con GPT Image 2.5 y contiene la ficha física del parche NOCTA y las cinco reglas comprobadas. Los tiempos de uso y de retirada vienen de la documentación pública de las propias marcas: la guía paso a paso de Hero Cosmetics, la página "cómo usar" de Vue Skin y el artículo "Pore Strips 101" de Bioré. Cuando una afirmación no venga de ahí, lo digo: pone **sin verificar**.
+
+Este documento no genera nada. Es el manual que se lee antes de escribir un prompt y antes de aprobar una imagen. El problema que resuelve es concreto: el modelo no ha visto nunca cómo se mueve una mano al despegar un parche de hidrocoloide, ni cómo se ve un poro de verdad, así que se lo inventa, y se lo inventa mal y siempre igual. La solución no es pedirle "más realismo", es darle la referencia exacta y describirla con palabras que él entienda.
 
 ---
 
 ## Índice
 
-1. [El problema: la IA no ha visto nunca un parche despegándose](#1-el-problema-la-ia-no-ha-visto-nunca-un-parche-despegándose)
+1. [Cómo se usa este documento](#1-cómo-se-usa-este-documento)
 2. [Dónde están las referencias buenas](#2-dónde-están-las-referencias-buenas)
+   - 2.1 Poros y filamentos sebáceos reales
+   - 2.2 Parches de hidrocoloide puestos y usados
+   - 2.3 El gesto de despegar
+   - 2.4 Textura de piel grasa
+   - 2.5 Vídeo UGC de baño rodado con móvil
+   - 2.6 Baño español
+   - 2.7 Packshot de caja
+   - 2.8 Tabla de términos de búsqueda exactos
 3. [Cómo se ve DE VERDAD cada cosa](#3-cómo-se-ve-de-verdad-cada-cosa)
-4. [Los movimientos, uno a uno, como los contaría un director](#4-los-movimientos-uno-a-uno-como-los-contaría-un-director)
+   - 3.1 El filamento sebáceo
+   - 3.2 El punto negro, que es otra cosa
+   - 3.3 El hidrocoloide limpio
+   - 3.4 El hidrocoloide saturado
+   - 3.5 La piel después
+   - 3.6 La marca del adhesivo
+   - 3.7 La piel grasa real
+4. [Los movimientos, uno a uno](#4-los-movimientos-uno-a-uno)
 5. [Cómo se convierte una referencia en un prompt](#5-cómo-se-convierte-una-referencia-en-un-prompt)
-6. [Qué NO copiar de las referencias que hay por ahí](#6-qué-no-copiar-de-las-referencias-que-hay-por-ahí)
-7. [Tabla: lo que la IA se inventa mal, y la corrección](#7-tabla-lo-que-la-ia-se-inventa-mal-y-la-corrección)
+6. [Qué NO copiar de lo que hay por ahí](#6-qué-no-copiar-de-lo-que-hay-por-ahí)
+7. [Tabla: lo que la IA se inventa mal](#7-tabla-lo-que-la-ia-se-inventa-mal)
 8. [Contradicciones con la biblia que hay que decidir](#8-contradicciones-con-la-biblia-que-hay-que-decidir)
-9. [Rutina de diez minutos antes de cada tanda](#9-rutina-de-diez-minutos-antes-de-cada-tanda)
+9. [Comprobación de 60 segundos antes de dar por buena una toma](#9-comprobación-de-60-segundos-antes-de-dar-por-buena-una-toma)
 
 ---
 
-## 1. El problema: la IA no ha visto nunca un parche despegándose
+## 1. Cómo se usa este documento
 
-Los modelos de imagen y de vídeo sí han visto millones de caras. Lo que casi no han visto es esto: un hidrocoloide
-translúcido sobre una nariz grasa española, a las siete y media de la mañana, despegándose despacio. De ese hueco
-salen los cuatro fallos que se repiten en todas las tandas:
+Antes de escribir las 15 tomas de un anuncio, se abre este documento por la sección 3 y se copia la descripción física de lo que va a salir en cuadro. Antes de animar, se abre por la sección 4 y se copia la duración y el modo de movimiento. Si una toma sale mal, se busca el fallo en la tabla de la sección 7 y se pega la frase de corrección.
 
-- La IA convierte el filamento sebáceo en un **punto negro de dibujo animado**, porque lo que ha visto etiquetado
-  son fotos de "blackheads" retocadas.
-- La IA convierte el parche usado en un parche con **lunares blancos**, porque "puntos blancos" en inglés es
-  literalmente "white dots" y eso es lo que dibuja.
-- La IA anima cualquier despegado como un **tirón dramático**, porque el material de entrenamiento de "peel" son
-  vídeos de tiras de poros y de películas protectoras de móvil.
-- La IA pone luz suave y bonita en el macro, y entonces **los poros desaparecen** y la piel se vuelve plástico.
+Tres cosas que están por encima de todo lo demás y que no se negocian:
 
-Los cuatro se arreglan con lo mismo: referencias concretas y frases exactas. Este documento es eso.
-
-Un apunte que ahorra discusiones: en este proyecto las referencias sirven para dos cosas distintas y no hay que
-mezclarlas. Las **fotos reales del producto NOCTA** (`parche_liner`, `parche_puesto`, `parche_puesto_2`, `caja`) se
-adjuntan como `image_references` en la generación, porque sin ellas el troquel del parche sale amorfo
-(`BIBLIA_VISUAL.md` §1). Las referencias de este documento, en cambio, **no se adjuntan casi nunca**: se miran, se
-describen con palabras y esas palabras van en el prompt. Si adjuntas una foto de Vue que lleva texto sobreimpreso,
-el modelo te copia el texto.
+- **Las fotos reales del producto van SIEMPRE adjuntas.** La biblia ya lo tiene comprobado: describir la forma del parche con palabras no basta, el modelo se inventa una mancha amorfa. En toda imagen donde salga el parche van como `image_references` dos o tres de estas: `parche_liner`, `parche_puesto`, `parche_puesto_2`, `caja`. Las referencias externas de este documento (Vue, Hero, las figuras clínicas) sirven para saber **qué describir**; las fotos de NOCTA sirven para que **el troquel salga bien**. No se mezclan: no se adjunta nunca una foto de Vue como referencia, porque el parche de Vue tiene el borde inferior festoneado y el de NOCTA tiene una muesca redondeada de 6 mm, y el modelo copiaría el borde equivocado.
+- **Nada de texto.** Ni en imágenes ni en vídeos. Varias de las referencias que se citan aquí (las de Vue) llevan texto sobreimpreso y el modelo tiende a imitarlo. Los subtítulos se ponen en montaje.
+- **Un estado por imagen.** Los cinco estados de la biblia (sin parche, recién puesto, saturado, a medio quitar, fuera) son excluyentes. Una imagen con el parche en la mano y a la vez pegado en la nariz se tira.
 
 ---
 
 ## 2. Dónde están las referencias buenas
 
-### 2.1 Reglas de uso de los buscadores
+Todas las URL de esta sección se comprobaron con `curl` en la investigación y devolvieron 200. Los términos de búsqueda que aparecen **dentro** de esas URL están, por tanto, comprobados. Los términos adicionales que propongo en la tabla 2.8 son sugerencias mías para ampliar la búsqueda: **sin verificar**.
 
-Tres cosas antes de empezar a buscar.
+### 2.1 Poros y filamentos sebáceos reales
 
-1. **Busca en inglés para lo clínico y lo técnico; busca en español solo para el decorado.** Los filamentos, los
-   parches y las tiras están documentados en inglés. Lo único que hay que buscar en español es el baño, porque un
-   baño español no aparece si preguntas en inglés: te sale un loft americano.
-2. **Getty y las páginas `discover` de TikTok se usan como banco de encuadres, no como material.** No se descarga
-   nada. Se mira cómo está puesta la cámara, a qué distancia, de dónde viene la luz, y se escribe.
-3. **Si añades una URL nueva a este documento, compruébala antes.** Todas las que hay aquí devolvieron 200 OK en la
-   investigación del 12/09/2026. Las que hemos añadido como sugerencia de búsqueda y no se comprobaron van marcadas
-   **sin verificar**.
+La referencia madre es una foto clínica, no una foto de belleza. En las fotos de belleza el filamento no existe porque está retocado.
 
-### 2.2 Poros y filamentos sebáceos reales
+- **La foto que hay que tener abierta mientras se escribe el prompt del macro**: `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/106acf39d5ca/gr1.jpg` (figura clínica de JAAD Case Reports, artículo PMC12890860). Nariz entera, encuadre del párpado inferior al labio superior, tres cuartos, luz dura frontal. Es literalmente el plano 3 de Álex.
+- **El artículo con los pies de figura**: `https://pmc.ncbi.nlm.nih.gov/articles/PMC12890860/`. Dice "prominent sebaceous filaments" y "uniform yellowish plugs". Confirma el color amarillento, no negro.
+- **La dermatoscopia a ×20**: `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/502a21f0cf49/gr2.jpg`. Se mira para saber qué **no** hacer: a esa magnificación la piel parece de otro planeta.
+- **Segundo caso clínico**, con la descripción "depósitos cilíndricos sólidos, blanco-hueso, rodeando folículos normales": `https://pmc.ncbi.nlm.nih.gov/articles/PMC7875663/` y su figura `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c05d/7875663/73a8be1d40e5/dp1101a148g001.jpg`.
+- **Banco clínico para distinguir filamento de comedón**: `https://dermnetnz.org/topics/comedones` y `https://dermnetnz.org/topics/comedonal-acne`.
+- **Base técnica en una página**: `https://en.wikipedia.org/wiki/Sebaceous_filament`. Importa porque dice lo que no se puede prometer: el filamento sebáceo es fisiología normal y vuelve.
+- **Bancos de encuadres**: `https://www.gettyimages.com/photos/nose-pores-close-up` y `https://www.gettyimages.com/videos/skin-macro`.
 
-**La referencia madre.** La foto clínica de base de un caso de filamentos sebáceos prominentes en la nariz,
-publicada en JAAD Case Reports:
+### 2.2 Parches de hidrocoloide puestos y usados
 
-- `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/106acf39d5ca/gr1.jpg` — foto clínica a distancia normal.
-  Es, literalmente, la nariz de Álex. Vertical 3:4, del párpado inferior al labio superior, tres cuartos, cámara a
-  la altura de la punta de la nariz, luz dura y frontal desde la posición de cámara.
-- `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/502a21f0cf49/gr2.jpg` — la misma nariz en dermatoscopia
-  ×20. **Referencia negativa**: sirve para saber a qué NO hay que llegar.
-- `https://pmc.ncbi.nlm.nih.gov/articles/PMC12890860/` — el artículo, con los pies de figura que confirman el color
-  ("uniform yellowish plugs": amarillentos, no negros).
-- `https://pmc.ncbi.nlm.nih.gov/articles/PMC7875663/` — describe los filamentos como depósitos cilíndricos
-  blanco-hueso alrededor de folículos normales. Refuerza que el filamento es un cilindro que sobresale.
-- `https://dermnetnz.org/topics/comedones` y `https://dermnetnz.org/topics/comedonal-acne` — banco clínico DermNet.
-  Aquí está la distinción que hay que tener clara para no prometer de más: el comedón abierto es negro por melanina
-  oxidada, el filamento sebáceo es gris-amarillo. NOCTA trabaja sobre filamento.
-- `https://en.wikipedia.org/wiki/Sebaceous_filament` — base técnica: el filamento no es un punto negro y no
-  desaparece para siempre.
+- **Parche puesto, la foto de referencia de composición**: `https://www.vueskin.com/cdn/shop/files/Model_Image_-_During.jpg`. Los dos índices a la vez, ojos cerrados, 85 mm frontal. Se copia la geometría, no el parche.
+- **Parche usado, la foto más importante del proyecto**: `https://www.vueskin.com/cdn/shop/files/Dirty_Patch.jpg`. Dos manos, parche tensado, cara desenfocada detrás, fondo oscuro. Aquí es donde se ve que el sebo absorbido no son puntos.
+- **Paso a paso oficial de Hero con fotos**: `https://www.herocosmetics.us/blogs/news/step-by-step-guide-with-photos-how-to-use-mighty-patch-nose-for-pore-cleansing`. Describe la mecánica del gesto y dice el objetivo: que quede plano, sin arrugas, sin bultos y sin burbujas.
+- **Tutorial de Vue con secuencia de cinco imágenes**: `https://www.vueskin.com/pages/how-to-use-vue-patches` y `https://www.vueskin.com/pages/nose-patches-tutorial`, imágenes `https://cdn.shopify.com/s/files/1/0611/5373/8942/files/nose1.png` hasta `nose5.png`.
+- **Página de producto de Hero con miniaturas del parche blanco**: `https://www.herocosmetics.us/products/mighty-patch-nose`.
+- **Material hidrocoloide en otras marcas**: `https://www.cosrx.com/cdn/shop/files/acne-pimple-master-patch-cosrx-official-1.jpg` y el vídeo 4:5 de Starface `https://cdn.accentuate.io/4372799651911/1770415204397/4x5-video-for-web---final-cut-1.mp4`.
+- **Competencia española directa**, útil para no parecer una traducción: `https://nichebeautylab.com/products/zitproof-nose` (Acnemy Zitproof Nose) y `https://www.vueskin.com/es/products/hydrocolloid-nose-patches`.
 
-**Bancos de encuadres:**
+### 2.3 El gesto de despegar
 
-- `https://www.gettyimages.com/photos/nose-pores-close-up`
-- `https://www.gettyimages.com/videos/skin-macro`
+Aquí hay dos gestos distintos y es importante no confundirlos, porque la diferencia entre los dos **es** el anuncio comparativo.
 
-**Términos exactos de búsqueda.** En inglés, que es donde está el material:
+Despegar el parche de hidrocoloide:
 
-```
-sebaceous filaments nose clinical photo
-sebaceous filaments vs blackheads dermatology
-nose pores close up macro
-enlarged pores nose macro photography
-oily t-zone skin texture macro
-```
+- `https://www.youtube.com/shorts/ABU2WIaj14k` ("satisfying hydrocolloid patch removal"). Vertical, despegado real: el parche se estira, se dobla sobre sí mismo, la piel no se levanta.
+- `https://www.youtube.com/watch?v=yFVu8FGoLDI` ("Pimple Patch Removal | Remove My Pimple Patches & See the Results"). Gesto de retirada y presentación a cámara a velocidad real.
+- `https://www.youtube.com/watch?v=m2mcTAnVmUM` (anuncio oficial de Mighty Patch Nose). Sirve para el ritmo de plano.
+- `https://www.tiktok.com/@herocosmetics.uk/video/7476150243126463766`. Aplicación a velocidad real.
+- `https://www.tiktok.com/discover/hero-mighty-patch-before-and-after`. Ritmo de montaje del "peel reveal".
 
-En español, para ver el lenguaje que usa el público y la prensa de aquí (útil para el guion, no para la imagen):
+Despegar una tira de poros (el contraejemplo, el gesto del competidor):
 
-```
-filamentos sebáceos nariz
-puntos negros nariz de verdad
-poros dilatados nariz primer plano
-diferencia puntos negros y filamentos sebáceos
-```
+- `https://www.youtube.com/watch?v=B5EawJajoqE` ("BIORE PORE STRIP REMOVAL UP CLOSE"), el macro viral original.
+- `https://www.youtube.com/watch?v=ulSETPsaXAk` (bajo microscopio). Aquí se ve que los tapones salen perpendiculares a la tira, como un bosque de alfileres.
+- `https://www.youtube.com/watch?v=CglTwSUZO0E` y `https://www.youtube.com/watch?v=9sb6ObLdruo`, más ángulos.
+- `https://www.youtube.com/shorts/1Ec37mlYvlY`, en vertical 9:16.
+- Instrucciones oficiales: `https://us.biore.com/blog/acne-and-pimples/pore-strips-101`. Dice 10-15 minutos hasta que la tira está rígida y retirada despacio desde los bordes.
+- `https://www.gettyimages.com/videos/pore-strip`, banco.
 
-**Contexto español de mercado**, para que los anuncios no suenen a traducción:
-`https://elmon.cat/viure/es/bienestar/adios-a-los-puntos-negros-dos-dermatologas-opinan-sobre-el-exito-de-los-parches-hidrocoloides-virales-5290/`
-(artículo con dos dermatólogas españolas sobre los parches virales).
+### 2.4 Textura de piel grasa
 
-### 2.3 Parches de hidrocoloide puestos y usados
+- La misma figura clínica `gr1.jpg` del punto 2.1 es también la mejor referencia de piel grasa con brillo especular.
+- `https://www.vueskin.com/cdn/shop/files/Model_Image_-_During.jpg`: piel real con pecas, poros y brillo en el pómulo, en luz de estudio suave.
+- `https://www.youtube.com/watch?v=Wl0jS7uYKt8` ("My favorites tips for Macro Beauty Photography", Lindsay Adler). Explica lo único que importa aquí: el ángulo de la luz respecto a la superficie decide si la textura aparece o desaparece.
+- `https://www.gettyimages.com/videos/skin-macro`, textura en movimiento.
+- `https://www.youtube.com/watch?v=rdKaYMvLsjo` ("Skincare Texture Photography Tutorial", Tiffany Chen).
 
-- `https://www.vueskin.com/cdn/shop/files/Model_Image_-_During.jpg` — **la referencia del parche puesto**. Los dos
-  índices presionando a la vez, parche translúcido con las pecas visibles a través.
-- `https://www.vueskin.com/cdn/shop/files/Dirty_Patch.jpg` — **la referencia del parche usado**. La más importante
-  del proyecto y la que corrige el brief (ver §3.3).
-- `https://www.vueskin.com/pages/how-to-use-vue-patches` y `https://www.vueskin.com/pages/nose-patches-tutorial` —
-  tutorial oficial con secuencia de cinco imágenes (`https://cdn.shopify.com/s/files/1/0611/5373/8942/files/nose1.png`
-  hasta `nose5.png`). Indican piel completamente seca, sin nada de crema debajo, y presionar con firmeza.
-- `https://www.herocosmetics.us/blogs/news/step-by-step-guide-with-photos-how-to-use-mighty-patch-nose-for-pore-cleansing`
-  — el paso a paso oficial de Hero. Es la mejor descripción escrita de la mecánica del gesto que hay, y de ahí
-  salen los tiempos de §4.
-- `https://www.herocosmetics.us/products/mighty-patch-nose` — miniaturas del parche usado.
-- `https://www.cosrx.com/cdn/shop/files/acne-pimple-master-patch-cosrx-official-1.jpg` y
-  `https://starface.world/cdn/shop/files/starface-big-yellow-hydro-star-compact_0dfc31f3-6f2c-4678-9fa8-402851cc31de.png`
-  — el material hidrocoloide en otras marcas, para calibrar el aspecto del gel.
-- `https://nichebeautylab.com/products/zitproof-nose` — Acnemy Zitproof Nose, competencia **española** directa.
-  Packshot: `https://nichebeautylab.com/cdn/shop/files/AC_43499_ZITPROOF-NOSE_PRODUCT_BOX_c74258d9-7611-4195-9f5b-fa5ca3593282.jpg`
-- `https://www.vueskin.com/es/products/hydrocolloid-nose-patches` — la ficha de Vue en español.
-- `https://www.gettyimages.com/photos/acne-patch-face` — banco de encuadres de parche sobre rostro.
+### 2.5 Vídeo UGC de baño rodado con móvil
 
-Búsqueda:
+- `https://www.gettyimages.com/videos/selfie-video-phone-bathroom`. El patrón se ve a simple vista: brazo extendido, 35-50 cm, móvil por debajo de la línea de ojos, cabeza en el tercio superior del 9:16.
+- `https://www.gettyimages.com/videos/bathroom-mirror-skincare-morning`. La variante espejo, con dos profundidades.
+- `https://www.youtube.com/watch?v=jfmILqclerU` ("morning skincare routine *glass skin edition*", Ally Yost). Duración real de cada gesto.
+- `https://www.youtube.com/watch?v=N1gkqrsklbE` ("Minimalist morning routine | Silent vlog", Marin). B-roll de baño sin voz: manos, grifo, toalla.
+- `https://www.tiktok.com/discover/skin-care-ugc-example` y `https://www.tiktok.com/discover/how-to-film-morning-routine-tutorial`.
+- **El banco más útil y el único que se actualiza solo**: `https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en?period=30&region=ES&industry=22000000000`. Es el Top Ads de TikTok filtrado por España y sector belleza, últimos 30 días. Conviene mirarlo antes de cada tanda de generación.
+- Calibración del temblor: `https://www.youtube.com/watch?v=pEnkzokIG64` ("Phone Gimbal vs Handheld") y `https://www.youtube.com/watch?v=nb_5i5gjYL4` (B&H, técnicas a pulso).
 
-```
-hydrocolloid nose patch before and after
-used hydrocolloid patch absorbed sebum
-pimple patch removal reveal
-hydrocolloid patch turned white
-```
+### 2.6 Baño español
 
-```
-parche hidrocoloide nariz antes y después
-parche nariz puntos negros resultado
-```
+- `https://www.gettyimages.es/fotos/cuarto-de-baño-españa`. Es el buscador de Getty en español filtrado a España y es el único banco que devuelve baños realmente españoles en vez de lofts americanos.
+- `https://elmon.cat/viure/es/bienestar/adios-a-los-puntos-negros-dos-dermatologas-opinan-sobre-el-exito-de-los-parches-hidrocoloides-virales-5290/`. No es una referencia visual, es de lenguaje: define el marco mental del público español sobre los parches.
 
-### 2.4 El gesto de despegar
+### 2.7 Packshot de caja
 
-Aquí lo que hace falta es vídeo, no foto, porque lo que se necesita es la velocidad.
+- `https://nichebeautylab.com/cdn/shop/files/AC_43499_ZITPROOF-NOSE_PRODUCT_BOX_c74258d9-7611-4195-9f5b-fa5ca3593282.jpg`. Caja pequeña de parches nasales de una marca española: el formato más parecido al nuestro.
+- `https://www.herocosmetics.us/cdn/shop/products/MPN_600x600_3446df4a-a24e-4b85-9652-339d2d9be61e.jpg`, packshot oficial de Mighty Patch Nose.
+- `https://starface.world/cdn/shop/files/starface-big-yellow-hydro-star-compact_0dfc31f3-6f2c-4678-9fa8-402851cc31de.png`, envase pequeño con sombra propia bien marcada.
+- `https://www.vueskin.com/cdn/shop/files/NosePatchLarge_a850e4ce-b22a-4f06-916c-b9ef3f933c32.jpg`, el blíster sobre blanco puro. Sirve para el plano de producto desnudo, no para el de caja.
+- `https://www.gettyimages.com/photos/cosmetic-box-beige-background`, banco.
+- Técnica de una sola luz: `https://www.youtube.com/watch?v=Oz9SXijsTvY` y `https://www.youtube.com/watch?v=Y9WoLveqglA`. La receta de los dos es la misma: una fuente grande a 45° arriba-izquierda y un rebote blanco a la derecha.
 
-- `https://www.youtube.com/shorts/ABU2WIaj14k` — "satisfying hydrocolloid patch removal" (hnh). Vertical, formato
-  nuestro. Se ve lo esencial: el parche **se estira** y **se dobla sobre sí mismo**, blando, y la piel no se levanta.
-- `https://www.youtube.com/watch?v=yFVu8FGoLDI` — "Pimple Patch Removal | Remove My Pimple Patches & See the
-  Results" (Julia___Faith). Retirada y presentación a cámara a velocidad real, en formato de creadora.
-- `https://www.tiktok.com/@herocosmetics.uk/video/7476150243126463766` — "Here's the best way to apply our NEW Nose
-  patches". El gesto de aplicación de la propia marca.
-- `https://www.youtube.com/watch?v=m2mcTAnVmUM` — "Meet Mighty Patch Nose" (Hero Cosmetics). El anuncio oficial:
-  sirve para el ritmo de plano y la duración de cada gesto.
-- `https://www.tiktok.com/discover/hero-mighty-patch-before-and-after` — recopilatorio de "peel reveal" vertical.
+### 2.8 Tabla de términos de búsqueda exactos
 
-Para el **contraste** con la tira de poros, que es el plano que más vende el producto:
+Los términos de la columna "comprobado" son los que ya devuelven resultados en las URL de arriba. Los de la columna "para ampliar" son propuestas mías, **sin verificar**.
 
-- `https://www.youtube.com/watch?v=B5EawJajoqE` — "BIORE PORE STRIP REMOVAL UP CLOSE" (Michelle Kanemitsu). El
-  viral original.
-- `https://www.youtube.com/watch?v=ulSETPsaXAk` — "BLACKHEAD PEEL-OFF NOSE STRIP UNDER A MICROSCOPE" (Brittanybear-
-  makeup). Aquí está el detalle que importa: los tapones salen **perpendiculares** a la tira.
-- `https://www.youtube.com/watch?v=CglTwSUZO0E` y `https://www.youtube.com/watch?v=9sb6ObLdruo` — más ángulos.
-- `https://www.youtube.com/shorts/1Ec37mlYvlY` — vertical 9:16.
-- `https://us.biore.com/blog/acne-and-pimples/pore-strips-101` — instrucciones oficiales de Bioré: 10-15 minutos
-  hasta que la tira está rígida, y despegar **despacio desde los bordes**, nunca de un tirón.
-- `https://www.gettyimages.com/videos/pore-strip`
-
-Búsqueda:
-
-```
-hydrocolloid patch peel off slow motion
-pore strip removal close up
-pore strip removal under microscope
-nose strip peel skin stretch
-```
-
-```
-tira de poros nariz quitar
-parche hidrocoloide quitar despacio
-```
-
-### 2.5 Textura de piel grasa
-
-- `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/106acf39d5ca/gr1.jpg` — otra vez la figura clínica: la piel
-  grasa con luz dura desde cámara. Es donde mejor se ve que el brillo es lo que hace aparecer la textura.
-- `https://www.vueskin.com/cdn/shop/files/Model_Image_-_During.jpg` — piel real con pecas, poros y brillo natural en
-  el pómulo, en luz suave. El contraste entre esta y la anterior es la lección entera.
-- `https://www.youtube.com/watch?v=Wl0jS7uYKt8` — "My favorites tips for Macro Beauty Photography" (Lindsay Adler
-  Photography). Explica cómo el ángulo de la luz respecto a la superficie decide si la textura aparece o se borra.
-- `https://www.gettyimages.com/videos/skin-macro` — textura en movimiento.
-
-Búsqueda:
-
-```
-oily skin texture macro unretouched
-t-zone shine natural skin no makeup
-vellus hair backlit skin macro
-real skin pores no retouch photography
-```
-
-```
-piel grasa zona t brillo real
-textura de piel sin retoque
-```
-
-### 2.6 Vídeo UGC de baño rodado con móvil
-
-Esto es lo que define el look, y no es el grano: es la **geometría**.
-
-- `https://www.gettyimages.com/videos/selfie-video-phone-bathroom` — el patrón real: brazo extendido, 35-50 cm,
-  móvil por debajo de la línea de ojos, cabeza en el tercio superior del 9:16 y aire muerto abajo.
-- `https://www.gettyimages.com/videos/bathroom-mirror-skincare-morning` — la variante espejo, con dos profundidades.
-- `https://www.youtube.com/watch?v=jfmILqclerU` — "morning skincare routine *glass skin edition*" (Ally Yost).
-  Duración por gesto y cómo se acerca el producto a la lente.
-- `https://www.youtube.com/watch?v=N1gkqrsklbE` — "Minimalist morning routine | Silent vlog" (Marin). B-roll de
-  baño a primera hora: cómo cae la luz sobre el lavabo y cómo rebota en el azulejo.
-- `https://www.tiktok.com/discover/skin-care-ugc-example` y
-  `https://www.tiktok.com/discover/how-to-film-morning-routine-tutorial`
-- `https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en?period=30&region=ES&industry=22000000000`
-  — **Top Ads de TikTok filtrado por España y belleza, últimos 30 días.** Es el banco más útil que existe para ver
-  qué encuadre funciona AHORA en el mercado español, y se actualiza solo. Míralo antes de cada tanda.
-- Calibración del temblor: `https://www.youtube.com/watch?v=pEnkzokIG64` ("Phone Gimbal vs Handheld", James Shin) y
-  `https://www.youtube.com/watch?v=nb_5i5gjYL4` ("No More Shaky Footage!", B&H).
-
-Y para el decorado español, que es lo único que hay que buscar en español:
-
-- `https://www.gettyimages.es/fotos/cuarto-de-baño-españa` — el único banco que devuelve baños realmente españoles.
-
-Búsqueda:
-
-```
-ugc skincare bathroom iphone front camera
-talking head bathroom mirror phone
-handheld phone footage drift no gimbal
-```
-
-```
-cuarto de baño español piso pequeño
-baño azulejo blanco ventana pequeña
-```
+| Qué busco | Dónde | Término comprobado | Para ampliar (sin verificar) |
+|---|---|---|---|
+| Filamentos sebáceos reales | PubMed Central, DermNet | `sebaceous filaments` | `sebaceous filaments nose clinical photo`, `filamentos sebáceos nariz dermatología` |
+| Poros de nariz de cerca | Getty | `nose pores close up` | `poros nariz macro`, `enlarged pores nose macro` |
+| Macro de piel en movimiento | Getty vídeos | `skin macro` | `skin texture macro video`, `macro piel textura` |
+| Parche sobre rostro | Getty | `acne patch face` | `hydrocolloid patch nose`, `parche hidrocoloide nariz` |
+| Parche usado, peel reveal | TikTok descubrir | `hero mighty patch before and after` | `hydrocolloid patch removal satisfying`, `parche usado antes después` |
+| Despegado de hidrocoloide | YouTube Shorts | `satisfying hydrocolloid patch removal` | `pimple patch peel off close up` |
+| Tira de poros arrancada | YouTube | `BIORE PORE STRIP REMOVAL UP CLOSE` | `pore strip under microscope`, `tira poros nariz antes después` |
+| UGC de baño con móvil | Getty vídeos | `selfie video phone bathroom` | `front camera talking bathroom`, `grabándose con el móvil en el baño` |
+| Espejo de baño por la mañana | Getty vídeos | `bathroom mirror skincare morning` | `mirror selfie skincare routine` |
+| Baño español real | Getty España | `cuarto de baño españa` | `baño piso español azulejo`, `spanish apartment bathroom tiles` |
+| Antes/después de nariz | Getty | `before and after skin nose` | `antes y después poros nariz` |
+| Caja de cosmética sobre crema | Getty | `cosmetic box beige background` | `small carton box cream background product shot` |
+| Anuncios que funcionan ahora en ES | TikTok Creative Center | Top Ads, región ES, sector 22000000000 | filtrar también por 7 días para ver lo que sube |
 
 ---
 
 ## 3. Cómo se ve DE VERDAD cada cosa
 
-Esta sección es la que hay que tener abierta al escribir prompts. Cada apartado acaba con la frase en inglés lista
-para pegar.
+Cada ficha va con la frase en inglés lista para pegar en el prompt. Las frases están escritas para meterse en el hueco 3 de la fórmula de la biblia ("detalle físico concreto").
 
 ### 3.1 El filamento sebáceo
 
-**Lo que NO es.** No es un punto negro. No es suciedad. No es un agujero. No está repartido de forma uniforme por
-toda la nariz.
+No es un punto negro. Es un **cilindro de sebo y queratina que rellena el folículo y sobresale un poco**, de 0,3 a 0,6 mm, de color **gris pardo con matiz amarillento**, a veces casi color crema. En la figura clínica a ×20 se ve que son cúpulas convexas, no agujeros. A la magnificación correcta (1:1 a 2:1, ancho de campo 30-40 mm) leen como un campo de puntitos gris-pardo.
 
-**Lo que es.** Un cilindro de sebo y queratina que ocupa el folículo y **sobresale un poco**, no se hunde. Mide
-entre 0,3 y 0,6 mm. Su color va del gris-pardo al amarillo pálido (confirmado por el pie de figura del artículo:
-"uniform yellowish plugs", PMC12890860). Con luz dura, cada uno atrapa su propio micro-destello y por eso se lee
-**en relieve**. Se concentran en las aletas de la nariz y en el surco alar; en el puente hay muchos menos. En la
-piel de alrededor hay enrojecimiento leve, sobre todo en el surco alar y junto a las fosas nasales.
+Dónde están: **densísimos en las aletas de la nariz y en el surco alar, escasos en el puente**. Nunca repartidos por igual. La distribución en rejilla es el error que más delata el render (regla 4 de la biblia).
 
-La magnificación correcta es 1:1 a 2:1, es decir, **un ancho de campo de 30 a 40 mm**: cabe la nariz entera y un
-dedo de mejilla a cada lado. A magnificación de dermatoscopio (×20) los filamentos son cúpulas amarillas en
-retícula y la piel parece de otro planeta: espanta en vez de vender. Eso se vio en la figura gr2.jpg.
+Qué los hace visibles: **la luz dura desde la posición de cámara**. Cada filamento genera su propio micro-destello y por eso se lee en relieve. Con luz difusa grande se borran y la piel se plastifica. Esto está comprobado comparando las figuras clínicas con las fotos de belleza.
 
 ```
-a dense field of sebaceous filaments: greyish-brown to pale yellow raised plugs, 0.3 to 0.6 mm, each catching its own micro-highlight, concentrated on the nostril wings and in the alar crease, sparse on the bridge, with light redness around the alar crease
+a dense field of sebaceous filaments: greyish-brown to pale yellow raised plugs, 0.3 to 0.6 mm, each one catching its own micro-highlight, concentrated on the nostril wings and in the alar crease, sparse on the bridge; pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced
 ```
 
-Y el negativo, siempre:
+Negativo obligatorio:
 
 ```
-no black carbon dots, no evenly spaced pores, no dermatoscope view, no airbrushed skin
+black carbon dots, uniform pore pattern, grid of pores, dermatoscope view, airbrushed skin, plastic skin, beauty filter
 ```
 
-### 3.2 El hidrocoloide limpio
+### 3.2 El punto negro, que es otra cosa
 
-Translúcido, mate, con un velo lechoso muy leve. **Se ve la piel y las pecas a través de él.** Tiene su propio
-brillo especular satinado, distinto al de la piel: un punto menos brillante que la nariz grasa, y un poco más claro.
-El borde es biselado y atrapa una línea fina de luz que es, en la práctica, lo que dibuja la silueta de mariposa.
-Suele quedar alguna micro-burbuja de aire cerca del borde, y ese defecto es justo lo que le da verdad.
+El comedón abierto es negro porque la melanina de la superficie se oxida, no por suciedad (DermNet). Es más grande, más oscuro y aparece suelto, no en campo denso. **NOCTA trabaja sobre filamento, no sobre comedón inflamado.** Esto importa para dos cosas: para no pintar la nariz de puntos negros de dibujo, y para no prometer de más en el guion.
 
-Aquí está la regla crítica de la biblia, que sigue vigente: si solo escribes "lleva el parche puesto", el modelo lo
-hace invisible y parece que la persona se está apretando la nariz, que es el mensaje contrario.
+### 3.3 El hidrocoloide limpio
 
-```
-a translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, skin and freckles visible through the material, edges perfectly sealed against the skin, one tiny trapped air bubble near the edge
-```
+El parche NOCTA recién puesto es **casi transparente con un velo mate**, un punto más claro que la piel, y se ven la piel y las pecas a través. Tiene **brillo propio, distinto al de la piel**: una línea fina de especular que recorre el borde biselado y dibuja la silueta de mariposa. Está sellado: sin arrugas, sin esquinas levantadas, siguiendo la curva de la nariz. Una o dos micro-burbujas cerca del borde es lo que le da verdad, porque eso pasa de verdad al aplicar (el paso a paso de Hero avisa expresamente de evitar burbujas, o sea que salen).
 
-### 3.3 El hidrocoloide saturado — la corrección más importante de todo el documento
-
-En la foto oficial del parche usado de Vue (`Dirty_Patch.jpg`), el sebo absorbido **no son puntos blancos
-redondos**. Es una **nevada granular**, tipo azúcar glas o escarcha: densa y continua en el centro del parche
-—donde tocaba el puente y la punta—, disgregándose en grano fino hacia los bordes, con algunos grumos más gruesos.
-Donde está cargado, el material es **opaco**; en los bordes sigue translúcido gris perla con brillo satinado.
-
-Esto importa porque el brief original y la biblia hablan de "puntitos blancos". Si le pides `white dots` a GPT
-Image 2.5, te devuelve lunares blancos de dibujo animado y se te cae el plano que más vende (la toma 14 de cada
-anuncio). La frase correcta:
+La regla crítica de la biblia va aquí y no se salta nunca: si solo se escribe "lleva el parche puesto", el modelo lo hace invisible y la imagen parece que la persona se está apretando la nariz.
 
 ```
-dense powdery white frost covering the centre of the patch, like fine icing sugar, granular and continuous where it sat on the nose bridge and tip, breaking into fine speckle towards the scalloped edges, opaque where loaded, still translucent pearl-grey at the rim, a few coarser clumps, satin sheen
+a translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed against the skin, one tiny air bubble near the edge, skin and freckles visible through the material
 ```
 
-Hay un matiz: la biblia de NOCTA describe además, en la **cara interna** de la parte despegada, "tapones
-blanco-amarillentos que salen de los poros", como cúpulas pequeñas que sobresalen. Las dos cosas conviven si se
-entienden bien: la **escarcha** es el gel saturado visto de frente o a contraluz; los **tapones en relieve** solo se
-ven en el reverso, con luz rasante y a muy poca distancia. Son dos planos distintos, no uno. Ver §8, aviso 1.
+### 3.4 El hidrocoloide saturado
 
-### 3.4 La piel después
+**Este es el hallazgo que más cambia el proyecto y hay que leerlo dos veces.** En la foto real del parche usado de Vue, el sebo absorbido **no son puntos blancos redondos**. Es una **nevada granular**, tipo azúcar glas o escarcha: continua y densa en el centro del parche, justo donde tocaba el puente y la punta, y disgregándose en grano fino hacia los bordes, con algún grumo más grueso. Donde está cargada, el material se vuelve **opaco**; los bordes siguen traslúcidos. El material de base es **gris perla translúcido con brillo satinado**.
 
-Lo que se ve realmente en el "después" de Vue: **quedan filamentos**. Menos, más tenues, con menos brillo graso,
-pero quedan. Los filamentos sebáceos son fisiología normal y vuelven; prometer cero es falso y trae devoluciones y
-reseñas malas.
-
-Físicamente, la nariz recién liberada está: un punto rosada durante un minuto por la oclusión, **mate** (el sebo
-superficial se lo ha llevado el gel, así que el brillo que tenía la punta desaparece un rato), con los poros
-visibles pero vacíos y planos, y con algún capilar fino más marcado por el calor.
+Si se pide `white dots` o "puntitos blancos", GPT Image devuelve lunares blancos de dibujo animado y el plano que más vende del anuncio se cae.
 
 ```
-the pores on the nose are open, EMPTY and flat, noticeably fewer and fainter sebaceous filaments on the nostril wings, still a few remaining, the skin slightly pink and matte from the occlusion, less oily shine on the nose tip than before
+dense powdery white frost covering the centre of the patch — like fine icing sugar, granular and continuous where it sat on the nose bridge and tip, breaking into fine speckle towards the edges, fully opaque where it is loaded, a few coarser clumps, the edges still translucent pearl-grey with a satin sheen
 ```
 
-El truco operativo ya comprobado: describirlo no basta, porque el avatar de referencia tiene la nariz sucia y el
-modelo la conserva. Hay que adjuntar como **segunda referencia** un fotograma ya generado de esa misma nariz limpia
-—para Álex, `img/a01/a01_13.jpg`— y escribir «The SECOND reference is his nose AFTER the treatment: the skin of the
-nose you generate must look EXACTLY like that second reference» (`BIBLIA_VISUAL.md`, regla 2).
-
-### 3.5 La marca del adhesivo
-
-Es el detalle que nadie pide y que hace que una imagen parezca fotografía. Al quitar el parche queda, durante uno o
-dos minutos, un **contorno tenue**: una línea rosada de un milímetro que dibuja el perímetro de la mariposa, con la
-piel de dentro un poco más pálida y mate que la de fuera y con algún pelillo velloso aplastado en la dirección en
-la que se tiró. No es una marca roja fuerte ni una irritación: si sale marcada, estás vendiendo agresión, que es
-justo lo que vende la tira de poros. Sin verificar: la duración exacta de esa marca no está documentada en ninguna
-fuente de la investigación; "uno o dos minutos" es estimación de dirección de arte.
+Si la toma es del reverso del parche a medio quitar, la biblia añade el detalle de los tapones, que sí son bultos y sí se ven uno a uno, porque están a contraluz y en relieve:
 
 ```
-a faint pink outline where the patch edge was, one millimetre wide, tracing the butterfly perimeter, the skin inside it slightly paler and more matte than the skin around, a few fine vellus hairs flattened in the direction of the pull, no irritation, no red welt
+the underside turned to the camera showing irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores
 ```
+
+A contraluz la escarcha cambia de aspecto: se vuelve traslúcida y brilla como cristal esmerilado. Es bonito pero pierde contraste de blanco. Lo mejor es tener las dos tomas: una a contraluz (bonita) y otra sobre fondo oscuro (prueba).
+
+```
+backlit by a small frosted bathroom window, the sebum frost glowing translucent like frosted glass, rim light along the patch edges
+```
+
+### 3.5 La piel después
+
+Los poros quedan **vacíos y planos**, sin tapón dentro. La piel queda **algo rosada y mate durante un minuto**, porque el hidrocoloide ha absorbido el sebo de superficie y se ha llevado el brillo. Es decir: el cambio más visible en pantalla no es que desaparezcan los puntos, es que **desaparece el brillo graso**.
+
+Y aquí va el límite que no se cruza: **nunca se genera un "después" con cero filamentos**. Los filamentos sebáceos son fisiología normal y vuelven. En el propio antes/después de Vue siguen quedando puntos en el "después". Prometer cero es falso, trae devoluciones y reseñas malas.
+
+```
+the pores are open, EMPTY and flat, no dark dots and no grey-brown plugs in the treated area, the skin slightly pink and matte where the patch was, a few faint filaments still visible further out on the nostril wings, noticeably less oily shine on the nose tip
+```
+
+Y, como dice la regla 2 de la biblia, con palabras no basta: hay que adjuntar como segunda referencia una imagen ya generada de **esa misma nariz limpia**, porque si no el modelo conserva los puntos del retrato del avatar.
+
+```
+The SECOND reference is her nose AFTER the treatment: the skin of the nose you generate must look EXACTLY like that second reference, open EMPTY pores, no dark dots.
+```
+
+### 3.6 La marca del adhesivo
+
+Al quitar el parche queda un rastro y ese rastro es un detalle de veracidad barato que casi nadie pone. Lo que se ve, según la biblia: **la marca tenue del borde del parche**, es decir, una línea de contorno de mariposa un poco más pálida o un poco más rosada que el resto, que sigue exactamente el troquel; y la zona que estaba cubierta queda **mate**, mientras la piel de alrededor conserva su brillo. Es una diferencia de acabado, no de color. Dura muy poco.
+
+Detalle añadido **sin verificar** (no está ni en las fotos inspeccionadas ni en la documentación de marca, es mi propuesta de dirección de arte): alguna fibra fina de la toalla o del pijama pegada al borde exterior del adhesivo. Se puede probar en una toma y, si añade suciedad visual, se quita.
+
+```
+a faint matte outline of the patch still printed on the skin, following the butterfly shape exactly, the covered area matte and very slightly pink while the surrounding skin keeps its natural shine
+```
+
+### 3.7 La piel grasa real
+
+Lo que separa la piel real de la piel de plástico **no es el nivel de detalle, es el brillo desigual y la asimetría**. En las cuatro imágenes reales inspeccionadas el patrón es siempre el mismo: hay zonas de brillo (dorso y punta de la nariz, pómulos altos, arco de cupido, barbilla) y zonas mate (laterales de la mejilla, sienes), y el borde entre unas y otras es difuso pero visible. Además siempre hay pecas y micro-manchas asimétricas, algún granito o marca residual, vello velloso fino que se enciende a contraluz, poros más grandes en la zona T que en las mejillas, y rojez leve en el surco alar y alrededor de las fosas.
+
+```
+natural skin shine on the nose bridge, tip and cheekbones with matte temples; visible enlarged pores concentrated on the T-zone; freckles and small asymmetric marks; one or two small healing blemishes; fine vellus hair catching the light; slight redness in the alar crease; unretouched documentary realism, not a 3D render
+```
+
+```
+no airbrushed skin, no uniform matte finish, no beauty filter, no symmetric pore pattern, no skin smoothing, no makeup
+```
+
+Por avatar: Bea (24) brillo más marcado en zona T y algún grano activo en la barbilla; Marisol (43) textura más fina, líneas de expresión, brillo menos untuoso, alguna mancha solar; Álex (36) piel olivácea, poros más grandes, barba de dos o tres días y filamentos más amarillentos. Para Álex, la figura clínica `gr1.jpg` es literalmente la foto de referencia.
 
 ---
 
-## 4. Los movimientos, uno a uno, como los contaría un director
+## 4. Los movimientos, uno a uno
 
-Tiempos documentados por las propias marcas y comprobados contra los vídeos verificados. En Higgsfield hay que
-escribir la duración y la calidad del movimiento **dentro del prompt**, porque el modelo por defecto acelera y
-dramatiza todo. Si un plano sale acelerado, no lo arregles ralentizando en montaje: la interpolación se nota.
-Regenera con la duración explícita.
+Higgsfield por defecto acelera y dramatiza todo. Hay que escribir la duración y el modo dentro del prompt. Y si un plano sale acelerado, **no se arregla ralentizando en montaje**: el ralentizado delata la interpolación. Se regenera con la duración explícita.
 
-| Acción | Duración real | Quién la hace | Lo que delata si sale mal |
-|---|---|---|---|
-| Poner el parche | 2,5-3,5 s | Dos índices a la vez | Un solo dedo, gesto dubitativo |
-| Presionar y sellar | 1 s sostenido | Las dos yemas | Rebote de los dedos |
-| Dormir | corte, no timelapse | — | Timelapse de la nariz |
-| Despegar el parche | 2-3 s | Pulgar e índice de una mano | Tirón rápido, chasquido, piel levantada |
-| Mirar el parche a contraluz | 1,5-2 s | Las dos manos | Parche colgando inerte |
-| Tocarse la nariz después | 1-1,5 s | Yema del índice o del corazón | Caricia lenta de anuncio de crema |
-| Despegar una tira de poros | 3-6 s | Una mano, desde el borde | Que sea igual de suave que el parche |
-| Packshot | 3 s, casi quieto | — | Cualquier movimiento de cámara |
+| Acción | Duración real | Origen del dato |
+|---|---|---|
+| Aplicar el parche | 2,5-3,5 s + 1 s de presión mantenida | Vue, "press firmly to seal" |
+| Tiempo puesto | 6-8 h / toda la noche | Hero y Vue coinciden |
+| Retirar el parche | 2-3 s, elástico, sin chasquido | Hero ("peel off slowly from one side") + vídeo real |
+| Retirar tira de poros | 3-6 s, rígida, con 2-3 resistencias | Bioré Pore Strips 101 + macros verificados |
+| Presentar el parche usado a cámara | 1,5-2 s | foto Vue + vídeos de creadoras |
+| Packshot | 3 s con movimiento casi nulo | técnica de producto |
+| Hablar a cámara antes del primer corte | 3-6 s | referencias UGC |
 
 ### 4.1 Poner el parche
 
-La mecánica oficial de Hero: se despega el liner de un lado, se aplica ese lado empezando por **el centro de la
-nariz** y se alisa hacia fuera; luego se retira el resto del liner y se alisa el segundo lado, también desde el
-centro. Objetivo declarado: que quede plano, sin arrugas, sin bultos y sin burbujas.
+Las **dos manos**, los **dos dedos índice a la vez**, uno a cada lado del puente. Los índices bajan desde el centro del puente hacia las aletas, **en dos trayectorias simétricas hacia fuera y hacia abajo**. Los demás dedos quedan recogidos hacia abajo, sin puño cerrado. La yema **se aplana y palidece un poco** al presionar: ese blanqueo es el detalle que hace que la presión se lea. Ojos cerrados o mirando hacia abajo, **nunca a cámara mientras aplica**. Dos segundos y medio a tres y medio.
 
-En imagen, el momento que hay que congelar es el de la foto de Vue: **los dos índices a la vez**, uno a cada lado
-del puente, bajando del centro hacia las aletas. Los demás dedos recogidos hacia abajo, sin cerrar el puño. Ojos
-cerrados o mirando hacia abajo, nunca a cámara mientras se aplica. La yema, al presionar, se aplana y palidece un
-poco: ese blanqueo es la prueba visual de que hay presión de verdad.
-
-Cámara a la altura de los ojos, frontal, equivalente 85 mm a unos 70 cm. Si generas gran angular, la nariz se
-agranda y el anuncio parece una caricatura.
+Con un solo dedo el gesto parece dubitativo y no parece de marca. Y la cámara: a la altura de los ojos, frontal, equivalente 85 mm a unos 70 cm. Con gran angular la nariz se agranda y el anuncio parece una caricatura.
 
 ```
-Both index fingers press the patch down simultaneously from the centre of the nose bridge outwards over about three seconds, fingertips flattening and blanching slightly under the pressure, the other fingers curled down, then hold firm pressure for one more second. Eyes stay closed. Subtle handheld drift. No camera move, no zoom.
+Both index fingers press the patch down simultaneously from the centre of the nose bridge outwards over about three seconds, fingertips flattening and blanching slightly under the pressure, then hold firm pressure for one more second. The other fingers stay curled down. Eyes stay closed. Subtle handheld drift. No camera move, no zoom.
 ```
 
-### 4.2 Presionar
+### 4.2 Presionar y sellar
 
-Es un plano propio, de un segundo, y merece la pena tenerlo: las dos yemas paradas sobre el parche, sin movimiento,
-solo la respiración y el micro-temblor de las manos. Es lo que la biblia llama "los diez segundos" y lo que hace que
-el espectador entienda que esto se sella, no se posa. Al soltar, la yema deja un instante una marca pálida que
-vuelve a su color.
+Después del recorrido hacia fuera, **las yemas se quedan quietas un segundo entero** sobre las alas y luego doblan las alas contra las aletas. No hay rebote. El parche no se mueve. Si el modelo hace que los dedos reboten o resbalen, es que le has pedido una acción de más: una acción por plano.
 
 ```
-The two fingertips stay pressed still on the patch for one second, no movement except breathing and a tiny hand tremor, then lift; the skin under each fingertip stays pale for a moment and then refills with colour.
+The fingertips hold still for one full second, pressing the wings against the nostril wings, then lift straight away from the skin without sliding. The patch does not shift. No rebound, no second attempt.
 ```
 
-### 4.3 Dormir
+### 4.3 Dormir con el parche
 
-Seis a ocho horas de uso, según Hero y Vue. En pantalla **no se resuelve con un timelapse de la nariz**: siempre
-canta. Se resuelve con un plano de dormir y un corte a la mañana.
+Este plano resuelve las 6-8 horas. La alternativa, un timelapse de la nariz, siempre canta. De lado sobre la almohada, cámara a la altura de la almohada, equivalente 50 mm a unos 60 cm. **Casi no hay movimiento**: la respiración mueve el hombro y la sábana muy poco, algún micro-gesto de la cara, y nada más. El parche coge un destello débil y queda un punto más claro que la piel.
 
-El plano: de lado sobre almohada blanca, cámara a la altura de la almohada, equivalente 50 mm a unos 60 cm, encuadre
-desde la coronilla hasta el hombro. El parche atrapa un destello débil y **es la cosa más clara del cuadro**, que es
-justo lo que lo hace funcionar. Una sola práctica cálida fuera de campo a 2800 K, sombras profundas y blandas.
-
-De movimiento, casi nada: el pecho subiendo y bajando, un mechón que se mueve un milímetro con el aire, un
-parpadeo de los párpados cerrados. Nada de dar vueltas en la cama, que deforma la cara.
+La regla 3 de la biblia manda aquí: "de noche" no significa nada para el modelo, hay que describir las consecuencias de la luz. Una sola práctica cálida fuera de cuadro, sombras blandas y profundas, ventana negra.
 
 ```
-Almost still: slow breathing lifts the shoulder and the sheet, one strand of hair moves a millimetre, the closed eyelids flicker once. The head does NOT turn, the sleeper does not roll over. The patch stays exactly in place. Static camera, no drift, no push-in.
+Almost still: only the slow rise and fall of breathing, one small twitch of the face, hair settling a millimetre on the pillow. The patch keeps a faint highlight. Nothing else moves. No camera move, no light change.
 ```
 
-### 4.4 Despegar
+### 4.4 Despegar el parche
 
-Este es el plano que define la marca, así que va con detalle.
+El movimiento clave de todo el proyecto y donde más se equivoca la IA.
 
-La instrucción oficial de Hero es despegar **despacio, desde un lado**. En el vídeo real, el recorrido completo dura
-dos o tres segundos. Lo que pasa físicamente: el pulgar y el índice de **una sola mano** cogen el parche por un ala;
-tiran despacio y **en paralelo a la piel**, nunca hacia arriba; el gel, que es blando y elástico, se estira uno o
-dos milímetros antes de ceder; la parte ya despegada se enrolla sobre sí misma y cuelga blanda; la parte que sigue
-pegada permanece plana sobre la nariz. **Hay una sola frontera entre las dos partes, que avanza**. La otra mano
-puede estar sujetando la piel de la mejilla, o fuera de cuadro.
+**Qué mano hace qué**: el pulgar y el índice de una mano cogen **un ala** por su borde exterior. La otra mano no interviene, o como mucho apoya la mejilla. La tracción es **despacio y en paralelo a la piel**, nunca hacia arriba.
 
-Y lo más importante para el mensaje: **la piel no se levanta**. El contorno de la nariz no se deforma. No hay
-chasquido, no hay "pop". Si en tu vídeo la piel se levanta, estás vendiendo la tira de poros, o sea, al competidor.
+**Qué hace el material**: la parte ya despegada **se enrolla sobre sí misma y cuelga blanda**; la parte que sigue pegada permanece plana sobre la nariz. Hay **una sola frontera** entre las dos partes, que avanza por el eje de la nariz, y nunca puede quedar parche sobre una zona ya despegada. El parche se estira uno o dos milímetros porque es elástico.
 
-El error de generación ya conocido: si escribes "la mitad izquierda despegada y la derecha pegada", el modelo genera
-dos parches separados. Hay que describirlo como una sola lámina continua (`BIBLIA_VISUAL.md`, regla 5).
+**Qué NO hace la piel**: no se levanta, no se tienda, el contorno de la nariz no se deforma, no hay chasquido y no hay "pop". Si en tu plano la piel se levanta, estás vendiendo la tira de poros, o sea al competidor.
+
+Dos a tres segundos de recorrido.
 
 ```
-Slow, gentle peel over three seconds: thumb and index finger of one hand hold the patch by one wing and pull slowly PARALLEL to the skin, never upward. The patch is ONE CONTINUOUS SHEET: the part still attached stays flat and translucent on the nose, and WITHOUT ANY BREAK it lifts along one single advancing boundary; the freed part stretches a millimetre, curls over on itself and hangs limp from the fingers, its underside turned to the camera. The skin does NOT lift or tent, the nose contour does not deform, there is no snap and no pop. Subtle handheld drift. No camera push-in, no speed ramp.
+Slow, gentle peel over three seconds: thumb and index finger hold one wing of the patch and pull slowly PARALLEL to the skin, never upwards. The patch lifts as ONE CONTINUOUS SHEET along a single boundary running down the ridge of the nose; the peeled part stretches slightly, curls over on itself and hangs limp from the fingers; the part still attached stays flat and translucent on the nose. The skin does NOT lift or tent, the nose contour does not deform, there is no snap and no pop. Subtle handheld drift: slow low-frequency sway that lets the framing creep and recover, with tiny high-frequency jitter. No camera push-in, no speed ramp.
 ```
 
-Y el contrario, para el plano comparativo. La diferencia que hay que hacer visible es **mecánica**, no estética: la
-tira está rígida, como cartón mojado que ha secado, y al despegarla tensa y levanta la piel.
+El contraste, para el anuncio comparativo. La tira es lo opuesto en todo:
 
 ```
 Slow peel of a STIFF pore strip, four to five seconds. The strip resists: two or three micro-pauses where it grips and then releases. As it releases, the skin of the nostril wing visibly tents and stretches, a fold appears in the alar crease, and the skin is left flushed and red. Handheld phone camera with subtle drift. No snap, no fast rip, no speed ramp.
 ```
 
+Nota de la biblia que ahorra dinero: si el despegado a medias no sale a la primera, se sustituye por el plano "parche ya fuera, sujeto delante de la nariz limpia", que es mucho más fácil de generar bien y además enseña las dos cosas a la vez. El anuncio no pierde nada.
+
 ### 4.5 Mirar el parche a contraluz
 
-Dos manos sujetan el parche por los extremos, **ligeramente tensado**, no colgando, a la altura de la barbilla y a
-unos 30-35 cm de cámara. Detrás, la cara desenfocada a 60-80 cm: boca y nariz reconocibles, ojos fuera de cuadro.
-Equivalente 85-100 mm a f/2.8.
+Las **dos manos** sujetan el parche por los dos extremos, ligeramente **tensado** (no colgando), a la altura de la barbilla, a unos 30-35 cm de cámara. Detrás, la cara desenfocada a 60-80 cm. Equivalente 85-100 mm a f/2.8.
 
-Dos versiones, y conviene tener las dos:
-
-- **Sobre fondo oscuro** (pelo, camiseta oscura, azulejo en sombra): el blanco de la escarcha recorta y se lee como
-  prueba. Es la versión que convence.
-- **A contraluz de ventana**: la escarcha se vuelve traslúcida y brilla como cristal esmerilado, con luz de borde en
-  el filo del parche. Es la versión bonita, pero pierde contraste.
-
-Movimiento: el parche **no cuelga inerte**. Vibra levemente con el micro-temblor de las manos, entre 1 y 2 Hz y con
-amplitud de milímetros, y se comba un poco si se relaja la tensión. Y una regla de encuadre que ya costó
-repeticiones: el parche entero tiene que estar dentro del cuadro, con aire por los cuatro lados. Si se corta, el
-troquel deja de leerse y parece una mancha.
+El movimiento no es cero: el parche **vibra levemente con el micro-temblor de las manos**, 1 o 2 ciclos por segundo y amplitud de milímetros, y se comba un poco si se relaja la tensión. No se balancea. Si el brazo gira para llevar el parche hacia la ventana, el giro es lento y de pocos grados, y la escarcha cambia de traslúcida a opaca al pasar por el contraluz. Un segundo y medio a dos.
 
 ```
-COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge. Two hands hold the used patch by its two ends, slightly stretched, at chin height. The patch trembles minutely with the hands, one to two times a second, millimetre amplitude, and sags a little as the tension relaxes. The face behind stays soft and out of focus. No hand rotation, no presenting gesture, no camera move.
+The patch is held stretched between two hands and trembles with the tiny natural shake of the hands, one to two hertz, millimetre amplitude, sagging slightly when the tension relaxes. The hands turn a few degrees towards the window so the sebum frost goes from opaque to glowing translucent. The face stays soft out of focus behind. No swinging, no camera move.
 ```
 
 ### 4.6 Tocarse la nariz después
 
-El gesto real es corto y comprobatorio, no sensual: la yema del índice —o del corazón— pasa una vez por el lateral
-de la nariz, de arriba abajo siguiendo la curva, en algo más de un segundo, y **se para**. A veces se repite en el
-otro lado. La cabeza se gira un poco para ofrecer el perfil a la luz. La expresión es de comprobar algo, no de
-disfrutar.
+Gesto pequeño y muy corto, uno o dos segundos. **La yema del índice o del corazón recorre el lateral del dorso de la nariz de arriba abajo**, una sola pasada, con presión mínima, y la mano sale de cuadro. A veces se repite en el otro lado. La cara no cambia de expresión hasta el final del gesto, y ahí sí: una media sonrisa o una subida de cejas muy pequeña. Si el modelo hace que la persona sonría durante todo el plano, el plano parece de catálogo.
 
-Lo que arruina este plano es la caricia lenta de anuncio de crema hidratante: tres segundos de dedo acariciando y
-la cabeza echada hacia atrás. Eso dice "publicidad" y el espectador desconecta.
+Detalle que lo hace real y que es **sin verificar** (propuesta de dirección, no sale en ninguna referencia inspeccionada): al levantar el dedo, la yema queda un instante a la vista y está **limpia**, sin brillo graso. Es la prueba de que se ha ido el sebo, contada sin decir nada.
 
 ```
-The index fingertip runs once down the side of the nose, following the curve from the bridge to the nostril wing, in just over a second, and stops. The head turns slightly to offer the profile to the light. A short checking gesture, not a slow caress. Natural blink. Subtle handheld drift. No slow motion, no head tilt back, no smile to camera.
+One fingertip slides once down the side of the nose bridge with almost no pressure, testing the skin, then the hand leaves the frame. The expression stays neutral until the very end of the gesture, when a small half-smile appears. Two seconds. No repeated rubbing, no camera move.
 ```
 
-### 4.7 El temblor del móvil, que es lo que hace que parezca real
+### 4.7 Hablar a cámara y la cámara en general
 
-El móvil a pulso tiene dos movimientos a la vez: una **deriva lenta** que descentra el encuadre y lo recupera, con
-un ciclo de uno a dos segundos, más un **micro-jitter** de alta frecuencia y amplitud diminuta. Los dos errores
-opuestos son igual de malos: cámara perfectamente fija (parece trípode y no UGC) o bamboleo grande y rítmico (parece
-videojuego).
+El UGC no se define por el grano ni por el ruido, se define por la **geometría**: cámara a 35-50 cm, a la altura del esternón mirando ligeramente hacia arriba (contrapicado de 10-15°), cabeza en el tercio superior del 9:16 y **descentrada**, corte por el pecho, algo de azulejo o techo arriba. Un brazo está ocupado sujetando el móvil, así que los gestos los hace **la otra mano**, entrando y saliendo de cuadro.
+
+El temblor correcto tiene dos componentes: una **deriva lenta** con ciclo de 1 a 2 segundos, que descentra el encuadre y lo recupera, y un **micro-jitter** de alta frecuencia y amplitud diminuta. Los dos errores son igual de malos: cámara perfectamente fija (parece trípode) y bamboleo grande y rítmico (parece videojuego).
 
 ```
-Subtle handheld drift: slow low-frequency sway that lets the framing creep off-centre and be corrected, cycle of one to two seconds, plus tiny high-frequency jitter. No rhythmic bobbing, no camera push-in, no gimbal smoothness.
+Natural talking head, front phone camera held at arm's length. Subtle handheld drift: the framing slowly creeps off-centre and is corrected, cycle of one to two seconds, plus tiny high-frequency jitter. The free hand enters and leaves the frame while gesturing. Natural blinking, small head movements, weight shifting. No camera push-in, no gimbal smoothness, no slow motion.
+```
+
+Y el packshot, que es el único plano donde conviene movimiento casi nulo:
+
+```
+Almost still. A very slow three-degree rotation of the box over three seconds, or a two percent push-in. The shadow moves with it. Nothing else in the frame moves. No parallax pop, no light flicker, no lens flare.
 ```
 
 ---
 
 ## 5. Cómo se convierte una referencia en un prompt
 
-El proceso son cinco preguntas. Se hacen mirando la imagen de referencia, en este orden, y cada respuesta es un
-trozo del prompt. Encaja con la fórmula de ocho huecos de la biblia: esto es cómo se **rellenan** esos huecos
-mirando una foto.
+El proceso son seis pasos y se hace mirando la imagen, no de memoria. La diferencia entre escribir el prompt con la referencia delante y escribirlo de oído es enorme: en la investigación, tres decisiones importantes del proyecto cambiaron solo por descargar las imágenes y mirarlas.
 
-1. **¿Dónde está la cámara?** Altura respecto a la cara, distancia en centímetros, ángulo (frontal, tres cuartos,
-   contrapicado) y equivalente de focal. Nunca "primer plano": siempre "a 40 cm, a la altura de la punta de la
-   nariz, equivalente 70 mm".
-2. **¿Qué llena el cuadro y qué se corta?** De qué parte del cuerpo a qué parte. "De la ceja al labio inferior, la
-   nariz ocupa el 60% del alto."
-3. **¿De dónde viene la luz y qué tamaño tiene la fuente?** Esta es la que más gente se salta y la que más decide.
-   Fuente pequeña y dura = textura. Fuente grande y suave = piel lisa. Y la dirección: izquierda, derecha, alta,
-   desde cámara.
-4. **¿Qué hay en la piel y en el material, con medidas?** Tamaño en milímetros, color, dónde se concentra y dónde
-   no. Aquí es donde se gana el realismo.
-5. **¿Qué hay que prohibir?** Lo que el modelo va a poner por defecto y no queremos: texto, filtro de belleza,
-   poros en cuadrícula, mármol, luz de estudio.
+**Paso 1. Elige una sola referencia por plano.** No se mezclan dos. Si mezclas, el prompt sale contradictorio y el modelo elige por su cuenta.
 
-### Ejemplo completo: de la foto clínica al prompt
+**Paso 2. Escribe la geometría antes que nada.** Cuatro datos: qué entra y qué sale del cuadro (de dónde a dónde), altura de la cámara, ángulo, distancia y lente aparente. Estos cuatro datos son los que más cambian el resultado y son los que nadie escribe.
 
-**La referencia.** `https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7985/12890860/106acf39d5ca/gr1.jpg`, la foto clínica de
-base del caso PMC12890860.
+**Paso 3. Escribe la luz por sus consecuencias, no por su nombre.** No "luz de baño" sino "dónde está la fuente, si es dura o blanda, dónde caen las sombras, dónde está el brillo especular". Es la regla 3 de la biblia.
 
-**Lo que se ve, respondiendo a las cinco preguntas.** Cámara a la altura de la punta de la nariz, tres cuartos,
-ligeramente contrapicada, a unos 20 cm, con un equivalente de 50-70 mm. El cuadro va del párpado inferior al labio
-superior y la nariz ocupa el 60% del alto. La luz es dura, pequeña y viene **desde la posición de cámara** (flash de
-móvil): produce un brillo especular continuo en el dorso y la punta, y por eso cada filamento tiene su propio
-micro-destello. Todo el plano está nítido, no hay desenfoque de fondo. Los filamentos son cúpulas crema-amarillentas
-de 0,3-0,6 mm, densísimas en el ala y el surco alar, escasas en el puente. Piel olivácea cálida, enrojecimiento
-leve en el ala, barba de dos días.
+**Paso 4. Describe el material y la textura con palabras físicas.** Opaco o traslúcido, satinado o mate, granular o liso, en relieve o plano, milímetros. Nada de adjetivos de venta.
 
-**El prompt malo** (el que sale si no se hace este ejercicio):
+**Paso 5. Quita todo lo que en la referencia sea de otra marca.** Texto sobreimpreso, silueta de parche ajena, packaging ajeno. Y adjunta las fotos reales de NOCTA.
+
+**Paso 6. Cierra con los negativos y con el "sin texto".** Siempre.
+
+### Ejemplo completo, de la referencia al prompt
+
+**La referencia**: `https://www.vueskin.com/cdn/shop/files/Dirty_Patch.jpg`, la foto oficial del parche usado de Vue.
+
+**El prompt de partida, el que sale de leer la biblia sin mirar la foto** (así estaba escrita la toma 14, "el parche usado a contraluz con los puntos blancos"):
 
 ```
-Extreme close-up of a nose with blackheads and large pores, detailed skin, realistic, soft natural light, 8k
+Vertical 9:16 photo of a used hydrocolloid nose patch held up to the light, with white dots where the pores were, bathroom background.
 ```
 
-Qué devuelve: una nariz de dermatoscopio o una nariz lisa de anuncio, con puntos negros repartidos en cuadrícula y
-piel de plástico. Los tres fallos vienen de las tres palabras marcadas: `blackheads` (color equivocado), `soft
-natural light` (borra la textura) y `8k` (activa el acabado de render).
+Problemas: pide `white dots`, no dice encuadre, no dice distancia, no dice lente, no dice qué hay detrás ni a qué profundidad, no dice de qué color es el material, no prohíbe el texto y no lleva referencias de producto. Con esto el modelo devuelve un parche opaco de forma inventada con lunares blancos de dibujo.
 
-**El prompt bueno:**
+**Lo que se ve al abrir la foto y mirarla de verdad** (esta es la lista de observaciones, paso 2 a 4):
 
-```
-Vertical 9:16 extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld. A 36-year-old Spanish man's nose, olive skin, two-day stubble. The frame runs from the lower eyelids to the upper lip; the nose fills about 60% of the frame height. Three-quarter angle, camera at the height of the nose tip, slightly low, about 20 cm away, apparent 60mm macro, field of view about 35mm wide, everything in focus. A small HARD light source from the camera position, like a phone flash in a bathroom, creating a continuous specular sheen along the nose bridge and tip. A dense field of sebaceous filaments: greyish-brown to pale yellow raised plugs, 0.3 to 0.6 mm, each catching its own micro-highlight, concentrated on the nostril wings and in the alar crease, sparse on the bridge. Pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid. Light redness in the alar crease, fine vellus hair, natural shine on the T-zone. Unretouched documentary realism, not a 3D render. No beauty retouching, no skin smoothing, no makeup. No text, no logos, no watermark.
-```
+- Vertical 4:5. El parche está a la altura de la barbilla, ocupa el tercio central.
+- Lo sujetan **dos manos**, pulgar e índice de cada una, por los dos extremos, **ligeramente tensado**.
+- Distancia a cámara ~30-35 cm. La cara está detrás a 60-80 cm, **desenfocada**: solo se reconocen boca y nariz, los ojos quedan fuera de cuadro.
+- Lente aparente 85-100 mm a f/2.8. Profundidad de campo cortísima.
+- El material es **gris perla translúcido con brillo satinado**.
+- El sebo es una **escarcha granular continua**, densa en el centro, disgregándose hacia los bordes, opaca donde está cargada, con algún grumo grueso.
+- Fondo oscuro (pelo y camiseta negra) que hace que el blanco recorte.
+- Luz suave frontal-lateral.
 
-**Qué ha cambiado, punto por punto:**
-
-| Del prompt malo | Al prompt bueno | Por qué |
-|---|---|---|
-| "extreme close-up" | distancia, altura, ángulo y focal | Sin geometría, el modelo elige dermatoscopia |
-| "blackheads" | "greyish-brown to pale yellow raised plugs, 0.3-0.6 mm" | El color y el relieve correctos (PMC12890860) |
-| (nada sobre dónde) | "concentrated on the nostril wings, sparse on the bridge" | La distribución desigual es lo que lee como real |
-| "soft natural light" | "small HARD light source from the camera position" | Sin brillo especular no hay filamentos |
-| "detailed skin" | "specular sheen" + asimetrías concretas | El realismo lo da el brillo desigual, no el detalle |
-| "realistic, 8k" | "unretouched documentary realism, not a 3D render" | "8k" es palabra prohibida: activa el render |
-| (nada) | "pores never aligned in rows or a grid" | Por defecto los reparte en cuadrícula |
-| (nada) | "No text, no logos, no watermark" | Los subtítulos se ponen en montaje |
-
-**Y su prompt de vídeo**, con la misma referencia:
+**El prompt final, adaptado a NOCTA** (silueta de mariposa con muesca, no borde festoneado; y con las fotos reales adjuntas):
 
 ```
-The macro image comes alive. Only one thing moves: the skin of the nose shifts a millimetre as the man breathes in through his nose, and the specular sheen on the bridge slides very slightly with it. Static handheld camera with micro-drift, three seconds. The pores, the filaments and the nose shape must not change. No camera push-in, no zoom, no text, no subtitles, no watermark.
+Vertical 9:16 handheld iPhone photograph. STATE 5: the patch is OFF the nose and in her hands; there is NO patch on her nose.
+
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. A single piece of hydrocolloid 60 mm wide and 45 mm tall, shaped like a wide butterfly with one central lobe and two symmetrical wings, a shallow rounded notch about 6 mm deep in the lower edge, every corner rounded, 0.55 mm thick with a bevelled edge.
+
+Two hands hold the used patch by its two ends, slightly stretched, at chin height, 30 cm from the camera. Dense powdery white frost covers the centre of the patch — like fine icing sugar, granular and continuous where it sat on the nose bridge and tip, breaking into fine speckle towards the edges, fully opaque where it is loaded, a few coarser clumps, the edges still translucent pearl-grey with a satin sheen.
+
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance.
+
+Behind, a 24-year-old Spanish woman's face is blurred well out of focus 70 cm away, only mouth and nose recognisable, eyes out of frame. Dark background: dark hair and a dark grey ribbed t-shirt, so the white frost reads.
+
+Small Spanish apartment bathroom, white subway tile, soft morning window light from camera-left, overhead lights off. Apparent 90 mm lens at f/2.8, very shallow depth of field, focus exactly on the surface of the patch, slight handheld motion blur at the edges, natural digital sensor noise.
+
+No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism. No text, no logos, no watermark.
 ```
+
+Referencias adjuntas: `parche_liner`, `parche_puesto`, y el retrato de Bea.
+
+Y el prompt de vídeo del mismo plano:
+
+```
+The image comes alive. The patch trembles with the tiny natural shake of the hands, one to two hertz, millimetre amplitude, sagging slightly when the tension relaxes. Static handheld camera with micro-drift. Three seconds. The woman's face and the patch must not change shape; the frost pattern must not move or animate. No text, no subtitles, no watermark.
+```
+
+Fíjate en lo que ha pasado: el prompt final no tiene ni un adjetivo de venta y tiene doce datos físicos que antes no estaban. Eso es todo el método.
 
 ---
 
-## 6. Qué NO copiar de las referencias que hay por ahí
+## 6. Qué NO copiar de lo que hay por ahí
 
-Hay mucho material sobre este tema en internet y casi todo es tóxico para NOCTA. Tres familias.
+**Los vídeos de tiras de poros arrancando "gusanos".** Son los vídeos más vistos del sector y son exactamente lo que NOCTA no vende. El "bosque de tapones" bajo microscopio es espectacular, sí, pero es la prueba de que la tira **arranca**, y nuestro producto **absorbe**. Se puede usar en el anuncio comparativo, y solo ahí, y siempre con la consecuencia visible: piel tensada, pliegue en el surco alar, rojez al terminar. Si lo copias en el plano del parche, has rodado un anuncio del competidor.
 
-### 6.1 Los vídeos de tiras de poros arrancando "gusanos"
+**Los antes/después falsos.** El antes/después oficial de Vue es un manual de cómo no hacerlo: en el "antes" la cara está más frontal y en el "después" más girada, el "antes" tiene una dominante verdosa y fría y el "después" es cálido y rosado, y el "después" añade un brillo especular grande en la punta que el "antes" no tenía. Se lee como truco. Lo único copiable de esa imagen es el encuadre (de la ceja al labio inferior, nariz centrada, un ojo completo en cuadro, tres cuartos suave) y el ritmo del GIF de transición.
 
-Son los vídeos con más visitas del sector y por eso tientan. No los copies como **nuestro** plano, por tres motivos.
+**Los primeros planos de plástico.** El 99% de las imágenes de "skincare" que devuelve cualquier buscador son piel retocada: mate uniforme, poros borrados, cero asimetría. Copiar esa iluminación (fuente grande y difusa, luz envolvente) es lo que hace que los filamentos desaparezcan y la piel se plastifique. Si todo el anuncio va con luz de ventana suave, no hay textura en ningún plano. Al menos un plano de cada anuncio necesita una fuente pequeña o muy rasante.
 
-Primero, el mecanismo es el contrario al nuestro y el mensaje se cruza: la tira **arranca**, el parche **absorbe**.
-Eso lo tiene ya masticado la prensa española (dos dermatólogas en el artículo de `elmon.cat` hablan justo de esa
-diferencia). Si tu plano estrella enseña algo saliendo a la fuerza de la piel, estás vendiendo el producto de otro.
+**El baño de Pinterest americano.** Mármol, bañera exenta, plantas colgantes, luz de estudio. El público español lo detecta al segundo. El baño de NOCTA es pequeño, con azulejo blanco tipo metro, grifo cromado, ventanuco alto de vidrio mate con carpintería de aluminio, toalla de rizo colgada y espejo sin marco.
 
-Segundo, el plano de la tira arrancada es un plano de asco y la satisfacción que produce es la de reventar algo. El
-nuestro es un plano de prueba limpia: escarcha blanca sobre gel translúcido. Mezclarlos deja al espectador sin saber
-qué ha comprado.
+**El texto de las referencias.** Varias de las imágenes citadas llevan texto sobreimpreso de marca. Si se pasan como referencia, el modelo imita el texto. No se pasan; se leen y se describen.
 
-Tercero, la magnificación de esos vídeos es de microscopio. Los tapones se ven como un bosque de alfileres
-perpendiculares a la tira. Eso, aplicado a nuestro parche, da una imagen desagradable que no corresponde con lo que
-la gente ve de verdad en su baño.
-
-**Dónde sí se usan:** solo en el plano comparativo, y solo enseñando la **mecánica** (la piel que se tensa, el
-pliegue en el surco alar, la rojez final), no el zoom al "gusano". Ahí la referencia buena es el microscopio de
-Brittanybearmakeup, pero para entender la física, no para copiar el encuadre.
-
-### 6.2 Los antes/después falsos
-
-El antes/después oficial de Vue (`Before_and_After_3.jpg`) es un **contraejemplo** y viene muy bien tenerlo
-identificado. Lo bueno de él es el encuadre: de la ceja al labio inferior, nariz centrada, un ojo completo en cuadro,
-tres cuartos suave, unos 40 cm, equivalente 70-85 mm. Eso sí se copia.
-
-Lo malo es todo lo demás, y son tres trampas de manual:
-
-1. El "antes" está más frontal y el "después" más girado. **Cambia el ángulo.**
-2. El "antes" tiene dominante verdosa-fría y el "después" es cálido y rosado. **Cambia la temperatura de color.**
-3. El "después" añade un brillo especular grande en la punta que el "antes" no tiene. **Cambia la luz.**
-
-Resultado: parece trucado, y el espectador lo nota aunque no sepa decir por qué. Nuestro protocolo es el contrario:
-una sola generación base y el "después" derivado de ella por img2img con la misma semilla y el mismo encuadre,
-cambiando **solo** la línea de la piel. Tienen que coincidir exactamente distancia, altura de cámara, ángulo de la
-cabeza, dirección de la luz, temperatura, brillo en la punta, expresión y fondo.
-
-La cuarta trampa, y la más cara, es prometer cero. En el propio "después" de Vue **siguen quedando puntos**, y eso es
-lo honesto. El mensaje de NOCTA es "menos, más limpio, menos brillo", nunca "desaparecen".
-
-Lo que sí merece la pena copiar de Vue es el **ritmo del corte** de su GIF de transición
-(`https://www.vueskin.com/cdn/shop/files/GIF_-_Before_and_After_-_Nose_Patches_2.gif`): corte duro, mismo tempo.
-
-### 6.3 Los primeros planos de plástico
-
-Es la imagen por defecto de todo el sector cosmético: piel mate y uniforme, sin poros, sin vello, sin pecas,
-simétrica, con luz de anillo y un destello redondo en el ojo. Copiar eso mata el anuncio dos veces: pierde el
-realismo de UGC y además hace desaparecer exactamente lo que tenemos que enseñar.
-
-Dentro de esta familia entran también el **baño de Pinterest americano** (mármol, bañera exenta, plantas colgantes,
-luz de estudio) y el **packshot flotante** sin sombra de contacto, que parece un render 3D.
-
-La piel real, comparando las cuatro imágenes reales que se inspeccionaron, tiene siempre lo mismo: zonas de brillo
-(dorso y punta de la nariz, pómulos altos, arco de cupido, barbilla) y zonas mate (laterales de la mejilla, sienes),
-con bordes difusos pero visibles entre ellas; pecas y micro-manchas asimétricas; algún granito o marca residual;
-vello velloso fino que se ve a contraluz; poros más grandes en la zona T que en las mejillas; y algo de rojez en el
-surco alar.
-
-```
-natural skin shine on the nose bridge, tip and cheekbones with matte temples; visible enlarged pores concentrated on the T-zone; freckles and small asymmetric marks; one or two small healing blemishes; fine vellus hair catching the light; slight redness in the alar crease
-```
-
-```
-no airbrushed skin, no uniform matte finish, no beauty filter, no symmetric pore pattern, no ring light catchlight, no marble bathroom, no hanging plants, no freestanding bathtub, no studio lighting
-```
+**La dermatoscopia.** A ×20 los filamentos son cúpulas amarillas en retícula regular y la piel parece alienígena. No vende, asusta. Como mucho, medio segundo en un plano de "prueba científica".
 
 ---
 
-## 7. Tabla: lo que la IA se inventa mal, y la corrección
+## 7. Tabla: lo que la IA se inventa mal
 
-Cada fila es un fallo real, documentado en la investigación o en las 22 imágenes que ya se generaron. La columna de
-la derecha es la frase que hay que pegar para arreglarlo.
+Esta es la tabla de consulta rápida. Columna izquierda: lo que aparece en la imagen generada. Columna derecha: la frase exacta que lo arregla, lista para pegar.
 
-| Lo que la IA se inventa | Cómo es de verdad | La frase que lo arregla |
+| Lo que se inventa | Por qué está mal | La frase que lo arregla |
 |---|---|---|
-| Puntos negros redondos y oscuros en la nariz | Cúpulas gris-pardo a amarillo pálido de 0,3-0,6 mm que sobresalen | `greyish-brown to pale yellow raised plugs, 0.3 to 0.6 mm, each catching its own micro-highlight` + negativo `no black carbon dots` |
-| Poros repartidos en cuadrícula regular | Agrupados en dos o tres zonas densas, casi ausentes en el puente | `pores scattered in a completely IRREGULAR, uneven distribution, clustered in two or three dense patches and sparse elsewhere, never aligned in rows or a grid` |
-| Macro a magnificación de dermatoscopio | 1:1 a 2:1, ancho de campo de 30-40 mm | `apparent 60mm macro at 20cm, field of view about 35mm wide` + negativo `no dermatoscope view` |
-| Luz suave en el macro, y la textura desaparece | Fuente pequeña y dura desde la posición de cámara | `a small HARD light source from the camera position, like a phone flash, creating a continuous specular sheen along the nose bridge` |
-| Parche usado con lunares blancos | Escarcha granular continua, densa en el centro, difusa en los bordes | `dense powdery white frost, like fine icing sugar, granular and continuous in the centre, breaking into fine speckle towards the edges, opaque where loaded` |
-| Parche puesto invisible (parece que se aprieta la nariz) | Translúcido pero visible por el borde biselado y el brillo propio | `a translucent matte hydrocolloid film clearly visible across the bridge and wings, its butterfly outline and bevelled edge catching a thin specular highlight` |
-| Parche blanco opaco tipo plástico al ponerlo | Translúcido: se ven la piel y las pecas a través | `skin and freckles visible through the material, satin sheen, one tiny trapped air bubble near the edge` |
-| Parche recortado por el borde del cuadro | Entero, con aire por los cuatro lados | `COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge` |
-| Dos parches separados en el despegado a medias | Una sola lámina con una sola frontera que avanza | `ONE CONTINUOUS SHEET ... WITHOUT ANY BREAK it lifts along one single advancing boundary` |
-| Despegado rápido y dramático, con chasquido | 2-3 s, elástico, se dobla sobre sí mismo, sin ruido | `slow gentle peel over three seconds, the patch stretches and folds on itself, no snap and no pop` |
-| La piel se levanta al despegar el parche | No se levanta: el contorno de la nariz no se mueve | `the skin does NOT lift or tent, the nose contour does not deform` |
-| La tira de poros animada tan suave como el parche | Rígida, 3-6 s, con resistencias y tensado de piel | `STIFF pore strip, two or three micro-pauses where it grips and then releases, the skin of the nostril wing visibly tents and stretches` |
-| Nariz "después" igual de sucia que antes | Poros vacíos y planos, quedan algunos filamentos tenues | Adjuntar la nariz limpia como segunda referencia + `the pores are open, EMPTY and flat, noticeably fewer and fainter filaments, still a few remaining` |
-| Nariz "después" perfecta, sin ningún poro | Los filamentos no desaparecen: es fisiología | `still a few remaining` (nunca `completely clear`, nunca `poreless`) |
-| Gran angular en el plano de aplicación, nariz enorme | Equivalente 85 mm a 70 cm, cámara a la altura de los ojos | `apparent 85mm lens at 70cm, camera at eye level, no wide-angle distortion` |
-| Un solo dedo aplicando el parche | Los dos índices a la vez, del centro hacia fuera | `both index fingers press simultaneously from the centre of the bridge outwards, the other fingers curled down` |
-| Cámara perfectamente fija en plano UGC | Deriva lenta de 1-2 s más micro-jitter | `subtle handheld drift, slow low-frequency sway that creeps and recovers, plus tiny high-frequency jitter` |
-| Bamboleo grande y rítmico | Amplitud diminuta, sin ritmo | `no rhythmic bobbing, no gimbal smoothness` |
-| Encuadre centrado y simétrico a la altura de los ojos | 35-50 cm, a la altura del pecho, contrapicado suave, descentrado | `camera 40cm away at chest height looking slightly up, 10-degree low angle, head in the upper third of the frame, off-centre` |
-| Baño de mármol con plantas y bañera exenta | Baño español pequeño, azulejo a media altura, ventanuco alto de vidrio mate | `small Spanish apartment bathroom, tiles halfway up the wall, small high frosted window with a white aluminium frame, terry towel on a hook, frameless mirror over the basin, overhead lights off` |
-| "Noche" generada como si fuera de día | Hay que describir las consecuencias de la luz | `IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, short hard shadows straight down under the brow and the nose, the window behind is pure black` |
-| Packshot flotando sin sombra | Sombra corta de un tercio de la altura, más oscura en el contacto | `short shadow falling back-right about one third of the box height, soft-edged, with a darker contact shadow right under the bottom edge` |
-| Packshot animado con movimiento de cámara | Casi quieto: 3-5° de rotación o 2-3% de push-in en 3 s | `almost still, a very slow three-degree rotation over three seconds, nothing else moves` |
-| Texto, subtítulos o logos en la imagen | Nunca: los subtítulos se ponen en montaje | `No text, no logos, no watermark` |
-| Piel "detallada" que sigue pareciendo plástico | Lo real es el brillo desigual y la asimetría | `natural shine on the nose bridge and cheekbones with matte temples, freckles and small asymmetric marks` + `unretouched documentary realism, not a 3D render` |
+| Puntos blancos redondos en el parche usado | La foto real muestra escarcha granular continua, no lunares | `dense powdery white frost like fine icing sugar, granular and continuous in the centre, breaking into fine speckle towards the edges, opaque where loaded` |
+| Puntos negros de carbón en la nariz | El filamento es gris-pardo amarillento, no negro | `greyish-brown to pale yellow raised plugs, not black dots` |
+| Poros repartidos en rejilla | Delata el render al instante | `pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid` |
+| Piel lisa sin textura en el macro | La luz que pediste es demasiado suave | `small hard light source from the camera position creating a continuous specular sheen along the nose bridge and tip, so every filament catches its own micro-highlight` |
+| El parche puesto no se ve | Es traslúcido y el modelo lo hace invisible | `a translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin` |
+| El parche sale como mancha amorfa | Las palabras no bastan | Adjuntar `parche_puesto` + `Do not invent a different shape` + la geometría de 60x45 mm de la biblia |
+| El parche sale recortado por el borde | El modelo lo pega al margen | `COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped` |
+| Dos parches separados al despegar | Pediste "mitad izquierda / mitad derecha" | `peeling off in ONE CONTINUOUS SHEET ... WITHOUT ANY BREAK it lifts along one single boundary down the ridge` |
+| El despegado va rápido y con chasquido | Higgsfield dramatiza por defecto | `slow gentle peel over three seconds, no snap, no pop, no speed ramp` |
+| La piel se levanta al despegar el parche | Eso es la tira de poros, no el parche | `the skin does NOT lift or tent, the nose contour does not deform` |
+| La tira de poros se despega suave | Es rígida y tensa la piel | `STIFF strip, four to five seconds, two or three micro-pauses, the skin tents and stretches, left flushed and red` |
+| Nariz "después" todavía con puntos | El retrato del avatar los tiene | Segunda referencia con la nariz limpia + `open EMPTY pores, no dark dots and no grey-brown plugs anywhere` |
+| Nariz "después" con cero poros | Es falso y es riesgo comercial | `a few faint filaments still visible on the nostril wings, noticeably less oily shine` |
+| Anuncio "de noche" que parece de día | "Night" no significa nada para el modelo | `IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, short hard shadows straight down under the brow, nose and lower lip, the window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky` |
+| Nariz agrandada, cara de caricatura | Gran angular o cámara demasiado cerca | `apparent 85mm lens at 70cm, camera at eye level, no wide-angle distortion` |
+| Aplicación con un solo dedo | La referencia real usa los dos índices | `both index fingers press simultaneously from the centre of the bridge outwards, the other fingers curled down` |
+| Cámara perfectamente fija en UGC | Parece trípode, no móvil | `subtle handheld drift: slow low-frequency sway that lets the framing creep and recover, plus tiny high-frequency jitter` |
+| Bamboleo grande y rítmico | Parece videojuego | `no rhythmic bobbing, no camera push-in, no gimbal smoothness` |
+| Encuadre centrado y simétrico | El UGC real es asimétrico | `head in the upper third of the frame, off-centre, cut at the chest, slightly imperfect framing, 10-degree low angle` |
+| Baño de revista americana | El público español lo detecta | `small Spanish apartment bathroom, white subway tile, chromed tap, small high frosted window with a white aluminium frame, terry towel on a hook, frameless mirror` + negativo `no marble, no freestanding bathtub, no hanging plants, no studio lighting` |
+| La caja levita en el packshot | Falta la sombra de contacto | `short shadow falling back-right about one third of the box height, soft-edged, with a darker contact shadow right under the bottom edge` |
+| El packshot se mueve demasiado | Delata la animación | `almost still, a very slow three-degree rotation over three seconds` |
+| Texto, logos o subtítulos inventados | El modelo imita las referencias con texto | `No text, no logos, no watermark.` en TODOS los prompts |
+| Piel de estudio aunque pidas "detallada" | El detalle no da realismo, el brillo desigual sí | `natural shine on the nose bridge, tip and cheekbones with matte temples` + `no airbrushed skin, no uniform matte finish, no beauty filter` |
+| La luz cambia de lado entre planos | Rompe el montaje aunque nadie sepa por qué | Fijar la dirección de la ventana al escribir la toma 1 y repetirla literal en las 15 |
 
 ---
 
 ## 8. Contradicciones con la biblia que hay que decidir
 
-La biblia se escribió con lo aprendido generando; la investigación se hizo mirando fotos reales. En cuatro puntos no
-dicen lo mismo. No los resuelvo yo: los dejo señalados con la recomendación.
+La biblia está escrita a partir de lo que salió generando; la investigación está hecha a partir de fotos reales. En cuatro puntos no dicen lo mismo. Hay que decidir, porque están en el guion de las 25 tandas.
 
-**1. "Puntitos blancos" frente a "escarcha granular".** La biblia dice que el parche saturado queda "blanco opaco
-por zonas, con puntitos blancos y amarillentos marcados donde estaban los poros". La foto real de Vue muestra una
-nevada granular continua. Recomendación: usar **escarcha** para el parche visto de frente y a contraluz (toma 14) y
-reservar los **tapones en relieve** para el reverso en macro y luz rasante (toma 13, cara interna). Si se prefiere
-mantener "puntitos" en las dos, hay que asumir que ese plano saldrá más ilustrativo y menos fotográfico.
+**1. Los "puntitos blancos y amarillentos" del parche usado.** La biblia dice que el parche saturado tiene "puntitos blancos y amarillentos marcados donde estaban los poros" y la toma 14 se llama "el parche usado a contraluz con los puntos blancos". La foto real de Vue muestra escarcha granular, no puntos. Mi propuesta: **las dos cosas son ciertas pero en planos distintos**. Visto por delante y a distancia de mano, es escarcha (usar la descripción de la sección 3.4). Visto por el reverso, a medio quitar y en macro, sí hay bultos individuales, que son los tapones, y ahí vale la descripción de la biblia. Si se mantiene "puntos" en el plano de mano, ese plano se cae.
 
-**2. "La piel se levanta un instante" al despegar el parche.** La biblia lo dice; la investigación dice que la piel
-**no** se levanta y que ese es justo el rasgo que distingue al parche de la tira de poros. Recomendación: quitar esa
-frase del prompt. Es el único detalle que puede hacer que nuestro anuncio parezca el de Bioré.
+**2. La piel al despegar.** La biblia dice "la piel se levanta un instante en esa frontera y vuelve". La investigación dice, y el vídeo real lo confirma, que la piel **no** se levanta con el hidrocoloide: levantar la piel es lo que hace la tira. Mi propuesta: quitar esa frase de los prompts de vídeo, porque es exactamente el argumento del competidor.
 
-**3. "La nariz queda limpia, ya no hay puntitos oscuros".** La biblia lo pide en positivo y funciona bien para
-generar; el problema es de mensaje, no de imagen. Los filamentos vuelven. Recomendación: mantener la frase en el
-prompt (porque arregla un fallo real de generación) pero **no** sostener "cero puntos" en el copy ni en las
-afirmaciones del anuncio, y dejar en el plano de cierre algún filamento tenue en las aletas.
+**3. El "después" con cero puntos.** La biblia dice "la nariz debajo queda limpia: los poros se ven vacíos, ya no hay puntitos oscuros". Es buenísimo para el anuncio, pero los filamentos son fisiología y vuelven. Mi propuesta, que además es lo que se ve en el propio antes/después de Vue: **limpio en la zona tratada, con algún filamento tenue todavía visible más afuera**. Es igual de vendedor y no genera devoluciones.
 
-**4. Luz suave de ventana en todos los planos.** El sitio 1 de la biblia es "baño de día, luz de ventana suave por
-la izquierda". Con esa luz, el macro de poros no funciona: la textura se borra. Recomendación: mantener la ventana
-como luz general del anuncio y **excepcionar los macros**, que van con fuente pequeña y dura desde la posición de
-cámara (flash de móvil). Es coherente: en la vida real la gente se hace esa foto con el flash.
+**4. Acabado del material.** La biblia dice hidrocoloide "traslúcido mate"; la foto de Vue muestra brillo satinado y una línea de especular en el borde. No es contradicción de fondo: el cuerpo del parche es mate y el **borde biselado** es el que brilla. Conviene escribirlo así en los prompts para que el troquel se lea.
 
-**5. Regla de continuidad que no está escrita en ningún sitio y debería.** Todos los planos de un mismo anuncio
-tienen que compartir la dirección de la ventana. Si en el plano de aplicación la luz viene de la izquierda y en el
-macro de la derecha, el montaje se rompe aunque el espectador no sepa por qué. Fija la ventana en la toma 1 y
-respétala en las 15.
+**5. Mármol.** La biblia admite "mesa de mármol crema" para los packshots; la investigación prohíbe el mármol, pero lo prohíbe **en el baño**, que es donde canta a Pinterest americano. Para packshot sobre mesa no hay conflicto, aunque el fondo crema infinito sin línea de horizonte funciona mejor para la caja.
 
 ---
 
-## 9. Rutina de diez minutos antes de cada tanda
+## 9. Comprobación de 60 segundos antes de dar por buena una toma
 
-1. Abre el **Top Ads de TikTok España, belleza, últimos 30 días**
-   (`https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en?period=30&region=ES&industry=22000000000`)
-   y mira cinco anuncios. No copies el guion: mira la distancia de cámara y la altura. Se mueve cada pocas semanas.
-2. Abre las tres fotos de Vue (`Model_Image_-_During.jpg`, `Dirty_Patch.jpg`, `Before_and_After_3.jpg`) y la figura
-   clínica `gr1.jpg`. Treinta segundos cada una. Con eso se te recalibra el ojo para lo que sigue.
-3. Decide **la dirección de la ventana** del anuncio y escríbela arriba del guion.
-4. Decide **el estado del parche** de cada toma (1 a 5, según la biblia) y escríbelo al principio de cada prompt.
-   Mezclar el estado 4 y el 5 en una imagen es el error más caro: hay que repetirla entera.
-5. Comprueba que todas las tomas con parche llevan adjuntas las fotos reales del producto, y que la toma de "nariz
-   después" lleva además la nariz limpia como segunda referencia.
-6. Comprueba que ningún prompt lleva `8k`, `hyperrealistic`, `cinematic`, `professional photography`, `perfect
-   skin`, `flawless`, `glowing`, `studio` ni `award-winning`, y que todos acaban en `No text, no logos, no
-   watermark`.
-
-Y la regla final, que vale para todo el documento: **si un plano no se parece a la referencia, el fallo casi nunca
-está en el modelo, está en que faltaba un dato concreto en el prompt.** Casi siempre es uno de estos tres: la
-distancia de cámara, el tamaño de la fuente de luz o la medida en milímetros de lo que hay en la piel.
+- ¿El parche coincide con las fotos reales de NOCTA, con su muesca y su borde biselado, o es una mancha?
+- ¿La imagen está en **un solo** estado de los cinco?
+- ¿Se ve el parche, o se ha vuelto invisible y parece que se está apretando la nariz?
+- ¿Los poros están desordenados o en rejilla?
+- ¿Hay brillo especular en algún sitio de la cara, y hay zonas mate?
+- ¿Los filamentos están en las aletas, y no repartidos por todo el dorso?
+- ¿La luz viene del mismo lado que en el resto de las tomas del anuncio?
+- Si es de noche, ¿parece de noche por las sombras, o solo porque lo pusiste en el prompt?
+- ¿Hay texto, logos o marcas de agua? Si hay, se tira.
+- Si hay antes/después, ¿coinciden distancia, ángulo, temperatura y brillo, y lo único que cambia es la piel?
+- ¿Queda aire abajo en el 9:16 para los subtítulos?
+- En vídeo: ¿una sola acción, la duración correcta y una deriva de mano que no sea ni cero ni un bamboleo?

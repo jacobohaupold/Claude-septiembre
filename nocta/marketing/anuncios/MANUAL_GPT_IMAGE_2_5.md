@@ -1,152 +1,376 @@
-# FOTORREALISMO CON GPT IMAGE 2.5
+# FOTORREALISMO CON GPT IMAGE 2.5: por qué una imagen parece foto y otra parece render
 
-**Por qué una imagen parece foto y otra parece render.**
+**Versión 1.0 · 12 de septiembre de 2026 · manual interno NOCTA.**
+Este documento reúne tres fuentes y ninguna más. Primera: la investigación de fotorrealismo hecha para NOCTA
+(`inv_gpt-image-fotorrealismo.json`), que a su vez cita la guía de prompting de GPT Image de fal.ai, la documentación
+de generación de imágenes de OpenAI, los módulos internos de Higgsfield expuestos por su MCP (`ugc-board.md`,
+`ugc-character.md`, el workflow `character-sheet` y el pase obligatorio de *de-slop* del workflow `ugc-review-video`),
+prompt-architects, hedra y fichas técnicas de las cámaras del iPhone. Segunda: la biblia visual de NOCTA
+(`biblia.md`), que recoge lo que ya se ha comprobado generando 22 imágenes reales con GPT Image 2.5 (variante flare).
+Tercera: el catálogo de modelos del MCP de Higgsfield consultado hoy, 12 de septiembre de 2026, con
+`models_explore(get, gpt_image_2)`. Todo lo que no venga de ahí va marcado como "sin verificar". No hay precios
+inventados en este manual: donde no hay dato publicado, lo digo.
 
-**Versión 1.0 · 12 de septiembre de 2026 · NOCTA · dirección de arte**
-
-De dónde salen los datos de este manual, para que sepas qué peso tiene cada afirmación:
-
-- **La biblia visual de NOCTA** (`ads/in/biblia.md`): reglas sacadas de generar 22 imágenes de verdad con GPT Image 2.5, variante flare. Es lo único que está probado en nuestro producto. Cuando algo viene de ahí, lo digo.
-- **La investigación de fotorrealismo** (`wf/inv_gpt-image-fotorrealismo.json`): fuentes externas con enlace (fal.ai, Hedra, prompt-architects, documentación de OpenAI, dpreview) y los ficheros internos del propio Higgsfield (`ugc-board.md`, `ugc-character.md`, workflows `character-sheet` y `ugc-review-video`), leídos desde su MCP.
-- **La API de Higgsfield consultada en esta sesión** (`models_explore`, 12/09/2026): los parámetros reales de `gpt_image_2_5`, `gpt_image_2` y `soul_2`. Cuando doy un parámetro, sale de ahí.
-- Lo que no está verificado lo marco como **sin verificar**. No hay ni un precio ni un nombre de modelo inventado en este documento.
-
-Este manual es para ti, que generas las imágenes. No genera nada: te dice qué escribir, qué adjuntar y qué mirar antes de dar una imagen por buena.
+Para qué sirve: tienes 25 anuncios, 15 tomas cada uno, 375 imágenes. Este manual es lo que miras antes de escribir un
+prompt y lo que miras antes de dar una imagen por buena. Los bloques en inglés están para copiar y pegar tal cual.
 
 ---
 
 ## Índice
 
-1. [Las once señales que delatan una imagen de IA](#1-las-once-señales-que-delatan-una-imagen-de-ia)
-2. [La fórmula de prompt, hueco por hueco](#2-la-fórmula-de-prompt-hueco-por-hueco)
-3. [Las palabras que funcionan y las palabras prohibidas](#3-las-palabras-que-funcionan-y-las-palabras-prohibidas)
-4. [Cómo se pide una cámara: móvil en mano contra estudio](#4-cómo-se-pide-una-cámara-móvil-en-mano-contra-estudio)
-5. [Referencias: el apartado que más imágenes salva](#5-referencias-el-apartado-que-más-imágenes-salva)
+1. [Por qué las imágenes de IA parecen de IA](#1-por-qué-las-imágenes-de-ia-parecen-de-ia)
+2. [La fórmula de prompt en ocho huecos](#2-la-fórmula-de-prompt-en-ocho-huecos)
+3. [Palabras que funcionan y palabras prohibidas](#3-palabras-que-funcionan-y-palabras-prohibidas)
+4. [Cómo se pide una cámara: móvil en mano frente a cámara de estudio](#4-cómo-se-pide-una-cámara-móvil-en-mano-frente-a-cámara-de-estudio)
+5. [Referencias: el apartado más importante del documento](#5-referencias-el-apartado-más-importante-del-documento)
 6. [Ajustes: proporción, resolución, calidad y coste](#6-ajustes-proporción-resolución-calidad-y-coste)
 7. [Lo aprendido generando 22 imágenes de verdad](#7-lo-aprendido-generando-22-imágenes-de-verdad)
 8. [Protocolo de revisión](#8-protocolo-de-revisión)
-9. [Anexo A: bloques listos para pegar](#anexo-a-bloques-listos-para-pegar)
-10. [Anexo B: los veinte errores que cuestan una regeneración](#anexo-b-los-veinte-errores-que-cuestan-una-regeneración)
+9. [Anexo: bloques listos para pegar](#9-anexo-bloques-listos-para-pegar)
 
 ---
 
-## 1. Las once señales que delatan una imagen de IA
+## 1. Por qué las imágenes de IA parecen de IA
 
-Nadie mira una imagen y piensa "esto tiene el bloque de piel mal escrito". Lo que pasa es que el ojo detecta media docena de cosas a la vez y la imagen se lee como falsa en menos de un segundo. Estas son las señales, ordenadas por lo que más daño hacen en nuestros anuncios, con la causa que las provoca **dentro del prompt** y la frase que las arregla.
+Una imagen no se delata por un fallo grande. Se delata por seis o siete detalles pequeños que van todos en la misma
+dirección: demasiado limpio, demasiado ordenado, demasiado bonito. El ojo no los lista, los suma. Por eso corregir
+una sola señal casi nunca salva la imagen y corregir seis la salva siempre.
+
+Aquí están las señales, qué las provoca en el prompt y la frase exacta que las arregla.
+
+| Señal | Qué la provoca | Frase que la arregla |
+|---|---|---|
+| Piel de plástico | `8k`, `hyperrealistic`, `flawless skin`, `glowing` | `visible skin pores and fine vellus hair, unretouched, honest skin texture` |
+| Poros en cuadrícula | pedir "poros" sin pedir distribución | `pores scattered in a completely IRREGULAR, uneven distribution` |
+| Cara simétrica | `symmetrical features`, `beautiful woman` | `faint natural facial asymmetry, one eyebrow slightly higher` |
+| Luz imposible | dos fuentes, o `dramatic lighting` | `one single motivated light source`, con dirección y consecuencias |
+| Bokeh de estudio | `bokeh`, `shallow depth of field` fuera del macro | `deep focus — the background stays sharp, the way any phone photo looks` |
+| Ojos demasiado limpios | el modelo por defecto | `naturally muted catchlights, no oversized specular glare in the iris` |
+| Producto agrandado | el modelo por defecto | `the patch is about 5 cm wide, roughly the width of three fingers` |
+| Encuadre perfecto | `centered composition`, `eye-level` | `framing slightly off-centre, slight natural tilt, not composed` |
+| Brillo HDR de anuncio | `cinematic`, `HDR`, `award-winning` | `mild HDR flattening, slight highlight clipping, faint digital noise` |
 
 ### 1.1 Piel de plástico
 
-**Qué se ve.** La cara parece de cera. No hay poro, no hay vello, el tono es uniforme, la luz resbala sin agarrarse a nada.
+Es la señal número uno y tiene una causa concreta y comprobada: el vocabulario de "modo estético". Palabras como
+`8k`, `ultra-realistic`, `hyperrealistic`, `cinematic` y `masterpiece` no empujan el modelo hacia el realismo, lo
+empujan hacia el render. La fuente lo dice literal: «On GPT Image 2 Medium, 8K, ultra-realistic, hyperrealistic,
+cinematic and masterpiece all push toward fake» y «Stacking hype keywords usually makes images look more fake, not
+less» (fal.ai, guía de prompting de GPT Image 2). La sustitución que funciona no es valorativa, es física: «'Realistic
+skin texture' tells the AI more than '8K'».
 
-**Qué lo provoca.** Las palabras de calidad. Está confirmado por fuente directa, no es superstición: `8k`, `hyperrealistic`, `ultra-realistic`, `cinematic`, `masterpiece`, `ultra-detailed` activan el modo estético del modelo, que es literalmente sobreafilado, sobresaturación, bloom y piel glaseada. Textual de la fuente: «On GPT Image 2 Medium, 8K, ultra-realistic, hyperrealistic, cinematic and masterpiece all push toward fake» y «Stacking hype keywords usually makes images look more fake, not less» (hedra.com, medium.com/@mericreativAI). A eso se suma el vocabulario de belleza: `glowing skin`, `flawless skin`, `radiant complexion`, `perfect skin`, que Higgsfield tiene en prohibición explícita en `ugc-character.md`.
-
-**Qué lo arregla.** Sustituir valoración por mecanismo. «'Realistic skin texture' tells the AI more than '8K'». La piel se pide por lo que hace la luz sobre ella, no por lo bonita que es:
+Lo que hay que escribir en su lugar es un mecanismo óptico, no un adjetivo de calidad:
 
 ```
-Real unretouched skin: visible pores across the nose, cheeks and forehead, fine vellus hair catching the light along the jaw and the upper lip, natural sebum shine concentrated on the nose bridge and the forehead while the cheeks stay matte — the shine a genuinely oily T-zone has at the end of the day. Uneven tone with faint pink around the nostrils, two or three small moles, faint fine lines at the outer corners of the eyes, faint honest under-eye shadows, one small healing spot. No makeup, no foundation. No digital smoothing, no beauty filter, no airbrushing, no plastic skin, no glossy retouched finish, no glow.
+Real unretouched skin: visible pores across the nose, cheeks and forehead, fine vellus hair
+catching the light along the jaw and the upper lip, subsurface scattering visible where light
+passes through thin skin, uneven tone with faint pink around the nostrils, two or three small
+moles, faint fine lines at the outer corners of the eyes. No digital smoothing, no beauty filter,
+no airbrushing, no plastic skin, no glossy retouched finish, no glow.
 ```
+
+Segunda causa de la piel de plástico, menos conocida y más decisiva: **la luz**. La textura de poro sólo se ve con
+fuente pequeña y dura en ángulo rasante. Con luz difusa grande (ventana enorme, día nublado, softbox) la piel se
+aplana y por muchos poros que pidas no aparecen (prompt-architects). Si un plano necesita textura de poro, la luz es
+la bombilla del espejo o la linterna del móvil, no la ventana.
 
 ### 1.2 Poros en cuadrícula
 
-**Qué se ve.** En el macro, los poros están repartidos como los agujeros de una rejilla: mismo tamaño, misma distancia, alineados en filas. El ojo lo lee como textura 3D procedimental, no como piel.
-
-**Qué lo provoca.** No es una palabra concreta: es el comportamiento por defecto del modelo cuando le pides "visible pores" sin más. Comprobado generando en NOCTA.
-
-**Qué lo arregla.** Describir la distribución, no el elemento. Esta frase va en **toda** macro de piel:
+Comprobado generando: por defecto el modelo reparte los poros como una rejilla regular, todos del mismo tamaño y a la
+misma distancia. Eso convierte cualquier macro en un render 3D. La frase que lo arregla está en la biblia y va
+obligatoriamente en toda macro de piel:
 
 ```
-pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced
+pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense
+patches and sparse elsewhere, every pore a different size and a different angle, never aligned in
+rows or a grid, never evenly spaced
 ```
 
-Y cerrar el prompt con `unretouched documentary realism, not a 3D render`.
+Y se cierra con `unretouched documentary realism, not a 3D render`.
 
-### 1.3 Simetría de modelo
+### 1.3 Simetría
 
-**Qué se ve.** Una cara perfectamente equilibrada, las dos mitades iguales, rasgos de catálogo. En Marisol (43) es lo que la convierte instantáneamente en "señora de banco de imágenes".
+Una cara humana real no es simétrica. Un ojo está un poco más alto, una ceja sube más, la sonrisa tira hacia un lado.
+El problema es que el "Beauty Floor" de Higgsfield obliga en su plantilla a `with high model facial features,
+symmetrical features, well-proportioned figure` (`ugc-character.md`), y `symmetrical features` es exactamente la
+palanca que produce la cara de IA. Si copias esa plantilla entera, la copias con el defecto dentro.
 
-**Qué lo provoca.** Dos fuentes. La obvia: `beautiful woman`, `attractive`, `model`. Y una menos obvia: el *Beauty Floor* de Higgsfield (`ugc-character.md`) incluye por defecto «with high model facial features, symmetrical features, well-proportioned figure». Si copias ese bloque entero, te llevas `symmetrical features` dentro, que es exactamente la palanca que produce cara de IA.
-
-**Qué lo arregla.** Borrar `symmetrical features` y `high model facial features`, dejar `well-proportioned`, y añadir asimetría explícita:
+Qué hacer: borra `symmetrical features`, deja `well-proportioned` y añade
 
 ```
-faint natural facial asymmetry, one eyebrow slightly higher than the other, faint asymmetry to the smile, natural uneven tone across the cheeks
+faint natural facial asymmetry, one eyebrow slightly higher than the other, faint asymmetry to the
+smile, natural uneven tone across the cheeks
 ```
 
-Para Marisol, además: `mature adult bone structure, longer facial thirds, visible nasolabial folds, crow's feet, slightly crepey skin under the eyes` y la negativa `no babyface`. Para Bea (24), imperfección joven, no envejecimiento: `one small healing spot on the chin, faint under-eye shadows`.
+Por avatar, la asimetría se concreta:
+
+- **Marisol (43)**: `mature adult bone structure, longer facial thirds, visible nasolabial folds, crow's feet, slightly crepey skin under the eyes`, y la negativa `no babyface`.
+- **Bea (24)**: `one small healing spot on the chin, faint under-eye shadows` — imperfección joven, no envejecimiento.
+- **Álex (36)**: `visible five o'clock shadow, a small scar through the right eyebrow, some redness across the cheeks`.
 
 ### 1.4 Luz imposible
 
-**Qué se ve.** Sombras que no salen de ninguna parte. Una cara iluminada por delante en un baño donde la única lámpara está en el techo. Un "de noche" que parece mediodía. O el clásico: todo bañado en naranja cálido.
+Hay tres formas de que la luz delate la imagen.
 
-**Qué lo provoca.** Tres cosas. Primera, no decir de dónde viene la luz: `natural light` no es una instrucción, es un deseo. Segunda, nombrar la hora sin nombrar el efecto: «night bathroom, 23:30» da una imagen de día, comprobado en NOCTA. Tercera, la hora dorada: Higgsfield la prohíbe con la razón explicada — «These tones make the persona look like a stock-photo ad, not a real creator».
+La primera es **la hora dorada**. Higgsfield la prohíbe explícitamente —«golden hour, warm sunset, orange/amber/honey
+cast, late afternoon warm wash, sunlit warm tones, magic hour — even outdoors»— y da la razón: «These tones make the
+persona look like a stock-photo ad, not a real creator» (`ugc-character.md`). Aunque el plano sea "por la mañana",
+nada de luz dorada: `cool early-morning overcast light through a half-closed blind`.
 
-**Qué lo arregla.** Una sola fuente motivada, con dirección, tamaño y dureza, y las consecuencias descritas:
+La segunda es **más de una fuente**. Una foto real de baño tiene una luz que manda. Si describes ventana y bombilla a
+la vez, el balance de blancos se pelea (la ventana es fría, la bombilla cálida) y sale un render sucio. Regla: una
+fuente motivada por plano, y se dice cuál es, de dónde viene y qué hace.
 
-```
-IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky.
-```
+La tercera es **decir la hora sin decir las consecuencias**. Escribir `night bathroom, 23:30` da una imagen de día.
+Esto está comprobado generando y tiene arreglo literal (ver apartado 7, regla 3).
 
 ### 1.5 Bokeh de estudio
 
-**Qué se ve.** El fondo fundido en un puré cremoso detrás de un sujeto recortadísimo. Es el delator número uno, porque un móvil solo consigue eso simulándolo con Modo Retrato.
+El fondo cremoso desenfocado es el delator número uno del retrato de IA, porque un móvil sólo lo consigue simulándolo
+con Modo Retrato. A 24 mm y f/1.8 con un sensor de móvil, a un metro de distancia está casi todo enfocado. Por eso el
+bloque de cámara de Higgsfield dice `DEEP focus — background stays sharp` y prohíbe `no shallow depth of field, no
+bokeh` (`ugc-board.md`, Step 11).
 
-**Qué lo provoca.** `bokeh`, `shallow depth of field`, `minimal depth of field`, `soft subtle separation`, `cinematic`, `portrait mode`.
-
-**Qué lo arregla.** Foco profundo por defecto, con la razón física dicha en el prompt:
-
-```
-deep focus — the background stays sharp, the way any phone photo looks
-```
-
-**Excepción importante y contraintuitiva: el macro.** La regla "no bokeh" es falsa para el macro de nariz. Un macro real de iPhone se hace con el ultra gran angular (13 mm f/2.2) a unos 3 cm, y ahí la profundidad de campo real son 2-3 milímetros: la punta está nítida y el ala de la nariz ya no. Si le pides foco profundo a un macro, sale una lámina médica. En los macros se escribe lo contrario y se **borra** de la cola negativa `no shallow depth of field, no bokeh`:
+**Excepción única y muy importante: el macro de nariz.** Un macro real de iPhone se hace con el ultra gran angular
+(13 mm f/2.2) a dos o tres centímetros de la piel, y ahí la profundidad de campo real es de dos o tres milímetros: la
+punta de la nariz está nítida y el ala ya está borrosa. Si pides foco profundo en un macro, sale una lámina médica.
+En los 25 macros de nariz hay que **quitar de la cola negativa** `no shallow depth of field` y `no bokeh`, y escribir:
 
 ```
-iPhone ultra-wide camera in macro mode, lens about 3 cm from the skin, only two or three millimetres of the nose in sharp focus, the near edge of the nostril and the far cheek falling out of focus fast — the razor-thin depth of field of a real phone macro, slight barrel distortion at the frame edges
+iPhone ultra-wide camera in macro mode, lens about 3 cm from the skin, only two or three
+millimetres of the nose in sharp focus, the near edge of the nostril and the far cheek falling out
+of focus fast — the razor-thin depth of field of a real phone macro, slight barrel distortion at
+the frame edges
 ```
+
+Si dejas la prohibición de bokeh dentro del prompt del macro, las dos instrucciones se pelean y gana la que esté peor
+escrita. (Confianza media según la investigación; el razonamiento óptico sí está sostenido por las fichas del
+iPhone 16.)
 
 ### 1.6 Ojos demasiado limpios
 
-**Qué se ve.** Iris que brillan solos, un reflejo blanco enorme y perfectamente redondo en cada ojo, color saturado. Es una señal que casi nadie corrige y que se nota muchísimo.
-
-**Qué lo provoca.** El modo estético otra vez, más cualquier palabra tipo `sparkling eyes`, `bright eyes`.
-
-**Qué lo arregla.** Una línea que viene del módulo antislop de Higgsfield (`character-sheet`, preset `photoreal-unretouched`):
+El modelo pinta iris saturados, con un reflejo enorme y perfectamente redondo, y sin ningún vaso capilar. Es una
+señal silenciosa: nadie sabe decir qué falla, pero la cara parece de muñeco. La cláusula del módulo antislop de
+Higgsfield (`character-sheet`, preset `photoreal-unretouched`) lo corrige en una línea:
 
 ```
-naturally muted catchlights, no oversized specular glare in the iris, eye colour muted rather than glowing
+naturally muted catchlights, no oversized specular glare in the iris, eye color muted rather than
+glowing, faint red capillaries in the white of the eye, lower lashline slightly wet
 ```
 
-### 1.7 Grano de película donde debería haber ruido digital
+### 1.7 Producto agrandado y logotipo inventado
 
-**Qué se ve.** Un grano bonito, orgánico, tipo carrete. Precioso y falso: un móvil no hace eso.
+El reflejo por defecto del modelo es agrandar el producto hasta que la etiqueta se lea. Higgsfield lo llama
+directamente prohibido: «Image models default to enlarging the product so the label is readable — this is forbidden.
+If the product is too small to read in frame, move the camera closer to the product. Do not scale the product up»
+(`ugc-board.md`, Step 7). Y hay una regla tipográfica asociada: las letras pequeñas salen como galimatías, las letras
+grandes salen limpias. Si quieres que se lea "nocta" en la caja, acerca la cámara.
 
-**Qué lo provoca.** El consejo clásico de "usa lenguaje de película": `Kodak Gold 200`, `35mm film`, `halation`, `fine grain`. Ese consejo sirve para que parezca una foto de carrete, no una foto de móvil. Son dos looks distintos y contradictorios.
+Para NOCTA, el parche mide 60 mm de ancho (biblia). Eso se dice en el prompt: `the patch is about 6 cm wide, roughly
+the width of three fingers`. Si no lo dices, el modelo te dibuja una tirita de rodilla.
 
-**Qué lo arregla.** Léxico digital, textual de `ugc-board.md`:
+### 1.8 Encuadre perfecto
 
-```
-digital smartphone sharpness, mild HDR flattening, slight highlight clipping at windows, faint digital noise in the shadows (digital noise, never film grain)
-```
-
-### 1.8 Composición de anuncio
-
-**Qué se ve.** Sujeto centrado, a la altura de los ojos, frontal, con aire simétrico alrededor. Eso no lo hace nadie con el móvil en la mano.
-
-**Qué lo provoca.** `centered composition at eye-level`, `straight-on`, `well composed`, y también no decir nada (el modelo centra por defecto).
-
-**Qué lo arregla.**
+Una foto de carrete está torcida, descentrada y capturada a medias. Un render está centrado a la altura de los ojos.
+Higgsfield prohíbe literalmente `centered composition at eye-level` y `straight-on` (`ugc-character.md`). Lo que va en
+todos los prompts:
 
 ```
-framing slightly off-centre, slight natural tilt, casual handheld framing, not composed, not centred, captured mid-moment
+framing slightly off-centre with a slight natural tilt, casual handheld framing, not composed, not
+centred, captured mid-moment
 ```
 
-En algunos planos: `the top of the head slightly cut by the frame`.
+Ojo con una trampa: la literatura de "foto amateur" recomienda también pedir desenfoque de movimiento y
+sobreexposición. **No lo hagas.** Tu imagen no es el producto final, es el fotograma de entrada de un image-to-video.
+Un borrón horneado en la imagen fuente lo intenta "resolver" el modelo de vídeo y produce morphing de dedos y rasgos.
+La inclinación y el descentrado sí (son geométricos, el vídeo los respeta); el `motion blur` no.
 
-### 1.9 Cara de anuncio
+### 1.9 Señales de segundo orden que cuestan la imagen entera
 
-**Qué se ve.** Sonrisa cálida mirando al objetivo. Higgsfield lo llama "aware-of-camera mimic" y lo prohíbe: `warm smile at the camera`, `looking at the camera with a smile`, `direct eye contact with the camera and a confident smile`.
+- **Espejos.** «Mirrors spawn extra hands and duplicated bodies» (`ugc-board.md`). Los 25 anuncios pasan por un baño y
+  la tentación es el plano del espejo. No lo hagas: o el espejo está fuera de cuadro, o la cámara está donde estaría
+  el espejo (el móvil apoyado en el estante, que además es lo que hace la gente real).
+- **Manos.** En un selfie una mano sostiene el móvil, así que sólo queda **una** libre. Si pides selfie y a la vez una
+  acción a dos manos, el modelo inventa un tercer brazo. Cualquier acción a dos manos exige cámara apoyada.
+- **Texto fantasma.** Sin cola negativa brotan marcas de agua, subtítulos y logos en toallas, botes y pantallas. El
+  olvido más frecuente no es la marca de agua, son las etiquetas de los props.
+- **Grano de carrete.** `Kodak Gold 200`, halación y grano fino producen una foto de carrete, que es un look distinto
+  y contradictorio con el móvil. Para móvil: ruido **digital** de luminancia. Higgsfield lo dice literal: «digital
+  noise, never film grain».
 
-**Qué lo arregla.** Elegir **una** expresión de esta lista cerrada y solo una:
+---
+
+## 2. La fórmula de prompt en ocho huecos
+
+Hay dos estructuras válidas y no se contradicen: la de cinco bloques de la guía oficial de GPT Image (escena, sujeto,
+detalles importantes, caso de uso, restricciones) y la de ocho huecos de la biblia de NOCTA, que es la misma pero
+desarrollada para este producto. Usa la de ocho huecos: es más específica y ya está probada aquí.
+
+El orden importa por una razón técnica: «Image models weight earlier tokens more — composition and identity go first,
+quality tail last» (`character-sheet`, reglas de oro). Todo lo que vaya al final pesa menos.
+
+| # | Hueco | Qué va dentro | Ejemplo literal |
+|---|---|---|---|
+| 0 | Referencias | declaración `@Image1/@Image2`, Angle Lock, escala real | `@Image1 is the product reference. ANGLE LOCK: ...` |
+| 1 | Captura | tipo de foto y cámara | `Vertical 9:16 handheld iPhone photo` |
+| 2 | Sujeto y encuadre | quién, qué parte del cuerpo llena el cuadro, a qué distancia, banda declarada | `TIGHT CLOSE-UP of the tip and left side of a nose filling the frame` |
+| 3 | Detalle físico | poros, filamentos, vello, capilares, brillo de zona T, una imperfección concreta | `each pore holds a flat grey-yellow sebaceous filament, level with the skin` |
+| 4 | Acción | una sola, en presente, sencilla | `she is pressing the patch onto the bridge of her nose` |
+| 5 | Luz y sitio | uno de los cinco sitios, con hora, dirección y consecuencias | `a bare warm LED bulb above the mirror, raking from the upper left` |
+| 6 | Óptica | profundidad de campo, foco exacto, ruido de sensor | `deep focus, the bathroom behind stays sharp, faint digital sensor noise` |
+| 7 | Anti-retoque | bloque de piel real | `no beauty retouching, no skin smoothing, no makeup, unretouched documentary realism` |
+| 8 | Prohibiciones | cola negativa completa | `No text, no logos, no watermark.` |
+
+Dos cosas que no están numeradas pero van siempre:
+
+- **El número de estado del parche** al principio del prompt. La biblia define cinco estados (sin parche / recién
+  puesto / saturado / a medio quitar / fuera) y el error más caro es mezclar dos. Escribir "ESTADO 4" arriba del todo
+  evita que salga el parche en la mano y pegado en la nariz a la vez.
+- **La frase de registro**, que cambia el resultado más que veinte adjetivos:
+
+```
+This is a casual photo from a real person's camera roll, the kind that gets posted to a TikTok
+slideshow — not an advertising image, not a product shoot, not a magazine photo.
+```
+
+### Ejemplo completo con los ocho huecos
+
+Plano 10 de un anuncio de Bea, colocación del parche, baño de noche.
+
+```
+STATE 2: the patch has just been applied. @Image1 is the NOCTA product reference and @Image2 is the
+character reference. The patch must be EXACTLY the product in the reference photographs: same
+silhouette, same proportions, same translucent matte material. Do not invent a different shape.
+ANGLE LOCK: the product shows only the visible front-facing side from @Image1 and keeps that same
+visible angle; do not rotate, flip or reveal unseen sides; its colours and lettering stay identical
+to the reference.
+
+Vertical 9:16 handheld iPhone photo, phone propped on the bathroom shelf at chest height so both
+hands are free. MEDIUM CLOSE-UP of a Spanish woman in her early twenties at the sink, her face and
+shoulders filling most of the frame.
+
+Real unretouched skin: visible pores across the nose and forehead, fine vellus hair along the jaw,
+natural sebum shine concentrated on the nose bridge while the cheeks stay matte, two small healing
+spots on the chin, a mole under the left cheekbone, faint under-eye shadows, faint natural facial
+asymmetry with one eyebrow slightly higher. Naturally muted catchlights, no oversized specular
+glare in the iris. Bare skin, no makeup, no foundation.
+
+She is pressing the hydrocolloid patch onto the bridge of her nose with the index and middle finger
+of her right hand while her left hand steadies the free edge; no other hand is doing anything. The
+patch is about 6 cm wide, roughly the width of three fingers, a translucent matte film clearly
+visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a
+thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly
+sealed against the skin. Do not scale the patch up to make it readable; if it needs to read bigger,
+move the camera closer.
+
+Mid-action expression, in the middle of saying something, not posing, not smiling at the camera.
+Body calm and neutral, weight on one hip, head level.
+
+IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard
+shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are
+bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected
+in it. No daylight, no soft window light, no blue sky. Spanish bathroom: white subway tile, beige
+grout, a chrome tap, a folded dusty-rose towel, a shampoo bottle with its label turned away. The
+mirror is out of frame.
+
+Deep focus — the tiled wall behind stays sharp, the way any phone photo looks. Mild HDR flattening,
+faint digital luminance noise in the shadows, digital sensor noise, never film grain. Framing
+slightly off-centre with a slight natural tilt, not composed, not centred, captured mid-moment.
+This is a casual photo from a real person's camera roll, the kind that gets posted to a TikTok
+slideshow — not an advertising image, not a product shoot, not a magazine photo.
+
+Constraints: no text, no lettering, no captions, no subtitles, no watermark, no logo, no badges, no
+numbers, no frame borders, no collage, no split screen. No brand marks or legible text on any prop.
+No shallow depth of field, no bokeh, no lens flare, no cinematic colour grade, no HDR glow or bloom
+or halos, no oversharpening, no oversaturation. No studio lighting, no ring light, no softbox, no
+golden hour. No fisheye, no ultra-wide distortion. No mirror and no reflection, no duplicated
+person, no extra hands, no third arm, no deformed fingers. Exactly one person in frame.
+```
+
+Es largo. Tiene que serlo. Un prompt de tres líneas te da una imagen de tres líneas de calidad.
+
+---
+
+## 3. Palabras que funcionan y palabras prohibidas
+
+Las dos listas son literales y van en inglés. La primera fuente (prompt-architects) avisa de algo útil: este
+vocabulario no es específico de un modelo, «these prompts work across all three as plain descriptive language» —
+sirve igual en GPT Image, Soul o Flux.
+
+### 3.1 Palabras que funcionan
+
+Piel y textura:
+
+```
+visible skin pores
+natural fine facial hair
+vellus hair visible at the temples
+pore texture across the nose and forehead
+subsurface scattering visible where light passes through thin skin
+unretouched, honest skin texture
+subtle natural sheen across the forehead and nose bridge
+soft small specular highlights
+gentle catchlight in the eyes
+warmer and slightly flushed skin tone at the nose, cheeks and ears, cooler and more neutral along
+  the jaw and forehead
+scatter of light natural freckles
+faint asymmetry to the smile
+subtle fine lines at the outer corners of the eyes
+natural uneven tone across the cheeks
+enlarged pores
+sebaceous filament plug
+uneven skin tone
+```
+
+Cámara y captura:
+
+```
+handheld
+iPhone
+main camera, 24mm-equivalent
+iPhone ultra-wide camera in macro mode
+clip-on macro lens
+deep focus — the background stays sharp
+mild HDR flattening
+slight highlight clipping at the window
+faint digital luminance noise in the shadows
+digital sensor noise, never film grain
+auto white balance
+framing slightly off-centre
+slight natural tilt
+captured mid-moment
+not composed, not centred
+slight barrel distortion at the frame edges
+```
+
+Luz y sitio:
+
+```
+one motivated light source
+bare warm LED bulb above the mirror, small hard source
+raking from the upper left
+short-edged shadows revealing every pore
+soft cool daylight from a window on the left
+overcast diffusion, no sun, no warm cast
+cool neutral daylight
+north-facing window light
+white subway tile, beige grout
+hard-edged shadow on the tile behind
+```
+
+Producto y escala:
+
+```
+about 6 cm wide, roughly the width of three fingers
+at its real physical size relative to the hand
+move the camera closer instead of scaling the product up
+ANGLE LOCK
+translucent matte hydrocolloid
+bevelled edge catching a thin specular highlight
+opaque white in blotches with small pale-yellow dots where the pores were
+```
+
+Expresión y cuerpo (elige **una** expresión por prompt; lista cerrada de `ugc-character.md`):
 
 ```
 mid-thought, slight half-smile, eyes glancing slightly off-lens
@@ -160,682 +384,762 @@ mid-react squint — one eye scrunching, half-grin pulling sideways
 eyebrows lifted mid-thought, lips pressed in a "wait, no" line, head tilted slightly
 ```
 
-Regla de cuerpo, que va con esto: la energía de "pillado a medias" vive en la **cara**. El **cuerpo** se queda quieto y normal: de pie relajado, peso en una cadera, una mano apoyada, cabeza recta. Las poses creativas son una apuesta anatómica: los brazos extendidos se deforman y las manos en escorzo crían dedos. Nunca una mano lanzada hacia el objetivo, nunca saltos, nunca contrapicado dominante, nunca enmarcarse la cara con las manos.
-
-### 1.10 El producto que muta
-
-**Qué se ve.** El parche es una mancha amorfa. La caja cambia de color entre el plano 7 y el 15. El logotipo se convierte en garabato. El parche mide como una tirita de rodilla.
-
-**Qué lo provoca.** Describir el producto con palabras y confiar. No funciona. Se trata en el apartado 5, que es el más importante de este manual.
-
-### 1.11 Texto fantasma y manos duplicadas
-
-**Qué se ve.** Una marca de agua inventada en una esquina. Subtítulos que nadie pidió. Una etiqueta con letras sin sentido en el bote de champú. Un tercer brazo en el espejo.
-
-**Qué lo provoca.** GPT Image no tiene campo de prompt negativo: las exclusiones van dentro del prompt. Si no las pones, el modelo rellena. Y el espejo es un generador industrial de manos de más: «mirrors spawn extra hands and duplicated bodies» (`ugc-board.md`).
-
-**Qué lo arregla.** La cola negativa completa del Anexo A, en las 375 imágenes, sin saltarse ninguna. Y sacar el espejo de cuadro: o está fuera, o la cámara está **donde** estaría el espejo (el móvil apoyado en el estante), o entra solo un trozo desenfocado en el borde sin reflejo de persona.
-
----
-
-## 2. La fórmula de prompt, hueco por hueco
-
-El orden importa: los modelos de imagen pesan más los primeros tokens. Composición e identidad van delante; la cola de calidad va al final. Un párrafo, separado por comas, en este orden.
-
-| Hueco | Qué va | Por qué va ahí |
-|---|---|---|
-| 0 | Referencias y estado del parche | Lo primero que lee el modelo es lo que más respeta |
-| 1 | Captura | Fija el tipo de imagen antes de describir nada |
-| 2 | Sujeto y encuadre | Identidad y banda de distancia |
-| 3 | Detalle físico concreto | Lo que hace que parezca piel y no material |
-| 4 | Acción | Una sola |
-| 5 | Luz y sitio | Una fuente, con dirección y consecuencias |
-| 6 | Óptica | Profundidad de campo y ruido |
-| 7 | Anti-retoque | Desactiva el modo estético |
-| 8 | Prohibiciones | Lo que no puede aparecer |
-
-### Hueco 0 — Referencias y estado
-
-Declara qué imagen es cuál y en cuál de los cinco estados del parche está esta toma. Escribir el número de estado al principio evita el error más caro de todos: una imagen que mezcla el estado 4 y el 5 (parche en la mano y a la vez pegado en la nariz) no sirve y hay que repetirla.
-
-Los cinco estados, y cada imagen está en uno solo:
-
-1. **Sin parche**: poros llenos, filamentos oscuros visibles, brillo.
-2. **Parche recién puesto**: traslúcido, casi invisible salvo el borde, nariz igual de llena por debajo.
-3. **Parche saturado**: blanco a manchas sobre la nariz, por la mañana.
-4. **A medio quitar**: un ala despegada y enrollada, el resto pegado y plano, una sola frontera, y la piel ya al aire LIMPIA.
-5. **Fuera**: el parche en la mano con las manchas blancas y los tapones; la nariz limpia, sin puntos oscuros.
-
-### Hueco 1 — Captura
-
-Dos opciones, nada más:
-
-```
-Vertical 9:16 handheld iPhone photo
-```
-
-```
-Extreme macro photograph shot on an iPhone with a clip-on macro lens, handheld
-```
-
-Y dentro de este hueco, siempre, la frase que más cambia el registro de toda la fórmula. Cambia más que veinte adjetivos:
-
-```
-This is a casual photo from a real person's camera roll, the kind that gets posted to a TikTok slideshow — not an advertising image, not a product shoot, not a magazine photo.
-```
-
-### Hueco 2 — Sujeto y encuadre
-
-Quién, qué parte del cuerpo llena el cuadro y a qué distancia. La distancia se **declara explícitamente** con una de estas etiquetas, y no se repite la misma en dos planos seguidos del mismo anuncio: `MACRO`, `TIGHT CLOSE-UP`, `MEDIUM CLOSE-UP`, `MEDIUM`, `WAIST-UP`, `FULL-BODY WIDE`. Esta rotación obligatoria es el motor anti-deformación de Higgsfield: quince planos a la misma distancia acaban pareciendo la misma imagen y el montaje se cae.
-
-### Hueco 3 — Detalle físico concreto
-
-Poros visibles, filamentos sebáceos gris-marrón dentro de cada poro, vello fino, capilares rojos finos, brillo de la zona T, alguna imperfección. Cuanto más concreto, más real. Aquí va el bloque de piel del Anexo A.
-
-Subtonos fijos de NOCTA, para que la piel no salga de plástico rosa:
-
-- Bea: `fair skin with neutral-pink undertones`
-- Marisol: `light olive skin with warm undertones`
-- Álex: `medium olive skin with warm undertones, visible five o'clock shadow`
-
-### Hueco 4 — Acción
-
-Una sola, en presente, sencilla. Dos acciones a la vez son una deformación garantizada.
-
-Y la regla de manos, que decide si el plano puede ser selfie o no: en un selfie una mano sostiene el móvil, así que queda **una** libre. Si quieres enseñar la caja y el parche a la vez, o aplicar el parche con dos manos, ese plano **no puede ser selfie**. Se describe así:
-
-```
-steady front-facing phone propped on the bathroom shelf, both hands free
-```
-
-Es lo que hace la gente de verdad y además evita el tercer brazo.
-
-### Hueco 5 — Luz y sitio
-
-Uno de los cinco sitios de la biblia, con la hora y la dirección de la luz:
-
-1. **Baño de día**: azulejo blanco tipo metro, grifo cromado, luz de ventana suave por la izquierda, 10:00.
-2. **Baño de noche**: plafón cenital, luz más dura, sombras bajo los ojos, 23:30.
-3. **Dormitorio de noche**: lámpara de mesilla cálida, sábana blanca arrugada, resto en penumbra.
-4. **Ventana de mañana**: luz lateral limpia, alféizar. Es la del parche a contraluz.
-5. **Mesa de mármol crema**: packshots, luz suave de ventana, sombra corta.
-
-Nada de estudio, nada de fondo negro, nada de humo ni destellos.
-
-**Cuál elegir según lo que quieras ver.** Esto no es estética, es física: la textura de poro solo se ve con luz pequeña y dura en ángulo rasante. Con luz difusa grande (ventana, día nublado) la piel se aplana y por mucho que pidas poros no salen. Por tanto:
-
-- Macros, aplicación y retirada → **rig baño** (bombilla del espejo o linterna del móvil).
-- Hablar a cámara, antes/después, parche a contraluz → **rig ventana** (favorece la cara, y ahí no necesitas poro forense).
-
-### Hueco 6 — Óptica
-
-```
-focus exactly on the bridge of the nose, natural digital sensor noise, mild HDR flattening
-```
-
-Profundidad de campo: **profunda** en todo salvo el macro. En el macro, mínima y declarada. Ver 1.5.
-
-**Sobre el desenfoque de movimiento.** La biblia lo incluía en este hueco (`slight handheld motion blur at the edges`). No lo pongas. Tu imagen no es el producto final: es el fotograma de entrada de un image-to-video, y un desenfoque horneado en la fuente lo intenta "resolver" el modelo de vídeo y produce morphing de dedos y de rasgos. La inclinación de encuadre y el descentrado sí (son geométricos, el i2v los respeta); el blur no. Única excepción tolerada, y revísala antes de animarla: `the hand pulling the patch is very slightly motion-blurred while the face stays sharp`.
-
-### Hueco 7 — Anti-retoque
-
-```
-no beauty retouching, no skin smoothing, no makeup, unretouched documentary realism
-```
-
-### Hueco 8 — Prohibiciones
-
-Siempre. Los subtítulos los pones tú después en el montaje, así que el modelo no tiene que poner ni una letra. Cola completa en el Anexo A.
-
-### Ejemplo montado entero
-
-Plano 10 de un anuncio de Bea, colocación del parche, baño de día:
-
-```
-@Image1 and @Image2 are the NOCTA patch references. The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape. @Image3 is the character reference — the same person, identical face, hair, body and skin tone. STATE 2: the patch has just been applied, still translucent, the nose underneath is still as full as before.
-
-Vertical 9:16 handheld iPhone photo. This is a casual photo from a real person's camera roll, the kind that gets posted to a TikTok slideshow — not an advertising image, not a product shoot, not a magazine photo.
-
-MEDIUM CLOSE-UP. A Spanish woman in her early twenties at a bathroom sink, seen from the front at chest height by a phone propped on the shelf, both hands free. Light brown hair pinned up with a matte black claw clip, brown eyes, thick natural brows, a mole under the left cheekbone, small gold stud earrings, two small healing spots on the chin, grey ribbed t-shirt.
-
-Real unretouched skin: visible pores across the nose, cheeks and forehead, fine vellus hair catching the light along the jaw and the upper lip, natural sebum shine concentrated on the nose bridge and the forehead while the cheeks stay matte. Fair skin with neutral-pink undertones, uneven tone with faint pink around the nostrils, faint honest under-eye shadows. Naturally muted catchlights, no oversized specular glare in the iris. Faint natural facial asymmetry, one eyebrow slightly higher. No makeup, no foundation.
-
-She is pressing the hydrocolloid patch onto the bridge of her nose with the index and middle finger of her right hand while her left hand steadies the free wing of the patch; no other hand is doing anything. A translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed against the skin. The patch is about 6 cm wide, roughly the width of three fingers — do not scale the patch up to make it readable; if it needs to read bigger, move the camera closer. Mid-action expression, in the middle of saying something, not posing, not smiling at the camera.
-
-Soft cool daylight from a window on the left, overcast diffusion, no sun, no warm cast, falling across her face and the white subway tile. Spanish bathroom: white tile, beige grout, a folded dusty-rose towel, a shampoo bottle with its label turned away, a chrome tap. Colour palette dominated by whites and warm beiges with one dusty-rose accent.
-
-Deep focus — the bathroom behind stays sharp, the way any phone photo looks. Digital smartphone sharpness, mild HDR flattening, slight highlight clipping on the window, faint digital noise in the shadows (digital noise, never film grain). Framing slightly off-centre with a slight natural tilt, not composed, not centred.
-
-No beauty retouching, no skin smoothing, no makeup, unretouched documentary realism, not a 3D render.
-
-Constraints: no text, no lettering, no captions, no subtitles, no watermark, no logo, no badges, no numbers, no frame borders, no collage, no split screen. No brand marks or legible text on any prop. No shallow depth of field, no bokeh, no lens flare, no cinematic colour grade, no HDR glow or bloom or halos, no oversharpening, no oversaturation. No studio lighting, no ring light, no softbox, no golden hour. No mirror and no reflection, no duplicated person, no extra hands, no third arm, no deformed fingers. Exactly one person in frame.
-```
-
----
-
-## 3. Las palabras que funcionan y las palabras prohibidas
-
-Estas listas son literales. Cópialas.
-
-### 3.1 Palabras que funcionan
-
-**Cámara y captura**
-
-```
-handheld, iPhone, front-facing camera, main camera 24mm-equivalent f/1.8, clip-on macro lens, ultra-wide camera in macro mode, deep focus, digital smartphone sharpness, mild HDR flattening, slight highlight clipping, faint digital noise in the shadows, digital sensor noise, auto white balance, framing slightly off-centre, slight natural tilt, casual handheld framing, not composed, not centred, captured mid-moment, camera roll, unposed, slight barrel distortion at the frame edges
-```
-
-**Piel**
-
-```
-visible skin pores, natural fine facial hair, vellus hair visible at the temples, pore texture across the nose and forehead, subsurface scattering visible where light passes through thin skin, unretouched honest skin texture, subtle natural sheen across the forehead and nose bridge, soft small specular highlights, gentle catchlight in the eyes, warmer and slightly flushed skin tone at the nose, cheeks and ears, cooler and more neutral along the jaw and forehead, scatter of light natural freckles, faint asymmetry to the smile, subtle fine lines at the outer corners of the eyes, natural uneven tone across the cheeks, enlarged pores, uneven skin tone, one small healing spot, faint under-eye shadows, bare-skin no-makeup, oily T-zone
-```
-
-**Producto y textura**
-
-```
-translucent matte hydrocolloid, bevelled edge, thin specular highlight along the edge, sebaceous filament plug, flat grey-yellow sebaceous filaments, translucent, level with the skin, not raised, not dark, not inflamed, tiny threads inside the pores, opaque white in blotches, small pale-yellow dots where the pores were, small opaque white plugs inside the thickness of the gel, faint diffuse halo where the light scatters through the gel, slightly curved and creased from having been on a nose
-```
-
-**Luz y sitio**
-
-```
-north-facing window light, soft cool daylight from a window on the left, overcast diffusion, cool neutral daylight, clean midday light, bare warm LED bulb above the mirror, small hard source at a low raking angle, short-edged shadows revealing every pore, hard ceiling fixture directly overhead, direct on-camera LED flash, hard bright hotspot on the forehead and the nose, falling to near-black within two metres, white subway tile, beige grout, chrome tap, warm brass tap
-```
-
-**Registro**
-
-```
-documentary, unretouched documentary realism, not a 3D render, ordinary everyday people, real person's camera roll, authentic UGC creator phone selfie, mid-action, not posing
-```
+Y la regla de cuerpo, que es contraintuitiva y salva muchas manos: la energía de "pillado a medias" vive en **la
+cara**; el cuerpo se queda quieto y normal. `relaxed standing, weight slightly on one hip, one hand resting
+naturally, head level`.
 
 ### 3.2 Palabras prohibidas
 
-**Las de calidad (las peores, empujan al render de plástico)**
+Calidad y estética (cada una empuja activamente al render):
 
 ```
-8k, 4k quality, hyperrealistic, ultra-realistic, photorealistic masterpiece, masterpiece, ultra-detailed, award-winning, high quality, best quality, professional photography, cinematic, cinematic realism, cinematic lighting, dramatic lighting, film still
+8k
+4k
+hyperrealistic
+ultra-realistic
+photorealistic masterpiece
+masterpiece
+ultra-detailed
+cinematic
+cinematic realism
+dramatic lighting
+professional photography
+award-winning
+editorial portrait
+fashion portrait
+mid-length portrait
+aspirational lifestyle atmosphere
 ```
 
-**Las de belleza**
+Piel y cara:
 
 ```
-beautiful woman, attractive, model, high model facial features, symmetrical features, perfect skin, flawless, flawless complexion, poreless skin, glowing skin, radiant complexion, dewy, airbrushed, perfectly smooth, uniform flat skin tone, glossy all-over shine, studio polish, heavy retouching, plastic texture, babyface
+flawless skin
+perfect skin
+poreless skin
+glowing skin
+radiant complexion
+airbrushed
+perfectly smooth
+uniform flat skin tone
+glossy all-over shine
+studio polish
+heavy retouching
+beautiful woman
+symmetrical features
+high model facial features
 ```
 
-**Las de óptica y estudio**
+Óptica y luz (salvo en el macro, donde las dos primeras se permiten):
 
 ```
-bokeh, shallow depth of field, minimal depth of field, soft subtle separation, portrait mode, blurred background, DSLR, full-frame, 85mm portrait lens, studio, studio lighting, ring light, softbox, beauty dish, strobe, seamless background, pure white background, lens flare, HDR, HDR glow, bloom, halos, oversharpening, teal and orange, colour grade
+bokeh
+shallow depth of field
+minimal depth of field
+soft subtle separation
+portrait mode
+lens flare
+HDR
+golden hour
+warm sunset
+magic hour
+ring light
+softbox
+beauty dish
+studio lighting
+DSLR
+flattering and even illumination
 ```
 
-**Las de composición y pose**
+Composición y pose:
 
 ```
-editorial portrait, fashion portrait, mid-length portrait, centered composition at eye-level, straight-on, well composed, flattering and even illumination, aspirational lifestyle atmosphere, poised, elegant stance, graceful posture, posing, pose, warm smile at the camera, looking at the camera with a smile, direct eye contact with the camera and a confident smile
+centered composition at eye-level
+straight-on
+posing
+poised
+elegant stance
+graceful posture
 ```
 
-**Las de luz prohibida**
+Producto, texto y props:
 
 ```
-golden hour, magic hour, warm sunset, orange cast, amber cast, honey cast, late afternoon warm wash, sunlit warm tones
+split screen
+diptych
+before and after side by side
+collage
+frame border
+watermark
+caption
+subtitle
+badge
 ```
 
-**Las de carrete (contradicen el look de móvil)**
+Léxico de piel que produce patología o roza moderación:
 
 ```
-Kodak Gold 200, Portra 400, 35mm film, film grain, fine grain, halation, analog
+blackheads
+acne
+cystic
+pus
+squeezing
+extraction
+infected
+medical close-up
+dermatology slide
 ```
 
-**Las que estropean el image-to-video**
+Sobre esta última lista: los filamentos sebáceos son planos, translúcidos y de tono gris-amarillo; los puntos negros
+son tapones oscuros (Cleveland Clinic, Paula's Choice). Si escribes `blackheads`, el modelo dibuja puntos negros
+gordos y la imagen da asco. Lo que hay que escribir es `flat grey-yellow sebaceous filaments sitting level with the
+skin, not raised, not dark, not inflamed`, más `calm skin, no redness, not irritated`, más un trozo de mejilla normal
+dentro del cuadro para que se lea como una nariz de persona y no como una preparación de laboratorio.
+
+**Dos trampas de lista negra.** La primera: el preset `photoreal-unretouched` de Higgsfield es excelente pero trae una
+cola `4K quality, cinematic realism, clean white background` pensada para fichas de personaje sobre fondo blanco.
+Quítala. La segunda: ese mismo preset lleva `skin completely free of artificial glare, shine or highlight blooms,
+matte-to-natural complexion`, que te borra justo el brillo sebáceo que NOCTA necesita vender. Sustitúyela por:
 
 ```
-motion blur, blurry, out of focus, overexposed, blown out, long exposure
-```
-
-**Las que producen asco o rozan moderación**
-
-```
-blackheads, acne, cystic, pus, squeezing, extraction, infected, gore, medical close-up, dermatology slide, inflamed, red and irritated
-```
-
-**Las del producto**
-
-```
-black pore strip, Bioré, round pimple patch, patch with stars, patch with printed dots, glitter, plastic packaging, before and after split screen, diptych
+natural sebum shine concentrated on the nose bridge and forehead, matte on the cheeks, the kind of
+shine a real oily T-zone has at the end of the day
 ```
 
 ---
 
-## 4. Cómo se pide una cámara: móvil en mano contra estudio
+## 4. Cómo se pide una cámara: móvil en mano frente a cámara de estudio
 
-Un mismo sujeto, una misma luz y un mismo encuadre dan dos imágenes completamente distintas según cómo describas la cámara. No es un detalle: es la mitad del realismo.
+No existe un interruptor. Lo que hay son dos familias de frases, y el modelo interpola entre ellas. Si mezclas, sale
+un híbrido que parece publicidad barata.
 
-### 4.1 Lo que produce "foto de móvil"
-
-Tres cosas físicas, ninguna valorativa: **óptica ancha**, **foco profundo** y **procesado digital visible**.
-
-| Quiero | Escribo |
-|---|---|
-| Óptica de móvil | `main camera 24mm-equivalent f/1.8, mild phone-camera wideness only — never fisheye, never ultra-wide warp` |
-| Foco profundo | `deep focus — the background stays sharp, the way any phone photo looks` |
-| Procesado del móvil | `mild HDR flattening, slight highlight clipping at the window, faint digital noise in the shadows (digital noise, never film grain), auto white balance` |
-| Encuadre de persona real | `framing slightly off-centre, slight natural tilt, not composed, not centred, captured mid-moment` |
-| Registro | `a photo from a real person's camera roll, not an advertising image` |
-
-La razón por la que el foco profundo funciona: a 24 mm y f/1.8 con un sensor de móvil, a un metro de distancia está casi todo enfocado. El bokeh cremoso delata porque el móvil solo lo consigue simulándolo.
-
-### 4.2 Lo que produce "estudio" sin que lo hayas pedido
-
-Estas frases meten estudio aunque no digas la palabra. Si alguna se te cuela, la imagen se va al render:
-
-```
-professional photography, DSLR, 85mm, editorial portrait, fashion portrait, minimal depth of field, soft subtle separation, flattering and even illumination, centered composition at eye-level, seamless background, ring light, softbox, beauty dish, studio strobes, aspirational lifestyle atmosphere
-```
-
-Higgsfield lo dice sin rodeos en `ugc-character.md`: nada de cuerpos de cámara profesionales, nada de flashes de estudio, nada de fondo blanco infinito.
-
-### 4.3 Los tres rigs de cámara de NOCTA
-
-No hay más. Y **no se mezclan dos rigs en el mismo plano**: el balance de blancos del flash (verdoso-frío) y el de la bombilla del baño (cálido) se pelean y sale un render sucio.
-
-**Rig A — día / ventana.** Para hablar a cámara, antes/después y el parche a contraluz.
-
-```
-Casual handheld iPhone photo taken by the person themselves, main camera 24mm-equivalent f/1.8, deep focus — the bathroom behind stays sharp, the way any phone photo looks. Mild HDR flattening, slight highlight clipping on the window, faint digital luminance noise in the shadows (digital sensor noise, never film grain), auto white balance splitting the difference between the cool window and the warm mirror bulb. Framing slightly off-centre with a slight natural tilt, not composed, not centred, captured mid-moment. This is a photo from a real person's camera roll, the kind that gets posted to a TikTok slideshow — not an advertising image, not a product shoot, not a magazine photo.
-```
-
-**Rig B — noche / flash.** Para aplicar el parche antes de dormir, la mesita, el baño de madrugada. Ventaja para NOCTA: el flash directo es la luz que **más** revela el brillo sebáceo de la nariz, y con el parche puesto hace que el hidrocoloide blanco destaque muchísimo.
-
-```
-Night-time iPhone photo taken with the direct on-camera LED flash. Hard bright hotspot on the forehead and the nose, the face flattened by the on-axis light, a hard-edged shadow of the head thrown on the tiled wall right behind, the rest of the room falling to near-black within two metres. Cool greenish flash white balance fighting the warm bulb. Visible digital noise in the dark corners, slight tilt to the handheld framing, unposed. A photo from a real person's camera roll, not an advertising image.
-```
-
-**Rig C — macro.** Para el diagnóstico, el detalle del poro y el parche fuera del sobre. Aquí y solo aquí se pide profundidad mínima.
-
-```
-Extreme macro photograph shot on an iPhone ultra-wide camera in macro mode, handheld, lens about 3 cm from the skin: only two or three millimetres are in sharp focus, everything nearer and further falling out of focus fast — the razor-thin depth of field of a real phone macro. Slight barrel distortion at the frame edges. Lit only by the phone's own torch from the upper left — small hard source at a low raking angle, short raking shadows inside each pore. Faint digital noise, mild highlight clipping on the oiliest ridge, auto white balance leaning warm, framing slightly off-centre and handheld.
-```
-
-### 4.4 Selfie contra móvil apoyado
-
-Decidir esto **antes** de escribir el prompt, porque cambia cuántas manos tienes.
-
-| Plano | Cómo se pide | Manos libres |
+| Decisión | Móvil en mano (lo que quieres) | Cámara de estudio (lo que evitas) |
 |---|---|---|
-| Hablar a cámara | `Self-portrait selfie shot on an iPhone front-facing camera held by the subject at arm's length, her own arm extended toward the lens, her wrist faintly visible at the edge of frame` | 1 |
-| Aplicar el parche, abrir la caja, dos objetos | `steady front-facing phone propped on the bathroom shelf, both hands free` | 2 |
-| Dormir, retirada vista desde fuera | `phone held above the bed by someone standing beside it, angled down` | no aplica |
+| Óptica | `main camera, 24mm-equivalent f/1.8` | `85mm portrait lens`, `DSLR` |
+| Foco | `deep focus — the background stays sharp` | `shallow depth of field`, `bokeh` |
+| Luz | `one motivated light source (window / lamp)` | `softbox`, `ring light`, `three-point lighting` |
+| Fondo | `white subway tile, beige grout, a brass tap` | `seamless background`, `clean white backdrop` |
+| Ruido | `faint digital luminance noise in the shadows` | `clean, noise-free` |
+| Rango | `mild HDR flattening, slight highlight clipping` | `perfect exposure`, `balanced highlights` |
+| Encuadre | `slightly off-centre, slight natural tilt` | `centered composition at eye-level` |
+| Registro | `a photo from a real person's camera roll` | `editorial portrait`, `product shoot` |
 
-Si pides selfie y una acción a dos manos, el modelo resuelve el conflicto inventando un tercer brazo. Siempre.
+Tres bloques fijos, uno por situación. No los mezcles nunca dentro del mismo plano: el balance de blancos del flash
+(verdoso-frío) y el de la bombilla del baño (cálido) se pelean y sale un render sucio.
+
+**Bloque A — día / ventana.** Para hablar a cámara, antes/después y el parche a contraluz.
+
+```
+Casual handheld iPhone photo taken by the person themselves, main camera 24mm-equivalent f/1.8,
+deep focus — the bathroom behind stays sharp, the way any phone photo looks. Mild HDR flattening,
+slight highlight clipping on the window, faint digital luminance noise in the shadows (digital
+sensor noise, never film grain), auto white balance splitting the difference between the cool
+window and the warm mirror bulb. Framing slightly off-centre with a slight natural tilt, not
+composed, not centred, captured mid-moment. This is a photo from a real person's camera roll, the
+kind that gets posted to a TikTok slideshow — not an advertising image, not a product shoot, not a
+magazine photo.
+```
+
+**Bloque B — noche / flash.** Para aplicar el parche antes de dormir, la mesilla, el baño de madrugada. Ventaja para
+NOCTA: el flash directo es la luz que más revela el brillo sebáceo de la nariz, y con el parche puesto hace que el
+hidrocoloide blanco destaque muchísimo.
+
+```
+Night-time iPhone photo taken with the direct on-camera LED flash. Hard bright hotspot on the
+forehead and the nose, the face flattened by the on-axis light, a hard-edged shadow of the head
+thrown on the tiled wall right behind, the rest of the room falling to near-black within two
+metres. Cool greenish flash white balance fighting the warm bulb. Visible digital noise in the dark
+corners, slight tilt to the handheld framing, unposed. A photo from a real person's camera roll,
+not an advertising image.
+```
+
+**Bloque C — macro.** Uno por anuncio, 25 en total. Es el único plano donde se permite poca profundidad de campo.
+
+```
+Extreme macro photograph shot on an iPhone ultra-wide camera in macro mode, handheld, lens about
+3 cm from the skin: only two or three millimetres are in sharp focus and everything nearer and
+further falls out of focus fast — the razor-thin depth of field of a real phone macro. Slight
+barrel distortion at the frame edges. Lit only by the phone's own torch from the upper left, small
+hard source at a low raking angle, short-edged shadows revealing every pore. Faint digital noise,
+mild highlight clipping on the oiliest ridge, auto white balance leaning warm, framing slightly
+off-centre and handheld.
+```
+
+Una nota sobre selfies. Si el plano es selfie, hay que decir la geometría del selfie o no se lee como tal:
+
+```
+Self-portrait selfie shot on an iPhone front-facing camera held by the subject at arm's length —
+her own arm extended toward the lens, her wrist faintly visible at the edge of frame.
+```
+
+Y recuerda: en selfie queda **una** mano libre. Si el plano necesita dos manos, se escribe
+`phone propped on the bathroom shelf, both hands free` y deja de ser selfie.
 
 ---
 
-## 5. Referencias: el apartado que más imágenes salva
+## 5. Referencias: el apartado más importante del documento
 
-**Este es el punto más importante del manual.** Está comprobado generando: describir el producto con palabras **no basta**. Puedes escribir los 60 mm de ancho, los 45 de alto, el ala de 23, el bisel de 0,55 y el radio de 2 mm de las esquinas, y el modelo te devolverá una mancha amorfa. La única manera de que el parche salga exacto es adjuntar fotografías reales del producto.
+Está comprobado generando y no admite discusión: **describir el producto con palabras no basta**. La biblia lo dice
+sin rodeos: sin fotos reales adjuntas, el modelo se inventa una mancha amorfa en la nariz. La geometría escrita (60 mm
+de ancho, 45 de alto, alas de 23, muesca de 6) sirve de apoyo, pero nunca sustituye a la foto.
 
-### 5.1 Qué adjuntar
+Esto no es un detalle de acabado. Es la diferencia entre 375 imágenes que venden el producto NOCTA y 375 imágenes que
+venden un parche genérico que no existe.
 
-Referencias reales de NOCTA, ya subidas a Higgsfield:
+### 5.1 Qué referencias hay y en qué orden van
 
-| Referencia | Qué es | Cuándo se adjunta |
+Ya subidas a Higgsfield:
+
+| Referencia | Qué es | Cuándo va |
 |---|---|---|
-| `parche_liner` | El parche real tumbado sobre su liner de papel, junto a la caja | Tomas de producto, parche fuera del sobre, packshot |
-| `parche_puesto` | Recorte del parche real puesto en la nariz, de frente | **Toda** imagen con el parche puesto |
-| `parche_puesto_2` | El mismo, segundo ángulo | Cuando el plano no es frontal |
-| `caja` | La caja crema real | Toda imagen con caja o sobre |
-| Retrato del avatar | Bea / Marisol / Álex ya generados | Toda imagen con persona |
-| Nariz limpia ya generada | El resultado "después" de ese mismo avatar | Toda toma posterior a la retirada |
+| `parche_liner` | el parche real sobre su liner de papel, junto a la caja | macro del parche, packshot, plano 8 |
+| `parche_puesto` | el parche real puesto en la nariz, de frente | toda imagen con el parche puesto |
+| `parche_puesto_2` | el mismo, segundo ángulo | cuando el plano es de perfil o tres cuartos |
+| `caja` | la caja crema real | toda imagen con caja o sobre |
+| retrato del avatar | Bea, Marisol o Álex ya generados | toda imagen con persona |
+| nariz limpia ya generada | la nariz del mismo avatar después del tratamiento | tomas de "después" |
 
-### 5.2 Cuántas y en qué orden
+**El orden importa.** La primera referencia es la que más pesa. Regla para NOCTA:
 
-- **Dos o tres referencias del parche** bastan para que el troquel salga correcto. Sin ellas, no sale.
-- **Máximo tres o cuatro referencias por generación.** A partir de ahí el modelo empieza a promediar y diluye todo.
-- **El orden manda.** Primero lo que tiene que salir exacto (el producto), después la identidad de la persona, y al final la referencia de estado (la nariz limpia). Numéralas en el prompt como `@Image1`, `@Image2`, `@Image3` y di qué es cada una en la primera frase.
-- `gpt_image_2_5` acepta varias imágenes en el campo `medias` con rol `image_references`, sin tope declarado en la API (Higgsfield `models_explore`, consultado el 12/09/2026).
-- `soul_2` acepta **una sola** (`medias.max = 1`, misma consulta). Por eso Soul **no sirve** para ningún plano que lleve caja y avatar a la vez: no puede sostener las dos consistencias. Esos planos van en GPT Image 2.5.
+1. `@Image1` = el producto (parche o caja), cuando el producto es lo que no puede fallar.
+2. `@Image2` = el avatar.
+3. `@Image3` = la referencia de estado (nariz limpia, segundo ángulo del parche).
 
-### 5.3 Las frases exactas
+Si el plano es de cara y el producto es secundario (por ejemplo, hablar a cámara con el parche puesto), invierte el
+uno y el dos: `@Image1` = avatar, `@Image2` = parche.
 
-**Para el parche.** Esta va al principio del prompt, antes de todo lo demás:
+**Cuántas: entre dos y cuatro.** Con dos o tres el troquel del parche sale correcto. Más de cuatro y el modelo empieza
+a promediar: mezcla el ángulo de una con la iluminación de otra y sale algo que no es ninguna. Si necesitas cuatro,
+que sean cuatro cosas distintas (producto, avatar, estado, sitio), nunca cuatro variaciones de lo mismo.
 
-```
-The patch must be EXACTLY the product in the reference photographs: same silhouette, same proportions, same translucent matte material. Do not invent a different shape.
-```
+### 5.2 Las frases exactas
 
-**Para la caja, con bloqueo de ángulo.** Con una sola referencia:
-
-```
-@Image1 is the product reference. ANGLE LOCK: the product shows only the visible front-facing side from @Image1. The product keeps this same visible angle in every slot it appears in. Do not rotate, spin, flip, or reveal unseen sides.
-```
-
-Con dos referencias (que es lo recomendado: frontal puro y tres cuartos derecha):
+**La frase madre**, la que va al principio de toda imagen donde salga el parche:
 
 ```
-@Image1 and @Image2 are the NOCTA box references and show the only two valid angles — front-facing and three-quarter right. The box may appear only from these provided angles. Switch angles only by hard cuts between shots, never by continuous rotation. Do not invent intermediate or unseen sides, back panels or side panels. The box design, its colours, its lettering and its logo stay exactly identical to the references — do not redraw, restyle or re-letter anything.
+The patch must be EXACTLY the product in the reference photographs: same silhouette, same
+proportions, same translucent matte material. Do not invent a different shape.
 ```
 
-**Para la escala real.** El reflejo por defecto del modelo es agrandar el producto para que se lea la marca. Hay que prohibirlo:
+**Angle Lock con una sola referencia de producto** (`ugc-board.md`, Step 7, literal):
 
 ```
-The product MUST appear at its real-world physical size relative to the character's hand, fingers and body. Image models default to enlarging the product so the label is readable — this is forbidden. If the product is too small to read in frame, move the camera closer to the product. Do not scale the product up. The patch is about 6 cm wide, roughly the width of three fingers.
+@Image1 is the product reference. ANGLE LOCK: the product shows only the visible front-facing side
+from @Image1. The product keeps this same visible angle in every slot it appears in. Do not rotate,
+spin, flip, or reveal unseen sides.
 ```
 
-**Para la identidad de la persona:**
+**Angle Lock con varias referencias de producto:**
 
 ```
-@Image3 is the character reference — the same person, identical face shape, hair, body and skin tone. PRESERVE the face's exact shape, width and proportions 1:1 — do NOT squeeze, narrow, slim or stretch the face.
+@Image1 and additional product references show valid angles. The product may appear only from these
+provided angles. Switch angles only by hard cuts between slots, never by continuous rotation. Do
+not invent intermediate or unseen sides.
 ```
 
-**Para la nariz limpia del "después".** Esta es la que arregla el fallo más molesto de todos, y va en el apartado 7 porque salió generando.
+**Preservación del diseño de la caja** (adaptado para NOCTA: la versión de Higgsfield dice "keep the product blank /
+unbranded", que aquí no sirve porque sí quieres tu marca):
 
-**Si un plano lleva caja y no tienes foto de referencia.** Nunca pidas texto legible. La alternativa es que el modelo invente un wordmark mal escrito o, peor, el de una marca real:
+```
+Keep the NOCTA box design, its lettering and its colours exactly as in the reference — do not
+redraw, restyle or re-letter the label.
+```
+
+**Escala real** (`ugc-board.md`, Step 7, literal):
+
+```
+The product MUST appear at its real-world physical size relative to the character's hand, fingers,
+and body. Image models default to enlarging the product so the label is readable — this is
+forbidden. If the product is too small to read in frame, move the camera closer to the product. Do
+not scale the product up.
+```
+
+**Identidad del avatar:**
+
+```
+@Image2 is the character reference — the same person, identical face shape, proportions, hair,
+body and skin tone. PRESERVE the face's exact shape, width and proportions 1:1 — do NOT squeeze,
+narrow, slim or stretch the face.
+```
+
+**Referencia de nariz limpia** (la regla 2 del apartado 7, la más rentable de todas):
+
+```
+The SECOND reference is his nose AFTER the treatment: the skin of the nose you generate must look
+EXACTLY like that second reference, open EMPTY pores, no dark dots.
+```
+
+### 5.3 Cuando no hay referencia de la caja
+
+Si por lo que sea un plano lleva la caja sin foto adjunta, **nunca pidas texto legible**. El modelo inventa un
+wordmark mal escrito o, peor, el de una marca real existente. La única salida segura:
 
 ```
 small label turned slightly away, too small to read, no legible text on the product
 ```
 
-### 5.4 El antes/después: dos generaciones encadenadas, nunca una imagen partida
-
-Si pides `before and after split screen` o `diptych` en una sola generación, sale con marco, con números y con dos personas distintas: el modelo trata cada mitad como un sujeto nuevo. La técnica correcta es la edición con lista de preservación.
-
-1. Genera el **antes** (nariz brillante, poros marcados, filamentos visibles) con el rig ventana.
-2. Sobre **esa imagen**, pide una edición:
+Y en cualquier plano, la regla lateral que casi nadie escribe y que es la que más se olvida:
 
 ```
-Keep the exact same person, the same face shape and proportions, the same hair, the same shirt, the same bathroom, the same window light from the left, the same camera distance, the same framing and the same head angle. Change ONLY the skin of the nose: the pores now read smaller and cleaner, the grey-yellow sebaceous filaments are gone, the nose bridge is matte instead of oily, a faint pink flush where the patch was. Everything else identical.
+No legible text or numbers on any prop beyond the referenced product's own label — receipts,
+screens, price tags render as random characters; printed sides face away or are too small to be
+legible. Phone screens are off or showing a plain blurred interface with no legible text.
 ```
 
-3. La transición la haces tú en el montaje.
+### 5.4 Ediciones encadenadas: repite siempre la lista de preservación
 
-Regla general de las ediciones: **repite la lista de preservación completa en cada iteración**. Si no, tendrás deriva de identidad entre los quince planos del mismo anuncio.
+Para el antes/después **no pidas un split screen**. Una imagen partida generada de una vez produce dos caras
+distintas, con marco y con números. Se hace en dos pasos: generas el "antes" y después editas esa imagen exacta.
+
+La regla de fal.ai es tajante: «For edits, name what changes, name what stays. Restate preservation details on every
+follow-up». Si no repites la lista entera en cada iteración, tienes deriva de identidad entre los 15 planos del mismo
+anuncio.
+
+```
+Keep the exact same person, the same face shape and proportions, the same hair, the same shirt, the
+same bathroom, the same window light from the left, the same camera distance, the same framing and
+the same head angle. Change ONLY the skin of the nose: the pores now read smaller and cleaner, the
+grey-yellow sebaceous filaments are gone, the nose bridge is matte instead of oily, a faint pink
+flush where the patch was. Everything else identical.
+```
+
+### 5.5 Límite por modelo: dónde puede vivir la caja NOCTA
+
+Consultado el catálogo del MCP de Higgsfield hoy: `soul_2` declara `medias: max = 1`, es decir, **una sola imagen de
+referencia**. Por tanto Soul no puede sostener la caja NOCTA y el avatar a la vez. `gpt_image_2` declara `medias` de
+tipo imagen sin tope declarado, con `resolution: 1k|2k|4k` y `quality: low|medium|high`.
+
+Reparto práctico:
+
+- Todo plano con **caja NOCTA o parche identificable** → GPT Image, con referencias múltiples y Angle Lock.
+- Planos de **persona sin producto en mano** (hablar a cámara, dormir, el dedo señalando la nariz) → Soul con una
+  referencia facial, o GPT Image igualmente si prefieres no cambiar de herramienta.
+- Si necesitas caja **y** avatar con identidad bloqueada, no uses Soul.
 
 ---
 
 ## 6. Ajustes: proporción, resolución, calidad y coste
 
-### 6.1 Lo que expone la API
+### 6.1 Proporción: 9:16 nativo, siempre
 
-Consultado en esta sesión (Higgsfield `models_explore`, 12/09/2026):
+Las 375 imágenes se generan en 9:16 nativo. Nunca generes 1:1, 4:5 ni 2:3 para recortar después: recortar 2:3 a 9:16
+se come un 12,5% de la altura o un 15,6% de la anchura, y eso descentra justo lo que no puede descentrarse (el macro
+y el packshot).
 
-**`gpt_image_2_5` · GPT Image 2.5 (OpenAI)**
+En Higgsfield, `gpt_image_2` acepta `9:16` directamente. En la API directa de OpenAI **no existe preset 9:16**: el
+retrato es 1024x1536, que es 2:3. Sí se permiten tamaños personalizados siempre que sean múltiplos de 16, con una
+proporción entre 1:3 y 3:1, sin pasar de 3840 px por lado y con un total entre 655.360 y 8.294.400 píxeles. Los
+tamaños 9:16 exactos y legales que salen de ahí:
 
-| Parámetro | Opciones | Por defecto |
+| Tamaño | Megapíxeles | Cuándo |
 |---|---|---|
-| `variant` | `flare`, `sunburst` | `flare` |
-| `quality` | `low`, `medium`, `high`, `xhigh`, `max` | `low` |
-| `resolution` | `1k`, `2k`, `4k` | `1k` |
-| `background` | `auto`, `opaque`, `transparent` | sin valor (deja el del modelo) |
-| `medias` | imágenes con rol `image_references`, sin tope declarado | — |
-| `aspect_ratio` | `auto`, `1:1`, `3:2`, `2:3`, `4:3`, `3:4`, `16:9`, `9:16`, `21:9`, `27:16`, `16:27`, `9:8`, `8:9`, `4:5`, `5:4` | — |
+| 1152 x 2048 | 2,36 MP | ahorro, suficiente para 1080x1920 |
+| 1440 x 2560 | 3,69 MP | recomendado: margen para reencuadres finos en montaje |
+| 2160 x 3840 | 8,29 MP | justo en el tope; desperdicio |
 
-**Los valores por defecto te sabotean.** `1k` y `low` son lo que sale si no tocas nada, y un macro de poro a `quality: low` es ruido indiferenciado. Fija los ajustes a mano en todas las generaciones.
+Por qué 4k es desperdicio: todos los modelos image-to-video de Higgsfield topan en 1080p (Seedance 2.5, FLUX 3 Video,
+Grok Video 1.5, Minimax Hailuo 1080), salvo el modo 4k de Kling v3.0. El destino real de la imagen es 1080x1920.
 
-### 6.2 Proporción: 9:16 nativo, nunca recortar
+### 6.2 Resolución y calidad
 
-Todas las imágenes se generan en `9:16` nativo. Recortar un 2:3 a 9:16 te come un 12,5 % de altura o un 15,6 % de anchura, y eso descentra justo los dos planos donde el centrado importa: el macro y el packshot.
+Los valores por defecto del conector de Higgsfield para GPT Image son `resolution: 1k` y `quality: low` (verificado
+hoy con `models_explore(get, gpt_image_2)`). **Ese default te sabotea**: un macro de poro a `quality: low` sale como
+ruido indiferenciado, sin filamentos legibles.
 
-Si alguna vez generas por la API directa de OpenAI en lugar de por Higgsfield, ten en cuenta que **no existe preset 9:16**: el retrato recomendado es 1024×1536, que es 2:3. Los tamaños custom permitidos son múltiplos de 16, con proporción entre 1:3 y 3:1, sin pasar de 3840 px por lado y entre 655.360 y 8.294.400 píxeles totales. Los 9:16 exactos y legales dentro de eso son:
+A partir de ahí hay dos criterios enfrentados y conviene saberlo:
 
-| Tamaño | Megapíxeles | Para qué |
-|---|---|---|
-| 1152×2048 | 2,36 | Si quieres ahorrar |
-| 1440×2560 | 3,69 | **Recomendado**: margen de sobra para reencuadres finos sin perder resolución al llegar a 1080×1920 |
-| 2160×3840 | 8,29 | Justo en el tope máximo. No hace falta |
+- La documentación de OpenAI recomienda subir de tramo «for small text, dense infographics, close-up portraits, and
+  identity-sensitive edits», y el propio workflow de UGC de Higgsfield usa siempre `2k` + `high` para sus boards.
+- Lo probado en NOCTA dice otra cosa para la piel: **1k medium dio mejor piel que 2k high**. La explicación más
+  probable es que el tramo alto sobreafila, y el sobreafilado es exactamente una de las señales de render
+  (micro-contraste uniforme en toda la cara, poros con halo). **Sin verificar**: no tengo una fuente que documente
+  este comportamiento, sólo el resultado observado en las pruebas.
 
-### 6.3 Resolución y calidad: qué combinación usar
+Regla operativa, que respeta las dos cosas:
 
-Aquí hay dos posiciones y conviene que las conozcas las dos.
-
-**Lo que dice Higgsfield.** Sus propios workflows de UGC usan siempre `resolution: '2k', quality: 'high'`, y la guía de OpenAI recomienda subir de tramo «for small text, dense infographics, close-up portraits, and identity-sensitive edits» — que son exactamente nuestros tres casos delicados: packshot con wordmark, macro de nariz y planos de cara con identidad bloqueada.
-
-**Lo que salió en nuestras pruebas.** Para **piel**, `1k medium` dio mejor resultado que `2k high`: a más resolución y más tramo de calidad, el modelo tiende a limpiar y pulir la textura, y la piel se va hacia el render. (Este hallazgo viene de las pruebas de NOCTA, no de una fuente documentada; contradice la recomendación de Higgsfield y conviene volver a comprobarlo con un par de planos antes de fijarlo para las 375 imágenes.)
-
-**La regla práctica que resuelve las dos.** No hay una combinación única: hay tres, según lo que sea el sujeto.
-
-| Tipo de plano | `resolution` | `quality` | Por qué |
+| Tipo de plano | Resolución | Calidad | Por qué |
 |---|---|---|---|
-| Cara, cuerpo, piel, hablar a cámara | `1k` | `medium` | Mejor textura de piel, menos pulido. Es la mejor relación realismo/coste |
-| Macro de nariz, parche fuera del sobre, parche a contraluz | `2k` | `high` | Hace falta detalle para que el poro y el tapón se lean |
-| Packshot de caja con wordmark legible | `2k` | `high` | El texto pequeño se rompe por debajo de este tramo |
-| Cualquier cosa | `4k` | — | **Nunca.** Todos los image-to-video de Higgsfield topan en 1080p salvo el modo 4k de Kling v3.0. Pagas píxeles que se tiran |
+| Cara, medio plano, cuerpo (piel visible) | 1k | medium | mejor piel según lo probado; menos sobreafilado |
+| Macro de nariz y de parche | 2k | high | hace falta resolver filamentos y el borde biselado |
+| Packshot de caja con wordmark | 2k | high | letras pequeñas necesitan píxeles o salen galimatías |
+| Pruebas de composición | 1k | low | preview barato, se repite el final |
 
-**Coste en créditos.** La API de Higgsfield consultada en esta sesión **no devuelve el coste en créditos por combinación**: `models_explore` expone los parámetros y sus opciones, pero no la tarifa. El coste aparece en la interfaz al lanzar la generación. No pongo aquí ninguna cifra porque no la tengo verificada. Lo que sí es seguro, por la propia estructura de tramos del modelo, es el orden de coste: sube con la resolución y sube con el tramo de calidad, y `4k` + `max` es el extremo caro. **Sin verificar: la magnitud exacta de cada salto.** Antes de lanzar las 375, mira el coste de una generación en cada una de las tres combinaciones de la tabla y calcula el total real.
+Si haces pruebas de composición a `low`, repite el plano bueno a la calidad que toque: manteniendo prompt y
+referencias, la composición no cambia entre tramos, así que el preview barato sirve.
 
-**Truco de preview barato.** Si estás probando composición, genera a `quality: low`. El modelo no cambia la composición entre tramos si mantienes el prompt y las mismas referencias, así que sirve como boceto. Después repite el plano bueno en su tramo.
+### 6.3 Coste en créditos
 
-### 6.4 Variante
+**No hay dato publicado y no me lo voy a inventar.** El catálogo de modelos del MCP de Higgsfield consultado hoy
+(`models_explore(action: get, model_id: gpt_image_2)`) devuelve los parámetros `resolution` y `quality` con sus
+opciones, pero **no expone ningún coste en créditos por combinación**. Tampoco aparece en la investigación.
 
-`flare` es el valor por defecto y es la que se usó para las 22 imágenes de la biblia. `sunburst` existe en la API pero **no está probada en NOCTA: sin verificar**. No cambies de variante a mitad de los 25 anuncios: la textura de piel no coincidiría entre planos del mismo montaje.
+Cómo lo mides tú en cinco minutos, una sola vez, y lo apuntas aquí:
 
-### 6.5 Fondo
+1. Llama a `balance` y apunta los créditos.
+2. Genera una imagen en `1k / low`. Vuelve a llamar a `balance`. La diferencia es el coste.
+3. Repite con `1k / medium`, `2k / high` y `4k / high`.
+4. Rellena la tabla de abajo y este apartado deja de tener un hueco.
 
-`background` déjalo sin tocar. `transparent` solo tendría sentido para un recorte de producto, y nosotros no hacemos ninguno: todos los packshots van sobre superficie real.
+| Combinación | Créditos por imagen | Uso previsto en NOCTA | Nº de imágenes estimado |
+|---|---|---|---|
+| 1k / low | por medir | pruebas de composición | variable |
+| 1k / medium | por medir | planos de cara y cuerpo | ~250 |
+| 2k / high | por medir | macros y packshots | ~100 |
+| 4k / high | por medir | ninguno | 0 |
+
+Con esos cuatro números sabrás el coste total de los 25 anuncios antes de empezar, que es la cifra que de verdad
+importa.
 
 ---
 
 ## 7. Lo aprendido generando 22 imágenes de verdad
 
-Estas cinco reglas no son teoría. Cada una arregla un fallo concreto que salió en las pruebas. Van siempre, en todos los planos donde apliquen.
+Esto no es teoría. Son cinco reglas de la biblia visual de NOCTA y cada una arregla un fallo concreto que salió en las
+pruebas. Van siempre, en todos los prompts donde apliquen.
 
-### Regla 1 — Encuadre del parche: si se recorta, el troquel deja de leerse
+### Regla 1 · Encuadre del parche: si se recorta, el troquel deja de leerse
 
-Cuando el parche es el sujeto (tomas de producto, parche usado a contraluz, packshot), el modelo lo pega al borde del cuadro y lo corta. Entonces parece una mancha amorfa aunque el material esté perfecto. Frase obligatoria:
+El fallo: cuando el parche es el sujeto (tomas de producto, parche usado a contraluz, packshot), el modelo lo pega al
+borde del cuadro y lo corta. Entonces parece una mancha amorfa aunque el material esté perfecto.
 
-```
-COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance.
-```
-
-### Regla 2 — La nariz "después" sale sucia si no se le da una referencia limpia
-
-El avatar de referencia tiene la nariz con puntos, así que el modelo los conserva en **todas** las tomas, incluidas las de después de quitar el parche. Describirlo con palabras no basta. La solución comprobada es adjuntar como **segunda referencia** una imagen ya generada de esa misma nariz limpia y escribir:
+Frase obligatoria:
 
 ```
-The SECOND reference is his nose AFTER the treatment: the skin of the nose you generate must look EXACTLY like that second reference, open EMPTY pores, no dark dots.
+COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all
+four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a
+glance.
 ```
 
-Y además, en positivo:
+### Regla 2 · La nariz "después" sale sucia si no se le da una referencia limpia
+
+El fallo: el retrato de referencia del avatar tiene la nariz con puntos, así que el modelo los conserva en **todas**
+las tomas, incluidas las de después de quitar el parche. Describirlo con palabras no basta. Si el "después" tiene los
+mismos puntos que el "antes", el anuncio no demuestra nada.
+
+Solución comprobada: adjuntar como **segunda referencia** una imagen ya generada de esa misma nariz limpia, y escribir:
+
+```
+The SECOND reference is his nose AFTER the treatment: the skin of the nose you generate must look
+EXACTLY like that second reference, open EMPTY pores, no dark dots.
+```
+
+Y además, en positivo, dentro del prompt:
 
 ```
 the pores are open, EMPTY and flat, there are NO dark dots and NO grey-brown plugs anywhere
 ```
 
-### Regla 3 — "De noche" no significa nada; hay que describir las consecuencias de la luz
+### Regla 3 · "De noche" no significa nada; hay que describir las consecuencias de la luz
 
-Poner «night bathroom, 23:30» da una imagen de día. Lo que funciona es describir lo que esa luz **hace**:
-
-```
-IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky.
-```
-
-### Regla 4 — Los poros salen en cuadrícula y eso delata el render
-
-Por defecto el modelo reparte los poros como una rejilla regular y el macro parece 3D. Frase obligatoria en toda macro de piel:
+El fallo: poner `night bathroom, 23:30` da una imagen de día. El modelo trata la hora como un adorno. Lo que funciona
+es describir qué hace esa luz sobre la cara y sobre la habitación:
 
 ```
-pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced
+IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard
+shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are
+bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected
+in it. No daylight, no soft window light, no blue sky.
 ```
 
-Y cerrar con:
+Lo mismo vale para cualquier condición: la hora no se declara, se describe por sus efectos.
+
+### Regla 4 · Los poros salen en cuadrícula y eso delata el render
+
+El fallo: por defecto el modelo reparte los poros como una rejilla regular y la macro parece 3D. Frase obligatoria en
+toda macro de piel:
+
+```
+pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense
+patches and sparse elsewhere, every pore a different size and a different angle, never aligned in
+rows or a grid, never evenly spaced
+```
+
+Y se cierra el prompt con:
 
 ```
 unretouched documentary realism, not a 3D render
 ```
 
-### Regla 5 — El despegado: "una sola lámina continua", nunca "la mitad izquierda y la mitad derecha"
+### Regla 5 · El despegado: "una sola lámina continua", nunca "la mitad izquierda y la mitad derecha"
 
-Si escribes «the left half is peeled and the right half is still stuck», el modelo genera **dos parches separados**. Lo que produce un despegado coherente es describirlo como una sola pieza:
+El fallo: si escribes `the left half is peeled and the right half is still stuck`, el modelo genera **dos parches
+separados**. Lee "mitad" y "mitad" como dos objetos. Lo que produce un despegado coherente es describirlo como una
+sola pieza con una sola frontera:
 
 ```
-He is peeling the patch off in ONE CONTINUOUS SHEET: the right portion is still stuck flat and translucent on the right side of the nose, and WITHOUT ANY BREAK it lifts along one single boundary down the ridge and hangs from his thumb and index finger at the left, curled, limp, its underside turned to the camera.
+He is peeling the patch off in ONE CONTINUOUS SHEET: the right portion is still stuck flat and
+translucent on the right side of the nose, and WITHOUT ANY BREAK it lifts along one single boundary
+down the ridge and hangs from his thumb and index finger at the left, curled, limp, its underside
+turned to the camera.
 ```
 
 Y el reverso, siempre:
 
 ```
-irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores
+irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow
+domes, the plugs pulled out of the pores
 ```
 
-**Alternativa más segura.** El plano «parche ya fuera, sujeto delante de la nariz limpia» es mucho más fácil de generar bien y además enseña las dos cosas a la vez: las manchas blancas y la nariz limpia. Si el despegado a medias no sale a la primera o a la segunda, cámbialo por ese plano. El anuncio no pierde nada.
+**Alternativa más segura.** El plano "parche ya fuera, sujeto delante de la nariz limpia" es mucho más fácil de
+generar bien y enseña las dos cosas a la vez: las manchas blancas y la nariz limpia. Si el despegado a medias no sale
+a la primera, cámbialo por ese plano. El anuncio no pierde nada.
 
-### Regla extra que viene de la misma tanda: el parche traslúcido se vuelve invisible
+### Regla extra que va con las cinco: el parche traslúcido se vuelve invisible
 
-Si solo escribes «lleva el parche puesto», el modelo lo hace invisible y la imagen parece que la persona se está apretando la nariz, que es justo el mensaje contrario. En **toda** imagen con el parche puesto hay que describirlo como algo que se ve:
+Está en la biblia como regla crítica y merece repetirse aquí porque afecta a decenas de planos. El parche es
+traslúcido, así que si sólo dices "lleva el parche puesto", el modelo lo hace invisible y la imagen parece que la
+persona se está apretando la nariz: el mensaje contrario. En **toda** imagen con el parche puesto:
 
 ```
-a translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less shiny than the surrounding skin, edges perfectly sealed against the skin
+a translucent matte hydrocolloid film clearly visible across the bridge and wings of the nose, its
+butterfly outline and bevelled edge catching a thin specular highlight, slightly lighter and less
+shiny than the surrounding skin, edges perfectly sealed against the skin
 ```
 
 Y si ya ha absorbido grasa:
 
 ```
-the patch now opaque white in blotches with small pale-yellow dots where the pores were, still translucent at the edges
+the patch now opaque white in blotches with small pale-yellow dots where the pores were, still
+translucent at the edges
 ```
 
 ---
 
 ## 8. Protocolo de revisión
 
-Antes de dar una imagen por buena y mandarla al image-to-video, repasa esta lista. Son treinta segundos por imagen y ahorran regenerar quince planos cuando el montaje ya está hecho.
+Tres pasadas. La primera dura diez segundos y descarta el 60% de lo malo. La segunda dura un minuto. La tercera sólo
+se hace justo antes de animar.
 
-### 8.1 Producto
+### Pasada 1 · Los diez segundos (mira la miniatura, no la imagen grande)
 
-- [ ] El parche tiene la forma de mariposa de la referencia, no un óvalo, un rectángulo ni una mancha.
-- [ ] El parche entero está dentro del cuadro, con aire por los cuatro lados, si el parche es el sujeto.
-- [ ] El parche se **ve**. Si está puesto y es invisible, la imagen no sirve.
-- [ ] El tamaño es real: unos 6 cm, el ancho de tres dedos. No una tirita de rodilla.
-- [ ] La caja es la caja: cartón crema mate, "nocta" en minúsculas azul marino, luna creciente. Sin dorados, sin brillos.
-- [ ] El ángulo de la caja es uno de los dos permitidos. No hay paneles traseros ni laterales inventados.
-- [ ] El wordmark, si se lee, está bien escrito. Si no se lee bien, está girado o demasiado pequeño para leerse (nunca a medias).
+- [ ] ¿Parece una foto de carrete o parece un anuncio? Si dudas, es un anuncio: repite.
+- [ ] ¿Está el encuadre torcido y descentrado, o está centrado y compuesto?
+- [ ] ¿Hay una sola persona? ¿Un espejo con alguien dentro?
+- [ ] ¿Cuántas manos hay? Cuéntalas.
+- [ ] ¿Se ve el parche? (Si es traslúcido y no se ve, la imagen no sirve.)
+- [ ] ¿El parche está entero dentro del cuadro cuando es el sujeto?
 
-### 8.2 Estado
+### Pasada 2 · El minuto (100% de zoom, por zonas)
 
-- [ ] La imagen está en **uno solo** de los cinco estados. Si hay parche en la mano y parche en la nariz a la vez, se repite.
-- [ ] Si el estado es 4 o 5, la piel que ya está al aire está **limpia**: poros vacíos, sin puntos oscuros.
-- [ ] Si el estado es 4, hay **una sola** frontera y **un solo** parche. No dos trozos separados.
-- [ ] Si el parche está saturado, es blanco a manchas con puntitos amarillentos, y los bordes siguen traslúcidos.
+**Piel y cara**
 
-### 8.3 Piel y cara
+- [ ] ¿Hay poros de verdad o hay una superficie lisa con "textura" pintada?
+- [ ] ¿Los poros están en cuadrícula? Si hay filas, repite con la frase de la regla 4.
+- [ ] ¿La cara es simétrica? Busca las cejas: si están a la misma altura exacta, falla.
+- [ ] ¿Hay vello fino en la mandíbula y el labio superior, o la piel acaba en un borde limpio?
+- [ ] ¿El brillo está donde tiene que estar (puente de la nariz y frente) y las mejillas mates?
+- [ ] ¿Los ojos tienen un reflejo enorme y redondo? ¿El iris brilla como si tuviera luz propia?
+- [ ] ¿La edad cuadra? Marisol con 43 tiene surcos nasogenianos y patas de gallo; si parece de 30, falla.
 
-- [ ] Se ven poros de verdad, y están repartidos de forma irregular, no en rejilla.
-- [ ] Hay vello fino visible en la mandíbula o el labio superior.
-- [ ] La zona T brilla y las mejillas no. No hay brillo uniforme de toda la cara.
-- [ ] La cara no es simétrica. Una ceja algo más alta, la sonrisa algo torcida.
-- [ ] Los ojos no brillan solos: reflejo pequeño, iris no saturado.
-- [ ] Marisol tiene edad de verdad: surcos nasogenianos, patas de gallo, piel algo crepé bajo los ojos. Nada de cara de niña.
-- [ ] El avatar es el mismo que en los otros catorce planos: misma cara, mismo pelo, misma camiseta, mismo lunar o cicatriz.
+**Producto**
 
-### 8.4 Luz
+- [ ] ¿El troquel del parche es el de la foto de referencia, o es un óvalo/rectángulo inventado?
+- [ ] ¿El tamaño es real respecto a los dedos? Un parche de 6 cm son tres dedos, no media cara.
+- [ ] ¿La caja está en uno de los dos ángulos permitidos, o se ha inventado un lateral?
+- [ ] ¿El logotipo está bien escrito? Léelo letra a letra.
+- [ ] ¿El estado del parche es uno solo? (Nunca en la mano y en la nariz a la vez.)
 
-- [ ] Hay **una** fuente y se sabe dónde está por las sombras.
-- [ ] Si es de noche, es de noche: sombras cortas y duras hacia abajo, cuencas oscuras, ventana negra.
-- [ ] No hay naranja de atardecer en ninguna parte.
-- [ ] Si es un macro, la luz es pequeña y dura y rasante, y cada poro tiene su sombrita.
-- [ ] No hay dos balances de blancos peleándose (flash frío + bombilla cálida en el mismo plano).
+**Luz**
 
-### 8.5 Cámara
+- [ ] ¿Hay una sola fuente? Busca las sombras: si apuntan a dos sitios, falla.
+- [ ] ¿La sombra en la pared es coherente con la posición de la cabeza?
+- [ ] Si el plano es de noche: ¿está la ventana negra? ¿Están las cuencas de los ojos oscuras?
+- [ ] ¿Hay tono dorado o ámbar en algún sitio? Si lo hay, repite.
 
-- [ ] El fondo está nítido, salvo en los macros.
-- [ ] No hay bokeh cremoso ni recorte de Modo Retrato.
-- [ ] El ruido es digital, fino, en las sombras. No es grano de carrete.
-- [ ] El encuadre está algo descentrado y algo torcido.
-- [ ] No hay desenfoque de movimiento horneado (salvo la mano que tira del parche, y aun así piénsalo).
-- [ ] La proporción es 9:16 nativa, sin bandas ni recorte.
+**Texto y props**
 
-### 8.6 Manos y cuerpo
+- [ ] Mira las **cuatro esquinas**: es donde brota la marca de agua fantasma.
+- [ ] Mira las superficies planas: azulejo, espejo, toalla, bote de champú, pantalla del móvil.
+- [ ] ¿Hay números en algún sitio? ¿Un reloj? ¿Un envase con letras?
+- [ ] ¿Aparece alguna marca que no sea NOCTA?
 
-- [ ] Cinco dedos por mano, en la dirección correcta.
-- [ ] Si es selfie, hay una sola mano libre y se ve el brazo o la muñeca en el borde.
-- [ ] No hay un tercer brazo, ni una mano que sale de donde no debe.
-- [ ] No hay espejo con reflejo de persona. Ni persona duplicada.
-- [ ] El cuerpo está en pose neutra. No hay miembros lanzados hacia el objetivo.
+**Manos y anatomía**
 
-### 8.7 Texto y limpieza
+- [ ] Cuenta los dedos de cada mano visible.
+- [ ] ¿Hay algún dedo que sale de donde no debe, o una uña con forma rara?
+- [ ] ¿La mano ociosa está haciendo algo coherente, o flota?
 
-- [ ] No hay ni una letra en la imagen, salvo la etiqueta de la caja NOCTA si el plano la lleva con referencia.
-- [ ] Mira **las cuatro esquinas** y las superficies planas: ahí brota la marca de agua fantasma.
-- [ ] Los botes del lavabo, las toallas, el pijama y la pantalla del móvil tienen la cara impresa girada o son ilegibles.
-- [ ] No hay subtítulos, ni marcos, ni números, ni collage, ni pantalla partida.
-- [ ] No aparece ninguna otra marca ni nada que se parezca a una marca real.
+### Pasada 3 · Antes de animar
 
-### 8.8 Antes de animar
+- [ ] ¿Hay desenfoque de movimiento horneado? Si lo hay, se convertirá en morphing. Repite sin él.
+- [ ] ¿Hay alguna zona sobreexpuesta a blanco puro sobre la cara o las manos? Igual: morphing.
+- [ ] ¿Coincide la luz con la del plano anterior y el siguiente del mismo anuncio?
+- [ ] ¿Coinciden la ropa, el pelo y el sitio con el resto de las 15 tomas?
 
-- [ ] Los quince planos del anuncio tienen el mismo grano y la misma piel. Si uno canta, repítelo antes de montar.
-- [ ] El plano no tiene nada medio desenfocado que el modelo de vídeo vaya a intentar "resolver".
-- [ ] Hay una sola acción clara que animar.
+### Tabla rápida de fallo → arreglo
 
----
+| Lo que ves | Qué escribes |
+|---|---|
+| Piel de cera | `visible skin pores and fine vellus hair, unretouched, honest skin texture, no digital smoothing` |
+| Poros en filas | `pores scattered in a completely IRREGULAR, uneven distribution ... never aligned in rows or a grid` |
+| Cara de modelo | borra `symmetrical features`; añade `faint natural facial asymmetry, one eyebrow slightly higher` |
+| Fondo desenfocado | `deep focus — the background stays sharp, the way any phone photo looks` |
+| Macro que parece 3D | quita `no bokeh`; añade `only two or three millimetres in sharp focus` |
+| Parche invisible | el bloque completo de "translucent matte hydrocolloid film clearly visible..." |
+| Parche cortado por el borde | `COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame...` |
+| Dos parches en el despegado | `peeling the patch off in ONE CONTINUOUS SHEET ... WITHOUT ANY BREAK` |
+| Imagen de noche que parece de día | `IT IS NIGHT: the only light is a hard ceiling fixture directly overhead...` |
+| Nariz sucia en el "después" | segunda referencia + `the skin of the nose must look EXACTLY like that second reference` |
+| Parche gigante | `about 6 cm wide, roughly the width of three fingers ... do not scale the product up` |
+| Logotipo inventado | adjunta `caja` como referencia, o `label turned slightly away, too small to read` |
+| Marca de agua fantasma | cola negativa completa, con la cláusula de props |
+| Tercer brazo | `phone propped on the shelf, both hands free` (deja de ser selfie) |
+| Persona duplicada | `no mirror, no reflection, no duplicated person` |
 
-## Anexo A: bloques listos para pegar
+### Regla de decisión: repetir o editar
 
-### Bloque piel (versión NOCTA, con el sebo activado)
-
-```
-Real unretouched skin: visible pores across the nose, cheeks and forehead, fine vellus hair catching the light along the jaw and the upper lip, natural sebum shine concentrated on the nose bridge and the forehead while the cheeks stay matte — the shine a genuinely oily T-zone has at the end of the day. Uneven tone with faint pink around the nostrils, two or three small moles, faint fine lines at the outer corners of the eyes, faint honest under-eye shadows, one small healing spot. Naturally muted catchlights in the eyes, no oversized specular glare in the iris. Faint natural facial asymmetry, one eyebrow slightly higher than the other. No makeup, no foundation. No digital smoothing, no beauty filter, no airbrushing, no plastic skin, no glossy retouched finish, no glow.
-```
-
-Este bloque viene del módulo antislop de Higgsfield, pero con dos cláusulas suyas **desactivadas a propósito**: hemos quitado «skin completely free of artificial glare, shine or highlight blooms, matte-to-natural complexion» (nos borraría el brillo sebáceo que es lo que vendemos) y «symmetrical features» (produce cara de IA).
-
-### Cola negativa (va en las 375 imágenes)
-
-En los macros, **borra** `no shallow depth of field, no bokeh` de esta cola. Todo lo demás se queda.
-
-```
-Constraints: no text, no lettering, no captions, no subtitles, no watermark, no logo, no badges, no numbers, no frame borders, no collage, no split screen, no headers. No brand marks or legible text on any prop — bottles, towels, packaging and phone screens have their printed sides turned away or are too small to read. No shallow depth of field, no bokeh, no lens flare, no cinematic colour grade, no teal-and-orange, no HDR glow or bloom or halos, no oversharpening, no oversaturation. No studio lighting, no ring light, no softbox, no golden hour, no warm sunset cast. No fisheye, no ultra-wide distortion. No mirror and no reflection, no duplicated person, no extra hands, no third arm, no deformed fingers. Exactly one person in frame.
-```
-
-### Macro de nariz con filamentos sebáceos (el "antes")
-
-```
-Extreme macro photograph of the tip and left side of a nose filling the frame, with a strip of normal cheek skin at the edge of the frame so it reads as a person's nose and not a medical slide. Taken with an iPhone ultra-wide camera in macro mode, lens about 3 cm from the skin: only two or three millimetres of the nose are in sharp focus, the near edge of the nostril and the far cheek fall out of focus fast — the razor-thin depth of field of a real phone macro. Slight barrel distortion at the frame edges. The pores are clearly visible and each holds a flat grey-yellow sebaceous filament, translucent, level with the skin, not raised, not dark, not inflamed — tiny threads inside the pores, the ordinary texture of an oily nose. Pores scattered in a completely IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced. Calm skin, no redness, not irritated. Light olive skin with warm undertones, fine vellus hair, a shallow film of sebum on the nose bridge catching one small hard specular highlight, matte where the cheek begins. Lit only by the phone's own torch from the upper left — small hard source at a low raking angle, short-edged shadows revealing every pore. Faint digital noise, mild highlight clipping on the oiliest ridge, auto white balance leaning warm, framing slightly off-centre and handheld. A photo from a real person's camera roll. Unretouched documentary realism, not a 3D render.
-```
-
-### Parche usado a contraluz
-
-```
-TIGHT CLOSE-UP of a used hydrocolloid nose patch held up between thumb and forefinger against a bright overcast window, strongly backlit. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the whole butterfly outline must be readable at a glance. The gel is semi-translucent and milky, and inside its thickness there are dozens of small opaque white plugs, each a tiny column of absorbed sebum, denser and whiter than the gel around them, each surrounded by a faint diffuse halo where the light scatters through the gel. The patch is slightly curved and creased from having been on a nose, not flat. The window behind is blown out to plain even white with no frame, no view, no curtain. The fingers are in focus — fine fingerprint ridges, a hangnail, short unpainted nails, faint vellus hair on the knuckles. No printed dots, no drawn pattern, no stickers, no glitter — the plugs are physically inside the gel, not printed on it. Handheld iPhone photo, main camera, deep focus, faint digital noise, slight tilt.
-```
-
-### Packshot de la caja
-
-```
-@Image1 and @Image2 are the NOCTA box references and show the only two valid angles — front-facing and three-quarter right. ANGLE LOCK: the box may appear only from one of these angles; do not rotate, spin, flip or invent back panels, side panels or unseen sides. The box design, its colours, its lettering and its logo stay exactly identical to the references — do not redraw, restyle or re-letter anything.
-
-MEDIUM CLOSE-UP of the NOCTA box standing on a cream marble surface beside a folded dusty-rose towel, photographed from just above counter height with a phone held in one hand. The box is at its real physical size relative to the towel; the camera is close enough that the wordmark fills a good part of the frame, but the box itself is NOT enlarged. One patch lies next to the box, complete and uncropped, slightly curled, catching a small specular highlight along its bevelled edge. Soft window light from the left, short shadow of the box on the marble. Slight tilt, slightly off-centre framing, faint digital noise. A photo from a real person's camera roll, not a product shoot.
-
-Constraints: no other brands, no legible text anywhere except the NOCTA box's own label, no watermark, no captions, no studio lighting, no seamless background, no reflections, no bokeh.
-```
-
-### La geometría del parche (apoyo, nunca sustituye a las fotos)
-
-```
-a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly: one central lobe that covers the bridge from the middle of the nose down over the tip, and two symmetrical wings 23 mm deep that spread sideways and downwards to wrap the nostril wings; between the wings the lower edge has a shallow rounded notch about 6 mm deep where the columella is; every corner rounded with a 2 mm radius; the material is 0.55 mm thick with a bevelled edge
-```
+- Si falla la **composición, la luz o el encuadre** → repite el prompt corregido desde cero.
+- Si falla **un detalle concreto** (los poros del después, el brillo de la nariz, el color de la camiseta) → edita
+  sobre la imagen buena con la lista de preservación completa repetida.
+- Si falla **dos veces lo mismo** → cambia el plano por la alternativa segura. El despegado a medias tiene una; el
+  resto de planos difíciles casi siempre admiten un encuadre más cerrado que elimina el problema.
 
 ---
 
-## Anexo B: los veinte errores que cuestan una regeneración
+## 9. Anexo: bloques listos para pegar
 
-1. Poner `8k`, `hyperrealistic`, `cinematic`, `masterpiece` o `professional photography`. Cada uno empuja activamente al render de plástico.
-2. Copiar el preset `photoreal-unretouched` de Higgsfield entero: arrastra «cinematic realism, clean white background, 4K quality» y borra el brillo sebáceo que necesitamos vender.
-3. Dejar `symmetrical features` y `high model facial features` en los prompts de Marisol y Álex.
-4. Pedir foco profundo o `no bokeh` en el macro de nariz: sale lámina médica.
-5. Escribir `blackheads`, `extraction`, `squeezing` o `acne`: puntos negros gordos, aspecto de patología, y roza filtros de moderación.
-6. Usar luz difusa suave en los planos donde quieres ver poros. La textura necesita fuente pequeña y dura en ángulo rasante.
-7. Usar Soul 2.0 para cualquier plano con la caja NOCTA: acepta una sola referencia y no puede sostener producto y avatar a la vez.
-8. Generar la caja sin foto de referencia real: sale un wordmark mal escrito o el de otra marca.
-9. Agrandar el producto para que se lea la marca. Se acerca la cámara, no se escala el producto.
-10. Planos de espejo en el baño: multiplican manos y duplican personas.
-11. Pedir selfie y una acción a dos manos en el mismo plano: tercer brazo garantizado.
-12. Hornear desenfoque de movimiento o sobreexposición: al animarlo sale morphing de dedos y rasgos.
-13. Generar en 1:1, 4:5 o 2:3 para recortar a 9:16 después.
-14. Dejar los valores por defecto (`1k`, `low`): el macro de poro sale como ruido indiferenciado.
-15. Generar a `4k`: el image-to-video lo baja a 1080p igualmente.
-16. Pedir `before and after split screen` o `diptych` en una sola generación.
-17. Usar hora dorada o luz cálida de atardecer, aunque el plano sea de la mañana.
-18. Mezclar lenguaje de carrete (Kodak, halación, grano fino) con lenguaje de móvil.
-19. Olvidar la cola de exclusión de texto en alguna imagen. El olvido más frecuente es la parte de los props: `no legible text on any prop`.
-20. Empezar el anuncio con el avatar ya perfecto y sin brillo. Si el "antes" ya parece el "después", el anuncio no tiene nada que vender: los tres avatares van `bare-skin no-makeup, oily T-zone, visible pores`.
+### A · Cola negativa completa
 
-Y uno más, el vigésimo primero, que viene de una regla de casting de Higgsfield que merece la pena tener presente: **identifica lo que cambia tu producto y deshaz ese cambio en el aspecto por defecto del personaje**. Vendemos limpieza de poro, así que los tres avatares arrancan con la nariz visiblemente grasa. Si Bea sale ya impecable en el plano 1, no hay anuncio.
+Va al final de las 375 imágenes. **En los macros, borra `no shallow depth of field, no bokeh`.**
+
+```
+Constraints: no text, no lettering, no captions, no subtitles, no watermark, no logo, no badges, no
+numbers, no frame borders, no collage, no split screen, no headers. No brand marks or legible text
+on any prop — bottles, towels, packaging and phone screens have their printed sides turned away or
+are too small to read. No shallow depth of field, no bokeh, no lens flare, no cinematic colour
+grade, no teal-and-orange, no HDR glow or bloom or halos, no oversharpening, no oversaturation. No
+studio lighting, no ring light, no softbox, no golden hour, no warm sunset cast. No fisheye, no
+ultra-wide distortion. No mirror and no reflection, no duplicated person, no extra hands, no third
+arm, no deformed fingers. Exactly one person in frame.
+```
+
+### B · Bloque de piel real, versión NOCTA con sebo activado
+
+```
+Real unretouched skin: visible pores across the nose, cheeks and forehead, fine vellus hair
+catching the light along the jaw and the upper lip, natural sebum shine concentrated on the nose
+bridge and the forehead while the cheeks stay matte — the shine a genuinely oily T-zone has at the
+end of the day. Uneven tone with faint pink around the nostrils, two or three small moles, faint
+fine lines at the outer corners of the eyes, faint honest under-eye shadows, one small healing
+spot. Naturally muted catchlights in the eyes, no oversized specular glare in the iris. Faint
+natural facial asymmetry, one eyebrow slightly higher than the other. No makeup, no foundation. No
+digital smoothing, no beauty filter, no airbrushing, no plastic skin, no glossy retouched finish,
+no glow.
+```
+
+### C · Macro de nariz con filamentos sebáceos (el "antes")
+
+```
+Extreme macro photograph of the tip and left side of a nose filling the frame, with a strip of
+normal cheek skin at the edge of the frame so it reads as a person's nose and not a medical slide.
+Taken with an iPhone ultra-wide camera in macro mode, lens about 3 cm from the skin: only two or
+three millimetres of the nose are in sharp focus, the near edge of the nostril and the far cheek
+fall out of focus fast — the razor-thin depth of field of a real phone macro. Slight barrel
+distortion at the frame edges. The pores are clearly visible and each holds a flat grey-yellow
+sebaceous filament, translucent, level with the skin, not raised, not dark, not inflamed — tiny
+threads inside the pores, the ordinary texture of an oily nose. Pores scattered in a completely
+IRREGULAR, uneven distribution: clustered in two or three dense patches and sparse elsewhere, every
+pore a different size and a different angle, never aligned in rows or a grid, never evenly spaced.
+Calm skin, no redness, not irritated. Fine vellus hair, a shallow film of sebum on the nose bridge
+catching one small hard specular highlight, matte where the cheek begins. Lit only by the phone's
+own torch from the upper left — small hard source at a low raking angle, short-edged shadows
+revealing every pore. Faint digital noise, mild highlight clipping on the oiliest ridge, auto white
+balance leaning warm, framing slightly off-centre and handheld. Unretouched documentary realism,
+not a 3D render. A photo from a real person's camera roll.
+```
+
+### D · Parche usado a contraluz
+
+```
+TIGHT CLOSE-UP of a used hydrocolloid nose patch held up between thumb and forefinger against a
+bright overcast window, strongly backlit. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the
+frame, complete, with empty space on all four sides; nothing is cropped by the frame edge; the
+whole butterfly outline must be readable at a glance. The gel is semi-translucent and milky, and
+inside its thickness there are dozens of small opaque white plugs, each a tiny column of absorbed
+sebum, denser and whiter than the gel around them, each surrounded by a faint diffuse halo where
+the light scatters through the gel. The patch is slightly curved and creased from having been on a
+nose, not flat. The window behind is blown out to plain even white with no frame, no view, no
+curtain. The fingers are in focus — fine fingerprint ridges, a hangnail, short unpainted nails,
+faint vellus hair on the knuckles. No printed dots, no drawn pattern, no stickers, no glitter — the
+plugs are physically inside the gel, not printed on it. Handheld iPhone photo, main camera, deep
+focus, faint digital noise, slight tilt.
+```
+
+### E · Packshot de la caja NOCTA
+
+```
+@Image1 and @Image2 are the NOCTA box references and show the only two valid angles — front-facing
+and three-quarter right. ANGLE LOCK: the box may appear only from one of these angles; do not
+rotate, spin, flip or invent back panels, side panels or unseen sides. Keep the NOCTA box design,
+its lettering and its colours exactly as in the reference — do not redraw, restyle or re-letter the
+label.
+
+MEDIUM CLOSE-UP of the NOCTA box standing on a bathroom sink shelf beside a folded dusty-rose
+towel, photographed from just above counter height with a phone held in one hand. The box is at its
+real physical size relative to the tap and the towel; the camera is close enough that the wordmark
+fills a good part of the frame, but the box itself is NOT enlarged. One patch lies next to the box,
+slightly curled, catching a small specular highlight, entirely inside the frame. Single hard warm
+bulb above the mirror from the upper left, hard-edged shadow of the box on the tile behind. Slight
+tilt, slightly off-centre framing, faint digital noise, mild highlight clipping on the tap. A photo
+from a real person's camera roll, not a product shoot. Constraints: no other brands, no legible
+text anywhere except the NOCTA box's own label, no watermark, no captions, no studio lighting, no
+seamless background, no bokeh.
+```
+
+### F · Pase de micro-realismo (segundo modelo)
+
+El workflow de UGC de Higgsfield prohíbe mandar una imagen cruda a vídeo: «Never send a raw gpt_image_2 board to video
+unless both allowed Seedream attempts fail». Es decir, el propio Higgsfield considera que la salida cruda no pasa el
+listón de realismo UGC. El pase de *de-slop*, adaptado a NOCTA (se ha cambiado "keep the product blank / unbranded"
+por la preservación de la marca):
+
+```
+KEEP EXACTLY the framing, composition, camera distance, pose, subject and product of this image —
+no reframe, no zoom, no crop, no re-layout, no change to the scene, to the person's face / hair /
+body, or to the product design. CHANGE ONLY micro-realism: true-to-life pore-level skin with
+natural texture and fine vellus hair, real material detail, natural light with gentle highlight
+roll-off and faint true sensor noise, a flat authentic iPhone photo, deep focus. PRESERVE the
+face's exact shape / width / proportions 1:1 — do NOT squeeze / narrow / slim / stretch the face.
+Keep the NOCTA box design, its lettering and its colours exactly as in the reference — do not
+redraw, restyle or re-letter the label. AVOID AI-slop: waxy plastic skin, airbrushed poreless skin,
+beauty-filter smoothing, over-saturation, HDR glow / bloom / halos, oversharpening, teal-orange
+grade, shallow depth of field, bokeh, cinematic / DSLR look. No added text, no watermark.
+```
+
+En los macros, quita de ahí `deep focus`, `shallow depth of field` y `bokeh`. Ventaja colateral de este pase:
+homogeneiza el grano y la piel entre las 15 tomas de un mismo anuncio, que es donde más se nota el salto al montar.
+
+### G · Variación entre los 25 anuncios
+
+Si varías "a ojo" cambiando sinónimos, el modelo converge igual y los 25 anuncios parecen el mismo. La solución de
+Higgsfield es determinista: pools cerrados y rotación aritmética, «this defeats LLM-bias toward "familiar" pool
+options». Monta una hoja con 25 filas y estas columnas, y rellénala por rotación, no por intuición:
+
+`avatar (Bea / Marisol / Álex)` × `hora (día ventana / noche flash / mañana temprano)` ×
+`estancia (baño día / baño noche / dormitorio / ventana / mármol)` ×
+`vestuario (pijama / camiseta ancha / albornoz / ropa de calle)` × `expresión aprobada` × `gancho`.
+
+Dentro de cada anuncio, declara explícitamente la banda de distancia de cada una de las 15 tomas
+(`MACRO`, `TIGHT CLOSE-UP`, `MEDIUM CLOSE-UP`, `WAIST-UP`, `WIDE`) y **no repitas banda en tomas consecutivas**. Eso
+es lo que evita que el montaje parezca una sola imagen animada quince veces.
+
+Y la ley de casting, que para un producto de limpieza de poro es obligatoria: «identify what the product changes, then
+UNDO that change in the character's default look». Los tres avatares empiezan `bare-skin no-makeup, no foundation,
+oily T-zone, visible pores`. Si Bea ya sale perfecta en el plano 1, el anuncio no tiene nada que vender.
+
+---
+
+## Resumen en una página
+
+1. Quita las palabras de calidad. `8k`, `cinematic`, `flawless` y `glowing` son las que fabrican el plástico.
+2. Sustitúyelas por mecanismos: poros, vello fino, sebo en la zona T, asimetría, ruido digital, recorte de altas luces.
+3. Una sola fuente de luz, dicha por sus consecuencias, nunca por la hora.
+4. Foco profundo en todo menos en el macro. En el macro, dos o tres milímetros nítidos y borra `no bokeh`.
+5. Encuadre torcido y descentrado sí; desenfoque de movimiento no.
+6. **Adjunta las fotos reales del producto. Siempre. Describirlo con palabras no basta.** De dos a cuatro referencias,
+   el producto primero cuando el producto es lo que no puede fallar.
+7. Angle Lock y escala real en todo plano con caja o parche.
+8. 9:16 nativo. 1k medium para piel, 2k high para macros y packshot. Nunca 4k.
+9. Las cinco reglas comprobadas van siempre: parche entero en cuadro, referencia de nariz limpia, consecuencias de la
+   luz de noche, poros irregulares, despegado en una sola lámina.
+10. Revisa las cuatro esquinas antes de dar cualquier imagen por buena.
