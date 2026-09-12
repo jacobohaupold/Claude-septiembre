@@ -15,34 +15,37 @@ Ordenados por nota. La nota la pone el estudio valorando el encaje con NOCTA: MO
 | 3 | Ningbo Alps Medical Technology Co., Ltd. (tienda Alibaba:… | Fábrica | Sí, probado | Declarado: 100 uds en producto de stock; 1.… | Razonamiento: el 0,2001 EUR/ud de Alibaba e… | 8.0 | alta |
 | 4 | Wuhan Huawei Technology Co., Ltd. (武汉华卫科技有限公司) | Fábrica | Sin verificar | NO es compatible de entrada con el plan de… | Razonamiento: los 0,0435-0,0609 EUR/ud que… | 7.5 | alta |
 | 5 | Trummed Medical (Hangzhou) Co., Ltd. | Fábrica | Sí, probado | La ficha de Alibaba anuncia MOQ 1.000 uds a… | Punto de partida verificable: 0,261 EUR/ud… | 7.5 | media-alta para la identidad, el producto y el contacto (web propia con ficha de producto y email verificados por varias fuentes); baja para el tamaño real de la empresa y la propiedad de la fábrica (las fuentes se contradicen frontalmente: 2010 con 301-500 empleados frente a 2021 con 0-10 empleados); nula para ISO 22716, que no aparece en ninguna fuente pública. |
-| 6 | Guangdong Huashen Biomedical Co., Ltd. (广东华神生物医药有限公司) | Fábrica | Sin verificar | Publicado: 100 unidades a 0,8612 € (corrobo… | Razonamiento: el rango publicado es 0,34-0,… | 7.0 | media |
-| 7 | Henan Like Health Industry Co., Ltd. (河南丽可健康产业有限公司) | Intermediario | Sin verificar | Ficha de Alibaba: MOQ 100. Advertencia de c… | Ficha: 0,3393-0,5045 EUR a MOQ 100. Razonam… | 6.5 | media |
-| 8 | Shaanxi Keysing Bio-Tech Co., Ltd (Alibaba: keysingchina) | Intermediario | Sin verificar | Publicado: 300 uds a 0,3393 EUR (otras fuen… | El parche desnudo, a granel, es realista en… | 6.0 | media |
-| 9 | Changzhou Xinfa Medical Products Co., Ltd. | Fábrica | Sí, probado | ES EL PROBLEMA GORDO. Todos sus listados pu… | Sus precios publicados: 0,20-0,23 USD por c… | 6.0 | media |
-| 10 | Dongguan Chuancheng Medical Technology Co., Ltd. (东莞传承医疗科… | Sin clasificar | Sin verificar | Aquí está su mejor argumento y encaja bien… | Hay que desmontar primero el precio de la f… | 5.5 | media |
-| 11 | Hefei Hengmai Imp&Exp Co., Ltd. (marca comercial: Hengmai… | Intermediario | Probable | MOQ publicado: 500 unidades a 0,3045 EUR/ud… | Precio publicado: 0,3045 EUR/ud a partir de… | 5.5 | alta |
-| 12 | Guangzhou Yalam International Cosmetic Co., Ltd. (Alibaba… | Intermediario | No | Bajo y probablemente real: 500 pares en la… | Para lo que ELLOS publican (tira de hidroge… | 4.5 | alta |
-| 13 | Zhengzhou Bojun Biotechnology Co., Ltd. | Fábrica | Sin verificar | La ficha de Alibaba anuncia MOQ 100 uds a 2… | Precio de ficha: 2,53 EUR con MOQ 100 (no v… | 4.0 | BAJA. Es el proveedor peor documentado de los tres y con diferencia. No tiene web propia fuera de Alibaba, no aparece en Made-in-China, Global Sources ni EC21, no hay email público, no hay dirección física localizable, no se ha podido encontrar en registros mercantiles chinos (QCC, Tianyancha, Aiqicha) pese a buscar por el nombre chino, y no hay registros de importación. TODO lo que se sabe procede de su propia ficha de Alibaba y de agregadores de IA (accio.com) que se limitan a repetirla: no es verificación independiente, es la misma fuente reciclada. Súmese que solo llevan 1 año en Alibaba con 74 valoraciones. |
-| 14 | Yiwu Meihang Import & Export Co., Ltd. (义乌美航进出口有限公司) | Intermediario | Probable | Publicado: 20 cajas a 0,9134 €. Un MOQ de 2… | El precio publicado de 0,9134 € por caja (M… | 3.5 | media |
-| 15 | Shandong Eledeep Bio Tech Co., Ltd. (tiendas Alibaba: ele… | Intermediario | Sin verificar | La ficha de Alibaba dice "MOQ 1", lo que co… | El 0,7742 EUR/ud con MOQ 1 es precio de rev… | 3.0 | media |
-| 16 | Hubei Honey Phoebe E-Commerce Co., Ltd. | Intermediario | Sí, probado | MOQ 3 cajas según la ficha. Es un MOQ de dr… | 1,06 EUR por caja de 10 parches EELHOE = 0,… | 3.0 | media |
-| 17 | Shenzhen Aliver Cosmetics Co., Ltd. | Intermediario | Sí, probado | La ficha anuncia MOQ 1 a 2,24-2,69 EUR. Un… | RAZONAMIENTO DEMOLEDOR PARA NOCTA: 2,24-2,6… | 3.0 | media |
-| 18 | Henan Geesion Medical Devices Co., Ltd. (opera también co… | Intermediario | No | Los MOQ que publican no son MOQ de fabricac… | Razonamiento: al ser intermediario, sobre e… | 3.0 | media |
-| 19 | Xi'an Austar Slender Biotech Co., Ltd. (Alibaba: austar01) | Intermediario | Sin verificar | Publicado: 3 CAJAS. Ese MOQ es la prueba de… | Publicado 0,5654-0,8438 EUR por unidad. Es… | 3.0 | media |
-| 20 | Shenzhen Elaimei Biotechnology Co., Ltd. | Intermediario | Sin verificar | La ficha de Alibaba anuncia MOQ de 50 cajas… | Precio de ficha: 2,44-2,93 EUR por caja de… | 3.0 | MEDIA-ALTA para la conclusión principal (que NO son fabricantes y que NO son los titulares registrales de la marca ELAIMEI), porque esto sí está respaldado por fuentes independientes y de calidad: registros de marca de EUIPO, USPTO y Reino Unido, la clasificación de SourceReady como 'trading company', la declaración pública del distribuidor europeo sobre las cuatro marcas que distribuye, y el teléfono compartido entre elaimei.com y alivercosmetics.com. Confianza BAJA, en cambio, para los datos industriales de la sociedad china Shenzhen Elaimei Biotechnology Co., Ltd.: no se ha encontrado ni año de constitución, ni número de empleados, ni superficie, ni dirección, ni certificados, y su ficha de Global Sources aparece expresamente como 'Unverified Supplier'. |
-| 21 | Guangzhou Feishi Cosmetics Co., Ltd. | Intermediario | No | La ficha dice MOQ 1 unidad. Eso NO es un MO… | Los 2,56 EUR que se ven NO son un precio po… | 2.0 | media |
-| 22 | Guangzhou Mingsong Technology Co., Ltd. | Intermediario | No | MOQ 3 uds según ficha de Alibaba. No es un… | Ficha: 1,19 EUR/ud a MOQ 3. Razonamiento: p… | 2.0 | media |
-| 23 | Shenzhen Linwen Technology Co., Ltd. (tienda Alibaba: sef… | Intermediario | No | La ficha anuncia MOQ 10 cajas. Un MOQ de 10… | El precio publicado es 2,24-2,69 EUR por CA… | 2.0 | media |
-| 24 | Shenzhen Lightning Jingling Technology Co., Ltd. (nombre… | Intermediario | No | La ficha anuncia MOQ 5 cajas. Un MOQ de 5 c… | El precio publicado es 2,44-2,93 EUR por CA… | 2.0 | media |
-| 25 | Guangzhou Xuanmei Trading Co., Ltd. | Intermediario | Sin verificar | Publicado: 5 unidades a 2,18 €/ud. Un MOQ d… | Inviable. A 2,18 €/ud, una caja de 8 parche… | 2.0 | baja |
-| 26 | Jinan World Expo Noah Medical Technology Co., Ltd. (济南世博诺… | Intermediario | Sin verificar | MOQ de 3 unidades. Sobre el papel parece cu… | Razonamiento: los 1,21-1,74 EUR por unidad… | 2.0 | baja |
-| 27 | Guangzhou Chengzhe Meifu Cosmetic Co., Ltd. (Alibaba: czm… | Intermediario | Sin verificar | Publicado: 10 UNIDADES. Diez. Es el MOQ más… | Publicado 0,5915-1,24 EUR por unidad. Es pr… | 2.0 | media |
-| 28 | FangCheng Qi Xiao Guai International Trade Co., Ltd. (tie… | Intermediario | Sin verificar | MOQ 1 unidad. Eso no es un MOQ de fabricaci… | El 1,38 EUR/ud con MOQ 1 es el precio más c… | 1.5 | baja |
-| 29 | Shenzhen Duolai Technology Co., Ltd. (深圳市多莱科技有限公司) | Intermediario | Sin verificar | MOQ de 1 unidad. Suena ideal pero es justo… | 0,8699 EUR/ud con MOQ 1, que es su precio p… | 1.5 | baja |
-| 30 | Shanxi Meila Bio-Tech Co., Ltd. | Intermediario | Sin verificar | La ficha dice MOQ 1 a 0,8438 EUR. Eso es ve… | Los 0,8438 EUR con MOQ 1 son el precio de U… | 1.5 | media |
-| 31 | Shenzhen Baitejia Technology Co., Ltd. (深圳市佰特佳科技有限公司 / ta… | Intermediario | Sin verificar | MOQ 3 uds según ficha de Alibaba. Ese MOQ N… | Ficha: 1,19 EUR/ud a MOQ 3. Razonamiento: e… | 1.5 | alta |
-| 32 | Ningbo BBD Import & Export Co., Ltd. | Intermediario | No | La ficha anuncia MOQ 1. Igual que en el cas… | NO ESTIMABLE CON RIGOR, y esa es justamente… | 1.5 | baja |
-| 33 | Hebei Leici Technology Co., Ltd. (tienda de Alibaba: leic… | Intermediario | Sin verificar | 100 unidades, y es real. Pero aquí el MOQ b… | Publicado: 0,5219-0,6089 EUR/unidad con MOQ… | 1.5 | media |
+| 6 | Zhongshan Senwell Bio Technology Co., Ltd. (Senwell Biote… | Fábrica | Sí, probado | CUIDADO, aquí está la trampa principal de e… | El 0,2262 EUR/ud publicado para el parche X… | 7.5 | media |
+| 7 | Guangdong Huashen Biomedical Co., Ltd. (广东华神生物医药有限公司) | Fábrica | Sin verificar | Publicado: 100 unidades a 0,8612 € (corrobo… | Razonamiento: el rango publicado es 0,34-0,… | 7.0 | media |
+| 8 | Henan Like Health Industry Co., Ltd. (河南丽可健康产业有限公司) | Intermediario | Sin verificar | Ficha de Alibaba: MOQ 100. Advertencia de c… | Ficha: 0,3393-0,5045 EUR a MOQ 100. Razonam… | 6.5 | media |
+| 9 | Tianjin Hodaf Technology Co., Ltd. — filial comercial del… | Intermediario | Sin verificar | MOQ 1.000 uds según su ficha de Alibaba, qu… | Igual que el proveedor 1, el 0,0348-0,0522… | 6.5 | media |
+| 10 | Shaanxi Keysing Bio-Tech Co., Ltd (Alibaba: keysingchina) | Intermediario | Sin verificar | Publicado: 300 uds a 0,3393 EUR (otras fuen… | El parche desnudo, a granel, es realista en… | 6.0 | media |
+| 11 | Changzhou Xinfa Medical Products Co., Ltd. | Fábrica | Sí, probado | ES EL PROBLEMA GORDO. Todos sus listados pu… | Sus precios publicados: 0,20-0,23 USD por c… | 6.0 | media |
+| 12 | Hebei Houde Hanfang Medical Devices (Group) Co., Ltd. — m… | Fábrica | Sin verificar | Contradictorio y negociable a la baja. Alib… | El 0,0348-0,0522 EUR/ud de Alibaba NO es ap… | 6.0 | media |
+| 13 | Dongguan Chuancheng Medical Technology Co., Ltd. (东莞传承医疗科… | Sin clasificar | Sin verificar | Aquí está su mejor argumento y encaja bien… | Hay que desmontar primero el precio de la f… | 5.5 | media |
+| 14 | Hefei Hengmai Imp&Exp Co., Ltd. (marca comercial: Hengmai… | Intermediario | Probable | MOQ publicado: 500 unidades a 0,3045 EUR/ud… | Precio publicado: 0,3045 EUR/ud a partir de… | 5.5 | alta |
+| 15 | Guangzhou Yalam International Cosmetic Co., Ltd. (Alibaba… | Intermediario | No | Bajo y probablemente real: 500 pares en la… | Para lo que ELLOS publican (tira de hidroge… | 4.5 | alta |
+| 16 | Zhengzhou Bojun Biotechnology Co., Ltd. | Fábrica | Sin verificar | La ficha de Alibaba anuncia MOQ 100 uds a 2… | Precio de ficha: 2,53 EUR con MOQ 100 (no v… | 4.0 | BAJA. Es el proveedor peor documentado de los tres y con diferencia. No tiene web propia fuera de Alibaba, no aparece en Made-in-China, Global Sources ni EC21, no hay email público, no hay dirección física localizable, no se ha podido encontrar en registros mercantiles chinos (QCC, Tianyancha, Aiqicha) pese a buscar por el nombre chino, y no hay registros de importación. TODO lo que se sabe procede de su propia ficha de Alibaba y de agregadores de IA (accio.com) que se limitan a repetirla: no es verificación independiente, es la misma fuente reciclada. Súmese que solo llevan 1 año en Alibaba con 74 valoraciones. |
+| 17 | Yiwu Meihang Import & Export Co., Ltd. (义乌美航进出口有限公司) | Intermediario | Probable | Publicado: 20 cajas a 0,9134 €. Un MOQ de 2… | El precio publicado de 0,9134 € por caja (M… | 3.5 | media |
+| 18 | Shandong Eledeep Bio Tech Co., Ltd. (tiendas Alibaba: ele… | Intermediario | Sin verificar | La ficha de Alibaba dice "MOQ 1", lo que co… | El 0,7742 EUR/ud con MOQ 1 es precio de rev… | 3.0 | media |
+| 19 | Hubei Honey Phoebe E-Commerce Co., Ltd. | Intermediario | Sí, probado | MOQ 3 cajas según la ficha. Es un MOQ de dr… | 1,06 EUR por caja de 10 parches EELHOE = 0,… | 3.0 | media |
+| 20 | Shenzhen Aliver Cosmetics Co., Ltd. | Intermediario | Sí, probado | La ficha anuncia MOQ 1 a 2,24-2,69 EUR. Un… | RAZONAMIENTO DEMOLEDOR PARA NOCTA: 2,24-2,6… | 3.0 | media |
+| 21 | Henan Geesion Medical Devices Co., Ltd. (opera también co… | Intermediario | No | Los MOQ que publican no son MOQ de fabricac… | Razonamiento: al ser intermediario, sobre e… | 3.0 | media |
+| 22 | Xi'an Austar Slender Biotech Co., Ltd. (Alibaba: austar01) | Intermediario | Sin verificar | Publicado: 3 CAJAS. Ese MOQ es la prueba de… | Publicado 0,5654-0,8438 EUR por unidad. Es… | 3.0 | media |
+| 23 | Shenzhen Elaimei Biotechnology Co., Ltd. | Intermediario | Sin verificar | La ficha de Alibaba anuncia MOQ de 50 cajas… | Precio de ficha: 2,44-2,93 EUR por caja de… | 3.0 | MEDIA-ALTA para la conclusión principal (que NO son fabricantes y que NO son los titulares registrales de la marca ELAIMEI), porque esto sí está respaldado por fuentes independientes y de calidad: registros de marca de EUIPO, USPTO y Reino Unido, la clasificación de SourceReady como 'trading company', la declaración pública del distribuidor europeo sobre las cuatro marcas que distribuye, y el teléfono compartido entre elaimei.com y alivercosmetics.com. Confianza BAJA, en cambio, para los datos industriales de la sociedad china Shenzhen Elaimei Biotechnology Co., Ltd.: no se ha encontrado ni año de constitución, ni número de empleados, ni superficie, ni dirección, ni certificados, y su ficha de Global Sources aparece expresamente como 'Unverified Supplier'. |
+| 24 | Guangzhou Feishi Cosmetics Co., Ltd. | Intermediario | No | La ficha dice MOQ 1 unidad. Eso NO es un MO… | Los 2,56 EUR que se ven NO son un precio po… | 2.0 | media |
+| 25 | Guangzhou Mingsong Technology Co., Ltd. | Intermediario | No | MOQ 3 uds según ficha de Alibaba. No es un… | Ficha: 1,19 EUR/ud a MOQ 3. Razonamiento: p… | 2.0 | media |
+| 26 | Shenzhen Linwen Technology Co., Ltd. (tienda Alibaba: sef… | Intermediario | No | La ficha anuncia MOQ 10 cajas. Un MOQ de 10… | El precio publicado es 2,24-2,69 EUR por CA… | 2.0 | media |
+| 27 | Shenzhen Lightning Jingling Technology Co., Ltd. (nombre… | Intermediario | No | La ficha anuncia MOQ 5 cajas. Un MOQ de 5 c… | El precio publicado es 2,44-2,93 EUR por CA… | 2.0 | media |
+| 28 | Guangzhou Xuanmei Trading Co., Ltd. | Intermediario | Sin verificar | Publicado: 5 unidades a 2,18 €/ud. Un MOQ d… | Inviable. A 2,18 €/ud, una caja de 8 parche… | 2.0 | baja |
+| 29 | Jinan World Expo Noah Medical Technology Co., Ltd. (济南世博诺… | Intermediario | Sin verificar | MOQ de 3 unidades. Sobre el papel parece cu… | Razonamiento: los 1,21-1,74 EUR por unidad… | 2.0 | baja |
+| 30 | Guangzhou Chengzhe Meifu Cosmetic Co., Ltd. (Alibaba: czm… | Intermediario | Sin verificar | Publicado: 10 UNIDADES. Diez. Es el MOQ más… | Publicado 0,5915-1,24 EUR por unidad. Es pr… | 2.0 | media |
+| 31 | FangCheng Qi Xiao Guai International Trade Co., Ltd. (tie… | Intermediario | Sin verificar | MOQ 1 unidad. Eso no es un MOQ de fabricaci… | El 1,38 EUR/ud con MOQ 1 es el precio más c… | 1.5 | baja |
+| 32 | Shenzhen Duolai Technology Co., Ltd. (深圳市多莱科技有限公司) | Intermediario | Sin verificar | MOQ de 1 unidad. Suena ideal pero es justo… | 0,8699 EUR/ud con MOQ 1, que es su precio p… | 1.5 | baja |
+| 33 | Shanxi Meila Bio-Tech Co., Ltd. | Intermediario | Sin verificar | La ficha dice MOQ 1 a 0,8438 EUR. Eso es ve… | Los 0,8438 EUR con MOQ 1 son el precio de U… | 1.5 | media |
+| 34 | Shenzhen Baitejia Technology Co., Ltd. (深圳市佰特佳科技有限公司 / ta… | Intermediario | Sin verificar | MOQ 3 uds según ficha de Alibaba. Ese MOQ N… | Ficha: 1,19 EUR/ud a MOQ 3. Razonamiento: e… | 1.5 | alta |
+| 35 | Ningbo BBD Import & Export Co., Ltd. | Intermediario | No | La ficha anuncia MOQ 1. Igual que en el cas… | NO ESTIMABLE CON RIGOR, y esa es justamente… | 1.5 | baja |
+| 36 | Hebei Leici Technology Co., Ltd. (tienda de Alibaba: leic… | Intermediario | Sin verificar | 100 unidades, y es real. Pero aquí el MOQ b… | Publicado: 0,5219-0,6089 EUR/unidad con MOQ… | 1.5 | media |
 
 
 ---
@@ -1102,7 +1105,221 @@ NOCTA — España
 - https://veilta.com/en/blog/launch-private-label-acne-patch-brand
 
 
-### 6. Guangdong Huashen Biomedical Co., Ltd. (广东华神生物医药有限公司)
+### 6. Zhongshan Senwell Bio Technology Co., Ltd. (Senwell Biotech)
+
+**Nota 7.5/10 · Fábrica · confianza media**
+
+**Qué es de verdad.** FABRICANTE COSMÉTICO especializado, probable, con reservas. A favor: tres webs propias con catálogo profundo y coherente, todo girando alrededor del parche de hidrocoloide y la cosmética de mascarilla; publican especificaciones técnicas reales (espesores de hidrocoloide en mm, tamaños de troquel, escalones de MOQ); declaran sala limpia clase 100.000 y centro de ensayo clase 10.000; y ofrecen documentación regulatoria europea, algo que un simple revendedor no sabe ni nombrar. En contra: su domicilio publicado es una unidad de OFICINA (7ª planta, unidad 2, edificio C) en la zona Torch de Zhongshan, no una nave, y no se ha localizado ningún informe de auditoría de tercero ni registro aduanero a su nombre. Lectura más probable: fabricante real con planta separada de la oficina comercial, o casa de marca blanca muy especializada con producción propia o muy integrada.
+
+**En qué se basa esa clasificación.** Fichas de producto con especificaciones técnicas verificables y escalones de MOQ publicados (https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/hydrocolloid-acne-plaster.html y .../nose-pore-strips.html); página de empresa con descripción de sala limpia y capacidades (https://www.senwellbio.com/about-us); página de servicio OEM/ODM que detalla soporte CPSR, CPNP, PIF, MoCRA y FSC (https://www.senwellbio.com/oem-odm-service)
+
+| Dato | Valor |
+|---|---|
+| Dirección | 7F, Unit 2, Building C, No. 16, Haojiang Road, Torch Development Zone, Zhongshan City, Guangdong Province, China |
+| Año de fundación | 2016 (declarado de forma consistente en senwelloem.com y senwellbio.com). La ficha de Alibaba dice 10 años, coherente con 2016. |
+| Empleados | No publicado. Mencionan '10 ingenieros de laboratorio' para desarrollo de muestras y un equipo de I+D con acceso a 'más de 5.000 formulaciones'. La cifra de 5.000 formulaciones en una empresa de 2016 es marketing, no dato. |
+| Superficie de fábrica | Declaran 'aproximadamente 12.600 m2' y un 'taller de purificación limpia de grado 100.000' más un 'centro de inspección y ensayo de grado 10.000'. Sin verificación independiente. La dirección publicada es de oficina, así que la planta, si existe, está en otra ubicación que no publican. |
+| Web propia | https://www.senwelloem.com/ y https://www.senwellbio.com/ (y un tercer dominio, www.senwellbio.cn, que en el momento de la consulta devolvía 503) |
+
+**Certificaciones.**
+
+- ISO 22716:2007 (GMP cosmética) — declarada de forma repetida y consistente en varias fichas de producto y en la página corporativa. Es EL certificado que la UE espera para cosmética. Sin PDF público: hay que exigirlo
+- GMPC — declarada ('construcción según estándar internacional de certificación GMPC')
+- FDA (referida como 'FDA 2008') — declarada
+- TÜV — declarada en la ficha de nose pore strips; si es cierto, es auditoría de tercero y vale mucho
+- SGS y MSDS — declarados
+- Soporte documental declarado para CPSR, CPNP y PIF (Europa), MoCRA (EE. UU.) y FSC (Sudeste Asiático). NINGUNA de estas certificaciones se ha podido verificar con documento público: todas son autodeclaraciones de su web
+
+**Qué fabrica de verdad.** Especialista coherente en cosmética de parche y mascarilla: parches de acné de hidrocoloide (con y sin ácido salicílico, con aceite de árbol de té y caléndula), parches de microagujas, TIRAS DE PORO PARA NARIZ DE HIDROCOLOIDE, parches XL de hidrocoloide para poros de la nariz, mascarillas faciales (colágeno, arcilla, pan de oro), parches de ojos, mascarillas de labios, mascarilla V-line, mascarillas de pie y mano, parches adelgazantes, parches para cicatrices, parche de acné electrónico. Declaran haber trabajado para FabFitFun, PIXI y L'Oréal (NO VERIFICADO; es una afirmación habitual y no comprobable sin pedir referencias).
+
+**¿Es hidrocoloide auténtico?** SÍ, y es el único de los tres con evidencia sólida, específica y aplicable al producto héroe de NOCTA. Pruebas concretas: (1) publican espesores reales de hidrocoloide, 0,1 / 0,25 / 0,35 / 0,45-0,5 mm o personalizado, un dato que solo da quien fabrica el material; (2) describen el producto como 'hidrocoloide medicinal hidrofílico especial que absorbe las secreciones', que es la definición correcta del mecanismo, y explicitan que 'el material de gel de agua no causa irritación' y que se lleva 6-8 horas, frente a los 10-15 minutos de una tira arrancable; (3) tienen una referencia de TIRA DE PORO NASAL DE HIDROCOLOIDE ya troquelada, de 8,5 x 3 cm, y una variante 'XL Hydrocolloid Patches for Nose Pores — designed for nose, more absorptive and bigger'; (4) su literatura de producto distingue explícitamente su enfoque de absorción frente a la acción de arranque de las tiras de poro tradicionales. Es decir: ya tienen el troquel de forma nasal, que es exactamente lo que NOCTA necesita y lo que a los dos HODAF les falta.
+
+**MOQ real.** CUIDADO, aquí está la trampa principal de este proveedor: hay una contradicción grande entre Alibaba y su propia web. Alibaba anuncia MOQ 110 uds a 0,2262 EUR para el parche XL; su web publica MOQ de 10.000 BOLSAS para las tiras de poro nasal en forma estándar y embalaje estándar, y 50.000 pcs si se quiere forma personalizada. Para los puntos de acné el mínimo baja a 1.000 bolsas en forma y bolsa estándar, y 10.000 pcs si se personaliza color, aroma, forma o ingrediente. Interpretación profesional: el MOQ 110 de Alibaba es STOCK LISTO de un artículo genérico sin marca, pensado para captar al comprador pequeño; el MOQ real para producción con marca NOCTA está entre 1.000 y 10.000 según cuánto se personalice. LA BUENA NOTICIA: si NOCTA acepta la forma nasal QUE YA TIENEN (8,5 x 3 cm) y personaliza solo el packaging exterior, se esquiva el MOQ de forma personalizada y se debería poder negociar en torno a 1.000-3.000 unidades. Esa es exactamente la pregunta que hay que hacerles.
+
+**Precio real estimado.** El 0,2262 EUR/ud publicado para el parche XL es el precio más CREÍBLE de los tres, porque es el único coherente con la superficie de hidrocoloide que lleva un parche nasal. A 1.000 unidades, y por ser un pedido pequeño, lo esperable es que se mantenga o suba ligeramente: horquilla realista 0,18-0,28 EUR/ud (a 5.000-10.000 uds debería bajar a 0,12-0,18 EUR). Cálculo para la caja de 8 parches: 8 x 0,22 EUR = 1,76 EUR de producto. Sobre individual impreso 0,05-0,12 EUR/ud (0,40-0,96 EUR por caja) y estuche impreso 0,20-0,45 EUR. Total EXW por caja de 8: aproximadamente 2,40-3,20 EUR. Con courier express a España (150-250 EUR por 8-12 kg, unos 1,20-2,00 EUR repartidos por caja en un lote de solo 125 cajas) el coste en almacén queda en torno a 3,60-5,20 EUR por caja, frente a un PVP de 16,95 EUR: margen bruto del 70-78 %, que aguanta IVA, envío 24-48 h y la garantía de 60 días. AVISO PRESUPUESTARIO: 1.000 parches a 0,22 EUR son solo 220 EUR de producto, pero si el MOQ real de packaging obliga a comprar 500-1.000 estuches y sobres, el packaging puede costar MÁS que el producto. Con 1.000 EUR de presupuesto lo realista es: ~250 EUR de parches, ~350-450 EUR de packaging mínimo, ~200 EUR de courier, ~100 EUR de muestras previas. Sale justo, y solo si no hay que pagar troquel.
+
+**Packaging personalizado.** Es el proveedor que más claro lo tiene publicado, con tres niveles: (1) etiqueta/adhesivo de marca privada sobre envase neutro, la opción más barata y de menor mínimo, ideal para el piloto de 125 cajas; (2) bolsa (pouch) con cremallera personalizada; (3) sobre (envelope) personalizado. Además ofrecen caja y bolsa personalizadas. No publican ni MOQ ni precio del estuche impreso: es la pregunta clave. Recomendación táctica para NOCTA: para el lote piloto, arrancar con la opción (1), adhesivo NOCTA sobre envase neutro o sobre impreso de bajo mínimo, y dejar el estuche totalmente impreso para el segundo pedido, cuando ya se sepa si el producto vende. Así el presupuesto de 1.000 EUR da de sí.
+
+**Plazos.** Son los ÚNICOS de los tres que publican plazos concretos, y eso ya es una señal de profesionalidad: producto en stock 5-10 días; pedido personalizado 15-25 días si no hay stock; y en su página OEM declaran 'carga lista en menos de 30 días'. Muestras: gratuitas, pero el transporte lo paga el comprador (unos 30-60 EUR por courier a España). Condiciones de pago publicadas: pedidos de hasta 2.000 USD, 100 % por adelantado; pedidos de 2.000 USD o más, 50 % de anticipo y 50 % antes del embarque. Ojo: el lote piloto de NOCTA quedará por debajo de 2.000 USD, así que tocará pagar el 100 % por adelantado — razón de más para cerrarlo con Trade Assurance de Alibaba y no por transferencia directa.
+
+**Encaje con NOCTA.** ES EL PROVEEDOR ADECUADO PARA EL PRODUCTO HÉROE. Es el único de los tres que reúne a la vez las cuatro cosas que NOCTA necesita: (1) tiene YA troquelada una tira de poro nasal de HIDROCOLOIDE de 8,5 x 3 cm más una versión XL específica para poros de la nariz, así que no hay que pagar troquel ni rezar para que sepan hacerlo; (2) publica espesores reales de hidrocoloide (0,1 a 0,5 mm), lo que permite elegir con criterio: para absorber sebo y verse blanco conviene ir a 0,35-0,5 mm, no a 0,1 mm; (3) declara ISO 22716, que es exactamente el certificado GMP cosmético que la UE espera para este producto; y (4) es el ÚNICO que menciona por su nombre CPSR, CPNP y PIF, es decir, ha pasado antes por el trámite europeo y sabe qué papeles hay que entregar. El precio de 0,2262 EUR es además el único de los tres que resiste un análisis de coste de materiales, y deja un margen bruto del 70-78 % sobre el PVP de 16,95 EUR. Los dos frenos reales son el MOQ (el 110 de Alibaba es stock genérico; para marca propia el mínimo salta a 1.000-10.000) y el packaging (125 cajas está por debajo de cualquier mínimo de imprenta). La jugada correcta para el lote piloto: usar SU forma nasal existente sin tocar el troquel, pedir 1.000-2.000 parches, y en el primer pedido resolver la marca con sobre impreso o adhesivo NOCTA sobre envase neutro, dejando el estuche a todo color para la reposición. ACLARACIÓN REGULATORIA IMPORTANTE: aunque ofrezcan 'CPNP', un fabricante chino NO puede ser Persona Responsable en la UE. La Persona Responsable tendrá que ser NOCTA como empresa establecida en España, o una RP contratada; Senwell aporta la composición, los ensayos y el PIF, y el CPSR lo debe firmar un evaluador de seguridad cualificado. Conviene decírselo así en el correo para ver si entienden el matiz: si lo entienden, son buenos; si contestan 'nosotros te damos el CPNP', es que no saben de qué hablan.
+
+**A favor.**
+
+- ES EL ÚNICO QUE YA FABRICA EL PRODUCTO: tira de poro nasal de hidrocoloide de 8,5 x 3 cm ya troquelada, más una versión XL descrita como 'designed for nose, more absorptive and bigger'. Cero inversión en troquel para NOCTA
+- Publican ESPECIFICACIONES TÉCNICAS REALES en abierto: espesores de hidrocoloide de 0,1 / 0,25 / 0,35 / 0,45-0,5 mm y tamaños de punto de 8 a 20 mm. Un revendedor no conoce esos números; quien fabrica, sí
+- Describen correctamente el mecanismo del hidrocoloide (absorción de secreciones, uso de 6-8 horas, gel de agua sin irritación) y lo contraponen de forma explícita a la tira arrancable tradicional: entienden el producto
+- Declaran ISO 22716:2007, que es exactamente la GMP cosmética que exige el mercado europeo, además de GMPC, FDA y TÜV
+- ÚNICO de los tres que nombra CPSR, CPNP y PIF, y que dice haber tramitado CPSR para marcas europeas: han pasado por el trámite antes
+- Publican PLAZOS Y CONDICIONES DE PAGO concretos (5-10 días stock, 15-25 días personalizado, 50/50 por encima de 2.000 USD), señal de casa ordenada
+- Ofrecen tres niveles de personalización de envase, incluido el adhesivo de marca sobre envase neutro, que es justo lo que permite a un piloto de 125 cajas ser viable
+- Muestras gratuitas pagando solo el transporte: se puede validar el producto en mano por 30-60 EUR antes de arriesgar el pedido
+- Catálogo FOCALIZADO en cosmética de parche y mascarilla, sin la dispersión (velas de oído, antimosquitos, antitabaco) típica del intermediario
+- Precio de 0,2262 EUR coherente con la superficie de hidrocoloide de un parche nasal: es el único de los tres que no induce a error al planificar el margen
+- Interlocutor con nombre y móvil directo (Allen Lee, +86 173 3618 6975), además de email institucional, WeChat y Skype
+- No se ha encontrado ninguna denuncia, reclamación ni aviso de fraude sobre esta empresa
+
+**En contra.**
+
+- CONTRADICCIÓN GRAVE DE MOQ: Alibaba anuncia 110 unidades, pero su propia web exige 10.000 bolsas para tira de poro nasal en forma estándar y 50.000 pcs para forma personalizada. El 110 es casi con seguridad stock genérico sin marca; el mínimo real para producir con marca NOCTA está entre 1.000 y 10.000. Hay que aclararlo ANTES de ilusionarse
+- La dirección publicada es una unidad de OFICINA (7ª planta, unidad 2, edificio C), no una nave industrial. Los 12.600 m2 de planta están declarados pero nunca localizados ni documentados
+- TODAS las certificaciones (ISO 22716, GMPC, FDA, TÜV, SGS) son autodeclaraciones de su propia web: ni un solo PDF, número de certificado ni organismo emisor públicos
+- No se ha encontrado ningún registro aduanero a su nombre en las bases de datos de importación consultadas, ni informe de auditoría de tercero independiente
+- Empresa joven (2016) que afirma disponer de 'más de 5.000 formulaciones maduras': la cifra no es creíble y delata tendencia a exagerar en el material comercial
+- Los clientes que se atribuyen (FabFitFun, PIXI, L'Oréal) no están verificados y son el tipo de nombre que muchas fábricas chinas citan sin respaldo. Hay que pedir referencias contactables o rechazar el argumento
+- Los testimonios positivos localizados están todos alojados en su propia web, no en plataformas independientes
+- Al quedar el pedido piloto por debajo de 2.000 USD, su condición es 100 % de pago por adelantado: máxima exposición en el primer pedido si no se usa Trade Assurance
+- Ofrecen 'CPNP' como si pudieran notificarlo ellos, cuando la Persona Responsable debe estar establecida en la UE. Si insisten en que ellos dan el CPNP, es señal de que no dominan el marco regulatorio europeo
+- Múltiples dominios y dos números de WhatsApp distintos para la misma empresa: no es descalificante, pero conviene fijar un único interlocutor por escrito desde el principio
+
+#### Cómo contactarle
+
+**A qué dirección escribir.** service@senwellbio.cn (a la atención de Allen Lee)
+
+**Correos encontrados.** service@senwellbio.cn — fuente: https://www.senwelloem.com/contact-us y https://www.senwellbio.com/about-us (publicado de forma consistente en sus webs propias y también al pie de sus fichas de producto)
+
+**Teléfonos.** +86 173 3618 3697 (teléfono y WhatsApp, https://www.senwelloem.com/contact-us); +86 173 3618 6975 (segundo WhatsApp, atribuido a 'Allen Lee' en la ficha de nose pore strips: https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/nose-pore-strips.html); WeChat: senwellcare / Skype: senwellbio (https://www.senwelloem.com/contact-us)
+
+**Por qué canal y con qué táctica.** Email a service@senwellbio.cn dirigido nominalmente a Allen Lee, que es el comercial identificado en su ficha de tiras de poro nasal, y en paralelo WhatsApp al +86 173 3618 6975 (el suyo) o al +86 173 6183 697 (el general de la empresa) para avisar de que el correo está enviado; los fabricantes cosméticos de Guangdong responden mucho más rápido por WhatsApp que por email. El correo es el canal donde deben quedar por escrito los compromisos de MOQ, precio, espesor y certificados, porque todo eso acabará en el expediente PIF. También tienen WeChat (senwellcare) y Skype (senwellbio). NO hace falta el chat de Alibaba para negociar. PERO, y esto es importante: como el pedido piloto quedará por debajo de los 2.000 USD y su política es entonces 100 % de pago por adelantado, el primer pedido hay que cerrarlo DENTRO de Alibaba con Trade Assurance, aunque toda la negociación se haya hecho por correo. Nunca transferencia directa a una cuenta en el primer pedido. Y antes de pagar nada, pedir muestras físicas (son gratis, solo se paga el transporte): hay que tener el parche en la mano, pegarlo y comprobar que absorbe y se pone blanco.
+
+**Qué hay que pedirle.**
+
+- ACLARAR EL MOQ, que es la pregunta número uno: el 110 de Alibaba frente a las 10.000 bolsas de su web. Plantearlo así: 'uso vuestra forma nasal existente de 8,5 x 3 cm sin modificar y solo personalizo el envase, ¿cuál es el MOQ real para 1.000-2.000 uds?'
+- Recomendación técnica de ESPESOR: cuál de sus opciones (0,1 / 0,25 / 0,35 / 0,5 mm) absorbe y se pone blanco de forma visible. Es el argumento de venta de NOCTA y la diferencia entre un buen producto y una pegatina
+- Medidas exactas en mm de la forma nasal ya troquelada y foto del parche puesto sobre una nariz real, no un render
+- Ficha técnica con composición completa e INCI, más confirmación de adhesivo de grado médico y ensayo de irritación cutánea
+- Certificados en PDF a nombre de Zhongshan Senwell Bio Technology Co., Ltd.: ISO 22716:2007, GMPC, informe TÜV, con número y organismo emisor. Todo lo que publican está autodeclarado y sin verificar
+- MOQ y precio por unidad de las TRES opciones de envase (adhesivo sobre envase neutro, pouch con cremallera, sobre impreso) y del estuche impreso, más su recomendación honesta para un primer pedido de solo 125 cajas
+- Si la caja impresa la producen ellos o la subcontratan a imprenta, y qué coste tiene comprar cajas de más para la reposición
+- Paquete documental para el CPNP: composición cuantitativa con INCI, PIF, ensayos de estabilidad y compatibilidad con el envase, challenge test y datos toxicológicos para que un evaluador europeo firme el CPSR. Dejarles claro que la Persona Responsable será NOCTA en España y ver si entienden el matiz: su respuesta a este punto es el mejor test de si son profesionales
+- Una referencia CONTACTABLE de una marca de la UE a la que ya hayan suministrado y que haya notificado en CPNP; y referencias de los clientes que se atribuyen (FabFitFun, PIXI, L'Oréal)
+- Muestras físicas del parche nasal en 0,35 mm Y en 0,5 mm más una hoja de puntos, para probarlas en la cara antes de pagar nada. Son gratis, solo se paga el transporte
+- Precio por unidad a 1.000, 2.000, 5.000 y 10.000 uds, y precio por caja de 8, para ver la curva y saber a qué volumen mejora el margen
+- Incoterm, peso y volumen del lote, coste de courier express a España, y aceptación expresa de Trade Assurance (crítico, porque al ser un pedido inferior a 2.000 USD su condición es 100 % por adelantado)
+
+**El correo, en inglés (es el que se envía).**
+
+```text
+Subject: Hydrocolloid nose pore patch — pilot batch for Spanish brand (NOCTA)
+
+Hi Allen,
+
+My name is [NAME] and I am launching NOCTA, a Spanish hydrocolloid patch brand selling through our own online store in Spain. I am writing to you directly rather than through the Alibaba chat because I have studied your website carefully and I believe you are the supplier I want to work with.
+
+What made me write: on Alibaba you list hydrocolloid patches for acne and nose pores in XL size at EUR 0.2262 with an MOQ of 110 pieces. And on senwelloem.com I found your "Nose Pore Strips" page, 8.5 x 3 cm, with thickness options of 0.1 / 0.25 / 0.35 / 0.5 mm, plus the "XL Hydrocolloid Patches for Nose Pores — designed for nose, more absorptive and bigger" item. Of all the suppliers I have reviewed, you are the only one who ALREADY has nose-shaped tooling and who publishes the hydrocolloid thickness. That saves me paying for a die, and it tells me you actually understand the product.
+
+My situation, stated openly: I am a small buyer who is just starting, but I am serious. First order: around 1,000 nose patches (125 boxes of 8) plus 60 sheets of acne dots. If it works in Spain, I will reorder every month. I am not chasing the lowest price on the market; I am looking for a supplier who accepts that I start small and grows with me.
+
+There is one contradiction I need to clear up first: Alibaba shows an MOQ of 110 pieces, but your website states 10,000 bags for nose pore strips in standard shape and standard packaging, and 50,000 pcs for a custom shape. I assume the 110 refers to unbranded stock. Here is my proposal to work around that minimum: I do NOT want to change the patch shape. Your existing 8.5 x 3 cm nose shape works for me exactly as it is, with no new tooling. I only want to customise the outer packaging. On that basis, what is the real MOQ for 1,000-2,000 pieces?
+
+What I need confirmed in writing:
+
+Product
+1. Technical data sheet for the hydrocolloid: full composition and INCI. Among your thickness options (0.1 / 0.25 / 0.35 / 0.5 mm), which do you recommend so the patch absorbs sebum and clearly turns WHITE in use? My customers need to see the effect — it is the core selling point. I am thinking 0.35 or 0.5 mm, but I would like your technical opinion.
+2. Is the adhesive medical grade? Which one is it, and do you have skin irritation or biocompatibility test reports?
+3. Exact dimensions in mm of the nose shape you already produce, and a photo of the patch applied on a real nose.
+4. Acne dots: available sizes, dots per sheet, and thickness.
+
+Price and quantities
+5. Real MOQ using your existing nose shape unmodified, and price per piece at 1,000, 2,000, 5,000 and 10,000 pcs.
+6. Price per box of 8 patches at those same tiers.
+
+Packaging
+7. This is my biggest question. For the pilot I only need 125 boxes of 8 patches, which I know is below any printer's minimum. Your website offers three options: private label sticker on neutral packaging, customised zipper pouch, and customised envelope. For each one, I need the MOQ and the unit price. And please be candid with me: for a first order of 125 boxes, what do you recommend? Should I start with a NOCTA sticker on neutral packaging and leave the full-colour printed box for the second order? I would rather you tell me the truth than sell me a minimum I cannot afford.
+8. Do you produce the printed box in-house or subcontract it to a printer?
+
+EU compliance (this is where you can stand out)
+9. Please send, as PDFs issued in the name of Zhongshan Senwell Bio Technology Co., Ltd., the certificates you advertise: ISO 22716:2007, GMPC and the TÜV report, including certificate numbers and issuing bodies. Also the product MSDS.
+10. On CPNP I want to be very precise, because this is where most suppliers get confused: in the EU the Responsible Person must be ESTABLISHED IN THE EU, so we will take that role in Spain. What I need from you is not for you to "do the CPNP", but to supply what makes notification possible: full quantitative composition with INCI, the Product Information File (PIF), stability and packaging-compatibility testing, challenge testing if applicable, and the toxicological data a European safety assessor needs in order to sign the CPSR. Your website mentions CPSR, CPNP and PIF for European customers, so I assume you have done this before. Can you confirm, and tell me whether there is an additional cost?
+11. A direct question: have you already supplied an EU brand that notified the product on CPNP? A contactable reference would be ideal.
+
+Lead times and terms
+12. Samples: I would like to receive a physical sample of the hydrocolloid nose patch in both 0.35 mm and 0.5 mm, plus one sheet of acne dots. I understand from your website that samples are free and I pay the freight. Please confirm the lead time and the shipping cost to Spain.
+13. Production lead time for 1,000-2,000 pieces.
+14. Incoterm, weight and volume of the batch, and estimated express courier cost to Spain (postcode [POSTCODE]). I assume sea freight makes no sense at this volume.
+15. I understand that for orders below USD 2,000 your terms are 100% payment in advance. As this is our first transaction, I would like to place it through Alibaba Trade Assurance. Do you accept that?
+
+If the sample convinces me and the numbers work, I can place the order within weeks.
+
+Thank you, Allen. I look forward to your reply.
+
+Best regards,
+[NAME]
+NOCTA — [website] — [email] — [phone]
+Spain
+```
+
+**El mismo correo en español, para que puedas revisarlo.**
+
+```text
+Asunto: Parche de hidrocoloide para poros de la nariz — lote piloto para marca española (NOCTA)
+
+Hola, Allen:
+
+Me llamo [NOMBRE] y estoy lanzando NOCTA, una marca española de parches de hidrocoloide que se venderá desde nuestra propia tienda online en España. Te escribo directamente en lugar de por el chat de Alibaba porque he estudiado a fondo vuestra web y creo que sois el proveedor con el que quiero trabajar.
+
+Lo que me ha hecho escribiros: en Alibaba tenéis publicados parches de hidrocoloide para acné y poros de la nariz en tamaño XL a 0,2262 EUR con MOQ de 110 unidades. Y en senwelloem.com he visto vuestra ficha de "Nose Pore Strips", de 8,5 x 3 cm, con espesores de 0,1 / 0,25 / 0,35 / 0,5 mm, y la referencia "XL Hydrocolloid Patches for Nose Pores — designed for nose, more absorptive and bigger". Sois los únicos de los proveedores que he mirado que YA tienen troquelada una forma para la nariz y que publican el espesor del hidrocoloide. Eso me ahorra pagar un troquel y me dice que sabéis de qué va el producto.
+
+Mi situación, con total transparencia: soy un comprador pequeño que empieza, pero que va en serio. Primer pedido: unas 1.000 unidades de parche nasal (125 cajas de 8) más 60 hojas de puntos para granos. Si funciona en España, repetiré cada mes. No busco el precio más bajo del mercado, busco un proveedor que entienda que empiezo pequeño y me acompañe al crecer.
+
+He visto una contradicción que necesito aclarar antes que nada: en Alibaba el MOQ es de 110 unidades, pero en vuestra web indicáis 10.000 bolsas para la tira de poro nasal en forma y embalaje estándar, y 50.000 uds para forma personalizada. Entiendo que el de 110 es material en stock sin marca. Mi propuesta para esquivar ese mínimo: NO quiero cambiar la forma del parche. Me sirve vuestra forma nasal existente de 8,5 x 3 cm tal cual, sin troquel nuevo. Solo quiero personalizar el envase exterior. ¿Con ese planteamiento, cuál es el MOQ real para 1.000-2.000 unidades?
+
+Lo que necesito confirmado por escrito:
+
+Sobre el producto
+1. Ficha técnica del hidrocoloide: composición completa e INCI. De vuestros espesores (0,1 / 0,25 / 0,35 / 0,5 mm), ¿cuál recomendáis para que absorbe sebo y se vuelva claramente BLANCO al usarse? Mi cliente tiene que ver el efecto: es el argumento de venta. Creo que 0,35 o 0,5 mm, pero decidme vuestra opinión técnica.
+2. ¿El adhesivo es de grado médico? ¿Cuál es y tenéis ensayo de irritación cutánea o de biocompatibilidad?
+3. Medidas exactas en mm de la forma nasal que ya tenéis, y foto del parche colocado sobre una nariz real.
+4. Puntos para granos: tamaños disponibles, puntos por hoja y espesor.
+
+Sobre precio y cantidades
+5. MOQ real usando vuestra forma nasal existente sin modificar, y precio por unidad a 1.000, 2.000, 5.000 y 10.000 uds.
+6. Precio por caja de 8 parches en esos mismos tramos.
+
+Sobre el packaging
+7. Esta es mi mayor duda. En el piloto solo necesito 125 cajas de 8 parches, que sé que está por debajo de cualquier mínimo de imprenta. Vuestra web ofrece tres opciones: adhesivo de marca sobre envase neutro, bolsa con cremallera personalizada y sobre personalizado. Necesito saber, para cada una: MOQ y precio por unidad. Y decidme con franqueza: para un primer pedido de 125 cajas, ¿qué me recomendáis? ¿Empiezo con adhesivo NOCTA sobre envase neutro y dejo el estuche impreso a todo color para el segundo pedido? Prefiero que me digáis la verdad a que me vendáis un mínimo que no puedo pagar.
+8. ¿La caja impresa la hacéis vosotros o la subcontratáis a una imprenta?
+
+Sobre normativa europea (aquí es donde os podéis diferenciar)
+9. Enviadme en PDF, a nombre de Zhongshan Senwell Bio Technology Co., Ltd., los certificados que anunciáis: ISO 22716:2007, GMPC y el informe TÜV, con número de certificado y organismo emisor. También la MSDS del producto.
+10. Sobre el CPNP quiero ser muy preciso, porque es donde más proveedores se confunden: en la UE la Persona Responsable debe estar ESTABLECIDA EN LA UE, así que la asumiremos nosotros en España. De vosotros no necesito que "hagáis el CPNP", sino que me entreguéis lo que hace falta para poder notificarlo: composición cuantitativa completa con INCI, expediente PIF, ensayos de estabilidad y de compatibilidad con el envase, ensayo de desafío microbiológico si aplica, y los datos toxicológicos para que un evaluador de seguridad europeo pueda firmar el CPSR. Vuestra web menciona CPSR, CPNP y PIF para clientes europeos, así que entiendo que ya habéis hecho esto antes. ¿Podéis confirmarlo y decirme si tiene coste adicional?
+11. Una pregunta directa: ¿habéis suministrado ya a alguna marca de la UE que haya notificado el producto en el CPNP? Si podéis darme una referencia contactable, mejor.
+
+Sobre plazos y condiciones
+12. Muestras: quiero recibir una muestra física del parche nasal de hidrocoloide en 0,35 mm y en 0,5 mm, y una hoja de puntos. Entiendo por vuestra web que las muestras son gratuitas y el transporte lo pago yo. Confirmadme plazo y coste del envío a España.
+13. Plazo de producción para 1.000-2.000 unidades.
+14. Incoterm, peso y volumen del lote, y coste estimado de courier express a España (CP [CP]). Entiendo que para este volumen el marítimo no tiene sentido.
+15. Sé que para pedidos por debajo de 2.000 USD vuestra condición es 100 % por adelantado. Al ser nuestra primera operación, quiero cerrarla con Trade Assurance de Alibaba. ¿Lo aceptáis?
+
+Si la muestra me convence y los números cuadran, puedo hacer el pedido en cuestión de semanas.
+
+Muchas gracias, Allen. Quedo a la espera.
+
+Un saludo,
+[NOMBRE]
+NOCTA — [web] — [email] — [teléfono]
+España
+```
+
+**Fuentes.**
+
+- https://www.senwelloem.com/
+- https://www.senwelloem.com/contact-us
+- https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/hydrocolloid-acne-plaster.html
+- https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/custom-pimple-patches.html
+- https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/nose-pore-strips.html
+- https://www.senwelloem.com/pimple-patch/hydrocolloid-pimple-patches/hydrocolloid-acne-patches.html
+- https://www.senwelloem.com/showroom/hydrocolloid-strips-for-acne/
+- https://www.senwelloem.com/showroom/hydrated-hydrocolloid-patch/
+- https://www.senwellbio.com/
+- https://www.senwellbio.com/about-us
+- https://www.senwellbio.com/oem-odm-service
+- https://www.senwellbio.com/acne-care/microneedle-pimple-patch/hydrocolloid-pimple-patches.html
+- https://senwellbio.en.alibaba.com/
+- https://www.sourceready.com/supplier/detail/zhongshan-senwell-bio-technology-co-ltd
+
+
+### 7. Guangdong Huashen Biomedical Co., Ltd. (广东华神生物医药有限公司)
 
 **Nota 7.0/10 · Fábrica · confianza media**
 
@@ -1318,7 +1535,7 @@ NOCTA – España
 - https://ecomundo.eu/en/blog/responsible-person-role-cosmetics
 
 
-### 7. Henan Like Health Industry Co., Ltd. (河南丽可健康产业有限公司)
+### 8. Henan Like Health Industry Co., Ltd. (河南丽可健康产业有限公司)
 
 **Nota 6.5/10 · Intermediario · confianza media**
 
@@ -1525,7 +1742,198 @@ Gracias,
 - https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_en
 
 
-### 8. Shaanxi Keysing Bio-Tech Co., Ltd (Alibaba: keysingchina)
+### 9. Tianjin Hodaf Technology Co., Ltd. — filial comercial del grupo HODAF
+
+**Nota 6.5/10 · Intermediario · confianza media**
+
+**Qué es de verdad.** BRAZO COMERCIAL / EXPORTADOR del mismo grupo que el proveedor 1, no una fábrica independiente. Evidencia dura: la página de contacto de la matriz (https://www.hodaf.com/contact/) lista literalmente 'Tianjin Subsidiary: 2-701 Chenying building, Xinkai road, Hedong District, Tianjin, China', y la propia web de Tianjin Hodaf (https://www.hodafpatch.com/) da como domicilio '2-701, Chenying Mansion, Hedong District Tianjin, China'. Coinciden edificio, planta y unidad. Además Panjiva registra sus embarques desde '2-601 CHENYING BLDG XINKAI RD HEDONG DIST TIANJIN', es decir una oficina, no una nave. Y su web reclama las MISMAS cifras de planta que la matriz (40.000 m2, 400+ empleados): está citando la fábrica del grupo en Hebei, no una propia.
+
+**En qué se basa esa clasificación.** Coincidencia exacta de domicilio entre la página de contacto de la matriz (https://www.hodaf.com/contact/, sección 'Tianjin Subsidiary') y la web de la filial (https://www.hodafpatch.com/); dirección de oficina en los registros aduaneros de Panjiva (https://panjiva.com/Tianjin-Hodaf-Technology/70745294); perfil de ExportHub que la sitúa en 'Séptima planta, Shuangying Mansion, Hedong District' con 101-200 personas
+
+| Dato | Valor |
+|---|---|
+| Dirección | 2-701, Chenying Mansion (Chenying building), Xinkai Road, Hedong District, Tianjin, China. ExportHub da una variante: 7ª planta, Shuangying Mansion, Hedong District, Tianjin, CP 300000. La fábrica del grupo está en Zhengding, Shijiazhuang (Hebei), a unos 300 km. |
+| Año de fundación | 2005 según su propia web hodafpatch.com; 2006 según ExportHub. La ficha de Alibaba dice 15 años, coherente con una cuenta abierta hacia 2010-2011. |
+| Empleados | Declara '400+ employees' en su web (de nuevo, la cifra del grupo). ExportHub le atribuye 101-200 personas y BeauteTrade 201-300. Como equipo propio de Tianjin, lo verosímil es una oficina comercial de decenas de personas. |
+| Superficie de fábrica | No tiene planta propia demostrable. Su web declara '40.000 square meters Factory area', pero es la misma cifra que publica la matriz de Hebei: se está atribuyendo la fábrica del grupo. Su domicilio real es una unidad de oficina (2-701) en un edificio de Hedong, Tianjin. |
+| Web propia | https://www.hodafpatch.com/ |
+
+**Certificaciones.**
+
+- ISO 22716 — declarada en su propia web (https://www.hodafpatch.com/), junto a SGS, CE, FDA y BSCI. IMPORTANTE: es la única de las dos entidades HODAF que menciona ISO 22716, y no hay copia pública del certificado ni confirmación de a qué entidad legal está emitido
+- CE — declarada en Alibaba y en su web, sin documento público
+- FDA — coherente con los registros FDA del grupo en Hebei
+- BSCI (auditoría social) — declarada, sin informe público
+- SGS — mencionada como ensayo, sin informe público
+
+**Qué fabrica de verdad.** Packs térmicos y calentadores, parches para dormir, parches de salud, mascarillas de pie, parches de pie detox, almohadillas y parches de ojos, mascarilla de ojos de vapor, complementos. En Alibaba amplían a rollos y apósitos de hidrocoloide (rollos de 'piel artificial' para heridas, ampollas y acné, cortables a medida) y a parches de acné de hidrocoloide con aceite de árbol de té. En ExportHub el catálogo es aún más disperso: parches detox, adelgazantes, antimosquitos, antitabaco, tiras nasales, velas de oído, parches febrífugos, apósitos, mascarillas de mano... Catálogo muy amplio y heterogéneo, señal típica de casa comercial que vende lo que fabrica el grupo y lo que consigue de terceros.
+
+**¿Es hidrocoloide auténtico?** PROBABLE pero NO DEMOSTRADO para forma de nariz. A favor: su listado de Alibaba incluye rollos de hidrocoloide y apósitos tipo 'piel artificial' cortables a medida, y parches de acné de hidrocoloide, lo cual es hidrocoloide de verdad (absorbe y se vuelve blanco), no PVA. La ficha de acné del grupo confirma 'high-grade hydrocolloid'. En contra: al ser el mismo grupo, arrastra exactamente el mismo problema que el proveedor 1 — el producto nasal del grupo en su web propia es tira de carbón arrancable y tira anti-ronquidos. No existe prueba pública de un parche de hidrocoloide troquelado con forma de nariz. El rollo de hidrocoloide sí es una vía interesante: si tienen el material en rollo, troquelar una forma de nariz es técnicamente sencillo para ellos; el coste está en el troquel, no en el material.
+
+**MOQ real.** MOQ 1.000 uds según su ficha de Alibaba, que es el MEJOR dato de los dos HODAF y encaja exactamente con el lote piloto de NOCTA (1.000 parches). Coherente además con los escalones '100-1000' que publica la matriz en su web. Para forma personalizada de nariz habrá que sumar troquel y probablemente subirán el mínimo; para forma estándar ya existente, 1.000 uds es creíble.
+
+**Precio real estimado.** Igual que el proveedor 1, el 0,0348-0,0522 EUR/ud publicado NO es el precio del producto de NOCTA: ese rango corresponde a un punto pequeño de acné o al tramo de altísimo volumen, no a un parche que cubre la nariz (~25 cm2 de hidrocoloide). Estimación realista para 1.000 parches nasales de hidrocoloide desde esta casa: 0,15-0,28 EUR/ud, más troquel de 100-300 EUR si hay que crear la forma. Caja de 8 parches: 1,20-2,24 EUR de producto + 0,30-0,60 EUR de estuche y sobre impresos = 1,50-2,85 EUR por caja EXW. Sumando courier express a España (150-250 EUR por un envío de 8-12 kg) el coste en almacén ronda 2,50-3,50 EUR por caja de 8, contra un PVP de 16,95 EUR. Es viable, pero el presupuesto de 1.000 EUR se consume casi entero entre producto, troquel, estuchado y transporte: hay que entrar sabiéndolo.
+
+**Packaging personalizado.** Sin dato público. El grupo declara en LinkedIn servicios de diseño, impresión y logística, lo que apunta a que gestionan la impresión del estuche, muy probablemente vía imprenta subcontratada en Hebei. No publican ni MOQ ni precio. Es la pregunta crítica: 125 cajas está muy por debajo del mínimo habitual de cualquier imprenta china (500-1.000 estuches), así que hay que preguntar cuánto cuesta comprar el excedente de cajas y guardarlo para la reposición.
+
+**Plazos.** No publicados. Su web habla de servicio OEM/ODM y de un equipo de diseño. Referencia sectorial para este tipo de casa: muestras 7-15 días si hay stock del material, 15-25 días si hay que hacer troquel; producción 20-30 días; courier express a España 5-8 días puerta a puerta. Marítimo carece de sentido para este volumen.
+
+**Encaje con NOCTA.** Es la MEJOR PUERTA DE ENTRADA de las dos entidades HODAF, pero sigue sin ser el proveedor ideal del producto héroe. A favor de NOCTA: MOQ de 1.000 unidades que calza exactamente con el lote piloto, 15 años de cuenta en Alibaba, email propio verificable, y es la única de las dos que declara ISO 22716, que es el certificado que la UE mira en cosmética. También venden rollo de hidrocoloide, lo que abre la puerta a troquelar la forma de nariz. En contra: es una oficina comercial, no la fábrica, así que cada pregunta técnica pasará por un intermediario interno y las respuestas tardarán más y perderán precisión; y es el mismo grupo que el proveedor 1, de modo que no hay dos ofertas que comparar sino una. Uso recomendado: contactar SOLO a esta entidad (no a las dos), pedirle presupuesto conjunto de parche nasal y puntos de acné, exigirle el ISO 22716 en PDF, y usarla como plan B para reposición o como proveedor de los puntos de acné mientras el parche nasal se compra a un especialista en hidrocoloide.
+
+**A favor.**
+
+- MOQ de 1.000 unidades en su ficha, que es exactamente el tamaño del lote piloto de NOCTA: es el único de los tres cuyo MOQ publicado coincide con lo que necesitamos
+- 15 años de antigüedad de cuenta en Alibaba y empresa constituida en 2005-2006: una casa con ese recorrido no desaparece con el anticipo
+- Declara ISO 22716 (GMP cosmética) en su propia web, el certificado que realmente pesa en la UE para un parche cosmético. Es la única de las dos entidades HODAF que lo menciona
+- Respaldo industrial real detrás: pertenece a un grupo con fábricas físicas en Zhengding y con registro FDA, no es un revendedor sin planta
+- Historial exportador comprobable: 60 embarques a EE. UU. registrados en Panjiva desde 2007, con envío reciente documentado en enero de 2025
+- Email propio publicado (Info@hodafpatch.com) y móvil directo: se puede negociar fuera de Alibaba y dejar constancia escrita
+- Venden rollo de hidrocoloide y apósitos cortables, lo que significa que el material base lo dominan; troquelar una forma de nariz es un paso corto desde ahí
+
+**En contra.**
+
+- NO es una fábrica: es la filial comercial del proveedor 1. Su domicilio es la unidad 2-701 de un edificio de oficinas en Tianjin, y así consta también en los registros aduaneros
+- Se atribuye en su web los 40.000 m2 y los 400 empleados de la fábrica del grupo en Hebei, como si fueran suyos. Eso es marketing, no información
+- Presentarlos como una alternativa independiente al proveedor 1 es un espejismo: pedir dos presupuestos es pedirle dos veces lo mismo a la misma empresa
+- El ISO 22716 está solo DECLARADO en su web, sin PDF público ni número de certificado ni organismo emisor, y curiosamente la matriz no lo menciona. Hasta ver el documento, hay que tratarlo como no acreditado
+- Arrastra el problema de producto del grupo: en la web propia del grupo, lo nasal es tira de carbón ARRANCABLE y tira anti-ronquidos, no hidrocoloide con forma de nariz
+- Catálogo enorme y disperso (desde parches antitabaco hasta velas de oído y antimosquitos): señal clásica de casa comercial que revende, no de especialista
+- El precio de 0,0348-0,0522 EUR de la ficha no corresponde a un parche de tamaño nasal; planificar el margen con esa cifra llevaría a un error de coste de 4 o 5 veces
+- Al ser intermediario del propio grupo, cada respuesta técnica (espesor del hidrocoloide, adhesivo, ensayos) depende de que la fábrica de Hebei se la pase: esperar lentitud e imprecisión
+- La Persona Responsable en la UE no la pueden asumir ellos bajo ningún concepto: tendrá que ser NOCTA en España o una RP contratada
+
+#### Cómo contactarle
+
+**A qué dirección escribir.** Info@hodafpatch.com (con copia a hello@hodaf.com)
+
+**Correos encontrados.** Info@hodafpatch.com — fuente: https://www.hodafpatch.com/ (email publicado en su propia web corporativa); hello@hodaf.com — fuente: https://www.hodaf.com/contact/ (email del grupo matriz; sirve igualmente para llegar a esta filial y de hecho es útil enviarlo en copia)
+
+**Teléfonos.** +86 153 3218 8115 (móvil/WhatsApp publicado en https://www.hodafpatch.com/); +86-0311-83500380 (fijo de la matriz, https://www.hodaf.com/contact/)
+
+**Por qué canal y con qué táctica.** Email a Info@hodafpatch.com, publicado en su propia web hodafpatch.com, poniendo SIEMPRE en copia a hello@hodaf.com, que es el correo de la matriz en Hebei donde está la fábrica de verdad. Esa copia es deliberada y hace dos cosas: acorta la cadena de teléfono roto entre oficina comercial y planta, y les indica que sabemos cómo está montado el grupo, lo que suele mejorar mucho la calidad de las respuestas. Si en 3-4 días laborables no contestan, WhatsApp al +86 153 3218 8115, que es el móvil que ellos mismos publican. IMPORTANTE: contactar a ESTA entidad o a la matriz, pero no lanzar dos peticiones separadas como si fueran dos proveedores distintos, porque es la misma empresa y quedaría como un comprador que no ha hecho los deberes. Aunque se negocie por correo, el primer pedido conviene cerrarlo dentro de Alibaba con Trade Assurance.
+
+**Qué hay que pedirle.**
+
+- El certificado ISO 22716 en PDF con número y organismo emisor, y aclaración de a qué entidad legal está emitido (Tianjin Hodaf o Hebei Houde Hanfang). Es la pregunta que más información da: si lo mandan, suben mucho; si escurren el bulto, es marketing
+- Confirmación de si el MOQ de 1.000 uds se mantiene para un parche de TAMAÑO NASAL, o si ese MOQ solo aplica a puntos pequeños
+- Precio real por unidad de un parche nasal de ~8,5 x 3 cm a 1.000, 3.000 y 10.000 uds, dejando claro que el 0,0348 EUR de la ficha no vale para ese tamaño
+- ¿Existe troquel de forma de nariz? Si no, coste del troquel y MOQ asociado. Dado que venden hidrocoloide en rollo, esta es su mejor baza
+- Ficha técnica del hidrocoloide con espesor en mm y tipo de adhesivo, más ensayo de irritación cutánea
+- Precio y MOQ de la caja impresa de 8 parches y del sobre individual, indicando si lo imprimen o lo subcontratan y qué cuesta el excedente de cajas
+- Aclaración expresa de si son ellos quienes fabrican o si el pedido se produce en la planta de Zhengding, y a nombre de quién se emitirá la factura (importa para el expediente de importación y para el PIF)
+- Muestras físicas de parche nasal de hidrocoloide y de hoja de puntos, con plazo y quién paga el transporte
+- Documentación para el CPNP: composición cuantitativa completa, ensayos de estabilidad y de compatibilidad con el envase, MSDS. Deben entender que la Persona Responsable será NOCTA en España, no ellos
+- Incoterm, peso y volumen del lote y coste de courier express a España; aceptación de Trade Assurance
+
+**El correo, en inglés (es el que se envía).**
+
+```text
+Subject: Nose-shaped hydrocolloid patch, 1,000 pcs — pilot order from Spain (NOCTA brand)
+
+Hello HODAF Tianjin team,
+
+My name is [NAME] and I am launching NOCTA, a Spanish hydrocolloid patch brand selling through our own online store in Spain. I am writing after seeing your Alibaba listing: pimple remover and hydrocolloid nose patches at EUR 0.0348-0.0522 with an MOQ of 1,000 pieces. That MOQ is exactly the size of my first order, which is why you are the first supplier I am approaching seriously.
+
+I have also reviewed your website hodafpatch.com, where you list SGS, CE, FDA, BSCI and ISO 22716 certifications, and I noticed you supply hydrocolloid rolls and cut-to-size dressings in addition to acne patches.
+
+Let me be upfront so neither of us wastes time. First order: around 1,000 hydrocolloid nose patches plus 60 sheets of acne dots. It is a small pilot batch, I know, but if the product performs in Spain I intend to reorder every month. I am looking for a factory to grow with, not the cheapest first invoice.
+
+What I need confirmed in writing before I decide:
+
+Product
+1. Technical data sheet for the hydrocolloid: composition, THICKNESS IN MM, and absorption capacity. I need genuine hydrocolloid that absorbs and turns white. I do not want a peel-off PVA charcoal strip: I have seen that the group sells "Deep Cleansing Charcoal Strips" and anti-snoring nasal strips, and I want to be clear that this is not the product I am after.
+2. Is the adhesive medical grade? Which adhesive is it, and do you have skin irritation or biocompatibility test reports?
+3. Do you ALREADY have die-cutting tooling for a NOSE-shaped patch? If yes, exact dimensions in mm and a photo of the patch worn on the face. If not, the cost of new tooling and the MOQ it would require. Since you supply hydrocolloid in roll form, I assume die-cutting a new shape should not be a problem for you.
+4. Acne dots: sizes, dots per sheet, and thickness.
+
+Price and quantities
+5. Please confirm the 1,000-piece MOQ still applies to a nose-sized patch. I understand the EUR 0.0348-0.0522 price refers to a small patch or a very high volume; please quote the REAL price of a nose patch at 1,000, 3,000 and 10,000 pieces.
+6. Price per printed box of 8 patches at those same tiers.
+
+Packaging
+7. Printed box and individual sachet with the NOCTA logo: do you produce this in-house or subcontract it? I need the MOQ and price per box. For the pilot I only need 125 boxes, so please tell me candidly what the real printing minimum is and what buying surplus boxes for restocking would cost.
+
+EU compliance (this is decisive)
+8. Please send the ISO 22716 certificate advertised on your website as a PDF, including certificate number and issuing body, and tell me which legal entity it is issued to: Tianjin Hodaf Technology or Hebei Houde Hanfang? Please also send CE, MSDS and ISO 13485 if you hold it. In the EU a hydrocolloid pore patch is usually classified as a COSMETIC, and ISO 22716 is what really counts.
+9. Can you provide or support the Cosmetic Product Safety Report (CPSR) and the Product Information File (PIF) required for CPNP notification? We will act as Responsible Person in Spain, but I need the technical documentation from you: full composition, stability testing and packaging compatibility testing.
+
+Lead times and terms
+10. Sample lead time and production lead time for 1,000 units.
+11. Incoterm, weight and volume of the batch, and estimated express courier cost to Spain (postcode [POSTCODE]). Who pays for the samples and their shipping?
+12. Do you accept Alibaba Trade Assurance on the first order?
+
+One note to speed things up: I am aware you are the Tianjin subsidiary of Hebei Houde Hanfang and that the factory is in Zhengding, which is why I have copied hello@hodaf.com. I would prefer a single coordinated offer from the group.
+
+If you send samples and certificates, I can move quickly.
+
+Best regards,
+[NAME]
+NOCTA — [website] — [email] — [phone]
+Spain
+```
+
+**El mismo correo en español, para que puedas revisarlo.**
+
+```text
+Asunto: Parche de hidrocoloide con forma de nariz, 1.000 uds — pedido piloto desde España (marca NOCTA)
+
+Hola, equipo de HODAF Tianjin:
+
+Me llamo [NOMBRE] y estoy lanzando NOCTA, una marca española de parches de hidrocoloide que se venderá en nuestra propia tienda online en España. Os escribo tras ver vuestra ficha en Alibaba: removedor de espinillas y parches de hidrocoloide para nariz a 0,0348-0,0522 EUR con MOQ de 1.000 unidades. Ese MOQ es justo el tamaño de mi primer pedido, y por eso sois el primer proveedor al que escribo en serio.
+
+He mirado también vuestra web hodafpatch.com, donde indicáis certificaciones SGS, CE, FDA, BSCI e ISO 22716, y he visto que vendéis rollos de hidrocoloide y apósitos cortables además de los parches de acné.
+
+Pongo las cartas sobre la mesa para que no perdamos tiempo. Primer pedido: unas 1.000 unidades de parche nasal de hidrocoloide más 60 hojas de puntos para granos. Es un lote piloto pequeño, lo sé, pero si el producto funciona en España la intención es repetir cada mes. Busco una fábrica con la que crecer, no el precio más bajo de la primera factura.
+
+Lo que necesito confirmado por escrito antes de decidir:
+
+Sobre el producto
+1. Ficha técnica del hidrocoloide: composición, ESPESOR EN MM y capacidad de absorción. Necesito hidrocoloide de verdad, que absorba y se ponga blanco. NO quiero tira arrancable de PVA con carbón: he visto que el grupo vende "Deep Cleansing Charcoal Strips" y tiras nasales anti-ronquidos, y quiero dejar claro que no es ese el producto.
+2. ¿El adhesivo es de grado médico? ¿Qué adhesivo es y tenéis ensayo de irritación cutánea o biocompatibilidad?
+3. ¿Tenéis YA troquel de un parche con forma de NARIZ? Si sí, medidas exactas en mm y foto del parche colocado en la cara. Si no, coste del troquel nuevo y MOQ que implicaría. Como vendéis hidrocoloide en rollo, entiendo que troquelar una forma nueva no debería ser un problema para vosotros.
+4. Puntos de acné: tamaños, puntos por hoja y espesor.
+
+Sobre precio y cantidades
+5. Confirmadme que el MOQ de 1.000 unidades se mantiene para un parche de tamaño nasal. Entiendo que el precio de 0,0348-0,0522 EUR corresponde a un parche pequeño o a un volumen muy alto; decidme el precio REAL de un parche nasal a 1.000, 3.000 y 10.000 unidades.
+6. Precio por caja impresa de 8 parches en esos mismos tramos.
+
+Sobre el packaging
+7. Caja impresa y sobre individual con el logo NOCTA: ¿lo hacéis vosotros o lo subcontratáis? Necesito MOQ y precio por caja. En el piloto solo necesito 125 cajas, así que decidme con franqueza el mínimo de impresión y el coste de comprar cajas de más para la reposición.
+
+Sobre normativa europea (es decisivo)
+8. Enviadme en PDF el certificado ISO 22716 que anunciáis en vuestra web, con número de certificado y organismo emisor, y a nombre de qué entidad legal está: ¿Tianjin Hodaf Technology o Hebei Houde Hanfang? Mandadme también CE, MSDS y, si existe, ISO 13485. En la UE un parche de hidrocoloide para poros suele clasificarse como COSMÉTICO y el ISO 22716 es lo que de verdad pesa.
+9. ¿Podéis proporcionar o ayudar con el Informe de Seguridad (CPSR) y el expediente PIF para notificar en el CPNP? La Persona Responsable la asumiremos nosotros en España, pero necesito de vosotros la documentación técnica: composición completa, ensayos de estabilidad y de compatibilidad con el envase.
+
+Sobre plazos y condiciones
+10. Plazo de muestras y de producción para 1.000 unidades.
+11. Incoterm, peso y volumen del lote, y coste estimado de courier express a España (CP [CP]). ¿Quién paga las muestras y su envío?
+12. ¿Aceptáis Trade Assurance de Alibaba en el primer pedido?
+
+Un apunte para agilizar: sé que sois la filial de Tianjin de Hebei Houde Hanfang y que la fábrica está en Zhengding; por eso pongo en copia a hello@hodaf.com. Prefiero una sola oferta coordinada del grupo.
+
+Si me mandáis muestras y certificados, puedo cerrar rápido.
+
+Un saludo,
+[NOMBRE]
+NOCTA — [web] — [email] — [teléfono]
+España
+```
+
+**Fuentes.**
+
+- https://www.hodafpatch.com/
+- https://www.hodaf.com/contact/
+- https://www.hodaf.com/company-profile/
+- https://www.hodaf.com/product/acne-patch/
+- https://panjiva.com/Tianjin-Hodaf-Technology/70745294
+- https://www.exporthub.com/tianjin-hodaf-science-and-technology/profile.html
+- https://www.beautetrade.com/suppliers/vp-49423_tianjin-hodaf-technology-co-ltd/
+- https://hdpatchfactory.en.alibaba.com/
+- https://hodafpatch.en.alibaba.com/
+- https://www.seair.co.in/us-import/e-tianjin-hodaf-technology-co-limited.aspx
+
+
+### 10. Shaanxi Keysing Bio-Tech Co., Ltd (Alibaba: keysingchina)
 
 **Nota 6.0/10 · Intermediario · confianza media**
 
@@ -1723,7 +2131,7 @@ NOCTA - España
 - https://huaweimedical.en.made-in-china.com/
 
 
-### 9. Changzhou Xinfa Medical Products Co., Ltd.
+### 11. Changzhou Xinfa Medical Products Co., Ltd.
 
 **Nota 6.0/10 · Fábrica · confianza media**
 
@@ -1901,7 +2309,202 @@ NOCTA — España
 - https://huaweimedical.en.made-in-china.com/product/pFqGrRgOOifJ/China-OEM-Hydrocolloid-Acne-Patc-Pimple-Patches-Manufacturer.html (contraste de precios OEM de hidrocoloide)
 
 
-### 10. Dongguan Chuancheng Medical Technology Co., Ltd. (东莞传承医疗科技有限公司)
+### 12. Hebei Houde Hanfang Medical Devices (Group) Co., Ltd. — marca HODAF
+
+**Nota 6.0/10 · Fábrica · confianza media**
+
+**Qué es de verdad.** fabricante REAL (con brazo comercial propio). Evidencia: web propia www.hodaf.com con dos fábricas físicas nombradas (Beisun Factory, No.1 Beisun Village, Zhengding; Liangxia Sub-Factory, Nanlou Township, Zhengding); Panjiva registra 338 embarques a 83 clientes; LinkedIn declara 201-500 empleados; ficha Made-in-China clasifica la empresa como 'Manufacturer/Factory, Trading Company' (es decir, fabrica Y revende). Nota: la propia empresa da dos cifras distintas de planta (40.000 m2 / 400 empleados en hodaf.com vs 10.000 m2 / 150 operarios en Made-in-China), lo que obliga a pedir prueba.
+
+**En qué se basa esa clasificación.** Web propia con direcciones de fábrica y subsidiarias (https://www.hodaf.com/contact/), perfil Made-in-China con tipo de negocio (https://hodaf-pads.en.made-in-china.com/), registro de embarques Panjiva (https://panjiva.com/Hebei-Houde-Hanfang-Medical-Devices/34182162), perfil LinkedIn con rango de empleados
+
+| Dato | Valor |
+|---|---|
+| Dirección | Sede: Building 16, Zhengding Science and Technology Valley, No.2 Weituo Street, Zhengding Area, (Hebei) Free Trade Experimental Zone, China. Fábrica Beisun: No.1 Beisun Village, Zhengding, Shijiazhuang. Sub-fábrica Liangxia: Liangxia Village, Nanlou Township, Zhengding County, Shijiazhuang, Hebei. |
+| Año de fundación | 2009 (según su propia web). La ficha de Alibaba dice '6 años', que es la antigüedad de LA CUENTA de Alibaba, no de la empresa. |
+| Empleados | Contradictorio: 400+ según hodaf.com; 'over 150 workers' según Made-in-China; 201-500 según LinkedIn. Rango realista: 150-400. |
+| Superficie de fábrica | Contradictorio: 40.000 m2 según hodaf.com/company-profile; 'more than 10.000 square meters' según su propio perfil de Made-in-China. Hay que exigir foto del certificado de propiedad/arrendamiento o informe de auditoría. |
+| Web propia | https://www.hodaf.com/ (adicionalmente su LinkedIn enlaza http://www.alipads.com, que en el momento de la consulta devolvía 503) |
+
+**Certificaciones.**
+
+- ISO 9001 / ISO 9000 (sistema de gestión) — declarado en su perfil de Made-in-China
+- CE — declarado en Alibaba y Made-in-China, SIN copia pública del certificado
+- FDA — verosímil: existen registros FDA a nombre de 'Hebei Houde Hanfang Medical Devices Group Co., Ltd.' y un informe MAUDE por un producto 'TAPE AND BANDAGE, ADHESIVE', lo que indica registro real de establecimiento para apósitos adhesivos
+- MSDS y SGS — mencionados en su descripción de Made-in-China, sin documento público
+- NO SE HA ENCONTRADO NINGUNA EVIDENCIA PÚBLICA DE ISO 22716 (GMP cosmética) NI DE ISO 13485 a nombre de esta entidad
+
+**Qué fabrica de verdad.** Su negocio real NO es el hidrocoloide cosmético. El catálogo verificado en su propia web es: parches de dolor / emplastos herbales, parches detox de pie, mascarillas de pie y mano, parches térmicos y calentadores, parches adelgazantes, parches de vitaminas, mascarillas de ojos, láminas de silicona para cicatrices, velas de oído y parches febrífugos. En LinkedIn se autodefinen literalmente como 'medical dressing, detox foot patch, heat pack, herbal patch, slimming patch, pain relief patch'. Sí tienen una serie de acné (https://www.hodaf.com/product/acne-patch/) que declara 'MADE WITH HIGH-GRADE HYDROCOLLOID' en formato de puntos redondos (12 puntos de 12 mm + 24 puntos de 8 mm), más parches de microagujas y parche UV.
+
+**¿Es hidrocoloide auténtico?** PARCIAL y con un riesgo grave para NOCTA. Sí: su página de acné dice textualmente 'MADE WITH HIGH-GRADE HYDROCOLLOID... a gel-like material that is used for wound healing', y su registro FDA de 'tape and bandage, adhesive' apoya que trabajan apósitos. PERO ese hidrocoloide son PUNTOS REDONDOS de 8 y 12 mm, no un parche con forma de nariz. Y lo que ofrecen para la nariz es exactamente lo que el briefing manda evitar: (a) 'Nasal Strips' que son tiras anti-ronquidos tipo Breathe Right (tallas 45x15 / 55x16 / 66x29 mm, para dilatar la fosa nasal, nada que ver con poros), y (b) 'Blackhead Removal Series — Deep Cleansing Charcoal Strips', es decir la tira de carbón ARRANCABLE de PVA. En ninguna página propia aparece un parche de hidrocoloide con forma de nariz. Conclusión: para el producto héroe de NOCTA habría que fabricar troquel nuevo, y no hay prueba de que dominen esa referencia.
+
+**MOQ real.** Contradictorio y negociable a la baja. Alibaba anuncia MOQ 5.000 uds, pero su propia web, en la ficha de parche de acné, publica escalones de precio de '100-1000, 5000-10000, 100000+' unidades, o sea que SÍ aceptan tramos por debajo de 1.000. Traducción práctica: el 5.000 de Alibaba es un filtro comercial, no un límite de fábrica; hay margen para negociar 1.000 uds, sobre todo si es una forma ya troquelada. Para forma de nariz nueva, el troquel se paga aparte y el MOQ real subirá.
+
+**Precio real estimado.** El 0,0348-0,0522 EUR/ud de Alibaba NO es aplicable al producto de NOCTA. Ese rango (unos 0,04-0,06 USD) es coherente con un PUNTO de acné de 8-12 mm o con el tramo de 100.000+ uds, no con un parche que cubra la nariz (~25 cm2 de hidrocoloide, unas 25-30 veces más material que un punto de 10 mm). Para un parche nasal de hidrocoloide real en pedido de 1.000 uds, lo esperable de esta fábrica es 0,15-0,30 EUR/ud, más el troquel de la forma de nariz (típicamente 100-300 EUR de coste único). Caja impresa de 8 parches: el parche a 0,20 EUR da 1,60 EUR de producto, más caja/sobre impresos 0,30-0,60 EUR = 1,90-2,20 EUR por caja EXW. Con transporte y merma, ~2,50-3,00 EUR de coste en almacén en España, frente a un PVP de 16,95 EUR. El margen funciona, pero solo si el precio real se confirma por escrito: dar por buenos los 0,0348 EUR de la ficha sería un error de planificación.
+
+**Packaging personalizado.** No hay dato público. Su web ofrece personalizar 'Size, Shape, Scent, Color and Package' en la serie de acné, y en LinkedIn se atribuyen servicios de 'design, printing and logistics', lo que sugiere que al menos la impresión de estuche la gestionan ellos o vía imprenta local. No publican MOQ ni precio de packaging. Hay que preguntarlo explícitamente: es el punto donde más suelen romperse los pedidos piloto, porque una imprenta china rara vez baja de 500-1.000 estuches y NOCTA solo necesita 125.
+
+**Plazos.** No publicados. Por analogía con el sector y con su escala: muestras 7-15 días (tienen botón 'GET A SAMPLE' en la ficha de producto), producción 20-30 días para OEM con troquel nuevo, courier express DHL/FedEx Shijiazhuang-España 5-8 días. Marítimo no tiene sentido para 1.000 parches: el volumen es ridículo y el flete consolidado + despacho costaría más que el express.
+
+**Encaje con NOCTA.** Encaje BAJO para el producto héroe, MEDIO para la segunda línea. No sirve para el parche nasal de hidrocoloide: no lo fabrican hoy, su producto nasal es tira anti-ronquidos o tira de carbón arrancable, y no hay ISO 22716 demostrada, que es justo el certificado que la UE espera para cosmética. SÍ puede servir, y bien, para las 60 HOJAS DE PUNTOS PARA GRANOS del lote piloto: ahí sí tienen hidrocoloide real (8 y 12 mm), formato ya troquelado, tramo de precio desde 100-1.000 uds y registro FDA de apósitos adhesivos. Además, ojo: es el MISMO GRUPO que el proveedor 2 (Tianjin Hodaf es su subsidiaria, la dirección de Tianjin figura en la página de contacto de hodaf.com), así que no se les puede usar para hacerse competencia entre ellos; si se pide presupuesto a los dos por separado, probablemente acabe contestando el mismo departamento. Recomendación: pedirles precio SOLO de los puntos de acné y, de paso, sondear el parche nasal para ver si tienen troquel, pero no construir el lanzamiento sobre ellos.
+
+**A favor.**
+
+- Fábrica verificable e independiente de Alibaba: dos plantas nombradas con dirección postal, web propia con años de contenido, catálogo coherente con una planta de emplastos
+- Historial exportador real y auditable: 338 embarques y 83 clientes en Panjiva, con presencia desde hace años
+- Registro y trazabilidad ante la FDA estadounidense a nombre exacto de la empresa, incluido un informe MAUDE sobre un producto 'tape and bandage, adhesive': implica establecimiento registrado, no un revendedor anónimo
+- Email institucional público y localizable (hello@hodaf.com), teléfono fijo y fax: se les puede escribir fuera de Alibaba, que es donde se ve si un proveedor es serio
+- Publican escalones de precio desde 100-1.000 uds en su propia web, lo que contradice a la baja el MOQ 5.000 de Alibaba y da margen de negociación
+- Escala suficiente para acompañar el crecimiento de NOCTA si el producto funciona (200-400 empleados, 10 líneas declaradas)
+
+**En contra.**
+
+- No fabrican el producto que NOCTA necesita: no hay ni un solo parche de hidrocoloide con forma de nariz en toda su web propia
+- Lo que venden para la nariz es precisamente lo prohibido en el briefing: tira de carbón ARRANCABLE (peel-off de PVA) y tira anti-ronquidos tipo Breathe Right
+- Cero evidencia pública de ISO 22716 (GMP cosmética). Solo declaran ISO 9001/9000, que es un sistema de gestión genérico y NO acredita buenas prácticas de fabricación cosmética ante una inspección europea
+- Cifras de planta contradictorias entre sus propias fuentes: 40.000 m2 / 400 empleados en su web frente a 10.000 m2 / 150 operarios en su perfil de Made-in-China. Alguien está inflando y hay que averiguar quién
+- Su propio perfil de Made-in-China los clasifica también como 'Trading Company', así que parte de lo que venden no lo fabrican ellos
+- El precio de 0,0348-0,0522 EUR de la ficha de Alibaba es engañoso para nuestro caso: corresponde a un punto pequeño o al tramo de 100.000 uds, no a un parche nasal
+- MOQ anunciado de 5.000 uds, cinco veces el lote piloto de NOCTA
+- Es el mismo grupo empresarial que el proveedor 2: creer que son dos ofertas independientes y 'negociar' entre ellas es autoengañarse
+- Su ADN es farmacéutico-tradicional chino (emplastos de dolor, parches detox), un mundo regulatorio distinto del cosmético europeo; nadie allí ha gestionado nunca un CPNP
+
+#### Cómo contactarle
+
+**A qué dirección escribir.** hello@hodaf.com
+
+**Correos encontrados.** hello@hodaf.com — fuente: https://www.hodaf.com/contact/ y https://www.hodaf.com/company-profile/ (página de contacto de su web propia, es el email institucional)
+
+**Teléfonos.** +86-0311-83500380 (tel. fijo, https://www.hodaf.com/contact/); +86(0)311-88262690 (fax, misma fuente); +86 152 2656 7517 (WhatsApp, https://www.hodaf.com/contact/)
+
+**Por qué canal y con qué táctica.** Email directo a hello@hodaf.com, que es el correo institucional publicado en su propia página de contacto, y en paralelo WhatsApp al +86 152 2656 7517, también publicado por ellos. Recomiendo el email como canal principal porque deja rastro escrito de las promesas de certificados y precios, algo imprescindible cuando luego hay que notificar en el CPNP. El WhatsApp sirve para desatascar la respuesta si el correo se queda sin contestar más de 3-4 días laborables, cosa habitual en agosto y en la semana del Año Nuevo chino. NO es necesario pasar por el chat de Alibaba: tienen email verificable, lo cual ya es una señal de que son una empresa real. Eso sí, si finalmente se compra, conviene cerrar la transacción DENTRO de Alibaba con Trade Assurance para tener protección de pago en el primer pedido, aunque la negociación se haya hecho por correo.
+
+**Qué hay que pedirle.**
+
+- Respuesta binaria y por escrito: ¿tenéis o no tenéis troquel de parche de hidrocoloide con FORMA DE NARIZ? Si no lo tienen, sabremos en 24 h que no son el proveedor del producto héroe
+- Certificado ISO 22716 en PDF a nombre exacto de 'Hebei Houde Hanfang Medical Devices Group Co., Ltd.'. Si solo mandan ISO 9001, queda descartado para cosmética UE sin más discusión
+- Ficha técnica del hidrocoloide con espesor en mm y composición, más confirmación de que el adhesivo es de grado médico
+- Explicación de la contradicción de planta: 40.000 m2 y 400 empleados en su web frente a 10.000 m2 y 150 operarios en Made-in-China. Pedir informe de auditoría de tercero (SGS, TÜV, BV) o licencia de negocio
+- Precio real por unidad para un parche nasal de ~8,5 x 3 cm a 1.000, 3.000 y 10.000 uds, aclarando que el 0,0348 EUR de Alibaba no corresponde a ese tamaño
+- Coste del troquel nuevo para la forma de nariz y MOQ asociado
+- Precio y MOQ de la caja impresa de 8 parches y del sobre individual, diciendo si lo imprimen ellos o lo subcontratan
+- Precio y MOQ de las hojas de puntos de acné (que es donde sí encajan): tamaños, puntos por hoja y precio a 60 y a 500 hojas
+- Confirmación de si el presupuesto lo emite la matriz de Hebei o la filial de Tianjin, para no negociar dos veces con la misma empresa
+- Muestras físicas del hidrocoloide de acné para probar en persona si absorbe y se pone blanco, con plazo y quién paga el envío
+- Incoterm, peso y volumen del lote y coste de courier express a España, más aceptación de Trade Assurance
+
+**El correo, en inglés (es el que se envía).**
+
+```text
+Subject: Hydrocolloid nose patch + acne dots — pilot order from Spain (own brand)
+
+Hello HODAF team,
+
+My name is [NAME] and I am launching NOCTA, a Spanish hydrocolloid skincare brand that will sell through our own online store in Spain. I am writing after seeing your Alibaba listing for hydrocolloid nose patches for blackhead removal at EUR 0.0348-0.0522 with an MOQ of 5,000 pieces, and also your own website hodaf.com, where your acne patch series is described as "MADE WITH HIGH-GRADE HYDROCOLLOID" with 12 patches at 12 mm and 24 patches at 8 mm, and quantity tiers that start at 100-1,000 units.
+
+It is exactly that gap between the two sources that made me write to you directly instead of using the Alibaba chat: I want to understand what you can genuinely produce and at what real price.
+
+I am starting small but I am serious. My first order is a pilot of around 1,000 nose patches plus 60 sheets of acne dots. If the product performs in Spain, I intend to reorder monthly and grow. I would rather work with a factory that supports me from the small batch than build on promises.
+
+Before I can decide, please confirm the following in writing:
+
+Product
+1. Technical data sheet for the hydrocolloid: composition, thickness in mm, and absorption capacity. I need a hydrocolloid that truly absorbs and turns white, NOT a peel-off PVA charcoal strip. I saw the "Deep Cleansing Charcoal Strips" and the anti-snoring "Nasal Strips" on your website: to be clear, that is not what I am looking for.
+2. Is the adhesive medical grade? Please specify which one and whether you have biocompatibility or skin irritation test reports.
+3. Do you already have tooling for a NOSE-SHAPED patch? If yes, please give exact dimensions in mm and send a photo of the patch worn on the face. If not, please quote the cost of new die-cutting tooling and the MOQ it would require.
+4. For the acne dots: available sizes, number of dots per sheet, and thickness.
+
+Price and quantities
+5. Real MOQ for a first order of 1,000 nose patches. Your own website shows a 100-1,000 unit tier, so I assume the 5,000 on Alibaba is negotiable.
+6. Price per piece and price per printed box of 8 patches, quoted at 1,000, 3,000 and 10,000 units so I can see the curve.
+
+Packaging
+7. Printed box and individual sachet with our NOCTA logo: do you produce this in-house or subcontract it to a printer? I need the MOQ and the price per box. Please be candid: for the pilot I only need 125 boxes, so tell me what the real printing minimum is and what the surplus would cost.
+
+EU compliance (this is decisive for me)
+8. PDF copies of your certificates ISSUED IN YOUR COMPANY NAME, not generic ones: ISO 22716 (cosmetics GMP) if you hold it, ISO 13485, ISO 9001, CE marking and MSDS. In the EU a hydrocolloid pore patch is normally classified as a COSMETIC, and the certificate that really counts is ISO 22716. On your website I only found references to ISO 9001, so I am asking you directly: do you hold ISO 22716?
+9. Can you provide or support the Cosmetic Product Safety Report (CPSR) and the Product Information File (PIF) needed for CPNP notification? I understand the Responsible Person must be established in the EU and we will take that role in Spain, but I need the product technical documentation from you.
+
+Lead times and terms
+10. Sample lead time and production lead time for 1,000 units.
+11. Incoterm and approximate express courier cost to Spain (postcode [POSTCODE]), and who pays for the samples and their shipping.
+12. Do you accept Alibaba Trade Assurance for the first order?
+
+One last point so we do not waste each other's time: I am aware that Tianjin Hodaf Technology is your subsidiary, as its address is listed on your own contact page. I would prefer one coordinated group offer rather than two separate quotations through two channels.
+
+I look forward to your reply. If you send the technical data sheet and the certificates, I can move quickly.
+
+Best regards,
+[NAME]
+NOCTA — [website] — [email] — [phone]
+Spain
+```
+
+**El mismo correo en español, para que puedas revisarlo.**
+
+```text
+Asunto: Parche de hidrocoloide para nariz y puntos de acné — pedido piloto desde España (marca propia)
+
+Hola, equipo de HODAF:
+
+Me llamo [NOMBRE] y estoy poniendo en marcha NOCTA, una marca española de parches de hidrocoloide para el cuidado de la piel que se venderá en nuestra propia tienda online en España. Os escribo después de ver vuestra ficha en Alibaba con parches nasales de hidrocoloide para puntos negros a 0,0348-0,0522 EUR con MOQ de 5.000 unidades, y también vuestra web hodaf.com, donde he visto la serie de parches de acné descrita como "MADE WITH HIGH-GRADE HYDROCOLLOID", con 12 puntos de 12 mm y 24 puntos de 8 mm, y unos escalones de cantidad que empiezan en 100-1.000 unidades.
+
+Precisamente por esa diferencia entre las dos fuentes os escribo directamente en lugar de hacerlo por el chat: quiero entender qué podéis fabricar de verdad y a qué precio real.
+
+Empiezo pequeño, pero voy en serio. El primer pedido es un lote piloto de unas 1.000 unidades de parche nasal más 60 hojas de puntos para granos. Si el producto funciona en España, la intención es repetir mensualmente y crecer. Prefiero trabajar con una fábrica que me acompañe desde el lote pequeño a construir sobre promesas.
+
+Antes de decidir necesito que me confirméis por escrito estos puntos:
+
+Sobre el producto
+1. Ficha técnica del hidrocoloide: composición, espesor en mm y capacidad de absorción. Necesito un hidrocoloide que absorba de verdad y se vuelva blanco, NO una tira arrancable de PVA con carbón. He visto en vuestra web las "Deep Cleansing Charcoal Strips" y las "Nasal Strips" anti-ronquidos: quiero dejar claro que NO es eso lo que busco.
+2. ¿El adhesivo es de grado médico? Indicad cuál y si tenéis ensayo de biocompatibilidad o de irritación cutánea.
+3. ¿Tenéis ya troquel de un parche con FORMA DE NARIZ? Si es así, decidme medidas exactas en mm y enviadme foto del parche puesto. Si no lo tenéis, decidme el coste del troquel nuevo y el MOQ que exigiría.
+4. Para los puntos de acné: tamaños disponibles, puntos por hoja y espesor.
+
+Sobre precio y cantidades
+5. MOQ real para un primer pedido de 1.000 parches nasales. Vuestra web indica un tramo de 100-1.000 unidades, así que entiendo que los 5.000 de Alibaba son negociables.
+6. Precio por unidad y precio por caja impresa de 8 parches, a 1.000, 3.000 y 10.000 unidades, para ver la curva.
+
+Sobre el packaging
+7. Caja impresa y sobre individual con nuestro logo NOCTA: ¿lo hacéis vosotros o lo subcontratáis a una imprenta? Necesito saber MOQ y precio por caja. Aviso: en el piloto solo necesito 125 cajas, así que decidme con franqueza cuál es el mínimo de impresión y cuánto costaría comprar de más.
+
+Sobre normativa europea (esto es decisivo para mí)
+8. Copia en PDF de vuestros certificados a NOMBRE DE LA EMPRESA, no genéricos: ISO 22716 (GMP cosmética) si la tenéis, ISO 13485, ISO 9001, marcado CE y MSDS. En la UE un parche de hidrocoloide para poros se considera normalmente COSMÉTICO, y el certificado que de verdad pesa es el ISO 22716. En vuestra web solo he visto referencias a ISO 9001, así que os pregunto directamente: ¿tenéis ISO 22716?
+9. ¿Podéis facilitar o ayudar con el Informe de Seguridad (CPSR) y con el expediente PIF para la notificación CPNP? Entiendo que la Persona Responsable debe estar establecida en la UE y la asumiremos nosotros en España, pero necesito de vosotros la documentación técnica del producto.
+
+Sobre plazos y condiciones
+10. Plazo de muestras y plazo de producción para 1.000 unidades.
+11. Incoterm y coste aproximado de courier express a España (código postal [CP]), y quién paga las muestras y su transporte.
+12. ¿Aceptáis Trade Assurance de Alibaba para el primer pedido?
+
+Una última cosa, para no haceros perder el tiempo: sé que Tianjin Hodaf Technology es vuestra filial, porque su dirección figura en vuestra propia página de contacto. Prefiero una única oferta coordinada del grupo en vez de dos presupuestos distintos por dos canales.
+
+Quedo a la espera. Si me mandáis ficha técnica y certificados, puedo decidir rápido.
+
+Un saludo,
+[NOMBRE]
+NOCTA — [web] — [email] — [teléfono]
+España
+```
+
+**Fuentes.**
+
+- https://www.hodaf.com/
+- https://www.hodaf.com/company-profile/
+- https://www.hodaf.com/contact/
+- https://www.hodaf.com/product/acne-patch/
+- https://www.hodaf.com/product/skin-care-series/
+- https://www.hodaf.com/product/nasal-strips/
+- https://www.hodaf.com/document-download/
+- https://www.hodaf.com/sitemap.html
+- https://hodaf-pads.en.made-in-china.com/
+- https://www.linkedin.com/company/hebei-houde-hanfang-medical-devices-co-ltd-
+- https://panjiva.com/Hebei-Houde-Hanfang-Medical-Devices/34182162
+- https://fda.report/Company/Hebei-Houde-Hanfang-Medical-Devices-Group-Co-L-T-D
+- https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/detail.cfm?mdrfoi__id=18960020&pc=KGX
+- https://houde.en.alibaba.com/
+
+
+### 13. Dongguan Chuancheng Medical Technology Co., Ltd. (东莞传承医疗科技有限公司)
 
 **Nota 5.5/10 · Sin clasificar · confianza media**
 
@@ -2090,7 +2693,7 @@ NOCTA – España
 - https://api.fda.gov/drug/ndc.json?search=labeler_name:%22Chuancheng%22
 
 
-### 11. Hefei Hengmai Imp&Exp Co., Ltd. (marca comercial: Hengmai; webs propias: hengmaicosmetics.com y cnhengmai.com)
+### 14. Hefei Hengmai Imp&Exp Co., Ltd. (marca comercial: Hengmai; webs propias: hengmaicosmetics.com y cnhengmai.com)
 
 **Nota 5.5/10 · Intermediario · confianza alta**
 
@@ -2293,7 +2896,7 @@ Gracias por vuestro tiempo. Quedo atento a vuestra respuesta,
 - https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_en
 
 
-### 12. Guangzhou Yalam International Cosmetic Co., Ltd. (Alibaba: Guangzhou Yalam International Cosmetics Ltd. / tienda "yalanhk"; en Made-in-China aparece también como Yalam International (HK) Cosmetics Co., Ltd.)
+### 15. Guangzhou Yalam International Cosmetic Co., Ltd. (Alibaba: Guangzhou Yalam International Cosmetics Ltd. / tienda "yalanhk"; en Made-in-China aparece también como Yalam International (HK) Cosmetics Co., Ltd.)
 
 **Nota 4.5/10 · Intermediario · confianza alta**
 
@@ -2467,7 +3070,7 @@ NOCTA — España
 - https://www.guangzhoucosmetics.com/about.html
 
 
-### 13. Zhengzhou Bojun Biotechnology Co., Ltd.
+### 16. Zhengzhou Bojun Biotechnology Co., Ltd.
 
 **Nota 4.0/10 · Fábrica · confianza BAJA. Es el proveedor peor documentado de los tres y con diferencia. No tiene web propia fuera de Alibaba, no aparece en Made-in-China, Global Sources ni EC21, no hay email público, no hay dirección física localizable, no se ha podido encontrar en registros mercantiles chinos (QCC, Tianyancha, Aiqicha) pese a buscar por el nombre chino, y no hay registros de importación. TODO lo que se sabe procede de su propia ficha de Alibaba y de agregadores de IA (accio.com) que se limitan a repetirla: no es verificación independiente, es la misma fuente reciclada. Súmese que solo llevan 1 año en Alibaba con 74 valoraciones.**
 
@@ -2651,7 +3254,7 @@ NOCTA — España
 - https://veilta.com/en/blog/launch-private-label-acne-patch-brand
 
 
-### 14. Yiwu Meihang Import & Export Co., Ltd. (义乌美航进出口有限公司)
+### 17. Yiwu Meihang Import & Export Co., Ltd. (义乌美航进出口有限公司)
 
 **Nota 3.5/10 · Intermediario · confianza media**
 
@@ -2804,7 +3407,7 @@ Jacobo – NOCTA (España)
 - https://www.tiktok.com/shop/pdp/invisible-acne-patches-by-west-month-gentle-cleansing-portable-moisturizing/1731345734239490397
 
 
-### 15. Shandong Eledeep Bio Tech Co., Ltd. (tiendas Alibaba: eledeep / neweledeep; Made-in-China: neweledeep; alias GlobalOEMs: changtu)
+### 18. Shandong Eledeep Bio Tech Co., Ltd. (tiendas Alibaba: eledeep / neweledeep; Made-in-China: neweledeep; alias GlobalOEMs: changtu)
 
 **Nota 3.0/10 · Intermediario · confianza media**
 
@@ -2971,7 +3574,7 @@ NOCTA – España
 - Comprobación DNS propia: eledeep.com, www.eledeep.com y eledeep.cn no resuelven (sin web propia)
 
 
-### 16. Hubei Honey Phoebe E-Commerce Co., Ltd.
+### 19. Hubei Honey Phoebe E-Commerce Co., Ltd.
 
 **Nota 3.0/10 · Intermediario · confianza media**
 
@@ -3110,7 +3713,7 @@ NOCTA – España
 - https://www.importyeti.com/
 
 
-### 17. Shenzhen Aliver Cosmetics Co., Ltd.
+### 20. Shenzhen Aliver Cosmetics Co., Ltd.
 
 **Nota 3.0/10 · Intermediario · confianza media**
 
@@ -3293,7 +3896,7 @@ NOCTA - España
 - https://aliverofficial.en.alibaba.com/ (tienda 'aliverofficial' registrada a nombre de Shenzhen Shifei Kou Biological Technology Co., Ltd., otra entidad distinta más en el mismo entramado de marcas de Shenzhen)
 
 
-### 18. Henan Geesion Medical Devices Co., Ltd. (opera también como "Godsen")
+### 21. Henan Geesion Medical Devices Co., Ltd. (opera también como "Godsen")
 
 **Nota 3.0/10 · Intermediario · confianza media**
 
@@ -3472,7 +4075,7 @@ España
 - https://geesion.en.alibaba.com/
 
 
-### 19. Xi'an Austar Slender Biotech Co., Ltd. (Alibaba: austar01)
+### 22. Xi'an Austar Slender Biotech Co., Ltd. (Alibaba: austar01)
 
 **Nota 3.0/10 · Intermediario · confianza media**
 
@@ -3627,7 +4230,7 @@ NOCTA - España
 - https://veilta.com/en/blog/pimple-patch-fda-cpnp-compliance
 
 
-### 20. Shenzhen Elaimei Biotechnology Co., Ltd.
+### 23. Shenzhen Elaimei Biotechnology Co., Ltd.
 
 **Nota 3.0/10 · Intermediario · confianza MEDIA-ALTA para la conclusión principal (que NO son fabricantes y que NO son los titulares registrales de la marca ELAIMEI), porque esto sí está respaldado por fuentes independientes y de calidad: registros de marca de EUIPO, USPTO y Reino Unido, la clasificación de SourceReady como 'trading company', la declaración pública del distribuidor europeo sobre las cuatro marcas que distribuye, y el teléfono compartido entre elaimei.com y alivercosmetics.com. Confianza BAJA, en cambio, para los datos industriales de la sociedad china Shenzhen Elaimei Biotechnology Co., Ltd.: no se ha encontrado ni año de constitución, ni número de empleados, ni superficie, ni dirección, ni certificados, y su ficha de Global Sources aparece expresamente como 'Unverified Supplier'.**
 
@@ -3811,7 +4414,7 @@ NOCTA — España
 - https://veilta.com/en/blog/pimple-patch-fda-cpnp-compliance
 
 
-### 21. Guangzhou Feishi Cosmetics Co., Ltd.
+### 24. Guangzhou Feishi Cosmetics Co., Ltd.
 
 **Nota 2.0/10 · Intermediario · confianza media**
 
@@ -3970,7 +4573,7 @@ NOCTA – España
 - https://shifeichina.en.made-in-china.com/
 
 
-### 22. Guangzhou Mingsong Technology Co., Ltd.
+### 25. Guangzhou Mingsong Technology Co., Ltd.
 
 **Nota 2.0/10 · Intermediario · confianza media**
 
@@ -4111,7 +4714,7 @@ Gracias,
 - https://mingsentech.en.made-in-china.com/
 
 
-### 23. Shenzhen Linwen Technology Co., Ltd. (tienda Alibaba: sefudun.en.alibaba.com)
+### 26. Shenzhen Linwen Technology Co., Ltd. (tienda Alibaba: sefudun.en.alibaba.com)
 
 **Nota 2.0/10 · Intermediario · confianza media**
 
@@ -4267,7 +4870,7 @@ Gracias por vuestro tiempo,
 - https://www.amazon.com/stores/ELAIMEI/ELAIMEI/page/8AA3A449-B91D-4621-AAC9-E66824057520
 
 
-### 24. Shenzhen Lightning Jingling Technology Co., Ltd. (nombre chino: 深圳闪电精灵科技 = Shenzhen Shandian Jingling Technology; tienda Alibaba: alivercosmetics.en.alibaba.com)
+### 27. Shenzhen Lightning Jingling Technology Co., Ltd. (nombre chino: 深圳闪电精灵科技 = Shenzhen Shandian Jingling Technology; tienda Alibaba: alivercosmetics.en.alibaba.com)
 
 **Nota 2.0/10 · Intermediario · confianza media**
 
@@ -4423,7 +5026,7 @@ Un saludo,
 - https://otclabels.com/lib/otc/otc-meds/sefudun-quit-smoking-nicotine-patches/
 
 
-### 25. Guangzhou Xuanmei Trading Co., Ltd.
+### 28. Guangzhou Xuanmei Trading Co., Ltd.
 
 **Nota 2.0/10 · Intermediario · confianza baja**
 
@@ -4564,7 +5167,7 @@ Jacobo – NOCTA (España)
 - https://www.accio.com/plp/nose-patches
 
 
-### 26. Jinan World Expo Noah Medical Technology Co., Ltd. (济南世博诺亚医疗科技有限公司)
+### 29. Jinan World Expo Noah Medical Technology Co., Ltd. (济南世博诺亚医疗科技有限公司)
 
 **Nota 2.0/10 · Intermediario · confianza baja**
 
@@ -4738,7 +5341,7 @@ España
 - https://chinesecheck.com/blog/spot-fake-suppliers-alibaba
 
 
-### 27. Guangzhou Chengzhe Meifu Cosmetic Co., Ltd. (Alibaba: czmf)
+### 30. Guangzhou Chengzhe Meifu Cosmetic Co., Ltd. (Alibaba: czmf)
 
 **Nota 2.0/10 · Intermediario · confianza media**
 
@@ -4896,7 +5499,7 @@ NOCTA - España
 - https://ceway.eu/cosmetics-regulatory-services/product-classification/
 
 
-### 28. FangCheng Qi Xiao Guai International Trade Co., Ltd. (tienda Alibaba: cn1521282107mftm; también aparece como "Henan Qi Xiao Guai International Trade Co., Ltd.")
+### 31. FangCheng Qi Xiao Guai International Trade Co., Ltd. (tienda Alibaba: cn1521282107mftm; también aparece como "Henan Qi Xiao Guai International Trade Co., Ltd.")
 
 **Nota 1.5/10 · Intermediario · confianza baja**
 
@@ -5048,7 +5651,7 @@ NOCTA – España
 - Búsquedas en registros mercantiles chinos por 防城祺小怪国际贸易有限公司 / 方城祺小怪 / 祺小怪国际贸易: sin resultados
 
 
-### 29. Shenzhen Duolai Technology Co., Ltd. (深圳市多莱科技有限公司)
+### 32. Shenzhen Duolai Technology Co., Ltd. (深圳市多莱科技有限公司)
 
 **Nota 1.5/10 · Intermediario · confianza baja**
 
@@ -5186,7 +5789,7 @@ NOCTA – España
 - https://www.accio.ai/find-supplier/electric-pimple-patch-wholesaler
 
 
-### 30. Shanxi Meila Bio-Tech Co., Ltd.
+### 33. Shanxi Meila Bio-Tech Co., Ltd.
 
 **Nota 1.5/10 · Intermediario · confianza media**
 
@@ -5345,7 +5948,7 @@ NOCTA – España
 - https://www.herocosmetics.us/products/mighty-patch-nose
 
 
-### 31. Shenzhen Baitejia Technology Co., Ltd. (深圳市佰特佳科技有限公司 / también aparece como "Shenzhen Baitejia Trading Co., Ltd.")
+### 34. Shenzhen Baitejia Technology Co., Ltd. (深圳市佰特佳科技有限公司 / también aparece como "Shenzhen Baitejia Trading Co., Ltd.")
 
 **Nota 1.5/10 · Intermediario · confianza alta**
 
@@ -5482,7 +6085,7 @@ Gracias,
 - https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_en
 
 
-### 32. Ningbo BBD Import & Export Co., Ltd.
+### 35. Ningbo BBD Import & Export Co., Ltd.
 
 **Nota 1.5/10 · Intermediario · confianza baja**
 
@@ -5658,7 +6261,7 @@ NOCTA - España
 - Fabricantes reales de Ningbo localizados como contraste y como posibles alternativas futuras: https://nbhshmt.en.made-in-china.com (Ningbo Hysent Medical Technology), https://www.acnepatchfactory.com/ (Ningbo Alps Medical, 15 años en parches de acné), https://nbbosheng.goldsupplier.com/ (Ningbo Bosheng Medical Technology)
 
 
-### 33. Hebei Leici Technology Co., Ltd. (tienda de Alibaba: leicikeji)
+### 36. Hebei Leici Technology Co., Ltd. (tienda de Alibaba: leicikeji)
 
 **Nota 1.5/10 · Intermediario · confianza media**
 
