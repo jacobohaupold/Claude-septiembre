@@ -378,6 +378,7 @@ Todo el material de producción vive en `marketing/anuncios/` y tiene su propio 
 | Manual de Higgsfield | `marketing/anuncios/MANUAL_HIGGSFIELD.md` | Qué hace cada herramienta de verdad, el flujo de producción paso a paso, cómo se consigue que el personaje y el producto no cambien entre planos, los tells que delatan a la IA y el reparto de créditos. |
 | Fotorrealismo | `marketing/anuncios/MANUAL_GPT_IMAGE_2_5.md` | Por qué una imagen parece foto y otra parece render, y cómo se pide cada cosa. |
 | Referencias reales | `marketing/anuncios/REFERENCIAS_VISUALES.md` | Cómo se ve y cómo se mueve esto de verdad, y cómo se convierte una referencia en un prompt. |
+| Qué modelo elegir | `marketing/anuncios/MODELOS_CUAL_ELEGIR.md` | El catálogo real de Higgsfield consultado por su API: 33 modelos de imagen y más de 40 de vídeo, cuáles pueden hacer lo nuestro, cuál elegimos para cada tipo de toma y por qué, y cuáles no vamos a tocar. |
 | Lenguaje visual de Vue | `marketing/anuncios/LENGUAJE_VISUAL_VUE.md` | Qué copiamos de Vue Skin, qué copiamos cambiado y qué no. |
 
 **Las tres cosas que más fallan al generar, con su arreglo.**

@@ -15,6 +15,7 @@ imágenes ya generadas del anuncio 1.
 | Montar el anuncio en Higgsfield y no quemar créditos | `MANUAL_HIGGSFIELD.md` |
 | Referencias reales de cómo se ve y se mueve esto | `REFERENCIAS_VISUALES.md` |
 | Saber qué copiamos de Vue Skin y qué no | `LENGUAJE_VISUAL_VUE.md` |
+| Saber qué modelo usar para cada toma y por qué | `MODELOS_CUAL_ELEGIR.md` |
 | Ver cómo tiene que quedar una toma | `img/a01/` |
 
 ## Las tres cosas que más fallan, y su arreglo en una línea
