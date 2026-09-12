@@ -106,7 +106,7 @@ Cada board tiene **exactamente ocho** viñetas. Ni diez, ni doce, ni dos filas, 
 
 Bandas de distancia: **TIGHT** (primerísimo plano y macro), **MID** (medio y medio corto), **WIDE** (tres cuartos, cintura, cuerpo entero, producto extendido). Cada banda tiene que aparecer al menos dos veces en los ocho slots, y dos vecinos nunca comparten banda.
 
-Así se reparten las tomas de la biblia en los 16 slots. La cuenta exacta, porque la de "15 tomas en 16 slots" no sale: entran **14 de las 15 tomas**, cinco de ellas desdobladas en dos beats (8/8b, 10/10b, 12/12b, 13a/13b) y dos parejas fundidas en un solo slot (3+4 y 14+15). La que no entra es la **toma 2, el gancho B**: no es un plano más del anuncio, es la variante del slot 1 para el test A/B, y se genera aparte regenerando solo el board A con ese primer slot cambiado.
+Así se reparten las tomas de la biblia en los 16 slots. La cuenta exacta, porque la de "15 tomas en 16 slots" no sale: entran **14 de las 15 tomas**, cuatro de ellas desdobladas en dos beats (8/8b, 10/10b, 12/12b, 13a/13b) y dos parejas fundidas en un solo slot (3+4 y 14+15). La que no entra es la **toma 2, el gancho B**: no es un plano más del anuncio, es la variante del slot 1 para el test A/B, y se genera aparte regenerando solo el board A con ese primer slot cambiado.
 
 **Board A — gancho, problema, entrada del producto**
 
@@ -134,13 +134,13 @@ Así se reparten las tomas de la biblia en los 16 slots. La cuenta exacta, porqu
 | 7 | STATIC | TIGHT | Despega en una lámina continua | 13b |
 | 8 | SELFIE | MEDIUM | El parche usado a contraluz junto a la nariz limpia | 14 + 15 |
 
-El packshot de la caja (toma 15 alternativa) no va dentro del board: se genera **una sola vez** como clip corto reutilizable en los 25 anuncios. Se reutiliza tal cual en los 25, así que se paga una vez.
+El packshot de la caja (toma 15 alternativa) no va dentro del board: se genera **una sola vez** como clip corto y se reutiliza tal cual en los 25 anuncios, así que se paga una vez.
 
 Fíjate en que el board B es casi todo STATIC. No es un descuido: colocar el parche y hacer la presión en V requieren dos manos libres, y en POV selfie una mano está ocupada por el móvil. Esas acciones son STATIC obligatoriamente.
 
 ### Paso 3 · Generar el board
 
-Modelo `gpt_image_2`, `aspect_ratio: '21:9'`, `resolution: '2k'`, calidad `medium` salvo en packshots con texto. El prompt lleva, en este orden: (a) las declaraciones `@Image1`, `@Image2`, `@Image3` que atan las referencias, (b) el Angle Lock del producto, (c) la descripción de la hoja, (d) las reglas comunes de luz, manos y duplicados, (e) los ocho slots numerados, (f) la cola de negativos. La cabecera completa está en el Anexo A, plantilla 3.
+Modelo **`gpt_image_2_5`**, variante `flare`, `aspect_ratio: '21:9'`, `resolution: '2k'`, `quality: 'medium'` salvo en packshots con texto de envase, y las referencias con `role: 'image_references'`. El flujo oficial dice `gpt_image_2` porque es anterior a este catálogo; el motivo del cambio está en el Anexo C, punto 4. Consecuencia que hay que asumir: **el board de 6,5 cr que tenemos medido se generó con el modelo viejo**, así que el primer board del piloto hay que mirarlo en `transactions` para saber lo que cuesta de verdad con el 2.5 antes de multiplicar por 50. El prompt lleva, en este orden: (a) las declaraciones `@Image1`, `@Image2`, `@Image3` que atan las referencias, (b) el Angle Lock del producto, (c) la descripción de la hoja, (d) las reglas comunes de luz, manos y duplicados, (e) los ocho slots numerados, (f) la cola de negativos. La cabecera completa está en el Anexo A, plantilla 3.
 
 **El orden del array `medias` debe coincidir exactamente con el orden en que declaras `@Image1`, `@Image2`, `@Image3`.** Ese orden es lo único que ata la referencia a la frase (`ugc-board.md`, Step 2).
 
@@ -568,13 +568,13 @@ No son precios de nota de prensa: salen del historial de `transactions` y de `br
 |---|---|
 | Soul V2, 1 imagen | 0,12 cr |
 | Nano Banana Pro, 1 imagen | **2 cr** (medido: decenas de cargos de −2 exactos; la investigación decía 1,9) |
-| GPT Image 2.5 Flare, 1k, calidad `medium`, 9:16 | **1 cr** (medido en `transactions` el 12-09-2026, 27 cargos seguidos de −1 al generar el anuncio 1) |
+| GPT Image 2.5 Flare, 1k, calidad `medium`, 9:16 | **1 cr** (medido: 48 cargos de −1 el 12-09-2026) |
 | GPT Image 2.5 Flare, 1k, calidad `high`, 9:16 | 2 cr, **sin verificar**: no hay ningún cargo de −2 con ese nombre en el historial |
 | GPT Image 2.5 Flare, 2k, calidad `medium` | 1,5 cr |
 | GPT Image 2.5 Flare, 2k, calidad `high` | 3 cr |
 | GPT Image 2, calidad `medium` | 2,5 cr (modelo anterior, cifra del QA de la semana pasada) |
 | GPT Image 2, calidad `high` | 11 cr (modelo anterior) |
-| GPT Image 2, board 21:9 | 6,5 cr (un solo cargo, 06-09-2026). **La resolución de ese cargo no consta**: la investigación lo apunta como 4k y este manual lo daba por 2k. Ver Anexo C, punto 6 |
+| GPT Image 2, board 21:9 | 6,5 cr (un solo cargo, 06-09-2026, con el modelo **viejo**). **La resolución de ese cargo no consta**: la investigación lo apunta como 4k y este manual lo daba por 2k. Y el board con `gpt_image_2_5`, que es el que vamos a usar, **no tiene precio medido todavía**. Ver Anexo C, punto 6 |
 | Seedream 5 Pro, 1 pase | 3 cr |
 | `remove_background` | 1 cr |
 | Seedance 2.5 a 720p | 6,5 cr por segundo. **Los dos clips de 15 s del historial costaron 97,5 cr cada uno**: la cifra que sostiene todo el presupuesto está medida, no extrapolada |
@@ -672,11 +672,11 @@ En `transactions` hay **siete asientos `Auto Top-Up` de +200 créditos** entre e
 
 ### 9.5 Qué hacer con el saldo, en orden
 
-1. **Hoy:** congelar los tres avatares si no están congelados (1,2 cr por diez candidatas de cada uno, 3,6 cr en total). Es gratis a efectos prácticos.
-2. **Esta semana:** producir el anuncio piloto nº 1 (Bea, 30 s, Opción A). 214 cr.
-3. **Antes de generar el anuncio nº 2:** medirlo en `/admin` con `utm_content`. Es nuestra propia regla de oro y con este saldo es además una obligación aritmética.
-4. **Decisión de presupuesto, antes de la tanda:** los 25 anuncios necesitan ≈6.150 créditos como suelo. Con lo que de verdad entra cada ciclo en esta cuenta (1.000 cr medidos, no los 1.200 del catálogo) son **más de seis ciclos**; con Ultra, si son 3.000, poco más de dos. Como los créditos caducan al cerrar el ciclo, la producción hay que **concentrarla dentro del ciclo**: no sirve ahorrar mes a mes. Si se va a por packs de recarga, la ventana es de 90 días.
-5. **Hoy también:** entrar en la cuenta y decidir el auto-refill (punto 9.4). Es la única decisión de esta lista que cuesta dinero de verdad si se deja para después.
+1. **Hoy, antes que nada:** entrar en la cuenta y decidir el auto-refill (punto 9.4). Es la única decisión de esta lista que cuesta dinero de verdad si se deja para después.
+2. **Hoy:** congelar los tres avatares si no están congelados (1,2 cr por diez candidatas de cada uno, 3,6 cr en total).
+3. **Esta semana, y antes del 25-09 porque los créditos caducan:** producir el anuncio piloto nº 1 (Bea, 30 s, Opción A). 214 cr.
+4. **Antes de generar el anuncio nº 2:** medirlo en `/admin` con `utm_content`. Es nuestra propia regla de oro y con este saldo es además una obligación aritmética.
+5. **Decisión de presupuesto, antes de la tanda:** los 25 anuncios necesitan ≈6.150 créditos como suelo. Con lo que de verdad entra cada ciclo en esta cuenta (1.000 cr medidos, no los 1.200 del catálogo) son **más de seis ciclos**; con Ultra, si son 3.000, poco más de dos. Como los créditos caducan al cerrar el ciclo, la producción hay que **concentrarla dentro del ciclo**: no sirve ahorrar mes a mes. Si se va a por packs de recarga, la ventana es de 90 días.
 6. **Regla permanente:** todo se genera a 720p, y solo los clips que ganen en datos se suben con `bytedance_video_upscale` preset "ugc".
 
 ---
@@ -762,7 +762,7 @@ Tres reglas de esta imagen que no se saltan: no se menciona espejo aunque la esc
 
 El prompt completo está en el punto 5 de este manual. Se copia literal, con la última frase en versión NOCTA.
 
-### A.3 Cabecera del board 21:9 (`gpt_image_2`, 21:9, 2k)
+### A.3 Cabecera del board 21:9 (`gpt_image_2_5` variante `flare`, 21:9, 2k, `quality: 'medium'`)
 
 `medias` en este orden: packshot del producto, avatar, [board anterior].
 
