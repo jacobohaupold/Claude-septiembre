@@ -145,7 +145,7 @@ limpia de lo que debería en el plano "antes".
 
 ### 1.4 Luz imposible
 
-Hay tres formas de que la luz delate la imagen.
+Hay cuatro formas de que la luz delate la imagen.
 
 La primera es **la hora dorada**. Higgsfield la prohíbe explícitamente —«golden hour, warm sunset, orange/amber/honey
 cast, late afternoon warm wash, sunlit warm tones, magic hour — even outdoors»— y da la razón: «These tones make the
@@ -315,6 +315,20 @@ quality tail last» (`character-sheet`, reglas de oro). Todo lo que vaya al fina
 | 7 | Anti-retoque | bloque de piel real | `no beauty retouching, no skin smoothing, no makeup, unretouched documentary realism` |
 | 8 | Prohibiciones | cola negativa completa | `No text, no logos, no watermark.` |
 
+**Dónde este manual se apartaba de la biblia, y cómo se ha resuelto midiendo.** La biblia manda porque está
+comprobada generando. Aparecieron tres desacuerdos con lo que decía la investigación; los tres están resueltos, y
+conviene dejar escrito cómo, para que nadie los vuelva a abrir a mitad de producción.
+
+| Hueco | El desacuerdo | Resolución | Por qué |
+|---|---|---|---|
+| 1 · Captura | `clip-on macro lens` (biblia) contra `iPhone ultra-wide camera in macro mode` (investigación) | **Gana la biblia.** Se escribe `clip-on macro lens` | Las cuatro macros verificadas del anuncio 1 (tomas 1, 3, 4 y 13, en `img/a01/`) salieron con esa fórmula y salieron bien. La otra no se ha probado nunca en esta cuenta: queda como recambio y **sin verificar**. Nunca las dos en el mismo prompt, que el modelo mezcla ópticas |
+| 6 · Óptica | `very shallow depth of field` en todos los planos contra foco profundo fuera del macro | **No aplica a esta serie.** Se queda como está | Se midieron las 300 tomas escritas: 60 son macro, 6 están por debajo de 60 cm y ninguna, **ninguna**, está a 60 cm o más. A esas distancias un móvil sí da poca profundidad de campo, así que la instrucción es ópticamente correcta en todos nuestros planos. La objeción sería válida en un plano a un metro, y no hay ninguno. Si algún día se escribe uno, ese plano lleva `deep focus` |
+| 6 · Óptica | `slight handheld motion blur at the edges` contra quitarlo | **Se queda, con la advertencia apuntada** | En las 15 imágenes verificadas la frase no produce borrón real: empuja el aspecto de foto de móvil sin ensuciar el fotograma. El riesgo que señala la revisión es del paso a vídeo, donde un fotograma de entrada borroso puede convertirse en morphing, y **está sin verificar** porque todavía no se ha animado ninguna. Si al animar aparece deriva en los bordes, se quita esa frase de ese plano y se vuelve a generar la imagen: cuesta 1 crédito |
+
+La regla que decide las tres es la misma y es la de la biblia: **gana lo que está comprobado generando, no lo que
+suena mejor en una guía**. Cuando no hay nada comprobado, se mide; y cuando no se puede medir, se marca sin
+verificar y se deja escrito qué haría cambiar de opinión.
+
 Dos cosas que no están numeradas pero van siempre:
 
 - **El número de estado del parche** al principio del prompt. La biblia define cinco estados (sin parche / recién
@@ -362,10 +376,10 @@ Body calm and neutral, weight on one hip, head level.
 
 IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard
 shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are
-bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected
-in it. No daylight, no soft window light, no blue sky. Spanish bathroom: white subway tile, beige
-grout, a chrome tap, a folded dusty-rose towel, a shampoo bottle with its label turned away. The
-mirror is out of frame.
+bright and the eye sockets are dark, and the window behind is pure black. No daylight, no soft
+window light, no blue sky, no reflections in the window or in the tap. Spanish bathroom: white
+subway tile, beige grout, a chrome tap, a folded dusty-rose towel, a shampoo bottle with its label
+turned away. The mirror is out of frame.
 
 Deep focus — the tiled wall behind stays sharp, the way any phone photo looks. Mild HDR flattening,
 faint digital luminance noise in the shadows, digital sensor noise, never film grain. Framing
@@ -381,15 +395,17 @@ golden hour. No fisheye, no ultra-wide distortion. No mirror and no reflection, 
 person, no extra hands, no third arm, no deformed fingers. Exactly one person in frame.
 ```
 
-Es largo. Tiene que serlo. Un prompt de tres líneas te da una imagen de tres líneas de calidad.
+Ese prompt tiene unas 320 palabras. Ésa es la longitud de referencia para un plano de persona: si te sale de menos de
+200, es que te has dejado un hueco de los ocho. Para un macro basta con 200-250, porque no hay ni acción ni sitio.
 
 ---
 
 ## 3. Palabras que funcionan y palabras prohibidas
 
-Las dos listas son literales y van en inglés. La primera fuente (prompt-architects) avisa de algo útil: este
-vocabulario no es específico de un modelo, «these prompts work across all three as plain descriptive language» —
-sirve igual en GPT Image, Soul o Flux.
+Las dos listas son literales y van en inglés. La fuente (prompt-architects) avisa de algo útil: este vocabulario no es
+específico de un modelo — «no exclusive prompting language differs between GPT Image, Midjourney, or FLUX.2 — these
+prompts work across all three as plain descriptive language». La fuente nombra GPT Image, Midjourney y FLUX.2; que
+sirva igual en Soul es probable, pero **sin verificar**.
 
 ### 3.1 Palabras que funcionan
 
@@ -612,14 +628,22 @@ un híbrido que parece publicidad barata.
 | Óptica | `main camera, 24mm-equivalent f/1.8` | `85mm portrait lens`, `DSLR` |
 | Foco | `deep focus — the background stays sharp` | `shallow depth of field`, `bokeh` |
 | Luz | `one motivated light source (window / lamp)` | `softbox`, `ring light`, `three-point lighting` |
-| Fondo | `white subway tile, beige grout, a brass tap` | `seamless background`, `clean white backdrop` |
+| Fondo | `white subway tile, beige grout, a chrome tap` | `seamless background`, `clean white backdrop` |
 | Ruido | `faint digital luminance noise in the shadows` | `clean, noise-free` |
 | Rango | `mild HDR flattening, slight highlight clipping` | `perfect exposure`, `balanced highlights` |
 | Encuadre | `slightly off-centre, slight natural tilt` | `centered composition at eye-level` |
 | Registro | `a photo from a real person's camera roll` | `editorial portrait`, `product shoot` |
 
+El grifo es cromado, no de latón: lo fija la biblia y cambia el color de todos los reflejos del baño.
+
 Tres bloques fijos, uno por situación. No los mezcles nunca dentro del mismo plano: el balance de blancos del flash
 (verdoso-frío) y el de la bombilla del baño (cálido) se pelean y sale un render sucio.
+
+Una aclaración sobre el bloque A, porque parece contradecir la regla de "una sola fuente": la frase
+`auto white balance splitting the difference between the cool window and the warm mirror bulb` describe **el balance
+de blancos**, no dos focos. La ventana sigue siendo la única fuente que proyecta sombra; la bombilla está encendida
+de fondo y sólo ensucia el color, que es exactamente lo que hace un baño real. Si el plano no tiene bombilla a la
+vista, quita esa frase y deja `auto white balance leaning cool`.
 
 **Bloque A — día / ventana.** Para hablar a cámara, antes/después y el parche a contraluz.
 
@@ -673,12 +697,21 @@ Y recuerda: en selfie queda **una** mano libre. Si el plano necesita dos manos, 
 
 ## 5. Referencias: el apartado más importante del documento
 
-Está comprobado generando y no admite discusión: **describir el producto con palabras no basta**. La biblia lo dice
-sin rodeos: sin fotos reales adjuntas, el modelo se inventa una mancha amorfa en la nariz. La geometría escrita (60 mm
-de ancho, 45 de alto, alas de 23, muesca de 6) sirve de apoyo, pero nunca sustituye a la foto.
+Está comprobado generando: **describir el producto con palabras no basta**. Sin fotos reales adjuntas, el modelo se
+inventa una mancha amorfa en la nariz. La geometría escrita sirve de apoyo, pero nunca sustituye a la foto. Sin
+referencias, las 375 imágenes venden un parche genérico que no es el nuestro.
 
-Esto no es un detalle de acabado. Es la diferencia entre 375 imágenes que venden el producto NOCTA y 375 imágenes que
-venden un parche genérico que no existe.
+La geometría, que va en el prompt como apoyo de la foto (medidas de la biblia):
+
+| Medida | Valor | Cómo se escribe en el prompt |
+|---|---|---|
+| Ancho total | 60 mm | `60 mm wide` / `about 6 cm wide, roughly the width of three fingers` |
+| Alto total | 45 mm | `45 mm tall` |
+| Profundidad del ala | 23 mm | `two symmetrical wings 23 mm deep` |
+| Ancho del puente | 28 mm | `one central lobe covering the bridge` |
+| Muesca inferior | 6 mm | `a shallow rounded notch about 6 mm deep where the columella is` |
+| Grosor | 0,55 mm | `0.55 mm thick with a bevelled edge` |
+| Radio de esquina | 2 mm | `every corner rounded with a 2 mm radius` |
 
 ### 5.1 Qué referencias hay y en qué orden van
 
@@ -692,6 +725,20 @@ Ya subidas a Higgsfield:
 | `caja` | la caja crema real | toda imagen con caja o sobre |
 | retrato del avatar | Bea, Marisol o Álex ya generados | toda imagen con persona |
 | nariz limpia ya generada | la nariz del mismo avatar después del tratamiento | tomas de "después" |
+
+Y esto es lo que pone y lo que es la caja, porque el apartado 8 te pide leer el logotipo letra a letra y hace falta
+saber contra qué comparar (biblia):
+
+| Elemento | Cómo es |
+|---|---|
+| Material | cartón crema mate, sin brillos, sin dorados |
+| Logotipo | `nocta`, en minúsculas, azul marino |
+| Marca gráfica | una luna creciente pequeña |
+| Texto | `PARCHES DE NARIZ HIDROCOLOIDE · 8 parches · noche`, y nada más |
+| Sobre individual | crema mate, el mismo logotipo pequeño |
+
+Lo que la caja NUNCA es: tira negra tipo Bioré, parche redondo de grano, parche con dibujos o estrellas, envase de
+plástico. Si aparece cualquiera de esas cosas, la imagen se repite.
 
 **El orden importa.** La primera referencia es la que más pesa. Regla para NOCTA:
 
@@ -799,16 +846,27 @@ flush where the patch was. Everything else identical.
 
 ### 5.5 Límite por modelo: dónde puede vivir la caja NOCTA
 
-Consultado el catálogo del MCP de Higgsfield hoy: `soul_2` declara `medias: max = 1`, es decir, **una sola imagen de
-referencia**. Por tanto Soul no puede sostener la caja NOCTA y el avatar a la vez. `gpt_image_2` declara `medias` de
-tipo imagen sin tope declarado, con `resolution: 1k|2k|4k` y `quality: low|medium|high`.
+Datos sacados hoy del catálogo del MCP, no de memoria:
 
-Reparto práctico:
+| Modelo | Referencias que acepta | Calidad | Proporciones |
+|---|---|---|---|
+| `gpt_image_2_5` | `medias` con rol `image_references`, **sin tope declarado** | `low/medium/high/xhigh/max` (defecto `low`) + `resolution 1k/2k/4k` (defecto `1k`) | incluye `9:16` |
+| `gpt_image_2` (el viejo) | `medias` rol `image`, sin tope | `low/medium/high` (defecto `low`) + `1k/2k/4k` | incluye `9:16` |
+| `soul_2` | `medias` **max = 1** | `1.5k` o `2k` (defecto `2k`) | incluye `9:16` |
 
-- Todo plano con **caja NOCTA o parche identificable** → GPT Image, con referencias múltiples y Angle Lock.
+Que `soul_2` admita una sola imagen es lo que decide el reparto: Soul no puede sostener la caja NOCTA y el avatar a la
+vez. Reparto práctico:
+
+- Todo plano con **caja NOCTA o parche identificable** → `gpt_image_2_5`, con referencias múltiples y Angle Lock.
 - Planos de **persona sin producto en mano** (hablar a cámara, dormir, el dedo señalando la nariz) → Soul con una
-  referencia facial, o GPT Image igualmente si prefieres no cambiar de herramienta.
+  referencia facial, o `gpt_image_2_5` igualmente si prefieres no cambiar de herramienta.
 - Si necesitas caja **y** avatar con identidad bloqueada, no uses Soul.
+
+Dos avisos sobre los mecanismos alternativos, por si alguien los propone: los **Elements** de Higgsfield
+(`show_reference_elements`, varios `<<<element_id>>>` dentro del mismo prompt) funcionan con GPT Image, Nano Banana,
+Seedream y Cinema Studio, pero **no** con Soul V2. Y el **Soul ID** (identidad entrenada) exige de 5 a 20 fotos y de
+3 a 10 minutos de entrenamiento, y sólo admite un `soul_id` por generación: inservible si alguna vez necesitas dos
+avatares en el mismo plano.
 
 ---
 
@@ -816,11 +874,15 @@ Reparto práctico:
 
 ### 6.1 Proporción: 9:16 nativo, siempre
 
-Las 375 imágenes se generan en 9:16 nativo. Nunca generes 1:1, 4:5 ni 2:3 para recortar después: recortar 2:3 a 9:16
-se come un 12,5% de la altura o un 15,6% de la anchura, y eso descentra justo lo que no puede descentrarse (el macro
-y el packshot).
+Las 375 imágenes se generan en 9:16 nativo. Nunca generes 1:1, 4:5 ni 2:3 para recortar después. Con el 2:3 la cuenta
+es ésta: 2:3 es más ancho que 9:16, así que el recorte sólo puede quitar anchura, y quita el **15,6%** — de una imagen
+de 1024x1536 te quedas con 864 px de ancho. No hay forma de llegar a 9:16 quitando altura. Y ese 15,6% descentra justo
+lo que no puede descentrarse: el macro y el packshot.
 
-En Higgsfield, `gpt_image_2` acepta `9:16` directamente. En la API directa de OpenAI **no existe preset 9:16**: el
+(La investigación habla de "12,5% de altura o 15,6% de anchura". La cifra de anchura es correcta; la de altura no sale
+de ninguna operación posible entre 2:3 y 9:16, así que aquí se ignora.)
+
+En Higgsfield, `gpt_image_2_5` acepta `9:16` directamente. En la API directa de OpenAI **no existe preset 9:16**: el
 retrato es 1024x1536, que es 2:3. Sí se permiten tamaños personalizados siempre que sean múltiplos de 16, con una
 proporción entre 1:3 y 3:1, sin pasar de 3840 px por lado y con un total entre 655.360 y 8.294.400 píxeles. Los
 tamaños 9:16 exactos y legales que salen de ahí:
@@ -836,53 +898,79 @@ Grok Video 1.5, Minimax Hailuo 1080), salvo el modo 4k de Kling v3.0. El destino
 
 ### 6.2 Resolución y calidad
 
-Los valores por defecto del conector de Higgsfield para GPT Image son `resolution: 1k` y `quality: low` (verificado
-hoy con `models_explore(get, gpt_image_2)`). **Ese default te sabotea**: un macro de poro a `quality: low` sale como
-ruido indiferenciado, sin filamentos legibles.
+Los valores por defecto de `gpt_image_2_5` son `resolution: 1k` y `quality: low` (verificado hoy con
+`models_explore(get, gpt_image_2_5)`). **Ese default te sabotea**: un macro de poro a `quality: low` sale como ruido
+indiferenciado, sin filamentos legibles. Hay que subirlo a mano en cada llamada.
 
-A partir de ahí hay dos criterios enfrentados y conviene saberlo:
+Lo que sí está documentado:
 
 - La documentación de OpenAI recomienda subir de tramo «for small text, dense infographics, close-up portraits, and
-  identity-sensitive edits», y el propio workflow de UGC de Higgsfield usa siempre `2k` + `high` para sus boards.
-- Lo probado en NOCTA dice otra cosa para la piel: **1k medium dio mejor piel que 2k high**. La explicación más
-  probable es que el tramo alto sobreafila, y el sobreafilado es exactamente una de las señales de render
-  (micro-contraste uniforme en toda la cara, poros con halo). **Sin verificar**: no tengo una fuente que documente
-  este comportamiento, sólo el resultado observado en las pruebas.
+  identity-sensitive edits» — es decir, exactamente los tres casos de NOCTA: packshot con wordmark, macro de nariz y
+  planos de cara con identidad bloqueada.
+- El propio workflow de UGC de Higgsfield usa siempre `2k` + `high` para sus boards.
 
-Regla operativa, que respeta las dos cosas:
+Lo que **no** está documentado y por eso no se decide aquí: si los tramos altos sobreafilan la piel. Es una sospecha
+razonable —el sobreafilado (micro-contraste uniforme en toda la cara, poros con halo) es una de las señales de
+render— pero no hay ni una fuente ni una prueba en NOCTA que lo respalde. **Sin verificar.** Mientras no se mida, se
+usa lo documentado.
 
-| Tipo de plano | Resolución | Calidad | Por qué |
+Punto de partida, hasta que se haga la prueba de abajo:
+
+| Tipo de plano | `resolution` | `quality` | Por qué |
 |---|---|---|---|
-| Cara, medio plano, cuerpo (piel visible) | 1k | medium | mejor piel según lo probado; menos sobreafilado |
+| Cara, medio plano, cuerpo (piel visible) | 2k | high | "close-up portraits e identity-sensitive edits" según OpenAI; es lo que usa Higgsfield en sus boards |
 | Macro de nariz y de parche | 2k | high | hace falta resolver filamentos y el borde biselado |
 | Packshot de caja con wordmark | 2k | high | letras pequeñas necesitan píxeles o salen galimatías |
 | Pruebas de composición | 1k | low | preview barato, se repite el final |
+
+**La prueba que hay que hacer antes de lanzar los 375 planos** (media hora, y cierra la duda del sobreafilado):
+
+1. Coge un prompt de cara ya bueno y otro de macro ya bueno, con sus mismas referencias.
+2. Genera cada uno en seis combinaciones: `1k/medium`, `1k/high`, `2k/medium`, `2k/high`, `2k/xhigh`, `2k/max`.
+3. Míralos al 100% en la zona de la mejilla y en el borde del parche, buscando halo alrededor de los poros.
+4. Apunta el ganador en esta tabla y sustituye la de arriba.
+
+| Plano | Combinación ganadora | Quién lo probó | Fecha |
+|---|---|---|---|
+| Cara / medio plano | por medir | | |
+| Macro | por medir | | |
+| Packshot | por medir | | |
+
+Ojo con los tramos `xhigh` y `max`: existen sólo en el 2.5, no aparecen en ninguna de las dos fuentes escritas y por
+tanto nadie ha comprobado qué le hacen a la piel. Entran en la prueba, no en producción directa.
 
 Si haces pruebas de composición a `low`, repite el plano bueno a la calidad que toque: manteniendo prompt y
 referencias, la composición no cambia entre tramos, así que el preview barato sirve.
 
 ### 6.3 Coste en créditos
 
-**No hay dato publicado y no me lo voy a inventar.** El catálogo de modelos del MCP de Higgsfield consultado hoy
-(`models_explore(action: get, model_id: gpt_image_2)`) devuelve los parámetros `resolution` y `quality` con sus
-opciones, pero **no expone ningún coste en créditos por combinación**. Tampoco aparece en la investigación.
+**No hay dato publicado y no me lo voy a inventar.** El catálogo del MCP consultado hoy
+(`models_explore(action: get, model_id: gpt_image_2_5)`) devuelve `variant`, `quality`, `resolution`, `background`,
+proporciones y referencias admitidas, pero **ningún coste en créditos por combinación**. Tampoco aparece en la
+investigación ni en la biblia.
 
-Cómo lo mides tú en cinco minutos, una sola vez, y lo apuntas aquí:
+El único dato de coste que sí está documentado es de la API directa de OpenAI, no de Higgsfield: activar
+`input_fidelity: 'high'` (lo que preserva el logotipo y la tipografía de la caja) cuesta **+4.160 tokens en formato
+cuadrado y +6.240 en no cuadrado**. Como NOCTA va todo en 9:16, si alguna vez se produce por API se pagan siempre los
+6.240 por imagen con referencia de caja.
+
+Cómo mides los créditos de Higgsfield en cinco minutos, una sola vez, y lo apuntas aquí:
 
 1. Llama a `balance` y apunta los créditos.
-2. Genera una imagen en `1k / low`. Vuelve a llamar a `balance`. La diferencia es el coste.
-3. Repite con `1k / medium`, `2k / high` y `4k / high`.
-4. Rellena la tabla de abajo y este apartado deja de tener un hueco.
+2. Genera una imagen con `model_id: gpt_image_2_5`, `variant: flare`, `1k / low`. Vuelve a llamar a `balance`. La
+   diferencia es el coste.
+3. Repite con `1k / medium`, `2k / high`, `2k / max` y `4k / high`.
+4. Rellena la tabla y este apartado deja de tener un hueco.
 
 | Combinación | Créditos por imagen | Uso previsto en NOCTA | Nº de imágenes estimado |
 |---|---|---|---|
 | 1k / low | por medir | pruebas de composición | variable |
-| 1k / medium | por medir | planos de cara y cuerpo | ~250 |
-| 2k / high | por medir | macros y packshots | ~100 |
+| 1k / medium | por medir | sólo si gana la prueba del 6.2 | 0 de momento |
+| 2k / high | por medir | todo lo demás | ~375 |
+| 2k / max | por medir | sólo si gana la prueba del 6.2 | 0 de momento |
 | 4k / high | por medir | ninguno | 0 |
 
-Con esos cuatro números sabrás el coste total de los 25 anuncios antes de empezar, que es la cifra que de verdad
-importa.
+Con esos números sabrás el coste total de los 25 anuncios antes de empezar.
 
 ---
 
@@ -931,11 +1019,15 @@ es describir qué hace esa luz sobre la cara y sobre la habitación:
 ```
 IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard
 shadows straight down under the brow, the nose and the lower lip, the tops of the cheekbones are
-bright and the eye sockets are dark, and the window behind is pure black with the tiles reflected
-in it. No daylight, no soft window light, no blue sky.
+bright and the eye sockets are dark, and the window behind is pure black. No daylight, no soft
+window light, no blue sky, no reflections in the window or in the tap.
 ```
 
 Lo mismo vale para cualquier condición: la hora no se declara, se describe por sus efectos.
+
+Y va pegado el veto de reflejos de la biblia, que forma parte de la misma regla: nada de ventana con los azulejos
+reflejados, nada de espejo, nada de grifo devolviendo la cara. Cualquier superficie que refleje a una persona es la
+vía más rápida a un brazo de más.
 
 ### Regla 4 · Los poros salen en cuadrícula y eso delata el render
 
@@ -974,9 +1066,19 @@ irregular opaque milky-white islands studded with dozens of small raised white a
 domes, the plugs pulled out of the pores
 ```
 
-**Alternativa más segura.** El plano "parche ya fuera, sujeto delante de la nariz limpia" es mucho más fácil de
-generar bien y enseña las dos cosas a la vez: las manchas blancas y la nariz limpia. Si el despegado a medias no sale
-a la primera, cámbialo por ese plano. El anuncio no pierde nada.
+**Alternativa más segura.** El plano "parche ya fuera, sujeto delante de la nariz limpia" (estado 5) es mucho más
+fácil de generar bien y enseña las dos cosas a la vez: las manchas blancas y la nariz limpia. Si el despegado a medias
+no sale a la primera, cámbialo por este plano. El anuncio no pierde nada. La frase:
+
+```
+STATE 5: the patch is completely off. He is holding the used patch up between thumb and index
+finger, a few centimetres in front of his own nose and slightly to one side so it does not cover
+it, its underside turned toward the camera: irregular opaque milky-white islands studded with
+dozens of small raised white and pale-yellow domes, the plugs pulled out of the pores. Behind it,
+in the same focal plane, his nose is now CLEAN: the pores are open, EMPTY and flat, there are NO
+dark dots and NO grey-brown plugs anywhere, the skin faintly pink and matte with the faint mark of
+the patch edge. The patch is ENTIRELY inside the frame, nothing cropped by the frame edge.
+```
 
 ### Regla extra que va con las cinco: el parche traslúcido se vuelve invisible
 
@@ -1001,8 +1103,8 @@ translucent at the edges
 
 ## 8. Protocolo de revisión
 
-Tres pasadas. La primera dura diez segundos y descarta el 60% de lo malo. La segunda dura un minuto. La tercera sólo
-se hace justo antes de animar.
+Tres pasadas. La primera dura diez segundos y se hace con la miniatura. La segunda dura un minuto y se hace al 100%.
+La tercera sólo se hace justo antes de animar.
 
 ### Pasada 1 · Los diez segundos (mira la miniatura, no la imagen grande)
 
@@ -1037,7 +1139,8 @@ se hace justo antes de animar.
 
 - [ ] ¿Hay una sola fuente? Busca las sombras: si apuntan a dos sitios, falla.
 - [ ] ¿La sombra en la pared es coherente con la posición de la cabeza?
-- [ ] Si el plano es de noche: ¿está la ventana negra? ¿Están las cuencas de los ojos oscuras?
+- [ ] Si el plano es de noche: ¿está la ventana negra y **sin** los azulejos reflejados? ¿Cuencas de los ojos oscuras?
+- [ ] ¿Devuelve alguna superficie una cara o un cuerpo (ventana, grifo, pantalla, azulejo brillante)? Si sí, repite.
 - [ ] ¿Hay tono dorado o ámbar en algún sitio? Si lo hay, repite.
 
 **Texto y props**
@@ -1079,6 +1182,8 @@ se hace justo antes de animar.
 | Marca de agua fantasma | cola negativa completa, con la cláusula de props |
 | Tercer brazo | `phone propped on the shelf, both hands free` (deja de ser selfie) |
 | Persona duplicada | `no mirror, no reflection, no duplicated person` |
+| Cara reflejada en la ventana o el grifo | `no reflections in the window or in the tap`, y `The mirror is out of frame.` |
+| Piel con halo alrededor de los poros | baja un tramo de `quality` y apúntalo en la tabla del apartado 6.2 |
 
 ### Regla de decisión: repetir o editar
 
@@ -1120,6 +1225,9 @@ natural facial asymmetry, one eyebrow slightly higher than the other. No makeup,
 digital smoothing, no beauty filter, no airbrushing, no plastic skin, no glossy retouched finish,
 no glow.
 ```
+
+Este bloque es genérico. En cada plano se le añade el subtono y las marcas del avatar que toque (tabla del apartado
+1.3), y se sustituye `one small healing spot` por lo que diga esa tabla: en Bea son **dos** granitos en la barbilla.
 
 ### C · Macro de nariz con filamentos sebáceos (el "antes")
 
@@ -1180,12 +1288,22 @@ text anywhere except the NOCTA box's own label, no watermark, no captions, no st
 seamless background, no bokeh.
 ```
 
-### F · Pase de micro-realismo (segundo modelo)
+### F · Pase de micro-realismo (segunda pasada con otro modelo)
 
 El workflow de UGC de Higgsfield prohíbe mandar una imagen cruda a vídeo: «Never send a raw gpt_image_2 board to video
-unless both allowed Seedream attempts fail». Es decir, el propio Higgsfield considera que la salida cruda no pasa el
-listón de realismo UGC. El pase de *de-slop*, adaptado a NOCTA (se ha cambiado "keep the product blank / unbranded"
-por la preservación de la marca):
+unless both allowed Seedream attempts fail». Es decir, el propio Higgsfield considera que la salida cruda de GPT Image
+no pasa el listón de realismo UGC.
+
+Así que el pipeline son dos pasos por cada uno de los 375 planos:
+
+| Paso | Modelo | Qué resuelve | Referencias |
+|---|---|---|---|
+| 1 | `gpt_image_2_5`, `variant: flare` | composición, producto, caja, escala real, cero texto | las 2-4 del apartado 5 |
+| 2 | `soul_2` imagen a imagen, o Seedream | micro-realismo: piel, grano, material | **una sola**: la salida del paso 1 |
+
+Que el paso 2 sea `soul_2` funciona justamente porque ahí sólo hace falta una referencia (la imagen del paso 1), que
+es su límite. El prompt del paso 2 es el pase de *de-slop*, adaptado a NOCTA (se ha cambiado "keep the product blank /
+unbranded" por la preservación de la marca):
 
 ```
 KEEP EXACTLY the framing, composition, camera distance, pose, subject and product of this image —
@@ -1207,11 +1325,22 @@ homogeneiza el grano y la piel entre las 15 tomas de un mismo anuncio, que es do
 
 Si varías "a ojo" cambiando sinónimos, el modelo converge igual y los 25 anuncios parecen el mismo. La solución de
 Higgsfield es determinista: pools cerrados y rotación aritmética, «this defeats LLM-bias toward "familiar" pool
-options». Monta una hoja con 25 filas y estas columnas, y rellénala por rotación, no por intuición:
+options». Monta una hoja con 25 filas, numeradas del 0 al 24, y rellena cada columna con la fórmula
+`opción = pool[i % número_de_opciones]`, donde `i` es el número de fila. Nada de intuición.
 
-`avatar (Bea / Marisol / Álex)` × `hora (día ventana / noche flash / mañana temprano)` ×
-`estancia (baño día / baño noche / dormitorio / ventana / mármol)` ×
-`vestuario (pijama / camiseta ancha / albornoz / ropa de calle)` × `expresión aprobada` × `gancho`.
+| Columna | Opciones (pool cerrado) | Nº | Fórmula para la fila `i` |
+|---|---|---|---|
+| Avatar | Bea · Marisol · Álex | 3 | `pool[i % 3]` |
+| Hora | día ventana · noche flash · mañana temprano | 3 | `pool[i % 3]` |
+| Estancia | baño día · baño noche · dormitorio · ventana · mármol | 5 | `pool[i % 5]` |
+| Vestuario | pijama · camiseta ancha · albornoz · ropa de calle | 4 | `pool[i % 4]` |
+| Expresión | las nueve aprobadas del apartado 3.1 | 9 | `pool[i % 9]` |
+| Gancho | los 25 del guion | 25 | uno por fila |
+
+Con 3, 3, 5, 4 y 9 opciones no hay dos anuncios con la misma combinación en las 25 filas, y la hoja se rellena sola.
+Dos coherencias que hay que respetar por encima de la rotación: la estancia y la hora tienen que cuadrar (nada de
+"mañana temprano" en el baño de noche) y el vestuario tiene que cuadrar con la hora (nada de ropa de calle a las
+23:30). Cuando choquen, mueve la fila entera al siguiente valor de la columna, no inventes una opción nueva.
 
 Dentro de cada anuncio, declara explícitamente la banda de distancia de cada una de las 15 tomas
 (`MACRO`, `TIGHT CLOSE-UP`, `MEDIUM CLOSE-UP`, `WAIST-UP`, `WIDE`) y **no repitas banda en tomas consecutivas**. Eso
@@ -1229,11 +1358,14 @@ oily T-zone, visible pores`. Si Bea ya sale perfecta en el plano 1, el anuncio n
 2. Sustitúyelas por mecanismos: poros, vello fino, sebo en la zona T, asimetría, ruido digital, recorte de altas luces.
 3. Una sola fuente de luz, dicha por sus consecuencias, nunca por la hora.
 4. Foco profundo en todo menos en el macro. En el macro, dos o tres milímetros nítidos y borra `no bokeh`.
-5. Encuadre torcido y descentrado sí; desenfoque de movimiento no.
-6. **Adjunta las fotos reales del producto. Siempre. Describirlo con palabras no basta.** De dos a cuatro referencias,
+5. Encuadre torcido y descentrado sí; desenfoque de movimiento no, salvo la mano del plano 13.
+6. Nada de reflejos: ni espejo, ni ventana con azulejos reflejados, ni grifo devolviendo la cara.
+7. **Adjunta las fotos reales del producto. Siempre. Describirlo con palabras no basta.** De dos a cuatro referencias,
    el producto primero cuando el producto es lo que no puede fallar.
-7. Angle Lock y escala real en todo plano con caja o parche.
-8. 9:16 nativo. 1k medium para piel, 2k high para macros y packshot. Nunca 4k.
-9. Las cinco reglas comprobadas van siempre: parche entero en cuadro, referencia de nariz limpia, consecuencias de la
-   luz de noche, poros irregulares, despegado en una sola lámina.
-10. Revisa las cuatro esquinas antes de dar cualquier imagen por buena.
+8. Angle Lock y escala real en todo plano con caja o parche.
+9. El modelo es `gpt_image_2_5` con `variant: flare`, 9:16 nativo, `2k` + `high`, y los defaults (`1k` + `low`) hay
+   que subirlos a mano en cada llamada. Nunca 4k.
+10. Las cinco reglas comprobadas van siempre: parche entero en cuadro, referencia de nariz limpia, consecuencias de la
+    luz de noche, poros irregulares, despegado en una sola lámina.
+11. Dos pasos por plano: GPT Image 2.5 para la composición, Soul 2.0 o Seedream para el micro-realismo.
+12. Revisa las cuatro esquinas antes de dar cualquier imagen por buena.

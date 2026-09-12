@@ -36,8 +36,9 @@ Las reglas que hacen que el parche salga con su forma exacta están en `BIBLIA_V
 | 44 | Qué asco (y qué gusto) | Álex | Sitio 4 de la biblia, "ventana de mañana": luz | 15 | [abrir](prompts/anuncio_44_que_asco_y_que_gusto.md) |
 | 45 | Reto: una noche | Álex | El anuncio cruza la noche y la mañana, así que | 15 | [abrir](prompts/anuncio_45_reto_una_noche.md) |
 | 50 | Time-lapse de 8 horas | Álex | Tres de los cinco sitios de la biblia, encaden | 15 | [abrir](prompts/anuncio_50_time_lapse_de_8_horas.md) |
+| 55 | Si tienes más de 35 y esto sigue saliendo | Marisol | Sitio 2 de la biblia (baño de noche: azulejo b | 15 | [abrir](prompts/anuncio_55_si_tienes_mas_de_35_y_esto_sigue_saliendo.md) |
 
-> **Pendientes de escribir en esta versión:** anuncios 55, 56, 63, 64, 71, 82. El resto están completos.
+> **Pendientes de escribir en esta versión:** anuncios 56, 63, 64, 71, 82. El resto están completos.
 
 ## Las imágenes del anuncio 1
 
