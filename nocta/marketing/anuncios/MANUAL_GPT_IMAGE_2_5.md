@@ -204,7 +204,18 @@ the frame edges
 
 Si dejas la prohibición de bokeh dentro del prompt del macro, las dos instrucciones se pelean y gana la que esté peor
 escrita. (Confianza media según la investigación; el razonamiento óptico sí está sostenido por las fichas del
-iPhone 16.)
+iPhone 15/16.)
+
+**Elige una sola receta de macro por prompt.** La biblia escribe el macro como `clip-on macro lens` y la
+investigación proponía `iPhone ultra-wide camera in macro mode`. Las dos son válidas en teoría, pero describen dos
+cacharros distintos: si las metes juntas en el mismo prompt, el modelo mezcla ópticas.
+
+**Para NOCTA manda `clip-on macro lens`, y no es cuestión de gusto: es lo que se generó.** Las cuatro macros
+verificadas del anuncio 1 (las tomas 1, 3, 4 y 13, que están en `img/a01/`) salieron con esa fórmula, y salieron
+bien: poros desiguales con su tapón, vello fino, capilares y la profundidad de campo corta que da una lente macro
+de verdad. `iPhone ultra-wide camera in macro mode` no se ha probado en esta cuenta, así que queda como recambio y
+marcado **sin verificar**, no como recomendación. La regla de la biblia es esa: gana lo que está comprobado
+generando, no lo que suena mejor en una guía.
 
 ### 1.6 Ojos demasiado limpios
 
@@ -239,20 +250,44 @@ framing slightly off-centre with a slight natural tilt, casual handheld framing,
 centred, captured mid-moment
 ```
 
+Se puede añadir, y ayuda, el recorte accidental del encuadre:
+
+```
+the top of the head slightly cut by the frame
+```
+
 Ojo con una trampa: la literatura de "foto amateur" recomienda también pedir desenfoque de movimiento y
 sobreexposición. **No lo hagas.** Tu imagen no es el producto final, es el fotograma de entrada de un image-to-video.
 Un borrón horneado en la imagen fuente lo intenta "resolver" el modelo de vídeo y produce morphing de dedos y rasgos.
-La inclinación y el descentrado sí (son geométricos, el vídeo los respeta); el `motion blur` no.
+La inclinación y el descentrado sí (son geométricos, el vídeo los respeta); el `motion blur` no. Borra de todos los
+prompts `motion blur`, `blurry`, `out of focus`, `overexposed` y `blown out`.
+
+**Una excepción, una sola**, y está documentada: el plano 13, la retirada del parche. Ahí la investigación permite un
+borrón mínimo y localizado en la extremidad que ya se está moviendo:
+
+```
+the hand pulling the patch is very slightly motion-blurred while the face stays completely sharp
+```
+
+Aun así, ese plano se revisa en la pasada 3 antes de animarlo. Si el borrón ha tocado la cara o el parche, se repite
+sin él. (La biblia pide `slight handheld motion blur at the edges` en su fórmula de prompt; en NOCTA eso se reduce a
+esta única excepción, precisamente porque las 375 imágenes van a vídeo.)
 
 ### 1.9 Señales de segundo orden que cuestan la imagen entera
 
 - **Espejos.** «Mirrors spawn extra hands and duplicated bodies» (`ugc-board.md`). Los 25 anuncios pasan por un baño y
   la tentación es el plano del espejo. No lo hagas: o el espejo está fuera de cuadro, o la cámara está donde estaría
-  el espejo (el móvil apoyado en el estante, que además es lo que hace la gente real).
+  el espejo (el móvil apoyado en el estante, que además es lo que hace la gente real). En positivo se escribe
+  `The mirror is out of frame.` y en la cola negativa `no mirror and no reflection, no reflective surface returning
+  a face, no duplicated person`.
 - **Manos.** En un selfie una mano sostiene el móvil, así que sólo queda **una** libre. Si pides selfie y a la vez una
-  acción a dos manos, el modelo inventa un tercer brazo. Cualquier acción a dos manos exige cámara apoyada.
+  acción a dos manos, el modelo inventa un tercer brazo. Cualquier acción a dos manos se resuelve con
+  `phone propped on the bathroom shelf at chest height so both hands are free` y deja de ser selfie. Y siempre se
+  dice qué hace la mano que no trabaja: `her other hand rests on the edge of the sink; no other hand is doing
+  anything`.
 - **Texto fantasma.** Sin cola negativa brotan marcas de agua, subtítulos y logos en toallas, botes y pantallas. El
-  olvido más frecuente no es la marca de agua, son las etiquetas de los props.
+  olvido más frecuente no es la marca de agua, son las etiquetas de los props: va siempre la cláusula de props del
+  apartado 5.3, además de la cola negativa completa del apartado 9.A.
 - **Grano de carrete.** `Kodak Gold 200`, halación y grano fino producen una foto de carrete, que es un look distinto
   y contradictorio con el móvil. Para móvil: ruido **digital** de luminancia. Higgsfield lo dice literal: «digital
   noise, never film grain».
