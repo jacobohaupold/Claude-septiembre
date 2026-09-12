@@ -435,12 +435,12 @@ The image comes alive: Bea lifts the two stacked boxes about five centimetres to
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
-**Reglas añadidas:** cláusula de fidelidad de la caja
+**Reglas añadidas:** contraste del packshot; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream marble table top. Two identical cream matte cardboard boxes, their printed faces left blank, one lying flat and one standing leaned against it, plus a single small cream matte sachet placed in front, its serrated top edge visible. Tiny fibres and a hairline dent in the cardboard, one corner very slightly bumped, a faint crumb of dust on the marble, the natural grey-beige veining of the stone. No patch on show, no hands in frame. Soft window light from the left, short soft shadows, late morning. Shallow depth of field, focus exactly on the front edge of the standing box, the far corner of the table falling soft, natural digital sensor noise. Plain honest product snapshot, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. CONTRAST IS CRITICAL, THE BOX IS CREAM AND MUST NOT DISAPPEAR: put a plain dark charcoal-grey wall in soft shadow directly behind the box, clearly darker than the board, and give the box a defined shadow on the stone under its base and a bright edge where the window light catches the top corner. Cream board against a cream background reads as a pale blur at thumbnail size. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream marble table top. Two identical cream matte cardboard boxes, their printed faces left blank, one lying flat and one standing leaned against it, plus a single small cream matte sachet placed in front, its serrated top edge visible. Tiny fibres and a hairline dent in the cardboard, one corner very slightly bumped, a faint crumb of dust on the marble, the natural grey-beige veining of the stone. No patch on show, no hands in frame. Soft window light from the left, short soft shadows, late morning. Shallow depth of field, focus exactly on the front edge of the standing box, the far corner of the table falling soft, natural digital sensor noise. Plain honest product snapshot, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**

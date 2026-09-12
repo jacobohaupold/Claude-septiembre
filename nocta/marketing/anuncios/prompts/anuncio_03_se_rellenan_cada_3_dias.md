@@ -397,12 +397,12 @@ The image comes alive: only a single slow breath moves the skin, the emptied por
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
-**Reglas añadidas:** cláusula de fidelidad de la caja
+**Reglas añadidas:** contraste del packshot; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, close product shot from slightly above. Two plain cream matte cardboard boxes of the same small size on a cream marble table, one standing upright and one lying flat in front of it, a single cream matte sachet leaning against the standing box, the cardboard showing a faint uncoated grain and one soft dent on the top corner. Short soft shadows to the right, a few dust specks on the marble, a faint veining line running under the boxes. Nothing else on the table. Soft window light from the left, midday. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the frame edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. CONTRAST IS CRITICAL, THE BOX IS CREAM AND MUST NOT DISAPPEAR: put a plain dark charcoal-grey wall in soft shadow directly behind the box, clearly darker than the board, and give the box a defined shadow on the stone under its base and a bright edge where the window light catches the top corner. Cream board against a cream background reads as a pale blur at thumbnail size. Vertical 9:16 handheld iPhone photo, close product shot from slightly above. Two plain cream matte cardboard boxes of the same small size on a cream marble table, one standing upright and one lying flat in front of it, a single cream matte sachet leaning against the standing box, the cardboard showing a faint uncoated grain and one soft dent on the top corner. Short soft shadows to the right, a few dust specks on the marble, a faint veining line running under the boxes. Nothing else on the table. Soft window light from the left, midday. Very shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the frame edge, natural digital sensor noise. No beauty retouching, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**

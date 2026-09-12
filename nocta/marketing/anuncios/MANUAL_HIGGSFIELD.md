@@ -26,13 +26,13 @@ Este manual está escrito para la persona que se sienta delante de Higgsfield y 
 ## 1. Resumen: las ocho decisiones que cambian hoy
 
 1. **Se acabaron las 15 imágenes sueltas por anuncio.** Un anuncio de 30 segundos son **2 imágenes de "board" y 2 clips**, no 15 y 15. El board es una hoja horizontal 21:9 con ocho viñetas verticales 9:16 en una sola fila, y un único clip de Seedance la convierte en 15 segundos con ocho cortes duros dentro (flujo `ugc-review-video` v1.1).
-2. **Un anuncio de 30 s pasa de ~525 créditos a ~214.** Los 25 anuncios pasan de más de 13.000 créditos a unos 5.350 (precios medidos en nuestra cuenta).
+2. **Un anuncio de 30 s pasa de unos 500-550 créditos a 214.** Los 25 anuncios pasan de unos 12.600 a unos 5.350 (precios medidos en nuestra cuenta).
 3. **El pase de de-slop con `seedream_v5_pro` es obligatorio** entre el board y el vídeo. Cuesta 3 créditos y es la receta literal contra la piel de plástico.
 4. **La consistencia no se describe, se apila.** Mismo `character_media_id` en todo, board anterior como referencia del siguiente, y Angle Lock del producto. Describir a Bea con palabras no sirve.
 5. **Los clips se generan mudos** (`generate_audio: false`). La voz en español de Seedance ya se comprobó que no se entiende ("filimentos se vacales", en nuestra propia QA). La locución va en el montaje local.
 6. **Montaje, subtítulos y música, fuera de Higgsfield.** Con ffmpeg y Whisper cuestan cero créditos y ya lo tenemos hecho en `maquina/producir.py`.
 7. **Con 275,93 créditos no caben 25 anuncios.** Dan para **un** anuncio piloto de 30 s con colchón de reintentos. Hay que decidir plan antes de generar el anuncio número 2.
-8. **La recarga automática está encendida y ya ha saltado siete veces.** En `transactions` hay siete asientos `Auto Top-Up` de +200 créditos, el último hoy a las 19:20. Cuando el saldo se acaba no se para la producción: se cobra otra recarga. Hay que mirar la factura y decidir si se deja encendida antes de lanzar la tanda (punto 9.5).
+8. **La recarga automática está encendida y ya ha saltado siete veces.** En `transactions` hay siete asientos `Auto Top-Up` de +200 créditos, el último hoy a las 19:20. Cuando el saldo se acaba no se para la producción: se cobra otra recarga. Hay que mirar la factura y decidir si se deja encendida antes de lanzar la tanda (punto 9.4).
 
 ---
 
@@ -134,7 +134,7 @@ Así se reparten las tomas de la biblia en los 16 slots. La cuenta exacta, porqu
 | 7 | STATIC | TIGHT | Despega en una lámina continua | 13b |
 | 8 | SELFIE | MEDIUM | El parche usado a contraluz junto a la nariz limpia | 14 + 15 |
 
-El packshot de la caja (toma 15 alternativa) no va dentro del board: se genera **una sola vez** como clip corto reutilizable en los 25 anuncios. Es el primer ahorro grande.
+El packshot de la caja (toma 15 alternativa) no va dentro del board: se genera **una sola vez** como clip corto reutilizable en los 25 anuncios. Se reutiliza tal cual en los 25, así que se paga una vez.
 
 Fíjate en que el board B es casi todo STATIC. No es un descuido: colocar el parche y hacer la presión en V requieren dos manos libres, y en POV selfie una mano está ocupada por el móvil. Esas acciones son STATIC obligatoriamente.
 
@@ -194,22 +194,22 @@ El plan que teníamos era: 15 imágenes por anuncio con GPT Image, 15 conversion
 
 | Concepto | Método de boards | Método de 15 imágenes sueltas |
 |---|---|---|
-| Imágenes | 2 boards × 6,5 = **13 cr** | 15 × 2,5 = **37,5 cr** |
+| Imágenes | 2 boards × 6,5 = **13 cr** | 15 × 1 = **15 cr** (medido: GPT Image 2.5 Flare a 1k; con la tasa de repetición real del 12-09, **≈80 cr**) |
 | De-slop | 2 × 3 = **6 cr** | 15 × 3 = **45 cr** (si se hiciera; en la práctica se saltaba) |
 | Vídeo | 2 clips de 15 s a 720p = 2 × 97,5 = **195 cr** | 15 clips de 5 s = 15 × 32,5 = **487,5 cr** |
-| **Total por anuncio de 30 s** | **214 cr** | **525 cr sin de-slop / 570 cr con de-slop** |
-| **Los 25 anuncios** | **≈5.350 cr** | **≈13.125 cr sin de-slop / ≈14.250 con él** |
+| **Total por anuncio de 30 s** | **214 cr** | **≈503 cr sin de-slop / ≈548 con de-slop** (≈570 contando la repetición real de imagen) |
+| **Los 25 anuncios** | **≈5.350 cr** | **≈12.600 cr sin de-slop / ≈13.700 con él** |
 | Generaciones que hay que lanzar y revisar | 4 por anuncio, 100 en total | 30 por anuncio, 750 en total |
 
 (La investigación estimaba el método antiguo en ~487 cr/anuncio y ~12.200 en total contando solo vídeo; la diferencia con esta tabla es que aquí se suman también las imágenes.)
 
-**Coste:** el método de boards ahorra unos **7.000-8.800 créditos** en el proyecto. No hay discusión.
+**Coste:** el método de boards ahorra unos **7.200-8.300 créditos** en el proyecto.
 
-**Consistencia:** aquí la diferencia es todavía mayor, y es cualitativa. En el método de 15 imágenes sueltas, cada imagen es una tirada independiente: la cara de Bea deriva un poco en cada una, la luz del baño cambia de temperatura, el parche cambia de troquel, y encima cada conversión a vídeo vuelve a interpretar la escena. Quince oportunidades de que algo se mueva. En el método de boards, los ocho planos de un tramo se generan **en la misma imagen, a la vez**, con la misma iluminación y la misma cara literalmente al lado; y el clip entero sale de una sola pasada de Seedance. El board B, además, lleva el board A como referencia, así que el "antes" y el "después" comparten cara y luz. La consistencia deja de ser un problema de suerte y pasa a ser un problema de composición.
+**Consistencia:** aquí la diferencia es todavía mayor, y es cualitativa. En el método de 15 imágenes sueltas, cada imagen es una tirada independiente: la cara de Bea deriva un poco en cada una, la luz del baño cambia de temperatura, el parche cambia de troquel, y encima cada conversión a vídeo vuelve a interpretar la escena. Quince oportunidades de que algo se mueva. En el método de boards, los ocho planos de un tramo se generan **en la misma imagen, a la vez**, con la misma iluminación y la misma cara literalmente al lado; y el clip entero sale de una sola pasada de Seedance. El board B, además, lleva el board A como referencia, así que el "antes" y el "después" comparten cara y luz. La consistencia deja de depender de la suerte y pasa a depender de cómo esté repartida la hoja.
 
-**Riesgos del método de boards, dicho sin adornos:** un fallo en una viñeta obliga a regenerar la hoja entera (9,5 cr, barato); y los ocho planos tienen que estar bien repartidos en POV y distancia o el clip se convierte en un morphing continuo. Ese riesgo se controla con el motor anti-morphing, que es una regla mecánica, no una intuición.
+**Riesgos del método de boards:** un fallo en una viñeta obliga a regenerar la hoja entera (9,5 cr, barato); y los ocho planos tienen que estar bien repartidos en POV y distancia o el clip se convierte en un morphing continuo. Ese riesgo se controla con el motor anti-morphing del punto 7.6, que es una regla de conteo: se comprueba slot a slot antes de generar.
 
-**Recomendación para NOCTA: método de boards, sin excepciones.** Motivos, por orden: cuesta 2,5 veces menos, resuelve de raíz la deriva de cara que ya nos salió en pruebas, reduce el trabajo de revisión de 750 generaciones a 100, y produce cortes duros de verdad, que es exactamente el ritmo que tiene el anuncio de referencia. El método de 15 imágenes sueltas queda para un solo caso: **planos de producto aislados y reutilizables** (el packshot de la caja, el parche a contraluz sobre la ventana), donde no hay persona, no hay continuidad que mantener y el clip se reaprovecha en los 25 anuncios.
+**Recomendación para NOCTA: método de boards, sin excepciones.** Motivos, por orden: cuesta menos de la mitad, resuelve de raíz la deriva de cara que ya nos salió en pruebas, reduce el trabajo de revisión de 750 generaciones a 100, y produce cortes duros de verdad, que es exactamente el ritmo que tiene el anuncio de referencia. El método de 15 imágenes sueltas queda para un solo caso: **planos de producto aislados y reutilizables** (el packshot de la caja, el parche a contraluz sobre la ventana), donde no hay persona, no hay continuidad que mantener y el clip se reaprovecha en los 25 anuncios.
 
 ---
 
@@ -239,7 +239,7 @@ Tres detalles que no son decorativos:
 
 ## 6. Consistencia de personaje y de producto
 
-La consistencia no se pide, se construye. Son cuatro mecanismos que funcionan a la vez.
+La consistencia no se pide en el prompt: se construye apilando referencias. Son siete mecanismos y funcionan a la vez.
 
 ### 6.1 Lo que funciona
 
@@ -446,7 +446,7 @@ HARD BAN: golden hour, warm sunset, orange/amber/honey cast, late afternoon warm
 Lo que sí se escribe:
 
 ```
-soft cool neutral daylight from the left window, one motivated source, consistent white balance, deep focus, background stays sharp, 23mm iPhone front-camera look with slight edge distortion, faint digital sensor noise in the shadows, pore-level skin with vellus hair and asymmetric moles, no smoothing, no glow, no beauty filter, imperfect framing
+soft cool neutral daylight from the left window, one motivated source, consistent white balance, very shallow depth of field with the focus exactly on her eyes and the background falling out naturally as in any phone photo, 23mm iPhone front-camera look with slight edge distortion, faint digital sensor noise in the shadows, pore-level skin with vellus hair and asymmetric moles, no smoothing, no glow, no beauty filter, imperfect framing
 ```
 
 Ruido **digital**, nunca grano de película. Y la biblia añade una regla propia para los planos de noche: "de noche" no significa nada, hay que describir las consecuencias de la luz.
@@ -569,7 +569,7 @@ No son precios de nota de prensa: salen del historial de `transactions` y de `br
 | Soul V2, 1 imagen | 0,12 cr |
 | Nano Banana Pro, 1 imagen | **2 cr** (medido: decenas de cargos de −2 exactos; la investigación decía 1,9) |
 | GPT Image 2.5 Flare, 1k, calidad `medium`, 9:16 | **1 cr** (medido en `transactions` el 12-09-2026, 27 cargos seguidos de −1 al generar el anuncio 1) |
-| GPT Image 2.5 Flare, 1k, calidad `high`, 9:16 | 2 cr |
+| GPT Image 2.5 Flare, 1k, calidad `high`, 9:16 | 2 cr, **sin verificar**: no hay ningún cargo de −2 con ese nombre en el historial |
 | GPT Image 2.5 Flare, 2k, calidad `medium` | 1,5 cr |
 | GPT Image 2.5 Flare, 2k, calidad `high` | 3 cr |
 | GPT Image 2, calidad `medium` | 2,5 cr (modelo anterior, cifra del QA de la semana pasada) |
@@ -633,7 +633,7 @@ Dos consecuencias que cambian el calendario. La primera: el ciclo se renovó el 
 | Boards, anuncio de 30 s (2 boards + 2 de-slop + 2 clips de 15 s a 720p) | 214 cr | **5.350 cr** |
 | Boards, anuncio de 15 s (1 board + 1 de-slop + 1 clip de 15 s) | 107 cr | **2.675 cr** |
 | Boards con clips compartidos reutilizados (packshot, gancho, nariz limpia) | ≈130 cr | **≈3.250 cr** |
-| Método antiguo, 15 imágenes + 15 clips de 5 s | ≈525 cr | **≈13.125 cr** |
+| Método antiguo, 15 imágenes + 15 clips de 5 s | ≈503 cr | **≈12.600 cr** |
 | Borrador entero a 480p para validar ritmo (30 s) | ≈94 cr | ≈2.350 cr |
 
 A esto hay que sumarle las generaciones que se tiran. El flujo oficial presupuesta un **10-15 %** por moderación y fallos técnicos, y con eso el método de boards sale a **≈6.150 créditos** para los 25. Pero nuestra propia tasa de repetición medida el 12-09 fue mucho peor (4,5 tiradas por imagen final), así que hay que tomar ese 6.150 como **suelo, no como presupuesto**. La diferencia es que en el método de boards la repetición cara se corta en el QA del board (9,5 cr) y no en el clip (97,5 cr): el número que hay que vigilar semana a semana es cuántos boards se regeneran por anuncio. Si salen más de dos, el problema está en el prompt, no en el modelo.
@@ -654,7 +654,7 @@ En la opción C, el precio de 480p a 15 s está **sin verificar**: lo único med
 
 **Lo que NO cabe:**
 
-- Un solo anuncio con el método antiguo de 15 clips sueltos (≈525 cr). Ni uno.
+- Un solo anuncio con el método antiguo de 15 clips sueltos (≈503 cr). Ni uno.
 - Los 25 anuncios, en ningún escenario. Faltan entre 2.400 y 5.900 créditos.
 - Nada a 1080p. Un clip de 15 s a 1080p se come casi todo el saldo. Ver nota abajo.
 
@@ -662,7 +662,7 @@ En la opción C, el precio de 480p a 15 s está **sin verificar**: lo único med
 
 **Por qué bailan las cifras de saldo, ya resuelto.** El encargo de este manual decía 287,93 créditos, la investigación de la semana decía 151,43 y la API devuelve hoy 275,93. No es que nadie se equivocara: el historial enseña un asiento `Auto Top-Up` de **+200 créditos a las 19:20 de hoy**, entre una consulta y otra. Con cualquiera de las tres cifras la conclusión es la misma: da para un anuncio y no da para dos.
 
-### 9.5 La recarga automática está encendida, y eso cambia la decisión
+### 9.4 La recarga automática está encendida, y eso cambia la decisión
 
 En `transactions` hay **siete asientos `Auto Top-Up` de +200 créditos** entre el 02-08 y el 12-09 de este año. Significa que la cuenta tiene el auto-refill activo: cuando el saldo baja, Higgsfield compra créditos y los cobra sin preguntar. Tres consecuencias:
 
@@ -670,13 +670,14 @@ En `transactions` hay **siete asientos `Auto Top-Up` de +200 créditos** entre e
 2. **Hay que decidirlo antes de generar el piloto, no después.** O se apaga el auto-refill y se trabaja con tope duro, o se sube a un plan que cubra el ciclo. Las dos son válidas; lo que no vale es dejarlo como está y descubrirlo en el extracto.
 3. **El saldo tampoco se lo come solo la generación.** En el historial hay cargos de `Claude Opus 5` y `Web Search`: el trabajo del agente también gasta créditos de esta misma bolsa. El colchón de 61,93 del piloto no es solo para reintentos de imagen.
 
-### 9.4 Qué hacer con el saldo, en orden
+### 9.5 Qué hacer con el saldo, en orden
 
 1. **Hoy:** congelar los tres avatares si no están congelados (1,2 cr por diez candidatas de cada uno, 3,6 cr en total). Es gratis a efectos prácticos.
 2. **Esta semana:** producir el anuncio piloto nº 1 (Bea, 30 s, Opción A). 214 cr.
 3. **Antes de generar el anuncio nº 2:** medirlo en `/admin` con `utm_content`. Es nuestra propia regla de oro y con este saldo es además una obligación aritmética.
-4. **Decisión de presupuesto, antes de la tanda:** los 25 anuncios necesitan ≈6.150 créditos. Con Plus (1.200/mes que **caducan**) son cinco ciclos; con Ultra (3.000/mes) son poco más de dos. Como los créditos caducan, la producción hay que **concentrarla dentro del ciclo**: no sirve ahorrar mes a mes. Si se va a por packs de recarga, recuerda la ventana de 90 días.
-5. **Regla permanente:** todo se genera a 720p, y solo los clips que ganen en datos se suben con `bytedance_video_upscale` preset "ugc".
+4. **Decisión de presupuesto, antes de la tanda:** los 25 anuncios necesitan ≈6.150 créditos como suelo. Con lo que de verdad entra cada ciclo en esta cuenta (1.000 cr medidos, no los 1.200 del catálogo) son **más de seis ciclos**; con Ultra, si son 3.000, poco más de dos. Como los créditos caducan al cerrar el ciclo, la producción hay que **concentrarla dentro del ciclo**: no sirve ahorrar mes a mes. Si se va a por packs de recarga, la ventana es de 90 días.
+5. **Hoy también:** entrar en la cuenta y decidir el auto-refill (punto 9.4). Es la única decisión de esta lista que cuesta dinero de verdad si se deja para después.
+6. **Regla permanente:** todo se genera a 720p, y solo los clips que ganen en datos se suben con `bytedance_video_upscale` preset "ugc".
 
 ---
 
@@ -722,7 +723,7 @@ Se revisan fotogramas equiespaciados, **todos** los primeros planos de producto 
 ### 10.6 Cómo no quemar créditos: las siete reglas
 
 1. Escribe **todos** los prompts de board y de clip del anuncio antes de lanzar nada.
-2. Nunca lances un clip (97,5 cr) sobre un board que no ha pasado el QA (9,5 cr regenerarlo). La proporción es 1 a 15.
+2. Nunca lances un clip (97,5 cr) sobre un board que no ha pasado el QA. Regenerar el board con su de-slop son 9,5 cr: diez veces más barato que tirar el vídeo.
 3. Todo a 720p. Upscale solo de ganadores.
 4. `gpt_image_2` en `medium` salvo el packshot con texto de envase.
 5. `generate_audio: false` siempre.
@@ -735,11 +736,27 @@ Se revisan fotogramas equiespaciados, **todos** los primeros planos de producto 
 
 ### A.1 Imagen base del avatar (`soul_2`, 3:4, 2k, sin producto en las manos)
 
+Este es el prompt de **Bea**, entero y listo para pegar. Los rasgos son los de la biblia, literalmente: la versión anterior de este manual traía una coleta y un top crema que la biblia no dice en ninguna parte.
+
 ```
-A Spanish woman in her mid-20s with high model facial features, symmetrical features, well-proportioned figure and natural skin texture — visible pores, fine vellus hair, a few asymmetric freckles across the nose and cheeks, no makeup. Straight light-brown hair in a low sleek ponytail with a centre parting, small gold stud earrings, short natural nude nails, cream ribbed long-sleeve top. Mid-action expression — in the middle of saying something, not posing, eyes glancing slightly off-lens. Body in a calm neutral pose, relaxed, weight slightly on one hip. Standing in a small Spanish flat bathroom: white square tiles, a narrow sink with a chrome tap, a folded terracotta towel, a window out of frame on the left. Color palette dominated by cool whites and warm off-white tile with one soft terracotta accent. Soft cool neutral daylight from the left window, no warm cast, no golden hour, one motivated source, consistent white balance. Subject in clear focus with the background naturally falling out as in any phone photo. Self-portrait selfie shot on iPhone front-facing camera held by the subject at arm's length — head and shoulders fill the frame, casual handheld framing, slight natural tilt, slightly off-center, slightly imperfect, not posed. Phone-sensor grain and realistic skin texture preserved, no retouch, no smooth-skin filter. No fisheye lens, no ultra-wide distortion. Authentic UGC creator phone selfie, NOT editorial portrait, NOT fashion magazine.
+A Spanish woman of 24 with high model facial features, symmetrical features, well-proportioned figure and natural skin texture — visible pores, fine vellus hair, a few asymmetric freckles, two small healing spots on the chin, brown eyes, thick natural untouched eyebrows, a small mole under the left cheekbone, natural shine on the T-zone, absolutely no makeup. Light-brown hair pinned up with a matte black claw clip, small gold stud earrings, short natural nude nails, grey ribbed t-shirt. Mid-action expression — in the middle of saying something, not posing, eyes glancing slightly off-lens. Body in a calm neutral pose, relaxed, weight slightly on one hip. Standing in a small Spanish flat bathroom at 10:00 in the morning: white subway tile, a narrow sink with a chrome tap, a folded terracotta towel, a window out of frame on the left. Soft cool neutral daylight from that left window, no warm cast, no golden hour, one motivated source, consistent white balance. Very shallow depth of field, focus exactly on her eyes, the background falling out naturally as in any phone photo, natural digital sensor noise. Self-portrait selfie shot on iPhone front-facing camera held by the subject at arm's length — head and shoulders fill the frame, casual handheld framing, slight natural tilt, slightly off-center, slightly imperfect, not posed. No beauty retouching, no skin smoothing, unretouched documentary realism. No fisheye lens, no ultra-wide distortion. No text, no logos, no watermark. Authentic UGC creator phone selfie, NOT editorial portrait, NOT fashion magazine.
 ```
 
-Para Bea, Marisol y Álex se cambian los rasgos de la biblia (pinza negra mate y lunar bajo el pómulo izquierdo; melena castaña oscura con canas en la sien y aros de plata; pelo corto oscuro, barba de tres días y cicatriz en la ceja derecha). No se menciona espejo aunque la escena sea un baño, y no se pone nada en las manos.
+Para los otros dos avatares se sustituye **solo la primera frase**, hasta "grey ribbed t-shirt" incluido; de "Mid-action expression" en adelante no se toca nada.
+
+Marisol:
+
+```
+A Spanish woman of 43 with high model facial features, symmetrical features, well-proportioned figure and natural skin texture — visible pores, marked pores on the nose, fine vellus hair, expression lines, nasolabial folds, a sun spot on the cheekbone, absolutely no makeup. Dark brown shoulder-length hair with a few grey hairs at the temple, small silver hoop earrings, short natural nude nails, plain navy t-shirt.
+```
+
+Álex:
+
+```
+A Spanish man of 36 with high model facial features, symmetrical features, well-proportioned figure and natural skin texture — a clearly oily nose with dark sebaceous filaments in the pores, some redness on the cheeks, fine vellus hair, three-day stubble, a small scar through the right eyebrow. Short dark hair, short natural nails, dark grey t-shirt.
+```
+
+Tres reglas de esta imagen que no se saltan: no se menciona espejo aunque la escena sea un baño, no se pone nada en las manos, y ninguno de los tres es guapo de anuncio (la biblia dice "españoles corrientes, guapos del montón, nunca modelos": la frase `high model facial features` la exige el flujo oficial como ancla anti-plástico, pero el resto del prompt tiene que tirar hacia abajo con imperfecciones concretas).
 
 ### A.2 De-slop (`seedream_v5_pro`, 21:9, 2k)
 
@@ -750,18 +767,34 @@ El prompt completo está en el punto 5 de este manual. Se copia literal, con la 
 `medias` en este orden: packshot del producto, avatar, [board anterior].
 
 ```
-@Image1 is the product reference: the NOCTA cream matte folding carton with a lowercase navy 'nocta' wordmark and a small navy crescent moon. ANGLE LOCK: the product shows only the visible front-facing side from @Image1 and keeps this same visible angle in every slot it appears in. Do not rotate, spin, flip, or reveal unseen sides. The carton is approximately 9 cm tall and fits in one hand without enlargement; if the label is small in frame, the camera moves closer rather than scaling the product up. @Image2 is the character reference. The same person appears in every slot with identical face, hair, body, and identity. Do not alter facial features, hairstyle, body proportions, or skin tone between slots. @Image3 is the previous board — preserve its identity, room, light direction, wardrobe and product state exactly.
+@Image1 is the product reference: the NOCTA cream matte folding carton with a lowercase navy 'nocta' wordmark, a small navy crescent moon and the printed line 'PARCHES DE NARIZ HIDROCOLOIDE · 8 parches · noche'. Reproduce that printed label exactly as in the reference and add no other text of any kind. No gloss, no gold. ANGLE LOCK: the product shows only the visible front-facing side from @Image1 and keeps this same visible angle in every slot it appears in. Do not rotate, spin, flip, or reveal unseen sides. The carton is approximately 9 cm tall and fits in one hand without enlargement; if the label is small in frame, the camera moves closer rather than scaling the product up. @Image2 is the character reference. The same person appears in every slot with identical face, hair, body, and identity. Do not alter facial features, hairstyle, body proportions, or skin tone between slots. @Image3 is the previous board — preserve its identity, room, light direction, wardrobe and product state exactly.
 
 A single ultra-wide horizontal storyboard sheet composed of exactly EIGHT equal-size 9:16 vertical slots arranged in ONE HORIZONTAL ROW, separated by thin white gutters on a clean white background, total sheet aspect 21:9. Do NOT make two rows and do NOT make a grid — exactly eight panels in one row, never ten, never twelve. All eight slots are active photorealistic UGC iPhone-style stills that tell one continuous 15-second clip as eight sequential beats. Each adjacent pair of slots is a DIFFERENT camera setup — a different POV (selfie vs static), a different distance band (tight/macro vs medium vs wide), and a different action — so every beat boundary reads as a crisp hard cut, never a morph. Setting and lighting in all eight slots: the same small Spanish flat bathroom, soft cool neutral daylight from the left window, no warm cast. Outfit identical across all slots. Exactly one NOCTA carton and exactly one patch in frame wherever they appear — never duplicated, never a look-alike clone. The character has exactly two hands; in selfie POV slots one hand is occupied by the phone (off-frame or its forearm visible at the edge) so only one hand is available for action; slots requiring two free hands are static camera POV with the phone not in frame; every slot names what EACH hand is doing, the idle hand parked explicitly. No mirror or reflection anywhere in the bathroom.
 ```
 
 ### A.4 Bloque de producto NOCTA (se inyecta en todos los prompts donde salga el parche)
 
+Medidas del parche, tal como están en la biblia. Van en el prompt porque el modelo se inventa la forma si no se las dan:
+
+| Medida | Valor |
+|---|---|
+| Ancho total | 60 mm |
+| Alto total | 45 mm |
+| Profundidad del ala | 23 mm |
+| Ancho en el puente | 28 mm |
+| Muesca inferior (columela) | ≈6 mm |
+| Radio de esquina | 2 mm |
+| Grosor | 0,55 mm, borde biselado |
+
+Y esto va antes que nada: **sin dos o tres fotos reales del parche adjuntas como referencia, el troquel no sale**. El texto de abajo es apoyo, no sustituto (biblia, ficha física del parche).
+
 ```
-The NOCTA nose patch is a single translucent, milky, satin-matte hydrocolloid piece, approximately 60 x 45 mm, shaped like a butterfly: a narrow section on the middle of the nose bridge, a wide centre covering the whole tip, two rounded wings wrapping around the nostril wings, and a small notch under the tip. It lies flat following the curve of the nose, no wrinkles, no lifted edges, the skin and pores visible through it. When peeled it stretches like an elastic gel into a long thin strand, never tears, never reddens the skin. Used, its inner side shows a thin frosted film of opaque white cloudy areas and tiny pale plugs — a thin frosted film, NOT a blob of cream. Never a small dot on the tip, never a straight strip, never opaque white when freshly applied.
+The NOCTA nose patch is a single piece of translucent matte hydrocolloid, 60 mm wide and 45 mm tall, shaped like a wide butterfly: one central lobe that covers the bridge from the middle of the nose down over the tip, 28 mm across at the bridge, and two symmetrical wings 23 mm deep that spread sideways and downwards to wrap the nostril wings; between the wings the lower edge has a shallow rounded notch about 6 mm deep where the columella is; every corner rounded with a 2 mm radius; the material is 0.55 mm thick with a bevelled edge. It lies flat following the curve of the nose, no wrinkles, no lifted edges, the skin and pores visible through it. When peeled it stretches like an elastic gel into a long thin strand, never tears, never reddens the skin. Used, its inner side shows a thin frosted film of opaque white cloudy areas and tiny pale plugs — a thin frosted film, NOT a blob of cream. Never a small dot on the tip, never a straight strip, never opaque white when freshly applied.
 ```
 
 ### A.5 Los ocho slots del board A (ejemplo completo, Bea, baño de día)
+
+`medias` de esta llamada, en este orden exacto, que es el que atan las declaraciones @Image de la cabecera A.3: `caja` (packshot), la imagen Soul de Bea, y para el board B además el board A ya limpio. En los boards donde salga el parche se añaden **dos o tres fotos reales del producto** (`parche_liner`, `parche_puesto`, `parche_puesto_2`): es la regla de la biblia y sin ellas el troquel sale como una mancha.
 
 ```
 Slot 1 — exact 9:16 vertical photorealistic UGC iPhone still, SELFIE POV, MEDIUM CLOSE-UP: she is already mid-motion, pinching the tip of her own nose with the thumb and index finger of her right hand while her left hand holds the phone off-frame, brows drawn together in genuine annoyance, head turning slightly toward the window light. No product in frame.
@@ -769,12 +802,14 @@ Slot 2 — exact 9:16 vertical still, STATIC POV, MACRO: extreme close-up of the
 Slot 3 — exact 9:16 vertical still, STATIC POV, MEDIUM-WIDE: she stands at the sink squeezing the side of her nose with both index fingers, shoulders hunched toward the mirrorless wall, a small wince. No product in frame.
 Slot 4 — exact 9:16 vertical still, SELFIE POV, TIGHT CLOSE-UP: the nostril wing is now red and irritated where she squeezed, she tilts her head to show it, her left hand holds the phone off-frame, her right hand hangs out of frame.
 Slot 5 — exact 9:16 vertical still, STATIC POV, MEDIUM: her right hand lifts the cream NOCTA carton from the shelf at chest height, her left hand rests flat on the sink edge, a small curious eyebrow raise. Exactly one carton in frame, front-facing angle per @Image1.
-Slot 6 — exact 9:16 vertical still, STATIC POV, MACRO: her left hand steadies a white paper liner card flat on the sink, her right hand lifts one translucent butterfly-shaped patch off it by a wing with thumb and index finger; it releases with a small elastic tug and hangs flat, the bevelled edge catching a thin specular highlight. The carton is out of frame.
+Slot 6 — exact 9:16 vertical still, STATIC POV, MACRO: her left hand steadies the patch's glossy transparent plastic liner flat on the sink, her right hand lifts one translucent butterfly-shaped patch off it by a wing with thumb and index finger; it releases with a small elastic tug and hangs flat, the bevelled edge catching a thin specular highlight. The carton is out of frame.
 Slot 7 — exact 9:16 vertical still, STATIC POV, WAIST-UP WIDE: she presses a folded terracotta towel against her nose with her right hand to dry it, her left hand rests on the sink edge, eyes down.
 Slot 8 — exact 9:16 vertical still, SELFIE POV, TIGHT: she holds the patch up between the thumb and index finger of her right hand about fifteen centimetres from the lens, inner side toward camera, her left hand holding the phone off-frame, head tilted with narrowed appraising eyes. COMPOSITION IS CRITICAL: the ENTIRE patch is inside the frame, complete, with empty space on all four sides.
 ```
 
 ### A.6 Prompt del clip (`seedance_2_5`, omni_reference, 9:16, 720p, 15 s, sin audio)
+
+Las referencias de este modelo van con `role: 'image_references'`, no con `image`, y `generate_audio` viene de fábrica en `true`: hay que escribir `false` a mano.
 
 ```
 Style & Mood: UGC iPhone aesthetic, soft cool neutral daylight from a left window in a small Spanish bathroom, MIXED: starts SELFIE handheld, hard-cuts to STATIC locked-off, hard-cuts back to SELFIE handheld — POV alternates per cut across the eight beats, social media vertical format.
@@ -801,45 +836,75 @@ No on-screen text, no subtitles, no captions, no badges, no numbers, no watermar
 
 ## Anexo B · Lista de verificación antes de lanzar un clip
 
-Sobre el board ya limpio, viñeta por viñeta. Si algo falla, se regenera el board (9,5 cr) y **no** se lanza el clip (97,5 cr).
+Sobre el board ya limpio, viñeta por viñeta. **Todas las preguntas se contestan sí. Un solo "no" y se regenera el board (9,5 cr); no se lanza el clip (97,5 cr) hasta que salgan las veinticinco.** La lista de la versión anterior mezclaba preguntas que se aprobaban diciendo "sí" con otras que se aprobaban diciendo "no", que es la forma más fácil de dar por bueno un board malo.
 
-1. ¿Hay exactamente ocho viñetas en **una** fila?
-2. ¿Cada persona tiene exactamente dos manos, contando bordes de cuadro?
-3. ¿Cada viñeta nombra el rol de las dos manos, incluida la parada?
-4. ¿Las viñetas selfie tienen una sola mano libre?
-5. ¿Las acciones a dos manos (colocar, presión en V, despegar) son STATIC?
-6. ¿Hay algún espejo, cristal o superficie reflectante con la persona dentro?
-7. ¿Se ve algún móvil como objeto?
-8. ¿Hay exactamente un parche y exactamente una caja donde aparecen?
-9. ¿El estado del parche (1 a 5) es el que pide el guion, y solo uno?
-10. ¿El troquel del parche es el nuestro, con las dos alas y la muesca, o una mancha amorfa?
-11. ¿La caja enseña solo la cara frontal de la referencia?
-12. ¿La escala de la caja respecto a la mano es creíble?
-13. ¿Dos viñetas vecinas comparten POV, banda de distancia o acción?
-14. ¿Cada banda (TIGHT, MID, WIDE) aparece al menos dos veces?
-15. ¿La luz es la misma en las ocho, fría y neutra, sin tono ámbar?
-16. ¿La ropa y el pelo son idénticos en las ocho?
-17. ¿Hay piel de cera, poros borrados o brillo de filtro después del de-slop?
-18. ¿Los poros de la macro están en cuadrícula?
-19. ¿Aparece texto, rótulo o número que no sea la etiqueta de la caja?
-20. ¿Algún bote del baño tiene texto legible o una marca real?
-21. ¿La cara es la misma que en el board anterior?
-22. En el prompt del clip: ¿hay exactamente siete `Hard cut to.`?
-23. ¿Hay alguna palabra de movimiento (`handheld`, `drift`, `sway`) dentro de un corte STATIC?
-24. ¿El corte 1 abre a medio movimiento?
-25. ¿Hay un micro-beat sin guardia y un beat de boca cerrada?
+**La hoja**
+
+1. ¿Hay exactamente ocho viñetas en **una** fila, sin segunda fila ni rejilla?
+2. ¿La cara del board B es la misma que la del board A?
+3. ¿Son idénticos la ropa, el pelo y el sitio en las ocho?
+4. ¿Es la misma luz en las ocho, fría y neutra, sin tono ámbar (salvo el slot de dormitorio, que lleva su lámpara cálida contenida)?
+
+**Manos**
+
+5. ¿Tiene cada persona exactamente dos manos, contando bordes de cuadro?
+6. ¿Nombra cada viñeta el rol de las dos manos, incluida la que está parada?
+7. ¿Tienen las viñetas selfie una sola mano libre y un solo objeto?
+8. ¿Son STATIC todas las acciones a dos manos (colocar, presión en V, despegar)?
+
+**Producto**
+
+9. ¿Está el board **libre** de espejos, cristales y superficies que devuelvan a la persona?
+10. ¿Está el board **libre** de móviles visibles como objeto?
+11. ¿Hay exactamente un parche y exactamente una caja donde aparecen?
+12. ¿Está cada viñeta en un solo estado del parche (1 a 5), y es el que pide el guion?
+13. ¿Es el troquel el nuestro, con las dos alas y la muesca, y no una mancha amorfa?
+14. ¿Enseña la caja solo la cara frontal de la referencia?
+15. ¿Es creíble la escala de la caja respecto a la mano?
+16. ¿Se ve el parche puesto, en vez de quedar invisible por traslúcido?
+
+**Cortes**
+
+17. ¿Difieren las ocho parejas de vecinos en POV, banda de distancia **y** acción?
+18. ¿Aparece cada banda (TIGHT, MID, WIDE) al menos dos veces?
+19. ¿Está cada slot con su banda escrita en mayúsculas?
+
+**Piel y texto**
+
+20. ¿Quedó la piel con poro después del de-slop, sin cera, sin poros borrados y sin brillo de filtro?
+21. ¿Están los poros de la macro repartidos de forma irregular, sin cuadrícula?
+22. ¿Está el board **libre** de texto, rótulos y números que no sean la etiqueta de la caja?
+23. ¿Están los botes del baño girados y demasiado pequeños para leerse?
+
+**En el prompt del clip, antes de lanzarlo**
+
+24. ¿Hay exactamente siete `Hard cut to.`, ninguno después del octavo corte?
+25. ¿Está cada corte STATIC **libre** de palabras de movimiento (`handheld`, `drift`, `sway`, `wobble`, `micro-shake`)?
+26. ¿Abre el corte 1 a medio movimiento, con la primera palabra antes de 0,4 s?
+27. ¿Hay un micro-beat sin guardia, un momento tonto y un beat de boca cerrada?
+28. ¿Va `generate_audio: false` y las referencias con `role: 'image_references'`?
 
 ---
 
 ## Anexo C · Contradicciones entre la biblia y el flujo oficial, y cómo se resuelven
 
-Nuestra biblia y el flujo oficial de Higgsfield chocan en cuatro sitios. No son detalles: si se ignoran, uno anula al otro dentro del mismo prompt.
+Nuestra biblia y el flujo oficial de Higgsfield chocan en cuatro sitios de verdad, y en un quinto que resultó ser un malentendido. No son detalles: si se ignoran, uno anula al otro dentro del mismo prompt. **Regla para resolverlos: gana la biblia**, porque sus reglas están comprobadas generando 22 imágenes de este producto y las del flujo oficial están comprobadas generando anuncios de otra gente.
 
-**1. Profundidad de campo.** La biblia pone `very shallow depth of field` y `shallow depth of field` entre las palabras que funcionan. El flujo oficial la prohíbe y exige `deep focus, background stays sharp`, y el prompt de de-slop la lista como AI-slop. **Resolución:** foco profundo por defecto en todos los planos de persona; profundidad corta **solo** en los macros de piel y de producto, donde es físicamente cierta con una lente macro de clip. En esos macros se escribe `shallow depth of field from the clip-on macro lens, focus exactly on the pores` y **no** se escribe `bokeh` ni `cinematic`. En el resto, `deep focus`.
+**1. Profundidad de campo. Gana la biblia.** La biblia pone `very shallow depth of field, focus exactly on X` en el hueco 6 de su fórmula, y es una de las palabras que la lista como "que funcionan". El flujo oficial exige lo contrario (`deep focus, background stays sharp`) y su prompt de de-slop mete `shallow depth of field` en la lista de AI-slop. **Resolución:** manda la biblia, que es la que ha producido las 22 imágenes buenas. En la práctica:
 
-**2. Luz cálida.** La biblia describe el dormitorio de noche con "lámpara de mesilla cálida". El flujo tiene prohibición tajante de cualquier tono ámbar. **Resolución:** el plano de dormir se describe con una práctica de luz tenue y **neutra**, no ámbar: `a single dim bedside practical, neutral white, most of the room in darkness`. Se prohíbe expresamente `golden hour, warm amber cast` en ese slot también.
+- En cada slot se escribe la óptica de la biblia: `very shallow depth of field, focus exactly on <el elemento del plano>, the background falling out naturally as in any phone photo`. En los macros, `shallow depth of field from the clip-on macro lens, focus exactly on the pores`.
+- En la versión NOCTA del prompt de de-slop se **quita** `deep focus` y se **saca** `shallow depth of field` de la lista negra, y en su lugar va `KEEP the reference sheet's existing depth of field exactly as it is`. Si no se hace, el pase de de-slop aplana el foco que el board ya traía bien.
+- Lo que sigue prohibido, porque en eso los dos documentos coinciden: `bokeh`, `cinematic`, `DSLR look`, `lens flare`. Poca profundidad de campo de móvil sí; desenfoque de cine no.
 
-**3. Reflejos en la ventana de noche.** La regla 3 de la biblia dice "la ventana de atrás es negra con los azulejos reflejados en ella". El flujo prohíbe cualquier superficie reflectante. **Resolución:** se corta esa cláusula. La ventana de noche se describe como `the window behind is pure black` y nada más. Los azulejos reflejados no aportan y abren la puerta a un miembro duplicado.
+**2. Luz cálida. Gana la biblia, pero solo en el dormitorio.** La biblia tiene el dormitorio de noche con "lámpara de mesilla cálida" entre sus cinco sitios. El flujo oficial prohíbe cualquier tono ámbar, incluso en exteriores. **Resolución:** el dormitorio conserva su lámpara cálida, porque es una de las cinco localizaciones de marca y una lámpara de mesilla cálida es lo que hay en un dormitorio real; lo que se prohíbe es que esa calidez se derrame por el plano. Texto exacto de ese slot:
+
+```
+IT IS NIGHT: the only light is one dim bedside lamp with a warm tungsten bulb low at frame left, so a small warm pool falls on the pillow and her cheek and everything beyond a metre falls to near black; short hard shadows under the brow and the nose, the rest of the room in darkness. No daylight, no window light, no blue sky, no golden-hour wash across the room, no warm grade on the whole image. No mirror, no reflection, no reflective surface anywhere.
+```
+
+El HARD BAN del flujo oficial (`golden hour, warm sunset, orange/amber/honey cast, magic hour`) sigue vigente en los otros cuatro sitios sin excepción: baño de día, baño de noche, ventana de mañana y mesa de mármol son fríos y neutros.
+
+**3. Reflejos en la ventana de noche. No existe tal contradicción: era un error de este manual.** La versión anterior decía que la biblia pedía "la ventana de atrás negra con los azulejos reflejados en ella". La biblia no dice eso: su regla 3 termina en `the window behind is pure black` y a continuación escribe, con todas las letras, "Nada de reflejos: ni la ventana con los azulejos reflejados, ni espejos, ni el grifo devolviendo la cara". Los dos documentos dicen lo mismo. **Resolución:** ninguna; se copia el texto de la biblia tal cual, que ya está en el punto 7.9.
 
 **4. Nombre del modelo de imagen. RESUELTO el 12-09-2026 con `models_explore`: son dos modelos distintos y usamos el 2.5.** El catálogo devuelve las dos entradas por separado:
 
@@ -852,6 +917,20 @@ Nuestra biblia y el flujo oficial de Higgsfield chocan en cuatro sitios. No son 
 | Fondo transparente | no | sí (`background`) |
 | Proporciones | 8 | 15, incluida `auto` |
 
-Las 15 tomas del anuncio 1 están hechas con **`gpt_image_2_5`, variante `flare`, 1k, calidad `medium`, 9:16**, y el historial de transacciones las registra como "GPT Image 2.5 Flare" a 1 crédito cada una. El flujo oficial que viene dentro de Higgsfield todavía nombra `gpt_image_2` porque es anterior; donde ese flujo diga `gpt_image_2`, nosotros ponemos `gpt_image_2_5`. Ojo con un detalle que rompe la llamada: el rol de las referencias cambia de `image` a `image_references`.
+Las 15 tomas del anuncio 1 están hechas con **`gpt_image_2_5`, variante `flare`, 1k, calidad `medium`, 9:16**, y el historial de transacciones las registra como "GPT Image 2.5 Flare" a 1 crédito cada una. El flujo oficial que viene dentro de Higgsfield todavía nombra `gpt_image_2` porque es anterior; donde ese flujo diga `gpt_image_2`, nosotros ponemos `gpt_image_2_5`. Dos detalles del cambio que cuestan dinero o rompen la llamada: el rol de las referencias pasa de `image` a `image_references`, y `gpt_image_2` admite generaciones ilimitadas (`supports_unlim`) mientras que `gpt_image_2_5` **no**, así que si algún día se activa el "unlim" en la cuenta, el board sale gratis con el modelo viejo y de pago con el nuevo. Hoy da igual, porque `models_explore` devuelve `unlim.available: false` para esta cuenta.
 
-**5. Quince tomas contra dieciséis slots.** La biblia define una columna vertebral de 15 tomas por anuncio. Dos boards dan 16 slots. **Resolución:** el mapeo del punto 3, paso 2. Sobran uno o dos huecos, que se usan para respirar (un beat de reacción, un plano de detalle del baño) y nunca se dejan vacíos ni se repiten.
+**5. Quince tomas contra dieciséis slots.** La biblia define una columna vertebral de 15 tomas por anuncio. Dos boards dan 16 slots. No es que "sobren uno o dos huecos", como decía la versión anterior: la cuenta real del mapeo del punto 3, paso 2, es esta.
+
+| | Cuántas | Cuáles |
+|---|---|---|
+| Tomas de la biblia que entran | 14 | 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 |
+| Tomas desdobladas en dos slots | 4 | 8/8b, 10/10b, 12/12b, 13a/13b |
+| Parejas fundidas en un solo slot | 2 | 3+4 y 14+15 |
+| Tomas que no entran | 1 | la 2, gancho B |
+| **Slots ocupados** | **16** | ninguno vacío, ninguno repetido |
+
+La toma 2 (gancho B) no es un plano más: es la variante del slot 1 para el test A/B. Se consigue regenerando solo el board A con ese primer slot cambiado (9,5 cr con su de-slop), no reservándole un hueco dentro del anuncio.
+
+**6. La resolución del board está sin cerrar.** El único cargo de 6,5 créditos del historial corresponde a un board 21:9 del 06-09, pero el asiento de `transactions` no dice a qué resolución se generó: la investigación lo apunta como 4k y este manual venía diciendo 2k. Las dos cosas no pueden ser. **Resolución:** antes del piloto, se genera **un** board 21:9 a 2k y se mira el cargo exacto. Si son 6,5, queda cerrado; si no, hay que rehacer la columna de imagen de la tabla 9.2 (son 13 cr de 214, así que no cambia la decisión, pero sí el número que le damos a nadie).
+
+**7. El liner: la biblia se contradice a sí misma.** En "Cómo se pone" dice que el parche "se despega de un liner de plástico transparente brillante"; en la lista de referencias reales describe `parche_liner` como "el parche real tumbado sobre su liner de papel". Son dos materiales distintos y el modelo pinta lo que le escribas. **Resolución provisional:** se escribe el de plástico transparente brillante, que es el que está en la descripción física del producto, y los slots donde salga el liner llevan adjunta la foto `parche_liner`, que manda sobre cualquier texto. **Esto lo tiene que zanjar el dueño del producto mirando la caja real**, porque afecta a los planos 6 y 8 de todos los anuncios.

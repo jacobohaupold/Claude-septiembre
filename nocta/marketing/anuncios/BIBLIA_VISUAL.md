@@ -119,6 +119,17 @@ thumb and index finger at the left, curled, limp, its underside turned to the ca
 Y el reverso, siempre: «irregular opaque milky-white islands studded with dozens of small raised white and pale-yellow
 domes, the plugs pulled out of the pores».
 
+
+**6. La caja crema sobre fondo crema no se ve, y está medido.**
+El packshot de la toma 15 del anuncio 1 se midió: la caja da 198 de luminancia y el fondo 206. Ocho puntos sobre
+255 no es contraste; en el feed, a tamaño miniatura, la caja se convierte en una mancha pálida. Vale para una foto
+de catálogo, no para un anuncio. Frase obligatoria en todo packshot sin persona sobre superficie clara:
+«CONTRAST IS CRITICAL, THE BOX IS CREAM AND MUST NOT DISAPPEAR: put a plain dark charcoal-grey wall in soft shadow
+directly behind the box, clearly darker than the board, and give the box a defined shadow on the stone under its
+base and a bright edge where the window light catches the top corner. Cream board against a cream background reads
+as a pale blur at thumbnail size.»
+Cuando hay una persona o una mano sosteniendo la caja no hace falta: la piel ya hace de contraste.
+
 **Alternativa más segura al despegado a medias.** El plano «parche ya fuera, sujeto delante de la nariz limpia» es
 mucho más fácil de generar bien y además enseña las dos cosas a la vez (las manchas blancas y la nariz limpia).
 Si el despegado a medias no sale a la primera, se cambia por ese plano y el anuncio no pierde nada.

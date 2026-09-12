@@ -1,8 +1,8 @@
 # CÓMO FUNCIONA LA IA DE VÍDEO: manual para que el guion y las escenas salgan exactas
 
-**Versión 1.0 · 12 de septiembre de 2026.** Este manual recoge lo que hay que saber para animar las 375 tomas de NOCTA (25 anuncios × 15 tomas) sin quemar créditos. Los datos vienen de tres sitios y siempre se dice de cuál: (a) la investigación de modelos de vídeo guardada en `inv_modelos-video.json`, que cita las guías oficiales de ByteDance/Seedance, Kling, Google Veo 3.1, Runway Gen-4, MiniMax Hailuo y el blog de Higgsfield; (b) el catálogo real de modelos de Higgsfield, consultado por su API en esta sesión, que es de donde salen duraciones, resoluciones y parámetros; (c) `BIBLIA_VISUAL.md`, que es lo que ya se ha comprobado generando 22 imágenes de verdad. Todo lo que no venga de ahí va marcado como **sin verificar**. No hay precios ni créditos en este documento porque no hay datos fiables de eso en la investigación.
+**Versión 1.1 · 12 de septiembre de 2026.** (La 1.1 corrige los recuentos de palabras de los ejemplos, quita la órbita del packshot porque la biblia visual la prohíbe, y convierte el reparto de modelos en una tabla toma por toma.) Este manual recoge lo que hay que saber para animar las 375 tomas de NOCTA (25 anuncios × 15 tomas) sin quemar créditos. Los datos vienen de tres sitios y siempre se dice de cuál: (a) la investigación de modelos de vídeo guardada en `inv_modelos-video.json`, que cita las guías oficiales de ByteDance/Seedance, Kling, Google Veo 3.1, Runway Gen-4, MiniMax Hailuo y el blog de Higgsfield; (b) el catálogo real de modelos de Higgsfield, consultado por su API en esta sesión, que es de donde salen duraciones, resoluciones y parámetros; (c) `marketing/anuncios/BIBLIA_VISUAL.md`, que es lo que ya se ha comprobado generando 22 imágenes de verdad. Todo lo que no venga de ahí va marcado como **sin verificar**. No hay precios ni créditos en este documento porque no hay datos fiables de eso en la investigación.
 
-Este manual no es para copiar a ciegas. Es para que entiendas por qué un prompt de vídeo se escribe al revés que un prompt de imagen, y por qué el 90% de los descartes se deciden antes de darle a generar.
+Este manual no es para copiar a ciegas. Es para que entiendas por qué un prompt de vídeo se escribe al revés que un prompt de imagen, y por qué casi todos los descartes ya están decididos en la imagen fija, antes de darle a generar.
 
 ---
 
@@ -42,7 +42,14 @@ The woman from the image, maintain her exact face, skin and hair.
 
 ### Qué va en cada prompt
 
-La ficha del parche de `BIBLIA_VISUAL.md` (los 60 mm de ancho, las alas de 23 mm, el notch de 6 mm, el borde biselado) es **oro para GPT Image 2.5 y veneno para Seedance**. Reparto:
+La ficha del parche de `BIBLIA_VISUAL.md` (60 mm de ancho, 45 mm de alto, alas de 23 mm, notch de 6 mm, grosor de 0,55 mm, borde biselado) va **entera en el prompt de imagen y ni una palabra en el de vídeo**. Con un matiz que la biblia dejó escrito después de generar: la ficha sola no basta. En toda imagen donde salga el parche hay que adjuntar además las fotos reales del producto (`parche_liner`, `parche_puesto`, `parche_puesto_2`, `caja`) como `image_references` y abrir el prompt con esta frase, tal cual:
+
+```
+The patch must be EXACTLY the product in the reference photographs: same silhouette,
+same proportions, same translucent matte material. Do not invent a different shape.
+```
+
+En el prompt de vídeo no se repite esa ficha ni esa frase. Las fotos del producto sí pueden ir como `image_references` en los planos de producto que marca el punto 4, pero entonces hay que escribir siempre la frase de exclusión del ejemplo 3: una referencia arrastra consigo su fondo y su luz. Reparto:
 
 | Va en el prompt de IMAGEN (GPT Image 2.5) | Va en el prompt de VÍDEO (Seedance) |
 |---|---|
@@ -111,7 +118,7 @@ Kling admite 2.500 caracteres de prompt por API, pero su propia guía dice que *
 | > 250 (Seedance 1.x) | Fuera del rango recomendado del modelo | Guía Seedance 1.0 |
 | > 1.000 palabras / 500 caracteres chinos | Límite duro: *"longer text causes elements to disappear"* | Documentación ByteDance |
 
-**Tope duro para NOCTA: 90 palabras por plano.** Se cuenta antes de generar. Con 375 prompts, cada tirada repetida por un prompt obedecido a medias es dinero tirado. Y hay un atajo para recortar: cuando un prompt de vídeo se pasa de 90 palabras, lo que sobra es casi siempre descripción del parche o de la cara. Eso va a la imagen fija, no al vídeo.
+**Tope duro para NOCTA: 90 palabras por plano.** Se cuenta antes de generar y no a ojo: guarda el prompt en un fichero y pasa `wc -w prompt.txt`, o haz que el generador cuente `len(prompt.split())` y se niegue a lanzar por encima de 90. Con 375 prompts, cada tirada repetida por un prompt obedecido a medias es dinero tirado. Y hay un atajo para recortar: cuando un prompt de vídeo se pasa de 90 palabras, lo que sobra es casi siempre descripción del parche o de la cara. Eso va a la imagen fija, no al vídeo.
 
 ---
 
@@ -132,15 +139,41 @@ La guía de Seedance lo dice sin rodeos y conviene tenerlo pegado en la pared: *
 
 ### Reparto plano a plano
 
-| Tipo de plano NOCTA (tomas de la columna vertebral) | Modelo | Duración a generar | Resolución | Por qué |
-|---|---|---|---|---|
-| **Macro de nariz** (tomas 3, 4, 9, 14) | Seedance 1.5 Pro | 4 s | 1080p | Es el que menos inventa, porque no tiene campo de referencias que le dé libertad. En macro queremos movimiento casi nulo y resolución alta |
-| **Plano con persona e identidad** (tomas 1, 2, 5, 11, 12) | Seedance 2.0, `mode='std'` | 4 s | 1080p | Es el único con `image_references` reales para clavar a Bea, Marisol o Álex. 1080p exige `std` |
-| **Packshot de caja o pack** (tomas 7, 8, 15) | Seedance 2.0, `mode='std'` | 4 s | 1080p (4K si se va a hacer zoom en montaje) | Binding real por referencia (`@Image 1`) y el máximo de píxeles para el lettering |
-| **Plano hablado a cámara** | Seedance 2.5 `omni_reference` (o 2.0 `std`) | 8 s | 720p en 2.5 / 1080p en 2.0 | 2.5 aguanta clips largos con audio nativo; 2.0 da más píxeles si la voz se pone en montaje |
-| **Manos delicadas** (toma 10 colocación, toma 13 retirada) | Seedance 1.5 Pro con **Frame Lock** | 4 s | 1080p | Es el único reparto donde `start_image` + `end_image` mandan sobre la imaginación del modelo |
-| **Pase de prueba de cualquier plano** | Seedance 2.0 Mini | 4 s | 720p | Validar encuadre y movimiento barato antes de la tirada buena |
-| **Plan B si un plano se resiste** | Kling 3.0 Turbo | 4-5 s | 1080p | Otro motor, otra semilla. Ojo: sin `negative_prompt` |
+Las 15 tomas son siempre las mismas (columna vertebral de la biblia), así que el reparto se decide una vez y se copia en los 25 anuncios. Esta tabla se lee de izquierda a derecha y se rellena en el JSON del plano sin pensar más:
+
+| Toma | Qué es | Modelo | Duración | Resolución | Frame Lock |
+|---|---|---|---|---|---|
+| 1 | Gancho A | Seedance 2.0 `std` + `image_references` del avatar | 4 s | 1080p | No |
+| 2 | Gancho B (mismo momento, otro ángulo) | Seedance 2.0 `std` + `image_references` del avatar | 4 s | 1080p | No |
+| 3 | Diagnóstico, macro de nariz | Seedance 1.5 Pro | 4 s | 1080p | No |
+| 4 | Detalle del problema (poro, filamento) | Seedance 1.5 Pro | 4 s | 1080p | No |
+| 5 | El error (apretar, la tira, el exfoliante) | Seedance 2.0 `std` + `image_references` del avatar | 4 s | 1080p | Sí, si el error es arrancar una tira |
+| 6 | Consecuencia del error (rojez, marca) | Seedance 1.5 Pro | 4 s | 1080p | No |
+| 7 | Entrada del producto, caja en la mano | Seedance 2.0 `std` + `image_references` de la caja | 4 s | 1080p | Sí |
+| 8 | Parche fuera del sobre, macro | Seedance 2.0 `std` + `image_references` del parche | 4 s | 1080p | Sí |
+| 9 | Preparación, nariz limpia y seca | Seedance 1.5 Pro | 4 s | 1080p | No |
+| 10 | Colocación del parche | Seedance 1.5 Pro | 4 s | 1080p | Sí |
+| 11 | Parche puesto, cara o perfil de noche | Seedance 2.0 `std` + `image_references` del avatar | 4 s | 1080p | No |
+| 12 | La noche pasa, dormido | Seedance 2.0 `std` + `image_references` del avatar | 4 s | 1080p | No |
+| 13 | Retirada por la mañana | Seedance 1.5 Pro | 4 s | 1080p | Sí |
+| 14 | La prueba, parche usado a contraluz | Seedance 1.5 Pro | 4 s | 1080p | Sí |
+| 15a | Cierre: nariz después, misma luz que la toma 3 | Seedance 1.5 Pro | 4 s | 1080p | No |
+| 15b | Cierre alternativo: packshot del pack | Seedance 2.0 `std` + `image_references` de la caja | 4 s | 1080p (4K solo si habrá zoom en montaje) | No |
+
+Y los tres casos que no son una toma fija:
+
+| Caso | Modelo | Duración | Resolución |
+|---|---|---|---|
+| Pase de prueba de cualquier toma | Seedance 2.0 Mini | 4 s | 720p |
+| Plano hablado a cámara, si el guion lo pide | Seedance 2.0 `std` | 8 s | 1080p |
+| Plan B si una toma se resiste | Kling 3.0 Turbo | 4-5 s | 1080p, sin `negative_prompt` |
+
+**Por qué está repartido así:**
+
+- **Seedance 1.5 Pro para piel, macro y manos.** Solo admite `start_image` y `end_image`: no tiene campo de referencias por el que colarse a reinterpretar, y en macro queremos movimiento casi nulo y resolución alta. Que "invente menos" es una deducción nuestra a partir de esa limitación, no un dato publicado: **sin verificar**.
+- **Seedance 2.0 en `mode='std'` para todo lo que lleve identidad o producto.** Es el que combina `image_references` con 1080p y 4K (`mode='fast'` solo llega a 720p). Seedance 2.5 también admite referencias, pero su tope es 1080p y tiene más superficie para reinterpretar, así que no lo usamos en ninguna toma.
+- **El plano hablado va en 2.0, no en 2.5.** La única ventaja de 2.5 aquí sería su audio nativo, y en NOCTA el audio va apagado en los 375 clips y la voz se graba y se monta aparte (punto 8). Mientras eso siga así, 2.5 no aporta nada y sí quita píxeles.
+- **Aviso sobre las tomas 7 y 8**, que llevan referencia y Frame Lock a la vez: **sin verificar** que la API de Seedance 2.0 acepte `image_references` y `end_image` en la misma llamada. Si la rechaza, manda el Frame Lock: quita la referencia y tira con `start_image` + `end_image`, porque el troquel y el lettering ya están horneados en la still.
 
 **Lo que NO se hace:** usar Seedance 2.5 para los macros. Tiene peor tope de resolución que 2.0 y más superficie para reinterpretar. Y tampoco se usan los "presets" de Higgsfield tipo EARTH ZOOM, ORBIT 360, STICKER PEEL o ACTION FIGURE: son plantillas virales de personaje, no controles de cámara, y no sirven para un anuncio de producto.
 
@@ -155,7 +188,7 @@ Traducción para NOCTA: el antes/después con la misma luz **solo es replicable 
 | Camera MoveSet Style | `Classic Static` | Congela el encuadre mientras la escena se mueve |
 | Lens Character | `Extreme Macro` solo en macros de poro y parche usado; el resto normal | Evita macro falsa en planos medios |
 | Aperture | `f/4` | A f/1.4 la punta de la nariz queda nítida y las alas no |
-| Focal Length | 50 mm en planos con persona | Coherente con el look de móvil de la biblia |
+| Focal Length | `35 mm` en planos con persona | La lista de Cinema Studio es 8 / 14 / 35 / 50 / 75 mm y la cámara principal de un móvil ronda los 26-28 mm equivalentes, así que 35 mm es la que más se acerca al look de la biblia. **Sin verificar**: no se ha comparado 35 contra 50 generando |
 | Lighting preset | `Window` en los planos de ventana | Restricción física, no texto reinterpretable |
 | Máximo de plano | ~12 s en Cinema Studio 3.5 | Muy por encima de nuestros 4 s |
 
@@ -180,8 +213,10 @@ Uno de estos, y solo uno, por plano:
 | Retirada del parche | `Locked-off close-up, the camera does not move.` |
 | Parche a contraluz | `Locked-off close-up, the camera does not move, the framing does not change.` |
 | Antes / después | `Identical static framing, the camera does not move, the light does not change.` |
-| Packshot de la caja | `One continuous slow 180-degree orbit at constant radius and constant speed, decelerating into a static hold.` |
+| Packshot de la caja | `Very slow push in, the camera moves straight forward and does not rotate, decelerating smoothly into a static hold.` |
 | Hablar a cámara | `Handheld phone framing with slight natural drift, no zoom.` |
+
+**Por qué en esta tabla no hay ni una órbita.** La investigación propone `slow 180-degree orbit` para el packshot, pero la biblia visual, que es lo que está comprobado generando, dice literalmente: «Cámara: "static handheld with micro-drift", "very slow push in", "slow pull back". Nada de órbitas ni grúas». Manda la biblia. De paso nos quita el riesgo de que el lettering se deforme al girar la caja. Si algún día se quiere la órbita, es una prueba suelta de un plano con el resultado delante, no un cambio de manual.
 
 ### Palabras que estropean el plano
 
@@ -237,11 +272,17 @@ from the fingers with its inner side toward the camera, the nose bare and matte.
 | 13 · Retirada | Dedos pellizcando el ala | Parche colgando de los dedos, nariz limpia | `The peel is slow, steady and deliberate; the gel stretches slightly and never tears.` |
 | 8 · Parche fuera del sobre | Parche en el liner | Parche levantado, liner vacío | `The gel stretches one or two millimetres as it lifts.` |
 | 14 · Parche a contraluz | Mano con el parche, palma a 0° | La misma mano girada 10° | `The hand rotates about ten degrees toward the bright window behind it.` |
-| 7 · Caja en la mano | Caja cerrada | Sobre asomando | `The sobre slides out two centimetres and stops.` |
+| 7 · Caja en la mano | Caja cerrada | Sobre asomando | `The cream sachet slides two centimetres out of the box and stops.` |
 
 La imagen del END se genera con GPT Image 2.5 **con las mismas referencias y el mismo prompt de luz que la del START**, cambiando solo el estado. Es lo que dice la biblia para el antes/después y vale igual aquí: dos stills hermanas.
 
-**Truco barato que sí funciona:** aunque un plano no necesite un END distinto, poner como `end_image` **la misma imagen ligeramente reposicionada** hace que el movimiento entre anclas sea más deliberado y menos errático.
+**Truco barato.** Aunque un plano no necesite un END distinto, poner un `end_image` hace que el movimiento entre anclas sea más deliberado y menos errático. La receta concreta: coge la misma still, recórtala un 3 % por los cuatro lados (eso es un push-in mínimo), reescálala al mismo tamaño en 9:16 y pásala como `end_image`. Con ImageMagick es una línea:
+
+```
+magick start.png -gravity center -crop 97%x97%+0+0 +repage -resize 1080x1920! end.png
+```
+
+**Sin verificar**: la investigación dice que «la misma imagen ligeramente reposicionada» funciona, pero no publica cuánto. El 3 % es nuestra cifra de partida y hay que confirmarla en el primer plano que se tire.
 
 **Dos reglas de la biblia que se aplican en la still, no en el vídeo.** Primera: el despegado se describe como **una sola lámina continua**, nunca "la mitad izquierda y la mitad derecha", porque eso genera dos parches separados. Segunda: si la mano no es el sujeto del plano (por ejemplo, en un macro de nariz), **sácala de cuadro en la still**. Es más barato que arreglarla.
 
@@ -288,17 +329,20 @@ Google lo formula mejor que nadie: *"Not recommended: using instructive language
 | Que el parche se rompa al tirar | `the gel stretches slightly and never tears` |
 | Que desaparezcan los puntos blancos del parche usado | `the white deposits on the patch stay exactly as in the image` |
 | Que cambie la luz | `the light does not change` |
-| Que salga texto | `No subtitles.` (una de las tres negaciones documentadas) |
-| Que el lettering de la caja se deforme | `The lettering on the box does not change.` |
+| Que salga texto | `No subtitles, no text, no watermark.` (solo la primera está documentada; las otras dos las manda la biblia) |
+| Que el lettering de la caja se deforme | `The lettering on the box does not change.` + no rotar la caja |
 
 ### El bloque fijo de restricciones positivas
 
-Va al final de **todos** los prompts de vídeo de NOCTA. Son 24 palabras y valen para los 375 planos:
+Va al final de **todos** los prompts de vídeo de NOCTA. Son 31 palabras y valen para los 375 planos:
 
 ```
 The framing does not change, the background stays still, the patch keeps its shape
-and translucency, the skin stays matte and unretouched with visible pores. No subtitles.
+and translucency, the skin stays matte and unretouched with visible pores.
+No subtitles, no text, no watermark.
 ```
+
+De las tres negaciones finales, `No subtitles` es la única que ByteDance documenta como obedecida. `no text` y `no watermark` las exige la biblia visual para toda la cadena («no text, no subtitles, no watermark»), cuestan cuatro palabras y no estorban, así que se quedan aunque Seedance no garantice nada con ellas.
 
 Y el bloque negativo **solo** si alguna vez usamos un modelo con campo real (Kling 2.x fuera de Higgsfield, Veo en Vertex):
 
@@ -329,15 +373,20 @@ Repetir el mismo texto en `{ }` y en `【 】` hace que se oiga **y** se vea. En
 2. **"Unwanted subtitles" es un fallo documentado** de Seedance, y la puerta por la que entra es justamente el audio y el diálogo.
 3. **La voz se graba entera de una vez y se monta primero**, y los planos se ajustan a ella. Un audio generado por el modelo no encaja con ese fraseo.
 
-Además hay un riesgo de texto que no viene del audio: **la tipografía de la caja**. La caja de NOCTA lleva "nocta" y "PARCHES DE NARIZ HIDROCOLOIDE", y la guía avisa de que *"complex typography distorts"*. Dos soluciones, ambas válidas:
+Además hay un riesgo de texto que no viene del audio: **la tipografía de la caja**. La caja de NOCTA lleva "nocta" en minúsculas, la luna creciente y la línea "PARCHES DE NARIZ HIDROCOLOIDE · 8 parches · noche", y la guía avisa de que *"complex typography distorts"*. Como la caja ya no gira nunca (punto 5), el riesgo baja mucho. Quedan dos maneras de blindarlo:
 
-- Órbita **corta y lenta**, con 2-3 segundos útiles, para que el texto no tenga tiempo de deformarse.
-- Mantener la caja ligeramente desenfocada en el clip y dejar el lettering nítido para el montaje.
-
-Y siempre, en el prompt de packshot:
+- **Por defecto: la caja quieta y la cámara entrando de frente.** Sin rotación no hay cara nueva que inventar ni lettering que reinterpretar.
+- **Si aun así se deforma: caja ligeramente desenfocada** en el clip y el lettering nítido se resuelve en el montaje, superponiendo la foto real del packshot. La frase exacta, 30 palabras:
 
 ```
-The lettering on the box does not change. No subtitles.
+Keep the box slightly out of focus; the lettering stays soft and unreadable, and the
+focus does not shift. The camera does not move. No subtitles, no text, no watermark.
+```
+
+Y siempre, en el prompt de packshot con la caja enfocada:
+
+```
+The lettering on the box does not change. No subtitles, no text, no watermark.
 ```
 
 ---

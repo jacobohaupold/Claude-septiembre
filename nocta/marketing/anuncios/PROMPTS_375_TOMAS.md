@@ -31,8 +31,10 @@ Las reglas que hacen que el parche salga con su forma exacta están en `BIBLIA_V
 | 31 | Deja de apretarte la nariz | Álex | Dos de los cinco sitios de la biblia, en una s | 15 | [abrir](prompts/anuncio_31_deja_de_apretarte_la_nariz.md) |
 | 32 | Deja de tratarlos como puntos negros | Marisol | Sitio principal: BAÑO DE NOCHE (sitio 2 de la  | 15 | [abrir](prompts/anuncio_32_deja_de_tratarlos_como_puntos_negros.md) |
 | 37 | ¿Sabías que…? | Álex | Tres de los cinco sitios de la biblia, en la s | 15 | [abrir](prompts/anuncio_37_sabias_que.md) |
+| 38 | ¿Te pasa que al pasar el dedo…? | Bea | Tres de los cinco sitios de la biblia, en este | 15 | [abrir](prompts/anuncio_38_te_pasa_que_al_pasar_el_dedo.md) |
+| 40 | ¿Funcionan de verdad los parches de nariz? | Álex | Cuatro de los cinco sitios de la biblia, con e | 15 | [abrir](prompts/anuncio_40_funcionan_de_verdad_los_parches_de_nariz.md) |
 
-> **Pendientes de escribir en esta versión:** anuncios 38, 40, 44, 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
+> **Pendientes de escribir en esta versión:** anuncios 44, 45, 50, 55, 56, 63, 64, 71, 82. El resto están completos.
 
 ## Las imágenes del anuncio 1
 

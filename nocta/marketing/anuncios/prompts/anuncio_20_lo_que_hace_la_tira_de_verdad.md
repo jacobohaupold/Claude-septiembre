@@ -388,12 +388,12 @@ The image comes alive: the thumb makes one short scroll movement on the blurred 
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA
 
-**Reglas añadidas:** cláusula de fidelidad de la caja
+**Reglas añadidas:** contraste del packshot; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, close, slightly above eye level of the table. Two cream matte cardboard NOCTA boxes on a cream marble surface: one standing upright, one lying flat in front of it with a corner overlapping, plain uncoated cardboard with visible fibre texture, one small navy crescent moon, no shine, no foil. Real cardboard imperfections: a soft dent on the top edge, a slightly open flap, a fingerprint on the side. Faint grey marble veining and a little dust. Soft window light from the left at 09:45, one short soft shadow to the right, no fill. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the corners, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. CONTRAST IS CRITICAL, THE BOX IS CREAM AND MUST NOT DISAPPEAR: put a plain dark charcoal-grey wall in soft shadow directly behind the box, clearly darker than the board, and give the box a defined shadow on the stone under its base and a bright edge where the window light catches the top corner. Cream board against a cream background reads as a pale blur at thumbnail size. Vertical 9:16 handheld iPhone photo, close, slightly above eye level of the table. Two cream matte cardboard NOCTA boxes on a cream marble surface: one standing upright, one lying flat in front of it with a corner overlapping, plain uncoated cardboard with visible fibre texture, one small navy crescent moon, no shine, no foil. Real cardboard imperfections: a soft dent on the top edge, a slightly open flap, a fingerprint on the side. Faint grey marble veining and a little dust. Soft window light from the left at 09:45, one short soft shadow to the right, no fill. Shallow depth of field, focus exactly on the front edge of the standing box, slight handheld motion blur at the corners, natural digital sensor noise, unretouched documentary realism. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 4 s):**

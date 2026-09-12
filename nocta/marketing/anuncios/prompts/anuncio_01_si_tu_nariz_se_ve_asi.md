@@ -604,7 +604,7 @@ The image comes alive: the thumb makes one short scroll movement on the phone sc
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner, junto a la caja; `parche_puesto` — la foto real del parche colocado en la nariz
 
-**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; cláusula de fidelidad de la caja
+**Reglas añadidas:** cláusula de fidelidad del parche; referencia parche_puesto; regla de encuadre completo del parche; contraste del packshot; cláusula de fidelidad de la caja; 1 regla(s) omitida(s) por longitud
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 

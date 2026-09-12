@@ -396,12 +396,12 @@ The image comes alive: the skin lifts a fraction as she breathes in and the fain
 
 **Referencias que hay que adjuntar:** `caja` — la foto real de la caja crema de NOCTA; `parche_liner` — la foto real del parche sobre su liner
 
-**Reglas añadidas:** cláusula de fidelidad de la caja
+**Reglas añadidas:** contraste del packshot; cláusula de fidelidad de la caja
 
 **Prompt de imagen (GPT Image 2.5, 9:16):**
 
 ```text
-The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream matte marble table. Two cream matte cardboard NOCTA boxes, exactly the box in the reference photograph, lie side by side, one flat and one leaning on it, with a single cream matte individual sachet and one sealed patch on its shiny transparent liner in front of them. Visible cardboard grain, a soft crease on one corner, small dust specks on the marble, short soft shadows to the right. Nothing else on the table. Morning window light, soft, from the left, 08:30. Shallow depth of field, focus exactly on the front box edge, slight handheld tilt, natural sensor noise. No retouching, unretouched documentary realism, an ordinary phone snapshot of a product on a kitchen table. No text, no logos, no watermark.
+The box must be EXACTLY the product in the reference photograph: same matte cream uncoated board, same proportions, same printing, and no added text beyond what is printed on it. CONTRAST IS CRITICAL, THE BOX IS CREAM AND MUST NOT DISAPPEAR: put a plain dark charcoal-grey wall in soft shadow directly behind the box, clearly darker than the board, and give the box a defined shadow on the stone under its base and a bright edge where the window light catches the top corner. Cream board against a cream background reads as a pale blur at thumbnail size. Vertical 9:16 handheld iPhone photo, overhead three-quarter view of a cream matte marble table. Two cream matte cardboard NOCTA boxes, exactly the box in the reference photograph, lie side by side, one flat and one leaning on it, with a single cream matte individual sachet and one sealed patch on its shiny transparent liner in front of them. Visible cardboard grain, a soft crease on one corner, small dust specks on the marble, short soft shadows to the right. Nothing else on the table. Morning window light, soft, from the left, 08:30. Shallow depth of field, focus exactly on the front box edge, slight handheld tilt, natural sensor noise. No retouching, unretouched documentary realism, an ordinary phone snapshot of a product on a kitchen table. No text, no logos, no watermark.
 ```
 
 **Prompt de vídeo (imagen a vídeo, 3 s):**
