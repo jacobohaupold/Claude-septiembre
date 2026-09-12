@@ -100,7 +100,9 @@ Y además, en positivo: «the pores are open, EMPTY and flat, there are NO dark 
 Poner «night bathroom, 23:30» da una imagen de día. Lo que funciona es describir lo que hace esa luz:
 «IT IS NIGHT: the only light is a hard ceiling fixture directly overhead, so there are short hard shadows straight
 down under the brow, the nose and the lower lip, the tops of the cheekbones are bright and the eye sockets are dark,
-and the window behind is pure black with the tiles reflected in it. No daylight, no soft window light, no blue sky.»
+and the window behind is pure black. No daylight, no soft window light, no blue sky.»
+Nada de reflejos: ni la ventana con los azulejos reflejados, ni espejos, ni el grifo devolviendo la cara. Toda
+superficie que refleja a una persona es la vía más rápida a un brazo de más o a una segunda persona en cuadro.
 
 **4. Los poros salen en cuadrícula y eso delata el render.**
 Por defecto el modelo reparte los poros como una rejilla regular y la macro parece 3D. Frase obligatoria en toda

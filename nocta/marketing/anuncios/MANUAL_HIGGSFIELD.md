@@ -786,6 +786,17 @@ Nuestra biblia y el flujo oficial de Higgsfield chocan en cuatro sitios. No son 
 
 **3. Reflejos en la ventana de noche.** La regla 3 de la biblia dice "la ventana de atrás es negra con los azulejos reflejados en ella". El flujo prohíbe cualquier superficie reflectante. **Resolución:** se corta esa cláusula. La ventana de noche se describe como `the window behind is pure black` y nada más. Los azulejos reflejados no aportan y abren la puerta a un miembro duplicado.
 
-**4. Nombre del modelo de imagen.** Nuestras fichas de tomas dicen "GPT Image 2.5"; el identificador que usa el flujo y el catálogo del MCP es `gpt_image_2`. **Sin verificar** si son exactamente la misma versión. Hay que comprobarlo con `models_explore` antes de la primera tanda y unificar el nombre en la documentación, porque si son modelos distintos los precios de la tabla del punto 9.1 cambian.
+**4. Nombre del modelo de imagen. RESUELTO el 12-09-2026 con `models_explore`: son dos modelos distintos y usamos el 2.5.** El catálogo devuelve las dos entradas por separado:
+
+| | `gpt_image_2` | `gpt_image_2_5` |
+|---|---|---|
+| Nombre | GPT Image 2 | GPT Image 2.5 |
+| Calidad | low / medium / high | low / medium / high / xhigh / max |
+| Variante | no tiene | `flare` (por defecto) o `sunburst` |
+| Rol de las imágenes adjuntas | `image` | `image_references` |
+| Fondo transparente | no | sí (`background`) |
+| Proporciones | 8 | 15, incluida `auto` |
+
+Las 15 tomas del anuncio 1 están hechas con **`gpt_image_2_5`, variante `flare`, 1k, calidad `medium`, 9:16**, y el historial de transacciones las registra como "GPT Image 2.5 Flare" a 1 crédito cada una. El flujo oficial que viene dentro de Higgsfield todavía nombra `gpt_image_2` porque es anterior; donde ese flujo diga `gpt_image_2`, nosotros ponemos `gpt_image_2_5`. Ojo con un detalle que rompe la llamada: el rol de las referencias cambia de `image` a `image_references`.
 
 **5. Quince tomas contra dieciséis slots.** La biblia define una columna vertebral de 15 tomas por anuncio. Dos boards dan 16 slots. **Resolución:** el mapeo del punto 3, paso 2. Sobran uno o dos huecos, que se usan para respirar (un beat de reacción, un plano de detalle del baño) y nunca se dejan vacíos ni se repiten.
