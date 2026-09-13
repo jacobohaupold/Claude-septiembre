@@ -102,6 +102,51 @@
 .n-pd__mot-l p{margin:0;font-size:14px;line-height:1.6;color:var(--n-ink-2)}
 @media (min-width:900px){.n-pd__mot{padding:30px 32px 28px}.n-pd__mot h2{font-size:28px}.n-pd__mot-l li{gap:18px;padding:18px 0}.n-pd__mot-l b{font-size:17px}.n-pd__mot-l p{font-size:15px}}
 
+/* ── Antes y después ───────────────────────────────────────────────────────────
+   Las dos fotos son del mismo encuadre, la misma persona y la misma luz: si cambia
+   el ángulo o la luz, la comparación no demuestra nada y además se nota el truco.
+   Las etiquetas ANTES/DESPUÉS y el aviso los pone el HTML, no van quemados en el
+   píxel: así se traducen, se leen en cualquier tamaño y se pueden corregir sin
+   volver a generar la imagen. */
+.n-ba{padding:20px;display:grid;gap:14px;overflow:hidden}
+.n-ba__h{display:grid;gap:6px}
+.n-ba__h h2{margin:0;font-size:23px;line-height:1.15;letter-spacing:-.02em;font-weight:var(--n-w-med);color:var(--n-navy);text-wrap:balance}
+.n-ba__h p{margin:0;font-size:14px;line-height:1.55;color:var(--n-ink-2)}
+.n-ba__par{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:var(--n-cr);overflow:hidden;background:var(--n-line-2)}
+.n-ba__f{position:relative;margin:0;aspect-ratio:1;background:var(--n-cream);overflow:hidden}
+.n-ba__f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.n-ba__t{position:absolute;left:10px;top:10px;z-index:2;display:inline-flex;align-items:center;height:26px;padding:0 11px;border-radius:999px;
+  background:rgba(20,33,61,.82);color:var(--n-cream);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:var(--n-w-semi);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.n-ba__t--d{background:var(--n-navy);color:#fff}
+/* La flecha entre las dos fotos: cuenta la dirección de la lectura sin una palabra. */
+.n-ba__par::after{content:"";position:absolute}
+.n-ba__mid{position:relative}
+.n-ba__par{position:relative}
+.n-ba__go{position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:3;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:var(--n-bg);color:var(--n-navy);box-shadow:0 6px 18px -8px rgba(20,33,61,.6)}
+.n-ba__go .n-ico{width:18px;height:18px}
+.n-ba__pie{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0}
+.n-ba__pie span{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--n-ink-2)}
+.n-ba__pie i{width:6px;height:6px;border-radius:50%;background:var(--n-sage);flex:none}
+.n-ba__nota{margin:0;font-size:11px;line-height:1.5;color:var(--n-muted)}
+@media (min-width:900px){.n-ba{padding:30px 32px 28px;gap:18px}.n-ba__h h2{font-size:28px}.n-ba__h p{font-size:15px}.n-ba__go{width:46px;height:46px}.n-ba__go .n-ico{width:22px;height:22px}}
+
+/* ── Cómo se pone: la foto de la aplicación con los pasos al lado ───────────────── */
+.n-ap{padding:0;display:grid;overflow:hidden}
+.n-ap__m{position:relative;aspect-ratio:4/3;background:var(--n-cream);overflow:hidden}
+.n-ap__m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.n-ap__t{padding:20px}
+.n-ap__t h2{margin:0 0 4px;font-size:23px;line-height:1.15;letter-spacing:-.02em;font-weight:var(--n-w-med);color:var(--n-navy)}
+.n-ap__t .n-lab{display:block;margin-bottom:8px}
+.n-ap__l{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:0;counter-reset:ap}
+.n-ap__l li{counter-increment:ap;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:baseline;padding:11px 0;border-top:1px solid var(--n-line-2);font-size:14px;line-height:1.5;color:var(--n-ink-2)}
+.n-ap__l li:first-child{border-top:0;padding-top:2px}
+.n-ap__l li::before{content:counter(ap,decimal-leading-zero);font-size:12px;font-weight:var(--n-w-med);color:var(--n-sage-ink);font-variant-numeric:tabular-nums}
+@media (min-width:900px){.n-ap{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch}
+  .n-ap__m{aspect-ratio:auto;height:100%;min-height:340px}
+  .n-ap__t{padding:30px 32px;align-self:center}.n-ap__t h2{font-size:28px}}
+
 /* chips de confianza */
 .n-pd__chips{display:flex;flex-wrap:wrap;gap:6px}
 .n-pd__chips span{flex:none;display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 12px;border:1px solid var(--n-line-2);border-radius:999px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--n-navy);white-space:nowrap}

@@ -142,6 +142,55 @@ function servidor() {
     await pg.close();
   }
 
+  console.log('\nAntes y después: la comparación tiene que ser honesta para valer algo\n');
+  {
+    // Una comparación sólo demuestra algo si las dos fotos son comparables: mismo tamaño en
+    // pantalla, misma persona, y el «después» a la derecha. Y el aviso de que son imágenes
+    // ilustrativas no es decorativo: enseñar un antes/después que parece de un cliente sin
+    // serlo es publicidad engañosa (Reglamento 655/2013 de declaraciones cosméticas).
+    for (const slug of ['parches-nariz', 'parches-granos', 'serum-niacinamida', 'duo-poros', 'plan-mensual']) {
+      const pg = await abre(slug);
+      const d = await pg.evaluate(() => {
+        const sec = document.querySelector('.n-ba'); if (!sec) return null;
+        const fs = [...sec.querySelectorAll('.n-ba__f')];
+        const r = e => { const b = e.getBoundingClientRect(); return { x: Math.round(b.left), w: Math.round(b.width), h: Math.round(b.height) }; };
+        return { n: fs.length, src: fs.map(f => f.querySelector('img').getAttribute('src')),
+          cajas: fs.map(r), etiquetas: fs.map(f => f.querySelector('.n-ba__t').textContent.trim()),
+          alt: fs.map(f => f.querySelector('img').getAttribute('alt') || ''),
+          carga: fs.map(f => f.querySelector('img').getAttribute('loading')),
+          titulo: sec.querySelector('h2').textContent.trim(),
+          pie: [...sec.querySelectorAll('.n-ba__pie span')].map(x => x.textContent.trim()),
+          nota: sec.querySelector('.n-ba__nota').textContent };
+      });
+      ok(`${slug}: tiene su antes y su después`, !!d && d.n === 2 && d.src[0] !== d.src[1], d ? d.src.map(x => x.split('/').pop()).join(' → ') : 'no hay sección');
+      ok(`${slug}: las dos fotos miden lo mismo en pantalla`, d.cajas[0].w === d.cajas[1].w && d.cajas[0].h === d.cajas[1].h,
+        `${d.cajas[0].w}×${d.cajas[0].h} / ${d.cajas[1].w}×${d.cajas[1].h}`);
+      ok(`${slug}: el después va a la derecha`, /después/i.test(d.etiquetas[1]) && /antes/i.test(d.etiquetas[0]) && d.cajas[1].x > d.cajas[0].x);
+      ok(`${slug}: dice que son ilustrativas y no de clientes`, /ilustrativ/i.test(d.nota) && /no fotograf/i.test(d.nota));
+      ok(`${slug}: cuenta la zona y el tiempo`, d.pie.length >= 3 && d.pie.every(x => x.length > 2), d.pie.join(' · '));
+      ok(`${slug}: las fotos tienen texto alternativo y no frenan la carga`, d.alt.every(a => a.length > 10) && d.carga.every(c => c === 'lazy'));
+      await pg.close();
+    }
+  }
+
+  console.log('\nEl producto puesto: en la galería y en «cómo se pone»\n');
+  {
+    const pg = await abre('serum-niacinamida');
+    const g = await pg.evaluate(() => ({
+      enGaleria: [...document.querySelectorAll('#gtrack img')].map(i => i.getAttribute('src')).filter(x => /\/piel\//.test(x)),
+      ap: !!document.querySelector('.n-ap'),
+      foto: (document.querySelector('.n-ap__m img') || {}).getAttribute && document.querySelector('.n-ap__m img').getAttribute('src'),
+      pasos: [...document.querySelectorAll('.n-ap__l li')].map(l => l.textContent.trim()) }));
+    ok('la galería enseña el producto puesto y el resultado', g.enGaleria.length === 2, g.enGaleria.map(x => x.split('/').pop()).join(', '));
+    ok('«cómo se pone» está, con su foto', g.ap && /aplicar/.test(g.foto || ''), (g.foto || '').split('/').pop());
+    ok('y los pasos salen del catálogo, no reescritos', g.pasos.length >= 2 && g.pasos.every(x => x.length > 5), g.pasos.length + ' pasos');
+    await pg.close();
+    // En los parches de nariz los tres pasos ya van en vídeo: la sección de fotos sobraría.
+    const n = await abre('parches-nariz');
+    ok('donde hay vídeo de los pasos no se repite la sección', !(await n.evaluate(() => !!document.querySelector('.n-ap'))));
+    await n.close();
+  }
+
   console.log('\nPersonalización: nota por producto, motivos por kit, avisos por zona\n');
   {
     const pg = await abre('parches-nariz');

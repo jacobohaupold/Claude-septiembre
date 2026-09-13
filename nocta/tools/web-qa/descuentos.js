@@ -60,12 +60,17 @@ const esTerracota = c => { const m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(c || 
         yNombre: n ? Math.round(n.getBoundingClientRect().top) : 0 };
     }), { tarjeta });
 
-    ok('todas las tarjetas llevan alguna marca de descuento', datos.every(d => d.plan || d.marcas.length),
+    ok('todas las tarjetas llevan su descuento', datos.every(d => d.plan || d.marcas.length),
       datos.filter(d => !d.plan && !d.marcas.length).map(d => d.p).join(', ') || datos.length + ' tarjetas');
-    ok(`el descuento de la mensualidad se ve en los productos sueltos`, datos.filter(d => !d.plan).every(d => d.marcas.some(m => /cada mes/.test(m.t))));
-    ok(`y dice el −${PCT} %`, datos.some(d => d.marcas.some(m => m.t === `−${PCT} % cada mes`)));
-    ok('ninguna tarjeta repite el mismo descuento dos veces', datos.every(d => new Set(d.marcas.map(m => m.t)).size === d.marcas.length),
-      (datos.find(d => new Set(d.marcas.map(m => m.t)).size !== d.marcas.length) || {}).p || '');
+    // La tarjeta enseña UN número y nada más: ni «cada mes» (eso se cuenta en la ficha) ni dos
+    // porcentajes distintos peleándose por la atención.
+    ok('un solo descuento por tarjeta', datos.every(d => d.marcas.length <= 1), (datos.find(d => d.marcas.length > 1) || {}).p || '');
+    ok('en la rejilla no se dice que sea mensualidad', datos.every(d => d.marcas.every(m => !/mes|mensual/i.test(m.t))),
+      (datos.find(d => d.marcas.some(m => /mes/i.test(m.t))) || {}).p || '');
+    ok(`los productos sueltos cantan el −${PCT} %`, datos.some(d => d.marcas.some(m => m.t === `−${PCT} %`)));
+    // El pack lo canta a su manera según la tarjeta: en % sobre el precio tachado en la portada,
+    // en euros («ahorra 12 €») en el catálogo. Lo que se exige es que lo cante.
+    ok('y los packs cantan el suyo, en % o en euros', datos.some(d => d.marcas.some(m => (/^−\d+ %$/.test(m.t) && m.t !== `−${PCT} %`) || /ahorra/i.test(m.t))));
     ok('el descuento se pinta en terracota', datos.every(d => !d.marcas.length || d.marcas.some(m => esTerracota(m.bg))));
     ok('como mucho una píldora a tope por tarjeta', datos.every(d => d.marcas.filter(m => esTerracota(m.bg) && parseFloat((m.bg.match(/[\d.]+\)$/) || ['1'])[0]) > .5).length <= 1));
     // más grande que una etiqueta normal: al menos 10 px de letra y 20 px de alto

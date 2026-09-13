@@ -5,12 +5,12 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609132241">
-<link rel="stylesheet" href="/assets/css/pdp.css?v=202609132241">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609132303">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=202609132303">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609132241" defer></script>
+<script src="/assets/js/app.js?v=202609132303" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -18,13 +18,16 @@
 <div class="n-bbar n-bbar--pdp" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar</button><div class="n-bbar__pay" id="st-express"></div></div></div>
 <div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609132241"></script>
-<script src="/assets/js/reviews.js?v=202609132241"></script>
-<script src="/assets/js/products.js?v=202609132241"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609132303"></script>
+<script src="/assets/js/reviews.js?v=202609132303"></script>
+<script src="/assets/js/products.js?v=202609132303"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
 document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]').content=p.desc.slice(0,155);
+/* Estos textos salen del catálogo, que se puede editar desde el CRM: van escapados antes de
+   entrar en el HTML. Los que ya estaban se dejan como estaban; los nuevos, no. */
+const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const eur=nEur,$=s=>document.querySelector(s),ups=(p.upsell||[]).map(nBySlug).filter(Boolean),isPatch=p.tags.includes('parches')||!!p.bundle&&!p.slug.includes('duo'),pu=nPerUse(p);
 const SVG=d=>`<svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 const I={leaf:SVG('<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-9"/>'),clock:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),moon:SVG('<path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/>'),zoom:SVG('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3M11 8v6M8 11h6"/>'),chevL:SVG('<path d="m15 6-6 6 6 6"/>'),chevR:SVG('<path d="m9 6 6 6-6 6"/>'),verif:SVG('<path d="M12 3.1l2.3 1.7 2.8-.2.9 2.7 2.3 1.7-1.1 2.6 1.1 2.6-2.3 1.7-.9 2.7-2.8-.2L12 20.9l-2.3-1.7-2.8.2-.9-2.7L3.7 15l1.1-2.6L3.7 9.8 6 8.1l.9-2.7 2.8.2z"/><path d="m9.5 12.2 1.8 1.8 3.4-3.7"/>'),check:SVG('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),flag:SVG('<path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/>')};
@@ -32,6 +35,10 @@ const I={leaf:SVG('<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 1
 const photo=p.image.replace(/\.(jpg|png)$/,'.webp');
 const slides=[],seen=new Set();const PH=(window.NOCTA_PHOTOS||{})[slug]||{};const main=PH.main||nImg(p);
 slides.push({t:'img',src:main,cut:!PH.main,alt:`${p.name} NOCTA, ${p.units}`});seen.add(main);
+/* Antes que el detalle de la caja va lo que le importa a quien duda: el producto puesto y
+   cómo queda la piel. Las dos fotos son de la misma persona y la misma luz que el «antes». */
+if(PH.aplicar){slides.push({t:'img',src:PH.aplicar,alt:`${p.name} aplicado sobre la piel`});seen.add(PH.aplicar);}
+if(PH.ba&&PH.ba.despues){slides.push({t:'img',src:PH.ba.despues,alt:`Piel después de usar ${p.name}`});seen.add(PH.ba.despues);}
 if(PH.alt){slides.push({t:'img',src:PH.alt,alt:`${p.name}: detalle`});seen.add(PH.alt);}
 (PH.extra||[]).forEach(x=>{slides.push({t:'img',src:x,alt:`${p.name} en la mano`});seen.add(x);});
 if(p.video)slides.push({t:'video',src:p.video,poster:photo});
@@ -95,6 +102,25 @@ ${p.faq.map(f=>acc(f[0],`<p>${f[1]}</p>`)).join('')}
 /* El motivo de comprar el kit entero, contado como se lo contarías a alguien: qué se falla
    haciéndolo por tu cuenta, cuánto dura y qué te ahorras. Va antes que las cifras. */
 const motivos=(p.motivos&&p.motivos.length)?`<section class="n-c n-pd__mot n-pd__wrap n-reveal"><span class="n-lab">${isPlan?'Por qué la mensualidad':'Por qué el kit entero'}</span><h2>${isPlan?'Lo que cambia cuando llega solo.':'Lo que cambia cuando lo llevas junto.'}</h2><ol class="n-pd__mot-l">${p.motivos.map(([t,d],i)=>`<li><span class="n-pd__mot-n n-num">${String(i+1).padStart(2,'0')}</span><div><b>${t}</b><p>${d}</p></div></li>`).join('')}</ol></section>`:'';
+/* Antes y después. Las dos fotos son del mismo encuadre, la misma persona y la misma luz:
+   cambiar el ángulo o el foco convierte la comparación en un truco y se nota. El aviso de que
+   son imágenes ilustrativas va SIEMPRE, no es opcional: enseñar un antes/después que parece de
+   un cliente sin serlo es publicidad engañosa (Reglamento 655/2013 de declaraciones cosméticas). */
+const BA=PH.ba;
+const ba=BA?`<section class="n-c n-ba n-pd__wrap n-reveal">
+<div class="n-ba__h"><span class="n-lab">Antes y después</span><h2>${BA.titulo}</h2><p>${BA.texto}</p></div>
+<div class="n-ba__par">
+<figure class="n-ba__f"><span class="n-ba__t">Antes</span><img src="${BA.antes}" width="1200" height="1200" alt="${esc(BA.zona)} antes de usar ${p.name}" loading="lazy" decoding="async"></figure>
+<figure class="n-ba__f"><span class="n-ba__t n-ba__t--d">Después</span><img src="${BA.despues}" width="1200" height="1200" alt="${esc(BA.zona)} después de usar ${p.name}" loading="lazy" decoding="async"></figure>
+<span class="n-ba__go" aria-hidden="true">${I.chevR}</span></div>
+<p class="n-ba__pie"><span><i></i>${esc(BA.zona)}</span><span><i></i>${esc(BA.cuando)}</span><span><i></i>Misma luz y mismo encuadre</span></p>
+<p class="n-ba__nota">Imágenes ilustrativas del efecto que busca el producto, no fotografías de clientes. Cada piel responde distinto y los resultados varían.</p></section>`:'';
+/* Cómo se pone. Los pasos ya están escritos en el catálogo (p.how): no se reescriben aquí.
+   Si el producto tiene los vídeos de los tres pasos, esta sección sobra y no se pinta. */
+const ap=(!VID&&PH.aplicar)?`<section class="n-c n-ap n-pd__wrap n-reveal">
+<div class="n-ap__m"><img src="${PH.aplicar}" width="1400" height="1050" alt="${p.name} aplicándose sobre la piel" loading="lazy" decoding="async"></div>
+<div class="n-ap__t"><span class="n-lab">Cómo se pone</span><h2>${isPatch?'Se pone en diez segundos.':'Dos minutos de rutina.'}</h2>
+<ol class="n-ap__l">${p.how.map(x=>`<li><span>${esc(x)}</span></li>`).join('')}</ol></div></section>`:'';
 const claims=`<section class="n-num5 n-pd__claims n-stagger n-reveal" aria-label="Cifras">${p.claims.map(c=>`<div class="n-c"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</section>`;
 const ed=VID?`<section class="n-c n-ed5 n-pd__ed n-reveal"><img src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche de nariz NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async"><div class="n-ed5__t"><h2>Lo que sale en una noche.</h2><p>Todo lo que ves en el parche estaba dentro de tus poros. Se despega solo, sin tirones.</p></div></section>`:'';
 const vt=(n,src,poster,t,s)=>`<div class="n-c n-vt5 n-reveal"><video src="${src}" poster="${poster}" muted loop playsinline preload="none" data-auto aria-label="${t}"></video><span class="n-vt5__l">${n}</span><div class="n-vt5__c"><b>${t}</b><span>${s}</span></div></div>`;
@@ -112,7 +138,7 @@ document.getElementById('pdp').innerHTML=`<div class="n-pd">
 ${gal}
 <div class="n-pd__buy">${panel}${(isPack||isPlan)?incBlock():`<div id="pdpacks">${inPacks.slice(0,2).map(packBlock).join("")}</div>`}${planPromo}</div>
 </div>
-<div style="display:grid;gap:var(--n-gap);margin-top:var(--n-gap)">${motivos}${claims}${ed}${det}${videos}${spec}</div>
+<div style="display:grid;gap:var(--n-gap);margin-top:var(--n-gap)">${ba}${motivos}${claims}${ap}${ed}${det}${videos}${spec}</div>
 ${reviews}${upsSec}
 <p style="text-align:center;margin:32px 0 8px"><a class="n-btn" href="/catalogo.html">Ver el catálogo completo</a></p>`;
 /* ---------- estado de compra ---------- */
