@@ -408,7 +408,7 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
 .n-sh h2{font-size:22px;font-weight:var(--n-w-med);letter-spacing:-.02em}.n-sh a{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--n-navy);text-decoration:underline;text-underline-offset:4px}
 @media (min-width:900px){.n-sh{padding:var(--n-s7) var(--n-s2) var(--n-s4)}.n-sh h2{font-size:28px}}
 /* tarjetas editoriales */
-.n-ed5{aspect-ratio:4/5}.n-ed5 img,.n-ed5 video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.n-ed5{aspect-ratio:4/5;max-width:100%}/* max-width:100% es obligatorio: cuando una tarjeta con aspect-ratio tiene además min-height, el navegador calcula su ANCHURA a partir de esa altura (min-height x proporción) y se sale del contenedor, lo que deja la página entera arrastrable hacia los lados. Pasó en como-usar.html, donde 280px de min-height por 16/9 daban 498px de ancho dentro de una columna de 304px. */.n-ed5 img,.n-ed5 video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .n-ed5__t{position:absolute;inset:0;z-index:2;display:grid;align-content:end;gap:12px;padding:var(--n-s5) var(--n-s4);color:#fff;background:linear-gradient(180deg,rgba(20,33,61,0) 45%,rgba(20,33,61,.6) 100%);justify-items:start}
 .n-ed5__t h2{color:#fff;font-size:26px;line-height:1.1;letter-spacing:-.02em;font-weight:var(--n-w-med);max-width:14ch}.n-ed5__t p{color:rgba(255,255,255,.88);max-width:32em;font-size:var(--n-fs-body)}
 @media (min-width:900px){.n-ed5{aspect-ratio:16/8}.n-ed5__t{padding:var(--n-s7);justify-items:center;text-align:center;align-content:center}.n-ed5__t h2{font-size:40px}.n-ed5__t p{text-align:center}}

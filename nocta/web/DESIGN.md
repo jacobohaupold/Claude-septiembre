@@ -1618,3 +1618,17 @@ En **las 15 páginas**, en este orden exacto. Se cae el peso 700. El `preconnect
 6. **Códigos de descuento por triplicado** (`checkout.js` en servidor, `checkout.html` en cliente, `HOLA10` fijo en `app.js` y en `quiz.html`): un código nuevo obliga a tocar los cuatro sitios.
 7. **`#st-add` no se retira**: `producto.html` lo busca por id. Cambia su texto y sus `data-`, nunca su existencia.
 8. **`no-son-puntos-negros.html` línea 55**: quitar `style="display:block"` de la barra fija; con el nuevo modelo de visibilidad, ese estilo en línea la deja invisible.
+
+
+## Nada se puede arrastrar hacia los lados
+
+Ninguna de las 16 páginas puede desplazarse horizontalmente, a ningún ancho entre 320 y 1920 px. Se comprueba
+sola con `nocta/tools/web-qa/desborde.js`, que además dice qué elemento sobresale cuando falla.
+
+Dos reglas que vienen de fallos reales:
+
+- Todo elemento con `aspect-ratio` que tenga también `min-height` necesita `max-width:100%`. Si no, el navegador
+  calcula su anchura a partir de la altura mínima y se sale del contenedor. Pasó en el hero de «Cómo usar»:
+  280 px de alto por 16/9 daban 498 px de ancho dentro de una columna de 304 px.
+- Todo lienzo o carrusel más ancho que la pantalla va dentro de un contenedor con `overflow:auto`. Suelto en el
+  documento, arrastra la página entera.

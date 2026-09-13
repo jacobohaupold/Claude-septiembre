@@ -1,5 +1,5 @@
 /* NOCTA · ficha de producto v5.1 (lujo) · prefijo n-pd */
-.n-pd{display:grid;gap:var(--n-gap)}
+.n-pd{display:grid;gap:var(--n-gap)}/* min-width:0 en los hijos: sin esto, la galería horizontal impone su anchura mínima a la columna del grid y la página entera se puede arrastrar hacia los lados a 320 px. */.n-pd>*{min-width:0}
 .n-pd__crumb{display:flex;align-items:center;gap:8px;padding:12px var(--n-s2) 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--n-muted);min-height:36px}
 .n-pd__crumb a{color:var(--n-muted);text-decoration:none}
 .n-pd__crumb a:hover{color:var(--n-navy)}
