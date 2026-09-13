@@ -5,6 +5,47 @@
 Un mapamundi con quién está en la tienda **ahora mismo**, dónde está y qué está haciendo.
 La referencia era el Live View de Shopify; de ahí sale la idea, no el diseño.
 
+## Cómo se navega
+
+El mapa se maneja como un mapa, no como una imagen:
+
+| Gesto | Qué hace |
+|---|---|
+| Arrastrar | Mover, con inercia al soltar |
+| Rueda o trackpad | Acercar y alejar hacia donde apunta el cursor |
+| Pellizco (dos dedos) | Acercar y alejar hacia el centro del pellizco |
+| Doble clic | Acercar ahí · con **alt**, alejar |
+| **Mayúsculas** + arrastrar | Encuadrar la zona que dibujes |
+| Flechas | Mover · con **mayúsculas**, a zancadas |
+| `+` `−` `0` | Acercar, alejar, ver el mundo entero |
+| Pulsar un grupo | Abrirlo |
+| Pulsar una persona | Su recorrido completo |
+
+Y encima del mapa: indicador de aumento, **encuadrar a los visitantes** (la caja que los contiene a
+todos), **mapa guía** con el recuadro de lo que estás viendo, y **barra de escala en kilómetros**.
+
+### Las tres decisiones que sostienen todo esto
+
+**1. Los marcadores viven fuera del grupo de la cámara.** La geografía va dentro de un grupo con la
+transformación, así que escala con el zoom. Los puntos, los nombres y los haces de venta se dibujan
+en coordenadas de pantalla y se recolocan en cada movimiento, como en cualquier mapa serio. Sin eso,
+a ×14 los puntos serían manchas del tamaño de un país.
+
+**2. Todo lo de encima se mide en píxeles de pantalla, no en unidades del mapa.** El SVG tiene un
+viewBox de 1000 unidades; en un móvil de 366 px eso se dibuja al 37 %, así que los nombres salían a
+3 px y los puntos eran intocables. El módulo calcula `U` = unidades de viewBox por píxel y multiplica
+por él radios, textos, grosores y el radio de agrupación. Efecto secundario correcto: en una pantalla
+pequeña, 15 px cubren más mundo, así que se agrupan ciudades que en un monitor van sueltas.
+
+**3. El zoom por pasos acumula.** Pulsar «+» tres veces seguidas da ×1,8³, no ×1,8. Cada paso partía
+del zoom leído a mitad de la animación anterior, así que los clics rápidos se comían unos a otros;
+ahora se recuerda a dónde íbamos.
+
+Además: el movimiento se interpola sobre el **logaritmo** del zoom (que es como se percibe), los
+topes impiden arrastrar el mundo fuera de la vista, los nombres de país se reparten sin pisarse y
+esquivan las cajas reales de los botones (se leen del DOM, no se reservan márgenes a ojo), y con
+`prefers-reduced-motion` se van la inercia y las animaciones.
+
 ## Lo que se ve
 
 Una sola pieza oscura, como la referencia, no cuatro tarjetas sueltas encima de un mapa:
@@ -95,7 +136,7 @@ cada carga.
 NODE_PATH=/opt/node22/lib/node_modules node nocta/tools/crm-qa/prueba-mapa.mjs
 ```
 
-75 comprobaciones a tres anchos con el código real del módulo en un navegador de verdad. No
+117 comprobaciones a tres anchos con el código real del módulo en un navegador de verdad. No
 comprueba que «no pete»: cuenta puntos, haces, filas y barras, verifica que el mapa no desborda
 la página y **comprueba que la proyección coloca a cada uno en su sitio**, exigiendo que el punto
 de Madrid caiga dentro del polígono de España y el de Tokio dentro del de Japón.
@@ -110,5 +151,12 @@ Tres fallos reales los cazó esta prueba, no la vista:
    center` se resolvía contra el lienzo entero y los halos de pulso aparecían a medio mapa de su
    punto.
 
-Y uno más lo cazó la vista: la fila de controles estaba anclada a la tarjeta entera (`top: 0`) en
-vez de al mapa, así que al meter la barra de totales dentro se le montaba encima.
+Y al rehacer la navegación cazó dos más:
+
+4. Pulsar «+» tres veces seguidas daba ×1,8 en vez de ×1,8³, porque cada paso leía el zoom a mitad
+   de la animación anterior.
+5. El doble clic no llegaba nunca: el oyente estaba en el `<svg>`, pero `setPointerCapture` redirige
+   todos los eventos al elemento que captura, que es el envoltorio.
+
+Dos más los cazó la vista sobre una captura: la fila de controles estaba anclada a la tarjeta entera
+(`top: 0`) en vez de al mapa, y con zoom un nombre de país acababa debajo del botón de alejar.

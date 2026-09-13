@@ -7,9 +7,14 @@
    y la latitud se comprime, asi que Groenlandia no se come el mapa como en Mercator."""
 import json, math, os
 
-S = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-topo = json.load(open(os.path.join(S, 'world110m.json')))
-iso  = json.load(open(os.path.join(S, 'iso.json')))
+# Los datos de origen viven junto al script, en datos/, para que esto funcione siempre,
+# con red o sin ella, y el mapa se pueda regenerar dentro de cinco años igual que hoy.
+#   world110m.json — Natural Earth 110m vía world-atlas (dominio público)
+#   iso.json       — tabla ISO 3166 (numérico → alpha-2)
+AQUI = os.path.dirname(os.path.abspath(__file__))
+DATOS = os.path.join(AQUI, 'datos')
+topo = json.load(open(os.path.join(DATOS, 'world110m.json')))
+iso  = json.load(open(os.path.join(DATOS, 'iso.json')))
 NUM2A2 = {r[2].lstrip('0') or '0': r[0] for r in iso}
 
 LAT_MAX, LAT_MIN = 83.0, -56.0      # sin la Antartida: ocupa un tercio del alto y no vive nadie
@@ -85,6 +90,20 @@ def ruta(anillos):
             d.append('M' + 'L'.join(f'{x},{y}' for x, y in seg) + 'Z')
     return ''.join(d)
 
+def area_total(anillos):
+    """Superficie del pais en unidades del mapa ya proyectado. Sirve para ordenar que nombres
+    se escriben primero cuando no caben todos."""
+    t = 0.0
+    for an0 in anillos:
+        an = desenrolla(an0)
+        if len(an) < 3: continue
+        a = 0.0
+        for i in range(len(an)):
+            x1, y1 = proj(*an[i]); x2, y2 = proj(*an[(i + 1) % len(an)])
+            a += x1 * y2 - x2 * y1
+        t += abs(a) * 0.5
+    return t
+
 def centro(anillos):
     """Centroide del anillo mas grande, en lon/lat. Sirve para clavar el punto del pais."""
     mejor, area_max = None, -1
@@ -114,13 +133,19 @@ for g in topo['objects']['countries']['geometries']:
     else: continue
     d = ruta(anillos)
     if not d: continue
-    paises.append({'c': a2 or '', 'n': nombre, 'd': d})
     c = centro(anillos)
+    fila = {'c': a2 or '', 'n': nombre, 'd': d}
+    if c:
+        x, y = proj(c[0], c[1])
+        # Ancla de la etiqueta, ya proyectada, y tamaño relativo del país: con eso el mapa
+        # decide a qué zoom merece la pena escribir cada nombre (primero los grandes).
+        fila['x'] = round(x, 1); fila['y'] = round(y, 1)
+        fila['a'] = round(area_total(anillos), 1)
+    paises.append(fila)
     if a2 and c: centroides[a2] = [round(c[0], 3), round(c[1], 3)]
 
 paises.sort(key=lambda p: p['n'])
-sal = os.path.join(os.path.dirname(S), 'Claude-septiembre', 'nocta', 'web', 'public', 'admin', 'mundo.js')
-sal = '/home/user/Claude-septiembre/nocta/web/public/admin/mundo.js'
+sal = os.path.normpath(os.path.join(AQUI, '..', '..', 'web', 'public', 'admin', 'mundo.js'))
 with open(sal, 'w') as f:
     f.write('/* Contornos del mundo para el mapa en vivo del CRM.\n'
             '   Generado por tools/crm-qa/gen_mundo.py desde Natural Earth 110m (dominio publico, via world-atlas).\n'
@@ -131,6 +156,6 @@ with open(sal, 'w') as f:
         'w': round(ANCHO, 1), 'h': round(ALTO, 1), 'latMax': LAT_MAX, 'latMin': LAT_MIN,
         'paises': paises}, separators=(',', ':'), ensure_ascii=False) + ';\n')
 
-json.dump(centroides, open(os.path.join(S, 'build', 'centroides.json'), 'w'))
+json.dump(centroides, open(os.path.join(DATOS, 'centroides.json'), 'w'), indent=0)
 print('paises %d · centroides %d · viewBox %g x %g · %.0f KB'
       % (len(paises), len(centroides), ANCHO, ALTO, os.path.getsize(sal) / 1024))
