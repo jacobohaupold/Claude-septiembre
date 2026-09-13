@@ -170,6 +170,7 @@ body.n-pd-locked{overflow:hidden}
 /* micro-interacción */
 .n-pd__flash{animation:n-pd-flash .45s var(--n-e)}
 @keyframes n-pd-flash{0%{opacity:.3;transform:translateY(3px)}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.n-pd__flash{animation:none}}
 .n-pd__ok{color:var(--n-ok-ink)}
 
 /* escritorio */

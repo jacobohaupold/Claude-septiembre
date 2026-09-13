@@ -44,7 +44,9 @@ const base=s=>s.replace(/^.*\/|\.\w+$/g,'');
 window.nWebp=s=>{const b=base(s);return(b==='gama'||b==='parches-nariz-dorso'||CUT.has(b))?`/assets/img/${b}-cut.webp`:s.replace(/\.(jpg|png)$/,'.webp');};
 window.nImg=p=>(CUT.has(p.slug)||p.slug==='duo-poros'||p.slug==='kit-t-zone')?`/assets/img/${p.slug}-cut.webp`:nWebp(p.image);
 window.nIsCut=s=>/-cut\.webp$/.test(s);
-window.nPerUse=p=>{const m=/^(\d+(?:\s*\+\s*\d+)*)\s*(parches?|mascarillas?)/i.exec(p.units);if(!m)return'';const n=m[1].split('+').reduce((a,b)=>a+ +b,0);if(n<2)return'';return eur(p.price/n)+' por '+(/mascarilla/i.test(m[2])?'mascarilla':'parche');};
+/* El precio por parche se calcula sobre el precio QUE SE VA A PAGAR, no siempre sobre el de la
+   ficha: con la mensualidad puesta, «2,12 € por parche» al lado de un total de 13,56 € es falso. */
+window.nPerUse=(p,precio)=>{const m=/^(\d+(?:\s*\+\s*\d+)*)\s*(parches?|mascarillas?)/i.exec(p.units);if(!m)return'';const n=m[1].split('+').reduce((a,b)=>a+ +b,0);if(n<2)return'';return eur((precio==null?p.price:precio)/n)+' por '+(/mascarilla/i.test(m[2])?'mascarilla':'parche');};
 window.nKlarna=v=>v>=35?`o 3 × ${eur(v/3)} con Klarna`:'';
 window.nCat=p=>p.plan?'Plan':(p.bundle||(p.tags||[]).includes('bundle')?'Pack':((p.tags||[]).includes('skincare')?'Skincare':'Parches de hidrocoloide'));
 window.nPlanSuf=p=>p&&p.plan?`<small class="n-per">/${p.plan.per}</small>`:'';

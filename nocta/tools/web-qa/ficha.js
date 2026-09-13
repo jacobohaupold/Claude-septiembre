@@ -112,6 +112,33 @@ function servidor() {
     ok('al elegirla baja el precio grande y el del botón', tras.grande === seg.precios[1] && tras.boton === seg.precios[1], tras.grande + ' / ' + tras.boton);
     ok('y el botón de comprar se lleva la mensualidad al carrito', tras.sub === '1');
     ok('el pie explica el −' + PCT + ' % y cómo cancelar', tras.pie.includes('−' + PCT + ' %') && /cancél|cancel/i.test(tras.pie));
+    // El precio por parche colgaba del precio de compra única: con la mensualidad puesta se leía
+    // «2,12 € por parche» al lado de un total de 13,56 €, que no sale de ninguna cuenta.
+    const uso = await pg.evaluate(() => ({ unidad: document.querySelector('#pdpunit').textContent,
+      tier: document.querySelector('.n-tier .n-tier__u').textContent }));
+    const esperado = (13.56 / 8).toFixed(2).replace('.', ',') + ' € por parche';
+    ok('el precio por parche se recalcula con la mensualidad', uso.unidad.includes(esperado), uso.unidad.trim());
+    ok('y también dentro de «1 unidad»', uso.tier.trim() === esperado, uso.tier.trim());
+    await pg.close();
+  }
+
+  console.log('\nUn pack: el ahorro y los plazos siguen al modo elegido\n');
+  {
+    const pg = await abre('duo-poros');
+    const lee = () => pg.evaluate(() => ({ precio: document.querySelector('#pdpprice').textContent.trim(),
+      ahorro: document.querySelector('#pdpsave').textContent.trim(),
+      tachado: document.querySelector('.n-pd__price s').textContent.trim(),
+      klarna: document.querySelector('#pdpklarna').hidden ? '' : document.querySelector('#pdpklarna').textContent.trim() }));
+    const num = t => parseFloat((t.match(/[\d.]+,\d{2}/) || ['0'])[0].replace(/\./g, '').replace(',', '.'));
+    const a = await lee();
+    ok('de partida el ahorro cuadra con el precio tachado', Math.abs(num(a.tachado) - num(a.precio) - num(a.ahorro)) < 0.02,
+      `${a.tachado} − ${a.precio} = ${a.ahorro}`);
+    await pg.click('.n-pd__seg--sub'); await pg.waitForTimeout(400);
+    const b = await lee();
+    ok('con la mensualidad el ahorro sube y sigue cuadrando', num(b.ahorro) > num(a.ahorro) && Math.abs(num(b.tachado) - num(b.precio) - num(b.ahorro)) < 0.02,
+      `${a.ahorro} → ${b.ahorro}`);
+    ok('los plazos de Klarna siguen la regla del precio que se paga', num(b.precio) >= 35 ? /Klarna/.test(b.klarna) : b.klarna === '',
+      b.klarna || '(sin plazos, por debajo de 35 €)');
     await pg.close();
   }
 
