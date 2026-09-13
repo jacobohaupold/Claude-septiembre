@@ -369,6 +369,12 @@ body.n-v4 .n-sech{margin-bottom:var(--n-s4)}body.n-v4 h2{font-weight:var(--n-w-m
 .n-v5 .n-top:not(.is-scrolled) .n-main a{border-bottom-color:transparent}
 .n-v5 .n-top-ph{height:calc(36px + var(--n-header-h))}.n-v5.n-has-hero .n-top-ph{height:36px}.n-v5.n-checkout .n-top-ph{height:var(--n-header-h)}body.n-v5{padding-top:var(--n-gap)}body.n-v5.n-checkout{padding-top:0}.n-v5 #expresspay:empty{min-height:44px}
 .n-v5.n-checkout .n-top{margin-bottom:0}.n-v5.n-checkout .n-top__in{background:var(--n-bg);color:var(--n-navy);border-bottom:1px solid var(--n-line)}
+/* En las páginas con hero, la cabecera flota sobre la foto (margin-bottom negativo), así que el hero
+   arrancaba pegado a la franja de ventajas, sin un pixel de aire, y las dos cajas se tocaban. El margen va
+   en la franja y no en el main para que cabecera y hero bajen JUNTOS: si se empuja solo el main, el logo
+   queda partido entre el fondo crema y la foto. El valor es el mismo que el margen lateral de la tarjeta,
+   así que el hero respira igual por arriba que por los lados. */
+body.n-v5.n-has-hero .n-bar{margin-bottom:var(--n-gap)}
 body.n-v5:not(.n-has-hero) .n-top{margin-bottom:0}body.n-v5:not(.n-has-hero) .n-top__in{background:rgba(250,248,243,.94);color:var(--n-navy);border-bottom:1px solid var(--n-line)}
 body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:var(--n-cream)}
 /* tarjetas bento */

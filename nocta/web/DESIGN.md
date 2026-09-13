@@ -1632,3 +1632,20 @@ Dos reglas que vienen de fallos reales:
   280 px de alto por 16/9 daban 498 px de ancho dentro de una columna de 304 px.
 - Todo lienzo o carrusel más ancho que la pantalla va dentro de un contenedor con `overflow:auto`. Suelto en el
   documento, arrastra la página entera.
+
+
+## Aire entre la franja de ventajas y el hero
+
+En la portada la cabecera flota sobre la foto: lleva `margin-bottom` negativo de su propia altura para que el
+logo quede encima de la imagen. El efecto secundario era que el hero arrancaba pegado a la franja de ventajas,
+sin un píxel entre las dos cajas.
+
+El margen se pone en la **franja**, no en el `main`: así la cabecera y el hero bajan juntos y el logo sigue
+centrado sobre la foto. Si se empuja solo el `main`, el logo queda partido entre el fondo crema y la imagen.
+
+```css
+body.n-v5.n-has-hero .n-bar{margin-bottom:var(--n-gap)}
+```
+
+El valor es el mismo `--n-gap` que separa la tarjeta de los lados, así que el hero respira igual por arriba que
+por la izquierda y la derecha.
