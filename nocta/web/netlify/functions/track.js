@@ -11,7 +11,11 @@ export default async (req, context) => {
   const rows = events.slice(0, 50).map(e => ({
     t: new Date(Number(e.t) || Date.now()).toISOString(), ev: String(e.ev || '').slice(0, 40), sid: String(e.sid || '').slice(0, 40), vid: String(e.vid || '').slice(0, 40),
     path: String(e.path || '').slice(0, 300), ref: String(e.ref || '').slice(0, 300), utm: e.utm || {}, dev: e.dev || 'desktop', country: geo.country && geo.country.code || null,
-    d: { ...(e.d || {}), lang: e.lang, sw: e.sw, title: String(e.title || '').slice(0, 120), city: geo.city || null }
+    d: { ...(e.d || {}), lang: e.lang, sw: e.sw, title: String(e.title || '').slice(0, 120), city: geo.city || null,
+        // Netlify nos da la posicion aproximada del visitante y hasta ahora se tiraba. Es lo que
+        // permite que el mapa en vivo ponga el punto en la ciudad y no en el centro del pais.
+        region: geo.subdivision && geo.subdivision.code || null,
+        lat: geo.latitude != null ? Number(geo.latitude) : null, lon: geo.longitude != null ? Number(geo.longitude) : null }
   })).filter(r => r.ev);
   if (rows.length) {
     if (dbOk()) { try { await db.insert('events', rows); } catch (e) { console.error('events', e.message); } }

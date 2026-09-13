@@ -77,7 +77,9 @@
       n = n || 0; const w = Math.max(2, Math.round(n / max * 100));
       return `<div class="st"><span>${esc(label)}</span><i style="width:${w}%"></i><b class="num">${n}${max ? ` <span class="muted xs">(${A.pct(n / max * 100)})</span>` : ''}</b></div>`;
     }).join('')}</div>`;
-    return A.card('Embudo de conversión', body, '<a class="btn btn--s btn--g" href="#/people">Ver persona a persona</a>');
+    return A.card('Embudo de conversión', body,
+      '<a class="btn btn--s btn--g" href="#/live">Ver el mapa en vivo</a>'
+      + '<a class="btn btn--s btn--g" href="#/people">Ver persona a persona</a>');
   }
 
   function sourcesCard(sources) {

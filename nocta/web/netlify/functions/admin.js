@@ -1,5 +1,5 @@
 // API del CRM: /api/admin/*  (sesión con contraseña ADMIN_PASSWORD → token firmado 30 días)
-//  POST login {password}                       GET  me · stats?days=N · integrations · people?days=N · person/:id
+//  POST login {password}                       GET  me · stats?days=N · integrations · live?min=N · people?days=N · person/:id
 //  GET  r/:tabla?<consulta PostgREST>          POST r/:tabla (insert/upsert) · PATCH r/:tabla?filtro · DELETE r/:tabla?filtro
 //  POST a/:accion {…}   (order.ship, order.status, order.refund, order.email, sub.cancel, product.save, content.save, discount.save,
 //                       campaign.send, campaign.preview, whatsapp.send, stripe.connect, stripe.status, stripe.disconnect, stripe.oauth,
@@ -38,6 +38,16 @@ export default async (req) => {
     if (kind === 'me') return json({ ok: true, db: dbOk(), mail: mailOk(), site: SITE() });
     if (kind === 'stats') { const days = Math.min(365, Number(url.searchParams.get('days') || 14)); const s = await db.rpc('admin_stats', { p_days: days }); return json(s); }
     if (kind === 'integrations') return json(await integrations());
+    // Mapa en vivo: quien esta en la web ahora mismo y donde. Todo el calculo lo hace la base
+    // (RPC live_map) y devuelve un unico JSON; el navegador no descarga eventos sueltos.
+    if (kind === 'live') {
+      const p = url.searchParams;
+      const r = await db.rpc('live_map', {
+        p_min:  Math.min(180, Math.max(1, Number(p.get('min')  || 5))),
+        p_feed: Math.min(200, Math.max(5, Number(p.get('feed') || 40))),
+      });
+      return new Response(JSON.stringify(r), { headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
+    }
     // Recorridos: el mapa de todo el que entra en la web y la ficha de cada uno.
     if (kind === 'people') {
       const p = url.searchParams;

@@ -217,7 +217,9 @@ export async function person({ id, days = 180 } = {}) {
     const e1 = await porEmail('leads', [email], '*'); lead = (e1.get(email.toLowerCase()) || [])[0] || null;
     const e2 = await porEmail('customers', [email], '*'); cliente = (e2.get(email.toLowerCase()) || [])[0] || null;
     const e3 = await porEmail('subscriptions', [email], '*'); subs = e3.get(email.toLowerCase()) || [];
-    try { mensajes = await db.select('messages', `select=*&email=eq.${esc(email)}&order=created_at.desc&limit=30`) || []; } catch (e) { }
+    // La columna es to_addr, no email. Con `email` PostgREST devuelve 400 y antes el fallo se perdia.
+    try { mensajes = await db.select('messages', `select=*&to_addr=eq.${esc(email)}&order=created_at.desc&limit=30`) || []; }
+    catch (e) { console.error('journeys/mensajes', e.message); }
   }
 
   const pedidos = (ident.pedidos || []).sort((a, b) => (a.created_at < b.created_at ? 1 : -1));

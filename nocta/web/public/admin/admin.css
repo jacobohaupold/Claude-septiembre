@@ -112,3 +112,86 @@ img,canvas,iframe,video{max-width:100%}
 .tl__h{color:var(--muted);padding-top:1px}
 .tl__b{min-width:0;overflow-wrap:anywhere}
 @media (max-width:560px){.tl{padding:6px 8px 10px}.tl__i{grid-template-columns:minmax(0,1fr);gap:1px;margin-left:14px;padding-left:12px}.tl__h{grid-row:1}}
+
+/* ── «En vivo»: mapa del mundo en tiempo real ─────────────────────────────────
+   Tarjeta oscura dentro de un CRM claro, a propósito: el mapa es de noche.
+   Nota de la casa: cualquier caja con aspect-ratio lleva también max-width:100%.
+   Sin eso, si además tiene min-height, el navegador calcula la ANCHURA a partir
+   de la altura y la tarjeta se sale del contenedor. */
+.lv{display:grid;gap:14px}
+.lv__kpis{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+/* A 150 px de mínimo entran dos por fila en un móvil de 360, y el mapa no queda enterrado
+   debajo de cuatro tarjetas apiladas. */
+.lv__kpis .kpi b{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.dl{font-size:11px;font-weight:600;letter-spacing:.02em;padding:1px 6px;border-radius:999px;background:var(--line2);color:var(--muted)}
+.dl--up{background:#E4F0E8;color:var(--green)}.dl--dn{background:#F7E6E2;color:var(--red)}
+
+.lv__map{position:relative;border-radius:var(--r);overflow:hidden;background:#070C18;box-shadow:var(--sh);color:#E7EDF8}
+.lv__bar{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:center;gap:8px;padding:10px 12px;
+  background:linear-gradient(180deg,rgba(7,12,24,.92) 0%,rgba(7,12,24,.55) 60%,rgba(7,12,24,0) 100%)}
+.lv__live{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(231,237,248,.72)}
+.lv__live b{font-size:19px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.lv__live i{width:8px;height:8px;border-radius:50%;background:#6FD08C;box-shadow:0 0 0 0 rgba(111,208,140,.65);animation:lv-late 2.4s ease-out infinite}
+@keyframes lv-late{0%{box-shadow:0 0 0 0 rgba(111,208,140,.55)}70%{box-shadow:0 0 0 11px rgba(111,208,140,0)}100%{box-shadow:0 0 0 0 rgba(111,208,140,0)}}
+.lv__sel{display:flex;align-items:center;gap:6px;color:rgba(231,237,248,.6)}
+.lv__sel select{min-height:32px;padding:0 6px;border-radius:8px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#E7EDF8}
+.lv__b{width:32px;height:32px;flex:none;border-radius:8px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#E7EDF8;cursor:pointer;display:grid;place-items:center;font-size:13px;line-height:1}
+.lv__b:hover{background:rgba(255,255,255,.17)}.lv__b.is-on{background:#E8B15C;border-color:#E8B15C;color:#14213D}
+
+.lv__svgwrap{position:relative;aspect-ratio:1000/486;max-width:100%;max-height:64vh;touch-action:none;cursor:default}
+.lv__svgwrap.is-zoom{cursor:grab}.lv__svgwrap.is-drag{cursor:grabbing}
+.lv__svgwrap svg{display:block;width:100%;height:100%}
+.lv-mar{fill:#0A1326}
+#lvgrat line{stroke:rgba(255,255,255,.05);stroke-width:.5;vector-effect:non-scaling-stroke}
+.lv-pais{fill:#1D2B4C;stroke:#334370;stroke-width:.4;vector-effect:non-scaling-stroke;transition:fill .5s linear}
+.lv-pais.on{fill:#2C4170;stroke:#4D68A6}
+/* La noche de verdad, con el borde difuminado: un terminador de línea dura parecería un error de dibujo,
+   y en el mundo real el crepúsculo es una banda de varios cientos de kilómetros. */
+.lv-noche{fill:rgba(0,3,12,.62);pointer-events:none;filter:url(#lvdusk)}
+.lv-pt__c{stroke:rgba(7,12,24,.6);stroke-width:.5;vector-effect:non-scaling-stroke}
+/* transform-box:fill-box va en el CÍRCULO, no en el grupo: sin él, transform-origin:center se resuelve
+   contra el lienzo entero del SVG y el halo se dibuja a medio mapa de su punto. */
+.lv-pt__ping{opacity:0;transform-box:fill-box;transform-origin:center;animation:lv-ping 2.6s cubic-bezier(.2,.7,.4,1) infinite}
+@keyframes lv-ping{0%{opacity:.42;transform:scale(.22)}75%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.lv-haz rect{animation:lv-sube .9s cubic-bezier(.2,.8,.3,1)}
+@keyframes lv-sube{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.lv-haz rect{transform-origin:bottom;transform-box:fill-box}
+.lv__tip{position:absolute;z-index:4;pointer-events:none;display:grid;gap:2px;max-width:260px;padding:9px 11px;border-radius:10px;
+  background:rgba(9,15,30,.95);border:1px solid rgba(255,255,255,.14);color:#E7EDF8;font-size:12.5px;line-height:1.35;box-shadow:0 10px 30px -10px rgba(0,0,0,.8)}
+.lv__tip b{font-size:13px}.lv__tip .muted{color:rgba(231,237,248,.55)}
+.lv__tip-e{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--c)}
+.lv__leyenda{position:absolute;z-index:3;left:12px;bottom:10px;display:flex;flex-wrap:wrap;gap:4px 12px;pointer-events:none}
+.lv__lg{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(231,237,248,.66)}
+.lv__lg i{width:7px;height:7px;border-radius:50%;flex:none}
+
+.lv__abajo{display:grid;gap:14px;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
+.lv__abajo2{display:grid;gap:14px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)}
+.lv__cf{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:5px 0}
+.lv__cn{display:flex;align-items:center;gap:7px;font-size:13px;white-space:nowrap}
+.lv__cn i{width:8px;height:8px;border-radius:50%;flex:none}
+.lv__cb{height:7px;border-radius:4px;background:var(--line2);overflow:hidden}.lv__cb i{display:block;height:100%;border-radius:4px;transition:width .5s cubic-bezier(.2,0,0,1)}
+.lv__pb{display:flex;align-items:flex-end;gap:2px;height:92px}
+.lv__pb i{flex:1;min-width:2px;background:var(--navy);border-radius:2px 2px 0 0;opacity:.82;transition:height .4s cubic-bezier(.2,0,0,1)}
+.lv__pb i:last-child{background:var(--amber);opacity:1}
+.lv__px{display:flex;justify-content:space-between;margin-top:6px}
+.lv__rank{display:grid;gap:6px}
+.lv__rk{display:grid;grid-template-columns:minmax(0,1fr) 88px auto;gap:10px;align-items:center;font-size:13px}
+.lv__rn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv__rb{height:6px;border-radius:4px;background:var(--line2);overflow:hidden}.lv__rb i{display:block;height:100%;background:var(--navy);opacity:.75;border-radius:4px}
+.feed{list-style:none;margin:0;padding:0;display:grid;gap:1px;max-height:340px;overflow:auto;overscroll-behavior:contain}
+.feed__i{display:grid;grid-template-columns:74px minmax(0,1fr);gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line2)}
+.feed__i:last-child{border-bottom:0}
+.feed__x{font-size:13px}.feed__x b{font-weight:600}
+.feed__i--win{background:#FBF6E6;border-radius:8px;padding:7px 8px;border-bottom:0}
+.feed__i--win .feed__x{color:#8A6D1F;font-weight:600}
+@media (max-width:1100px){.lv__abajo,.lv__abajo2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.lv__svgwrap{aspect-ratio:4/3;max-height:none}
+  .lv__bar{flex-wrap:wrap;gap:6px}.lv__sel{order:5}
+  .lv__leyenda{position:static;padding:8px 12px 10px;background:#070C18}
+  .feed__i{grid-template-columns:minmax(0,1fr);gap:1px}.feed__t{order:2}}
+.lv-pt{cursor:pointer}
+.lv__tip-ir{margin-top:3px;font-size:11px;color:#E8B15C}
+.feed__a{display:grid;grid-template-columns:subgrid;grid-column:1/-1;text-decoration:none;color:inherit;border-radius:6px}
+.feed__a:hover{background:var(--line2)}
+.feed__i--win .feed__a:hover{background:#F5EDD6}
+@media (max-width:760px){.feed__a{grid-template-columns:minmax(0,1fr)}}

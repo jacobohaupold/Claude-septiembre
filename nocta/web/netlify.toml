@@ -11,6 +11,14 @@
     X-Robots-Tag = "noindex"
     Cache-Control = "no-store"
 
+# Los contornos del mundo del mapa en vivo: 126 KB que no cambian nunca. Sin esta regla
+# la heredaria el no-store de /admin/* y se bajarian enteros en cada carga del CRM.
+[[headers]]
+  for = "/admin/mundo.js"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/tablero.html"
   [headers.values]
