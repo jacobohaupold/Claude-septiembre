@@ -75,7 +75,47 @@ siempre cabe sin scroll.
 Las flechas de los extremos se apagan con `aria-disabled`, **no** con `disabled`: un botón
 deshabilitado pierde el foco, y al llegar a la última foto el teclado dejaría de funcionar.
 
-## 6. Qué comprueba la prueba
+## 6. El descuento se ve
+
+El terracota (`--n-alert`) está reservado al descuento: si algo de la web está en ese color, es
+que ahorras. Una sola pieza, `.n-dto`, para todas las superficies:
+
+| Dónde | Qué enseña |
+|---|---|
+| Tarjeta de portada (`nCardM`) | el descuento más grande, en la fila de marcas de arriba |
+| Tarjeta de catálogo (`nCardR`) | hasta dos: el del pack y el de la mensualidad |
+| Chapa de esquina con «Ahorra X €» | la misma píldora, en su sitio de siempre |
+| Ficha · «Ahorras X €» | terracota, 12 px (antes verde salvia, 10 px) |
+| Ficha · botón de mensualidad | `−20 % · Recomendado`, 10,5 px (antes 9 px) |
+
+`nDto(p, {s, max, comp, suave})` decide qué píldoras salen. Dos reglas que se rompen solas si no
+se respetan:
+
+- **Una sola píldora a tope por producto.** Dos sólidas seguidas compiten y no destaca ninguna;
+  la segunda va en versión suave (`--n-dto--2`, terracota al 9 % con borde).
+- **Nunca el mismo descuento dos veces.** La chapa de la esquina ya dice «−25 %» o «Ahorra 12 €»;
+  por eso las tarjetas pasan `comp:false` cuando la chapa ya lo cuenta.
+
+### El brillo va en el fondo, no en una capa encima
+
+La animación es un degradado claro que cruza la píldora una vez cada 5,4 s. Está hecho con una
+**segunda capa de `background-image`** y `background-position` animada, y eso no es un capricho:
+la primera versión usaba un `::after` absoluto con `translate` de −140 % a 140 %. Aunque la
+píldora lo recorte con `overflow:hidden`, ese desplazamiento entraba en el desbordamiento
+desplazable del documento y **la portada se podía arrastrar 546 px hacia los lados** a todos los
+anchos (medido: `scrollWidth` 936 sobre una ventana de 390). Moviendo el fondo no hay caja que
+desbordar. La prueba `descuentos.js` vigila que el `::after` no vuelva.
+
+Con `prefers-reduced-motion: reduce` el brillo desaparece del todo, en tarjetas y en ficha.
+
+### La fila de marcas reserva su renglón
+
+`.n-pm__mk` se pinta siempre, lleve chapa o no, con `min-height`. Sin eso, la tarjeta sin chapa
+empieza el texto 26 px por encima de sus vecinas y la fila de «Lo más vendido» queda descuadrada.
+Por lo mismo, la única tarjeta que aún lleva caja (el plan, que no tiene foto recortada) recupera
+con `margin-bottom` los 10 px que le quita su acolchado lateral.
+
+## 7. Qué comprueba la prueba
 
 `node nocta/tools/web-qa/ficha.js` (39 comprobaciones): que la galería quepa en la ventana, que
 las fotos vayan en fila, que haya una flecha a cada lado y se apaguen en los extremos, que el

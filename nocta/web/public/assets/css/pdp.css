@@ -47,7 +47,13 @@
 .n-pd__price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-top:2px}
 .n-pd__price b{font-size:26px;letter-spacing:-.02em;font-weight:var(--n-w-med);color:var(--n-navy)}
 .n-pd__price s{font-size:14px;color:var(--n-muted);text-decoration-thickness:1px}
-.n-pd__save{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;background:var(--n-sage-14);color:var(--n-navy);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--n-w-med)}
+/* El ahorro deja de ser una etiqueta verde más y pasa al lenguaje del descuento: terracota,
+   un punto más grande, y el mismo brillo lento que las píldoras de las tarjetas (que va en el
+   propio fondo, no en una capa absoluta: ver el comentario de .n-dto en styles.css). */
+.n-pd__save{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;color:#fff;font-size:12px;letter-spacing:.03em;text-transform:none;font-weight:var(--n-w-semi);font-variant-numeric:tabular-nums;box-shadow:0 2px 9px -3px rgba(200,85,61,.7);
+  background-color:var(--n-alert);background-repeat:no-repeat;background-size:260% 100%;background-position:210% 0;
+  background-image:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.46) 50%,transparent 62%)}
+@media (prefers-reduced-motion:no-preference){.n-pd__save{animation:n-dto-brillo 5.4s var(--n-e-io) infinite}}
 .n-pd__unit{flex:0 0 100%;font-size:12px;letter-spacing:.02em;color:var(--n-muted)}
 .n-pd__klarna{margin:-8px 0 0;font-size:12px;color:var(--n-muted)}
 .n-pd .n-tiers{margin-top:0}
@@ -70,10 +76,13 @@
 /* segmento una vez / mensualidad */
 .n-pd__seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border:1px solid var(--n-line-2);border-radius:999px}
 .n-pd__seg label{position:relative;display:grid;justify-items:center;align-content:center;gap:3px;min-height:66px;padding:8px 8px;border-radius:999px;cursor:pointer;text-align:center;transition:background var(--n-t2) var(--n-e)}
-.n-pd__segflag{display:inline-flex;align-items:center;height:19px;padding:0 9px;border-radius:999px;background:var(--n-alert);color:#fff;font-size:9px;font-style:normal;letter-spacing:.09em;text-transform:uppercase;font-weight:var(--n-w-semi);white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
-.n-pd__seg label.is-on .n-pd__segflag{background:#fff;color:var(--n-alert-ink)}
-@media (prefers-reduced-motion:no-preference){.n-pd__seg label:not(.is-on) .n-pd__segflag{animation:n-pd-lat 2.6s var(--n-e) infinite}}
-@keyframes n-pd-lat{0%,88%,100%{scale:1}92%{scale:1.07}96%{scale:1}}
+.n-pd__segflag{display:inline-flex;align-items:center;height:23px;padding:0 11px;border-radius:999px;color:#fff;font-size:10.5px;font-style:normal;letter-spacing:.05em;text-transform:uppercase;font-weight:var(--n-w-semi);white-space:nowrap;max-width:100%;box-shadow:0 2px 9px -3px rgba(200,85,61,.7);
+  background-color:var(--n-alert);background-repeat:no-repeat;background-size:260% 100%;background-position:210% 0;
+  background-image:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.5) 50%,transparent 62%)}
+@media (prefers-reduced-motion:no-preference){.n-pd__segflag{animation:n-dto-brillo 5.4s var(--n-e-io) infinite}}
+.n-pd__seg label.is-on .n-pd__segflag{background-color:#fff;color:var(--n-alert-ink);box-shadow:none;
+  background-image:linear-gradient(105deg,transparent 38%,rgba(200,85,61,.2) 50%,transparent 62%)}
+
 .n-pd__seg label b{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:var(--n-w-med);color:var(--n-navy);line-height:1.2}
 .n-pd__seg label span{font-size:12px;color:var(--n-muted);font-variant-numeric:tabular-nums}
 .n-pd__seg label.is-on{background:var(--n-navy)}
@@ -276,7 +285,7 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 /* v7.6.2 · móvil: foto más grande, suscripción encima de las cantidades, botones y píldoras un punto más pequeños */
 @media (max-width:899px){
   .n-pd-gal__s{height:min(46vh,370px)}.n-pd-gal__s img{transform:scale(1.3)}
-  .n-pd__panel>.n-pd__seg{order:4;padding:3px;gap:3px}.n-pd__seg label{min-height:44px;padding:5px 8px;gap:1px}.n-pd__seg label b{font-size:12px}.n-pd__seg label span{font-size:12px}
+  .n-pd__panel>.n-pd__seg{order:4;padding:3px;gap:3px}.n-pd__seg label{min-height:44px;padding:5px 8px;gap:1px}.n-pd__segflag{height:20px;padding:0 9px;font-size:9.5px}.n-pd__seg label b{font-size:12px}.n-pd__seg label span{font-size:12px}
   .n-pd__panel>.n-pd__segnote{display:none}
   .n-pd__panel>.n-tiers{order:5;gap:6px}.n-tier{min-height:46px;padding:5px 6px}.n-tier b{font-size:11px}.n-tier span{font-size:14px}.n-tier small{display:none}
   .n-pd__panel>.n-buy{order:6}.n-buy .n-btn--lg{min-height:44px;font-size:11px}.n-buy .n-pay{height:44px;min-height:44px}

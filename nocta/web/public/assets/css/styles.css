@@ -437,6 +437,39 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
 .n-pc__pers::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--n-sage);flex:none}
 .n-pc__pers.is-rec{color:var(--n-alert-ink)}
 .n-pc__pers.is-rec::before{background:var(--n-alert)}
+
+/* ── Descuento · una sola pieza para toda la web ───────────────────────────────────────
+   El terracota está reservado al descuento: si algo está en ese color, es que ahorras.
+   Una píldora sólida por producto (el descuento más grande) y, si cabe, la segunda suave.
+   El brillo cruza una vez cada cinco segundos y medio: se nota de reojo y no obliga a mirar,
+   que es justo lo que separa «llama la atención» de «molesta al leer». */
+.n-dtos{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:5px;min-width:0}
+.n-dto{display:inline-flex;align-items:center;height:26px;padding:0 11px;
+  border:0;border-radius:999px;color:#fff;
+  font-size:11.5px;line-height:1;letter-spacing:.03em;font-weight:var(--n-w-semi);
+  font-variant-numeric:tabular-nums;white-space:nowrap;text-transform:none;
+  box-shadow:0 2px 9px -3px rgba(200,85,61,.7);
+  /* El brillo es una SEGUNDA CAPA DE FONDO que se desliza, no una capa absoluta encima.
+     Con un ::after posicionado y un translate animado el reflejo sale de la píldora y, aunque
+     la píldora lo recorte, el documento entero se podía arrastrar 540 px hacia los lados en la
+     portada (medido). Moviendo background-position no hay caja que desbordar: cero maquetación. */
+  background-color:var(--n-alert);background-repeat:no-repeat;background-size:260% 100%;
+  background-position:210% 0;
+  background-image:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.46) 50%,transparent 62%)}
+.n-dto--2{color:var(--n-alert-ink);box-shadow:none;font-weight:var(--n-w-med);
+  border:1px solid rgba(200,85,61,.42);background-color:rgba(200,85,61,.09);background-image:none;animation:none}
+.n-dto--s{height:22px;padding:0 9px;font-size:10.5px}
+@media (prefers-reduced-motion:no-preference){
+  .n-dto{animation:n-dto-brillo 5.4s var(--n-e-io) infinite}
+  /* Desfase por posición: si todas las tarjetas brillan a la vez, la fila entera parpadea. */
+  .n-pc:nth-child(2n) .n-dto,.n-pm:nth-child(2n) .n-dto{animation-delay:-1.8s}
+  .n-pc:nth-child(3n) .n-dto,.n-pm:nth-child(3n) .n-dto{animation-delay:-3.6s}
+}
+@keyframes n-dto-brillo{0%,74%{background-position:210% 0}93%,100%{background-position:-110% 0}}
+/* La chapa de la esquina cuando lo que dice es un ahorro: mismo lenguaje, encajada en su sitio. */
+.n-pc__new--dto,.n-pm__b--dto{letter-spacing:.04em;font-weight:var(--n-w-semi)}
+.n-pc__new.n-dto{height:26px;padding:0 11px;font-size:11px;background-color:var(--n-alert);color:#fff}
+.n-pm__b.n-dto{height:22px;padding:0 9px;font-size:10px;background-color:var(--n-alert);color:#fff}
 .n-pc .n-btn{margin-top:6px;width:100%;white-space:normal;line-height:1.25;padding-top:7px;padding-bottom:7px;text-align:center}
 .n-pc .n-pay{margin-top:-2px}
 /* rail horizontal con puntos */
@@ -693,6 +726,7 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
      a todo el ancho de la columna, que es lo que convertía la etiqueta en una banda. */
   background:transparent;color:var(--n-navy);border:1px solid var(--n-line-2);padding:3px 8px;backdrop-filter:none}
 .n-pc--float .n-pc__i .n-pc__new--v{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
+.n-pc--float .n-pc__i .n-pc__new--dto{background-color:var(--n-alert);color:#fff;border-color:var(--n-alert);box-shadow:0 2px 9px -3px rgba(200,85,61,.7)}
 
 /* ── v7 · Mini tarjeta («Lo más vendido» de la portada) con el mismo lenguaje ──────────
    Aquí había fondo en TRES sitios: la tarjeta, el hueco de la imagen y la propia imagen.
@@ -707,9 +741,21 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
   filter:drop-shadow(0 11px 14px rgba(20,33,61,.13)) drop-shadow(0 3px 5px rgba(20,33,61,.07));
   transition:transform .62s var(--n-e),filter .62s var(--n-e)}
 .n-pm--float .n-pm__i{padding-top:2px}
-.n-pm--float .n-pm__i .n-pm__b{position:static;justify-self:start;margin-bottom:3px;
+/* La fila de marcas ocupa sitio siempre, lleve chapa o no y sea o no flotante la tarjeta: es
+   lo que mantiene alineada la fila del carril. El min-height la reserva aunque quede vacía
+   (los planes no llevan descuento de mensualidad y se quedaban 26 px más arriba). */
+.n-pm__mk{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:3px;min-height:22px}
+/* En un carril donde casi todas las tarjetas son flotantes (sin caja), la que todavía lleva caja
+   tiene la foto 20 px más estrecha por el acolchado lateral, así que su hueco cuadrado sale 20 px
+   más bajo y el nombre arranca 10 px por encima del de sus vecinas. Se devuelven esos 10 px por
+   debajo de la foto. Con márgenes negativos para sacarla a sangre también cuadra, pero entonces
+   la tarjeta es más ancha que su columna y la portada se puede arrastrar hacia los lados. */
+.n-pm:not(.n-pm--float) .n-pm__w{margin-bottom:10px}
+.n-pm__mk .n-dtos{gap:5px}
+.n-pm--float .n-pm__i .n-pm__b{position:static;justify-self:start;margin-bottom:0;
   background:transparent;color:var(--n-navy);border:1px solid var(--n-line-2);padding:3px 7px}
 .n-pm--float .n-pm__i .n-pm__b--v{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
+.n-pm--float .n-pm__i .n-pm__b--dto{background-color:var(--n-alert);color:#fff;border-color:var(--n-alert);box-shadow:0 2px 9px -3px rgba(200,85,61,.7)}
 @media (hover:hover){
   .n-pm--float .n-pm__w:hover img{transform:translateY(-8px) scale(1.03);
     filter:drop-shadow(0 20px 22px rgba(20,33,61,.18)) drop-shadow(0 6px 9px rgba(20,33,61,.08))}
