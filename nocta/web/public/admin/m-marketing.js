@@ -11,7 +11,7 @@
     .wa-list-pane{max-height:74vh;overflow-y:auto;overflow-x:hidden;min-width:0}
     .wa-list{display:grid;gap:6px;grid-template-columns:minmax(0,1fr)}
     .wa-conv{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
-    .wa-conv.on{border-color:var(--navy);background:#F3EFE6}
+    .wa-conv.on{border-color:var(--navy);background:var(--sup)}
     .wa-conv .av{width:36px;height:36px;border-radius:50%;background:var(--sage2);display:grid;place-items:center;font-weight:600;color:var(--navy);flex:none;font-size:14px}
     .wa-conv__b{flex:1;min-width:0}
     .wa-conv__b b{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

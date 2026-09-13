@@ -53,9 +53,9 @@
       data: {
         labels: daily.map(d => dayLabel(d.day)),
         datasets: [
-          { type: 'bar', label: 'Sesiones', data: daily.map(d => d.sessions || 0), backgroundColor: '#9FB3A1', yAxisID: 'y', borderRadius: 4 },
-          { type: 'bar', label: 'Pedidos', data: daily.map(d => d.orders || 0), backgroundColor: '#14213D', yAxisID: 'y', borderRadius: 4 },
-          { type: 'line', label: 'Ingresos', data: daily.map(d => d.revenue || 0), borderColor: '#C8553D', backgroundColor: '#C8553D', yAxisID: 'y1', tension: .3, pointRadius: 2 }
+          { type: 'bar', label: 'Sesiones', data: daily.map(d => d.sessions || 0), backgroundColor: '#6C8BFF', yAxisID: 'y', borderRadius: 4 },
+          { type: 'bar', label: 'Pedidos', data: daily.map(d => d.orders || 0), backgroundColor: '#3350E0', yAxisID: 'y', borderRadius: 4 },
+          { type: 'line', label: 'Ingresos', data: daily.map(d => d.revenue || 0), borderColor: '#F5A524', backgroundColor: '#F5A524', yAxisID: 'y1', tension: .3, pointRadius: 2 }
         ]
       },
       options: {

@@ -45,7 +45,7 @@
   .plist{display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
   .prow{display:grid;grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"img t go" "img p p" "img s s";column-gap:12px;row-gap:2px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit;color:inherit}
   .prow:hover{border-color:#D8D2C4;background:#FBF9F4}
-  .prow__img{grid-area:img;width:52px;height:52px;border-radius:9px;object-fit:cover;background:#F3EFE6;align-self:start}
+  .prow__img{grid-area:img;width:52px;height:52px;border-radius:9px;object-fit:cover;background:var(--sup);align-self:start}
   .prow__t{grid-area:t;min-width:0}
   .prow__t b{display:block;font-size:14px;line-height:1.3;overflow-wrap:break-word}
   .prow__t small{color:var(--muted);font-size:11.5px}
@@ -229,7 +229,7 @@
       const img = v.image || cur.image;
       $('#prev', el).innerHTML = `
         <div style="max-width:260px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
-          <div style="aspect-ratio:1/1;background:#F3EFE6"><img src="${esc(webp(img))}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.opacity=0"></div>
+          <div style="aspect-ratio:1/1;background:var(--sup)"><img src="${esc(webp(img))}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.opacity=0"></div>
           <div style="padding:12px">
             <b style="display:block;font-size:13.5px">${esc(v.name || cur.name || '')}</b>
             <div class="xs muted">${esc(v.short || cur.short || '')}</div>

@@ -52,9 +52,17 @@
   }
 
   /* ---------- etapas y textos ---------- */
+  /* Colores vivos sobre el índigo del mapa. Blanco para la visita y oro para la compra, que es el
+     lenguaje de la referencia; en medio, tonos claramente distintos entre sí para que el embudo se
+     lea de un vistazo y no haya que ir a la leyenda. */
+  /* Cada etapa lleva dos colores: `c` para el mapa, que es oscuro, y `cl` para las tarjetas, que
+     son blancas. El blanco de «Mirando» es perfecto sobre el índigo y desaparece sobre papel. */
   const ETAPA = [
-    { n: 'Mirando', c: '#8FA6C8' }, { n: 'En un producto', c: '#CFE0F2' },
-    { n: 'Con carrito', c: '#E8B15C' }, { n: 'Pagando', c: '#F0834A' }, { n: 'Ha comprado', c: '#F5D061' },
+    { n: 'Mirando',        c: '#FFFFFF', cl: '#6C8BFF' },
+    { n: 'En un producto', c: '#5AD8FF', cl: '#1FC0EC' },
+    { n: 'Con carrito',    c: '#B98BFF', cl: '#9B6BFF' },
+    { n: 'Pagando',        c: '#FF8A4C', cl: '#F0642F' },
+    { n: 'Ha comprado',    c: '#FFC53D', cl: '#F5A524' },
   ];
   const paisNombre = (() => {
     let dn = null; try { dn = new Intl.DisplayNames(['es'], { type: 'region' }); } catch (e) { }
@@ -156,8 +164,13 @@
         <defs>
           <radialGradient id="lvhalo"><stop offset="0%" stop-color="#fff" stop-opacity=".5"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></radialGradient>
           <linearGradient id="lvhaz" x1="0" y1="1" x2="0" y2="0">
-            <stop offset="0%" stop-color="#F5D061" stop-opacity=".9"/><stop offset="100%" stop-color="#F5D061" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#FFF3C4" stop-opacity="1"/>
+            <stop offset="35%" stop-color="#FFC53D" stop-opacity=".92"/>
+            <stop offset="100%" stop-color="#FFC53D" stop-opacity="0"/>
           </linearGradient>
+          <radialGradient id="lvhazglow">
+            <stop offset="0%" stop-color="#FFC53D" stop-opacity=".55"/><stop offset="100%" stop-color="#FFC53D" stop-opacity="0"/>
+          </radialGradient>
           <filter id="lvdusk" x="-6%" y="-30%" width="112%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>
           <!-- El mundo se declara UNA vez y se usa dos veces: en el mapa y en el mapa guía. -->
           <g id="lvmundo">${m.paises.map(p => `<path class="lv-pais" data-c="${esc(p.c || '')}" d="${p.d}"><title>${esc(p.c ? '' : p.n)}</title></path>`).join('')}</g>
@@ -519,11 +532,12 @@
           const x = aX(px(v.lon)), y = aY(py(v.lat));
           if (x < -40 || x > W + 40 || y < -80 || y > H + 40) return '';
           const alto = (14 + Math.min(46, Math.sqrt(Math.max(0, v.total)) * 6)) * U;
-          const gr = 1.1 * U;
+          const gr = 1.35 * U;
           const op = Math.max(.18, 1 - (v.hace || 0) / 5400);
           return `<g class="lv-haz" opacity="${op.toFixed(2)}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})">`
+            + `<circle r="${(9 * U).toFixed(2)}" fill="url(#lvhazglow)"/>`
             + `<rect x="${(-gr).toFixed(2)}" y="${(-alto).toFixed(1)}" width="${(gr * 2).toFixed(2)}" height="${alto.toFixed(1)}" fill="url(#lvhaz)" rx="${gr.toFixed(2)}"/>`
-            + `<circle r="${(2.4 * U).toFixed(2)}" fill="#F5D061"/><title>${esc(A.money(v.total) + ' · ' + lugar(v) + ' · ' + hace(v.hace))}</title></g>`;
+            + `<circle r="${(2.6 * U).toFixed(2)}" fill="#FFF3C4"/><circle r="${(1.4 * U).toFixed(2)}" fill="#FFFFFF"/><title>${esc(A.money(v.total) + ' · ' + lugar(v) + ' · ' + hace(v.hace))}</title></g>`;
         }).join('');
       }
 
@@ -643,8 +657,8 @@
         dibujaCapas();
 
         const vivos = Math.max(1, a.personas || 0);
-        const fases = [['Mirando', a.navegando || 0, ETAPA[0].c], ['Con carrito', a.carrito || 0, ETAPA[2].c],
-          ['Pagando', a.pagando || 0, ETAPA[3].c], ['Han comprado', a.comprando || 0, ETAPA[4].c]];
+        const fases = [['Mirando', a.navegando || 0, ETAPA[0].cl], ['Con carrito', a.carrito || 0, ETAPA[2].cl],
+          ['Pagando', a.pagando || 0, ETAPA[3].cl], ['Han comprado', a.comprando || 0, ETAPA[4].cl]];
         const salto = i => {
           if (!i) return '';
           const de = fases[i - 1][1];
@@ -655,7 +669,7 @@
           ? `<div class="lv__curvas">${fases.map(([n, v, c], i) =>
               (i ? `<div class="lv__paso">${salto(i)}</div>` : '')
               + `<figure class="lv__cv"><svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true">`
-              + `<path d="${campana(v / vivos)}" fill="${c}" fill-opacity=".8"/></svg>`
+              + `<path d="${campana(v / vivos)}" fill="${c}" fill-opacity=".92"/></svg>`
               + `<figcaption><b class="num">${v}</b><span>${esc(n)}</span></figcaption></figure>`).join('')}</div>`
           : '<p class="muted sm">Nadie en la tienda ahora mismo.</p>';
 

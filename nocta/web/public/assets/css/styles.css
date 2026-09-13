@@ -368,7 +368,12 @@ body.n-v5.n-has-hero .n-top:not(.is-scrolled) .n-top__in{padding-inline:calc(var
 body.n-v5.n-has-hero .n-top:not(.is-scrolled) .n-logo,body.n-v5.n-has-hero .n-top:not(.is-scrolled) .n-main a,body.n-v5.n-has-hero .n-top:not(.is-scrolled) .n-icon,body.n-v5.n-has-hero .n-top:not(.is-scrolled) .n-cart{text-shadow:0 1px 12px rgba(20,33,61,.45),0 1px 2px rgba(20,33,61,.3)}
 .n-v5 .n-top__in .n-logo,.n-v5 .n-top__in .n-icon,.n-v5 .n-top__in .n-cart,.n-v5 .n-main a{color:inherit}
 .n-v5 .n-top__in .n-cart b{background:#fff;color:var(--n-navy)}
-.n-v5 .n-top.is-scrolled .n-top__in{background:rgba(250,248,243,.94);backdrop-filter:blur(12px) saturate(1.2);-webkit-backdrop-filter:blur(12px) saturate(1.2);color:var(--n-navy);border-bottom:1px solid var(--n-line);margin:0;border-radius:0;height:var(--n-header-h)}
+/* Barra al hacer scroll. El fondo va en .n-top, que ocupa todo el ancho, y el contenido se queda
+   en su contenedor centrado. Antes el fondo iba en .n-top__in con margin:0 pero SIN anular el
+   max-width de 1148px que hereda de la regla de escritorio: la barra medía 1148px y se quedaba
+   pegada a la izquierda en cuanto la pantalla era más ancha que eso. */
+.n-v5 .n-top.is-scrolled{background:rgba(250,248,243,.94);backdrop-filter:blur(12px) saturate(1.2);-webkit-backdrop-filter:blur(12px) saturate(1.2);border-bottom:1px solid var(--n-line);pointer-events:auto}
+.n-v5 .n-top.is-scrolled .n-top__in{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;color:var(--n-navy);border:0;margin:0 auto;max-width:var(--n-max);border-radius:0;height:var(--n-header-h);padding-inline:var(--n-gutter)}
 .n-v5 .n-top.is-scrolled .n-top__in .n-cart b{background:var(--n-navy);color:var(--n-cream)}
 .n-v5 .n-top.is-scrolled .n-main a{color:var(--n-navy)}
 .n-v5 .n-top:not(.is-scrolled) .n-main a{border-bottom-color:transparent}
