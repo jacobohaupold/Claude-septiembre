@@ -1,2 +1,13 @@
 # Local Netlify folder
 .netlify
+
+# Secretos: nunca al repositorio. Este repo está en GitHub, así que un token
+# commiteado queda publicado y además se queda en el historial para siempre.
+# El token de Netlify va en la variable de entorno NETLIFY_AUTH_TOKEN del
+# entorno de Claude Code, no en un fichero. Ver nocta/web/DESPLIEGUE.md.
+.env
+.env.*
+*.env
+secrets.json
+*.pem
+*.key
