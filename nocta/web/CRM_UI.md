@@ -76,3 +76,68 @@ elemento culpable. Los anchos que se prueban son 320, 360, 390, 430, 768, 1024, 
   móvil** — la tabla pasa a tarjetas y vuelve a tabla sin dejar desborde en ningún momento.
 - **Acciones dentro de las celdas** (`click.js`): abrir un pedido o un cliente tocando la fila, escribir un coste,
   accionar un interruptor y copiar un enlace siguen funcionando con la fila convertida en tarjeta.
+
+## Personas: el mapa de quién entra y qué hace cada uno
+
+`#/people` es el mapa y `#/people/<id>` la ficha de una persona. Los datos salen de `/api/admin/people` y
+`/api/admin/person/:id`, que reconstruyen el recorrido desde la tabla `events` y lo cruzan con pedidos,
+carritos, leads, clientes, suscripciones y mensajes. La lógica está en
+`web/netlify/functions/lib/journeys.js`.
+
+### Cuidado con los nombres de los identificadores, que están invertidos
+
+Desde el primer día del proyecto:
+
+| Campo | Dónde se guarda | Qué es de verdad |
+|---|---|---|
+| `sid` | `localStorage` | la **persona**: sobrevive a cerrar el navegador |
+| `vid` | `sessionStorage` | una **visita**: se pierde al cerrar la pestaña |
+
+Es al revés de lo que sugieren las siglas. No se renombran porque hay datos históricos guardados así y
+renombrarlos partiría el historial. Dentro de `journeys.js` se traducen, y de puertas afuera solo se habla de
+persona y de visita.
+
+### El embudo
+
+Seis peldaños, definidos en `ETAPAS` dentro de `journeys.js`. La etapa de una persona es el peldaño más alto
+que ha pisado. Debajo de cada peldaño se escribe cuánta gente no pasó al siguiente, que es la pregunta que
+importa. Para añadir un evento nuevo al embudo basta con meterlo en la lista `evs` de su etapa.
+
+### De dónde viene cada uno
+
+`origen()` clasifica por `utm` primero y por el referente después: Meta Ads, TikTok Ads, Google Ads, Email,
+WhatsApp, las redes por su dominio, los buscadores como orgánico, y si no hay nada, Directo. **El origen se
+fija con la primera campaña que se vio, no con la última**, que es como se atribuye de verdad.
+
+### Cruces con el resto del CRM
+
+- Ficha de pedido → recorrido del comprador, y de qué campaña y anuncio vino.
+- Carritos → recorrido de esa persona, en la misma fila.
+- Ficha de cliente → recorrido, si alguno de sus pedidos guarda el identificador.
+- Panel → el embudo agregado enlaza al mapa persona a persona.
+- Ficha de persona → sus pedidos, su carrito, su ficha de cliente, su lead, sus suscripciones, sus mensajes y
+  los productos que miró y añadió.
+
+### Límites que conviene conocer
+
+- Cada consulta lee como mucho 20.000 eventos. Si se llega al tope, el mapa lo avisa en pantalla y hay que
+  acortar el periodo. Cuando el volumen lo pida, esto se mueve a una función de Postgres como `admin_stats`.
+- Una persona solo tiene nombre y email si ha dejado un carrito con email o ha hecho un pedido. El resto son
+  visitantes anónimos, y eso está bien: se les sigue viendo el recorrido entero.
+
+### Cómo se prueba
+
+```bash
+node nocta/tools/crm-qa/test-recorridos.mjs
+```
+
+Prueba la lógica **de verdad**: intercepta las llamadas de red de `lib/db.js` y le devuelve eventos inventados,
+así que se ejecuta el código que va a producción, no una copia. Comprueba el embudo, la atribución de origen,
+la identidad por carrito y por pedido, el corte en visitas y el enlace con los pedidos.
+
+La interfaz se prueba con el arnés de siempre, que ya incluye las dos pantallas nuevas a los diez anchos:
+
+```bash
+cd nocta/tools/crm-qa && node server.js &   # datos de mentira
+NODE_PATH=/opt/node22/lib/node_modules node audit.js /tmp/shots
+```

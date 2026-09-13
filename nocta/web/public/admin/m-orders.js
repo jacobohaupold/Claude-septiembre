@@ -101,7 +101,12 @@
       ${o.phone ? `<p><a href="tel:${esc(o.phone)}">${esc(o.phone)}</a></p>` : ''}
       ${lines.length ? `<p class="muted sm">${lines.map(esc).join('<br>')}</p>` : '<p class="muted sm">Sin dirección de envío.</p>'}
     `;
-    return A.card('Cliente', body, o.email ? `<a class="btn btn--s btn--g" href="#/customers?q=${encodeURIComponent(o.email)}">Ver cliente</a>` : '');
+    const per = o.sid || o.vid;
+    const ori = o.utm && (o.utm.utm_campaign || o.utm.utm_source);
+    const extra = `
+      ${ori ? `<p class="muted sm">Vino de <b>${esc(o.utm.utm_source || '')}</b>${o.utm.utm_campaign ? ' · ' + esc(o.utm.utm_campaign) : ''}${o.utm.utm_content ? ' · anuncio ' + esc(o.utm.utm_content) : ''}</p>` : ''}
+      ${per ? `<a class="btn btn--s btn--g mt" href="#/people/${encodeURIComponent(per)}">Ver todo su recorrido por la web</a>` : '<p class="muted xs mt">Este pedido no guarda el identificador de la visita, así que no se puede enlazar con su recorrido.</p>'}`;
+    return A.card('Cliente', body + extra, o.email ? `<a class="btn btn--s btn--g" href="#/customers?q=${encodeURIComponent(o.email)}">Ver cliente</a>` : '');
   }
 
   function itemsCard(o) {
@@ -270,7 +275,7 @@
           { k: 'updated_at', label: 'Actualizado', render: r => A.rel(r.updated_at), w: '95px' },
           { k: 'reminded_at', label: 'Recordatorio', render: r => r.reminded_at ? A.date(r.reminded_at) : '—', w: '100px' },
           { k: 'recovered', label: '', render: r => r.recovered ? '<span class="bdg bdg--ok">Recuperado</span>' : '', w: '100px' },
-          { k: 'acts', label: '', render: r => `<div class="row" style="gap:6px;flex-wrap:nowrap"><button class="btn btn--s btn--g" data-act="wa" data-email="${esc(r.email || '')}">WhatsApp</button><button class="btn btn--s btn--d" data-act="del" data-vid="${esc(r.vid)}">Borrar</button></div>`, w: '160px' }
+          { k: 'acts', label: '', render: r => `<div class="row" style="gap:6px;flex-wrap:nowrap"><a class="btn btn--s btn--g" href="#/people/${encodeURIComponent(r.vid)}">Recorrido</a><button class="btn btn--s btn--g" data-act="wa" data-email="${esc(r.email || '')}">WhatsApp</button><button class="btn btn--s btn--d" data-act="del" data-vid="${esc(r.vid)}">Borrar</button></div>`, w: '230px' }
         ], rows, empty: 'No hay carritos abandonados todavía.', click: false
       });
       el.innerHTML = `

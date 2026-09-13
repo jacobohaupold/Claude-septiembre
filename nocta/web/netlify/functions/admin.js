@@ -1,5 +1,5 @@
 // API del CRM: /api/admin/*  (sesión con contraseña ADMIN_PASSWORD → token firmado 30 días)
-//  POST login {password}                       GET  me · stats?days=N · integrations
+//  POST login {password}                       GET  me · stats?days=N · integrations · people?days=N · person/:id
 //  GET  r/:tabla?<consulta PostgREST>          POST r/:tabla (insert/upsert) · PATCH r/:tabla?filtro · DELETE r/:tabla?filtro
 //  POST a/:accion {…}   (order.ship, order.status, order.refund, order.email, sub.cancel, product.save, content.save, discount.save,
 //                       campaign.send, campaign.preview, whatsapp.send, stripe.connect, stripe.status, stripe.disconnect, stripe.oauth,
@@ -14,6 +14,7 @@ import { getCatalog, invalidateCatalog } from './lib/catalog.js';
 import { renderCampaign, sendCampaign, segmentRecipients, waText } from './lib/campaigns.js';
 import { runAutomations } from './lib/automations.js';
 import { markPaid } from './order.js';
+import { people, person } from './lib/journeys.js';
 
 const TABLES = ['leads', 'customers', 'orders', 'subscriptions', 'products', 'discounts', 'content', 'campaigns', 'messages', 'automations', 'events', 'carts', 'settings'];
 const SECRET_KEYS = /secret|token|password|key/i;
@@ -37,6 +38,16 @@ export default async (req) => {
     if (kind === 'me') return json({ ok: true, db: dbOk(), mail: mailOk(), site: SITE() });
     if (kind === 'stats') { const days = Math.min(365, Number(url.searchParams.get('days') || 14)); const s = await db.rpc('admin_stats', { p_days: days }); return json(s); }
     if (kind === 'integrations') return json(await integrations());
+    // Recorridos: el mapa de todo el que entra en la web y la ficha de cada uno.
+    if (kind === 'people') {
+      const p = url.searchParams;
+      return json(await people({
+        days: Math.min(365, Number(p.get('days') || 14)), q: p.get('q') || '',
+        etapa: p.get('etapa') || '', origenFiltro: p.get('origen') || '',
+        limite: Math.min(1000, Number(p.get('limite') || 300)),
+      }));
+    }
+    if (kind === 'person') return json(await person({ id: name || url.searchParams.get('id'), days: Math.min(365, Number(url.searchParams.get('days') || 180)) }));
     if (kind === 'r') {
       if (!TABLES.includes(name)) return json({ error: 'tabla' }, 400);
       const q = url.search.replace(/^\?/, '');

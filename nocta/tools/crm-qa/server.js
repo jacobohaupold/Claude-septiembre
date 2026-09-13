@@ -33,6 +33,13 @@ http.createServer((req,res)=>{
     const rest=p.slice('/api/admin/'.length);
     if(rest==='me')return j(res,{ok:true,db:true,mail:true,site:'https://nocta-store.netlify.app'});
     if(rest==='login')return j(res,{token:'open'});
+    if(rest==='people'){const d=F.peopleFor(Number(u.query.days||14));
+      let P=d.personas.slice();
+      if(u.query.etapa)P=P.filter(x=>x.etapa===u.query.etapa);
+      if(u.query.origen)P=P.filter(x=>x.origen.tipo===u.query.origen);
+      if(u.query.q){const q=String(u.query.q).toLowerCase();P=P.filter(x=>[x.id,x.email,x.nombre,x.se_quedo_en,x.origen.tipo,x.ciudad].some(v=>String(v||'').toLowerCase().includes(q)));}
+      return j(res,{...d,personas:P,total:P.length});}
+    if(rest.startsWith('person/'))return j(res,F.personFor(decodeURIComponent(rest.slice(7))));
     if(rest==='stats'){const st=F.statsFor(Number(u.query.days||14));
       if(EMPTY)return j(res,{days:st.days,events:0,sessions:0,bounce_rate:0,funnel:{sessions:0,product:0,atc:0,checkout:0,purchase:0},abandoned_carts:0,revenue:0,orders:0,aov:0,daily:[],sources:[],pages:[],landing:[],exits:[],countries:[],devices:[],products:{},leads:0,leads_total:0,customers:0,subs_active:0,mrr:0,pending_ship:0,carts_open:0,messages:{email:0,whatsapp:0}});
       return j(res,st);}

@@ -275,6 +275,7 @@
           <p class="kv"><b>Gastado</b><span>${A.money(cust.total_spent)}</span></p>
           <p class="kv"><b>Primer pedido</b><span>${A.date(cust.first_order_at, false)}</span></p>
           <p class="kv"><b>Último pedido</b><span>${A.rel(cust.last_order_at)}</span></p>
+          ${(() => { const o = ordersRows.find(x => x.sid || x.vid); const per = o && (o.sid || o.vid); return per ? `<p class="kv"><b>Recorrido</b><span><a href="#/people/${encodeURIComponent(per)}">Ver todo lo que hizo en la web</a></span></p>` : ''; })()}
           <div class="mt"><span class="fld__lab">Etiquetas</span><div id="tags_box"></div></div>
           <div class="fld mt"><label for="notes_box">Notas</label><textarea id="notes_box" rows="4" placeholder="Lo que convenga recordar de este cliente (preferencias de entrega, incidencias…)">${esc(cust.notes || '')}</textarea></div>
           <button type="button" class="btn btn--s btn--g" id="save_notes">Guardar notas</button>

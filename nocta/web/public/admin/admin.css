@@ -94,3 +94,21 @@ img,canvas,iframe,video{max-width:100%}
 .kpi b{overflow-wrap:anywhere}
 .tbl td a,.item a{overflow-wrap:anywhere}
 .steps{counter-reset:s;display:grid;gap:8px}.steps li{list-style:none;display:flex;gap:10px}.steps li::before{counter-increment:s;content:counter(s);flex:none;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;display:grid;place-items:center}
+
+/* ---- Personas: embudo con caídas y línea de tiempo del recorrido ---- */
+.funnel .drop{margin:-2px 0 8px;padding-left:2px}
+@media (min-width:561px){.funnel .drop{padding-left:calc(120px + 10px)}}
+.vis{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:8px;overflow:hidden}
+.vis>summary{cursor:pointer;padding:10px 12px;min-height:44px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;list-style:none}
+.vis>summary::-webkit-details-marker{display:none}
+.vis>summary::before{content:'▸';color:var(--muted);flex:none}
+.vis[open]>summary::before{content:'▾'}
+.vis[open]>summary{border-bottom:1px solid var(--line);background:#FBF9F4}
+.tl{list-style:none;margin:0;padding:6px 12px 12px}
+.tl__i{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;padding:6px 0;border-left:2px solid var(--line);margin-left:26px;padding-left:14px;position:relative}
+.tl__i::before{content:'';position:absolute;left:-5px;top:12px;width:8px;height:8px;border-radius:50%;background:#C9C3B4}
+.tl__i--win::before{background:var(--green)}
+.tl__i--win .tl__b b{color:var(--green)}
+.tl__h{color:var(--muted);padding-top:1px}
+.tl__b{min-width:0;overflow-wrap:anywhere}
+@media (max-width:560px){.tl{padding:6px 8px 10px}.tl__i{grid-template-columns:minmax(0,1fr);gap:1px;margin-left:14px;padding-left:12px}.tl__h{grid-row:1}}

@@ -88,4 +88,73 @@ const integrations = { supabase:{configured:true,url:'https://afaucnifmxfukbkzpu
   resend:{configured:true,from:'NOCTA <hola@nocta.es>',domains:[{id:'d_1',name:'nocta.es',status:'verified',region:'eu-west-1'},{id:'d_2',name:'mail.nocta.es',status:'pending',region:'eu-west-1'}],audience:{id:'aud_1',name:'Newsletter NOCTA'},domain_pending:null},
   whatsapp:{configured:true,number:'+34 613 00 00 00',phone_id:'761234567890123',waba:'1029384756',quality:'GREEN',templates:6,webhook_url:'https://nocta-store.netlify.app/api/whatsapp-webhook',verify_token:'nocta'},
   cron:{at:iso(2),ran:['carts','winback','subs'],sent:7} };
-module.exports = { PRODUCTS_JS, orders, customers, subscriptions, leads, carts, messages, campaigns, automations, settings, content, discounts, products_rows, statsFor, integrations };
+
+/* ---- Personas: datos de mentira para probar la interfaz del mapa y de la ficha.
+   La lógica de verdad se prueba aparte en test-recorridos.mjs contra el código real. ---- */
+const ETAPAS_F = [
+  { k:'visita', n:'Entró en la web' }, { k:'producto', n:'Miró un producto' },
+  { k:'carrito', n:'Añadió al carrito' }, { k:'checkout', n:'Empezó el pago' },
+  { k:'datos', n:'Metió los datos' }, { k:'compra', n:'Compró' },
+];
+const ORIG = ['Meta Ads','TikTok Ads','Google orgánico','Directo','Instagram','Email','Google Ads','Enlace'];
+const PAGS = ['/producto.html','/','/catalogo.html','/checkout.html','/planes.html','/no-son-puntos-negros.html','/quiz.html'];
+const CIU = [['Madrid','ES'],['Barcelona','ES'],['Valencia','ES'],['Sevilla','ES'],['Lisboa','PT'],['París','FR']];
+function personasF(n){
+  const out=[];
+  for(let i=0;i<n;i++){
+    const niv = i%13===0?5 : i%7===0?4 : i%5===0?3 : i%3===0?2 : i%2===0?1 : 0;
+    const [ciudad,pais]=CIU[i%CIU.length];
+    const compro = niv===5;
+    const email = (i%3===0)? `persona${i}@ejemplo.es` : null;
+    out.push({
+      id:'p'+String(i).padStart(3,'0'), email, nombre: email?('Persona '+i):null, identificado_por: email?(i%2?'pedido':'carrito'):null,
+      primera:new Date(now-(i+1)*36e5).toISOString(), ultima:new Date(now-i*18e5).toISOString(),
+      visitas:1+(i%4), paginas:1+(i%9), eventos:3+(i%25), segundos:15+(i*7)%600,
+      dev:i%3?'mobile':'desktop', pais, ciudad, idioma:'es-ES',
+      origen:{tipo:ORIG[i%ORIG.length], campana:i%4?('camp-'+(i%5)):null, contenido:i%5?('ad'+(i%9)):null, detalle:'', fuente:null, ref:null},
+      etapa:ETAPAS_F[niv].k, etapa_nombre:ETAPAS_F[niv].n, nivel:niv,
+      se_quedo_en:PAGS[i%PAGS.length], se_quedo_titulo:'Página '+(i%7), ultimo_ev:'leave',
+      productos:i%2?['parches-nariz']:[], anadidos:niv>=2?['parches-nariz']:[],
+      pedidos: compro?[{id:'NC-2026'+i, total:16.95+(i%3)*10, status:'paid', created_at:new Date(now-i*18e5).toISOString()}]:[],
+      compras: compro?1:0, gastado: compro?16.95+(i%3)*10:0,
+      carrito: niv>=2&&!compro?{total:16.95+(i%4)*8, items:[{slug:'parches-nariz',qty:1+(i%2)}], recuperado:false, actualizado:new Date(now-i*18e5).toISOString()}:null,
+    });
+  }
+  return out;
+}
+function peopleFor(days){
+  const P=personasF(46);
+  const cuenta=k=>P.filter(p=>p.nivel>=k).length;
+  const acum=(f)=>{const m={};P.forEach(p=>{const k=f(p);if(k)m[k]=(m[k]||0)+1;});return Object.entries(m).sort((a,b)=>b[1]-a[1]);};
+  return {
+    total:P.length, personas:P,
+    embudo: ETAPAS_F.map((e,i)=>({...e, personas:cuenta(i)})),
+    salidas: acum(p=>p.nivel<5?p.se_quedo_en:null).slice(0,12),
+    fuentes: acum(p=>p.origen.tipo),
+    dispositivos: acum(p=>p.dev),
+    paises: acum(p=>p.pais).slice(0,12),
+    eventos_leidos: 1240, tope:false, dias:days||14,
+  };
+}
+function personFor(id){
+  const P=personasF(46); const p=P.find(x=>x.id===id)||P[0];
+  const ev=(min,e,path,d)=>({t:new Date(now-min*60000).toISOString(), ev:e, path, titulo:'Página', d:d||{}});
+  const visita=(i,compro)=>({
+    vid:'v'+i, inicio:new Date(now-(i*90+40)*60000).toISOString(), fin:new Date(now-(i*90)*60000).toISOString(),
+    origen:p.origen, dev:p.dev, pais:p.pais, segundos:60+i*30, scroll_max:60+i*7,
+    nivel:compro?5:p.nivel, etapa:compro?'compra':p.etapa, etapa_nombre:compro?'Compró':p.etapa_nombre, compro,
+    paginas:[{t:new Date(now-(i*90+40)*60000).toISOString(), path:'/', titulo:'Portada'}],
+    eventos:[ev(i*90+40,'page_view','/',{title:'Portada'}), ev(i*90+38,'view_item','/producto.html',{slug:'parches-nariz'}),
+      ev(i*90+35,'scroll','/producto.html',{pct:75}), ev(i*90+33,'add_to_cart','/producto.html',{slug:'parches-nariz',qty:1,value:16.95}),
+      ...(compro?[ev(i*90+30,'begin_checkout','/checkout.html',{value:16.95}), ev(i*90+28,'add_payment_info','/checkout.html',{}), ev(i*90+27,'purchase','/gracias.html',{value:16.95,order:p.pedidos[0]?p.pedidos[0].id:'NC-1'})]:[]),
+      ev(i*90+20,'leave','/producto.html',{secs:120,scroll:75})],
+  });
+  const vs=[visita(0,p.nivel===5)]; if(p.visitas>1)vs.unshift(visita(1,false));
+  return {...p, visitas_n:vs.length, eventos_n:p.eventos, visitas:vs,
+    lead: p.email?{source:'popup', code:'NOCTA10', name:p.nombre, email:p.email}:null,
+    cliente: p.compras?{id:'cus_'+p.id, email:p.email, name:p.nombre}:null,
+    subs: [], mensajes: p.email?[{created_at:new Date(now-3600e3).toISOString(), subject:'Bienvenida'}]:[],
+    eventos_leidos:80, tope:false, dias_mirados:180 };
+}
+
+module.exports = { PRODUCTS_JS, orders, customers, subscriptions, leads, carts, messages, campaigns, automations, settings, content, discounts, products_rows, statsFor, integrations, peopleFor, personFor };

@@ -14,6 +14,8 @@
     const wa = s.messages && s.messages.whatsapp;
     if (wa > 0) items.push({ label: `${wa} mensaje${wa === 1 ? '' : 's'} de WhatsApp por revisar`, href: '#/whatsapp' });
     if (integr && integr.stripe && !integr.stripe.configured) items.push({ label: 'Conecta Stripe para poder cobrar', href: '#/integrations' });
+    // el embudo del panel es agregado; el mapa de personas dice quién es cada uno y dónde se quedó
+    if ((s.sessions || 0) > 0) items.push({ label: 'Ver quién ha entrado en la web y dónde se ha quedado cada uno', href: '#/people' });
     return items;
   }
 
@@ -75,7 +77,7 @@
       n = n || 0; const w = Math.max(2, Math.round(n / max * 100));
       return `<div class="st"><span>${esc(label)}</span><i style="width:${w}%"></i><b class="num">${n}${max ? ` <span class="muted xs">(${A.pct(n / max * 100)})</span>` : ''}</b></div>`;
     }).join('')}</div>`;
-    return A.card('Embudo de conversión', body);
+    return A.card('Embudo de conversión', body, '<a class="btn btn--s btn--g" href="#/people">Ver persona a persona</a>');
   }
 
   function sourcesCard(sources) {
