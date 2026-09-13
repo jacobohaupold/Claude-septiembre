@@ -33,7 +33,7 @@ export default async (req) => {
   const params = {
     mode: recurring ? 'subscription' : 'payment', success_url: `${site}/gracias.html?o=${orderId}&s={CHECKOUT_SESSION_ID}`, cancel_url: `${site}/checkout.html?cancel=1`,
     client_reference_id: orderId, locale: 'es', metadata: { orderId, code: code || '' },
-    line_items: items.map(it => ({ quantity: it.qty, price_data: { currency: 'eur', unit_amount: Math.round(it.unit * 100), product_data: { name: it.name + (it.plan ? (it.plan === 'week' ? ' (cada semana)' : ' (cada mes)') : (it.sub ? ' (suscripción, cada 30 días)' : '')), ...(it.image ? { images: [site + it.image] } : {}) }, ...(it.plan ? { recurring: { interval: it.plan } } : it.sub ? { recurring: { interval: 'day', interval_count: 30 } } : {}) } })),
+    line_items: items.map(it => ({ quantity: it.qty, price_data: { currency: 'eur', unit_amount: Math.round(it.unit * 100), product_data: { name: it.name + (it.plan ? (it.plan === 'week' ? ' (cada semana)' : ' (cada mes)') : (it.sub ? ' (mensualidad, cada 30 días)' : '')), ...(it.image ? { images: [site + it.image] } : {}) }, ...(it.plan ? { recurring: { interval: it.plan } } : it.sub ? { recurring: { interval: 'day', interval_count: 30 } } : {}) } })),
     shipping_address_collection: { allowed_countries: ['ES', 'PT'] }, phone_number_collection: { enabled: true },
     ...(email ? { customer_email: email } : {})
   };

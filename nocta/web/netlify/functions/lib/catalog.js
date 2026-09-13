@@ -16,7 +16,7 @@ export async function getCatalog(fresh = false) {
     } catch (e) { /* sin DB: catálogo base */ }
   }
   const ov = Object.fromEntries(rows.map(r => [r.slug, r]));
-  const pricing = { sub_pct: 15, multi: { 2: 0, 3: 0 }, ...(content.pricing || {}) };
+  const pricing = { sub_pct: 20, multi: { 2: 0, 3: 0 }, ...(content.pricing || {}) };
   const products = BASE.map(b => {
     const o = ov[b.slug]; const ovr = (o && o.overrides) || {};
     const m = { ...b, ...ovr }; m.active = !o || o.active !== false; m.stock = !o || o.stock == null ? null : Number(o.stock);

@@ -56,7 +56,7 @@
     let overridesMap = Object.fromEntries(rows.map(r => [r.slug, r]));
     const products = mergeCatalog(base, rows);
     const pricingVal = ((contentRes.rows || []).find(r => r.key === 'pricing') || {}).value || {};
-    const pricing = { sub_pct: 15, multi: { 2: 0, 3: 0 }, ...pricingVal };
+    const pricing = { sub_pct: 20, multi: { 2: 0, 3: 0 }, ...pricingVal };
 
     if (!products.length) { body.innerHTML = '<div class="card"><p class="muted">No se ha podido cargar el catálogo de productos.</p></div>'; return; }
 
@@ -181,7 +181,7 @@
   async function tabDiscounts(body) {
     const [contentRes, prodRes] = await Promise.all([A.r('content', 'select=*'), A.r('products', 'select=*&slug=eq.parches-nariz')]);
     const val = ((contentRes.rows || []).find(r => r.key === 'pricing') || {}).value || {};
-    const v = { sub_pct: 15, multi: { 2: 0, 3: 0 }, ...val };
+    const v = { sub_pct: 20, multi: { 2: 0, 3: 0 }, ...val };
     const ov = (prodRes.rows || [])[0];
     const price = ov && ov.overrides && ov.overrides.price != null ? Number(ov.overrides.price) : 16.95;
     const fixedSub = ov && ov.overrides && ov.overrides.sub != null ? Number(ov.overrides.sub) : null;
@@ -192,7 +192,7 @@
     const cardBody = $('.card', card);
     const f = document.createElement('form');
     f.innerHTML = A.form([
-      { k: 'sub_pct', label: '% de descuento en suscripción', type: 'number', step: '0.1', min: 0, help: 'Recalcula el precio "con suscripción" de todos los productos que NO tengan un precio de suscripción fijo puesto a mano en su ficha.' },
+      { k: 'sub_pct', label: '% de descuento en la mensualidad', type: 'number', step: '0.1', min: 0, help: 'Recalcula el precio "con mensualidad" de todos los productos que NO tengan un precio de mensualidad fijo puesto a mano en su ficha.' },
       { k: 'multi.2', label: '% extra al comprar 2 unidades', type: 'number', step: '0.1', min: 0 },
       { k: 'multi.3', label: '% extra al comprar 3 unidades', type: 'number', step: '0.1', min: 0 }
     ], v);
@@ -205,8 +205,8 @@
       const sub = fixedSub != null ? fixedSub : +(price * (1 - subPct / 100)).toFixed(2);
       const unit = (qty, isSub) => { const b = isSub ? sub : price; const pct = qty >= 3 ? m3 : qty >= 2 ? m2 : 0; return +(b * (1 - pct / 100)).toFixed(2); };
       prev.innerHTML = `<div class="muted xs mb">Ejemplo en vivo con Parches de Nariz (precio ${A.money(price)})</div>` +
-        A.table({ cols: [{ k: 'q', label: 'Unidades' }, { k: 'o', label: 'Precio único', cls: 'right num', render: r => A.money(unit(r.q, false)) }, { k: 's', label: 'Con suscripción', cls: 'right num', render: r => A.money(unit(r.q, true)) }], rows: [1, 2, 3].map(q => ({ q })), empty: '' }) +
-        (fixedSub != null ? `<p class="xs muted mt">Parches de Nariz tiene un precio de suscripción fijo (${A.money(fixedSub)}) puesto a mano: el % de suscripción no le afecta.</p>` : '');
+        A.table({ cols: [{ k: 'q', label: 'Unidades' }, { k: 'o', label: 'Precio único', cls: 'right num', render: r => A.money(unit(r.q, false)) }, { k: 's', label: 'Con mensualidad', cls: 'right num', render: r => A.money(unit(r.q, true)) }], rows: [1, 2, 3].map(q => ({ q })), empty: '' }) +
+        (fixedSub != null ? `<p class="xs muted mt">Parches de Nariz tiene un precio de mensualidad fijo (${A.money(fixedSub)}) puesto a mano: el % de la mensualidad no le afecta.</p>` : '');
     };
     f.addEventListener('input', updatePrev); updatePrev();
     const sb = document.createElement('button'); sb.className = 'btn btn--p btn--w mt'; sb.type = 'button'; sb.textContent = 'Guardar';

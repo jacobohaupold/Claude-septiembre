@@ -14,11 +14,27 @@
 .n-pd-gal__s.is-cut img{object-fit:contain;padding:10% 12%}
 .n-pd-gal__s.is-video{cursor:default}
 .n-pd-pill{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;background:rgba(250,248,243,.94);color:var(--n-navy);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:var(--n-w-med);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.n-pd-gal__badge{left:12px;top:12px}
+.n-pd-gal__derm{left:12px;top:12px;letter-spacing:.06em;padding-left:9px}
+.n-pd-gal__derm .n-ico{width:15px;height:15px;color:var(--n-sage-ink);flex:none}
+.n-pd-gal__badge{left:12px;top:50px}
 .n-pd-gal__count{right:12px;top:12px;font-variant-numeric:tabular-nums}
 .n-pd-gal__dots{position:absolute;left:0;right:0;bottom:14px;z-index:2;display:flex;justify-content:center;gap:5px;pointer-events:none}
 .n-pd-gal__dots i{width:6px;height:6px;border-radius:999px;background:rgba(20,33,61,.22);transition:width var(--n-t3) var(--n-e),background var(--n-t3) linear}
 .n-pd-gal__dots i.is-on{background:var(--n-navy);width:18px}
+.n-pd-gal__nav{position:absolute;top:50%;translate:0 -50%;z-index:3;display:none;place-items:center;width:46px;height:46px;border:0;border-radius:50%;padding:0;cursor:pointer;color:var(--n-navy);background:rgba(250,248,243,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 6px 20px rgba(20,33,61,.16),0 1px 2px rgba(20,33,61,.1);opacity:.88;transition:opacity var(--n-t2) var(--n-e),background var(--n-t2) var(--n-e),scale var(--n-t2) var(--n-e),translate var(--n-t2) var(--n-e)}
+.n-pd-gal__nav--p{left:14px}
+.n-pd-gal__nav--n{right:14px}
+.n-pd-gal:hover .n-pd-gal__nav,.n-pd-gal:focus-within .n-pd-gal__nav{opacity:1}
+.n-pd-gal:hover .n-pd-gal__nav--p{translate:-2px -50%}
+.n-pd-gal:hover .n-pd-gal__nav--n{translate:2px -50%}
+.n-pd-gal__nav:hover{background:var(--n-navy);color:var(--n-cream);scale:1.06}
+.n-pd-gal__nav:active{scale:.96}
+.n-pd-gal__nav:focus-visible{opacity:1;box-shadow:var(--n-ring)}
+/* apagada, pero sin `disabled`: un botón deshabilitado pierde el foco y con él se va la
+   navegación por teclado justo al llegar a la última foto. */
+.n-pd-gal__nav[aria-disabled="true"]{opacity:0;pointer-events:none}
+.n-pd-gal__nav .n-ico{width:20px;height:20px;stroke-width:1.7}
+@media (prefers-reduced-motion:reduce){.n-pd-gal__nav{transition:none}.n-pd-gal__nav:hover{scale:1}}
 
 /* panel de compra */
 .n-pd__panel{padding:20px 20px 24px;display:grid;gap:16px}
@@ -43,9 +59,21 @@
 .n-pd .n-buy .n-btn--lg{min-height:54px;white-space:normal;line-height:1.2}
 .n-pd .n-buy__note{font-size:11px}
 
-/* segmento única / suscripción */
+/* nota personal: por qué este producto es para ti, o qué se te va a olvidar */
+.n-pd__pers{display:flex;gap:9px;align-items:flex-start;margin:2px 0 0;padding:11px 13px;border-radius:var(--n-r-sm);background:var(--n-sage-14);font-size:13px;line-height:1.5;color:var(--n-ink-2)}
+.n-pd__pers b{color:var(--n-navy);font-weight:var(--n-w-semi)}
+.n-pd__pers-i{display:grid;place-items:center;width:20px;height:20px;flex:none;margin-top:-1px;color:var(--n-sage-ink)}
+.n-pd__pers-i .n-ico{width:18px;height:18px}
+.n-pd__pers.is-rec{background:rgba(200,85,61,.09)}
+.n-pd__pers.is-rec .n-pd__pers-i{color:var(--n-alert-ink)}
+
+/* segmento una vez / mensualidad */
 .n-pd__seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border:1px solid var(--n-line-2);border-radius:999px}
-.n-pd__seg label{position:relative;display:grid;justify-items:center;gap:2px;min-height:48px;padding:7px 8px;border-radius:999px;cursor:pointer;text-align:center;transition:background var(--n-t2) var(--n-e)}
+.n-pd__seg label{position:relative;display:grid;justify-items:center;align-content:center;gap:3px;min-height:66px;padding:8px 8px;border-radius:999px;cursor:pointer;text-align:center;transition:background var(--n-t2) var(--n-e)}
+.n-pd__segflag{display:inline-flex;align-items:center;height:19px;padding:0 9px;border-radius:999px;background:var(--n-alert);color:#fff;font-size:9px;font-style:normal;letter-spacing:.09em;text-transform:uppercase;font-weight:var(--n-w-semi);white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.n-pd__seg label.is-on .n-pd__segflag{background:#fff;color:var(--n-alert-ink)}
+@media (prefers-reduced-motion:no-preference){.n-pd__seg label:not(.is-on) .n-pd__segflag{animation:n-pd-lat 2.6s var(--n-e) infinite}}
+@keyframes n-pd-lat{0%,88%,100%{scale:1}92%{scale:1.07}96%{scale:1}}
 .n-pd__seg label b{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:var(--n-w-med);color:var(--n-navy);line-height:1.2}
 .n-pd__seg label span{font-size:12px;color:var(--n-muted);font-variant-numeric:tabular-nums}
 .n-pd__seg label.is-on{background:var(--n-navy)}
@@ -53,6 +81,17 @@
 .n-pd__seg input{position:absolute;opacity:0;width:1px;height:1px}
 .n-pd__seg label:has(input:focus-visible){box-shadow:var(--n-ring)}
 .n-pd__segnote{margin:-8px 0 0;font-size:12px;line-height:1.45;color:var(--n-muted);text-align:center}
+
+/* por qué el kit entero / por qué la mensualidad */
+.n-pd__mot{padding:22px 20px 20px}
+.n-pd__mot h2{margin:4px 0 14px;font-size:23px;line-height:1.15;letter-spacing:-.02em;font-weight:var(--n-w-med);color:var(--n-navy);text-wrap:balance}
+.n-pd__mot-l{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.n-pd__mot-l li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:15px 0;border-top:1px solid var(--n-line-2)}
+.n-pd__mot-l li:first-child{border-top:0;padding-top:2px}
+.n-pd__mot-n{font-size:13px;letter-spacing:.04em;color:var(--n-sage-ink);font-weight:var(--n-w-med);padding-top:2px}
+.n-pd__mot-l b{display:block;font-size:16px;line-height:1.3;color:var(--n-navy);font-weight:var(--n-w-semi);margin-bottom:4px;text-wrap:balance}
+.n-pd__mot-l p{margin:0;font-size:14px;line-height:1.6;color:var(--n-ink-2)}
+@media (min-width:900px){.n-pd__mot{padding:30px 32px 28px}.n-pd__mot h2{font-size:28px}.n-pd__mot-l li{gap:18px;padding:18px 0}.n-pd__mot-l b{font-size:17px}.n-pd__mot-l p{font-size:15px}}
 
 /* chips de confianza */
 .n-pd__chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -128,9 +167,13 @@ body.n-pd-locked{overflow:hidden}
 @media (min-width:900px){
 .n-pd{grid-template-columns:minmax(0,1.15fr) minmax(380px,.85fr);gap:var(--n-gap);align-items:start}
 .n-pd__crumb{grid-column:1/-1;padding:16px var(--n-s2) 8px}
-.n-pd-gal__track{display:grid;grid-template-columns:1fr;overflow:visible}
-.n-pd-gal__s{scroll-snap-align:none}
-.n-pd-gal__count,.n-pd-gal__dots{display:none}
+/* v7.7 · en escritorio la galeria NO apila las fotos una debajo de otra: se ve una sola,
+   a la altura de la ventana, y se cambia con las flechas de los lados. Antes habia que
+   bajar con la rueda para ver la segunda foto y la ficha de compra se perdia de vista. */
+.n-pd-gal{position:sticky;top:calc(var(--n-header-h) + var(--n-gap))}
+.n-pd-gal__s{aspect-ratio:auto;height:min(calc(100vh - var(--n-header-h) - var(--n-gap)*2),720px)}
+.n-pd-gal__nav{display:grid}
+.n-pd-gal__dots{bottom:18px}
 .n-pd__buy{position:sticky;top:calc(var(--n-header-h) + var(--n-gap));max-height:calc(100vh - var(--n-header-h) - var(--n-gap)*2);overflow:auto;scrollbar-width:none}
 .n-pd__buy::-webkit-scrollbar{display:none}
 .n-pd__panel{padding:28px;gap:18px}
@@ -168,6 +211,9 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 .n-pd-pk__n{font-size:15px;font-weight:var(--n-w-semi);color:var(--n-navy)}
 .n-pd-pk__d{margin:-4px 0 0;font-size:13px;line-height:1.5;color:var(--n-ink-2)}
 .n-pd-pk__d u{text-decoration:none;color:var(--n-navy);font-weight:var(--n-w-med)}
+.n-pd-pk__why{margin:-2px 0 0;padding:10px 12px;border-radius:var(--n-r-xs);background:var(--n-sage-14);font-size:12px;line-height:1.5;color:var(--n-ink-2)}
+.n-pd-pk__why b{color:var(--n-navy);font-weight:var(--n-w-semi)}
+.n-pd-pk__tip{display:block;font-size:11px;line-height:1.35;font-style:normal;color:var(--n-sage-ink);margin-top:1px}
 .n-pd-pk__p{margin:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .n-pd-pk__p b{font-size:22px;font-weight:var(--n-w-med);letter-spacing:-.02em;color:var(--n-navy)}
 .n-pd-pk__p s{color:var(--n-muted);font-size:13px;text-decoration-thickness:1px}
@@ -190,6 +236,14 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 .n-pd-plan__t b{font-size:13px;line-height:1.45;font-weight:var(--n-w-med);color:var(--n-cream)}
 .n-pd-plan__c{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(243,239,230,.12);flex:none}
 .n-pd__zones{display:grid;gap:8px}
+.n-plb__pills button.is-rec{border-color:var(--n-sage)}
+.n-plb__pills button i{font-style:normal;margin-left:6px;color:var(--n-alert);font-size:11px}
+.n-plb__pills button.is-on i{color:var(--n-sage)}
+.n-plb__tips{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:1px}
+.n-plb__tips li{display:grid;gap:2px;padding:10px 12px;border-radius:var(--n-r-xs);background:var(--n-sage-14)}
+.n-plb__tips li.is-rec{background:rgba(200,85,61,.09);box-shadow:inset 3px 0 0 var(--n-alert)}
+.n-plb__tips b{font-size:12px;letter-spacing:.01em;color:var(--n-navy);font-weight:var(--n-w-semi)}
+.n-plb__tips span{font-size:12px;line-height:1.5;color:var(--n-ink-2)}
 .n-pd__pills{display:flex;flex-wrap:wrap;gap:6px}
 .n-pd__pills button{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--n-line-2);background:transparent;color:var(--n-navy);font:inherit;font-size:12px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background var(--n-t2) var(--n-e),color var(--n-t2) var(--n-e)}
 .n-pd__pills button.is-on{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
@@ -216,6 +270,7 @@ body.n-v5 .n-bbar__i b,body.n-v5 .n-bbar__i span{display:block;white-space:nowra
 @media (max-width:899px){
   .n-pd-gal__s{height:min(38vh,300px)}.n-pd__panel{gap:8px}.n-pd__short{display:none}
   .n-pd__head{display:contents}.n-pd__meta{order:1}.n-pd__title{order:2}.n-pd__price{order:3;margin-top:-2px}
+  .n-pd__pers{order:9;padding:9px 11px;font-size:12px;gap:7px}.n-pd__pers-i{width:16px;height:16px}.n-pd__pers-i .n-ico{width:15px;height:15px}
   .n-pd__panel>*{order:10}.n-pd__panel>.n-tiers{order:4}.n-pd__panel>.n-buy{order:5}.n-pd__panel .n-pd__packchip{order:6;margin:0}.n-pd__panel>.n-pd__seg{order:7}.n-pd__panel>.n-pd__segnote{order:8}
 }
 /* v7.6.2 · móvil: foto más grande, suscripción encima de las cantidades, botones y píldoras un punto más pequeños */

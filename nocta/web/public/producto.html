@@ -5,12 +5,12 @@
 <title>Producto · NOCTA</title>
 <meta name="description" content="Parches de hidrocoloide coreano y skincare para poros. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609132044">
-<link rel="stylesheet" href="/assets/css/pdp.css?v=202609132044">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609132129">
+<link rel="stylesheet" href="/assets/css/pdp.css?v=202609132129">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <script>(function(){var p=new URLSearchParams(location.search).get('p')||'parches-nariz';if(/^(parches-(nariz|granos|superficie|barbilla|frente)|exfoliante-salicilico|serum-niacinamida|mascarilla-peel-off|pack-mascarillas-tela|tonico-hialuronico|duo-poros|kit-t-zone|kit-cara-completa)$/.test(p)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/assets/img/foto/'+p+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();</script>
-<script src="/assets/js/app.js?v=202609132044" defer></script>
+<script src="/assets/js/app.js?v=202609132129" defer></script>
 </head>
 <body class="n-v5">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -18,16 +18,16 @@
 <div class="n-bbar n-bbar--pdp" id="sticky" role="region" aria-label="Comprar"><div class="n-wrap n-bbar__in"><div class="n-cut n-bbar__img"><img id="st-img" src="" width="44" height="44" alt=""></div><div class="n-bbar__i"><b id="st-name"></b><span class="n-lab n-num" id="st-price"></span></div><button class="n-btn n-btn--sm" id="st-add" data-src="sticky">Comprar</button><div class="n-bbar__pay" id="st-express"></div></div></div>
 <div class="n-pd-lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería a pantalla completa" hidden><div class="n-pd-lb__bar"><span class="n-lab" id="lb-count">1/1</span><button type="button" class="n-btn" id="lb-close">Cerrar</button></div><div class="n-pd-lb__body"><div class="n-pd-lb__track" id="lb-track"></div><div class="n-pd-lb__nav"><button type="button" id="lb-prev" aria-label="Anterior"></button><button type="button" id="lb-next" aria-label="Siguiente"></button></div></div></div>
 <div id="site-footer"></div>
-<script src="/assets/js/photos.js?v=202609132044"></script>
-<script src="/assets/js/reviews.js?v=202609132044"></script>
-<script src="/assets/js/products.js?v=202609132044"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609132129"></script>
+<script src="/assets/js/reviews.js?v=202609132129"></script>
+<script src="/assets/js/products.js?v=202609132129"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const slug=new URLSearchParams(location.search).get('p')||'parches-nariz';const p=nBySlug(slug);if(!p){location.href='/catalogo.html';return;}
 document.title=p.name+' · NOCTA';document.querySelector('meta[name=description]').content=p.desc.slice(0,155);
 const eur=nEur,$=s=>document.querySelector(s),ups=(p.upsell||[]).map(nBySlug).filter(Boolean),isPatch=p.tags.includes('parches')||!!p.bundle&&!p.slug.includes('duo'),pu=nPerUse(p);
 const SVG=d=>`<svg class="n-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
-const I={leaf:SVG('<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-9"/>'),clock:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),moon:SVG('<path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/>'),zoom:SVG('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3M11 8v6M8 11h6"/>'),chevL:SVG('<path d="m15 6-6 6 6 6"/>'),chevR:SVG('<path d="m9 6 6 6-6 6"/>'),check:SVG('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),flag:SVG('<path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/>')};
+const I={leaf:SVG('<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-9"/>'),clock:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),moon:SVG('<path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z"/>'),zoom:SVG('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3M11 8v6M8 11h6"/>'),chevL:SVG('<path d="m15 6-6 6 6 6"/>'),chevR:SVG('<path d="m9 6 6 6-6 6"/>'),verif:SVG('<path d="M12 3.1l2.3 1.7 2.8-.2.9 2.7 2.3 1.7-1.1 2.6 1.1 2.6-2.3 1.7-.9 2.7-2.8-.2L12 20.9l-2.3-1.7-2.8.2-.9-2.7L3.7 15l1.1-2.6L3.7 9.8 6 8.1l.9-2.7 2.8.2z"/><path d="m9.5 12.2 1.8 1.8 3.4-3.7"/>'),check:SVG('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),flag:SVG('<path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/>')};
 /* ---------- diapositivas ---------- */
 const photo=p.image.replace(/\.(jpg|png)$/,'.webp');
 const slides=[],seen=new Set();const PH=(window.NOCTA_PHOTOS||{})[slug]||{};const main=PH.main||nImg(p);
@@ -40,19 +40,27 @@ const dim=s=>/\/foto\//.test(s)?'width="1200" height="1600"':/gama-cut/.test(s)?
 const gal=`<div class="n-pd-gal" id="gal"><div class="n-pd-gal__track" id="gtrack">${slides.map((s,i)=>s.t==='video'
   ?`<div class="n-pd-gal__s is-video" data-i="${i}" style="--pb:url('${s.poster}')"><video src="${s.src}" poster="${s.poster}" muted loop playsinline preload="metadata" disablepictureinpicture data-auto aria-label="Vídeo del producto"></video><span class="n-pd-pill n-pd-gal__badge">${I.moon}Vídeo · 6 s</span></div>`
   :`<div class="n-pd-gal__s${s.cut?' is-cut':''}" data-i="${i}" role="button" tabindex="0" aria-label="${i===0&&p.badge?p.badge+'. ':''}Ampliar imagen ${i+1}"><img ${i===0?'id="mainimg"':''} src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" ${i===0?'fetchpriority="high"':'loading="lazy"'} decoding="async">${i===0&&p.badge?`<span class="n-pd-pill n-pd-gal__badge">${p.badge}</span>`:''}</div>`).join('')}</div>
-<span class="n-pd-pill n-pd-gal__count" id="gcount">1/${slides.length}</span><div class="n-pd-gal__dots" id="gdots">${slides.map((s,i)=>`<i${i===0?' class="is-on"':''}></i>`).join('')}</div></div>`;
+<span class="n-pd-pill n-pd-gal__derm">${I.verif}Recomendado por dermatólogos</span>
+<span class="n-pd-pill n-pd-gal__count" id="gcount">1/${slides.length}</span><div class="n-pd-gal__dots" id="gdots">${slides.map((s,i)=>`<i${i===0?' class="is-on"':''}></i>`).join('')}</div>
+<button type="button" class="n-pd-gal__nav n-pd-gal__nav--p" id="gprev" aria-label="Foto anterior" aria-controls="gtrack">${I.chevL}</button>
+<button type="button" class="n-pd-gal__nav n-pd-gal__nav--n" id="gnext" aria-label="Foto siguiente" aria-controls="gtrack">${I.chevR}</button></div>`;
 /* ---------- panel ---------- */
 const tier=(n,flag)=>`<label class="n-tier${n===1?' is-on':''}"><input type="radio" name="qty" value="${n}"${n===1?' checked':''}>${flag?`<i class="n-tier__flag n-lab">${flag}</i>`:''}<b>${n} ${n===1?'unidad':'unidades'}</b><span class="n-num">${eur(p.price*n)}</span><small>${n===1?(pu||p.units):'Envío gratis'}</small></label>`;
 const chips=[[nIco('truck',14),'24-48 h · España'],[nIco('shield',14),'Garantía 60 días'],[nIco('lock',14),'Pago seguro'],[I.flag,'Hecho en Corea'],[I.leaf,'Vegano']];
 const isPlan=!!p.plan,isPack=!!p.bundle&&!isPlan;
+const SUBPCT=nSubPct(p);
+/* Un solo texto para el pie del selector: lo que lee quien duda entre pagar una vez o cada mes. */
+const SEGNOTE=on=>on
+  ?`Te llega cada 30 días con el −${SUBPCT} % puesto. Salta un envío, cámbialo o cancélalo desde el email de cada pedido.`
+  :`Contratándolo cada mes te ahorras ${eur(p.price-p.sub)} en cada caja y no te quedas sin. Sin permanencia.`;
 const foto=x=>((window.NOCTA_PHOTOS||{})[x.slug]||{}).main||nImg(x);
 const PACKS=NOCTA_PRODUCTS.filter(x=>x.bundle&&!x.plan);
 const inPacks=(isPlan||isPack)?[]:PACKS.filter(k=>k.bundle.includes(slug)).sort((a,b)=>a.price-b.price);
 I.gift=SVG('<path d="M4 11h16v9H4z"/><path d="M3 7h18v4H3zM12 7v13"/><path d="M12 7c-2-3-6-3-5 0h5zm0 0c2-3 6-3 5 0h-5z"/>');
 const packBlock=k=>{const comps=k.bundle.map(nBySlug).filter(Boolean);const sum=comps.reduce((a,c)=>a+c.price,0);const save=sum-k.price;const others=comps.filter(c=>c.slug!==slug);
-  return `<div class="n-c n-pd-pk n-reveal"><div class="n-pd-pk__h"><span class="n-lab n-lab--navy">Mejor en pack</span><span class="n-pd__save">Ahorras ${eur(save)}</span></div><div class="n-pd-pk__ph${comps.length>3?' is-many':''}">${comps.map(c=>`<img src="${foto(c)}" width="112" height="112" alt="${c.name}" loading="lazy">`).join('<i>+</i>')}</div><b class="n-pd-pk__n">${k.name}</b><p class="n-pd-pk__d">${p.name} + ${others.map(o=>o.name).join(' + ')}${k.gift?` + <u>${k.gift.replace(/ en tu primer envío$/,'')}</u>`:''}. Envío gratis.</p><p class="n-pd-pk__p"><b class="n-num">${eur(k.price)}</b><s class="n-num">${eur(sum)}</s><span>${Math.round(save/sum*100)} % menos que por separado</span></p><div class="n-pd-pk__a"><button class="n-btn n-btn--fill" data-buy="${k.slug}" data-src="pdp-pack">Comprar el pack · ${eur(k.price)}</button><a class="n-btn" href="/producto.html?p=${k.slug}" aria-label="Ver ${k.name}">Ver</a></div></div>`;};
+  return `<div class="n-c n-pd-pk n-reveal"><div class="n-pd-pk__h"><span class="n-lab n-lab--navy">Mejor en pack</span><span class="n-pd__save">Ahorras ${eur(save)}</span></div><div class="n-pd-pk__ph${comps.length>3?' is-many':''}">${comps.map(c=>`<img src="${foto(c)}" width="112" height="112" alt="${c.name}" loading="lazy">`).join('<i>+</i>')}</div><b class="n-pd-pk__n">${k.name}</b><p class="n-pd-pk__d">${p.name} + ${others.map(o=>o.name).join(' + ')}${k.gift?` + <u>${k.gift.replace(/ en tu primer envío$/,'')}</u>`:''}. Envío gratis.</p>${k.motivos&&k.motivos[0]?`<p class="n-pd-pk__why"><b>${k.motivos[0][0]}.</b> ${k.motivos[0][1]}</p>`:''}<p class="n-pd-pk__p"><b class="n-num">${eur(k.price)}</b><s class="n-num">${eur(sum)}</s><span>${Math.round(save/sum*100)} % menos que por separado</span></p><div class="n-pd-pk__a"><button class="n-btn n-btn--fill" data-buy="${k.slug}" data-src="pdp-pack">Comprar el pack · ${eur(k.price)}</button><a class="n-btn" href="/producto.html?p=${k.slug}" aria-label="Ver ${k.name}">Ver</a></div></div>`;};
 const incBlock=()=>{const comps=p.bundle.map(nBySlug).filter(Boolean);const sum=comps.reduce((a,c)=>a+c.price,0);
-  return `<div class="n-c n-pd-pk n-reveal"><div class="n-pd-pk__h"><span class="n-lab n-lab--navy">${isPlan?'Qué llega':'Qué incluye'}</span>${!isPlan&&sum>p.price?`<span class="n-pd__save">Ahorras ${eur(sum-p.price)}</span>`:''}</div><ul class="n-pd-pk__list">${comps.map(c=>`<li><img src="${foto(c)}" width="88" height="88" alt="" loading="lazy"><span><b>${c.name}</b><small>${c.units}${isPlan&&c.slug!=='exfoliante-salicilico'?' · zona a elegir':''}${isPlan&&c.slug==='exfoliante-salicilico'?' · skincare en rotación':''}</small></span><s class="n-num">${eur(c.price)}</s></li>`).join('')}${p.gift?`<li class="gift"><span class="n-pd-pk__gi">${I.gift}</span><span><b>${p.gift}</b><small>Incluido</small></span><s class="n-num">${p.slug==='kit-cara-completa'?'15,00 €':'3,75 €'}</s></li>`:''}</ul><p class="n-pd-pk__p"><b class="n-num">${eur(p.price)}${nPlanSuf(p)}</b>${sum>p.price?`<s class="n-num">${eur(sum)}</s>`:''}<span>Envío gratis incluido</span></p></div>`;};
+  return `<div class="n-c n-pd-pk n-reveal"><div class="n-pd-pk__h"><span class="n-lab n-lab--navy">${isPlan?'Qué llega':'Qué incluye'}</span>${!isPlan&&sum>p.price?`<span class="n-pd__save">Ahorras ${eur(sum-p.price)}</span>`:''}</div><ul class="n-pd-pk__list">${comps.map(c=>`<li><img src="${foto(c)}" width="88" height="88" alt="" loading="lazy"><span><b>${c.name}</b><small>${c.units}${isPlan&&c.slug!=='exfoliante-salicilico'?' · zona a elegir':''}${isPlan&&c.slug==='exfoliante-salicilico'?' · skincare en rotación':''}</small>${c.pers?`<em class="n-pd-pk__tip">${c.pers.tag}</em>`:''}</span><s class="n-num">${eur(c.price)}</s></li>`).join('')}${p.gift?`<li class="gift"><span class="n-pd-pk__gi">${I.gift}</span><span><b>${p.gift}</b><small>Incluido</small></span><s class="n-num">${p.slug==='kit-cara-completa'?'15,00 €':'3,75 €'}</s></li>`:''}</ul><p class="n-pd-pk__p"><b class="n-num">${eur(p.price)}${nPlanSuf(p)}</b>${sum>p.price?`<s class="n-num">${eur(sum)}</s>`:''}<span>Envío gratis incluido</span></p></div>`;};
 const planPromo=(isPlan||isPack||!p.tags.includes('parches'))?'':`<a class="n-c n-pd-plan n-reveal" href="/planes.html"><span class="n-pd-plan__t"><span class="n-lab">Plan Noche · 49 €/mes</span><b>Dos cajas de parches y un skincare cada mes, envío gratis y sin permanencia.</b></span><span class="n-pd-plan__c">${I.chevR}</span></a>`;
 const ZONES=[['Nariz','parches-nariz'],['Frente','parches-frente'],['Barbilla','parches-barbilla'],['Granos','parches-granos']];
 const zoneHtml=isPlan?`<div class="n-pd__zones" id="zones"></div><p class="n-pd__segnote">Se cobra hoy el primer envío y después ${p.plan.every}. Cambia zonas, pausa o cancela desde el email de cada envío.</p>`:'';
@@ -60,15 +68,15 @@ const panel=`<div class="n-c n-pd__panel">
 <div class="n-pd__head">
 <div class="n-pd__meta"><span>${nCat(p)}</span><a href="#opiniones">${nStarsHtml(p)}<b class="n-num">${String(p.rating).replace('.',',')}</b> · ${p.reviews}</a></div>
 <h1 class="n-pd__title">${p.name}</h1>
-<p class="n-pd__short">${p.short}</p>
+<p class="n-pd__short">${p.short}</p>${p.pers?`<p class="n-pd__pers${/^Lo más/.test(p.pers.tag)?' is-rec':''}"><span class="n-pd__pers-i">${I.verif}</span><span><b>${p.pers.tag}.</b> ${p.pers.nota}</span></p>`:''}
 <p class="n-pd__price"><b class="n-num" id="pdpprice">${eur(p.price)}${nPlanSuf(p)}</b>${p.compare?`<s class="n-num">${eur(p.compare)}</s><span class="n-pd__save">Ahorras ${eur(p.compare-p.price)}</span>`:''}<span class="n-pd__unit">${p.units}${pu?' · '+pu:''} · IVA incluido</span></p>${nKlarna(p.price)?`<p class="n-pd__klarna">${nKlarna(p.price)}</p>`:''}${inPacks.length?`<a class="n-pd__packchip" href="#pdpacks" data-src="packchip"><span class="n-lab n-lab--navy">Mejor en pack</span><b>${inPacks[0].name}</b><span class="n-num">${eur(inPacks[0].price)}</span><em>ahorras ${eur(inPacks[0].bundle.map(nBySlug).filter(Boolean).reduce((a,c)=>a+c.price,0)-inPacks[0].price)}</em>${nIco('chev',16)}</a>`:''}
 </div>
 ${isPlan?'':`<fieldset class="n-tiers" aria-label="Cantidad"><legend class="n-vh">Cantidad</legend>${tier(1)}${tier(2,'Lo más elegido')}${tier(3)}</fieldset>
 <p class="n-pd__tiernote">${isPack?'Desde 2 unidades el envío es gratis.':'Desde 2 unidades el envío es gratis. Lo más elegido: 2.'}</p>`}
 <div class="n-pd__qtyrow"${isPlan?' hidden':''}><span class="n-lab">Cantidad</span><div class="n-qty" aria-label="Cantidad"><button type="button" id="qm" aria-label="Menos">${nIco('minus',16)}</button><span id="qv" class="n-num">1</span><button type="button" id="qp" aria-label="Más">${nIco('plus',16)}</button></div></div>
 <div class="n-buy" data-bbar-anchor><button class="n-btn n-btn--wide n-btn--lg" id="addbtn" data-buy="${slug}" data-qty="1" data-sub="0" data-src="pdp">${isPlan?'Empezar':'Comprar<span class="n-pd__ahora"> ahora</span>'} · <span id="addprice" class="n-num">${eur(p.price)}${isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''}</span></button>${nPay(slug,{src:'pdp',id:'pdpexpress'})}<button class="n-link n-buy__add" id="addcart" data-add="${slug}" data-qty="1" data-sub="0" data-src="pdp">Añadir al carrito</button><p class="n-buy__note n-lab" id="buynote">${nNote(p)}</p><span class="n-buy__cart"></span></div>
-${isPlan?zoneHtml:`<div class="n-pd__seg" role="radiogroup" aria-label="Modo de compra"><label class="is-on"><input type="radio" name="mode" value="one" checked><b>Compra única</b><span class="n-num">${eur(p.price)}</span></label><label><input type="radio" name="mode" value="sub"><b>Suscripción −15 %</b><span class="n-num">${eur(p.sub)}</span></label></div>
-<p class="n-pd__segnote" id="segnote">Sin compromiso. Puedes pasarte a suscripción cuando quieras.</p>`}
+${isPlan?zoneHtml:`<div class="n-pd__seg" role="radiogroup" aria-label="Cómo lo quieres"><label class="is-on"><input type="radio" name="mode" value="one" checked><b>Una sola vez</b><span class="n-num">${eur(p.price)}</span></label><label class="n-pd__seg--sub"><input type="radio" name="mode" value="sub"><i class="n-pd__segflag">−${SUBPCT} % · Recomendado</i><b>${nSubName}</b><span class="n-num">${eur(p.sub)}</span></label></div>
+<p class="n-pd__segnote" id="segnote">${SEGNOTE(false)}</p>`}
 <div class="n-pd__chips" aria-label="Garantías">${chips.map(c=>`<span>${c[0]}${c[1]}</span>`).join('')}</div>
 <p class="n-pd__note"><a href="/garantia.html">Cómo funciona la garantía de 60 días</a> · Devolución sin abrir 14 días</p>
 </div>`;
@@ -84,6 +92,9 @@ ${acc('Qué lleva y qué no lleva',`<p>${p.ingredients}</p>`)}
 ${acc('Envío y devoluciones','<p>Envío 3,90 € · gratis desde 30 € o llevando 2 unidades. Península 24-48 h. Devolución sin abrir 14 días. Garantía de resultados 60 días: si no ves la diferencia, te devolvemos el dinero.</p>')}
 ${p.faq.map(f=>acc(f[0],`<p>${f[1]}</p>`)).join('')}
 </div></section>`;
+/* El motivo de comprar el kit entero, contado como se lo contarías a alguien: qué se falla
+   haciéndolo por tu cuenta, cuánto dura y qué te ahorras. Va antes que las cifras. */
+const motivos=(p.motivos&&p.motivos.length)?`<section class="n-c n-pd__mot n-pd__wrap n-reveal"><span class="n-lab">${isPlan?'Por qué la mensualidad':'Por qué el kit entero'}</span><h2>${isPlan?'Lo que cambia cuando llega solo.':'Lo que cambia cuando lo llevas junto.'}</h2><ol class="n-pd__mot-l">${p.motivos.map(([t,d],i)=>`<li><span class="n-pd__mot-n n-num">${String(i+1).padStart(2,'0')}</span><div><b>${t}</b><p>${d}</p></div></li>`).join('')}</ol></section>`:'';
 const claims=`<section class="n-num5 n-pd__claims n-stagger n-reveal" aria-label="Cifras">${p.claims.map(c=>`<div class="n-c"><b class="n-num">${c[0]}</b><span>${c[1]}</span></div>`).join('')}</section>`;
 const ed=VID?`<section class="n-c n-ed5 n-pd__ed n-reveal"><img src="/assets/img/resultado-manana.webp" width="720" height="540" alt="Parche de nariz NOCTA por la mañana, con la grasa absorbida de los poros" loading="lazy" decoding="async"><div class="n-ed5__t"><h2>Lo que sale en una noche.</h2><p>Todo lo que ves en el parche estaba dentro de tus poros. Se despega solo, sin tirones.</p></div></section>`:'';
 const vt=(n,src,poster,t,s)=>`<div class="n-c n-vt5 n-reveal"><video src="${src}" poster="${poster}" muted loop playsinline preload="none" data-auto aria-label="${t}"></video><span class="n-vt5__l">${n}</span><div class="n-vt5__c"><b>${t}</b><span>${s}</span></div></div>`;
@@ -101,7 +112,7 @@ document.getElementById('pdp').innerHTML=`<div class="n-pd">
 ${gal}
 <div class="n-pd__buy">${panel}${(isPack||isPlan)?incBlock():`<div id="pdpacks">${inPacks.slice(0,2).map(packBlock).join("")}</div>`}${planPromo}</div>
 </div>
-<div style="display:grid;gap:var(--n-gap);margin-top:var(--n-gap)">${claims}${ed}${det}${videos}${spec}</div>
+<div style="display:grid;gap:var(--n-gap);margin-top:var(--n-gap)">${motivos}${claims}${ed}${det}${videos}${spec}</div>
 ${reviews}${upsSec}
 <p style="text-align:center;margin:32px 0 8px"><a class="n-btn" href="/catalogo.html">Ver el catálogo completo</a></p>`;
 /* ---------- estado de compra ---------- */
@@ -109,7 +120,7 @@ let qty=1,sub=false;
 const flash=el=>{el.classList.remove('n-pd__flash');void el.offsetWidth;el.classList.add('n-pd__flash');};
 const setT=(sel,v)=>{const e=$(sel);if(e)e.textContent=v;};
 const upd=()=>{const u=isPlan?p.price:nUnit(p,qty,sub);setT('#qv',qty);document.querySelectorAll('.n-tier').forEach(t=>{const n=+t.querySelector('input').value;const sp=t.querySelector('span.n-num');if(sp)sp.textContent=eur(nUnit(p,n,sub)*n);});document.querySelectorAll('.n-pd__seg label').forEach(l=>{const r=l.querySelector('input');const sp=l.querySelector('span.n-num');if(r&&sp)sp.textContent=eur(nUnit(p,qty,r.value==='sub')*qty);});setT('#addprice',eur(u*qty)+(isPlan?'/'+(p.plan.interval==='week'?'sem':'mes'):''));$('#pdpprice').innerHTML=eur(u)+nPlanSuf(p);flash($('#pdpprice'));flash($('#addprice'));setT('#st-price',eur(u*qty)+(isPlan?' '+p.plan.label:' · '+(qty>1?qty+' unidades':p.units)));setT('#buynote',isPlan?'Envío gratis incluido · sin permanencia':nNote(p,qty,sub));
-  if(!isPlan)setT('#segnote',sub?'Cada 30 días. Cancela o salta un envío desde el email de cada pedido.':'Sin compromiso. Puedes pasarte a suscripción cuando quieras.');
+  if(!isPlan)setT('#segnote',SEGNOTE(sub));
   document.querySelectorAll('#addbtn,#pdpexpress,#addcart,#st-add,#st-express .n-pay').forEach(b=>{b.dataset.qty=qty;b.dataset.sub=sub?1:0;});
   document.querySelectorAll('.n-tier').forEach(t=>t.classList.toggle('is-on',+t.querySelector('input').value===qty));};
 document.querySelectorAll('input[name=qty]').forEach(r=>r.onchange=()=>{qty=+r.value;upd();nTrack('select_qty',{slug,qty});});
@@ -124,7 +135,18 @@ $('#st-name').textContent=p.name;$('#st-img').src=nImg(p);$('#st-add').dataset.b
 const addc=$('#addcart');addc.addEventListener('click',()=>{const t=addc.textContent;addc.innerHTML=`${I.check} Añadido al carrito`;addc.classList.add('n-pd__ok');setTimeout(()=>{addc.textContent=t;addc.classList.remove('n-pd__ok');},1600);});
 /* ---------- galería: contador, puntos, lightbox ---------- */
 const track=$('#gtrack'),sl=[...track.children],dots=[...document.querySelectorAll('#gdots i')],cnt=$('#gcount');
-const gio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const i=sl.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('is-on',j===i));cnt.textContent=(i+1)+'/'+sl.length;}),{root:track,threshold:.6});sl.forEach(s=>gio.observe(s));
+const gprev=$('#gprev'),gnext=$('#gnext'),RMQ=matchMedia('(prefers-reduced-motion:reduce)');
+let gi=0;
+/* El carril es el mismo en móvil y en escritorio (una foto por pantalla, con arrastre y snap).
+   En escritorio, además, las flechas: así se cambia de foto sin bajar la rueda y sin perder de
+   vista el panel de compra. El observador mantiene el estado aunque se pase la foto a mano. */
+const marca=i=>{gi=i;dots.forEach((d,j)=>d.classList.toggle('is-on',j===i));cnt.textContent=(i+1)+'/'+sl.length;
+  gprev.setAttribute('aria-disabled',i<=0);gnext.setAttribute('aria-disabled',i>=sl.length-1);};
+const vaA=i=>{i=Math.max(0,Math.min(sl.length-1,i));if(i===gi)return;
+  track.scrollTo({left:sl[i].offsetLeft-sl[0].offsetLeft,behavior:RMQ.matches?'auto':'smooth'});marca(i);nTrack('gallery_nav',{slug,i});};
+const gio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;marca(sl.indexOf(e.target));}),{root:track,threshold:.6});sl.forEach(s=>gio.observe(s));
+gprev.onclick=()=>vaA(gi-1);gnext.onclick=()=>vaA(gi+1);marca(0);
+$('#gal').addEventListener('keydown',e=>{if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();vaA(gi+(e.key==='ArrowRight'?1:-1));});
 const lb=$('#lb'),lbt=$('#lb-track'),lbc=$('#lb-count');let lbBuilt=false,lastFocus=null;
 const buildLb=()=>{if(lbBuilt)return;lbBuilt=true;lbt.innerHTML=slides.map(s=>s.t==='video'?`<div class="n-pd-lb__s"><video src="${s.src}" poster="${s.poster}" muted loop playsinline controls preload="none"></video></div>`:`<div class="n-pd-lb__s"><img src="${s.src}" ${dim(s.src)} alt="${s.alt||''}" loading="lazy" decoding="async"></div>`).join('');
   const ls=[...lbt.children];const lio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)lbc.textContent=(ls.indexOf(e.target)+1)+'/'+ls.length;}),{root:lbt,threshold:.6});ls.forEach(x=>lio.observe(x));
