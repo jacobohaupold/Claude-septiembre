@@ -414,11 +414,31 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
    y ~500px en escritorio; en porcentaje cubriria bien un caso y mal el otro. El de abajo, en %, asienta el titular. */
 .n-hero5::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;background:linear-gradient(180deg,rgba(20,33,61,.72) 0,rgba(20,33,61,.62) 56px,rgba(20,33,61,.24) 104px,rgba(20,33,61,0) 168px),linear-gradient(180deg,rgba(20,33,61,0) 55%,rgba(20,33,61,.55) 100%)}
 .n-hero5__t{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:var(--n-s5) var(--n-s4);color:#fff;display:grid;gap:14px;justify-items:start}
-.n-hero5__t h1{color:#fff;font-size:30px;line-height:1.08;letter-spacing:-.02em;font-weight:var(--n-w-med);max-width:12ch}
+.n-hero5__t h1{color:#fff;font-size:30px;line-height:1.08;letter-spacing:-.02em;font-weight:var(--n-w-med);max-width:none}
+/* Dos renglones, uno con peso y otro sin él. La variable de Inter que se carga va de 400 a 600:
+   pedir un 300 no adelgazaría nada, lo sintetizaría el navegador y se vería sucio. Así que el
+   contraste es 600 contra 400, que con este cuerpo se lee igual de claro y queda limpio. */
+.n-hero5__l1,.n-hero5__l2{display:block}
+.n-hero5__l1{font-weight:var(--n-w-semi)}
+.n-hero5__l2{font-style:normal;font-weight:var(--n-w-reg);opacity:.95}
+/* En el teléfono el bloque va centrado y la caja es más baja, para que la primera fila de «lo más
+   vendido» suba y el pago rápido entre en pantalla con la barra de Safari puesta. El titular en
+   dos renglones ya ahorra una línea; el resto sale de la caja y del hueco de debajo. */
+@media (max-width:899px){
+  .n-hero5{aspect-ratio:8/5}
+  .n-hero5__t{justify-items:center;text-align:center;padding:var(--n-s3) var(--n-s4) 18px;gap:10px;max-width:100%}
+  .n-hero5__t h1{font-size:27px;max-width:none;text-wrap:balance}
+  .n-hero5__t .n-btn{justify-self:center;min-height:42px}
+  /* El hueco de 48 px entre el héroe y «lo más vendido» sobra en el teléfono: son 26 px que le
+     faltan al pago rápido de la primera fila para entrar debajo de la barra de Safari. */
+  .n-v5 main>#destacados{padding-top:22px}
+  .n-tops__lab{padding:4px 4px 6px}
+  .n-pm{gap:6px}
+}
 @media (min-width:900px){.n-hero5{aspect-ratio:16/7;max-height:72vh;width:100%}/* width:100% junto a aspect-ratio y max-height. Sin anchura definida, el max-height manda: el
    navegador calcula la ANCHURA a partir de la altura tope y en una pantalla ancha y baja el hero
    se queda corto dentro de su fila (medido: 1481 px en un contenedor de 1608). Con la anchura
-   fijada, el tope sólo recorta la altura y el vídeo, que ya va con object-fit:cover, se ajusta. */.n-hero5__t{padding:var(--n-s7);justify-items:end;text-align:right;left:auto;right:0}.n-hero5__t h1{font-size:44px}}
+   fijada, el tope sólo recorta la altura y el vídeo, que ya va con object-fit:cover, se ajusta. */.n-hero5__t{padding:var(--n-s7);justify-items:end;text-align:right;left:auto;right:0;max-width:min(620px,62%)}.n-hero5__t h1{font-size:44px}}
 /* tarjeta de producto rhode */
 .n-pc{display:flex;flex-direction:column;background:var(--n-card);border-radius:var(--n-cr);overflow:hidden;min-height:100%}
 .n-pc__w{position:relative;display:block;aspect-ratio:1;text-decoration:none;color:inherit}
@@ -736,6 +756,10 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
    dentro gracias al margen interior; abrirlo hace crecer la página a lo ancho. */
 .n-pm--float{background:transparent;padding:0}
 .n-pm--float .n-pm__w{aspect-ratio:1;background:transparent;border-radius:0;max-width:100%}
+/* En teléfonos estrechos el hueco cuadrado de la foto se acorta. El producto va recortado y con
+   object-fit:contain, así que encoge un punto pero no se recorta, y son los 40 px que le faltaban
+   al pago rápido de la primera fila para entrar en pantalla con la barra del navegador puesta. */
+@media (max-width:400px){.n-pm--float .n-pm__w{aspect-ratio:5/4}}
 .n-pm--float .n-pm__w img,.n-pm--float .n-pm__w img.is-cut{background:transparent;transform:none;
   object-fit:contain;padding:9% 11% 14%;
   filter:drop-shadow(0 11px 14px rgba(20,33,61,.13)) drop-shadow(0 3px 5px rgba(20,33,61,.07));

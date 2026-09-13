@@ -5,11 +5,11 @@
 <title>NOCTA · Parches de hidrocoloide · Poros limpios mientras duermes</title>
 <meta name="description" content="Parches de hidrocoloide coreanos para nariz, barbilla, frente y granos. Absorben la grasa de los poros mientras duermes. Envío 24-48 h desde España. Garantía 60 días.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609132311">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609132332">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
 <link rel="preload" as="image" href="/assets/img/hero-poster.webp" fetchpriority="high">
-<script src="/assets/js/app.js?v=202609132311" defer></script>
+<script src="/assets/js/app.js?v=202609132332" defer></script>
 </head>
 <body class="n-v5 n-has-hero">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -122,8 +122,8 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609132311"></script><script src="/api/catalog.js"></script>
-<script src="/assets/js/photos.js?v=202609132311"></script>
+<script src="/assets/js/products.js?v=202609132332"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/photos.js?v=202609132332"></script>
 <script>
 /* «Cómo funciona»: los tres pasos en un solo recuadro, uno tras otro, con fundido entre vídeos */
 (function(){const box=document.getElementById('seq');if(!box)return;const steps=JSON.parse(box.dataset.steps);const vs=[...box.querySelectorAll('video')];let i=0,cur=0,on=false;const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -138,7 +138,18 @@
   const io=new IntersectionObserver(es=>es.forEach(e=>{on=e.isIntersecting;const v=vs[cur];if(on){if(RM){v.controls=true;return;}if(!ended){v.play().catch(()=>{});load(vs[1-cur],(i+1)%steps.length);}}else v.pause();}),{threshold:.5});io.observe(box);
   vs[0].dataset.k='0';})();
 document.addEventListener('DOMContentLoaded',()=>{const P=window.NOCTA_PRODUCTS;
-const h1=document.getElementById('h1');h1.innerHTML=h1.textContent.split(' ').map((w,i)=>`<span style="--i:${i}">${w}</span>`).join(' ');
+/* El titular va en dos renglones: el primero en semibold y el segundo en regular. Dónde parte
+   lo puede decir el CRM con una barra («Poros limpios|mientras duermes.»); si no la lleva, se
+   parte por la mitad en palabras, que para un titular corto da el mismo corte natural.
+   Los renglones son <b> e <i> a propósito: la animación palabra a palabra es `.n-words span`,
+   y si los renglones también fueran <span> se animarían ellos y perderían el display:block. */
+const h1=document.getElementById('h1');
+const bruto=h1.textContent.trim();
+const dos=bruto.includes('|')?bruto.split('|').map(x=>x.trim())
+  :(()=>{const w=bruto.split(/\s+/);const k=Math.max(1,Math.ceil(w.length/2));return[w.slice(0,k).join(' '),w.slice(k).join(' ')];})();
+let np=0;
+const renglon=t=>t?t.split(/\s+/).map(w=>`<span style="--i:${np++}">${w}</span>`).join(' '):'';
+h1.innerHTML=`<b class="n-hero5__l1">${renglon(dos[0])}</b>`+(dos[1]?`<i class="n-hero5__l2">${renglon(dos[1])}</i>`:'');
 const hv=document.getElementById('herovid');if(hv&&!matchMedia('(prefers-reduced-motion:reduce)').matches){hv.hidden=false;}
 const HOME=(window.NOCTA_CFG&&window.NOCTA_CFG.home)||{};
 if(HOME.sections){Object.entries(HOME.sections).forEach(([id,on])=>{const el=document.getElementById(id);if(el&&on===false)el.hidden=true;});}
