@@ -339,6 +339,15 @@ body.n-v4 .n-sech{margin-bottom:var(--n-s4)}body.n-v4 h2{font-weight:var(--n-w-m
 /* =================== v5 «bento» (rhode) — capa final de UI =================== */
 .n-v5{--n-card:#F3EFE6;--n-cr:20px;--n-gap:8px;--n-gutter:8px}
 @media (min-width:900px){.n-v5{--n-cr:24px;--n-gap:12px;--n-gutter:20px}}
+/* El contenido crece con la pantalla. Clavarlo a 1180 px dejaba franjas de crema enormes a los
+   lados en cualquier monitor moderno. Todo el sitio cuelga de --n-max (el contenedor, la barra de
+   la cabecera al hacer scroll, el pie), así que basta con subir el número por tramos.
+   Se sube por tramos y no con un porcentaje suelto para que el salto no dependa de la ventana
+   exacta y las medidas sigan siendo previsibles. */
+@media (min-width:1400px){.n-v5{--n-max:1300px;--n-gutter:24px}}
+@media (min-width:1600px){.n-v5{--n-max:1420px;--n-gutter:28px}}
+@media (min-width:1800px){.n-v5{--n-max:1540px;--n-gutter:32px}}
+@media (min-width:2100px){.n-v5{--n-max:1680px;--n-gutter:36px}}
 .n-v5 .n-wrap{padding:0 var(--n-gutter)}
 /* botones: una sola familia, píldora */
 .n-v5 .n-btn{border-radius:999px;background:transparent;color:var(--n-navy);box-shadow:inset 0 0 0 1px var(--n-navy);text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:var(--n-w-med);min-height:44px;padding:0 20px;line-height:1;transition:background var(--n-t2) var(--n-e),color var(--n-t2) var(--n-e),transform var(--n-t1) var(--n-e)}
@@ -406,7 +415,10 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
 .n-hero5::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;background:linear-gradient(180deg,rgba(20,33,61,.72) 0,rgba(20,33,61,.62) 56px,rgba(20,33,61,.24) 104px,rgba(20,33,61,0) 168px),linear-gradient(180deg,rgba(20,33,61,0) 55%,rgba(20,33,61,.55) 100%)}
 .n-hero5__t{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:var(--n-s5) var(--n-s4);color:#fff;display:grid;gap:14px;justify-items:start}
 .n-hero5__t h1{color:#fff;font-size:30px;line-height:1.08;letter-spacing:-.02em;font-weight:var(--n-w-med);max-width:12ch}
-@media (min-width:900px){.n-hero5{aspect-ratio:16/7;max-height:72vh}.n-hero5__t{padding:var(--n-s7);justify-items:end;text-align:right;left:auto;right:0}.n-hero5__t h1{font-size:44px}}
+@media (min-width:900px){.n-hero5{aspect-ratio:16/7;max-height:72vh;width:100%}/* width:100% junto a aspect-ratio y max-height. Sin anchura definida, el max-height manda: el
+   navegador calcula la ANCHURA a partir de la altura tope y en una pantalla ancha y baja el hero
+   se queda corto dentro de su fila (medido: 1481 px en un contenedor de 1608). Con la anchura
+   fijada, el tope sólo recorta la altura y el vídeo, que ya va con object-fit:cover, se ajusta. */.n-hero5__t{padding:var(--n-s7);justify-items:end;text-align:right;left:auto;right:0}.n-hero5__t h1{font-size:44px}}
 /* tarjeta de producto rhode */
 .n-pc{display:flex;flex-direction:column;background:var(--n-card);border-radius:var(--n-cr);overflow:hidden;min-height:100%}
 .n-pc__w{position:relative;display:block;aspect-ratio:1;text-decoration:none;color:inherit}
