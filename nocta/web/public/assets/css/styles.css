@@ -676,3 +676,39 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
      a todo el ancho de la columna, que es lo que convertía la etiqueta en una banda. */
   background:transparent;color:var(--n-navy);border:1px solid var(--n-line-2);padding:3px 8px;backdrop-filter:none}
 .n-pc--float .n-pc__i .n-pc__new--v{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
+
+/* ── v7 · Mini tarjeta («Lo más vendido» de la portada) con el mismo lenguaje ──────────
+   Aquí había fondo en TRES sitios: la tarjeta, el hueco de la imagen y la propia imagen.
+   Los tres se van. Y se quita el scale(1.16) que ampliaba la foto antigua para llenar su
+   recuadro: con un recorte no hace falta rellenar nada, el producto ya es la imagen.
+   Igual que en la tarjeta grande, se conserva el recorte del contenedor y la sombra cabe
+   dentro gracias al margen interior; abrirlo hace crecer la página a lo ancho. */
+.n-pm--float{background:transparent;padding:0}
+.n-pm--float .n-pm__w{aspect-ratio:1;background:transparent;border-radius:0;max-width:100%}
+.n-pm--float .n-pm__w img,.n-pm--float .n-pm__w img.is-cut{background:transparent;transform:none;
+  object-fit:contain;padding:9% 11% 14%;
+  filter:drop-shadow(0 11px 14px rgba(20,33,61,.13)) drop-shadow(0 3px 5px rgba(20,33,61,.07));
+  transition:transform .62s var(--n-e),filter .62s var(--n-e)}
+.n-pm--float .n-pm__i{padding-top:2px}
+.n-pm--float .n-pm__i .n-pm__b{position:static;justify-self:start;margin-bottom:3px;
+  background:transparent;color:var(--n-navy);border:1px solid var(--n-line-2);padding:3px 7px}
+.n-pm--float .n-pm__i .n-pm__b--v{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
+@media (hover:hover){
+  .n-pm--float .n-pm__w:hover img{transform:translateY(-8px) scale(1.03);
+    filter:drop-shadow(0 20px 22px rgba(20,33,61,.18)) drop-shadow(0 6px 9px rgba(20,33,61,.08))}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .n-pm--float .n-pm__w img{animation:n-flota 7s var(--n-e-io) infinite}
+  .n-pm--float:nth-child(2n) .n-pm__w img{animation-delay:-2.3s}
+  .n-pm--float:nth-child(3n) .n-pm__w img{animation-delay:-4.6s}
+  .n-pm--float .n-pm__w:hover img{animation:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .n-pm--float .n-pm__w img{transition:none;animation:none}
+  .n-pm--float .n-pm__w:hover img{transform:none}
+}
+/* La etiqueta ahora ocupa sitio en el flujo, así que una tarjeta sin etiqueta queda más corta y su
+   botón no alinea con los vecinos. El carril es flex y ya estira a sus hijos hasta la altura del más
+   alto: basta con anclar el botón abajo. Ojo, NADA de height:100% aquí: al darle una altura al
+   elemento se cancela ese estirado y la tarjeta vuelve a quedarse corta (medido: 371 px frente a 397). */
+.n-pm--float .n-pm__buy{margin-top:auto}
