@@ -625,3 +625,54 @@ img.n-fx.is-ready{opacity:1;filter:blur(0) saturate(1);transform:scale(1);transi
 @media (min-width:900px){.n-seq__cards{grid-template-columns:repeat(4,1fr);max-width:900px}.n-seq__cards .n-pm:nth-child(n+3){display:flex}.n-seq__end h3{font-size:32px}}
 /* v8 · aviso configurable bajo la cabecera */
 .n-announce{background:var(--n-navy);color:var(--n-cream);text-align:center;font-size:12.5px;letter-spacing:.02em;padding:9px var(--n-gutter)}.n-announce a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* ── v7 · Tarjeta de producto limpia: el producto flota sobre el papel ─────────────────
+   Sin caja y sin fondo de imagen. Sólo se aplica a los productos que tienen foto recortada
+   (clase n-pc--float, que pone app.js cuando hay ph.limpio); el resto se queda como estaba.
+   La sombra NO va pintada en la foto: va en CSS con drop-shadow, que sigue la silueta real
+   del recorte y funciona sobre cualquier fondo. Por eso el recorte quita la sombra original. */
+.n-pc--float{background:transparent;border-radius:0;min-width:0}
+/* La tarjeta CONSERVA su overflow:hidden heredado, a propósito. Se probó a abrirlo (visible y
+   también clip con overflow-clip-margin) para que la sombra no se cortara, y las dos veces la
+   página creció 21 px a lo ancho: el hueco de la imagen arrastra 33 px de desbordamiento interno
+   que, sin recorte, empujan el documento. Medido, no supuesto.
+   La solución es al revés: la sombra cabe DENTRO. Se le da al producto un margen interior generoso,
+   de modo que el drop-shadow se pinta dentro de la caja y no hay nada que recortar. */
+.n-pc--float .n-pc__w{aspect-ratio:1;background:transparent;border-radius:0;max-width:100%}
+/* max-width:100%, igual que en .n-ed5: cuando la tarjeta se estira en altura para igualar a su
+   vecina, una caja con aspect-ratio calcula su ANCHURA a partir de esa altura. */
+.n-pc--float .n-pc__w img{object-fit:contain;padding:9% 11% 14%;
+  filter:drop-shadow(0 13px 16px rgba(20,33,61,.13)) drop-shadow(0 3px 5px rgba(20,33,61,.07));
+  transition:transform .62s var(--n-e),filter .62s var(--n-e),opacity .38s linear;will-change:transform}
+/* La foto alternativa entra por encima con un fundido, sin mover nada. */
+.n-pc--float .n-pc__w img.alt{opacity:0}
+.n-pc--float .n-pc__i{padding:var(--n-s2) var(--n-s2) 0}
+.n-pc--float .n-pc__new{right:0;top:0;background:rgba(20,33,61,.92);backdrop-filter:blur(6px)}
+
+@media (hover:hover){
+  /* Al pasar el ratón el producto se eleva y su sombra se abre: parece que sube, no que crece. */
+  .n-pc--float .n-pc__w:hover img:not(.alt),
+  .n-pc--float .n-pc__w:focus-visible img:not(.alt){transform:translateY(-10px) scale(1.03);
+    filter:drop-shadow(0 22px 24px rgba(20,33,61,.18)) drop-shadow(0 6px 9px rgba(20,33,61,.08))}
+  .n-pc--float .n-pc__w:hover img.alt{opacity:1;transform:translateY(-10px) scale(1.03)}
+  .n-pc--float:hover .n-pc__t b{color:var(--n-navy)}
+}
+/* El producto respira: un vaivén muy lento y muy corto, lo justo para que no parezca pegado.
+   Cada tarjeta arranca con un desfase distinto para que no floten todas a la vez, como un coro. */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .n-pc--float .n-pc__w img:not(.alt){animation:n-flota 7s var(--n-e-io) infinite}
+  .n-pc--float:nth-child(2n) .n-pc__w img:not(.alt){animation-delay:-2.3s}
+  .n-pc--float:nth-child(3n) .n-pc__w img:not(.alt){animation-delay:-4.6s}
+  .n-pc--float .n-pc__w:hover img:not(.alt){animation:none}
+}
+@keyframes n-flota{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@media (prefers-reduced-motion:reduce){
+  .n-pc--float .n-pc__w img{transition:opacity .2s linear;animation:none}
+  .n-pc--float .n-pc__w:hover img:not(.alt){transform:none}
+}
+/* La etiqueta, dentro del bloque de texto y en línea: sin caja no hay esquina donde anclarla. */
+.n-pc--float .n-pc__i .n-pc__new{position:static;display:inline-block;justify-self:start;margin-bottom:2px;
+  /* justify-self es obligatorio: .n-pc__i es una rejilla y un inline-block suelto se estira
+     a todo el ancho de la columna, que es lo que convertía la etiqueta en una banda. */
+  background:transparent;color:var(--n-navy);border:1px solid var(--n-line-2);padding:3px 8px;backdrop-filter:none}
+.n-pc--float .n-pc__i .n-pc__new--v{background:var(--n-navy);color:var(--n-cream);border-color:var(--n-navy)}
