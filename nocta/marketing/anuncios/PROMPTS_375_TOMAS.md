@@ -38,8 +38,10 @@ Las reglas que hacen que el parche salga con su forma exacta están en `BIBLIA_V
 | 50 | Time-lapse de 8 horas | Álex | Tres de los cinco sitios de la biblia, encaden | 15 | [abrir](prompts/anuncio_50_time_lapse_de_8_horas.md) |
 | 55 | Si tienes más de 35 y esto sigue saliendo | Marisol | Sitio 2 de la biblia (baño de noche: azulejo b | 15 | [abrir](prompts/anuncio_55_si_tienes_mas_de_35_y_esto_sigue_saliendo.md) |
 | 56 | Con maquillaje se nota más | Marisol | Usa cuatro de los cinco sitios de la biblia, y | 15 | [abrir](prompts/anuncio_56_con_maquillaje_se_nota_mas.md) |
-
-> **Pendientes de escribir en esta versión:** anuncios 63, 64, 71, 82. El resto están completos.
+| 63 | La mayoría de los tíos de más de 35 | Álex | Sitio 2 de la biblia, «baño de noche» (azulejo | 15 | [abrir](prompts/anuncio_63_la_mayoria_de_los_tios_de_mas_de_35.md) |
+| 64 | Después del gimnasio | Álex | Este anuncio usa CUATRO de los cinco sitios y  | 15 | [abrir](prompts/anuncio_64_despues_del_gimnasio.md) |
+| 71 | Iba a hacerme un láser | Marisol | Sitio 1 de la biblia (baño de día: azulejo bla | 15 | [abrir](prompts/anuncio_71_iba_a_hacerme_un_laser.md) |
+| 82 | Si no ves nada en el parche, te lo devolvemos | Álex | Sitio 4 de la biblia, "ventana de mañana": luz | 15 | [abrir](prompts/anuncio_82_si_no_ves_nada_en_el_parche_te_lo_devolvem.md) |
 
 ## Las imágenes del anuncio 1
 

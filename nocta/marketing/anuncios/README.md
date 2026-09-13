@@ -37,7 +37,7 @@ imágenes ya generadas del anuncio 1.
 |---|---|
 | Biblia visual con las reglas comprobadas | Hecha |
 | Anuncio 1: 15 tomas generadas, revisadas y con su prompt exacto | Hecho |
-| Prompts de imagen y de vídeo de los 25 anuncios | En `PROMPTS_375_TOMAS.md`; ver ahí qué anuncios faltan |
+| Prompts de imagen y de vídeo de los 25 anuncios | **Completos: las 375 tomas** |
 | Prompt maestro de vídeo por anuncio (copiar y pegar) | Hecho, dentro de cada anuncio |
 | Manuales de Higgsfield, vídeo, GPT Image y referencias | Ver los ficheros de esta carpeta |
 | Imágenes de los anuncios 2 a 25 | **No generadas**: se generan al lanzar cada anuncio |
@@ -63,7 +63,7 @@ Comprueba cinco cosas:
 5. **Prohibición de texto.** Todos los prompts terminan prohibiendo texto y marcas de agua.
 6. **Enlaces e imágenes.** Ningún documento apunta a un fichero o a una imagen que no existe.
 
-Estado actual: **todo correcto** en los anuncios ya escritos y en los 85 enlaces internos de la documentación.
+Estado actual: **todo correcto** en los 25 anuncios, sus 375 tomas y los 109 enlaces internos de la documentación.
 
 ## Aviso de créditos
 
