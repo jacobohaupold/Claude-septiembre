@@ -327,8 +327,47 @@ for (const [w, h, etiqueta] of [[1440, 950, 'escritorio'], [820, 1000, 'tableta'
   });
   ok('«encuadrar» deja a todos los visitantes dentro de la vista', fuera === 0, fuera + ' fuera');
 
+  /* ── 6. la cabecera y los mandos, en el teléfono ──────────────────────────────────
+     Aquí vivía el fallo que se comía la pantalla: .lv__tot es flex con wrap y .lv__tot-hoy
+     lleva flex:1 (base 0). Pedir el salto de línea con width:100% no sirve —en un contenedor
+     flex la base manda sobre width—, así que las cifras del día se quedaban al lado del
+     contador con CERO píxeles de ancho, sus cuatro fichas caían una debajo de otra dentro de
+     esa columna vacía y sumaban 413 px de alto invisible que estiraban el contador. Se veía
+     un recuadro oscuro de 414 px con un «1» perdido en medio y ninguna cifra. */
   await pg.evaluate(() => document.querySelector('#lvreset').click());
   await quieta(pg);
+  {
+    const L = await pg.evaluate(() => {
+      const r = sel => { const e = document.querySelector(sel); if (!e) return null; const b = e.getBoundingClientRect();
+        return { x: Math.round(b.left), d: Math.round(b.right), y: Math.round(b.top), b: Math.round(b.bottom), w: Math.round(b.width), h: Math.round(b.height) }; };
+      const leg = document.querySelector('.lv__leyenda');
+      return { tot: r('.lv__tot'), now: r('.lv__tot-now'), hoy: r('.lv__tot-hoy'), wrap: r('.lv__svgwrap'),
+        nav: r('.lv__nav'), esc: r('.lv__escala'), leg: r('.lv__leyenda'), bar: r('.lv__bar'), mapa: r('.lv__map'),
+        fichas: [...document.querySelectorAll('.lv__tt')].map(e => Math.round(e.getBoundingClientRect().width)),
+        legFila: leg ? leg.scrollWidth <= leg.clientWidth + 1 : false,
+        corto: getComputedStyle(document.querySelector('.lv__lg-s')).display,
+        largo: getComputedStyle(document.querySelector('.lv__lg-l')).display };
+    });
+    const pisa = (a, c) => !!(a && c) && !(a.d <= c.x || c.d <= a.x || a.b <= c.y || c.b <= a.y);
+    ok('las cifras del día tienen ancho de verdad', L.hoy.w > 100, L.hoy.w + 'px');
+    ok('las cuatro fichas se ven', L.fichas.length === 4 && L.fichas.every(x => x > 60), L.fichas.join('/'));
+    ok('el contador no se estira: manda su contenido', L.now.h <= 110, L.now.h + 'px de alto');
+    ok('la cabecera no se come la pantalla', L.tot.h <= (w <= 760 ? 260 : 130), L.tot.h + 'px');
+    ok('la tarjeta del mapa cabe en pantalla sin llenarla entera', L.mapa.h <= h * 0.78, L.mapa.h + ' de ' + h);
+    ok('los botones de zoom caen dentro del mapa', L.nav.d <= L.wrap.d && L.nav.x >= L.wrap.x && L.nav.b <= L.wrap.b);
+    ok('la escala no se pisa con la leyenda', !pisa(L.esc, L.leg));
+    ok('los botones no se pisan con la leyenda', !pisa(L.nav, L.leg));
+    ok('la escala no se pisa con los botones', !pisa(L.esc, L.nav));
+    ok('la barra de arriba no se pisa con los botones', !pisa(L.bar, L.nav));
+    if (w <= 760) {
+      ok('el contador y las cifras van en líneas distintas', L.hoy.y >= L.now.b - 1, L.now.b + ' → ' + L.hoy.y);
+      ok('la leyenda cabe en una fila', L.legFila);
+      ok('y usa los nombres cortos', L.corto !== 'none' && L.largo === 'none', L.corto + ' / largo ' + L.largo);
+    } else {
+      ok('en escritorio contador y cifras comparten fila', L.hoy.y < L.now.b - 1);
+      ok('y la leyenda usa los nombres largos', L.corto === 'none' && L.largo !== 'none', L.corto + ' / largo ' + L.largo);
+    }
+  }
   await pg.screenshot({ path: `/tmp/mapa_${etiqueta}.png`, fullPage: true });
   // Una segunda foto, ya con zoom, para poder mirar nombres, grupos, guía y escala.
   await pg.evaluate(() => { const b = document.querySelector('#lvzin'); b.click(); b.click(); b.click(); });

@@ -160,3 +160,45 @@ Y al rehacer la navegación cazó dos más:
 
 Dos más los cazó la vista sobre una captura: la fila de controles estaba anclada a la tarjeta entera
 (`top: 0`) en vez de al mapa, y con zoom un nombre de país acababa debajo del botón de alejar.
+
+## En el teléfono
+
+La cabecera del mapa («Ahora mismo» + las cuatro cifras del día) se comía la pantalla entera:
+414 px de recuadro oscuro casi vacío, con un «1» perdido en medio y ninguna cifra a la vista.
+
+La causa era una sola línea. `.lv__tot` es un contenedor flex con `flex-wrap`, y para que las
+cifras del día bajen a su propia línea en el teléfono hay que pedir el salto **en las dos piezas**:
+
+```css
+.lv__tot-now{width:100%}      /* no lleva `flex`, así que su base es su width: salta bien */
+.lv__tot-hoy{flex:1 1 100%}   /* lleva flex:1 → base 0. Con width:100% NO salta. */
+```
+
+En un contenedor flex la **base manda sobre `width`**. `.lv__tot-hoy` llevaba `flex:1` (base 0),
+así que la suma de bases seguía cabiendo en la línea, no había salto, y se quedaba al lado del
+contador con **cero píxeles de ancho**. Sus cuatro fichas, que a su vez tienen `flex-wrap`, caían
+una debajo de otra dentro de esa columna vacía y sumaban 413 px de alto invisible que, con
+`align-items:stretch`, estiraban también la caja del contador.
+
+Con el salto bien pedido, la cabecera pasa de 414 px a 222 px y la tarjeta del mapa de 732 a 551
+en una pantalla de 844.
+
+Lo demás que cambia a partir de 760 px:
+
+- **Contador en dos líneas**: la etiqueta arriba, y el número y el «persona · 5 min» en la misma
+  línea (`grid-template-areas:"e e" "n s"`). Antes eran tres filas estiradas.
+- **Cifras del día en 2×2**, con la chispa más estrecha (52 px).
+- **Barra de arriba en una sola línea** (`flex-wrap:nowrap`): partida en dos dejaba media
+  pantalla de mapa debajo de un degradado.
+- **Leyenda en una banda abajo**, con los nombres cortos de `ETAPA[i].k` (Producto, Carrito,
+  Comprado). Los cinco nombres largos no caben en una fila a 360 px y la última palabra salía
+  cortada. En escritorio se siguen leyendo los largos: los dos se pintan y manda el CSS.
+- **Escala a la izquierda y botones de zoom a la derecha**, los dos por encima de la banda. La
+  escala estaba a `bottom:10px`, justo donde ahora va la leyenda, y se leía «10.000 km» encima
+  de «Pagando».
+
+`prueba-mapa.mjs` mide todo esto en los tres tamaños (154 comprobaciones): que las cifras del día
+tengan ancho, que las cuatro fichas se vean, que el contador no se estire, que la tarjeta del mapa
+no pase del 78 % de la pantalla, que los botones caigan dentro del mapa y que escala, leyenda,
+botones y barra no se pisen entre ellos.
+

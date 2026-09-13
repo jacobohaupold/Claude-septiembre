@@ -57,12 +57,14 @@
      lea de un vistazo y no haya que ir a la leyenda. */
   /* Cada etapa lleva dos colores: `c` para el mapa, que es oscuro, y `cl` para las tarjetas, que
      son blancas. El blanco de «Mirando» es perfecto sobre el índigo y desaparece sobre papel. */
+  /* `k` es el nombre corto para la leyenda del teléfono: los cinco enteros no caben en 360 px
+     y la fila acababa cortando la última palabra por la mitad. Se pintan los dos y manda el CSS. */
   const ETAPA = [
-    { n: 'Mirando',        c: '#FFFFFF', cl: '#6C8BFF' },
-    { n: 'En un producto', c: '#5AD8FF', cl: '#1FC0EC' },
-    { n: 'Con carrito',    c: '#B98BFF', cl: '#9B6BFF' },
-    { n: 'Pagando',        c: '#FF8A4C', cl: '#F0642F' },
-    { n: 'Ha comprado',    c: '#FFC53D', cl: '#F5A524' },
+    { n: 'Mirando',        k: 'Mirando',  c: '#FFFFFF', cl: '#6C8BFF' },
+    { n: 'En un producto', k: 'Producto', c: '#5AD8FF', cl: '#1FC0EC' },
+    { n: 'Con carrito',    k: 'Carrito',  c: '#B98BFF', cl: '#9B6BFF' },
+    { n: 'Pagando',        k: 'Pagando',  c: '#FF8A4C', cl: '#F0642F' },
+    { n: 'Ha comprado',    k: 'Comprado', c: '#FFC53D', cl: '#F5A524' },
   ];
   const paisNombre = (() => {
     let dn = null; try { dn = new Intl.DisplayNames(['es'], { type: 'region' }); } catch (e) { }
@@ -230,7 +232,7 @@
       for (let lon = -150; lon <= 150; lon += 30) grat.push(`<line x1="${px(lon).toFixed(1)}" y1="0" x2="${px(lon).toFixed(1)}" y2="${H}"/>`);
       for (let lat = -60; lat <= 75; lat += 30) grat.push(`<line x1="0" y1="${py(lat).toFixed(1)}" x2="${W}" y2="${py(lat).toFixed(1)}"/>`);
       $('#lvgrat').innerHTML = grat.join('');
-      $('#lvleg').innerHTML = ETAPA.map(e => `<span class="lv__lg"><i style="background:${e.c}"></i>${esc(e.n)}</span>`).join('');
+      $('#lvleg').innerHTML = ETAPA.map(e => `<span class="lv__lg"><i style="background:${e.c}"></i><b class="lv__lg-l">${esc(e.n)}</b><b class="lv__lg-s">${esc(e.k)}</b></span>`).join('');
 
       const pintaNoche = () => $('#lvnoche').setAttribute('d', rutaNoche(new Date()));
       pintaNoche();
@@ -698,7 +700,10 @@
         $('#lvrank-paises').innerHTML = barras(d.paises || [], c => esc(bandera(c) + ' ' + paisNombre(c)));
         $('#lvpags').innerHTML = barras(d.paginas || [], p => esc(pagina(p)));
 
-        $('#lvsync').textContent = 'al día · ' + new Date(d.t).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        // Si el servidor no manda la marca de tiempo, vale la del navegador: antes se leía
+        // «al día · Invalid Date», que es peor que no poner nada.
+        const marca = new Date(d.t || Date.now());
+        $('#lvsync').textContent = 'al día · ' + (isNaN(marca) ? new Date() : marca).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
         A.fit(el);
       }
 

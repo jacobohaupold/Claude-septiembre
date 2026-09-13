@@ -170,6 +170,8 @@ img,canvas,iframe,video{max-width:100%}
 .lv__leyenda{position:absolute;z-index:3;left:12px;bottom:26px;display:flex;flex-wrap:wrap;gap:4px 12px;pointer-events:none}
 .lv__lg{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(231,237,248,.66)}
 .lv__lg i{width:7px;height:7px;border-radius:50%;flex:none}
+.lv__lg b{font-weight:inherit}
+.lv__lg-s{display:none}
 
 .lv__abajo{display:grid;gap:14px;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
 .lv__abajo2{display:grid;gap:14px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)}
@@ -192,9 +194,23 @@ img,canvas,iframe,video{max-width:100%}
 .feed__i--win{background:#FBF6E6;border-radius:8px;padding:7px 8px;border-bottom:0}
 .feed__i--win .feed__x{color:#8A6D1F;font-weight:600}
 @media (max-width:1100px){.lv__abajo,.lv__abajo2{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:760px){.lv__svgwrap{aspect-ratio:1000/720;max-height:none}
-  .lv__bar{flex-wrap:wrap;gap:6px}.lv__sel{order:5}
-  .lv__leyenda{position:static;padding:8px 12px 10px;background:#070C18}
+@media (max-width:760px){.lv__svgwrap{aspect-ratio:1000/900;max-height:none}
+  /* Una sola línea: la barra partida en dos dejaba la mitad del mapa debajo de un degradado. */
+  .lv__bar{flex-wrap:nowrap;gap:6px;padding:8px 10px}
+  .lv__key{font-size:10.5px;padding:3px 8px;gap:5px;white-space:nowrap}
+  .lv__sel{gap:4px}.lv__sel .xs{display:none}
+  .lv__sel select{min-height:30px;font-size:12px;padding:0 4px}
+  .lv__b{width:30px;height:30px;font-size:11px}
+  /* La leyenda de etapas, en una banda que se desliza a lo ancho: apilada ocupaba dos
+     renglones, y en estático se salía de la caja del mapa y le caía encima la escala. */
+  .lv__leyenda{left:0;right:0;bottom:0;padding:7px 10px;gap:0 12px;flex-wrap:nowrap;overflow-x:auto;
+    scrollbar-width:none;background:linear-gradient(180deg,rgba(7,12,24,0),rgba(7,12,24,.92) 45%)}
+  .lv__leyenda::-webkit-scrollbar{display:none}
+  .lv__lg{flex:none}
+  /* La escala, a la izquierda: la derecha es de los botones de zoom. Las dos, por encima de la banda. */
+  .lv__escala{left:10px;right:auto;bottom:40px}
+  .lv__nav{right:8px;bottom:40px;gap:5px}
+  .lv__zoom{height:54px}
   .feed__i{grid-template-columns:minmax(0,1fr);gap:1px}.feed__t{order:2}}
 .lv-pt{cursor:pointer}
 .lv__tip-ir{margin-top:3px;font-size:11px;color:#FFC53D}
@@ -245,10 +261,31 @@ img,canvas,iframe,video{max-width:100%}
 /* ── Pulso con eje ──────────────────────────────────────────────────────────── */
 .lv__pw{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:stretch}
 .lv__pe{display:flex;flex-direction:column;justify-content:space-between;height:92px;text-align:right;font-variant-numeric:tabular-nums}
+/* ── El bloque «ahora mismo» en el teléfono ────────────────────────────────────
+   Aquí había un fallo que se comía la pantalla entera. .lv__tot es flex con wrap;
+   .lv__tot-now se ponía al 100 % para ocupar su propia línea, pero .lv__tot-hoy
+   tiene flex-basis 0, así que la suma de bases seguía cabiendo y NO saltaba de
+   línea: se quedaba al lado con 0 px de ancho. Sus cuatro fichas, cada una con
+   flex-wrap, caían una debajo de otra en una columna de cero de ancho y sumaban
+   413 px de alto invisible que, con align-items:stretch, estiraban también la
+   caja del contador. Resultado: un recuadro oscuro casi vacío de 414 px con un
+   «1» perdido en medio, y las cifras del día sin verse por ninguna parte.
+   El salto de línea hay que pedirlo en las DOS piezas, no solo en la primera. */
 @media (max-width:760px){
-  .lv__tot-now{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 14px}
-  .lv__tt{flex:1 1 50%;border-bottom:1px solid rgba(255,255,255,.08);padding:10px 14px}
+  .lv__tot-now{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:9px 14px 10px;
+    grid-template-columns:auto minmax(0,1fr);grid-template-areas:"e e" "n s";align-items:baseline;gap:0 9px}
+  .lv__tot-now small{grid-area:e}
+  .lv__tot-now b{grid-area:n;font-size:27px;gap:7px}
+  .lv__tot-sub{grid-area:s;font-size:12px}
+  .lv__pulso-i{width:8px;height:8px}
+  /* flex-basis, no width: en un contenedor flex la base manda sobre width, y .lv__tot-hoy
+     lleva flex:1 (base 0). Con width:100% seguía midiendo cero y no saltaba de línea. */
+  .lv__tot-hoy{flex:1 1 100%}
+  .lv__tt{flex:1 1 50%;border-bottom:1px solid rgba(255,255,255,.08);padding:8px 14px;gap:0 8px}
   .lv__tt:nth-child(2n){border-right:0}
+  .lv__tt:nth-last-child(-n+2){border-bottom:0}
+  .lv__tt b{font-size:18px}
+  .lv__tt-g,.lv__tt .spk{width:52px}
   .lv__cv svg{height:46px}.lv__cv figcaption b{font-size:16px}.lv__cv figcaption span{font-size:10.5px}
   .lv__sf{font-size:9.5px;padding:1px 4px}
 }
@@ -265,7 +302,9 @@ img,canvas,iframe,video{max-width:100%}
 .lv__escala{position:absolute;z-index:3;right:12px;bottom:14px;display:flex;align-items:center;gap:7px;
   font-size:10.5px;color:rgba(231,237,248,.72);font-variant-numeric:tabular-nums;pointer-events:none}
 .lv__escala i{display:block;height:5px;min-width:20px;border:1px solid rgba(231,237,248,.6);border-top:0;transition:width .18s linear}
-.lv__ayuda{position:absolute;z-index:3;left:12px;bottom:8px;margin:0;font-size:10.5px;color:rgba(231,237,248,.34);pointer-events:none}
+.lv__ayuda{position:absolute;z-index:3;left:12px;bottom:8px;margin:0;font-size:10.5px;color:rgba(231,237,248,.34);pointer-events:none;
+  /* Sin tope, la línea de ayuda llega hasta debajo de la barra de escala y se leen las dos superpuestas. */
+  max-width:calc(100% - 250px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lv__guia{position:absolute;z-index:3;left:12px;top:52px;width:148px;border-radius:8px;overflow:hidden;
   border:1px solid rgba(255,255,255,.16);box-shadow:0 8px 22px -12px rgba(0,0,0,.9);pointer-events:none}
 .lv__guia svg{display:block;width:100%;height:auto}
@@ -279,9 +318,17 @@ img,canvas,iframe,video{max-width:100%}
   paint-order:stroke;stroke:rgba(7,12,24,.85);stroke-width:calc(var(--u,1) * 2.4px);stroke-linejoin:round;pointer-events:none}
 .lv-pt.es-grupo .lv-pt__c{stroke:rgba(255,255,255,.55);stroke-width:calc(var(--u,1) * 1.2px)}
 @media (max-width:760px){
-  .lv__nav{right:8px;bottom:38px}.lv__escala{right:8px;bottom:10px}
-  .lv__guia{width:104px;left:8px;top:48px}
+  /* Escala a la izquierda y botones a la derecha, los dos POR ENCIMA de la banda de la leyenda.
+     Antes la escala iba a bottom:10px, justo donde ahora está la banda, y «10.000 km» se leía
+     encima de «Pagando». */
+  .lv__nav{right:8px;bottom:42px;gap:5px}
+  .lv__zoom{height:54px}
+  .lv__escala{left:10px;right:auto;bottom:44px}
+  .lv__guia{width:104px;left:8px;top:44px}
   .lv__ayuda{display:none}
+  /* Nombres cortos: los cinco largos no caben en una fila a 360 px. */
+  .lv__lg-l{display:none}.lv__lg-s{display:inline}
+  .lv__lg{font-size:10.5px;gap:4px}
 }
 @media (prefers-reduced-motion:reduce){
   .lv__zoom i,.lv__escala i{transition:none}
