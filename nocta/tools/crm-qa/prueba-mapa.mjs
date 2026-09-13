@@ -51,6 +51,9 @@ const datos = () => {
     hoy: { visitas: 412, personas: 358, vistas: 1290, pedidos: 9, ventas: 284.51, carritos: 37 },
     ayer: { visitas: 350, vistas: 1402, pedidos: 11, ventas: 331.2 },
     puntos, ventas, feed, minutos,
+    horas: Array.from({ length: 17 }, (_, i) => ({ h: String(6 + i).padStart(2, '0'),
+      visitas: Math.round(8 + 26 * Math.sin(i / 3.4) + i), vistas: Math.round(30 + 80 * Math.sin(i / 3.1)),
+      pedidos: i % 3 === 0 ? 1 : 0, ventas: i % 3 === 0 ? 24.9 + i : 0 })),
     paises: [['ES', 180], ['FR', 44], ['MX', 31], ['US', 28], ['PT', 19], ['IT', 12], ['DE', 9], ['AR', 7], ['JP', 5], ['AU', 3]],
     paginas: [['/', 402], ['/producto.html', 318], ['/catalogo.html', 190], ['/checkout.html', 96], ['/como-usar.html', 61]],
   };
@@ -119,7 +122,6 @@ for (const [w, h, etiqueta] of [[1440, 950, 'escritorio'], [820, 1000, 'tableta'
       noche: ($('#lvnoche').getAttribute('d') || '').length,
       feed: $$('#lvfeed .feed__i').length,
       barras: $$('.lv__pb i').length,
-      kpis: $$('#lvk .kpi').length,
       rank: $$('.lv__rk').length,
       ahora: $('#lvnow').textContent,
       mapa: caja('.lv__svgwrap'),
@@ -127,6 +129,15 @@ for (const [w, h, etiqueta] of [[1440, 950, 'escritorio'], [820, 1000, 'tableta'
       docW: document.documentElement.scrollWidth, winW: innerWidth,
       es: centroPais('ES'), jp: centroPais('JP'),
       conId: $$('#lvpuntos .lv-pt[data-id]').length,
+      totales: $$('#lvtot .lv__tt').length,
+      chispas: $$('#lvtot .spk').length,
+      chispaLinea: $$('#lvtot .spk__l').length,
+      chispaBarras: $$('#lvtot .spk__b').length,
+      curvas: $$('.lv__cv path').length,
+      saltos: $$('.lv__sf').length,
+      eje: $$('.lv__pe span').length,
+      leyendaVS: !!$('.lv__key'),
+      kpisSueltos: $$('#lvk').length,
       feedEnlaces: $$('#lvfeed .feed__a[href^="#/people/"]').length,
       pMadrid: puntoDe(0), pTokio: puntoDe(17),
     };
@@ -141,7 +152,15 @@ for (const [w, h, etiqueta] of [[1440, 950, 'escritorio'], [820, 1000, 'tableta'
   ok('la zona de noche está calculada', m.noche > 400, m.noche + ' caracteres de ruta');
   ok('28 líneas en el feed', m.feed === 28, m.feed + '');
   ok('31 barras de pulso', m.barras === 31, m.barras + '');
-  ok('4 indicadores arriba', m.kpis === 4, m.kpis + '');
+  ok('4 totales del día en la barra', m.totales === 4, m.totales + '');
+  ok('cada total con su tendencia por horas', m.chispas === 4, m.chispas + '');
+  ok('visitas y páginas van en línea', m.chispaLinea === 2, m.chispaLinea + '');
+  ok('pedidos y ventas van en barras', m.chispaBarras === 34, m.chispaBarras + '');
+  ok('4 curvas de comportamiento', m.curvas === 4, m.curvas + '');
+  ok('3 saltos de conversión entre curvas', m.saltos === 3, m.saltos + '');
+  ok('el pulso tiene eje', m.eje === 3, m.eje + '');
+  ok('leyenda visita / venta', m.leyendaVS);
+  ok('ya no hay tarjetas sueltas encima del mapa', m.kpisSueltos === 0, m.kpisSueltos + '');
   ok('contador de «ahora mismo»', m.ahora === '24', m.ahora);
   ok('el mapa no se sale de la página', m.docW <= m.winW, `documento ${m.docW} · ventana ${m.winW}`);
   ok('la tarjeta del mapa cabe', m.mapa && m.mapa.w <= m.main.w + 1, m.mapa ? `${Math.round(m.mapa.w)} ≤ ${Math.round(m.main.w)}` : '');

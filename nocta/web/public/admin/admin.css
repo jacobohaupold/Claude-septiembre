@@ -119,16 +119,12 @@ img,canvas,iframe,video{max-width:100%}
    Sin eso, si además tiene min-height, el navegador calcula la ANCHURA a partir
    de la altura y la tarjeta se sale del contenedor. */
 .lv{display:grid;gap:14px}
-.lv__kpis{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-/* A 150 px de mínimo entran dos por fila en un móvil de 360, y el mapa no queda enterrado
-   debajo de cuatro tarjetas apiladas. */
-.lv__kpis .kpi b{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .dl{font-size:11px;font-weight:600;letter-spacing:.02em;padding:1px 6px;border-radius:999px;background:var(--line2);color:var(--muted)}
 .dl--up{background:#E4F0E8;color:var(--green)}.dl--dn{background:#F7E6E2;color:var(--red)}
 
 .lv__map{position:relative;border-radius:var(--r);overflow:hidden;background:#070C18;box-shadow:var(--sh);color:#E7EDF8}
 .lv__bar{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:center;gap:8px;padding:10px 12px;
-  background:linear-gradient(180deg,rgba(7,12,24,.92) 0%,rgba(7,12,24,.55) 60%,rgba(7,12,24,0) 100%)}
+  background:linear-gradient(180deg,rgba(7,12,24,.78) 0%,rgba(7,12,24,.38) 62%,rgba(7,12,24,0) 100%)}
 .lv__live{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(231,237,248,.72)}
 .lv__live b{font-size:19px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
 .lv__live i{width:8px;height:8px;border-radius:50%;background:#6FD08C;box-shadow:0 0 0 0 rgba(111,208,140,.65);animation:lv-late 2.4s ease-out infinite}
@@ -195,3 +191,56 @@ img,canvas,iframe,video{max-width:100%}
 .feed__a:hover{background:var(--line2)}
 .feed__i--win .feed__a:hover{background:#F5EDD6}
 @media (max-width:760px){.feed__a{grid-template-columns:minmax(0,1fr)}}
+
+/* ── Barra de totales, dentro de la propia tarjeta del mapa ────────────────────
+   Como en la referencia de Shopify: «ahora mismo» y los totales del día forman
+   una sola pieza con el mapa, no cuatro tarjetas sueltas encima. */
+.lv__tot{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;border-bottom:1px solid rgba(255,255,255,.1);background:#0B142A}
+.lv__tot-now{display:grid;gap:1px;padding:12px 18px;min-width:150px;border-right:1px solid rgba(255,255,255,.1)}
+.lv__tot-now small,.lv__tt small{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(231,237,248,.5)}
+.lv__tot-now b{display:flex;align-items:center;gap:8px;font-size:30px;line-height:1.05;font-weight:600;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.lv__pulso-i{width:9px;height:9px;border-radius:50%;background:#6FD08C;flex:none;animation:lv-late 2.4s ease-out infinite}
+.lv__tot-sub{font-size:11.5px;color:rgba(231,237,248,.45)}
+.lv__tot-hoy{display:flex;flex:1;min-width:0;flex-wrap:wrap}
+.lv__tt{flex:1 1 132px;min-width:0;display:grid;grid-template-columns:1fr auto;grid-template-areas:"n n" "v g" "d g";align-items:center;gap:0 10px;padding:12px 16px;border-right:1px solid rgba(255,255,255,.08)}
+.lv__tt:last-child{border-right:0}
+.lv__tt small{grid-area:n}
+.lv__tt b{grid-area:v;font-size:21px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em;white-space:nowrap}
+.lv__tt-g{grid-area:g;width:74px}
+.lv__tt-d{grid-area:d}
+.spk{width:74px;height:22px;display:block;overflow:hidden}
+.spk line{stroke:rgba(231,237,248,.3);stroke-width:1}
+.spk__a{fill:rgba(143,166,200,.22)}
+.spk__l{fill:none;stroke:#8FA6C8;stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.spk__p{fill:#F5D061}
+/* En la tarjeta oscura los distintivos de subida y bajada llevan su propio color. */
+.lv__tot .dl{background:rgba(255,255,255,.1);color:rgba(231,237,248,.6)}
+.lv__tot .dl--up{background:rgba(111,208,140,.18);color:#8FE0A8}
+.lv__tot .dl--dn{background:rgba(224,122,95,.18);color:#F0A08B}
+.lv__key{display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(231,237,248,.7);background:rgba(9,15,30,.55);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:4px 11px}
+.lv__key i{width:7px;height:7px;border-radius:50%}
+.lv__key-v{background:#CFE0F2}.lv__key-s{background:#F5D061;margin-left:6px}
+
+/* ── Curvas de comportamiento ───────────────────────────────────────────────── */
+.lv__curvas{display:flex;align-items:flex-end;gap:0;padding-top:6px}
+.lv__cv{flex:1 1 0;min-width:0;margin:0;display:grid;gap:6px}
+.lv__cv svg{width:100%;height:62px;display:block}
+.lv__cv figcaption{display:grid;gap:1px;text-align:center;padding-top:6px;border-top:1px solid var(--line2)}
+.lv__cv figcaption b{font-size:19px;line-height:1.1;font-variant-numeric:tabular-nums}
+.lv__cv figcaption span{font-size:11.5px;color:var(--muted)}
+.lv__paso{flex:0 0 auto;display:grid;align-items:end;padding:0 2px 30px}
+.lv__sf{font-size:10.5px;font-weight:600;color:var(--muted);background:var(--line2);border-radius:999px;padding:1px 6px;white-space:nowrap}
+
+/* ── Pulso con eje ──────────────────────────────────────────────────────────── */
+.lv__pw{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:stretch}
+.lv__pe{display:flex;flex-direction:column;justify-content:space-between;height:92px;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:760px){
+  .lv__tot-now{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 14px}
+  .lv__tt{flex:1 1 50%;border-bottom:1px solid rgba(255,255,255,.08);padding:10px 14px}
+  .lv__tt:nth-child(2n){border-right:0}
+  .lv__cv svg{height:46px}.lv__cv figcaption b{font-size:16px}.lv__cv figcaption span{font-size:10.5px}
+  .lv__sf{font-size:9.5px;padding:1px 4px}
+}
+.spk__b{fill:#8FA6C8}
+.spk__b.es-cero{fill:rgba(231,237,248,.18)}
+.lv__tt:last-child .spk__b,.lv__tt:nth-child(3) .spk__b{fill:#F5D061}

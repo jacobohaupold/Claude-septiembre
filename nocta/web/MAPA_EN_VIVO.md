@@ -5,6 +5,22 @@
 Un mapamundi con quién está en la tienda **ahora mismo**, dónde está y qué está haciendo.
 La referencia era el Live View de Shopify; de ahí sale la idea, no el diseño.
 
+## Lo que se ve
+
+Una sola pieza oscura, como la referencia, no cuatro tarjetas sueltas encima de un mapa:
+
+- **Barra de totales**: «ahora mismo» y los cuatro totales del día (visitas, páginas, pedidos,
+  vendido), cada uno con su tendencia por horas y su comparación contra ayer **a la misma hora**
+  (comparar un día entero contra medio día siempre da caída).
+- Visitas y páginas van en **línea**; pedidos y ventas, en **barras**. Para sucesos sueltos una
+  línea quebrada inventa una continuidad que no existe: une con una rampa dos horas sin nada.
+- **Mapa** con la leyenda visita/venta, los controles de ventana y zoom, y la leyenda de etapas.
+- **Qué están haciendo**: una curva por etapa, con la altura proporcional a la gente que hay en
+  ella, y entre curva y curva **el porcentaje que pasa de una a la siguiente**. Ese dato es lo que
+  la referencia no da: no sólo cuánta gente hay en cada paso, sino cuánta se queda por el camino.
+- **Pulso** por minuto de la última media hora, con eje.
+- **Está pasando**, **De dónde entran hoy** y **Páginas de hoy**.
+
 ## Lo que hace distinto
 
 **Dibuja la noche de verdad.** NOCTA es una marca de noche y el producto se usa durmiendo, así
@@ -49,6 +65,8 @@ m-live.js  ──GET /api/admin/live──►  admin.js  ──rpc──►  liv
 - **Proyección Miller cilíndrica.** La longitud es lineal, así que el zoom es una transformación
   afín y proyectar un punto es la misma fórmula, repetida a propósito en el generador y en el
   módulo. Groenlandia no se come el mapa como pasaría con Mercator.
+- **Dos consultas en paralelo**: `live_map` (cada 10 s) y `live_horas`, la serie por horas para
+  las tendencias, que cambia una vez por hora y va en su propia función.
 - **Se refresca cada 10 s** y se puede pausar. El ciclo se corta solo cuando el nodo sale del
   DOM, porque el router del CRM sustituye `#main` entero al cambiar de página.
 
@@ -77,7 +95,7 @@ cada carga.
 NODE_PATH=/opt/node22/lib/node_modules node nocta/tools/crm-qa/prueba-mapa.mjs
 ```
 
-51 comprobaciones a tres anchos con el código real del módulo en un navegador de verdad. No
+75 comprobaciones a tres anchos con el código real del módulo en un navegador de verdad. No
 comprueba que «no pete»: cuenta puntos, haces, filas y barras, verifica que el mapa no desborda
 la página y **comprueba que la proyección coloca a cada uno en su sitio**, exigiendo que el punto
 de Madrid caiga dentro del polígono de España y el de Tokio dentro del de Japón.
@@ -91,3 +109,6 @@ Tres fallos reales los cazó esta prueba, no la vista:
 3. `transform-box: fill-box` estaba en el grupo y no en el círculo, así que `transform-origin:
    center` se resolvía contra el lienzo entero y los halos de pulso aparecían a medio mapa de su
    punto.
+
+Y uno más lo cazó la vista: la fila de controles estaba anclada a la tarjeta entera (`top: 0`) en
+vez de al mapa, así que al meter la barra de totales dentro se le montaba encima.

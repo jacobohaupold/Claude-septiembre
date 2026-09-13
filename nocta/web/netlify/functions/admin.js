@@ -42,11 +42,16 @@ export default async (req) => {
     // (RPC live_map) y devuelve un unico JSON; el navegador no descarga eventos sueltos.
     if (kind === 'live') {
       const p = url.searchParams;
-      const r = await db.rpc('live_map', {
-        p_min:  Math.min(180, Math.max(1, Number(p.get('min')  || 5))),
-        p_feed: Math.min(200, Math.max(5, Number(p.get('feed') || 40))),
-      });
-      return new Response(JSON.stringify(r), { headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
+      // Dos consultas en paralelo: el mapa (cada 10 s) y la serie por horas del dia,
+      // que cambia una vez por hora y va en su propia funcion.
+      const [r, h] = await Promise.all([
+        db.rpc('live_map', {
+          p_min:  Math.min(180, Math.max(1, Number(p.get('min')  || 5))),
+          p_feed: Math.min(200, Math.max(5, Number(p.get('feed') || 40))),
+        }),
+        db.rpc('live_horas', {}).catch(e => { console.error('live_horas', e.message); return { horas: [] }; }),
+      ]);
+      return new Response(JSON.stringify({ ...r, ...h }), { headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
     }
     // Recorridos: el mapa de todo el que entra en la web y la ficha de cada uno.
     if (kind === 'people') {

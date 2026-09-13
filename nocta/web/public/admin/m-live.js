@@ -92,6 +92,47 @@
   const pagina = p => PAG[p] || (p || 'una página');
   const frase = f => (FRASE[f.ev] ? FRASE[f.ev](f) : f.ev.replace(/_/g, ' '));
 
+
+  /* ---------- dibujos pequeños ---------- */
+  // Línea fina de tendencia. Se dibuja el área y la línea; si todos los valores son iguales
+  // (o hay uno solo) sale una raya recta a media altura, que es lo honesto.
+  function chispa(vals, w = 74, h = 22) {
+    const v = (vals || []).map(x => Number(x) || 0);
+    if (v.length < 2) return `<svg class="spk" viewBox="0 0 ${w} ${h}" aria-hidden="true"><line x1="0" y1="${h / 2}" x2="${w}" y2="${h / 2}"/></svg>`;
+    const max = Math.max(...v), min = Math.min(...v), rango = max - min || 1;
+    const pt = i => [(i / (v.length - 1)) * w, h - 1.5 - ((v[i] - min) / rango) * (h - 3)];
+    const d = v.map((_, i) => pt(i)).map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join('');
+    return `<svg class="spk" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">`
+      + `<path class="spk__a" d="${d}L${w},${h}L0,${h}Z"/><path class="spk__l" d="${d}"/>`
+      + `<circle class="spk__p" cx="${pt(v.length - 1)[0].toFixed(1)}" cy="${pt(v.length - 1)[1].toFixed(1)}" r="1.9"/></svg>`;
+  }
+  // Para sucesos sueltos (pedidos, cobros) una línea quebrada inventa una continuidad que no existe:
+  // une con una rampa dos horas sin nada. Se dibujan en barras, que es lo que son.
+  function chispaBarras(vals, w = 74, h = 22) {
+    const v = (vals || []).map(x => Number(x) || 0);
+    if (!v.length) return `<svg class="spk" viewBox="0 0 ${w} ${h}" aria-hidden="true"><line x1="0" y1="${h - 1}" x2="${w}" y2="${h - 1}"/></svg>`;
+    const max = Math.max(...v) || 1, ancho = w / v.length;
+    return `<svg class="spk" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">`
+      + v.map((x, i) => {
+        const alto = x ? Math.max(1.4, x / max * (h - 2)) : 0.9;
+        return `<rect class="spk__b${x ? '' : ' es-cero'}" x="${(i * ancho + ancho * .15).toFixed(2)}" y="${(h - alto).toFixed(2)}" `
+          + `width="${(ancho * .7).toFixed(2)}" height="${alto.toFixed(2)}"/>`;
+      }).join('') + '</svg>';
+  }
+  // Campana cuya ALTURA es la proporción sobre el total. Es la forma de la referencia de Shopify,
+  // pero aquí el ancho también se estrecha con la proporción, así que una etapa con poca gente
+  // se ve estrecha y baja en vez de baja y ancha: se lee mejor el estrechamiento del embudo.
+  function campana(prop, w = 120, h = 60) {
+    const alto = Math.max(.035, prop) * (h - 6);
+    const sigma = w * (0.10 + 0.10 * Math.max(.12, prop));
+    const cx = w / 2, pasos = 34, p = [];
+    for (let i = 0; i <= pasos; i++) {
+      const x = (i / pasos) * w;
+      p.push([x, h - alto * Math.exp(-((x - cx) ** 2) / (2 * sigma * sigma))]);
+    }
+    return `M0,${h}` + p.map(q => `L${q[0].toFixed(1)},${q[1].toFixed(1)}`).join('') + `L${w},${h}Z`;
+  }
+
   /* ---------- vista ---------- */
   A.mod('live', {
     title: 'En vivo', icon: '◉', group: 'Panel',
@@ -100,20 +141,27 @@
       const m = M();
       el.innerHTML = `
 <div class="lv">
-  <div class="lv__kpis" id="lvk"></div>
   <section class="lv__map" id="lvmap">
-    <div class="lv__bar">
-      <span class="lv__live"><i></i><b id="lvnow">—</b> <span>ahora mismo</span></span>
-      <span class="grow"></span>
-      <label class="lv__sel"><span class="xs">Ventana</span>
+    <header class="lv__tot">
+      <div class="lv__tot-now">
+        <small>Ahora mismo</small>
+        <b><i class="lv__pulso-i"></i><span id="lvnow">—</span></b>
+        <span class="lv__tot-sub" id="lvnowsub">—</span>
+      </div>
+      <div class="lv__tot-hoy" id="lvtot"></div>
+    </header>
+    <div class="lv__svgwrap" id="lvwrap">
+      <div class="lv__bar">
+        <span class="lv__key"><i class="lv__key-v"></i>Visita<i class="lv__key-s"></i>Venta</span>
+        <span class="grow"></span>
+        <label class="lv__sel"><span class="xs">Ventana</span>
         <select id="lvmin"><option value="1">1 min</option><option value="5" selected>5 min</option><option value="15">15 min</option><option value="60">1 h</option><option value="180">3 h</option></select>
       </label>
-      <button class="lv__b" id="lvzout" title="Alejar" aria-label="Alejar">−</button>
-      <button class="lv__b" id="lvzin" title="Acercar" aria-label="Acercar">+</button>
-      <button class="lv__b" id="lvreset" title="Centrar el mapa" aria-label="Centrar el mapa">◎</button>
-      <button class="lv__b" id="lvpause" title="Pausar la actualización" aria-label="Pausar la actualización">❚❚</button>
-    </div>
-    <div class="lv__svgwrap" id="lvwrap">
+        <button class="lv__b" id="lvzout" title="Alejar" aria-label="Alejar">−</button>
+        <button class="lv__b" id="lvzin" title="Acercar" aria-label="Acercar">+</button>
+        <button class="lv__b" id="lvreset" title="Centrar el mapa" aria-label="Centrar el mapa">◎</button>
+        <button class="lv__b" id="lvpause" title="Pausar la actualización" aria-label="Pausar la actualización">❚❚</button>
+      </div>
       <svg id="lvsvg" viewBox="0 0 ${m.w} ${m.h}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa del mundo con los visitantes de la tienda en tiempo real">
         <defs>
           <radialGradient id="lvhalo"><stop offset="0%" stop-color="#fff" stop-opacity=".55"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></radialGradient>
@@ -238,12 +286,19 @@
         ultimo = d;
         const a = d.ahora || {}, h = d.hoy || {}, y = d.ayer || {};
         el.querySelector('#lvnow').textContent = a.personas || 0;
+        el.querySelector('#lvnowsub').textContent = (a.personas === 1 ? 'persona' : 'personas') + ' · ' + (d.ventana_min || 5) + ' min';
         el.querySelector('#lvvent').textContent = 'últimos ' + (d.ventana_min || 5) + ' min';
-        el.querySelector('#lvk').innerHTML =
-          A.kpi('Visitas hoy', (h.visitas || 0) + ' ' + delta(h.visitas, y.visitas), 'ayer a esta hora: ' + (y.visitas || 0)) +
-          A.kpi('Páginas vistas', (h.vistas || 0) + ' ' + delta(h.vistas, y.vistas), 'ayer a esta hora: ' + (y.vistas || 0)) +
-          A.kpi('Pedidos hoy', (h.pedidos || 0) + ' ' + delta(h.pedidos, y.pedidos), 'ayer a esta hora: ' + (y.pedidos || 0)) +
-          A.kpi('Vendido hoy', A.money(h.ventas) + ' ' + delta(h.ventas, y.ventas), 'ayer a esta hora: ' + A.money(y.ventas));
+        const hs = d.horas || [];
+        const tot = [
+          ['Visitas', String(h.visitas || 0), hs.map(x => x.visitas), h.visitas, y.visitas, chispa],
+          ['Páginas', String(h.vistas || 0), hs.map(x => x.vistas), h.vistas, y.vistas, chispa],
+          ['Pedidos', String(h.pedidos || 0), hs.map(x => x.pedidos), h.pedidos, y.pedidos, chispaBarras],
+          ['Vendido', A.money(h.ventas), hs.map(x => x.ventas), h.ventas, y.ventas, chispaBarras],
+        ];
+        el.querySelector('#lvtot').innerHTML = tot.map(([n, v, serie, hoy, ayer, dibuja]) =>
+          `<div class="lv__tt"><small>${esc(n)}</small><b>${esc(v)}</b>`
+          + `<span class="lv__tt-g" title="Por horas, desde que ha empezado el día">${dibuja(serie)}</span>`
+          + `<span class="lv__tt-d">${delta(hoy, ayer)}</span></div>`).join('');
 
         // países con visitas hoy, resaltados
         const conVisitas = new Set((d.paises || []).map(p => p[0]));
@@ -289,21 +344,31 @@
         }).join('');
 
         // qué están haciendo
-        const tot = Math.max(1, a.personas || 0);
-        const filas = [['Mirando', a.navegando || 0, ETAPA[0].c], ['Con carrito', a.carrito || 0, ETAPA[2].c],
+        const vivos = Math.max(1, a.personas || 0);
+        const fases = [['Mirando', a.navegando || 0, ETAPA[0].c], ['Con carrito', a.carrito || 0, ETAPA[2].c],
           ['Pagando', a.pagando || 0, ETAPA[3].c], ['Han comprado', a.comprando || 0, ETAPA[4].c]];
-        el.querySelector('#lvcomp').innerHTML = filas.map(([n, v, c]) =>
-          `<div class="lv__cf"><span class="lv__cn"><i style="background:${c}"></i>${esc(n)}</span>`
-          + `<span class="lv__cb"><i style="width:${(v / tot * 100).toFixed(1)}%;background:${c}"></i></span>`
-          + `<b class="num">${v}</b></div>`).join('')
-          || '<p class="muted sm">Nadie en la tienda ahora mismo.</p>';
+        // Entre curva y curva, cuánta gente se queda por el camino: es el dato que la referencia no da.
+        const salto = (i) => {
+          if (!i) return '';
+          const de = fases[i - 1][1], a2 = fases[i][1];
+          if (!de) return '<span class="lv__sf">—</span>';
+          return `<span class="lv__sf" title="De «${esc(fases[i - 1][0])}» a «${esc(fases[i][0])}»">${Math.round(a2 / de * 100)} %</span>`;
+        };
+        el.querySelector('#lvcomp').innerHTML = (a.personas || 0)
+          ? `<div class="lv__curvas">${fases.map(([n, v, c], i) =>
+              (i ? `<div class="lv__paso">${salto(i)}</div>` : '')
+              + `<figure class="lv__cv"><svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true">`
+              + `<path d="${campana(v / vivos)}" fill="${c}" fill-opacity=".8"/></svg>`
+              + `<figcaption><b class="num">${v}</b><span>${esc(n)}</span></figcaption></figure>`).join('')}</div>`
+          : '<p class="muted sm">Nadie en la tienda ahora mismo.</p>';
 
         // pulso
         const mins = d.minutos || [], max = Math.max(1, ...mins.map(x => x.v));
         el.querySelector('#lvpulso').innerHTML =
-          `<div class="lv__pb">${mins.map(x =>
-            `<i style="height:${Math.max(2, x.v / max * 100).toFixed(1)}%" title="${esc(x.m + ' · ' + x.v + ' páginas · ' + x.p + ' personas')}"></i>`).join('')}</div>`
-          + `<div class="lv__px xs muted"><span>${esc(mins.length ? mins[0].m : '')}</span><span>${esc(mins.length ? mins[mins.length - 1].m : '')}</span></div>`;
+          `<div class="lv__pw"><div class="lv__pe xs muted"><span>${max}</span><span>${Math.round(max / 2)}</span><span>0</span></div>`
+          + `<div class="lv__pb">${mins.map(x =>
+            `<i style="height:${Math.max(2, x.v / max * 100).toFixed(1)}%" title="${esc(x.m + ' · ' + x.v + ' páginas · ' + x.p + ' personas')}"></i>`).join('')}</div></div>`
+          + `<div class="lv__px xs muted"><span>hace 30 min</span><span>ahora</span></div>`;
 
         // está pasando
         el.querySelector('#lvfeed').innerHTML = (d.feed || []).map(f => {
