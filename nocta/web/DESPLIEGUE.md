@@ -39,6 +39,28 @@ La documentación de los entornos está en https://code.claude.com/docs/en/claud
 Hay que rotarlo: Netlify → User settings → Applications → Personal access tokens → revocar el antiguo y crear
 uno nuevo. Después se pone el nuevo en la variable de entorno del punto anterior.
 
+## Comprobar DESPUÉS de desplegar
+
+```bash
+NODE_PATH=/opt/node22/lib/node_modules node nocta/tools/web-qa/publicado.js
+```
+
+No basta con desplegar y suponer que llega igual. **Netlify post-procesa el HTML publicado**
+(las URLs bonitas: `/producto` en vez de `/producto.html`) y al reescribirlo puede romper cosas
+que en local funcionan perfectamente.
+
+Pasó de verdad, y estuvo roto en producción sin que se notara: el botón principal de la portada
+llevaba `onclick="nTrack('cta_hero',{pos:'hero'})"` y salía publicado con comillas simples y `\'`
+dentro. En HTML la barra invertida no escapa nada, así que el atributo se cortaba en la primera
+comilla, quedaba `onclick="nTrack(\"` más un atributo basura, y **el clic dejaba de contarse**.
+En local, impecable; en la web en vivo, ese evento no llegaba nunca al CRM.
+
+La lección: nada de manejadores dentro del HTML. Los botones que se cuentan llevan
+`data-track="…"` y `app.js` escucha una sola vez con delegación, que es inmune a cualquier
+reescritura. Esta prueba baja el HTML real, lo parsea y falla si vuelve a aparecer un manejador
+partido, un atributo basura o si desaparece una marca de seguimiento; además compara el CSS y el
+JS publicados con los del repositorio.
+
 ## Comprobar antes de desplegar
 
 ```bash

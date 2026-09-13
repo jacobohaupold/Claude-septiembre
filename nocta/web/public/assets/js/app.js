@@ -25,6 +25,13 @@ const T={
   flush(){if(!this.q.length)return;const body=JSON.stringify(this.q.splice(0));try{if(navigator.sendBeacon)navigator.sendBeacon('/api/track',new Blob([body],{type:'application/json'}));else fetch('/api/track',{method:'POST',body,keepalive:true,headers:{'content-type':'application/json'}});}catch(e){}}
 };
 window.nTrack=(ev,d)=>T.send(ev,d);
+/* Seguimiento por atributo, no por onclick dentro del HTML.
+   Netlify post-procesa el HTML publicado (URLs bonitas) y al reescribirlo convertía
+   onclick="nTrack('cta_hero',{pos:'hero'})" en comillas simples con \' dentro. En HTML eso no
+   escapa nada: el atributo se cortaba en la primera comilla y el clic dejaba de contar en
+   producción, aunque en local funcionara. Un oyente delegado es inmune a cualquier reescritura. */
+document.addEventListener('click',e=>{const el=e.target.closest('[data-track]');
+  if(el)window.nTrack(el.dataset.track,el.dataset.trackPos?{pos:el.dataset.trackPos}:{});});
 addEventListener('pagehide',()=>T.flush());addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')T.flush();});
 let maxScroll=0,t0=Date.now(),sent={};
 addEventListener('scroll',()=>{const h=document.documentElement;const pct=Math.round((scrollY+innerHeight)/h.scrollHeight*100);if(pct>maxScroll)maxScroll=pct;[25,50,75,90].forEach(m=>{if(pct>=m&&!sent[m]){sent[m]=1;T.send('scroll',{pct:m});}});
