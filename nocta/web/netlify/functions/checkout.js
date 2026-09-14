@@ -4,6 +4,7 @@ import { db, dbOk, now, esc } from './lib/db.js';
 import { serverProducts, getDiscount, discountAmount, planPrice, unitPrice } from './lib/catalog.js';
 import { stripe, stripeConfig } from './lib/stripe.js';
 import { json } from './lib/auth.js';
+import { markPaid } from './lib/fulfil.js';
 
 export default async (req) => {
   if (req.method !== 'POST') return json({ error: 'method' }, 405);
@@ -31,7 +32,16 @@ export default async (req) => {
 
   const cfg = await stripeConfig();
   const site = process.env.SITE_URL || process.env.URL || new URL(req.url).origin;
-  if (!cfg.secret) { await save({ status: 'demo' }); return json({ url: `${site}/gracias.html?o=${orderId}&demo=1`, orderId, total, demo: true }); }
+  if (!cfg.secret) {
+    // Sin pasarela no hay cobro, pero sí hay todo lo demás: cliente, email de confirmación,
+    // recompensa, suscripción y evento de compra. El pedido recorre el circuito entero marcado
+    // como prueba (demo = true), así que se puede probar la tienda de punta a punta hoy sin que
+    // ni un euro falso se cuele en la facturación. Conectar Stripe no cambia nada de esto:
+    // simplemente dejan de nacer pedidos con la marca.
+    try { await markPaid({ ...order, demo: true }, { demo: true }); }
+    catch (e) { console.error('cierre en pruebas', e.message); await save({ status: 'paid', demo: true }); }
+    return json({ url: `${site}/gracias.html?o=${orderId}&demo=1`, orderId, total, demo: true });
+  }
 
   const params = {
     mode: recurring ? 'subscription' : 'payment', success_url: `${site}/gracias.html?o=${orderId}&s={CHECKOUT_SESSION_ID}`, cancel_url: `${site}/checkout.html?cancel=1`,

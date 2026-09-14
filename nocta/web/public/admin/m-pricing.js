@@ -82,6 +82,7 @@
       const noCost = items.length - withCost.length;
       const kpiCls = pct => pct == null ? '' : pct >= 60 ? 'good' : 'warn';
 
+      const estrecho = window.matchMedia('(max-width:760px)').matches;
       body.innerHTML = `
         <div class="grid grid--kpi mb">
           ${A.kpi('Margen medio ponderado', weighted == null ? '—' : A.pct(weighted), 'ponderado por precio de venta', kpiCls(weighted))}
@@ -89,18 +90,26 @@
           ${A.kpi('Sin coste', String(noCost), 'de ' + items.length + ' productos', noCost ? 'warn' : 'good')}
         </div>
         ${A.card('Márgenes por producto', A.table({
+          /* Nueve columnas caben de sobra en un escritorio; en un teléfono la tabla pasa a modo
+             tarjeta y nueve campos por producto son casi metro y medio de scroll de fichas
+             idénticas, donde lo único que se busca es «qué margen deja esto». Así que en pantalla
+             estrecha se quedan los cuatro campos con los que se decide —nombre, precio, coste
+             editable y margen— y los cinco de detalle se ven al girar el móvil o en el escritorio. */
           cols: [
             { k: 'n', label: 'Producto', render: r => `${esc(r.p.name)}${r.isBundle ? ' <span class="bdg">Pack</span>' : ''}${r.p.active === false ? ' <span class="bdg bdg--bad">Oculto</span>' : ''}` },
             { k: 'pv', label: 'Venta', cls: 'right num', render: r => A.money(r.p.price) },
-            { k: 'ps', label: 'Susc.', cls: 'right num', render: r => A.money(r.sub) },
+            ...(estrecho ? [] : [{ k: 'ps', label: 'Susc.', cls: 'right num', render: r => A.money(r.sub) }]),
             { k: 'c', label: 'Coste', cls: 'right', render: r => r.isBundle ? (r.cost == null ? '<span class="muted">—</span>' : `<span class="num">${A.money(r.cost)}</span>`) : `<input type="number" step="0.01" min="0" class="num" style="width:82px;text-align:right" data-cost="${esc(r.p.slug)}" data-orig="${r.cost == null ? '' : r.cost}" value="${r.cost == null ? '' : r.cost}" placeholder="—">` },
-            { k: 'me', label: 'Margen € venta', cls: 'right num', render: r => r.mSale.euro },
-            { k: 'mp', label: 'Margen % venta', cls: 'right nowrap', render: r => dotPct(r.mSale) },
-            { k: 'mes', label: 'Margen € susc.', cls: 'right num', render: r => r.mSub.euro },
-            { k: 'mps', label: 'Margen % susc.', cls: 'right nowrap', render: r => dotPct(r.mSub) },
-            { k: 'ah', label: 'Ahorro cliente', cls: 'right num', render: r => r.p.compare ? A.money(r.p.compare - r.p.price) : '—' }
+            ...(estrecho ? [] : [{ k: 'me', label: 'Margen € venta', cls: 'right num', render: r => r.mSale.euro }]),
+            { k: 'mp', label: estrecho ? 'Margen' : 'Margen % venta', cls: 'right nowrap', render: r => dotPct(r.mSale) },
+            ...(estrecho ? [] : [
+              { k: 'mes', label: 'Margen € susc.', cls: 'right num', render: r => r.mSub.euro },
+              { k: 'mps', label: 'Margen % susc.', cls: 'right nowrap', render: r => dotPct(r.mSub) },
+              { k: 'ah', label: 'Ahorro cliente', cls: 'right num', render: r => r.p.compare ? A.money(r.p.compare - r.p.price) : '—' }
+            ])
           ], rows: items, empty: 'Sin productos.'
         }))}
+        ${estrecho ? '<p class="muted xs" style="margin-top:-6px">Gira el móvil para ver también el margen de la mensualidad y el ahorro del cliente.</p>' : ''}
         ${A.card('Plan Noche · combinaciones (1-4 zonas, con/sin skincare)', planNocheHtml())}
         ${A.card('Plan Semanal', planSemanalHtml())}
         <p class="xs muted mt">El coste es un dato interno: el servidor lo filtra siempre y nunca se publica en la web.</p>`;

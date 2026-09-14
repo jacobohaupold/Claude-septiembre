@@ -136,7 +136,7 @@
       const out = statusFilter === 'all' ? rows : rows.filter(r => r.status === statusFilter);
       el.querySelector('#sub_tbl').innerHTML = A.table({
         cols: [
-          { k: 'name', label: 'Cliente', render: r => `<b>${nameOr(r.name)}</b><br><span class="muted xs">${esc(r.email || '')}</span>` },
+          { k: 'name', label: 'Cliente', render: r => `<b>${nameOr(r.name)}</b>${r.demo ? ' <span class="bdg bdg--pru">prueba</span>' : ''}<br><span class="muted xs">${esc(r.email || '')}</span>` },
           { k: 'plan_slug', label: 'Plan', render: r => esc(planName(r.plan_slug)) },
           { k: 'zones', label: 'Zonas', render: r => esc(zonesText(r.zones)) },
           { k: 'price', label: 'Precio', cls: 'num nowrap', render: r => `${A.money(r.price)} / ${intervalLabel(r.interval)}` },
@@ -214,7 +214,7 @@
       const out = q ? rows.filter(r => [r.name, r.email, r.phone].some(v => String(v || '').toLowerCase().includes(q))) : rows;
       el.querySelector('#cust_tbl').innerHTML = A.table({
         cols: [
-          { k: 'name', label: 'Cliente', render: r => `<b>${nameOr(r.name)}</b><br><span class="muted xs">${esc(r.email)}</span>` },
+          { k: 'name', label: 'Cliente', render: r => `<b>${nameOr(r.name)}</b>${r.demo ? ' <span class="bdg bdg--pru">prueba</span>' : ''}<br><span class="muted xs">${esc(r.email)}</span>` },
           { k: 'phone', label: 'Teléfono', render: r => phoneHtml(r.phone) },
           { k: 'orders_count', label: 'Pedidos', cls: 'right', render: r => r.orders_count || 0 },
           { k: 'total_spent', label: 'Gastado', cls: 'right num', render: r => A.money(r.total_spent) },

@@ -23,7 +23,7 @@
   const methodsCheckboxes = current => { const opts = [['card', 'Tarjeta'], ['bizum', 'Bizum'], ['klarna', 'Klarna'], ['paypal', 'PayPal'], ['link', 'Link'], ['sepa_debit', 'SEPA (domiciliación)']]; const cur = current || []; return opts.map(([v, l]) => `<label class="tog sm"><input type="checkbox" value="${v}" ${cur.includes(v) ? 'checked' : ''}> ${esc(l)}</label>`).join(''); };
 
   /* ---- Stripe ---- */
-  function stripeCard(s) {
+  function stripeCard(s = {}) {
     const connected = !!s.configured;
     const body = connected ? stripeConnectedBody(s) : stripeDisconnectedBody(s);
     return A.card('Stripe (pagos)', body, statusPill(connected));
@@ -134,7 +134,7 @@
   }
 
   /* ---- Resend ---- */
-  function resendCard(r) {
+  function resendCard(r = {}) {
     const ok = !!r.configured;
     const domainsTable = A.table({
       cols: [{ k: 'name', label: 'Dominio' }, { k: 'status', label: 'Estado', render: d => domainBadge(d.status), w: '120px' }],
@@ -185,7 +185,7 @@
       { k: 'token', label: 'Token de acceso permanente', type: 'password', placeholder: 'Déjalo en blanco para no cambiarlo', help: 'Se genera en developers.facebook.com → tu app → WhatsApp → API Setup.' }
     ];
   }
-  function whatsappCard(w) {
+  function whatsappCard(w = {}) {
     const ok = !!w.configured;
     let statusHtml;
     if (!ok) statusHtml = `<p class="muted sm mt">Sin conectar todavía. Rellena los datos de tu app de Meta abajo.</p>`;
@@ -229,7 +229,7 @@
   }
 
   /* ---- Supabase ---- */
-  function supabaseCard(s) {
+  function supabaseCard(s = {}) {
     const body = `<p class="muted sm mt">Aquí viven pedidos, clientes, leads, campañas y mensajes.</p>${s.url ? `<p class="mono xs">${esc(s.url)}</p>` : ''}`;
     return A.card('Supabase (base de datos)', body, statusPill(!!s.configured));
   }
@@ -237,7 +237,7 @@
   /* ---- render + eventos ---- */
   function drawContent(el) {
     el.innerHTML = `
-      <div class="grid">${stripeCard(INT.stripe)}${resendCard(INT.resend)}${whatsappCard(INT.whatsapp)}${supabaseCard(INT.supabase)}</div>
+      <div class="grid">${stripeCard(INT.stripe || {})}${resendCard(INT.resend || {})}${whatsappCard(INT.whatsapp || {})}${supabaseCard(INT.supabase || {})}</div>
     `;
     wireForms(el);
   }

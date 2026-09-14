@@ -107,7 +107,7 @@
     if (!rows.length) { lista.innerHTML = A.card('Recompensas', pintaVacio()); A.fit(el); return; }
     A.search(lista, rows, ['code', 'email', 'redeemed_order', 'order_id'], filas => A.card('', A.table({
       cols: [
-        { k: 'code', label: 'Código', title: true, render: r => `<b class="mono">${esc(r.code)}</b>` },
+        { k: 'code', label: 'Código', title: true, render: r => `<b class="mono">${esc(r.code)}</b>${r.demo ? ' <span class="bdg bdg--pru">prueba</span>' : ''}` },
         { k: 'email', label: 'Cliente', render: r => r.email ? `<a href="#/people?q=${encodeURIComponent(r.email)}">${esc(r.email)}</a>` : '—' },
         { k: 'value', label: 'Vale', cls: 'right', render: r => r.type === 'fixed' ? A.money(r.value) : '−' + Math.round(r.value) + ' %' },
         { k: 'issued_at', label: 'Emitida', render: r => A.rel(r.issued_at) },

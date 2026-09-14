@@ -6,14 +6,13 @@
   // normaliza [[etiqueta,n],…] u {etiqueta:n} → array [[etiqueta,n],…] ordenado desc
   const pairs = (x, top = 8) => { let a = Array.isArray(x) ? x.slice() : x && typeof x === 'object' ? Object.entries(x) : []; a = a.filter(p => p && p[0] != null); a.sort((p, q) => (q[1] || 0) - (p[1] || 0)); return a.slice(0, top); };
 
-  function todoItems(s, integr) {
+  function todoItems(s) {
     const items = [];
     if (s.pending_ship > 0) items.push({ label: `${s.pending_ship} pedido${s.pending_ship === 1 ? '' : 's'} pagado${s.pending_ship === 1 ? '' : 's'} por enviar`, href: '#/orders?status=paid' });
     const carts = s.carts_open != null ? s.carts_open : s.abandoned_carts;
     if (carts > 0) items.push({ label: `${carts} carrito${carts === 1 ? '' : 's'} abandonado${carts === 1 ? '' : 's'} por recuperar`, href: '#/carts' });
     const wa = s.messages && s.messages.whatsapp;
     if (wa > 0) items.push({ label: `${wa} mensaje${wa === 1 ? '' : 's'} de WhatsApp por revisar`, href: '#/whatsapp' });
-    if (integr && integr.stripe && !integr.stripe.configured) items.push({ label: 'Conecta Stripe para poder cobrar', href: '#/integrations' });
     /* Una recompensa viva es un cliente que ya compró y está a punto de volver. Si caducan sin
        usarse, es margen que ya estaba ganado y se deja escapar, así que se avisa aquí y no sólo
        en su pantalla: al panel se entra todos los días, a Recompensas no. */
@@ -23,12 +22,27 @@
     return items;
   }
 
+  /* Si la tienda todavía no puede cobrar, el panel lo dice arriba del todo y en una línea. No es
+     un pendiente del día: es la condición para que los números de abajo signifiquen algo. Con la
+     lista de «qué hacer hoy» no basta, porque ahí compite con enviar pedidos y se lee como una
+     tarea más entre siete. */
+  function avisoHtml(r) {
+    if (!r || r.listo) return '';
+    return `<div class="avz" role="status"><b>La tienda aún no cobra.</b>
+      <span>Faltan ${r.bloqueantes} cosa${r.bloqueantes === 1 ? '' : 's'}. Mientras tanto, cada compra se completa y se guarda como prueba.</span>
+      <a href="#/listo">Ver qué falta →</a></div>`;
+  }
+
+  /* Los ingresos ya no cuentan las pruebas (lo filtra la base). Si hay pedidos de prueba, se dicen
+     debajo del número en vez de esconderlos: un cero pelado con siete pedidos hechos parece que la
+     tienda está rota, y no lo está. */
   function kpisHtml(s) {
     const conv = s.funnel && s.funnel.sessions ? (s.funnel.purchase / s.funnel.sessions * 100) : 0;
     const carts = s.carts_open != null ? s.carts_open : s.abandoned_carts;
+    const pru = s.pruebas && Number(s.pruebas.pedidos) ? s.pruebas : null;
     return `<div class="grid grid--kpi mb">
-      ${A.kpi('Ingresos', A.money(s.revenue))}
-      ${A.kpi('Pedidos', s.orders ?? 0)}
+      ${A.kpi('Ingresos', A.money(s.revenue), pru ? `+ ${A.money(pru.importe)} en pruebas, sin cobrar` : '')}
+      ${A.kpi('Pedidos', s.orders ?? 0, pru ? `+ ${pru.pedidos} de prueba` : '')}
       ${A.kpi('Ticket medio', A.money(s.aov))}
       ${A.kpi('Conversión', A.pct(conv))}
       ${A.kpi('Sesiones', s.sessions ?? 0)}
@@ -139,7 +153,7 @@
   }
 
   async function render(el, params, query) {
-    let s, orders, leads, integr = null;
+    let s, orders, leads;
     try {
       [s, orders, leads] = await Promise.all([
         A.stats(),
@@ -147,13 +161,17 @@
         A.r('leads', 'select=*&order=created_at.desc&limit=6')
       ]);
     } catch (e) { el.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p></div>`; return; }
-    try { integr = await A.api('integrations'); } catch (e) { /* opcional */ }
+    // Una sola llamada para el estado de la puesta en marcha: `readiness` ya consulta por dentro
+    // todas las integraciones, así que pedir además `integrations` era hablar dos veces con Stripe
+    // y con Resend para pintar la misma pantalla.
+    let ready = null; try { ready = await A.api('readiness'); } catch (e) { /* opcional */ }
 
     const hasData = (s.events || 0) > 0 || (s.orders || 0) > 0;
 
     el.innerHTML = `
+      ${avisoHtml(ready)}
       ${kpisHtml(s)}
-      <div class="grid mb">${todoHtml(todoItems(s, integr))}</div>
+      <div class="grid mb">${todoHtml(todoItems(s))}</div>
       ${hasData ? `
       <div class="grid grid--2 mb">${chartCard(s.daily || [])}${funnelCard(s.funnel)}</div>
       <div class="grid grid--3 mb">${sourcesCard(s.sources)}${pagesCard(s.pages)}${productsCard(s.products)}</div>

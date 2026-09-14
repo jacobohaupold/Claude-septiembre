@@ -13,7 +13,7 @@ import { waSend, waStatus, waTemplates, waLink } from './lib/wa.js';
 import { getCatalog, invalidateCatalog } from './lib/catalog.js';
 import { renderCampaign, sendCampaign, segmentRecipients, waText } from './lib/campaigns.js';
 import { runAutomations } from './lib/automations.js';
-import { markPaid } from './order.js';
+import { markPaid } from './lib/fulfil.js';
 import { people, person } from './lib/journeys.js';
 import { rewardConfig, RECOMPENSA_DEF } from './lib/rewards.js';
 
@@ -53,6 +53,7 @@ export default async (req) => {
       return json(s);
     }
     if (kind === 'integrations') return json(await integrations());
+    if (kind === 'readiness') return json(await readiness());
     /* Recompensas post-compra: la configuración, las cuentas y la lista, en una sola llamada.
        Las cuentas las hace la base (RPC reward_stats) y no el navegador: es una suma sobre una
        tabla que crece con cada pedido, y bajarla entera para sumarla en el móvil no escala. */
@@ -61,7 +62,7 @@ export default async (req) => {
       const [cfg, kpis, rows] = await Promise.all([
         rewardConfig(),
         db.rpc('reward_stats', { dias: days }).catch(e => { console.error('reward_stats', e.message); return null; }),
-        db.select('discounts', 'kind=eq.recompensa&select=code,email,value,type,issued_at,ends_at,seen_at,redeemed_at,redeemed_order,revenue,active,order_id&order=issued_at.desc&limit=300').catch(() => []),
+        db.select('discounts', 'kind=eq.recompensa&select=code,email,value,type,issued_at,ends_at,seen_at,redeemed_at,redeemed_order,revenue,active,order_id,demo&order=issued_at.desc&limit=300').catch(() => []),
       ]);
       return json({ config: cfg, defaults: RECOMPENSA_DEF, kpis: kpis || {}, rows: rows || [], days });
     }
@@ -120,6 +121,81 @@ async function integrations() {
     resend: { configured: mailOk(), from: process.env.RESEND_FROM || null, domains, audience, domain_pending: rs.domain || null },
     whatsapp: { ...wa, webhook_url: SITE() + '/api/whatsapp-webhook', verify_token: ((await setting('whatsapp', null)) || {}).verify_token || 'nocta' },
     cron: await setting('cron_last', null)
+  };
+}
+
+/* ¿Está la tienda lista para vender de verdad?
+   Esto no es un adorno: es la respuesta honesta a «¿va a funcionar?», calculada cada vez sobre el
+   estado real, no sobre lo que uno recuerda haber configurado. Cada punto dice qué falta, quién lo
+   arregla y cuánto duele si se queda sin arreglar. El orden es el orden en que hay que hacerlo.
+
+   La regla para decidir el nivel:
+     · 'bloquea'  → sin esto no entra un euro, por mucho tráfico que llegue;
+     · 'importa'  → se puede vender, pero se pierde dinero o confianza por el camino;
+     · 'mejora'   → suma cuando lo anterior ya está.
+   Sólo lo que bloquea cuenta para el «listo / no listo». Lo demás se enseña, no se exagera. */
+async function readiness() {
+  const int = await integrations();
+  const pasos = [];
+  const add = (nivel, k, titulo, ok, detalle, comoSeArregla, donde) => pasos.push({ nivel, k, titulo, ok, detalle, arreglo: comoSeArregla, donde });
+
+  add('bloquea', 'db', 'Base de datos', !!int.supabase.configured,
+    int.supabase.configured ? 'Supabase responde. Pedidos, clientes y eventos se están guardando.' : 'Sin base de datos no se guarda ni un pedido.',
+    'Poner SUPABASE_URL y SUPABASE_SERVICE_KEY en las variables de Netlify.', '#/integrations');
+
+  const cobra = !!(int.stripe.configured && int.stripe.account && int.stripe.account.charges_enabled);
+  add('bloquea', 'stripe', 'Cobrar', cobra,
+    !int.stripe.configured ? 'No hay pasarela conectada. Ahora mismo el checkout llega hasta el final, manda el email y emite la recompensa, pero NO cobra: todos los pedidos nacen marcados como prueba.'
+      : !int.stripe.account ? 'La clave está puesta pero Stripe no contesta con la cuenta.'
+      : !int.stripe.account.charges_enabled ? 'La cuenta de Stripe existe pero todavía no tiene los cobros activados.'
+      : `Cobrando en ${String(int.stripe.account.currency || 'eur').toUpperCase()}${int.stripe.account.mode === 'test' ? ' · en modo PRUEBAS de Stripe, no con dinero real' : ''}.`,
+    'Conectar Stripe desde Integraciones y activar la cuenta en stripe.com.', '#/integrations');
+
+  add('bloquea', 'webhook', 'Enterarse de los cobros', !!(int.stripe.configured && int.stripe.webhook),
+    int.stripe.webhook ? 'El webhook está firmado: cada pago marca el pedido solo.'
+      : 'Sin webhook, Stripe cobra pero la tienda no se entera: el pedido se queda a medias y no sale el email de confirmación.',
+    'En Stripe → Developers → Webhooks, apuntar a ' + int.stripe.webhook_url + ' y pegar aquí el secreto.', '#/integrations');
+
+  add('importa', 'mail', 'Mandar correos', !!int.resend.configured,
+    int.resend.configured ? 'Resend responde y los correos salen.' : 'Sin correo no hay confirmación, ni seguimiento, ni carrito abandonado.',
+    'Poner RESEND_API_KEY en Netlify.', '#/integrations');
+
+  const dom = (int.resend.domains || []).find(d => d.status === 'verified');
+  add('importa', 'dominio', 'Escribir desde tu dominio', !!dom,
+    dom ? `Verificado: ${dom.name}. Los correos salen como tuyos.`
+      : 'Los correos salen desde un remitente prestado: acaban en spam y no construyen marca.',
+    'Añadir el dominio en Integraciones y copiar los registros DNS.', '#/integrations');
+
+  add('mejora', 'whatsapp', 'WhatsApp', !!int.whatsapp.configured,
+    int.whatsapp.configured ? 'Conectado.' : 'Los avisos de WhatsApp se registran como saltados. No rompe nada; simplemente no llegan.',
+    'Meter el token y el phone_id de Meta en Integraciones.', '#/integrations');
+
+  const cronT = int.cron && (int.cron.t || (typeof int.cron === 'string' ? int.cron : null));
+  const cronD = cronT && !isNaN(new Date(cronT)) ? new Date(cronT) : null;
+  add('importa', 'cron', 'Trabajos automáticos', !!int.cron,
+    int.cron ? (cronD ? `Última pasada: ${cronD.toLocaleString('es-ES')}.` : 'Ha corrido al menos una vez.')
+      : 'El carrito abandonado, el recordatorio de la guía y el rescate de recompensas los dispara el cron. Si no corre, no sale ninguno.',
+    'Comprobar la función programada en Netlify, o darle a «Ejecutar ahora» en Ajustes.', '#/settings');
+
+  let stock = { ok: true, sin: [] };
+  try {
+    const ps = (await db.select('products', 'select=slug,name,stock,active&limit=200')) || [];
+    stock.sin = ps.filter(p => p.active !== false && p.stock != null && Number(p.stock) <= 0).map(p => p.name || p.slug);
+    stock.ok = !stock.sin.length;
+  } catch (e) { }
+  add('importa', 'stock', 'Existencias', stock.ok,
+    stock.ok ? 'Ningún producto activo está a cero.' : `Sin existencias y aun así a la venta: ${stock.sin.slice(0, 4).join(', ')}${stock.sin.length > 4 ? ` y ${stock.sin.length - 4} más` : ''}. El checkout los rechaza, así que se pierde la venta en el último paso.`,
+    'Reponer el stock o desactivar el producto en Productos.', '#/products');
+
+  let pruebas = null;
+  try { const st = await db.rpc('admin_stats', { p_days: 3650 }); pruebas = st && st.pruebas; } catch (e) { }
+
+  const bloqueantes = pasos.filter(p => p.nivel === 'bloquea' && !p.ok);
+  return {
+    listo: !bloqueantes.length,
+    bloqueantes: bloqueantes.length,
+    pendientes: pasos.filter(p => !p.ok).length,
+    pasos, pruebas,
   };
 }
 

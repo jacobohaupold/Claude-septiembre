@@ -52,7 +52,7 @@ export async function issueReward(order) {
     max_uses: 1, uses: 0, active: true,
     starts_at: now(), ends_at: ends,
     kind: 'recompensa', email: String(order.email).toLowerCase(), order_id: order.id,
-    issued_at: now(),
+    issued_at: now(), demo: order.demo === true,   // nacida de un pedido de prueba: vale igual, pero no cuenta como dinero
     note: `Recompensa por el pedido ${order.id}`,
   };
   try {
@@ -61,7 +61,7 @@ export async function issueReward(order) {
     if (d) {
       try {
         await db.insert('events', [{ t: now(), ev: 'reward_issued', vid: order.vid, sid: order.sid, path: '/gracias.html',
-          utm: order.utm || {}, d: { code: d.code, pct: cfg.pct, order: order.id } }]);
+          utm: order.utm || {}, d: { code: d.code, pct: cfg.pct, order: order.id, demo: order.demo === true } }]);
       } catch (e) { }
     }
     return d;

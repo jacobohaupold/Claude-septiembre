@@ -83,9 +83,17 @@
     try { d = await A.api('people?' + p); }
     catch (e) { el.innerHTML = `<div class="card"><p class="err">${esc(e.message)}</p></div>`; return; }
 
-    const total = d.embudo[0] ? d.embudo[0].personas : 0;
-    const compraron = d.embudo[d.embudo.length - 1].personas;
-    const enCarrito = (d.embudo[2] ? d.embudo[2].personas : 0) - (d.embudo[3] ? d.embudo[3].personas : 0);
+    // El embudo se pinta aunque no venga: una pantalla del CRM no se puede quedar en blanco porque
+    // la respuesta llegue corta. Antes, con una base recién puesta (sin un solo evento), `d.embudo`
+    // venía vacío y `d.embudo[d.embudo.length-1].personas` tiraba la pantalla entera.
+    const ETAPAS = [['visita', 'Entró en la web'], ['producto', 'Miró un producto'], ['carrito', 'Añadió al carrito'],
+                    ['checkout', 'Empezó el pago'], ['datos', 'Metió los datos'], ['compra', 'Compró']];
+    if (!Array.isArray(d.embudo) || !d.embudo.length) d.embudo = ETAPAS.map(([k, n]) => ({ k, n, personas: 0 }));
+    if (!Array.isArray(d.personas)) d.personas = [];
+    const paso = i => (d.embudo[i] ? Number(d.embudo[i].personas) || 0 : 0);
+    const total = paso(0);
+    const compraron = paso(d.embudo.length - 1);
+    const enCarrito = paso(2) - paso(3);
     const ident = d.personas.filter(x => x.email).length;
     const filtro = query.etapa || query.origen || query.q;
 
@@ -113,7 +121,8 @@
 
     const chips = A.$('#filtros', el);
     chips.innerHTML = ['', 'visita', 'producto', 'carrito', 'checkout', 'datos', 'compra']
-      .map(k => `<a class="btn btn--s${(query.etapa || '') === k ? ' btn--p' : ' btn--g'}" href="#/people${k ? '?etapa=' + k : ''}">${k ? esc(d.embudo.find(e => e.k === k).n) : 'Todas'}</a>`).join('');
+      .map(k => { const e = d.embudo.find(x => x.k === k); const et = ETAPAS.find(x => x[0] === k);
+        return `<a class="btn btn--s${(query.etapa || '') === k ? ' btn--p' : ' btn--g'}" href="#/people${k ? '?etapa=' + k : ''}">${k ? esc((e && e.n) || (et && et[1]) || k) : 'Todas'}</a>`; }).join('');
 
     const inp = A.$('#q', el);
     let t = null;

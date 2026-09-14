@@ -354,3 +354,40 @@ img,canvas,iframe,video{max-width:100%}
 .vacio b{font-size:15px;color:var(--ink)}
 .vacio p{margin:0;max-width:46ch}
 
+
+/* Puesta en marcha · el veredicto y la lista de lo que falta ------------------------------- */
+/* El veredicto es la única caja del CRM que puede decir «esto no vende». Va en navy lleno para
+   que no se confunda con una tarjeta más, y baja a texto normal en cuanto la respuesta es «sí»:
+   una alarma que sigue gritando cuando ya está todo bien deja de leerse. */
+.vered{background:var(--navy);color:#fff;border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:var(--sh)}
+.vered__l{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;opacity:.72;margin-bottom:8px}
+.vered h2{font-size:20px;line-height:1.28;letter-spacing:-.01em;margin:0 0 8px}
+.vered p{margin:0;font-size:14px;line-height:1.55;opacity:.82;max-width:68ch}
+.vered--ok{background:var(--sup);color:var(--ink)}
+.vered--ok .vered__l{color:var(--green);opacity:1}
+.vered--ok p{opacity:1;color:var(--muted)}
+
+.pasos{display:grid;gap:2px}
+.paso{display:flex;gap:12px;align-items:flex-start;padding:12px 2px;border-top:1px solid var(--line)}
+.paso:first-child{border-top:0;padding-top:2px}
+.paso__m{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;background:var(--sup);color:var(--muted);margin-top:1px}
+.paso--ok .paso__m{background:#E3EFE7;color:var(--green)}
+.paso--bloquea .paso__m{background:#F6DED9;color:var(--red)}
+.paso--importa .paso__m{background:#F6EBD0;color:#7A5B00}
+.paso__c{min-width:0;flex:1}
+.paso__c b{display:block;font-size:14px;margin-bottom:2px}
+.paso__c p{margin:0;font-size:13px;line-height:1.55;color:var(--muted);overflow-wrap:anywhere}
+.paso__a{margin-top:5px!important;color:var(--ink)!important}
+.paso__a a{white-space:nowrap}
+.paso--ok .paso__c b{color:var(--muted);font-weight:500}
+
+/* Aviso de puesta en marcha en el panel: una línea, no una caja. En la pantalla a la que se entra
+   todos los días, lo que ya se sabe tiene que ocupar poco y llevar al sitio donde se arregla. */
+.avz{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;border-radius:var(--r);padding:12px 16px;margin-bottom:14px;font-size:14px;line-height:1.45}
+.avz b{font-weight:600}
+.avz span{flex:1;min-width:0}
+.avz a{color:#fff;text-decoration:underline;text-underline-offset:3px;white-space:nowrap;font-weight:500}
+@media (max-width:560px){.avz{flex-wrap:wrap;gap:6px}.avz span{flex:1 1 100%}}
+
+/* Marca de prueba en pedidos, clientes y planes: discreta pero imposible de confundir con lo real */
+.bdg--pru{background:#EDE7F6;color:#4A3A7B}

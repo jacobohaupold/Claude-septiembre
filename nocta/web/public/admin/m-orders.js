@@ -9,7 +9,8 @@
     ['shipped', 'Enviados'],
     ['pending', 'Pendientes'],
     ['sub', 'Suscripción / renovaciones'],
-    ['other', 'Reembolsados / otros']
+    ['other', 'Reembolsados / otros'],
+    ['demo', 'Pruebas']
   ];
   const OTHER_STATUSES = ['refunded', 'partial_refund', 'failed', 'error', 'disputed', 'canceled', 'demo', 'abandoned'];
 
@@ -18,6 +19,10 @@
   }
   function filterQuery(status) {
     let q = 'select=*&order=created_at.desc';
+    // Las pruebas no se borran ni se esconden: se apartan. En cualquier vista que no sea la suya
+    // quedan fuera, para que la cola de envíos y la lista de pedidos sean la tienda de verdad.
+    if (status === 'demo') return q + '&demo=is.true';
+    q += '&demo=is.false';
     if (status === 'paid') q += '&status=eq.paid';
     else if (status === 'shipped') q += '&status=eq.shipped';
     else if (status === 'pending') q += '&status=eq.pending';
@@ -49,7 +54,7 @@
           { k: 'id', label: 'Pedido', render: r => `<span class="mono">${esc(r.id)}</span>`, w: '110px' },
           { k: 'name', label: 'Cliente', title: true, render: r => `<b>${esc(r.name || '—')}</b><br><span class="muted xs">${esc(r.email || '')}</span>` },
           { k: 'items', label: 'Artículos', render: r => esc(A.itemsText(r.items)) },
-          { k: 'status', label: 'Estado', render: r => A.badge(r.status), w: '130px' },
+          { k: 'status', label: 'Estado', render: r => A.badge(r.status) + (r.demo ? ' <span class="bdg bdg--pru">prueba</span>' : ''), w: '150px' },
           { k: 'total', label: 'Total', render: r => A.money(r.total), cls: 'right num', w: '90px' }
         ], rows: list, empty: 'No hay pedidos con este filtro.', rowAttr: r => `data-id="${esc(r.id)}"`
       });
@@ -83,10 +88,11 @@
     if (!['shipped', 'delivered', 'refunded', 'partial_refund', 'canceled'].includes(o.status)) act.push('<button class="btn btn--s btn--d" data-act="cancel">Cancelar</button>');
     return `
       <button class="btn btn--s btn--g mb" id="backBtn">← Pedidos</button>
+      ${o.demo ? `<div class="avz"><b>Pedido de prueba.</b><span>Se hizo sin pasarela de pago, así que no se ha cobrado nada. Todo lo demás es real: se creó el cliente, salió el email de confirmación y se emitió la recompensa.</span><a href="#/listo">Conectar el cobro →</a></div>` : ''}
       <div class="card">
         <div class="row row--sb">
           <div><h1>${esc(o.id)}</h1><p class="muted xs">${A.date(o.created_at, true)}</p></div>
-          <div class="right"><div class="b" style="font-size:22px">${A.money(o.total)}</div>${A.badge(o.status)}</div>
+          <div class="right"><div class="b" style="font-size:22px">${A.money(o.total)}</div>${A.badge(o.status)}${o.demo ? ' <span class="bdg bdg--pru">prueba</span>' : ''}</div>
         </div>
         <div class="row mt" id="ordActions">${act.join('')}</div>
       </div>
