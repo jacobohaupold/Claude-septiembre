@@ -391,3 +391,9 @@ img,canvas,iframe,video{max-width:100%}
 
 /* Marca de prueba en pedidos, clientes y planes: discreta pero imposible de confundir con lo real */
 .bdg--pru{background:#EDE7F6;color:#4A3A7B}
+
+/* Cuatro cuentas cortas (un 8, un 0, un importe) no necesitan una fila entera cada una en el
+   móvil: apiladas son cuatro pantallazos de aire para leer cuatro números. De dos en dos caben
+   y se comparan de un vistazo, que es para lo que están juntas. */
+@media (max-width:620px){.grid--kpi2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid--kpi2 .kpi{padding:12px 13px}.grid--kpi2 .kpi b{font-size:20px}}

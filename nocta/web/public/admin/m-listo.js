@@ -35,11 +35,11 @@
       <p class="muted sm mb">Estos pedidos han recorrido el circuito entero —cliente, email de
       confirmación, recompensa y suscripción— pero llevan la marca de prueba, así que no cuentan
       como facturación en ninguna pantalla.</p>
-      <div class="grid grid--kpi">
-        ${A.kpi('Pedidos de prueba', pr.pedidos)}
-        ${A.kpi('Importe simulado', A.money(pr.importe), 'nunca se cobró')}
-        ${A.kpi('Clientes de prueba', pr.clientes || 0)}
-        ${A.kpi('Planes de prueba', pr.suscripciones || 0)}
+      <div class="grid grid--kpi grid--kpi2">
+        ${A.kpi('Pedidos', pr.pedidos)}
+        ${A.kpi('Importe', A.money(pr.importe), 'nunca se cobró')}
+        ${A.kpi('Clientes', pr.clientes || 0)}
+        ${A.kpi('Planes', pr.suscripciones || 0)}
       </div>`);
   }
 
