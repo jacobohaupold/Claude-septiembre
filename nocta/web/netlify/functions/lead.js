@@ -13,7 +13,7 @@ async function automation(key) { try { const r = await db.one('automations', 'ke
 export default async (req, context) => {
   const url = new URL(req.url); const path = url.pathname;
   if (path.endsWith('/discount')) {
-    const d = await getDiscount(url.searchParams.get('code'), Number(url.searchParams.get('subtotal') || 0));
+    const d = await getDiscount(url.searchParams.get('code'), Number(url.searchParams.get('subtotal') || 0), url.searchParams.get('email') || '');
     return json(d || { error: 'invalid' }, d && !d.error ? 200 : 404);
   }
   if (req.method === 'GET' && url.searchParams.get('unsub')) {

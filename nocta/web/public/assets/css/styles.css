@@ -464,6 +464,42 @@ body.n-v5:not(.n-has-hero) .n-top__in .n-cart b{background:var(--n-navy);color:v
    El brillo cruza una vez cada cinco segundos y medio: se nota de reojo y no obliga a mirar,
    que es justo lo que separa «llama la atención» de «molesta al leer». */
 .n-dtos{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:5px;min-width:0}
+
+/* ── Recompensa post-compra ────────────────────────────────────────────────────
+   Lo primero que se ve al terminar de pagar, cuando la intención de volver está
+   más alta que nunca. Va en navy y no en crema porque compite con el upsell que
+   tiene justo debajo: si los dos bloques son del mismo color, no gana ninguno. */
+.n-rw{position:relative;overflow:hidden;margin-top:var(--n-s6);padding:26px 20px 24px;border-radius:var(--n-r-lg);
+  background:var(--n-navy);color:var(--n-cream);text-align:center;display:grid;gap:12px;justify-items:center}
+.n-rw::before{content:"";position:absolute;inset:-40% -10% auto;height:150%;pointer-events:none;
+  background:radial-gradient(60% 50% at 50% 0,rgba(200,85,61,.38),transparent 70%)}
+.n-rw>*{position:relative}
+.n-rw .n-lab{color:var(--n-sage)}
+.n-rw__big{margin:0;font-size:26px;line-height:1.15;letter-spacing:-.02em;font-weight:var(--n-w-reg);color:var(--n-cream);text-wrap:balance}
+.n-rw__big b{font-weight:var(--n-w-semi)}
+/* El código es un botón: en el móvil nadie selecciona texto a mano, y si no se puede copiar de
+   un toque se pierde justo aquí. */
+.n-rw__code{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 8px 0 20px;cursor:pointer;
+  border:1px dashed rgba(243,239,230,.5);border-radius:var(--n-r-lg);background:rgba(243,239,230,.07);
+  color:var(--n-cream);font:inherit;font-size:21px;letter-spacing:.16em;font-weight:var(--n-w-semi);
+  font-variant-numeric:tabular-nums;transition:background var(--n-t2) var(--n-e),border-color var(--n-t2) var(--n-e)}
+.n-rw__code:hover{background:rgba(243,239,230,.14);border-color:var(--n-cream)}
+.n-rw__code i{display:inline-flex;align-items:center;height:38px;padding:0 14px;border-radius:999px;flex:none;
+  background:var(--n-cream);color:var(--n-navy);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-style:normal;font-weight:var(--n-w-med)}
+.n-rw__code.is-ok i{background:var(--n-sage);color:var(--n-navy)}
+.n-rw__note{margin:0;font-size:12.5px;line-height:1.55;color:rgba(243,239,230,.72);max-width:44ch}
+.n-rw__note b{color:var(--n-cream);font-weight:var(--n-w-med)}
+/* Aviso de la recompensa en el pago. No es un error ni un éxito todavía: es un «lo tienes ahí»,
+   así que va en el gris del texto y sólo se pone en verde cuando de verdad se ha aplicado. */
+.n-rw-avisa{margin:var(--n-s4) 0 0;padding:11px 13px;border-radius:var(--n-r-sm);background:var(--n-cream);
+  border:1px solid var(--n-line);font-size:13px;line-height:1.5;color:var(--n-ink-2)}
+.n-rw-avisa b{color:var(--n-navy);font-weight:var(--n-w-semi)}
+.n-rw-avisa.is-ok{background:var(--n-sage-14);border-color:var(--n-sage-28)}
+.n-rw .n-btn{border-color:rgba(243,239,230,.55);color:var(--n-cream)}
+.n-rw .n-btn:hover{background:rgba(243,239,230,.12)}
+@media (min-width:900px){.n-rw{padding:34px 32px 30px}.n-rw__big{font-size:32px}.n-rw__code{font-size:24px;min-height:60px}}
+@media (prefers-reduced-motion:no-preference){.n-rw__code.is-ok{animation:n-rw-ok .4s var(--n-e)}}
+@keyframes n-rw-ok{0%{scale:1}40%{scale:1.03}100%{scale:1}}
 .n-dto{display:inline-flex;align-items:center;height:26px;padding:0 11px;
   border:0;border-radius:999px;color:#fff;
   font-size:11.5px;line-height:1;letter-spacing:.03em;font-weight:var(--n-w-semi);

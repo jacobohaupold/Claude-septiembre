@@ -80,9 +80,17 @@ export const tpl = {
     const site = SITE();
     return { subject: `${name ? name.split(' ')[0] + ', tu' : 'Tu'} −${pct} % está aquí`, text: `Tu código ${code} te descuenta un ${pct} % en todo NOCTA. Úsalo en ${site}`, html: layout({ title: 'Tu código NOCTA', preheader: `Código ${code}: −${pct} % en todo, hoy mismo.`, body: h.lab('Bienvenida') + h.title(`${name ? 'Hola, ' + esc(name.split(' ')[0]) + '.' : 'Hola.'} Aquí tienes tu −${pct} %.`) + h.p('Vale para todo lo que hay en NOCTA: parches, skincare, packs y planes. Se aplica en el checkout y no caduca esta semana.') + h.code(code) + h.btn('Empezar esta noche', site + '/?code=' + code) + h.hr() + h.p('Un consejo antes de tu primera noche: nariz limpia y <b>seca</b>, presiona 20 segundos con la palma y déjalo 6-8 horas. El 90 % de los «no me funciona» vienen de saltarse eso.') + h.btn('Ver la guía en 3D', site + '/como-usar.html') , unsubscribe: site + '/api/lead?unsub=1&email=' }) };
   },
-  orderConfirm(o) {
+  // La recompensa entra en el email de confirmación, que es el correo que TODO el mundo abre.
+  // Dejarla sólo en la página de gracias es perderla: esa página se ve una vez y se cierra.
+  orderConfirm(o, recompensa) {
     const site = SITE();
-    return { subject: `Pedido ${o.id} confirmado · sale en 24-48 h`, text: `Gracias. Tu pedido ${o.id} (${eur(o.total)}) sale del almacén en 24-48 h.`, html: layout({ title: 'Pedido confirmado', preheader: `Tu pedido ${o.id} está en marcha.`, body: h.lab('Pedido ' + o.id) + h.title('Gracias. Tu pedido está en marcha.') + h.p('Sale de nuestro almacén en España en 24-48 h laborables. Te enviamos el seguimiento en cuanto salga.') + h.items(o.items || []) + `<p style="margin:12px 0 0;font-size:15px;text-align:right;color:#14213D">${o.shipping ? 'Envío ' + eur(o.shipping) + ' · ' : 'Envío gratis · '}<b>Total ${eur(o.total)}</b></p>` + h.hr() + h.lab('Mientras llega') + h.p('Lee la guía: piel seca, 20 segundos de presión y 6-8 horas. Así el parche sale lleno la primera mañana.') + h.btn('Cómo usar los parches', site + '/como-usar.html') }) };
+    const r = recompensa && recompensa.code ? recompensa : null;
+    const hasta = r && r.ends_at ? new Date(r.ends_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' }) : '';
+    const bloque = r ? h.hr() + h.lab('Tu recompensa por esta compra')
+      + h.p(`Un <b>−${Number(r.value)} %</b> para tu siguiente pedido. Es tuyo, de un solo uso${hasta ? ` y válido hasta el <b>${hasta}</b>` : ''}.`)
+      + h.code(r.code)
+      + h.btn('Usarlo ahora', site + '/catalogo.html?code=' + encodeURIComponent(r.code)) : '';
+    return { subject: `Pedido ${o.id} confirmado · sale en 24-48 h`, text: `Gracias. Tu pedido ${o.id} (${eur(o.total)}) sale del almacén en 24-48 h.${r ? ` Tu código para la próxima: ${r.code} (−${Number(r.value)} %).` : ''}`, html: layout({ title: 'Pedido confirmado', preheader: r ? `En marcha. Y dentro, tu −${Number(r.value)} % para la próxima.` : `Tu pedido ${o.id} está en marcha.`, body: h.lab('Pedido ' + o.id) + h.title('Gracias. Tu pedido está en marcha.') + h.p('Sale de nuestro almacén en España en 24-48 h laborables. Te enviamos el seguimiento en cuanto salga.') + h.items(o.items || []) + `<p style="margin:12px 0 0;font-size:15px;text-align:right;color:#14213D">${o.shipping ? 'Envío ' + eur(o.shipping) + ' · ' : 'Envío gratis · '}<b>Total ${eur(o.total)}</b></p>` + bloque + h.hr() + h.lab('Mientras llega') + h.p('Lee la guía: piel seca, 20 segundos de presión y 6-8 horas. Así el parche sale lleno la primera mañana.') + h.btn('Cómo usar los parches', site + '/como-usar.html') }) };
   },
   shipped(o, tracking, carrier) {
     const site = SITE();

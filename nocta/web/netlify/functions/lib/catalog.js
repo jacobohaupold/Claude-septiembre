@@ -49,7 +49,7 @@ export function unitPrice(p, qty, sub, pricing) {
 
 // Descuento: tabla discounts (fallback a los 3 códigos históricos si no hay DB).
 const LEGACY = { HOLA10: { type: 'pct', value: 10 }, TIKTOK10: { type: 'pct', value: 10 }, BIENVENIDA15: { type: 'pct', value: 15 } };
-export async function getDiscount(code, subtotal = 0) {
+export async function getDiscount(code, subtotal = 0, email = '') {
   code = String(code || '').trim().toUpperCase(); if (!code) return null;
   let d = null;
   if (dbOk()) { try { d = await db.one('discounts', 'code=eq.' + encodeURIComponent(code)); } catch (e) { } }
@@ -59,8 +59,17 @@ export async function getDiscount(code, subtotal = 0) {
   if (d.starts_at && new Date(d.starts_at).getTime() > now) return { error: 'not_started' };
   if (d.ends_at && new Date(d.ends_at).getTime() < now) return { error: 'expired' };
   if (d.max_uses && Number(d.uses || 0) >= Number(d.max_uses)) return { error: 'exhausted' };
+  // Una recompensa es de quien la ganó. Sin esta comprobación bastaría con que un código se
+  // filtrase por un grupo para que lo usara cualquiera: son de un solo uso, pero el primero que
+  // llega se lo queda, y el dueño se encuentra con que «ya se ha usado».
+  if (d.kind === 'recompensa') {
+    const suyo = String(d.email || '').toLowerCase();
+    const quien = String(email || '').trim().toLowerCase();
+    if (!quien) return { error: 'needs_email' };
+    if (suyo && quien !== suyo) return { error: 'not_yours' };
+  }
   if (subtotal && Number(d.min_total || 0) > subtotal) return { error: 'min_total', min_total: Number(d.min_total) };
-  return { code: d.code, type: d.type === 'fixed' ? 'fixed' : 'pct', value: Number(d.value), min_total: Number(d.min_total || 0), note: d.note || null };
+  return { code: d.code, type: d.type === 'fixed' ? 'fixed' : 'pct', value: Number(d.value), min_total: Number(d.min_total || 0), note: d.note || null, kind: d.kind || 'publico' };
 }
 export function discountAmount(d, subtotal) {
   if (!d || d.error) return 0;

@@ -6,10 +6,10 @@
 <title>Finalizar compra · NOCTA</title>
 <meta name="description" content="Finaliza tu pedido NOCTA: datos de envío y pago seguro con tarjeta, Bizum, Klarna o PayPal.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609132332">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609140136">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609132332" defer></script>
+<script src="/assets/js/app.js?v=202609140136" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -48,7 +48,8 @@
       <div><label for="f-phone">Teléfono (para el transportista)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" enterkeyhint="done"></div>
     </div>
 
-    <details class="n-sumfold" style="margin-top:var(--n-s4)">
+    <p class="n-rw-avisa" id="rwhint" hidden></p>
+    <details class="n-sumfold" id="codefold" style="margin-top:var(--n-s4)">
       <summary>¿Tienes un código de descuento?</summary>
       <div style="display:flex;gap:8px;align-items:flex-end">
         <div style="flex:1"><label for="f-code" class="n-vh">Código de descuento</label><input id="f-code" name="code" placeholder="HOLA10" autocomplete="off"></div>
@@ -82,7 +83,7 @@
 </div>
 
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609132332"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/products.js?v=202609140136"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 document.getElementById('checktrust').innerHTML=nTrust();
@@ -103,6 +104,53 @@ const render=()=>{
 };
 render();const orig=nCart.render.bind(nCart);nCart.render=()=>{orig();render();};
 document.getElementById('applycode').onclick=async()=>{const c=document.getElementById('f-code').value.trim().toUpperCase();if(!c)return;const t=nCart.totals();try{const r=await fetch('/api/discount?code='+encodeURIComponent(c)+'&subtotal='+t.sub.toFixed(2));const d=await r.json();if(d&&!d.error){sessionStorage.setItem('n_disc',JSON.stringify({code:d.code,type:d.type,value:d.value}));nToast('Código aplicado');nTrack('apply_code',{code:d.code});}else nToast(d.error==='min_total'?`Este código pide un pedido mínimo de ${nEur(d.min_total)}`:d.error==='expired'?'Ese código ya ha caducado':d.error==='exhausted'?'Ese código ya se ha agotado':'Código no válido');}catch(e){nToast('No se pudo comprobar el código');}nCart.render();};
+/* La recompensa post-compra es personal: sólo vale con el email que la ganó, así que no se puede
+   aplicar hasta que ese email está escrito. En vez de pedirle al cliente que se acuerde del
+   código, se guarda al comprar y se aplica sola en cuanto el campo del email es válido. */
+(()=>{
+  const lee=k=>{try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}};
+  const rec=lee('n_reward');
+  const pend=sessionStorage.getItem('n_pend_code')||'';
+  const codigo=(rec&&rec.code)||pend;
+  if(!codigo)return;
+  const caducada=rec&&rec.ends_at&&new Date(rec.ends_at).getTime()<Date.now();
+  if(caducada){localStorage.removeItem('n_reward');return;}
+  const hint=document.getElementById('rwhint');
+  const pinta=t=>{hint.innerHTML=t;hint.hidden=false;};
+  if(rec&&rec.value)pinta(`Tienes una recompensa de <b>−${Math.round(rec.value)} %</b>. Escribe tu email y se aplica sola.`);
+  else pinta('Tienes un código guardado. Escribe tu email y se aplica solo.');
+  let puesto=false;
+  const aplica=async()=>{
+    if(puesto)return;
+    const em=(document.getElementById('f-email').value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return;
+    const t=nCart.totals();
+    try{
+      const r=await fetch(`/api/discount?code=${encodeURIComponent(codigo)}&subtotal=${t.sub.toFixed(2)}&email=${encodeURIComponent(em)}`);
+      const d=await r.json();
+      if(d&&!d.error){
+        puesto=true;
+        sessionStorage.setItem('n_disc',JSON.stringify({code:d.code,type:d.type,value:d.value}));
+        sessionStorage.removeItem('n_pend_code');
+        document.getElementById('f-code').value=d.code;
+        pinta(`Recompensa <b>${d.code}</b> aplicada: <b>−${d.type==='pct'?Math.round(d.value)+' %':nEur(d.value)}</b> en este pedido.`);
+        hint.classList.add('is-ok');
+        nTrack('reward_apply',{code:d.code});
+        nCart.render();
+      }else if(d&&d.error==='not_yours'){
+        pinta('Esa recompensa es de otra cuenta de correo. Entra con el email con el que compraste.');
+      }else if(d&&d.error==='expired'){
+        pinta('Tu recompensa ya ha caducado.');localStorage.removeItem('n_reward');
+      }else if(d&&d.error&&d.error!=='needs_email'){
+        hint.hidden=true;localStorage.removeItem('n_reward');
+      }
+    }catch(e){}
+  };
+  const em=document.getElementById('f-email');
+  em.addEventListener('blur',aplica);
+  em.addEventListener('change',aplica);
+  setTimeout(aplica,400);   // si el email ya venía puesto de una visita anterior
+})();
 (()=>{let l={};try{l=JSON.parse(localStorage.getItem('n_lead')||'{}');}catch(e){}const d=JSON.parse(sessionStorage.getItem('n_disc')||'null');if(d&&d.code)document.getElementById('f-code').value=d.code;if(l.email&&!document.getElementById('f-email').value)document.getElementById('f-email').value=l.email;if(l.name&&!document.getElementById('f-name').value){const parts=l.name.split(' ');document.getElementById('f-name').value=parts[0];const ln=document.getElementById('f-last');if(ln&&parts.length>1)ln.value=parts.slice(1).join(' ');}if(l.phone&&!document.getElementById('f-phone').value)document.getElementById('f-phone').value=l.phone;})();
 document.querySelectorAll('.n-methods label').forEach(l=>l.onclick=()=>{document.querySelectorAll('.n-methods label').forEach(x=>x.classList.remove('is-on'));l.classList.add('is-on');});
 document.getElementById('bbarpay').onclick=()=>document.getElementById('cof').requestSubmit();

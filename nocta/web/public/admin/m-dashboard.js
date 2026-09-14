@@ -14,6 +14,10 @@
     const wa = s.messages && s.messages.whatsapp;
     if (wa > 0) items.push({ label: `${wa} mensaje${wa === 1 ? '' : 's'} de WhatsApp por revisar`, href: '#/whatsapp' });
     if (integr && integr.stripe && !integr.stripe.configured) items.push({ label: 'Conecta Stripe para poder cobrar', href: '#/integrations' });
+    /* Una recompensa viva es un cliente que ya compró y está a punto de volver. Si caducan sin
+       usarse, es margen que ya estaba ganado y se deja escapar, así que se avisa aquí y no sólo
+       en su pantalla: al panel se entra todos los días, a Recompensas no. */
+    if (s.rewards && s.rewards.caducan_pronto > 0) items.push({ label: `${s.rewards.caducan_pronto} recompensa${s.rewards.caducan_pronto === 1 ? '' : 's'} caduca${s.rewards.caducan_pronto === 1 ? '' : 'n'} esta semana sin usar`, href: '#/rewards' });
     // el embudo del panel es agregado; el mapa de personas dice quién es cada uno y dónde se quedó
     if ((s.sessions || 0) > 0) items.push({ label: 'Ver quién ha entrado en la web y dónde se ha quedado cada uno', href: '#/people' });
     return items;
@@ -32,6 +36,7 @@
       ${A.kpi('Suscripciones activas', s.subs_active ?? 0, s.mrr != null ? `MRR ${A.money(s.mrr)}` : '')}
       ${A.kpi('Por enviar', s.pending_ship ?? 0, '', s.pending_ship > 0 ? 'warn' : '')}
       ${A.kpi('Carritos recuperables', carts ?? 0)}
+      ${s.rewards ? A.kpi('Segundas compras', A.money(s.rewards.ingresos || 0), `${s.rewards.canjeadas || 0} recompensas canjeadas`) : ''}
     </div>`;
   }
 

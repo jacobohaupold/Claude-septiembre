@@ -7,6 +7,7 @@ import { stripe, stripeConfig, verifyStripeSignature } from './lib/stripe.js';
 import { sendEmail, tpl } from './lib/mail.js';
 import { waSend, fill } from './lib/wa.js';
 import { json } from './lib/auth.js';
+import { issueReward, redeemIfReward, rewardOf, rewardConfig, rewardPublic, markRewardSeen } from './lib/rewards.js';
 
 const getOrder = async id => { if (!id || !dbOk()) return null; try { return await db.one('orders', 'id=eq.' + esc(id)); } catch (e) { return null; } };
 const patch = async (id, p) => { try { const r = await db.update('orders', 'id=eq.' + esc(id), { ...p, updated_at: now() }); return r && r[0]; } catch (e) { return null; } };
@@ -32,9 +33,16 @@ export async function markPaid(o, extra = {}) {
     const plan = (upd.items || []).find(i => i.plan) || (upd.items || [])[0];
     try { await db.upsert('subscriptions', [{ id: extra.stripe_subscription, order_id: upd.id, email: upd.email, name: upd.name, plan_slug: plan ? plan.slug : 'sub', zones: plan && plan.opt || null, status: 'active', interval: plan && plan.plan ? plan.plan : '30d', price: Number(upd.total), stripe_customer: extra.stripe_customer || null, stripe_subscription: extra.stripe_subscription, updated_at: now() }], 'id'); } catch (e) { }
   }
+  // Recompensa: primero se cierra la que traía el pedido (si pagó con una) y después se emite la
+  // del siguiente. En ese orden, porque al revés el «días hasta canjear» mediría contra la recién
+  // emitida y saldría siempre cero. Y las dos ANTES del email: si se emite después, el código no
+  // entra en el correo y el cliente sólo lo ve si vuelve a la página de gracias.
+  try { await redeemIfReward(upd); } catch (e) { }
+  let recompensa = null;
+  try { recompensa = await issueReward(upd); } catch (e) { }
   // confirmación
   const emails = { ...(upd.emails || {}) };
-  if (upd.email && !emails.confirm) { try { const m = tpl.orderConfirm(upd); const r = await sendEmail({ to: upd.email, ...m, template: 'order_confirm', tags: [{ name: 'flow', value: 'order' }], meta: { order: upd.id } }); emails.confirm = now(); } catch (e) { } }
+  if (upd.email && !emails.confirm) { try { const m = tpl.orderConfirm(upd, recompensa); const r = await sendEmail({ to: upd.email, ...m, template: 'order_confirm', tags: [{ name: 'flow', value: 'order' }], meta: { order: upd.id } }); emails.confirm = now(); } catch (e) { } }
   const wa = await automation('order_whatsapp');
   if (wa && upd.phone && !emails.wa_confirm) { const r = await waSend({ to: upd.phone, kind: 'order_confirm', text: fill(wa.text || 'Hola {nombre} 🌙 Tu pedido NOCTA {order} está confirmado ({total} €). Sale en 24-48 h y te aviso por aquí con el seguimiento.', { nombre: upd.name ? String(upd.name).split(' ')[0] : '', order: upd.id, total: Number(upd.total).toFixed(2).replace('.', ',') }), meta: { order: upd.id } }); if (!r.error) emails.wa_confirm = now(); }
   await patch(upd.id, { emails });
@@ -91,11 +99,20 @@ export default async (req) => {
       try { const cfg = await stripeConfig(); const s = await stripe('checkout/sessions/' + o.stripe_session, null, { method: 'GET', key: cfg.secret, account: cfg.account });
         if (s.payment_status === 'paid' || s.mode === 'subscription') { const extra = { stripe_payment_intent: s.payment_intent || null, stripe_customer: typeof s.customer === 'string' ? s.customer : null, stripe_subscription: typeof s.subscription === 'string' ? s.subscription : null }; Object.assign(o, await markPaid(o, extra)); } } catch (e) { }
     }
-    return json({ id: o.id, items: o.items, total: o.total, status: o.status, upsell: o.upsell, email: o.email, name: o.name, mode: o.mode });
+    // La recompensa se emite al marcar pagado; si el pedido acaba de confirmarse aquí mismo, ya
+    // existe. Se devuelve sólo lo que la página necesita pintar, no la fila entera.
+    let recompensa = null;
+    if (['paid', 'shipped', 'delivered'].includes(o.status)) {
+      try { const d = await rewardOf(o.id); if (d) recompensa = rewardPublic(d, await rewardConfig()); } catch (e) { }
+    }
+    return json({ id: o.id, items: o.items, total: o.total, status: o.status, upsell: o.upsell, email: o.email, name: o.name, mode: o.mode, reward: recompensa });
   }
   let body; try { body = await req.json(); } catch (e) { return json({ error: 'bad' }, 400); }
   const o = await getOrder(body.id);
   if (!o) return json({ error: 'not found' }, 404);
+  // «Vista» la marca la página de gracias cuando el bloque entra en pantalla de verdad: la
+  // diferencia entre emitidas y vistas es lo que dice si se está viendo o se lo saltan.
+  if (body.action === 'reward_seen') { await markRewardSeen(body.code); return json({ ok: true }); }
   if (body.action === 'upsell' && !o.upsell) {
     const { products } = await serverProducts(); const p = products['upsell-exfoliante']; if (!p) return json({ error: 'unavailable' }, 400);
     const up = { slug: p.slug, name: p.name, price: p.price, t: now(), status: 'demo' };

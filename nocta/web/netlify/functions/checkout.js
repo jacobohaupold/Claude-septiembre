@@ -15,12 +15,15 @@ export default async (req) => {
   if (!items.length) return json({ error: 'empty' }, 400);
   const recurring = items.some(i => i.plan || i.sub);
   const subtotal = +items.reduce((a, i) => a + i.unit * i.qty, 0).toFixed(2);
-  const d = await getDiscount(body.code, subtotal); const discount = discountAmount(d, subtotal); const code = d && !d.error ? d.code : '';
+  const email = String(body.email || '').trim().toLowerCase() || null;
+  // El email que valida el código es el del formulario, el que se va a cobrar: una recompensa es
+  // de quien la ganó. Y se declara AQUÍ, no más abajo: usarlo antes de declararlo es zona muerta
+  // temporal y tiraba el checkout entero con un ReferenceError.
+  const d = await getDiscount(body.code, subtotal, email); const discount = discountAmount(d, subtotal); const code = d && !d.error ? d.code : '';
   const n = items.reduce((a, i) => a + i.qty, 0);
   const shipping = (recurring || subtotal - discount >= Number(SHIPPING.freeFrom) || n >= 2) ? 0 : Number(SHIPPING.base);
   const total = +(subtotal - discount + shipping).toFixed(2);
   const orderId = 'NC' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 4).toUpperCase();
-  const email = String(body.email || '').trim().toLowerCase() || null;
   const order = { id: orderId, status: 'pending', email, name: body.name || null, phone: (body.address && body.address.phone) || body.phone || null, address: body.address || null, items, subtotal, discount, code: code || null, shipping, total, currency: 'eur', pay: body.pay || null, mode: recurring ? 'subscription' : 'payment', utm: body.utm || {}, vid: body.vid || null, sid: body.sid || null, upsell: null, emails: {} };
   const save = async (patch) => { if (!dbOk()) return; try { if (patch) await db.update('orders', 'id=eq.' + orderId, { ...patch, updated_at: now() }); else await db.insert('orders', [order]); } catch (e) { console.error('order save', e.message); } };
   await save();

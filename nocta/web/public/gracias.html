@@ -6,10 +6,10 @@
 <title>¡Pedido confirmado! · NOCTA</title>
 <meta name="description" content="Gracias por tu pedido NOCTA. Confirmación, seguimiento y consejos para sacarle el máximo a tus parches mientras llega.">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=202609132332">
+<link rel="stylesheet" href="/assets/css/styles.css?v=202609140136">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#FAF8F3">
-<script src="/assets/js/app.js?v=202609132332" defer></script>
+<script src="/assets/js/app.js?v=202609140136" defer></script>
 </head>
 <body class="n-v5 n-checkout">
 <div id="site-header"><div class="n-top-ph"></div></div>
@@ -23,6 +23,14 @@
       <div><dt class="n-lab">Salida del almacén</dt><dd>24 h laborables</dd></div>
     </dl>
     <p class="n-sm" style="color:var(--n-alert-ink);margin-top:var(--n-s3)" id="demonote" hidden></p>
+  </section>
+
+  <section class="n-rw" id="reward" hidden aria-live="polite">
+    <span class="n-lab" id="rw-lab">Tu recompensa por esta compra</span>
+    <p class="n-rw__big"><b id="rw-pct">−25 %</b> en tu siguiente pedido</p>
+    <button type="button" class="n-rw__code" id="rw-code" aria-label="Copiar el código"><span id="rw-txt">—</span><i id="rw-cta">Copiar</i></button>
+    <p class="n-rw__note" id="rw-note"></p>
+    <a class="n-btn n-btn--ghost" id="rw-go" href="/catalogo.html">Usarlo ahora</a>
   </section>
 
   <section id="upsell" style="background:var(--n-cream);border:1px solid var(--n-line);border-radius:var(--n-r-lg);padding:var(--n-s5) var(--n-s4);text-align:center;margin-top:var(--n-s6)">
@@ -48,7 +56,7 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="/assets/js/products.js?v=202609132332"></script><script src="/api/catalog.js"></script>
+<script src="/assets/js/products.js?v=202609140136"></script><script src="/api/catalog.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',async()=>{
 document.getElementById('successmark').innerHTML=nIco('check',24);
@@ -61,7 +69,35 @@ if(last&&last.id===id&&!sessionStorage.getItem('n_purch_'+id)){
   if(!last.express) localStorage.removeItem('n_cart');
   sessionStorage.removeItem('n_disc');
 }
-if(id){fetch('/api/order?id='+encodeURIComponent(id)+'&s='+encodeURIComponent(q.get('s')||'')).then(r=>r.ok?r.json():null).then(o=>{if(o&&o.email)document.getElementById('oemail').textContent=o.email;}).catch(()=>{});}
+/* La recompensa la emite el servidor al marcar el pedido como pagado, así que llega con el
+   propio pedido. Se guarda en el navegador para que el checkout la aplique sola la próxima vez:
+   pedirle al cliente que recuerde un código es perder la mitad de los canjes. */
+const pintaRecompensa=(r,email)=>{
+  if(!r||!r.code||r.redeemed)return;
+  const sec=document.getElementById('reward');
+  const pct=r.type==='fixed'?nEur(r.pct):`−${Math.round(r.pct)} %`;
+  document.getElementById('rw-pct').textContent=r.type==='fixed'?`${pct} menos`:pct;
+  document.getElementById('rw-txt').textContent=r.code;
+  if(r.titulo)document.getElementById('rw-lab').textContent=r.titulo;
+  const hasta=r.ends_at?new Date(r.ends_at).toLocaleDateString('es-ES',{day:'numeric',month:'long'}):'';
+  const min=r.min_total?` Pedido mínimo ${nEur(r.min_total)}.`:'';
+  document.getElementById('rw-note').innerHTML=`Es tuyo y solo se puede usar una vez${hasta?`, hasta el <b>${hasta}</b>`:''}.${min} Te lo hemos enviado también por email, y se aplica solo la próxima vez que entres.`;
+  document.getElementById('rw-go').href='/catalogo.html?code='+encodeURIComponent(r.code);
+  sec.hidden=false;
+  try{localStorage.setItem('n_reward',JSON.stringify({code:r.code,type:r.type,value:r.pct,ends_at:r.ends_at,min_total:r.min_total,email:email||''}));}catch(e){}
+  nTrack('reward_view',{code:r.code,pct:r.pct,order:id});
+  // «Vista» se marca cuando se ve de verdad, no cuando se emite: la diferencia entre emitidas y
+  // vistas es lo que dice en el CRM si el bloque se está viendo o se lo saltan.
+  fetch('/api/order',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id,action:'reward_seen',code:r.code})}).catch(()=>{});
+  const btn=document.getElementById('rw-code');
+  btn.onclick=async()=>{
+    try{await navigator.clipboard.writeText(r.code);}catch(e){const t=document.createElement('textarea');t.value=r.code;document.body.appendChild(t);t.select();try{document.execCommand('copy');}catch(e2){}t.remove();}
+    btn.classList.add('is-ok');document.getElementById('rw-cta').textContent='Copiado';
+    nTrack('reward_copy',{code:r.code});
+    setTimeout(()=>{btn.classList.remove('is-ok');document.getElementById('rw-cta').textContent='Copiar';},2200);
+  };
+};
+if(id){fetch('/api/order?id='+encodeURIComponent(id)+'&s='+encodeURIComponent(q.get('s')||'')).then(r=>r.ok?r.json():null).then(o=>{if(!o)return;if(o.email)document.getElementById('oemail').textContent=o.email;pintaRecompensa(o.reward,o.email);}).catch(()=>{});}
 if(q.get('demo')==='1'){const d=document.getElementById('demonote');d.hidden=false;d.textContent='Modo demo: no se ha cobrado nada (conecta Stripe desde el CRM para cobrar de verdad).';}
 let s=600;const cd=document.getElementById('cd');const iv=setInterval(()=>{s--;cd.textContent=`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;if(s<=0){clearInterval(iv);document.getElementById('upsell').hidden=true;}},1000);
 nTrack('upsell_view',{order:id});

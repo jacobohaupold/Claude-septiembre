@@ -251,7 +251,15 @@ function layout(){
         $('#popdone').onclick=()=>{closeP();if(!/^\/($|index)/.test(path)&&!path.includes('producto'))location.href='/#productos';};setTimeout(closeP,7000);};
       fetch('/api/lead',{method:'POST',body:JSON.stringify(data),headers:{'content-type':'application/json'}}).then(r=>r.json()).then(done).catch(()=>done(null));};}
   /* código en la URL (?code=…): se valida en el servidor y se aplica */
-  const codeQ=new URL(location.href).searchParams.get('code');if(codeQ&&!isCo){fetch('/api/discount?code='+encodeURIComponent(codeQ)).then(r=>r.json()).then(d=>{if(d&&!d.error){sessionStorage.setItem('n_disc',JSON.stringify({code:d.code,type:d.type,value:d.value}));toast(`Código ${d.code} aplicado`);C.render();}}).catch(()=>{});}
+  /* Un ?code= puede ser un código de campaña (lo aplica cualquiera) o una recompensa personal,
+     que sólo vale con el email que la ganó. En el segundo caso el servidor responde needs_email:
+     no se puede aplicar todavía, pero se recuerda para que el pago lo aplique solo en cuanto el
+     email esté escrito. Antes se descartaba en silencio y el cliente perdía su recompensa. */
+  const codeQ=new URL(location.href).searchParams.get('code');
+  if(codeQ&&!isCo){fetch('/api/discount?code='+encodeURIComponent(codeQ)).then(r=>r.json()).then(d=>{
+    if(d&&!d.error){sessionStorage.setItem('n_disc',JSON.stringify({code:d.code,type:d.type,value:d.value}));toast(`Código ${d.code} aplicado`);C.render();}
+    else if(d&&d.error==='needs_email'){sessionStorage.setItem('n_pend_code',codeQ.toUpperCase());toast('Tu recompensa se aplicará al escribir tu email en el pago');}
+  }).catch(()=>{});}
   /* email escrito en cualquier formulario → lead ligero para recuperar carritos */
   document.addEventListener('change',e=>{const i=e.target;if(i&&i.type==='email'&&i.value&&i.validity.valid){const l=JSON.parse(localStorage.getItem('n_lead')||'{}');l.email=i.value.trim().toLowerCase();const n=$('#f-name');if(n&&n.value)l.name=n.value.trim();localStorage.setItem('n_lead',JSON.stringify(l));C.sync(true);}});
   /* cookies */

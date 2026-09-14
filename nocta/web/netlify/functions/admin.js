@@ -15,6 +15,7 @@ import { renderCampaign, sendCampaign, segmentRecipients, waText } from './lib/c
 import { runAutomations } from './lib/automations.js';
 import { markPaid } from './order.js';
 import { people, person } from './lib/journeys.js';
+import { rewardConfig, RECOMPENSA_DEF } from './lib/rewards.js';
 
 const TABLES = ['leads', 'customers', 'orders', 'subscriptions', 'products', 'discounts', 'content', 'campaigns', 'messages', 'automations', 'events', 'carts', 'settings'];
 const SECRET_KEYS = /secret|token|password|key/i;
@@ -36,8 +37,34 @@ export default async (req) => {
   const body = req.method === 'GET' ? {} : await req.json().catch(() => ({}));
   try {
     if (kind === 'me') return json({ ok: true, db: dbOk(), mail: mailOk(), site: SITE() });
-    if (kind === 'stats') { const days = Math.min(365, Number(url.searchParams.get('days') || 14)); const s = await db.rpc('admin_stats', { p_days: days }); return json(s); }
+    if (kind === 'stats') {
+      const days = Math.min(365, Number(url.searchParams.get('days') || 14));
+      /* El panel es la pantalla a la que se entra todos los días, así que lleva también el
+         resumen de la recompensa: lo que han traído las segundas compras y cuántas están a punto
+         de caducar sin usar. Eso último es margen ya ganado que se escapa, y esconderlo en su
+         propia pantalla es no verlo nunca. */
+      const semana = new Date(Date.now() + 7 * 86400000).toISOString();
+      const [s, rw, pronto] = await Promise.all([
+        db.rpc('admin_stats', { p_days: days }),
+        db.rpc('reward_stats', { dias: days }).catch(() => null),
+        db.count('discounts', `kind=eq.recompensa&redeemed_at=is.null&active=is.true&ends_at=lte.${encodeURIComponent(semana)}&ends_at=gte.${encodeURIComponent(now())}`).catch(() => 0),
+      ]);
+      if (rw) s.rewards = { ingresos: Number(rw.ingresos || 0), canjeadas: Number(rw.canjeadas || 0), emitidas: Number(rw.emitidas || 0), caducan_pronto: Number(pronto || 0) };
+      return json(s);
+    }
     if (kind === 'integrations') return json(await integrations());
+    /* Recompensas post-compra: la configuración, las cuentas y la lista, en una sola llamada.
+       Las cuentas las hace la base (RPC reward_stats) y no el navegador: es una suma sobre una
+       tabla que crece con cada pedido, y bajarla entera para sumarla en el móvil no escala. */
+    if (kind === 'rewards') {
+      const days = Math.min(365, Math.max(1, Number(url.searchParams.get('days') || 90)));
+      const [cfg, kpis, rows] = await Promise.all([
+        rewardConfig(),
+        db.rpc('reward_stats', { dias: days }).catch(e => { console.error('reward_stats', e.message); return null; }),
+        db.select('discounts', 'kind=eq.recompensa&select=code,email,value,type,issued_at,ends_at,seen_at,redeemed_at,redeemed_order,revenue,active,order_id&order=issued_at.desc&limit=300').catch(() => []),
+      ]);
+      return json({ config: cfg, defaults: RECOMPENSA_DEF, kpis: kpis || {}, rows: rows || [], days });
+    }
     // Mapa en vivo: quien esta en la web ahora mismo y donde. Todo el calculo lo hace la base
     // (RPC live_map) y devuelve un unico JSON; el navegador no descarga eventos sueltos.
     if (kind === 'live') {

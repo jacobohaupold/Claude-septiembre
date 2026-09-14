@@ -333,3 +333,24 @@ img,canvas,iframe,video{max-width:100%}
 @media (prefers-reduced-motion:reduce){
   .lv__zoom i,.lv__escala i{transition:none}
 }
+
+/* ── Embudo de la recompensa ──────────────────────────────────────────────────
+   Tres pasos en vertical porque lo que importa es la CAÍDA entre ellos, no el
+   valor absoluto: emitidas → vistas dice si el bloque se ve; vistas → canjeadas
+   dice si la oferta convence. Son dos arreglos distintos y con tres números
+   sueltos en una fila de KPI no se distinguen. */
+.fnls{display:grid;gap:16px}
+.fnl{display:grid;gap:6px}
+.fnl__h{display:flex;align-items:baseline;gap:9px}
+.fnl__h b{font-size:22px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fnl__h span{font-size:12.5px;color:var(--muted)}
+.fnl__b{height:8px;border-radius:999px;background:var(--sup);overflow:hidden}
+.fnl__b i{display:block;height:100%;border-radius:999px;background:var(--vivo);transition:width .5s cubic-bezier(.2,0,0,1)}
+.fnl:nth-child(2) .fnl__b i{background:var(--vivo-2)}
+.fnl:nth-child(3) .fnl__b i{background:var(--oro)}
+/* Un vacío que explica por qué está vacío vale mucho más que un «sin datos»: la mitad de las
+   veces no hay un fallo, es que todavía no ha pasado nada. */
+.vacio{padding:26px 20px;text-align:center;display:grid;gap:6px;justify-items:center}
+.vacio b{font-size:15px;color:var(--ink)}
+.vacio p{margin:0;max-width:46ch}
+
